@@ -1,0 +1,441 @@
+<HTML>
+<HEAD>
+<TITLE>HTTPort FAQ</TITLE>
+</HEAD>
+<BODY BGCOLOR="#CCCCCC">
+<FONT FACE="Courier New" SIZE="-1">
+<B>HTTPort Frequently Asked Questions</B><BR>
+<BR>
+- <A HREF="hpofaq.htm#novice">I'm a novice when it comes to computer and still can't get it to work. Any advises ?</A><BR>
+- <A HREF="hpofaq.htm#russian">Is there a Russian manual for HTTPort ?</A><BR>
+- <A HREF="hpofaq.htm#success">Will HTTPort get through my proxy ?</A><BR>
+- <A HREF="hpofaq.htm#whynot">Why does HTTPort not work with "my software" ?</A><BR>
+- <A HREF="hpofaq.htm#icq">Does HTTPort work with ICQ ?</A><BR>
+- <A HREF="hpofaq.htm#ftp">Does HTTPort work with FTP ?</A><BR>
+- <A HREF="hpofaq.htm#mail">How to set up HTTPort for use with e-mail client ?</A><BR>
+- <A HREF="hpofaq.htm#irc">How to set up HTTPort for use with IRC ?</A><BR>
+- <A HREF="hpofaq.htm#aol">How to set up HTTPort for use with AOL Instant Messenger ?</A><BR>
+- <A HREF="hpofaq.htm#news">How to set up HTTPort for use with news browser (NNTP)?</A><BR>
+- <A HREF="hpofaq.htm#games">How to set up HTTPort for use with Quake, Antz or other network game ?</A><BR>
+- <A HREF="hpofaq.htm#napster">How to set up HTTPort for use with Napster ?</A><BR>
+- <A HREF="hpofaq.htm#address">What if my software does not allow me to edit the address to connect to ?</A><BR>
+- <A HREF="hpofaq.htm#security">What about the security ? Does HTTPort increase the vulnerability of our network ?</A><BR>
+- <A HREF="hpofaq.htm#msproxy">Why does HTTPort fail with message "407 proxy authentication required" although I've entered the password ?</A><BR>
+- <A HREF="hpofaq.htm#freeze">Why does HTTPort freeze or hang when I try to use it ?</A><BR>
+- <A HREF="hpofaq.htm#proxys">Where can I find a list of available proxies ?</A><BR>
+- <A HREF="hpofaq.htm#connect">How should I determine whether my proxy supports CONNECT ?</A><BR>
+- <A HREF="hpofaq.htm#retcode">What does that retcode XXX mean ?</A><BR>
+- <A HREF="hpofaq.htm#editmapping">How to edit mapping parameters ? There is no EDIT button.</A><BR>
+- <A HREF="hpofaq.htm#download">What is the latest version of HTTPort ?</A><BR>
+- <A HREF="hpofaq.htm#source">May I take a look at HTTPort source code ? Will you advise me how to write "my program" ?</A><BR>
+
+<BR>
+<A NAME="novice">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: I'm a novice when it comes to computer and still can't get it to work. Any advises ?<BR>
+<BR>
+A: First, read readme.txt and this FAQ throughly. These cover the vast majority
+of the problems you may face. Please do not write for help if you are simply
+bored with reading these long manuals. In this case your best bet would be
+finding a knowledgeable friend nearer to you. I will not waste my time answering,
+sorry.<BR>
+<BR>
+The typical problems you may encounter are:<BR>
+<BR>
+Problem: You have entered the wrong proxy on System page of HTTPort.<BR>
+<BR>
+Solution: Enter the proxy parameters that your browser is currently using for surfing.
+Also, do NOT enter webcache.dial.pipex.com here. This proxy address should
+typically look like 10.X.X.X:X, or 172.X.X.X:X and varies from one company
+to another.<BR>
+<BR>
+Problem: You have set up the software you want to run through HTTPort wrong.<BR>
+<BR>
+Solution: Whatever software you are setting up for use with HTTPort, please
+keep in mind, that there MUST appear a server address somewhere. Make sure
+that you have entered 127.0.0.1 for server address. Other details may vary.<BR>
+Typical mistake is to enter webcache.dial.pipex.com as a proxy in one's browser
+setup. This is wrong. How may the browser guess about HTTPort existance
+if you are pointing it directly to some other proxy ?<BR>
+<BR>
+Problem: You have deleted all the default mappings (who needs them anyway ? :)
+and are stuck with entering new ones.<BR>
+<BR>
+Solution: The default mappings are guaranteed to be correct. Re-install HTTPort, then try
+surfing through HTTPort (setting up your browser to use 127.0.0.1:8080 as a proxy).
+This is the easiest way of determining whether HTTPort will work for you.
+Then add a new mapping and edit it to make somewhere similar to the
+defaults. When you are familiar to mappings setup, you may delete the
+defaults.<BR>
+<BR>
+<A NAME="russian">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Is there a Russian manual for HTTPort ?<BR>
+<BR>
+A: No. I'm not going to write it and will neither instruct you by mail. Please
+find a friend who knows English language well enough to read the English manual.<BR>
+<BR>
+<A NAME="success">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Will HTTPort get through my proxy ?<BR>
+<BR>
+A: Not necessary. HTTPort is no magic. Your proxy administrator may
+turn off the feature HTTPort is based on. Or this feature has never been enabled.
+Or your proxy does not support it at all. The only way to tell is to try.<BR>
+<BR>
+<A NAME="whynot">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Why does HTTPort not work with "my software" ?<BR>
+<BR>
+A: Check the following:<BR>
+<BR>
+1. You have read the readme.txt file.<BR>
+2. You have clicked the "Start" button.<BR>
+3. You have TCP/IP and Winsock installed and configured.<BR>
+4. You have specified the right proxy on the "System" page.<BR>
+5. Your proxy supports CONNECT. See below for more information.<BR>
+6. You have specified the right port mappings.<BR>
+7. The "Messages" window on "System" page contains no errors AFTER YOU HAVE UNSUCCESSFULLY TRIED TO USE SOME SOFTWARE THROUGH HTTPORT.<BR>
+8. You have correctly configured your software. In brief, whenever you map 
+a port X at local host to port Y at remote host, you should think
+of an address localhost:X as if it was remotehost:Y.<BR>
+9. Note, that you may need to use address 127.0.0.1:X instead of localhost:X.
+TRY BOTH before you consider it does not work.<BR>
+<BR>
+<A NAME="icq">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Does HTTPort work with ICQ ?<BR>
+<BR>
+A: No. I mean absolutely NOT. ICQ uses UDP/IP protocol and also
+attempts to listen ports on localhost. HTTPort has nothing to deal with this.<BR>
+<BR>
+<A NAME="ftp">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Does HTTPort work with FTP ?<BR>
+<BR>
+A: No. With FTP it's not known beforehand on which port the
+file will be actually available. I'd recommend you to use an excellent
+program "Net Vampire" that supports FTP downloads through proxy.<BR>
+<BR>
+<A NAME="mail">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with e-mail client (Outlook, Messenger, Pegasus, The BAT!, etc.) ?<BR>
+<BR>
+A: You should have an account on an external mail server, which provides POP3/SMTP services.
+Ex: I use account on yahoo.com. I will explain the setup with Yahoo account. <BR>
+<BR>
+Yahoo provides POP3/SMTP services by means of two servers: pop.mail.yahoo.com:110 and 
+smtp.mail.yahoo.com:25 respectively.<BR>
+Create two HTTP mappings. These should mirror local ports 110 and 25 (or any other ports you like),
+to remote ports pop.mail.yahoo.com:110 and smtp.mail.yahoo.com:25. 
+Set up your mail client to use server 127.0.0.1:110 as a POP3 server, and 127.0.0.1:25 as an SMTP server.
+This should work.<BR>
+<BR>
+<A NAME="irc">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with IRC ?<BR>
+<BR>
+A: First, choose ONE IRC server from your IRC client's list. Let it be "irc.supermegawondernet.com:6667".
+Create a new HTTPort mapping, set "Local port" to "6667", "Remote server" to "irc.supermegawondernet.com"
+and "Remote port" to "6667". Now run your IRC client and add a new server to the list.
+The new server should be set up to "127.0.0.1:6667". Start HTTPort, click "Connect" and enjoy :)<BR>
+<BR>
+If you wish to use another server (irc.negligible.com:6667) you should repeat
+the above procedure, and I recommend you to map another local port (say, 6668) to
+"irc.negligible.com:6667" instead of enabling and disabling HTTPort mappings each time.<BR>
+<BR>
+<A NAME="aol">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with AOL Instant Messenger ?<BR>
+<BR>
+A: Find a public free SOCKS5 proxy. You may use the proxy list below. Let the proxy
+you've found be 123.45.67.89:1080 (the default port for SOCKS5 is 1080). Now map
+local port 1080 to 123.45.67.89:1080 using HTTPort. Start AOL IM. At the "Sign On"
+window click "Setup" (a wrench icon), then check "Connect using proxy" and enter
+127.0.0.1 for Host and 1080 for Port. Select "SOCKS5" option. Check "Use proxy
+to resolve hostnames". Check "Keep connection alive". Click OK. Now proceed with
+login.<BR>
+Please note, that when I have tested this, I experienced "Unable to load
+ticker file" error from AOL IM, and therefore there was no ticker for me,
+yet all other AOL services worked. The source of this error is not known
+to me, so please don't ask me about that.<BR>
+<BR>
+<A NAME="news">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with news browser (NNTP)?<BR>
+<BR>
+A: Using exactly the same technique as above, map local port 119 to news.your.server.com:119.
+Set up your news browser to use 127.0.0.1:119 as a news server and proceed.<BR>
+<BR>
+For every other news server news.another.server.com:119 map another local port to it.<BR>
+<BR>
+<A NAME="games">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with Quake, Antz or other network game ?<BR>
+<BR>
+A: At the moment I have no stable opinion on that topic. I'm not using any
+of these so I did not perform any tests. It is very likely that most of the
+modern network games use TCP/IP protocol for client-server communications,
+and therefore may be run over HTTPort. On the other hand, game designers
+may have decided to use too many ports, for example, Antz uses more than
+200 ports (at least, it requires these ports to be potentially available).
+This makes tunneling such a program quite hard task.<BR>
+If you have succeeded or failed with using some network game over HTTPort,
+please send me a detailed description.<BR>
+<BR>
+<A NAME="napster">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to set up HTTPort for use with Napster ?<BR>
+<BR>
+A: Find a public free SOCKS5 proxy. You may use the proxy list below. Let the proxy you've found
+be 123.45.67.89:1080 (the default port for SOCKS5 is 1080). Now map local
+port 1080 to 123.45.67.89:1080 using HTTPort. Start Napster. When prompted, choose an option
+to connect via SOCKS5 proxy and enter 127.0.0.1:1080 as a proxy address.<BR>
+<BR>
+One important note: upon start, Napster tries to connect to the server
+"server.napster.com". In case your PC does not have DNS service installed,
+Napster will be unable to resolve the host into an IP address.<BR>
+<BR>
+See <A HREF="hpofaq.htm#address">below</A> for a solution. Using the technique described
+there (hosts file modification) you should enable local resolution of
+the host server.napster.com to an IP address of 208.184.216.223.<BR>
+<BR>
+<A NAME="address">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: What if my software does not allow me to edit the address to connect to ?<BR>
+<BR>
+A: You will need the following items: three wooden sticks, stench, mouse blood, candy rock and a ladder.<BR>
+<BR>
+Just kidding.<BR>
+<BR>
+1. If your software tries to connect to some.host.on.the.net (just like Napster does), you should
+append the following line<BR>
+<BR>
+127.0.0.1 some.host.on.the.net<BR>
+<BR>
+to the file<BR>
+c:\winnt\system32\drivers\etc\hosts (for NT)<BR>
+c:\windows\hosts (for 9x)<BR>
+<BR>
+This will allow a local name resolution for this host, and it will be resolved to 
+localhost. Just what we need.<BR>
+<BR>
+2. If your software tries to connects to a predefined address of 123.45.67.89, 
+this is much harder to fix. Please make sure that you are familiar with TCP/IP 
+setup before proceeding. Or ask a guru friend for help :)<BR>
+<BR>
+In brief - you should edit your TCP/IP parameters and add a new IP address
+to your network adapter. Thus your local machine will host two (or more)
+IP addresses: your previous IP address and 123.45.67.89. From this point 
+TCP/IP layer will not route packets to 123.45.67.89 any farther than localhost.<BR>
+<BR>
+Note, that this may prevent other local software from functioning. Do not touch
+except for the strongest need.<BR>
+<BR>
+<A NAME="security">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: What about the security ? Does HTTPort increase the vulnerability of our network ?<BR>
+<BR>
+A: The answer is - very little.<BR>
+<BR>
+This is how you may think of it:<BR>
+<BR>
+If there was no HTTPort and you used your browser for surfing,
+then, most probably you were able to download and run some executable 
+file from the Internet. Was it secure ? No, not at all. A trojan, 
+a bomb, or simply a virus could have been injected in your network 
+EVEN WITHOUT HTTPORT.<BR>
+<BR>
+Now HTTPort.<BR> 
+<BR>
+HTTPort makes it possible to open a client side of a TCP/IP connection 
+and provide it to any software. The keywords here are: "<U>client</U>" and 
+"<U>any software</U>".<BR>
+<BR>
+What does it mean:<BR>
+<BR>
+CLIENT means that HTTPort may not be used for trojans like NetBus or BackOrifice,
+because HTTPort can't make a "listening" server side of a TCP/IP connection. 
+This in turn means that HTTPort may be exploited by "client" software only,
+not "server". So, the next passage completes the answer.<BR>
+<BR>
+ANY SOFTWARE means, that ANY OTHER software may use the same technique
+that HTTPort does to perform exactly the same. Moreover, the client
+side of a malicious software (we are talking of the client sides only, 
+remember ? :) may use plain HTTP protocol to access remote malicious
+server. Need an example ? Yahoo Messenger is the one. It uses HTTP 
+protocol for passing custom information through the proxy. Imagine
+that there were a Gotcha Messenger instead.<BR>
+<BR>
+Therefore in my humble opinion HTTPort may not be abused as a 
+security hole or something.<BR>
+<BR>
+<A NAME="msproxy">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Why does HTTPort fail with message "407 proxy authentication required" although I've entered the password ?<BR>
+<BR>
+A: This sometimes occurs with MS Proxy. This is due to the fact that
+MS Proxy may use other authentication methods, not the simplest one
+HTTPort knows of. Your only chance is to switch the proxy to "basic"
+authentication. Nothing else can be done. Probably in future versions...<BR>
+<BR>
+<A NAME="freeze">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Why does HTTPort freeze or hang when I try to use it ?<BR>
+<BR>
+A: HTTPort does neither freeze nor hang. What you are experiencing is
+known as "blocking operations". If you wait for some time (up to a minute
+I guess), HTTPort will resume its execution. This is a rare situation, when
+blocking lasts for so long and this is typically due to the fact that you have
+entered "some.literal.name.com" in place of system proxy whereas your
+network is not configured for resolving this name. In this case you should
+enter an IP address, ex: "123.45.67.89" on the System page.<BR>
+<BR>
+<A NAME="proxys">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: Where can I find a list of available proxies ?<BR>
+<BR>
+A: The largest list I've ever seen is at <A HREF="http://freebooks.hypermart.net/proxy/proxies1.htm">http://freebooks.hypermart.net/proxy/proxies1.htm</A>.<BR>
+<BR>
+Note, that I do NOT encourage you to use any of these proxies. Some of them may be really free, while others serve you only by mistake.
+I guess sometimes you may even be violating the law by using the proxy you're not intended to use. You have been warned.<BR>
+<BR>
+<A NAME="connect">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How should I determine whether my proxy supports CONNECT ?<BR>
+<BR>
+A: I'd say my proxy does not support CONNECT if HTTPort "Messages" window contains the following string(s):<BR>
+&nbsp;&nbsp;|-------------------<BR>
+&nbsp;&nbsp;| Mapping name: CONNECT to "your proxy" failed with retcode XXX (error description)<BR>
+&nbsp;&nbsp;|-------------------<BR>
+&nbsp;&nbsp;Mind the case: CONNECT must be in uppercase. Message of<BR>
+&nbsp;&nbsp;|-------------------<BR>
+&nbsp;&nbsp;| Mapping name: Unable to connect to "your proxy"<BR>
+&nbsp;&nbsp;|-------------------<BR>
+&nbsp;&nbsp;means that your proxy was not found or failed to connect. In this case check the proxy settings.
+<BR>
+<BR>
+A2: If you wish to check it manually, follow these steps:<BR>
+<BR>
+1. You have your local HTTP proxy. Let it be 172.11.11.11:8080<BR>
+<BR>
+2. When you set up your browser to use 172.11.11.11:8080 as a proxy
+for HTTP protocol everything works fine. I mean you are surfing
+freely. If not, your proxy does not work at all.<BR>
+<BR>
+3. Click [Start] mega button, then Run, and enter the following
+command (do NOT include quotes and mind the spaces):<BR>
+"telnet 172.11.11.11 8080"<BR>
+<BR>
+This will run a connection to your proxy. On successful
+connection you'll see a window with a cursor, awaiting for your
+input. Select from menu Terminal - Preferences. Set Local Echo to ON.
+Click OK.<BR>
+<BR>
+4. Enter the following (do NOT include quotes):<BR>
+"CONNECT pop.mail.yahoo.com:110 HTTP/1.0".<BR>
+<BR>
+Now press Enter twice. This will send a CONNECT command to your proxy.<BR>
+<BR>
+5. Wait. You will see something like that:<BR>
+<BR>
+|-------------------<BR>
+| CONNECT pop.mail.yahoo.com:110 HTTP/1.0<BR>
+| <BR>
+| HTTP 200 Connection established<BR>
+| +OK hello from popgate<BR>
+-------------------<BR>
+<BR>
+This means that your proxy supports CONNECT operator and you may
+proceed.<BR>
+<BR>
+Or, you may see:<BR>
+|-------------------<BR>
+| CONNECT pop.mail.yahoo.com:110 HTTP/1.0<BR>
+| <BR>
+| HTTP XXX Error message<BR>
+|-------------------<BR>
+<BR>
+This means that your proxy does not allow CONNECT and most probably you cannot use HTTPort :(<BR>
+<BR>
+<A NAME="retcode">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: What does that XXX retcode mean ?<BR>
+<BR>
+A: When reporting "CONNECT failed with retcode XXX", HTTPort does simply
+repeat what your proxy did respond. This is A PROXY error, not HTTPort's.<BR>
+The following retcodes are most common:<BR>
+403 (forbidden) - your proxy disallows usage of CONNECT method. No solution.<BR>
+405 (method not allowed) - same as previous. No solution.<BR>
+502 (bad gateway) - your proxy is configured in such a manner, that you are unable
+to issue CONNECT for the host you want to map using HTTPort. You may still
+try to map another host (and, probably, port) using HTTPort. This may work, but may
+not work as well.<BR>
+<BR>
+<A NAME="editmapping">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: How to edit mapping parameters ? There is no EDIT button.<BR>
+<BR>
+A: To edit an item (ex: "Local Port"), make sure that HTTPort is stopped and click the parameter value:<BR>
+<PRE>
+|
++ Local Port
+| |
+| +-- [ 80 ]    &lt;---- click here
+</PRE>
+<BR>
+Here "click" means pressing LEFT mouse button ONCE while the mouse pointer is
+positioned inside the bounding rectangle of the value, then immediate RELEASING
+the mouse button, and WAITING about 0.25 sec. with no mouse movement until the
+edit box appears inside the rectangle.<BR>
+<BR>
+<A NAME="download">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: What is the latest version of HTTPort ?<BR>
+<BR>
+A: The latest version up to date is 1.1. It may be downloaded at:<BR>
+<BR>
+<A HREF="ftp://ftp.kiarchive.ru/pub/windows/internet/proxy/httport.zip">ftp://ftp.kiarchive.ru/pub/windows/internet/proxy/httport.zip</A> (ftp)<BR>
+<A HREF="http://www.kiarchive.ru/pub/windows/internet/proxy/httport.zip">http://www.kiarchive.ru/pub/windows/internet/proxy/httport.zip</A> (http)<BR>
+<A HREF="ftp://ftp.cis.fed.gov/pub/security/HTTPort/httport.zip">ftp://ftp.cis.fed.gov/pub/security/HTTPort/httport.zip</A> (ftp)<BR>
+<BR>
+<A NAME="source">
+<HR SIZE=1 WIDTH="100%">
+<BR>
+Q: May I take a look at HTTPort source code ? Will you advise me how to write "my program" ?<BR>
+<BR>
+A: No. No.<BR>
+<BR>
+<HR SIZE=1 WIDTH="100%">
+<BR>
+If you did not find a solution for your problem with HTTPort,
+please, contact me at <A HREF="mailto:ddvoinikov@geocities.com">ddvoinikov@geocities.com</A>.<BR>
+<BR>
+Thank you for using my software.<BR>
+Have a nice day.<BR>
+<BR>
+Dmitry Dvoinikov<BR>
+</FONT>
+</BODY>
+</HTML>

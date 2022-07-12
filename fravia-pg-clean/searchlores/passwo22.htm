@@ -1,0 +1,4924 @@
+<html>
+<head><!-- web searching lore: pagename begin -->
+<title>magicfi.htm: How to search the web, by fravia+ The art of Guessing</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css"><meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Authentication & Authorization lore for Apache servers ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr><th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="ideale.htm">
+<IMG SRC="images/stillpet.jpg" ALT="to advanced" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" 
+BORDER=0 VSPACE=0 HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">Authentication & Authorization lore<br>for Apache servers</th></tR></table>
+Published @ searchlores in June 2000
+<!-- internet searching techniques: imageheader end -->
+</center>
+<!-- internet searching strategies and hints content, begin -->
+<hr width=44%>
+<i>
+This text was sent anonymously to me in April, but I know that 
+it is part (chapter 6 if I'm not mistaken) of a longer and famous 
+series about apache 
+administration (that you should by all means <u>find</u> and read</i>&nbsp;:-)<i><br>Well, this 
+text is indeed interesting for our advanced "seeker games", 
+and so I publish it 
+in my </i><font color=blue>[</font><a href="ideale.htm">ideale</a><font color=blue>]</font><i> 
+section as I received it (with a couple of small modifications and 
+additions). I'm sure that all "Perl lovers"</i>&nbsp;:-)<i> and any seeker interested in accessing "blocked" servers will 
+enjoy it.
+</i><hr width=44%>
+<UL>
+
+	<LI><font size=+2><A HREF="passwo22.htm#Authentication_Auth">Authentication & Authorization lore for Apache servers</A></font>
+	<LI><A HREF="passwo22.htm#Access_Control_Authentication_a">Access Control, Authentication and Authorization</A>
+	<UL>
+
+		<LI><A HREF="passwo22.htm#How_Access_Control_Works">How Access Control Works</A>
+		<LI><A HREF="passwo22.htm#How_Authentication_and_Authoriza">How Authentication and Authorization Work</A>
+	</UL>
+
+	<LI><A HREF="passwo22.htm#Access_Control_with_I_mod_perl_">Access Control with <EM>mod_perl</EM></A>
+	<UL>
+
+		<LI><A HREF="passwo22.htm#A_Simple_Access_Control_Module">A Simple Access Control Module</A>
+		<LI><A HREF="passwo22.htm#Time_Based_Access_Control">Time-Based Access Control</A>
+		<LI><A HREF="passwo22.htm#Browser_Based_Access_Control">Browser-Based Access Control</A>
+		<LI><A HREF="passwo22.htm#Blocking_Greedy_Clients">Blocking Greedy Clients</A>
+	</UL>
+
+	<LI><A HREF="passwo22.htm#Authentication_Handlers">Authentication Handlers</A>
+	<UL>
+
+		<LI><A HREF="passwo22.htm#A_Simple_Authentication_Handler">A Simple Authentication Handler</A>
+		<LI><A HREF="passwo22.htm#An_Anonymous_Authentication_Hand">An Anonymous Authentication Handler</A>
+		<LI><A HREF="passwo22.htm#Authenticating_Against_a_Databas">Authenticating Against a Database</A>
+	</UL>
+
+	<LI><A HREF="passwo22.htm#Authorization_Handlers">Authorization Handlers</A>
+	<UL>
+
+		<LI><A HREF="passwo22.htm#A_Gender_Based_Authorization_Mod">A Gender-Based Authorization Module</A>
+		<LI><A HREF="passwo22.htm#Advanced_Gender_Based_Authorizat">Advanced Gender-Based Authorization</A>
+		<LI><A HREF="passwo22.htm#Authorizing_Against_a_Database">Authorizing Against a Database</A>
+		<LI><A HREF="passwo22.htm#Authentication_and_Authorization">Authentication and Authorization's Relationship with Subrequests</A>
+		<LI><A HREF="passwo22.htm#Binding_Authentication_to_Author">Binding Authentication to Authorization</A>
+	</UL>
+
+	<LI><A HREF="passwo22.htm#Cookie_Based_Access_Control">Cookie-Based Access Control</A>
+	<LI><A HREF="passwo22.htm#Authentication_with_the_Secure_S">Authentication with the Secure Sockets Layer</A>
+	<UL>
+
+		<LI><A HREF="passwo22.htm#Using_Digital_Certificates_for_A">Using Digital Certificates for Authorization</A>
+	</UL>
+
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="Authentication_Auth">Authentication & Authorization lore for Apache servers
+
+</A></H1>
+
+
+In the real world access to the Web server is not always
+unrestricted. The module you're working on may provide access to a database
+of proprietary information, may tunnel through a firewall system, or may
+control a hardware device that can be damaged if used improperly. Under
+circumstances like these you'll need to take care that the module can only
+be run by authorized users.
+
+
+<P>
+
+In the early phase of the HTTP transaction,
+ Apache attempts to determine the identity of the person at the
+other end of the connection, and whether he or she is authorized to access
+the resource. Apache's APIs for authentication and authorization are
+straightforward yet powerful. You can implement simple password-based
+checking in just a few lines of code. With somewhat more effort, you can
+implement more sophisticated authentication systems, such as ones based on
+hardware tokens.
+
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Access_Control_Authentication_a">Access Control, Authentication and Authorization
+
+</A></H1>
+When a remote user comes knocking at Apache's door to request a document,
+Apache acts like the bouncer standing at the entrance to a bar. It asks
+three questions:
+
+
+<P>
+
+<OL>
+<LI><STRONG><A NAME="item_Is_the_bar_open_for_business_"> Is the bar open for business?
+
+</A></STRONG>
+If the bar's closed no one can come in. The patron is brusquely turned away
+regardless of who he or she may be.
+
+
+<P>
+
+<LI><STRONG><A NAME="item_Is_the_patron_who_he_says_he_is_"> Is the patron who he says he is?
+
+</A></STRONG>
+The bouncer demands to see some identification and scrutinizes it for
+authenticity. If the ID is forged, the bouncer hustles the patron away.
+
+
+<P>
+
+<LI><STRONG><A NAME="item_Is_this_patron_authorized_to_ent"> Is this patron authorized to enter?
+
+</A></STRONG>
+Based on the patron's confirmed identity, the bouncer decides whether this
+person is allowed in. The patron must be of legal drinking age, and, in the
+case of a private club, must be listed in the membership roster. Or there
+may be arbitrary restrictions, such as ``ladies night.''
+
+
+<P>
+
+</OL>
+In the context of the HTTP protocol, the first decision is known as
+``access control,'' the second as ``authentication'' and the third as
+``authorization.'' Each is the responsibility of a separate Apache handler
+which decides who can access the site, and what they are allowed to see
+when they enter. Unlike the case of the bouncer at the bar, Apache access
+control and authentication can be as fine-grained as you need it to be. In
+addition to controlling who is allowed to enter the bar (Web site), you can
+control what parts of the bar (partial URL paths) they're allowed to sit,
+and even what drinks (individual URLs) they can order. You can control
+access to real files and directories as easily as virtual ones created on
+the fly.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="How_Access_Control_Works">How Access Control Works
+
+</A></H2>
+Access control is any type of restriction that doesn't require you to
+determine the identity of the remote user. Common examples of access
+control are those based on the IP address of the remote user's computer, on
+the time of day of the request, or those based on certain attributes of the
+requested document (for example, the remote user tries to fetch a directory
+listing when automatic directory indexing has been disabled).
+
+
+<P>
+
+Access control uses the HTTP <CODE>FORBIDDEN</CODE> status code (403). When a user attempts to fetch a URL that is restricted
+in this way, the server returns this status code to tell the user's browser
+that access is forbidden and no amount of authentication will change that
+fact. The easiest way to understand this interaction is to see it in
+action. If you have access to a command-line telnet program, you can talk
+directly to a server to see its responses. Try this (the URL is live):
+
+
+<P>
+
+<PRE>   % telnet www.modperl.com 80
+   Connected to www.modperl.com.
+   Escape character is '^]'.
+   GET /articles/ HTTP/1.0
+</PRE>
+
+<P>
+
+<PRE>   HTTP/1.1 403 Forbidden
+   Date: Mon, 10 Nov 1998 12:43:08 GMT
+   Server: Apache/1.3.3 mod_perl/1.16
+   Connection: close
+   Content-Type: text/html
+</PRE>
+
+<P>
+
+<PRE>   &lt;HTML&gt;&lt;HEAD&gt;
+   &lt;TITLE&gt;403 Forbidden&lt;/TITLE&gt;
+   &lt;/HEAD&gt;&lt;BODY&gt;
+   &lt;H1&gt;Forbidden&lt;/H1&gt;
+   You don't have permission to access /articles/
+   on this server.&lt;P&gt;
+   &lt;/BODY&gt;&lt;/HTML&gt;
+   Connection closed by foreign host.
+</PRE>
+
+<P>
+
+In this example, after connecting to the Web server's port, we typed in a
+GET request to fetch the URL <EM>/articles</EM>. However, access to this URL has been turned off at the server side using
+the following configuration file directives:
+
+
+<P>
+
+<PRE>   &lt;Location /articles&gt;
+     deny from all
+   &lt;/Location&gt;
+</PRE>
+
+<P>
+
+Because access is denied to everyone, the server returns an HTTP header
+indicating the 403 status code. This is followed by a short explanatory
+HTML message for the browser to display. Since there's nothing more that
+the user can do to gain access to this URL, the browser displays this
+message and takes no further action.
+
+
+<P>
+
+Apache's standard modules allow you to restrict access to a file or
+directory by the IP address or domain name of the remote host. By writing
+your own access control handler, you can take complete control of this
+process to grant or deny access based on any arbitrary criteria you choose.
+The examples given later show you how to limit access based
+on the day of the week and by the user agent, but you can base the check on
+anything that doesn't require user interaction. For example, you might
+insist that the remote host has a reverse domain name system mapping, or
+limit access to hosts that make too many requests over a short period of
+time.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="How_Authentication_and_Authoriza">How Authentication and Authorization Work
+
+</A></H2>
+In contrast to access control, the process of authenticating a remote user
+is more involved. The question ``Is the user who they say they are?''
+sounds simple, but the steps for verifying the answer can be simple or
+complex, depending on the level of assurance you desire. The HTTP protocol
+does not provide a way to answer the question of authenticity, only a
+method of asking it. It's up to the Web server itself to decide when a user
+is or is not authenticated.
+
+
+<P>
+
+When a Web server needs to know who a user is, it issues a challenge using
+the HTTP 401 ``Authorization Required'' code (Figure 6.1). In addition to
+this code, the HTTP header includes one or more fields called <EM>WWW-Authenticate</EM>, indicating the type (or types) of authentication that the server
+considers acceptable.
+<EM>WWW-Authenticate</EM> may also provide other information, such as a challenge string to use in
+cryptographic authentication protocols.
+
+
+<P>
+
+When a client sees the 401 response code it studies the
+<EM>WWW-Authenticate</EM> header and fetches the requested authentication information if it can. If
+need be, the client requests some information from the user, such as
+prompting for an account name and password, or requiring the user to insert
+a smart token containing a cryptographic signature.
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Figure">Figure 6.1: During Web authentication, the server challenges the
+browser to provide authentication information, and the browser
+reissues the request with a WWW-Authenticate header.
+
+</A><br><img src="https://searchlores.nickifaulk.com/fig6.1.gif" alt="Figure 6.1"><br></STRONG><DD>
+</DL>
+Armed with this information, the browser now issues a second request for
+the URL, but this time adding an <EM>Authorization</EM> field containing the information necessary to establish the user's
+credentials. (Notice that this field is misnamed since it provides
+authentication information, not authorization information.) The server
+checks the contents of <EM>Authorization</EM>, and if it passes muster the request is passed on to the authorization
+phase of the transaction, where the server will decide whether the
+authenticated user has access to the requested URL.
+
+
+<P>
+
+On subsequent requests to this URL, the browser remembers the user's
+authentication information and automatically provides it in the
+<EM>Authorization</EM> field. This way the user doesn't have to provide his credentials each time
+he fetches a page. The browser also provides the same information for URLs
+at the same level or beneath the current one, anticipating the common
+situation in which an entire directory tree is placed under access control.
+If the authentication information becomes invalid (for example, in a scheme
+in which authentication expires after a period of time), the server can
+again issue a 401 response, forcing the browser to request the user's
+credentials all over again.
+
+
+<P>
+
+The contents of <EM>WWW-Authenticate</EM> and <EM>Authorization</EM> are specific to the particular authentication scheme. Fortunately only
+three authentication schemes are in general use, and just one dominates the
+current generation of browsers and servers*. This is the <EM>Basic</EM>
+authentication scheme, the first authentication scheme defined in the HTTP
+protocol. Basic authentication is, well, basic! It is the standard account
+name/password scheme that we all know and love.
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_FOOTNOTE">FOOTNOTE
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__The">*The</A> three authentication schemes in general use
+are Basic, Digest, and Microsoft's proprietary NTLM protocol used by its
+MSIE and IIS products.  
+
+
+<P>
+
+</DL>
+Here's what an unauthorized response looks like. Feel free to try it for
+yourself.
+
+
+<P>
+
+<PRE>   % telnet www.modperl.com 80
+   Connected to www.modperl.com.
+   Escape character is '^]'.
+   GET /private/ HTTP/1.0
+</PRE>
+
+<P>
+
+<PRE>   HTTP/1.1 401 Authorization Required
+   Date: Mon, 10 Nov 1998 1:01:17 GMT
+   Server: Apache/1.3.3 mod_perl/1.16
+   WWW-Authenticate: Basic realm=&quot;Test&quot;
+   Connection: close
+   Content-Type: text/html
+</PRE>
+
+<P>
+
+<PRE>   &lt;HTML&gt;&lt;HEAD&gt;
+   &lt;TITLE&gt;Authorization Required&lt;/TITLE&gt;
+   &lt;/HEAD&gt;&lt;BODY&gt;
+   &lt;H1&gt;Authorization Required&lt;/H1&gt;
+   This server could not verify that you
+   are authorized to access the document you
+   requested.  Either you supplied the wrong
+   credentials (e.g., bad password), or your
+   browser doesn't understand how to supply
+   the credentials required.&lt;P&gt;
+   &lt;/BODY&gt;&lt;/HTML&gt;
+   Connection closed by foreign host.
+</PRE>
+
+<P>
+
+In this example, we requested the URL <EM>/private/</EM>, which has been placed under Basic authentication. The returned HTTP 401
+status code indicates that some sort of authentication is required, and the <EM>WWW-Authenticate</EM> field tells the browser to use Basic authentication. The <EM>WWW-Authenticate</EM>
+field also contains scheme-specific information following the name of the
+scheme. In the case of Basic authentication, this information consists of
+the authorization ``realm'' and a string for the browser to display in the
+password dialog box. One purpose of this information is to hint to the user
+which password he should provide on systems that maintain more than one set
+of accounts. Another purpose is to allow the browser to automatically
+provide the same authentication information if it later encounters a
+discontiguous part of the site that uses the same realm name. However, the
+authors have found not all browsers implement this feature.
+
+
+<P>
+
+Following the HTTP header is some HTML for the browser to display. Unlike
+the situation with the 403 status, however, the browser doesn't immediately
+display this page. Instead it pops up a dialog box to request the user's
+account name and password. The HTML is only displayed if the user presses
+``Cancel'', or in the rare case of browsers that don't understand Basic
+authentication.
+
+
+<P>
+
+After the user enters his credentials, the browser attempts to fetch the
+URL once again, this time providing the credential information in the <EM>Authorization</EM> field. The request (which you can try yourself) will look something like
+this:
+
+
+<P>
+
+<PRE>   % telnet www.modperl.com 80
+   Connected to www.modperl.com.
+   Escape character is '^]'.
+   GET /private/ HTTP/1.0
+   Authorization: Basic Z2FuZGFsZjp0aGUtd2l6YXJk
+</PRE>
+
+<P>
+
+<PRE>   HTTP/1.1 200 OK
+   Date: Mon, 10 Nov 1998 1:43:56 GMT
+   Server: Apache/1.3.3 mod_perl/1.16
+   Last-Modified: Thu, 29 Jan 1998 11:44:21 GMT
+   ETag: &quot;1612a-18-34d06b95&quot;
+   Content-Length: 24
+   Accept-Ranges: bytes
+   Connection: close
+   Content-Type: text/plain
+</PRE>
+
+<P>
+
+<PRE>   Hi there.
+</PRE>
+
+<P>
+
+<PRE>   How are you?
+   Connection closed by foreign host.
+</PRE>
+
+<P>
+
+The contents of the <EM>Authorization</EM> field are the security scheme, ``Basic'' in this case, and scheme-specific
+information. For Basic authentication, this consists of the user's name and
+password, concatenated together and encoded with base64. Although the
+example makes it look like the password is encrypted in some clever way,
+it's not, a fact that you can readily prove to yourself if you have the
+MIME::Base64 module installed.*
+
+
+<P>
+
+<PRE>   % perl -MMIME::Base64 -le 'print decode_base64 &quot;Z2FuZGFsZjp0aGUtd2l6YXJk&quot;
+   gandalf:the-wizard
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>FOOTNOTE
+
+</A></STRONG><DD>
+*MIME::Base64 is available from the CPAN
+
+
+<P>
+
+</DL>
+Standard Apache offers two types of authentication, the Basic
+authentication shown above, and a more secure method known as Digest.
+Digest authentication, which became standard with HTTP/1.1, is safer than
+Basic because passwords are never transmitted in the clear. In Digest
+authentication, the server generates a random ``challenge'' string and
+sends it to the browser. The browser encrypts the challenge with the user's
+password and returns it to the server. The server also encrypts the
+challenge with the user's stored password* and compares its result to the
+one returned by the browser. If the two match, the server knows that the
+user knows the correct password. Unfortunately the commercial browser
+vendors haven't been as quick to innovate as Apache, so Digest
+authentication isn't widely implemented on the browser side. At the same
+time, some might argue that using Basic authentication over the encrypted
+Secure Sockets Layer (SSL) protocol is simpler, provided that the browser
+and server both implement SSL. We discuss SSL authentication techniques at
+the end of this text.
+
+
+<P>
+
+<DL>
+<DT><STRONG>FOOTNOTE
+
+</A></STRONG><DD>
+*Actually, the user's plaintext password is not stored on the server side.
+Instead, the server stores an MD5 hash of the user's password and the hash,
+not the password itself, are used on the server and browser side to encrypt
+the challenge. Because users tend to use the same password for multiple
+services, this prevents the compromise of passwords by unscrupulous
+Webmasters.
+
+
+<P>
+
+</DL>
+Because authentication requires the cooperation of the browser, your
+options for customizing how authentication works are somewhat limited. You
+are essentially limited to authenticating based on information that the
+user provides in the standard password dialog box. However, even within
+these bounds, there are some interesting things you can do. For example,
+you can implement an anonymous login system that gives the user a chance to
+provide contact information without requiring him to authenticate.
+
+
+<P>
+
+After successfully authenticating a user, Apache enters its authorization
+phase. Just because a user can prove that he is who he claims to be doesn't
+mean he has unrestricted access to the site! During this phase Apache
+applies any number of arbitrary tests to the authenticated username.
+Apache's default handlers allow you to grant access to users based on their
+account names or their membership in named groups, using a variety of flat
+file and hashed lookup table formats.
+
+
+<P>
+
+By writing custom authorization handlers, you can do much more than this.
+You can perform a SQL query on an enterprise database, consult the
+company's current organizational chart to implement role-based
+authorization, or apply <EM>ad hoc</EM> rules like allowing users named ``Fred'' access on alternate Tuesdays. Or
+how about something completely different from the usual Web access model,
+such as a system in which the user purchases a certain number of ``pay per
+view'' accesses in advance? Each time he accesses a page, the system
+decrements a counter in a database. When the user's access count hits zero,
+the server denies him access.
+
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Access_Control_with_I_mod_perl_">Access Control with <EM>mod_perl</EM>
+
+</A></H1>
+This section will show you how to write a simple access control handler in <EM>mod_perl</EM>.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="A_Simple_Access_Control_Module">A Simple Access Control Module
+
+</A></H2>
+To create an access control module, you'll install a handler for the
+<EM>access control</EM> phase by adding a <STRONG>PerlAccessHandler</STRONG> directive to one of Apache's configuration files or to a per-directory <EM>.htaccess</EM>
+file. The access control handler has the job of giving thumbs up or down
+for each attempted access to the URL. The handler indicates its decision in
+the result code it returns to the server.  <A HREF="passwo22.htm#item_OK">OK</A> will allow the user in, <CODE>FORBIDDEN</CODE> will forbid access by issuing a 403 status code, and <A HREF="passwo22.htm#item_DECLINED">DECLINED</A> will defer the decision to any other access control handlers that may be
+installed.
+
+
+<P>
+
+We begin with the simplest type of access control, a stern module called <EM>Apache::GateKeeper</EM> (listing 6.1).  <EM>Apache::GateKeeper</EM>
+recognizes a single configuration variable named <EM>Gate</EM>. If the value of Gate is ``open'', the module allows access to the URL
+under its control. If the value of Gate is ``closed'', the module forbids
+access. Any other value results in a ``internal server error'' message.
+
+
+<P>
+
+The code is straightforward. It begins in the usual way by importing the
+common Apache and HTTP constants from <EM>Apache::Constants</EM>:
+
+
+<P>
+
+<PRE> package Apache::GateKeeper;
+ # file: Apache/GateKeeper.pm 
+ use strict;
+ use Apache::Constants qw(:common);
+</PRE>
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     my $gate = $r-&gt;dir_config(&quot;Gate&quot;);
+     return DECLINED unless defined $gate;
+     return OK if lc($gate) eq 'open';
+</PRE>
+
+<P>
+
+When the handler is executed, it fetches the value of the <EM>Gate</EM>
+variable. If the variable is absent, the handler declines to handle the
+transaction, deferring the decision to other handlers that may be
+installed. If the variable is present, the handler checks its value, and
+returns a value of <EM>OK</EM> if <EM>Gate</EM> is ``open''.
+
+
+<P>
+
+<PRE>     if (lc $gate eq 'closed') {
+         $r-&gt;log_reason(&quot;Access forbidden unless the gate is open&quot;, $r-&gt;filename);
+         return FORBIDDEN;
+     }
+ 
+     $r-&gt;log_error($r-&gt;uri, &quot;: Invalid value for Gate ($gate)&quot;);
+     return SERVER_ERROR;
+ }
+</PRE>
+
+<P>
+
+On the other hand, if the value of <EM>Gate</EM> is ``closed'' the handler returns a <CODE>FORBIDDEN</CODE> error code. In the latter case, the subroutine also writes a message to the
+log file using the <EM>log_reason()</EM>
+logging method. Any other value for <EM>Gate</EM> is a configuration error, which we check for, log, and handle by returning <A HREF="passwo22.htm#item_SERVER_ERROR">SERVER_ERROR</A>.
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Listing">Listing 6.1: Simple access control
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::GateKeeper;
+ # file: Apache/GateKeeper.pm 
+ use strict;
+ use Apache::Constants qw(:common);
+ 
+ sub handler {
+     my $r = shift;
+     my $gate = $r-&gt;dir_config(&quot;Gate&quot;);
+     return DECLINED unless defined $gate;
+     return OK if lc $gate eq 'open';
+ 
+     if (lc $gate eq 'closed') {
+         $r-&gt;log_reason(&quot;Access forbidden unless the gate is open&quot;, $r-&gt;filename);
+         return FORBIDDEN;
+     }
+ 
+     $r-&gt;log_error($r-&gt;uri, &quot;: Invalid value for Gate ($gate)&quot;);
+     return SERVER_ERROR;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_The">The .htaccess file that goes with it
+
+</A></STRONG><DD>
+</DL>
+<PRE> PerlAccessHandler Apache::GateKeeper
+ PerlSetVar Gate closed
+</PRE>
+
+<P>
+
+The bottom of the listing shows the two-line <EM>.htaccess</EM> entry required to turn on <EM>Apache::GateKeeper</EM> for a particular directory (you could also use a <STRONG>&lt;Location&gt;</STRONG> or <STRONG>&lt;Directory&gt;</STRONG> entry for this purpose). It uses the <STRONG>PerlAccessHandler</STRONG> directive to install
+<EM>Apache::GateKeeper</EM> as the access handler for this directory, then calls <STRONG>PerlSetVar</STRONG> to set the Perl configuration variable <EM>Gate</EM> to ``closed.''
+
+
+<P>
+
+How does the GateKeeper access control handler interact with other aspects
+of Apache access control, authentication and authorization? If an
+authentication handler is also installed, for example by including a
+``require valid-user'' directive in the <EM>.htaccess</EM> file, then <EM>Apache::GateKeeper</EM>
+is called as only the first step in the process. If <EM>Apache::GateKeeper</EM>
+returns <A HREF="passwo22.htm#item_OK">OK</A>, then Apache will go on to the authentication phase and the user will be
+asked to provide his name and password.
+
+
+<P>
+
+However, this behavior can be modified by placing the line <STRONG>Satisfy
+any</STRONG> in the <EM>.htaccess</EM> file or directory configuration section. When this directive is in effect,
+Apache will try access control first and then try
+authentication/authorization. If either returns <A HREF="passwo22.htm#item_OK">OK</A>, then the request will be satisfied. This lets certain privileged users
+get into the directory even when <EM>Gate</EM> is closed. (The bouncer steps aside when he recognizes his boss!)
+
+
+<P>
+
+Now consider a <EM>.htaccess</EM> file like this one:
+
+
+<P>
+
+<PRE>   PerlAccessHandler Apache::GateKeeper
+   PerlSetVar Gate open
+</PRE>
+
+<P>
+
+<PRE>   order deny,allow
+   deny from all
+   allow from 192.168.2
+</PRE>
+
+<P>
+
+This configuration installs two access control handlers, one implemented by
+the standard <EM>mod_access</EM> module (which also defines the <STRONG>order</STRONG>, <STRONG>allow</STRONG> and <STRONG>deny</STRONG> directives), and
+<EM>Apache::GateKeeper</EM>. The two handlers are potentially in conflict. The IP-based restrictions
+implemented by <EM>mod_access</EM> forbid access from any address but those in a privileged 192.168.2 subnet.
+<EM>Apache::GateKeeper</EM>, in contrast, is set to allow access to the subdirectory from anyone. Who
+wins?
+
+
+<P>
+
+The Apache server's method for resolving these situations is to call each
+handler in turn in the reverse order of installation. If the handler
+returns <CODE>FORBIDDEN</CODE>, then Apache immediately refuses access. If the handler returns <A HREF="passwo22.htm#item_OK">OK</A> or <A HREF="passwo22.htm#item_DECLINED">DECLINED</A>, however, Apache passes the request to the next handler in the chain. In
+the example given above, <EM>Apache::GateKeeper</EM> gets first shot at approving the request, because it was installed last (<EM>mod_access</EM> is usually installed at compile time). If <EM>Apache::GateKeeper</EM> approves or declines the request, then the request will be passed on to <EM>mod_access</EM>. However if <EM>Apache::GateKeeper</EM> returns <CODE>FORBIDDEN</CODE>, then the request is immediately refused and <EM>mod_access</EM> isn't even invoked at all. The system is not unlike the U.N. security
+council: for a resolution to pass all members must either vote yes or
+abstain. Any single ``no'' vote acts as a veto.
+
+
+<P>
+
+The <STRONG>Satisfy any</STRONG> directive has no effect on this situation.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Time_Based_Access_Control">Time-Based Access Control
+
+</A></H2>
+For a slightly more interesting access handler, consider Listing 6.2, which
+implements access control based on the day of the week. URLs protected by
+this handler will only be accessible on the days listed in a variable named <EM>ReqDay</EM>. This could be useful for a Web site that observes the sabbath, or, more
+plausibly, might form the basis for a generic module that implements
+time-based access control. Many sites perform routine maintenance at
+scheduled times of the day, and it's often helpful to keep visitors out of
+directories while they're being updated.
+
+
+<P>
+
+The handler, <EM>Apache::DayLimit</EM>, begins by fetching the <EM>ReqDay</EM>
+configuration variable. If not present, it declines the transaction and
+gives some other handler a chance to consider it. Otherwise, the handler
+splits out the day names, which are assumed to be contained in a space- or
+comma-delimited list, and compares them to the current day obtained from
+the <EM>localtime()</EM> function. If there's a match, the handler allows the access by returning <A HREF="passwo22.htm#item_OK">OK</A>. Otherwise, it returns the <CODE>FORBIDDEN</CODE> HTTP error code as before, and access is denied.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.2: Access Control by the Day of Week
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::DayLimit;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Time::localtime;
+ 
+ my @wday = qw(sunday monday tuesday wednesday thursday friday saturday);
+ 
+ sub handler {
+     my $r = shift;
+     my $requires = $r-&gt;dir_config(&quot;ReqDay&quot;);
+     return DECLINED unless $requires;
+ 
+     my $day = $wday[localtime-&gt;wday];
+     return OK if $requires =~ /$day([,\s]+|$)/i;
+ 
+     $r-&gt;log_reason(qq{Access forbidden on weekday &quot;$day&quot;}, $r-&gt;uri);
+     return FORBIDDEN;
+ }
+ 
+ 1; 
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_A">A Location section to go with Apache::DayLimit
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /weekends_only&gt;
+    PerlSetVar ReqDay saturday,sunday
+    PerlAccessHandler Apache::DayLimit
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Browser_Based_Access_Control">Browser-Based Access Control
+
+</A></H2>
+Web-crawling robots are an increasing problem for Webmasters. Robots are
+supposed to abide by an informal agreement known as the robot exclusion
+standard (RES), in which the robot checks a file named
+<EM>robots.txt</EM> that tells it what parts of the site it is allowed to crawl through. Many
+rude robots, however, ignore the RES, or, worse, exploit <EM>robots.txt</EM> to guide them to the ``interesting'' parts. The next example (Listing 6.3)
+gives the outline of a robot exclusion module called <EM>Apache::BlockAgent</EM>. With it you can block the access of certain Web clients based on their <EM>User-Agent</EM> field (which frequently, although not invariably, identifies robots).
+
+
+<P>
+
+The module is configured with a ``bad agents'' text file. This file
+contains a series of pattern matches, one per line. The incoming request's
+user agent field will be compared to each of these patterns in a
+case-insensitive manner. If any of the patterns hit, the request will be
+refused. Here's a small sample file that contains pattern matches for a few
+robots that have been reported to behave rudely:
+
+
+<P>
+
+<STRONG>Sample bad agents file</STRONG>
+
+
+
+
+<P>
+
+<PRE>   ^teleport pro\/1\.28
+   ^nicerspro
+   ^mozilla\/3\.0 \(http engine\)
+   ^netattache
+   ^crescent internet toolpak http ole control v\.1\.0
+   ^go-ahead-got-it
+   ^wget
+   ^devsoft's http component v1\.0
+   ^www\.pl
+   ^digout4uagent
+</PRE>
+
+<P>
+
+Rather than hard-code the location of the bad agents file, we set its path
+using a configuration variable named <EM>BlockAgentFile</EM>. An directory configuration section like this one will apply the
+<EM>Apache::BlockAgent</EM> handler to the entire site:
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Sample">Sample perl.conf entry
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /&gt;
+   PerlAccessHandler Apache::BlockAgent
+   PerlSetVar BlockAgentFile conf/bad_agents.txt
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+This is a long module, so we'll step through the code a section at a time.
+
+
+<P>
+
+<PRE> package Apache::BlockAgent;
+    
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::File ();
+ use Apache::Log ();
+ use Safe ();
+</PRE>
+
+<P>
+
+<PRE> my $Safe = Safe-&gt;new;
+ my %MATCH_CACHE;
+</PRE>
+
+<P>
+
+The module brings in the common Apache constants, and loads file-handling
+code from <EM>Apache::File</EM>. It also brings in the
+<EM>Apache::Log</EM> module, which makes the logging API available. The standard <EM>Safe</EM> module is pulled in next and a new compartment is created where code will
+be compiled. We'll see later how the <CODE>%MATCH_CACHE</CODE> package variable is used to cache the code routines that detect undesirable
+user agents. Most of <EM>Apache::BlockAgent</EM>'s logic is contained in the short
+<EM>handler()</EM> subroutine:
+
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     my($patfile, $agent, $sub);
+     return DECLINED unless $patfile = $r-&gt;dir_config('BlockAgentFile');
+     return FORBIDDEN unless $agent = $r-&gt;header_in('User-Agent');
+     return SERVER_ERROR unless $sub = get_match_sub($r, $patfile);
+     return OK if $sub-&gt;($agent);
+     $r-&gt;log_reason(&quot;Access forbidden to agent $agent&quot;, $r-&gt;filename);
+     return FORBIDDEN;
+ }
+</PRE>
+
+<P>
+
+The code first checks that the <EM>BlockAgentFile</EM> configuration variable is present. If not, it declines to handle the
+transaction. It then attempts to fetch the <EM>User-Agent</EM> field from the HTTP header, by calling the request object's <EM>header_in()</EM> method. If no value is returned by this call (which might happen if a
+sneaky robot declines to identify itself), we return <CODE>FORBIDDEN</CODE> from the subroutine, blocking access.  
+
+
+<P>
+
+Otherwise, we call an internal function named <EM>get_match_sub()</EM> with the request object and the path to the bad agent file.
+<EM>get_match_sub()</EM> uses the information contained within the file to compile an anonymous
+subroutine which, when called with the user agent identification, returns a
+true value if the client is OK, or false if it matches one of the forbidden
+patterns. If <EM>get_match_sub()</EM>
+returns an undefined value, it indicates that one or more of the patterns
+didn't compile correctly and we return a server error. Otherwise we call
+the returned subroutine with the agent name, and return <A HREF="passwo22.htm#item_OK">OK</A> or <CODE>FORBIDDEN</CODE> depending on the outcome.
+
+
+<P>
+
+The remainder of the module is taken up by the definition of
+<EM>get_match_sub()</EM>. This subroutine is interesting because it illustrates the advantage of a
+persistent module over a transient CGI script:
+
+
+<P>
+
+<PRE> sub get_match_sub {
+     my($r, $filename) = @_;
+     $filename = $r-&gt;server_root_relative($filename);
+     my $mtime = (stat $filename)[9];
+     
+     # try to return the sub from cache
+     return $MATCH_CACHE{$filename}-&gt;{'sub'} if
+        $MATCH_CACHE{$filename} &amp;&amp; 
+            $MATCH_CACHE{$filename}-&gt;{'mod'} &gt;= $mtime;
+</PRE>
+
+<P>
+
+Rather than tediously read in the bad agents file each time we're called,
+compile each of the patterns, and test them, we compile the pattern match
+tests into an anonymous subroutine and store it in the
+<CODE>%MATCH_CACHE</CODE> package variable, along with the name of the pattern file and its
+modification date. Each time the subroutine is called, the subroutine
+checks <CODE>%MATCH_CACHE</CODE> to see whether this particular pattern file has been processed before. If
+the file has been seen before, the routine then compares the file's
+modification time against the date stored in the cache. If the file is not
+more recent than the cached version, then we return the cached subroutine.
+Otherwise we compile it again.
+
+
+<P>
+
+Next we open up the bad agents file, fetch the patterns, and build up a
+subroutine line by line using a esries of string concatenations:
+
+
+<P>
+
+<PRE>     my($fh, @pats);
+     return undef unless $fh = Apache::File-&gt;new($filename);
+     chomp(@pats = &lt;$fh&gt;); # get the patterns into an array
+     my $code = &quot;sub { local \$_ = shift;\n&quot;;
+     foreach (@pats) {
+        next if /^#/;
+        $code .= &quot;return if /$_/i;\n&quot;;
+     }
+     $code .= &quot;1; }\n&quot;;     
+     $r-&gt;server-&gt;log-&gt;debug(&quot;compiled $filename into:\n $code&quot;);
+</PRE>
+
+<P>
+
+Note the use of <EM>$r-&gt;server-&gt;log-&gt;debug()</EM> to send a debugging message to the server log file. This message will only
+appear in the error log if the <STRONG>LogLevel</STRONG> is set to <EM>debug</EM>. If all goes well, the synthesized subroutine stored in <CODE>$code</CODE> will end up looking something like this:
+
+
+<P>
+
+<PRE>        sub {
+           $_ = shift;
+           return if /^teleport pro\/1\.28/i;
+           return if /^nicerspro/i;
+           return if /^mozilla\/3\.0 \(http engine\)/i;
+           ...
+           1;
+         }
+</PRE>
+
+<P>
+
+After building up the subroutine we run a match-all regular expression over
+the code, untainting what was read from disk. In most cases, blindly
+untainting data is a bad idea, rendering the taint check mechansim useless.
+However, since we are using a <EM>Safe</EM>
+compartment and the <EM>reval()</EM> method, potentially dangerous operations such as <EM>system()</EM> are disabled and access to other namespaces is forbidden.
+
+
+<P>
+
+<PRE>     # create the sub, cache and return it
+     ($code) = $code =~ /^(.*)$/s; #untaint
+     my $sub = $Safe-&gt;reval($code);
+     unless ($sub) {
+        $r-&gt;log_error($r-&gt;uri, &quot;: &quot;, $@);
+        return;
+     }
+</PRE>
+
+<P>
+
+The untainting step is only required if taint checks are turned on with the <STRONG>PerlTaintCheck on</STRONG> directive (see Appendix A), and marks the code as safe to pass to <EM>eval()</EM> (in other words, it ``untaints'' it). We compile the code inside a <EM>Safe</EM> compartment, simply as an extra level caution. It would be OK to use the
+builtin <EM>eval()</EM> here because the same level of trust in the bad agents file should be just
+as any other Apache configuration file. The result of <EM>eval()</EM>ing the string is a CODE reference to an anonymous subroutine, or undef if
+something went wrong during the compilation. In the latter case, we log the
+error and return. 
+
+
+<P>
+
+The final step is to store the compiled subroutine and the bad agent file's
+modification time into <CODE>%MATCH_CACHE</CODE>:
+
+
+<P>
+
+<PRE>     @{ $MATCH_CACHE{$filename} }{'sub','mod'} = ($sub, $mtime);
+     return $MATCH_CACHE{$filename}-&gt;{'sub'};
+ }
+</PRE>
+
+<P>
+
+Because there may be several pattern files applicable to different parts of
+the site, we key <CODE>%MATCH_CACHE</CODE> by the path to the file. We then return the compiled subroutine to the
+caller.
+
+
+<P>
+
+The technique of compiling and caching a
+dynamically-evaluated subroutine is a powerful optimization that allows <EM>Apache::BlockAgent</EM> to keep up with even very busy sites. Going one step further, <EM>Apache::BlockAgent</EM> module could avoid parsing the pattern file parsing entirely by defining
+its own custom configuration directives. The technique for doing this is
+described elsewhere.
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_footnote">footnote
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__The">*The</A> mod_rewrite module may also be worth persuing
+for its rewrite rules which can be based on the User-Agent field, time of
+day and other variables.
+
+
+<P>
+
+</DL>
+<DL>
+<DT><STRONG>Listing 6.3: Blocking rude robots with Apache::BlockAgent
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::BlockAgent;
+    
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::File ();
+ use Apache::Log ();
+ use Safe ();
+ 
+ my $Safe = Safe-&gt;new;
+ my %MATCH_CACHE;
+ 
+ sub handler {
+     my $r = shift;
+     my($patfile, $agent, $sub);
+     return DECLINED unless $patfile = $r-&gt;dir_config('BlockAgentFile');
+     return FORBIDDEN unless $agent = $r-&gt;header_in('User-Agent');
+     return SERVER_ERROR unless $sub = get_match_sub($r, $patfile);
+     return OK if $sub-&gt;($agent);
+     $r-&gt;log_reason(&quot;Access forbidden to agent $agent&quot;, $r-&gt;filename);
+     return FORBIDDEN;
+ }
+ 
+ # This routine creates a pattern matching subroutine from a
+ # list of pattern matches stored in a file.
+ sub get_match_sub {
+     my($r, $filename) = @_;
+     $filename = $r-&gt;server_root_relative($filename);
+     my $mtime = (stat $filename)[9];
+     
+     # try to return the sub from cache
+     return $MATCH_CACHE{$filename}-&gt;{'sub'} if
+        $MATCH_CACHE{$filename} &amp;&amp; 
+            $MATCH_CACHE{$filename}-&gt;{'mod'} &gt;= $mtime;
+     
+     # if we get here, then we need to create the sub
+     my($fh, @pats);
+     return unless $fh = Apache::File-&gt;new($filename);
+     chomp(@pats = &lt;$fh&gt;); # get the patterns into an array
+     my $code = &quot;sub { local \$_ = shift;\n&quot;;
+     foreach (@pats) {
+        next if /^#/;
+        $code .= &quot;return if /$_/i;\n&quot;;
+     }
+     $code .= &quot;1; }\n&quot;;     
+     $r-&gt;server-&gt;log-&gt;debug(&quot;compiled $filename into:\n $code&quot;);
+ 
+     # create the sub, cache and return it
+     ($code) = $code =~ /^(.*)$/s; #untaint
+     my $sub = $Safe-&gt;reval($code);
+     unless ($sub) {
+        $r-&gt;log_error($r-&gt;uri, &quot;: &quot;, $@);
+        return;
+     }
+     @{ $MATCH_CACHE{$filename} }{'sub','mod'} = ($sub, $mtime);
+     return $MATCH_CACHE{$filename}-&gt;{'sub'};
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Blocking_Greedy_Clients">Blocking Greedy Clients
+
+</A></H2>
+A limitation of using pattern matching to identify robots is that it only
+catches the robots that you know about, and only those that identify
+themselves by name. A few devious robots masquerade as users by using user
+agent strings that identify themselves as conventional browsers. To catch
+such robots, you'll have to be more sophisticated.
+
+
+<P>
+
+A trick that some <EM>mod_perl</EM> developers have used to catch devious robots is to block access to things
+that <EM>act</EM> like robots by requesting URLs at a rate faster than even the twitchiest of
+humans can click a mouse. The strategy is to record the time of the initial
+access by the remote agent, and to count the number of requests it makes
+over a period of time. If it exceeds the speed limit, it gets locked out.  <EM>Apache::SpeedLimit</EM> (listing 6.4) shows one way to write such a module.
+
+
+<P>
+
+The module starts out much like the previous examples:
+
+
+<P>
+
+<PRE> package Apache::SpeedLimit;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::Log ();
+ use IPC::Shareable ();
+ use vars qw(%DB);
+</PRE>
+
+<P>
+
+Because it needs to track the number of hits each client makes on the site, <EM>Apache::SpeedLimit</EM> faces the problem of maintaining a persistent variable across processes
+that we have seen before. Here, because performance is an issue in a script
+that will be called for every URL on the site, we solve the problem by
+tieing a hash to shared memory using <EM>IPC::Shareable</EM>. The tied variable, <CODE>%DB</CODE>, is keyed to the name of the remote client. Each entry in the hash holds
+four values, the time of the client's first access to the site, the time of
+the most recent access, the number of hits the client has made on the site,
+and whether the client has been locked out for exceeding the speed limit.*
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<CODE>*On</CODE> systems that don't have <EM>IPC::Shareable</EM> available, a tied DBM file might also work, but you'd have to open and
+close it each time the module is called. This would have performance
+implications. A better solution would be to store the information in a DBI
+database, though.
+
+
+<P>
+
+</DL>
+<PRE> sub handler {
+     my $r = shift;
+     return DECLINED unless $r-&gt;is_main;  # don't handle sub-requests
+ 
+     my $speed_limit = $r-&gt;dir_config('SpeedLimit') || 10; # Accesses per minute
+     my $samples = $r-&gt;dir_config('SpeedSamples')   || 10; # Sampling threshold (hits)
+     my $forgive = $r-&gt;dir_config('SpeedForgive')   || 20; # Forgive after this period
+</PRE>
+
+<P>
+
+The <EM>handler()</EM> subroutine first fetches some configuration variables. The recognized
+directives include <EM>SpeedLimit</EM>, the number of accesses per minute that any client is allowed to make,
+<EM>SpeedSamples</EM>, the number of hits that the client must make before the module starts
+calculating statistics, and <EM>SpeedForgive</EM>, a ``statute of limitations'' on breaking the speed limit. If the client
+pauses for <EM>SpeedForgive</EM> minutes before trying again, the module will forgive it and treat the
+access as if it were the very first one.
+
+
+<P>
+
+A small but important detail is the second line in the handler, where the
+subroutine declines the transaction unless <EM>is_main()</EM> returns true. It is possible for this handler to be invoked as the result
+of an internal subrequest, for example when Apache is rapidly iterating
+through the contents of an automatically-indexed directory to determine the
+MIME types of each of the directory's files. We do not want such
+subrequests to count against the user's speed limit totals, so we ignore
+any request that isn't the main one. <EM>is_main()</EM> returns true for the main request, false for subrequests.  
+
+
+<P>
+
+In addition to this, there's an even better reason for the
+<EM>is_main()</EM> check, because the very next thing the handler routine does is to call <EM>lookup_uri()</EM> to look up the requested file's content type and to ignore requests for
+image files. Without the check, the handler would recurse infinitely:
+
+
+<P>
+
+<PRE>     my $content_type = $r-&gt;lookup_uri($r-&gt;uri)-&gt;content_type;
+     return OK if $content_type =~ m:^image/:i; # ignore images
+</PRE>
+
+<P>
+
+The rationale for the check for image files is that when a browser renders
+a graphics-intensive page, it generates a flurry of requests for in-line
+images that can easily exceed the speed limit. We don't want to penalize
+users for this, so we ignore requests for inline images. It's necessary to
+make a subrequest to fetch the requested file's MIME type because access
+control handlers ordinarily run before the MIME type checker phase.
+
+
+<P>
+
+If we are dealing with a non-image document, then it should be counted
+against the client's total. In the next section of the module, we tie a
+hash named <CODE>%DB</CODE> to shared memory using the <EM>IPC::Shareable module</EM>. We're careful only to tie the variable the first time the handler is
+called. If <CODE>%DB</CODE> is already defined*, we don't tie it again:
+
+
+<P>
+
+<PRE>     tie %DB, 'IPC::Shareable', 'SPLM', {create =&gt; 1, mode =&gt; 0644}
+       unless defined %DB;
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__An">*An</A> alternative approach would be to use a
+PerlChildInitHandler to tie the %DB. 
+
+
+<P>
+
+</DL>
+The next task is to create a unique ID for the client to use as a key into
+the hash:
+
+
+<P>
+
+<PRE>     my($ip, $agent) = ($r-&gt;connection-&gt;remote_ip, $r-&gt;header_in('User-Agent'));
+     my $id = &quot;$ip:$agent&quot;;
+     my $now = time()/60; # minutes since the epoch
+</PRE>
+
+<P>
+
+The client's IP address alone would be adequate in a world of one desktop
+PC per user, but the existence of multiuser systems, firewalls and Web
+proxies complicates the issue, making it possible for multiple users to
+appear to originate at the same IP address. This module's solution is to
+create an ID that consists of the IP address concatenated with the
+User-Agent field. As long as Microsoft and Netscape release new browsers
+every few weeks this combination will spread clients out sufficiently for
+this to be a practical solution. A more robust solution could make use of
+the optional cookie generated by Apache's <EM>mod_usertrack</EM> module, but we didn't want to complicate this example overly. A final
+preparatory task is to fetch the current time and scale it to minute units.
+
+
+<P>
+
+<PRE>     tied(%DB)-&gt;shlock;
+     my($first, $last, $hits, $locked) = split ' ', $DB{$id};
+</PRE>
+
+<P>
+
+Now we update the user's statistics and calculate his current fetch speed.
+In preparation for working with the shared data we call the tied hash's <EM>shlock()</EM> method, locking the data structure for writing. Next, we look up the user's
+statistics and split it into individual fields.  
+
+
+<P>
+
+At this point in the code we enter a block named <CODE>CASE</CODE> in which we take a variety of actions depending on the current field
+values:
+
+
+<P>
+
+<PRE>     my $result = OK;
+     my $l = $r-&gt;server-&gt;log;
+   CASE:
+     {
+</PRE>
+
+<P>
+
+Just before entering the block, we set a variable named <CODE>$result</CODE> to a default of <A HREF="passwo22.htm#item_OK">OK</A>. We also retrieve an <EM>Apache::Log</EM> object to use for logging debugging messages.
+
+
+<P>
+
+The first case we consider is when the <CODE>$first</CODE> access time is blank:
+
+
+<P>
+
+<PRE>        unless ($first) { # we're seeing this client for the first time
+            $l-&gt;debug(&quot;First request from $ip.  Initializing speed counter.&quot;);
+            $first = $last = $now;
+            $hits = $locked = 0;
+            last CASE;
+        }
+</PRE>
+
+<P>
+
+In this case, we can safely assume that this is the first time we're seeing
+this client. Our action is to initialize the fields and exit the block.
+
+
+<P>
+
+The second case occurs when the interval between the client's current and
+last accesses are longer than the grace period:
+
+
+<P>
+
+<PRE>        if ($now - $last &gt; $forgive) { # beyond the grace period.  Treat like first
+            $l-&gt;debug(&quot;$ip beyond grace period.  Reinitializing speed counter.&quot;);
+            $last = $first = $now;
+            $hits = $locked = 0;
+            last CASE;
+        }
+</PRE>
+
+<P>
+
+In this case, we treat this access as a whole new session and reinitialize
+all the fields to their starting values. This ``forgives'' the client, even
+if it previously was locked out.
+
+
+<P>
+
+At this point, we can bump up the number of hits and update the last access
+time. If the number of hits is too small to make decent statistics, we just
+exit the block at this point:
+
+
+<P>
+
+<PRE>        $last = $now; $hits++;
+        if ($hits &lt; $samples) {
+            $l-&gt;debug(&quot;$ip not enough samples to calculate speed.&quot;);
+            last CASE;
+        }
+</PRE>
+
+<P>
+
+Otherwise, if the user is already locked out, we set the result code to <CODE>FORBIDDEN</CODE> and immediately exit the block. Once a client is locked out of the site, we
+don't unlock it until the grace period has passed:
+
+
+<P>
+
+<PRE>        if ($locked) { # already locked out, so forbid access
+            $l-&gt;debug(&quot;$ip locked&quot;);
+            $result = FORBIDDEN;
+            last CASE;
+        }
+</PRE>
+
+<P>
+
+If the client isn't yet locked out , then we calculate its average fetch
+speed by dividing the number of accesses it has made by the time interval
+between now and its first access. If this value exceeds the speed limit, we
+set the <CODE>$locked</CODE> variable to true and set the result code to FORBIDDEN:
+
+
+<P>
+
+<PRE>        my $interval = $now - $first;
+        $l-&gt;debug(&quot;$ip speed = &quot;, $hits/$interval);
+        if ($hits/$interval &gt; $speed_limit) {
+            $l-&gt;debug(&quot;$ip exceeded speed limit.  Blocking.&quot;);
+            $locked = 1;
+            $result = FORBIDDEN;
+            last CASE;
+        }
+     }
+</PRE>
+
+<P>
+
+At the end of the module, we check the result code. If it's <CODE>FORBIDDEN</CODE>
+we emit a log entry to explain the situation. We now update <CODE>%DB</CODE> with new values for the access times, number of hits and lock status and
+unlock the shared memory. Lastly, we return the result code to Apache:
+
+
+<P>
+
+<PRE>     $r-&gt;log_reason(&quot;Client exceeded speed limit.&quot;, $r-&gt;filename) 
+        if $result == FORBIDDEN;
+     $DB{$id} = join &quot; &quot;, $first, $now, $hits, $locked;
+     tied(%DB)-&gt;shunlock;
+     
+     return $result;
+ }
+</PRE>
+
+<P>
+
+To apply the <EM>Apache::SpeedLimit</EM> module to your entire site, you would create an configuration file entry
+like the following:
+
+
+<P>
+
+<PRE> &lt;Location /&gt;
+   PerlAccessHandler Apache::SpeedLimit
+   PerlSetVar        SpeedLimit   20   # max 20 accesses/minute
+   PerlSetVar        SpeedSamples  5   # 5 hits before doing statistics
+   PerlSetVar        SpeedForgive 30   # amnesty after 30 minutes
+  &lt;/Location&gt;
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.4: Blocking Greedy Clients
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::SpeedLimit;
+ # file: Apache/SpeedLimit.pm
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::Log ();
+ use IPC::Shareable ();
+ use vars qw(%DB);
+ 
+ sub handler {
+     my $r = shift;
+     return DECLINED unless $r-&gt;is_main;  # don't handle sub-requests
+ 
+     my $speed_limit = $r-&gt;dir_config('SpeedLimit') || 10; # Accesses per minute
+     my $samples = $r-&gt;dir_config('SpeedSamples')   || 10; # Sampling threshold (hits)
+     my $forgive = $r-&gt;dir_config('SpeedForgive')   || 20; # Forgive after this period (minutes)
+     
+     my $content_type = $r-&gt;lookup_uri($r-&gt;uri)-&gt;content_type;
+     return OK if $content_type =~ m:^image/:i; # ignore images
+     tie %DB, 'IPC::Shareable', 'SPLM', {create =&gt; 1, mode =&gt; 0644}
+       unless defined %DB;
+     
+     my($ip, $agent) = ($r-&gt;connection-&gt;remote_ip, $r-&gt;header_in('User-Agent'));
+     my $id = &quot;$ip:$agent&quot;;
+     my $now = time()/60; # minutes since the epoch
+     
+     # lock the shared memory while we work with it
+     tied(%DB)-&gt;shlock;
+     my($first, $last, $hits, $locked) = split ' ', $DB{$id};
+     my $result = OK;
+     my $l = $r-&gt;server-&gt;log;
+   CASE:
+     {
+        unless ($first) { # we're seeing this client for the first time
+            $l-&gt;debug(&quot;First request from $ip.  Initializing speed counter.&quot;);
+            $first = $last = $now;
+            $hits = $locked = 0;
+            last CASE;
+        }
+        
+        if ($now - $last &gt; $forgive) { # beyond the grace period.  Treat like first
+            $l-&gt;debug(&quot;$ip beyond grace period.  Reinitializing speed counter.&quot;);
+            $last = $first = $now;
+            $hits = $locked = 0;
+            last CASE;
+        }
+        
+        # update the values now
+        $last = $now; $hits++;
+        if ($hits &lt; $samples) {
+            $l-&gt;debug(&quot;$ip not enough samples to calculate speed.&quot;);
+            last CASE;
+        }
+        
+        if ($locked) { # already locked out, so forbid access
+            $l-&gt;debug(&quot;$ip locked&quot;);
+            $result = FORBIDDEN;
+            last CASE;
+        }
+        
+        my $interval = $now - $first;
+        $l-&gt;debug(&quot;$ip speed = &quot;, $hits/$interval);
+        if ($hits/$interval &gt; $speed_limit) {
+            $l-&gt;debug(&quot;$ip exceeded speed limit.  Blocking.&quot;);
+            $locked = 1;
+            $result = FORBIDDEN;
+            last CASE;
+        }
+     }
+     
+     $r-&gt;log_reason(&quot;Client exceeded speed limit.&quot;, $r-&gt;filename) 
+        if $result == FORBIDDEN;
+     $DB{$id} = join &quot; &quot;, $first, $now, $hits, $locked;
+     tied(%DB)-&gt;shunlock;
+     
+     return $result;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Authentication_Handlers">Authentication Handlers
+
+</A></H1>
+Let's look at authentication handlers now. The authentication handler's job
+is to determine whether the user is who he or she claims to be, using
+whatever standards of proof your module chooses to apply. There are many
+exotic authentication technologies lurking in the wings, including smart
+cards, digital certificates, one-time passwords and challenge/response
+authentication, but at the moment the types of authentication available to
+modules are limited at the browser side. Most browsers only know about the
+user name and password system used by Basic authentication. You can design
+any authentication system you like, but it must ultimately rely on the user
+typing some information into the password dialogue box. Fortunately there's
+a lot you can do within this restriction, as this text will show.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="A_Simple_Authentication_Handler">A Simple Authentication Handler
+
+</A></H2>
+Listing 6.5 implements <STRONG>Apache::AuthAny</STRONG>, a module which will allow users to authenticate with any user name and
+password at all. The purpose of this module is just to show the API for a
+Basic authentication handler.  
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.5: Apache::AuthAny is a skeleton authentication
+handler
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthAny;
+ # file: Apache/AuthAny.pm
+</PRE>
+
+<P>
+
+<PRE> use strict;
+ use Apache::Constants qw(:common);
+</PRE>
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+ 
+     my($res, $sent_pw) = $r-&gt;get_basic_auth_pw;
+     return $res if $res != OK; 
+</PRE>
+
+<P>
+
+<PRE>     my $user = $r-&gt;connection-&gt;user;
+     unless($user and $sent_pw) {
+         $r-&gt;note_basic_auth_failure;
+         $r-&gt;log_reason(&quot;Both a username and password must be provided&quot;, $r-&gt;filename);
+         return AUTH_REQUIRED;
+     }
+</PRE>
+
+<P>
+
+<PRE>     return OK;     
+ }
+</PRE>
+
+<P>
+
+<PRE> 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>The configuration file entry that goes with it
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /protected&gt;
+   AuthName Test
+   AuthType Basic
+   PerlAuthenHandler Apache::AuthAny
+   require valid-user
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+At the bottom of listing 6.5 is a short configuration file entry that
+activates <EM>Apache::AuthAny</EM> for all URIs that begin with the
+<EM>/protected</EM> path. For Basic authentication to work, protected locations must define a
+realm name with <STRONG>AuthName</STRONG> and specify an
+<STRONG>AuthType</STRONG> of <EM>Basic</EM>. In addition, in order to trigger Apache's authentication system, at least
+one <STRONG>require</STRONG> directive must also be present. In this example, we specify a <STRONG>require</STRONG>ment of
+<EM>valid-user</EM>, which is usually used to indicate that any registered user is allowed
+access. Last but not least, the <STRONG>PerlAuthenHandler</STRONG>
+directive tells <EM>mod_perl</EM> which handler to call during the authentication phase, in this case <STRONG>Apache::AuthAny</STRONG>.
+
+
+<P>
+
+By the time the handler is called, Apache will have done most of the work
+in negotiating the HTTP Basic authentication protocol. It will have alerted
+the browser that authentication is required to access the page, and the
+browser will have prompted the user to enter his name and password. The
+handler needs only to recover these values and validate them.
+
+
+<P>
+
+It won't take long to walk through this short module:
+
+
+<P>
+
+<PRE> package Apache::AuthAny;
+ # file: Apache/AuthAny.pm
+</PRE>
+
+<P>
+
+<PRE> use strict;
+ use Apache::Constants qw(:common);
+</PRE>
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     my($res, $sent_pw) = $r-&gt;get_basic_auth_pw;
+</PRE>
+
+<P>
+
+<EM>Apache::AuthAny</EM> starts off as usual by importing the common result code constants. Upon
+entry its <EM>handler()</EM> subroutine immediately calls the Apache method <EM>get_basic_auth_pw()</EM>. This method returns two values: a result code and the password sent by
+the client. The result code will be one of the following:
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_OK">OK
+
+</A></STRONG><DD>
+The browser agreed to authenticate using Basic authentication. 
+
+
+<P>
+
+<DT><STRONG><A NAME="item_DECLINED">DECLINED
+
+</A></STRONG><DD>
+The requested url is protected by a scheme other than <EM>Basic</EM>
+authentication, as defined by the <EM>AuthType</EM> configuration directive. In this case, the password field is invalid.
+
+
+<P>
+
+<DT><STRONG><A NAME="item_SERVER_ERROR">SERVER_ERROR
+
+</A></STRONG><DD>
+No realm is defined for the protected url as defined by the <EM>AuthName</EM> configuration directive.
+
+
+<P>
+
+<DT><STRONG><A NAME="item_AUTH_REQUIRED">AUTH_REQUIRED
+
+</A></STRONG><DD>
+The browser did not send any <EM>Authorization</EM> header at all or the browser sent an <EM>Authorization</EM> header with a scheme other than
+<EM>Basic</EM>. In either of these cases, the <EM>get_basic_auth_pw()</EM> method will also invoke the <EM>note_basic_auth_failure()</EM> method described below.
+
+
+<P>
+
+</DL>
+The password returned by <EM>get_basic_auth_pw()</EM> is only valid when the result code is <A HREF="passwo22.htm#item_OK">OK</A>. Under all other circumstances you should ignore it. If the result code is
+anything other than OK the appropriate action is to exit, passing the
+result code back to Apache:
+
+
+<P>
+
+<PRE>     return $res if $res != OK; 
+</PRE>
+
+<P>
+
+If <EM>get_basic_auth_pw()</EM> returns <A HREF="passwo22.htm#item_OK">OK</A>, we continue our work. Now we need to find the username to complement the
+password. Because the user name may be needed by later handlers, such as
+the authorization and logging modules, it's stored in a stable location
+inside the request object's connection record. The username can be
+retrieved by calling the request object's <EM>connection()</EM> method to return the current <EM>Apache::Connection</EM> object, and then calling the connection object's <EM>user()</EM> method:
+
+
+<P>
+
+<PRE>     my $user = $r-&gt;connection-&gt;user;
+</PRE>
+
+<P>
+
+The values we retrieve contain exactly what the user typed into the name
+and password fields of the dialogue box. If the user has not yet
+authenticated, or pressed the submit button without filling out the dialog
+completely, one or both of these fields may be empty. In this case, we have
+to force the user to (re)authenticate:
+
+
+<P>
+
+<PRE>     unless($user and $sent_pw) {
+         $r-&gt;note_basic_auth_failure;
+         $r-&gt;log_reason(&quot;Both a username and password must be provided&quot;,$r-&gt;filename);
+         return AUTH_REQUIRED;
+     }
+</PRE>
+
+<P>
+
+To do this, we call the request object's <EM>note_basic_auth_failure()</EM>
+method to add the <EM>WWW-Authenticate</EM> field to the outgoing HTTP headers. Without this call, the browser would
+know it had to authenticate, but would not know what authentication method
+and realm to use. We then log a message to the server error log using the
+<EM>log_reason()</EM> method and return an <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A> result code to Apache.  
+
+
+<P>
+
+The resulting log entry will look something like this:
+
+
+<P>
+
+<PRE> [Sun Jan 11 16:36:31 1998] [error] access to /protected/index.html
+   failed for wallace.telebusiness.co.nz, reason: Both a username and
+   password must be provided
+</PRE>
+
+<P>
+
+If, on the other hand, both a user name and password are present, then the
+user has authenticated properly. In this case we can return a result code
+of <A HREF="passwo22.htm#item_OK">OK</A> and end the handler:
+
+
+<P>
+
+<PRE>     return OK;     
+ }
+</PRE>
+
+<P>
+
+The user name will now be available to other handlers and CGI scripts. In
+particular, the user name will be available to any authorization handler
+further down the handler chain. Other handlers can simply retrieve the user
+name from the connection object just as we did.
+
+
+<P>
+
+Notice that the <EM>Apache::AuthAny</EM> module never actually checks what is inside the username and password. Most
+authentication modules will compare the username and password to a pair
+looked up in a database of some sort. However the <EM>Apache::AuthAny</EM> module is handy for developing and testing applications that require user
+authentication before the real authentication module has been implemented.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="An_Anonymous_Authentication_Hand">An Anonymous Authentication Handler
+
+</A></H2>
+Now we'll look at a slightly more sophisticated authentication module,
+<EM>Apache::AuthAnon</EM>. This module takes the basics of
+<EM>Apache::AuthAny</EM> and adds logic to preform some consistency checks on the username and
+password. This module implements anonymous authentication according to FTP
+conventions. The user name must be ``anonymous'' or ``anybody'', and the
+password must look like a valid e-mail address.
+
+
+<P>
+
+Listing 6.6 gives the source code for the module. Here is a typical
+configuration file entry:
+
+
+<P>
+
+<PRE> &lt;Location /protected&gt;
+ AuthName Anonymous
+ AuthType Basic
+ PerlAuthenHandler Apache::AuthAnon
+ require valid-user
+</PRE>
+
+<P>
+
+<PRE> PerlSetVar Anonymous anonymous|anybody
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+Notice that the <STRONG>&lt;Location&gt;</STRONG> section has been changed to make
+<EM>Apache::AuthAnon</EM> the <STRONG>PerlAuthenHandler</STRONG> for the <EM>/protected</EM>
+subdirectory, and that the realm name has been changed to
+<EM>Anonymous</EM>. The <STRONG>AuthType</STRONG> and <STRONG>require</STRONG> directives have not changed. Even though we're not performing real user
+name checking, the <STRONG>require</STRONG> directive still needs to be there in order to trigger Apache's
+authentication handling. There is also a completely new directive, a <STRONG>PerlSetVar</STRONG> that sets the configuration directive
+<EM>Anonymous</EM> to a case-insensitive pattern match to perform on the provided user name.
+In this case, we're accepting either of the user names ``anonymous'' or
+``anybody''.
+
+
+<P>
+
+Turning to the code listing, you'll see that we use the same basic outline
+of <EM>Apache::AuthAny</EM>. We fetch the provided password by calling the request object's <EM>get_basic_auth_pw()</EM> method, and the user name by calling the connection object's <EM>user()</EM> method. We now perform our consistency checks on the return values. First
+we check for the presence of a pattern match string in the <EM>Anonymous</EM>
+configuration variable. If not present, we use a hard-coded default of
+``anonymous.'' Next, we attempt to match the password against an e-mail
+address pattern. While not RFC compliant, the <CODE>$email_pat</CODE>
+pattern given here will work in most cases. If either of these tests fail,
+we log the reason why and re-issue a Basic authentication challenge by
+calling <EM>note_basic_auth_failure()</EM>. If we succeed, we store the provided e-mail password in the request notes
+table for use by modules further down the request chain.
+
+
+<P>
+
+While this example is not much more complicated than <STRONG>Apache::AuthAny</STRONG> and certainly no more secure, it does pretty much everything that a real
+authentication module will do.  
+
+
+<P>
+
+A useful enhancement to this module would be to check that the e-mail
+address provided by the user corresponds to a real Internet host. One way
+to do this is by making a call to the Perl <EM>Net::DNS</EM> module to look up the host's IP address and its mail exchanger (an ``MX''
+record). If neither one nor the other is found, then it is unlikely that
+the e-mail address is correct.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.6: Anonymous authentication
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthAnon;
+ # file: Apathe/AuthAnon.pm
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ 
+ my $email_pat = '[.\w-]+\@\w+\.[.\w]*[^.]';
+ my $anon_id  = &quot;anonymous&quot;;
+ 
+ sub handler {
+     my $r = shift;
+ 
+     my($res, $sent_pwd) = $r-&gt;get_basic_auth_pw;
+     return $res if $res != OK;
+ 
+     my $user = lc $r-&gt;connection-&gt;user;
+     my $reason = &quot;&quot;;
+ 
+     my $check_id = $r-&gt;dir_config(&quot;Anonymous&quot;) || $anon_id;
+ 
+     $reason = &quot;user did not enter a valid anonymous username &quot;
+        unless $user =~ /^$check_id$/i;
+ 
+     $reason .= &quot;user did not enter an email address password &quot;
+        unless $sent_pwd =~ /^$email_pat$/o;
+ 
+     if($reason) {
+        $r-&gt;note_basic_auth_failure;
+        $r-&gt;log_reason($reason,$r-&gt;filename);
+        return AUTH_REQUIRED;
+     }
+     
+     $r-&gt;notes(AuthAnonPassword =&gt; $sent_pwd);
+     
+     return OK;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Authenticating_Against_a_Databas">Authenticating Against a Database
+
+</A></H2>
+Let's turn to systems that check the user's identity against a database. We
+debated a bit about what type of authentication database to use for these
+examples. Candidates included the Unix password file, the Network
+Information System (NIS) and Bellcore's S/Key one-time password system, but
+we decided that these were all too Unix-specific. So we turned back to the
+DBI abstract database interface, which at least is portable across Windows
+and Unix systems.
+
+
+<P>
+
+You should know how the DBI interface works, and how to use <EM>Apache::DBI</EM> to avoid opening and closing database sessions with each connection. For a
+little variety, we'll use <EM>Tie::DBI</EM> here. It's a simple interface to DBI database tables that makes
+them look like hashes. For example, here's how to tie variable <CODE>%h</CODE> to a mySQL database named ``test_www'':
+
+
+<P>
+
+<PRE>   tie %h, 'Tie::DBI', {
+        db    =&gt; 'mysql:test_www',
+        table =&gt; 'user_info',
+        key   =&gt; 'user_name',
+   };
+</PRE>
+
+<P>
+
+The options that can be passed to <EM>tie()</EM> include <EM>db</EM> for the database source string or a previously-opened database handle, <EM>table</EM>
+for the name of the table to bind to (in this case ``user_info''), and
+<EM>key</EM> for the field to use as the hash key (in this case ``user_name''). Other
+options include authentication information for logging into the database.
+After successfully tieing the hash, you can now access the entire row keyed
+by user name ``fred'' like this:
+
+
+<P>
+
+<PRE>   $record = $h{'fred'}
+</PRE>
+
+<P>
+
+and the ``passwd'' column of the row like this:
+
+
+<P>
+
+<PRE>   $password = $h{'fred'}{'passwd'};
+</PRE>
+
+<P>
+
+Because <CODE>%h</CODE> is tied to the <EM>Tie::DBI</EM> class, all stores and retrievals are passed to <EM>Tie::DBI</EM> methods which are responsible for translating the requested operations into
+the appropriate SQL queries.
+
+
+<P>
+
+In our examples we will be using a mySQL database named ``test_www''. It
+contains a table named ``user_info'' with the following structure:
+
+
+<P>
+
+<PRE> +-----------+---------------+-------+---------------------+
+ | user_name | passwd        | level | groups              |
+ +-----------+---------------+-------+---------------------+
+ | fred      | 8uUnFnRlW18qQ |     2 | users,devel         |
+ | andrew    | No9eULpnXZAjY |     2 | users               |
+ | george    | V8R6zaQuOAWQU |     3 | users               |
+ | winnie    | L1PKv.rN0UmsQ |     3 | users,authors,devel |
+ | root      | UOY3rvTFXJAh2 |     5 | users,authors,admin |
+ | morgana   | 93EhPjGSTjjqY |     1 | users               |
+ +-----------+---------------+-------+---------------------+
+</PRE>
+
+<P>
+
+The password field is encrypted with the Unix <EM>crypt()</EM> call, which conveniently enough is available to Perl scripts as a built-in
+function call. The ``level'' column indicates the user's level of access to
+the site (higher levels indicate more access). The ``groups'' field
+provides a comma-delimited list of groups that the user belongs to,
+providing another axis along which we can perform authorization.* These
+will be used in later examples.
+
+
+<P>
+
+<EM>Tie::DBI</EM> is not a standard part of Perl. If you don't have it, you can find it in
+CPAN in the <EM>modules</EM> subdirectory. You'll also need the <EM>DBI</EM> (database interface) module, and a <EM>DBD</EM> (database driver) module for the database of your choice.
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<CODE>*This</CODE> module was developed to show the flexibility of using
+Perl expressions for authentication rather than as an example of the best
+way to design group membership databases. If you are going to use group
+membership as your primary authorization criterion, you would want to
+normalize the schema so that the user's groups occupied their own table:
+
+
+<P>
+
+<PRE> +-----------+------------+
+ | user_name | user_group |
+ +-----------+------------+
+ | fred      |  users     |
+ | fred      |  devel     |
+ | andrew    |  users     |
+ | george    |  users     |
+ | winnie    |  users     |
+ | winnie    |  authors   |
+ | winnie    |  devel     |
+ +-----------+------------+
+</PRE>
+
+<P>
+
+You could then test for group membership using a SQL query and the full DBI
+API.
+
+
+<P>
+
+</DL>
+For the curious, the script used to create this table and its test data are
+given in listing 6.7. We won't discuss it further here.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.7: The script used to create the test DBI table
+
+</A></STRONG><DD>
+</DL>
+<PRE> #!/usr/local/bin/perl
+   
+ use strict;
+ use Tie::DBI ();
+ 
+ my $DB_NAME = 'test_www';
+ my $DB_HOST = 'localhost';
+ 
+ my %test_users = (
+                  #user_name        groups            level   passwd
+                  'root'   =&gt;  [qw(users,authors,admin  5     superman)],
+                  'george'  =&gt; [qw(users                3     jetson)],
+                  'winnie'  =&gt; [qw(users,authors,devel  3     thepooh)],
+                  'andrew'  =&gt; [qw(users                2     llama23)],
+                  'fred'    =&gt; [qw(users,devel          2     bisquet)],
+                  'morgana' =&gt; [qw(users                1     lafey)]
+                  );
+ 
+ # Sometimes it's easier to invoke a subshell for simple things
+ # than to use the DBI interface.
+ open MYSQL, &quot;|mysql -h $DB_HOST -f $DB_NAME&quot; or die $!;
+ print MYSQL &lt;&lt;END;
+     DROP TABLE user_info;
+ CREATE TABLE user_info (
+                        user_name   CHAR(20) primary key,
+                        passwd      CHAR(13) not null,
+                        level       TINYINT  not null,
+                        groups      CHAR(100)
+                        );
+ END
+ 
+ close MYSQL;
+ 
+ tie my %db, 'Tie::DBI', { 
+     db =&gt; &quot;mysql:$DB_NAME:$DB_HOST&quot;,
+     table =&gt; 'user_info',
+     key   =&gt; 'user_name',
+     CLOBBER=&gt;1,
+ } or die &quot;Couldn't tie to $DB_NAME:$DB_HOST&quot;;
+ 
+ my $updated = 0;
+ for my $id (keys %test_users) {
+     my($groups, $level, $passwd) = @{$test_users{$id}};
+     $db{$id} = { 
+        passwd  =&gt;  crypt($passwd, salt()),
+        level   =&gt;  $level,
+        groups  =&gt;  $groups,
+     };
+     $updated++;
+ }
+ untie %db;
+ print STDERR &quot;$updated records entered.\n&quot;;
+ 
+ # Possible BUG: Assume that this system uses two character
+ # salts for its crypt().
+ sub salt { 
+     my @saltset = (0..9, 'A'..'Z', 'a'..'z', '.', '/');
+     return join '', @saltset[rand @saltset, rand @saltset];
+ }
+</PRE>
+
+<P>
+
+To use the database for user authentication, we take the skeleton from
+<EM>Apache::AuthAny</EM> and flesh it out so that it checks the provided user name and password
+against the corresponding fields in the database. The code for <EM>Apache::AuthTieDBI</EM> and a typical configuration file entry are given in listing 6.8.
+
+
+<P>
+
+The <EM>handler()</EM> subroutine is succinct:
+
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     
+     # get user's authentication credentials
+     my($res, $sent_pw) = $r-&gt;get_basic_auth_pw;
+     return $res if $res != OK;
+     my $user = $r-&gt;connection-&gt;user;
+     
+     my $reason = authenticate($r, $user, $sent_pw);
+  
+     if($reason) {
+        $r-&gt;note_basic_auth_failure;
+        $r-&gt;log_reason($reason, $r-&gt;filename);
+        return AUTH_REQUIRED;
+     }
+     return OK;
+ }
+</PRE>
+
+<P>
+
+The routine begins like the previous authentication modules by fetching the
+user's password from <EM>get_basic_auth_pw()</EM> and username from <EM>$r-&gt;connection-&gt;user</EM>. If successful, it calls an internal subroutine named <EM>authenticate()</EM> with the request object, username and password.  <EM>authenticate()</EM> returns undef on success, or an error message on failure. If an error
+message is returned, we log the error and return <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A>. Otherwise we return <A HREF="passwo22.htm#item_OK">OK</A>
+
+
+
+
+<P>
+
+Most of the interesting stuff happens in the <EM>authenticate()</EM>
+subroutine:
+
+
+<P>
+
+<PRE> sub authenticate {
+     my($r, $user, $sent_pw) = @_;
+ 
+     # get configuration information
+     my $dsn        = $r-&gt;dir_config('TieDatabase') || 'mysql:test_www';
+     my $table_data = $r-&gt;dir_config('TieTable')    || 'users:user:passwd';
+     my($table, $userfield, $passfield) = split ':', $table_data;
+</PRE>
+
+<P>
+
+<PRE>     $user &amp;&amp; $sent_pw or return 'empty user names and passwords disallowed';
+</PRE>
+
+<P>
+
+<EM>Apache::AuthTieDBI</EM> relies on two configuration variables to tell it where to look for
+authentication information.  <EM>TieDatabase</EM>
+indicates what database to use in standard DBI Data Source Notation (DBI).  <EM>TieTable</EM> indicates what database table and fields to use, in the form <EM>table</EM>:<EM>username_column</EM>:<EM>password_column</EM>. If these configuration variables aren't present, the module uses various
+hard-coded defaults. At this point the routine tries to establish contact
+with the database by calling <EM>tie()</EM>:
+
+
+<P>
+
+<PRE>     tie my %DB, 'Tie::DBI', {
+        db =&gt; $dsn, table =&gt; $table, key =&gt; $userfield,
+     } or return &quot;couldn't open database&quot;;
+</PRE>
+
+<P>
+
+Provided that the <EM>Apache::DBI</EM> module was previously loaded, the database handle will be cached behind the scenes and there will be
+no significant overhead for calling <EM>tie()</EM> once per transaction. Otherwise it would be a good idea to cache the tied <CODE>%DB</CODE> variable and reuse it as we've done in other modules.*
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+*We've assumed in this example that the database itself doesn't require
+authentication. If this isn't the case on your system, modify the call to <EM>tie()</EM> to include the <EM>user</EM> and <EM>password</EM> options:
+
+
+<P>
+
+<PRE>     tie my %DB, 'Tie::DBI', {
+        db =&gt; $dsn, table =&gt; $table, key =&gt; $userfield,
+        user =&gt; 'aladdin', password =&gt; 'opensesame'
+     } or return &quot;couldn't open database&quot;;
+</PRE>
+
+<P>
+
+Replace the username and password shown here with values that are valid for
+your database.
+
+
+<P>
+
+</DL>
+The final steps are to check whether the provided user and password are
+valid:
+
+
+<P>
+
+<PRE>     $DB{$user} or return &quot;invalid account&quot;;
+     my $saved_pw = $DB{$user}{$passfield};
+     $saved_pw eq crypt($sent_pw, $saved_pw) or return &quot;password mismatch&quot;;
+ 
+     # if we get here, all is well
+     return &quot;&quot;;
+ }
+</PRE>
+
+<P>
+
+The first line of this chunk checks whether <CODE>$user</CODE> is listed in the database at all. The second line recovers the password
+from the tied hash, and the third line calls <EM>crypt()</EM> to compare the current password to the stored one.
+
+
+<P>
+
+In case you haven't used <EM>crypt()</EM> before, it takes two arguments, the plaintext password and a two or
+four-character ``salt'' used to seed the encryption algorithm. Different
+salts yield different encrypted passwords.* The returned value is the
+encrypted password with the salt appended at the beginning. When checking a
+plaintext password for correctness, it's easiest to use the encrypted
+password itself as the salt.  <EM>Crypt()</EM> will use the first few characters as the salt and ignore the rest. If the
+newly encrypted value matches the stored one, then the user provided the
+correct plaintext password.
+
+
+<P>
+
+If the encrypted password matches the saved password, we return an empty
+string to indicate that the checks passed. Otherwise we return an error
+message.
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__The">*The</A> salt is designed to make life a bit harder
+for password-cracking programs that use a dictionary to guess the original
+plaintext password from the encrypted password. Because there are 4096
+different two-character salts, this increases the amount of disk storage
+the cracking program needs to store its dictionary by three orders of
+magnitude. Unfortunately, now that high capacity disk drives are cheap,
+this is no longer as much as an obstacle as it used to be.
+
+
+<P>
+
+</DL>
+<DL>
+<DT><STRONG>Listing 6.8: Apache::AuthTieDBI authenticates against a DBI database
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthTieDBI;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Tie::DBI ();
+ 
+ sub handler {
+     my $r = shift;
+     
+     # get user's authentication credentials
+     my($res, $sent_pw) = $r-&gt;get_basic_auth_pw;
+     return $res if $res != OK;
+     my $user = $r-&gt;connection-&gt;user;
+     
+     my $reason = authenticate($r, $user, $sent_pw);
+  
+     if($reason) {
+        $r-&gt;note_basic_auth_failure;
+        $r-&gt;log_reason($reason, $r-&gt;filename);
+        return AUTH_REQUIRED;
+     }
+     return OK;
+ }
+ 
+ sub authenticate {
+     my($r, $user, $sent_pw) = @_;
+ 
+     # get configuration information
+     my $dsn        = $r-&gt;dir_config('TieDatabase') || 'mysql:test_www';
+     my $table_data = $r-&gt;dir_config('TieTable')    || 'users:user:passwd';
+     my($table, $userfield, $passfield) = split ':', $table_data;
+     
+     $user &amp;&amp; $sent_pw or return 'empty user names and passwords disallowed';
+     
+     tie my %DB, 'Tie::DBI', {
+        db =&gt; $dsn, table =&gt; $table, key =&gt; $userfield,
+     } or return &quot;couldn't open database&quot;;
+ 
+     $DB{$user} or return &quot;invalid account&quot;;
+ 
+     my $saved_pw = $DB{$user}{$passfield};
+     $saved_pw eq crypt($sent_pw, $saved_pw) or return &quot;password mismatch&quot;;
+ 
+     # if we get here, all is well
+     return &quot;&quot;;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>A configuration file entry to go along with Apache::AuthTieDBI
+
+</A></STRONG><DD>
+<PRE> &lt;Location /registered_users&gt;
+    AuthName &quot;Registered Users&quot;
+    AuthType Basic
+    PerlAuthenHandler Apache::AuthTieDBI
+</PRE>
+
+<P>
+
+<PRE>    PerlSetVar       TieDatabase  mysql:test_www
+    PerlSetVar       TieTable     user_info:user_name:passwd
+</PRE>
+
+<P>
+
+<PRE>    require valid-user
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+</DL>
+The next section builds on this example to show how the other fields in the
+tied database can be used to implement a customizable authorization scheme.
+
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Authorization_Handlers">Authorization Handlers
+
+</A></H1>
+Sometimes it's good enough to know that a user can prove his or her
+identity, but more often that's just the beginning of the story. After
+authentication comes the optional authorization phase of the transaction,
+in which your handler gets a chance determine whether
+<EM>this</EM> user can fetch <EM>that</EM> URI.    
+
+
+<P>
+
+If you felt constrained by HTTP's obsession with conventional password
+checking, you can now breath a sigh of relief. Authorization schemes, as
+opposed to authentication, form no part of the HTTP standard. You are free
+to implement any scheme you can dream up. In practice, most authentication
+schemes are based on the user's account name, since this is the piece of
+information that you've just gone to some effort to confirm. What you do
+with that datum, however, is entirely up to you. You may look up the user
+in a database to determine his or her access privileges, a procedure known
+in security circles as ``role-based authorization.'' Or you may grant or
+deny access based on the name itself. We'll show a useful example of this
+in the next section.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="A_Gender_Based_Authorization_Mod">A Gender-Based Authorization Module
+
+</A></H2>
+Remember the bar that only lets women through the door on Ladies' Night?
+Here's a little module that enforces that restriction.
+<EM>Apache::AuthzGender</EM> enforces gender-based restrictions using Jon Orwant's <EM>Text::GenderFromName</EM>, a port of an AWK script originally published by Scott Pakin in the
+December 1991 issue of Computer Language Monthly. <EM>Text::GenderFromName</EM> uses a set of pattern matching rules to guess people's genders from their
+first names, returning ``m'', ``f'' or undef for male names, female names,
+and names that it can't guess.
+
+
+<P>
+
+Listing 6.9 gives the code and a configuration file section to go with it.
+In order to have a username to operate on, authentication has to be active.
+This means there must be <STRONG>AuthName</STRONG> and <STRONG>AuthType</STRONG> directives, as well as a <EM>require</EM> statement. You can use any authentication method you choose, including the
+standard text, DBM and DB modules. In this case, we use <EM>Apache::AuthAny</EM> from the example above because it provides a way of
+passing in arbitrary user names.
+
+
+<P>
+
+In addition to the standard directives, <EM>Apache::AuthzGender</EM> accepts a configuration variable named <EM>Gender</EM>.  <EM>Gender</EM> can be either of the characters ``M'' or ``F'', to allow access by people
+of the male and female persuasions respectively.
+
+
+<P>
+
+Turning to the code (listing 6.9), the <EM>handler()</EM> subroutine begins by retrieving the user name by calling the connection
+object's
+<EM>user()</EM>. method. We know this value is defined because it was set during
+authentication. Next we recover the value of the <EM>Gender</EM>
+configuration variable.
+
+
+<P>
+
+We now apply the <EM>Text::GenderFromName</EM> module's <EM>gender()</EM> function to the username and compare the result to the desired value. There
+are a couple of details to worry about. First, <CODE>gender()</CODE> is
+case-sensitive. Unless presented with a name that begins with an initial
+capital, it doesn't work right. Second, the original AWK script defaulted
+to male when it hadn't a clue, but Jon removed this default in order to
+``contribute to the destruction of the oppressive Patriarchy.'' A brief
+test convinced us that the module misses male names far more often than
+female ones, so the original male default was restored (during our test,
+the module recognized neither of the author's first names as male!) A few
+lines are devoted to normalizing the capitalization of user names, changing
+the default gender to male, and to upper-casing <EM>gender()</EM>'s return value so that it can be compared to the <EM>Gender</EM> configuration variable.
+
+
+<P>
+
+If there's a mismatch, authorization has failed. We indicate this in
+exactly the way we do in authorization modules, by calling the request
+object's <EM>note_basic_auth_failure()</EM> method, writing a line to the log, and returning a status code of <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A>. If the test succeeds, we return <A HREF="passwo22.htm#item_OK">OK</A>.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.9: Apache::AuthzGender implements gender-based authorization
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthzGender;
+ 
+ use strict;
+ use Text::GenderFromName qw(gender);
+ use Apache::Constants qw(:common);
+ 
+ sub handler {
+     my $r = shift;
+ 
+     my $user = ucfirst lc $r-&gt;connection-&gt;user;
+ 
+     my $gender = uc($r-&gt;dir_config('Gender')) || 'F';
+ 
+     my $guessed_gender = uc(gender($user)) || 'M';
+ 
+     unless ($guessed_gender eq $gender) {
+        $r-&gt;note_basic_auth_failure;
+        $r-&gt;log_reason(&quot;$user is of wrong apparent gender&quot;, $r-&gt;filename);
+        return AUTH_REQUIRED;
+     }
+ 
+     return OK;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Example">Example access.conf:
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /ladies_only&gt;
+   AuthName Restricted
+   AuthType Basic
+   PerlAuthenHandler Apache::AuthAny
+   PerlAuthzHandler  Apache::AuthzGender
+   PerlSetVar Gender F
+   require valid-user
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Advanced_Gender_Based_Authorizat">Advanced Gender-Based Authorization
+
+</A></H2>
+A dissatisfying feature of <EM>Apache::AuthzGender</EM> is that when an unauthorized user finally gives up and presses the
+``Cancel'' button, Apache displays the generic ``Unauthorized'' error page
+without providing any indication of why the user was refused access.
+Fortunately this is easy to fix with a custom error response. We can call
+the request object's <EM>custom_response()</EM> method to display a custom error message, an HTML page, or the output of a
+CGI script when the <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A> error occurs.
+
+
+<P>
+
+Another problem with <EM>Apache::AuthzGender</EM> is that it uses a nonstandard way to configure the authorization scheme.
+The standard authorization schemes use a <STRONG>require</STRONG> directive as in:
+
+
+<P>
+
+<PRE>   require group authors
+</PRE>
+
+<P>
+
+At the cost of making our module slightly more complicated, we can
+accommodate this too, allowing access to the protected directory to be
+adjusted by any of the following directives:
+
+
+<P>
+
+<PRE>   require gender F            # allow females
+   require user Webmaster Jeff # allow Webmaster or Jeff
+   require valid-user          # allow any valid user
+</PRE>
+
+<P>
+
+Listing 6.10 shows an improved <EM>Apache::AuthzGender</EM> that implements these changes. The big task is to recover and process the
+list of
+<STRONG>require</STRONG> directives. To retrieve the directives, we call the request object's <EM>requires()</EM> method. This method returns an array reference corresponding to all of the <STRONG>require</STRONG> directives in the current directory and its parents. Rather than being a
+simple string, however, each member of this array is actually a hash
+reference containing two keys, <EM>method_mask</EM> and <EM>requirement</EM>. The
+<EM>requirement</EM> key is easy to understand. It's simply all the text to the right of the <STRONG>require</STRONG> directive (excluding comments). You'll process this text according to your
+own rules. There's nothing magical about the keywords ``user,'' ``group,''
+or ``valid-user.''
+
+
+<P>
+
+The <EM>method_mask</EM> key is harder to explain. It consists of a bit mask indicating what methods
+the <STRONG>require</STRONG> statement should be applied to. This mask is set when there are one or more
+<STRONG>&lt;LIMIT&gt;</STRONG> sections in the directory's configuration. The GET, PUT, POST and DELETE
+methods correspond to the first through fourth bits of the mask (counting
+from the right). For example, a require directive contained within a <STRONG>&lt;LIMIT GET POST&gt;</STRONG>
+section will have a method mask equal to binary 0101, or decimal 5. If no <STRONG>&lt;LIMIT&gt;</STRONG> section is present, the method mask will be -1 (all bits set, all methods
+restricted). You can test for particular bits using the method <EM>number</EM> constants defined in the ``:methods'' section of <EM>Apache::Constants</EM>. For example, to test whether the current mask applies to POST requests,
+you could write a piece of code like this one (assuming that the current <EM>requires()</EM>
+is in $_):
+
+
+<P>
+
+<PRE>  if ($_-&gt;{method_mask} &amp; (1 &lt;&lt; M_POST)) {
+    warn &quot;Current requirements apply to POST&quot;;
+  }
+</PRE>
+
+<P>
+
+In practice, you rarely have to worry about the method mask within your own
+authorization modules, because <EM>mod_perl</EM> automatically filters out any <STRONG>require</STRONG> statement that wouldn't apply to the current transaction.
+
+
+<P>
+
+In the example given above, the array reference returned by
+<EM>requires()</EM> would look like this:
+
+
+<P>
+
+<PRE> [
+   {
+     requirement =&gt; 'gender F',
+     method_mask =&gt; -1
+   },
+   {
+     requirement =&gt; 'user Webmaster Jeff',
+     method_mask =&gt; -1
+   },
+   {
+     requirement =&gt; 'valid-user',
+     method_mask =&gt; -1
+   }
+ ]
+</PRE>
+
+<P>
+
+The revised module begins by calling the request object's <EM>requires()</EM>
+method and storing it in a lexical variable <CODE>$requires</CODE>:
+
+
+<P>
+
+<PRE>     my $r = shift;
+     my $requires = $r-&gt;requires;
+     return DECLINED unless $requires;
+</PRE>
+
+<P>
+
+If <EM>requires()</EM> returns undef, it means that no require statements were present, so we
+decline to handle the transaction. (This shouldn't actually happen, but it
+doesn't hurt to make sure.) The script then recovers the user's name and
+guesses his or her gender, as before.
+
+
+<P>
+
+Next we begin our custom error message:
+
+
+<P>
+
+<PRE>     my $explanation = &lt;&lt;END;
+ &lt;TITLE&gt;Unauthorized&lt;/TITLE&gt;
+ &lt;H1&gt;You Are Not Authorized to Access This Page&lt;/H1&gt;
+ Access to this page is limited to:
+ &lt;OL&gt;
+ END
+</PRE>
+
+<P>
+
+The message will be in a <EM>text/html</EM> page, so we're free to use HTML formatting. The error warns that the user
+is unauthorized, followed by a numbered list of the requirements that the
+user must meet in order to gain access to the page (Figure 6.2). This will
+help us confirm that the requirement processing is working correctly.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Figure 6.2: The custom error message generated by
+Apache::AuthzGender specifically lists the requirements that the user
+has failed to satisfy.
+
+</A><br><img src="https://searchlores.nickifaulk.com/fig6.2.gif" alt="Figure 6.2"><br></STRONG><DD>
+</DL>
+Now we process the requirements one by one by looping over the array
+contained in <CODE>$requires</CODE>:  
+
+
+<P>
+
+<PRE>     for my $entry (@$requires) {
+        my($requirement, @rest) = split /\s+/, $entry-&gt;{requirement};
+</PRE>
+
+<P>
+
+For each requirement, we extract the text of the require directive and
+split it on whitespace into the requirement type and its arguments. For
+example, the line ``require gender M'' would result in a requirement type
+of ``gender'' and an argument of ``M''. We act on any of three different
+requirement types. If the requirement equals ``user'', we loop through its
+arguments seeing if the current user matches any of the indicated user
+names. If a match is found, we exit with an OK result code:
+
+
+<P>
+
+<PRE>        if (lc $requirement eq 'user') {
+            foreach (@rest) { return OK if $user eq $_; }
+            $explanation .= &quot;&lt;LI&gt;Users @rest.\n&quot;;
+        } 
+</PRE>
+
+<P>
+
+If the requirement equals ``gender'', we loop through its arguments looking
+to see whether the user's gender is correct* and again return OK if a match
+is found:
+
+
+<P>
+
+<PRE>        elsif (lc $requirement eq 'gender') {
+            foreach (@rest) { return OK if $guessed_gender eq uc $_; }
+            $explanation .= &quot;&lt;LI&gt;People of the @G{@rest} persuasion.\n&quot;;
+        } 
+</PRE>
+
+<P>
+
+Otherwise, if the requirement equals ``valid-user'' then we simply return
+OK, because the authentication module has already made sure of this for us:
+
+
+<P>
+
+<PRE>        elsif (lc $requirement eq 'valid-user') {
+            return OK;
+        }
+     }
+     $explanation .= &quot;&lt;/OL&gt;&quot;;
+</PRE>
+
+<P>
+
+As we process each require directive, we add a line of explanation to the
+custom error string. We never use this error string if any of the
+requirements are satisfied, but if we fall through to the end of the loop,
+we complete the ordered list and set the explanation as the response for <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A> errors by passing the explanation string to the request object's <EM>custom_response()</EM> method:
+
+
+<P>
+
+<PRE>      $r-&gt;custom_response(AUTH_REQUIRED, $explanation);
+</PRE>
+
+<P>
+
+The module ends by noting and logging the failure, and returning an
+<A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A> status code as before:
+
+
+<P>
+
+<PRE>     $r-&gt;note_basic_auth_failure;
+     $r-&gt;log_reason(&quot;user $user: not authorized&quot;, $r-&gt;filename);
+     return AUTH_REQUIRED;
+ }
+</PRE>
+
+<P>
+
+The logic of this module places a logical OR between the requirements. The
+user is allowed access to the site if any of the require statements is
+satisfied, which is consistent with the way Apache handles authorization in
+its standard modules. However, you can easily modify the logic so that all
+requirements must be met in order to allow the user access.
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Footnote">Footnote
+
+</A></STRONG><DD>
+<CODE>*Because</CODE> there are only two genders, looping through all the
+require directive's arguments is overkill, but we do it anyway to guard
+against radical future changes in biology.
+
+
+<P>
+
+</DL>
+<DL>
+<DT><STRONG>Listing 6.10: An Improved Apache::AuthzGender
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthzGender2;
+ 
+ use strict;
+ use Text::GenderFromName qw(gender);
+ use Apache::Constants qw(:common);
+ 
+ my %G = ('M' =&gt; &quot;male&quot;, 'F' =&gt; &quot;female&quot;);
+ 
+ sub handler {
+     my $r = shift;
+     my $requires = $r-&gt;requires;
+     return DECLINED unless $requires;
+     my $user = ucfirst lc $r-&gt;connection-&gt;user;
+     my $guessed_gender = uc(gender($user)) || 'M';
+ 
+     my $explanation = &lt;&lt;END;
+ &lt;TITLE&gt;Unauthorized&lt;/TITLE&gt;
+ &lt;H1&gt;You Are Not Authorized to Access This Page&lt;/H1&gt;
+ Access to this page is limited to:
+ &lt;OL&gt;
+ END
+ 
+     for my $entry (@$requires) {
+        my($requirement, @rest) = split /\s+/, $entry-&gt;{requirement};
+        if (lc $requirement eq 'user') {
+            foreach (@rest) { return OK if $user eq $_; }
+            $explanation .= &quot;&lt;LI&gt;Users @rest.\n&quot;;
+        } 
+        elsif (lc $requirement eq 'gender') {
+            foreach (@rest) { return OK if $guessed_gender eq uc $_; }
+            $explanation .= &quot;&lt;LI&gt;People of the @G{@rest} persuasion.\n&quot;;
+        } 
+        elsif (lc $requirement eq 'valid-user') {
+            return OK;
+        }
+     }
+ 
+     $explanation .= &quot;&lt;/OL&gt;&quot;;
+     
+     $r-&gt;custom_response(AUTH_REQUIRED, $explanation);
+     $r-&gt;note_basic_auth_failure;
+     $r-&gt;log_reason(&quot;user $user: not authorized&quot;, $r-&gt;filename);
+     return AUTH_REQUIRED;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Authorizing_Against_a_Database">Authorizing Against a Database
+
+</A></H2>
+In most real applications you'll be authorizing users against a database of
+some sort. This section will show you a simple scheme for doing this that
+works hand-in-glove with the <EM>Apache::AuthTieDBI</EM>
+database authentication system that we set up in the <EM>Authenticating
+Against a Database</EM> section above. To avoid making you page backwards, we
+repeat the contents of the test database here:
+
+
+<P>
+
+<PRE> +-----------+---------------+-------+---------------------+
+ | user_name | passwd        | level | groups              |
+ +-----------+---------------+-------+---------------------+
+ | fred      | 8uUnFnRlW18qQ |     2 | users,devel         |
+ | andrew    | No9eULpnXZAjY |     2 | users               |
+ | george    | V8R6zaQuOAWQU |     3 | users               |
+ | winnie    | L1PKv.rN0UmsQ |     3 | users,authors,devel |
+ | root      | UOY3rvTFXJAh2 |     5 | users,authors,admin |
+ | morgana   | 93EhPjGSTjjqY |     1 | users               |
+ +-----------+---------------+-------+---------------------+
+</PRE>
+
+<P>
+
+The module is called <EM>Apache::AuthzTieDBI</EM>, and the idea is to allow for ``require'' statements like these:
+
+
+<P>
+
+<PRE> require $user_name eq 'fred'
+ require $level &gt;=2 &amp;&amp; $groups =~ /\bauthors\b/;
+ require $groups =~/\b(users|admin)\b/
+</PRE>
+
+<P>
+
+Each <STRONG>require</STRONG> directive consists of an arbitrary Perl expression. During evaluation,
+variable names are replaced by the name of the corresponding column in the
+database. In the first example above, we require the user name to be
+exactly ``fred''. In the second case, we allow access by any user whose
+level is greater or equal than 2 and who belongs to the ``authors'' group.
+In the third case, anyone whose groups field contains either of the strings
+``users'' or ``admin'' is allowed in. As in the previous examples, the
+require statements are ORed with each other. If multiple <STRONG>require</STRONG> statements are present, the user has to satisfy only one of them in order
+to be granted access. The directive <STRONG>require valid-user</STRONG> is treated as a special case and not evaluated as a Perl expression.
+
+
+<P>
+
+Listing 6.11 shows the code to accomplish this. Much of it is stolen
+directly out of <EM>Apache::AuthTieDBI</EM>, so we won't review how the database is opened and tied to the <CODE>%DB</CODE> hash. The interesting part begins about midway down the <EM>handler()</EM> method:
+
+
+<P>
+
+<PRE>     if ($DB{$user}) {  # evaluate each requirement
+        for my $entry (@$requires) {
+            my $op = $entry-&gt;{requirement};
+            return OK if $op eq 'valid-user';
+            $op =~ s/\$\{?(\w+)\}?/\$DB{'$user'}{$1}/g;
+            return OK if eval $op;
+            $r-&gt;log_error($@) if $@;
+        }
+     }
+</PRE>
+
+<P>
+
+After making sure that the user actually exists in the database, we loop
+through each of the require statements and recover its raw text. We then
+construct a short string to evaluate, replacing anything that looks like a
+variable with the appropriate reference to the tied database hash. We next
+call <EM>eval()</EM> and return <A HREF="passwo22.htm#item_OK">OK</A> if a true value is returned. If none of the require statements evaluate to
+true, we log the problem, note the authentication failure, and return
+<A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A>. That's all there is to it!
+
+
+<P>
+
+Although this scheme works well and is actually quite flexible in practice,
+you should be aware of one small problem with it before you rush off and
+implement it on your server. Because the module is calling <EM>eval()</EM> on Perl code read in from the configuration file, anyone who has write
+access to the file or to any of the per-directory
+<EM>.htaccess</EM> files can make this module execute Perl instructions with the server's
+privileges. If you have any authors at your site who you don't fully trust,
+you might think twice about making this facility available to them.  
+
+
+<P>
+
+A good precaution would be to modify this module to use the <EM>Safe</EM>
+module. Add the following to the top of the module: 
+
+
+<P>
+
+<PRE> use Safe ();
+</PRE>
+
+<P>
+
+<PRE> sub safe_eval {
+     package main;
+     my($db, $code) = @_;
+     my $cpt = Safe-&gt;new;
+     local *DB = $db;
+     $cpt-&gt;share('%DB', '%Tie::DBI::', '%DBI::', '%DBD::');
+     return $cpt-&gt;reval($code);
+ }
+</PRE>
+
+<P>
+
+The <EM>safe_eval()</EM> subroutine creates a safe compartment and shares the <CODE>%DB</CODE>, <CODE>%Tie::DBI::</CODE>, <CODE>%DBI::</CODE>, and <CODE>%DBD::</CODE> namespaces with it (these were identified by trial and error). It then
+evaluates the <STRONG>require</STRONG> code in the safe compartment using <EM>Safe::reval()</EM>.
+
+
+<P>
+
+To use this routine modify the call to <EM>eval()</EM> in the inner loop to call <EM>save_eval()</EM>:
+
+
+<P>
+
+<PRE>     return OK if safe_eval(\%DB, $op);
+</PRE>
+
+<P>
+
+The code will now be execute in a compartment in which dangerous calls like <EM>system()</EM> and <EM>unlink()</EM> have been disabled. With suitable modifications to the shared namespaces,
+this routine can also be used in other places where you might be tempted to
+run <EM>eval()</EM>.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.11: Authorization Against a Database with I<Apache::AuthzTieDBI
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::AuthzTieDBI;
+ # file: Apache/AuthTieDBI.pm
+  
+ use strict;
+ use Apache::Constants qw(:common);
+ use Tie::DBI ();
+  
+ sub handler {
+     my $r = shift;
+     my $requires = $r-&gt;requires;
+     
+     return DECLINED unless $requires;
+     my $user = $r-&gt;connection-&gt;user;
+     
+     # get configuration information
+     my $dsn        = $r-&gt;dir_config('TieDatabase') || 'mysql:test_www';
+     my $table_data = $r-&gt;dir_config('TieTable')    || 'users:user:passwd';
+     my($table, $userfield, $passfield) = split ':', $table_data;
+     
+     tie my %DB, 'Tie::DBI', {
+        db =&gt; $dsn, table =&gt; $table, key =&gt; $userfield,
+     } or die &quot;couldn't open database&quot;;
+     
+     if ($DB{$user}) {  # evaluate each requirement
+        for my $entry (@$requires) {
+            my $op = $entry-&gt;{requirement};
+            return OK if $op eq 'valid-user';
+            $op =~ s/\$\{?(\w+)\}?/\$DB{'$user'}{$1}/g;
+            return OK if eval $op;
+            $r-&gt;log_error($@) if $@;
+        }
+     }
+     
+     $r-&gt;note_basic_auth_failure;
+     $r-&gt;log_reason(&quot;user $user: not authorized&quot;, $r-&gt;filename);
+     return AUTH_REQUIRED;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_An">An access.conf entry to go along with it
+
+</A></STRONG><DD>
+<PRE> &lt;Location /registered_users&gt;
+   AuthName Enlightenment
+   AuthType Basic
+   PerlAuthenHandler Apache::AuthTieDBI
+   PerlSetVar        TieDatabase mysql:test_www
+   PerlSetVar        TieTable    user_info:user_name:passwd
+</PRE>
+
+<P>
+
+<PRE>   PerlAuthzHandler   Apache::AuthzTieDBI
+   require $user_name eq 'fred'
+   require $level &gt;=2 &amp;&amp; $groups =~ /authors/;
+&lt;/Location&gt;
+</PRE>
+
+<P>
+
+</DL>
+<P>
+<HR>
+<H2><A NAME="Authentication_and_Authorization">Authentication and Authorization's Relationship with Subrequests
+
+</A></H2>
+If you have been trying out the examples so far, you may notice that the
+authentication and authorization handlers are called more than once for
+certain requests. Chances are, these requests have been for a <STRONG>/</STRONG> directory, where the actual file sent back is one configured with the <STRONG>DirectoryIndex</STRONG> directive, such as <EM>index.html</EM> or
+<EM>index.cgi</EM>. For each file listed in the <STRONG>DirectoryIndex</STRONG>
+configuration, Apache will run a subrequest to determine if the file exists
+and has sufficent permissions to use in the response. As we know, 
+a subrequest will trigger the various request phase handlers,
+including authentication and authorization. Depending on the resources
+required to provide these services, it may not be desirable for the
+handlers to run more than once for a given HTTP request. Auth handlers can
+avoid being called more than once by using the <EM>is_initial_req()</EM> method, for example:
+
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     return OK unless $r-&gt;is_initial_req; 
+     ...
+</PRE>
+
+<P>
+
+With this test in place, the main body of the handler will only be run once
+per HTTP request, during the very first internal request. Note that this
+approach should be used with caution, taking your server access
+configuration into consideration.
+
+
+<P>
+
+<P>
+<HR>
+<H2><A NAME="Binding_Authentication_to_Author">Binding Authentication to Authorization
+
+</A></H2>
+Authorization and authentication work together. Often, as we saw in the
+previous example, you find <STRONG>PerlAuthenHandler</STRONG> and
+<STRONG>PerlAuthzHandlers</STRONG> side by side in the same access control section. If you have a pair of
+handlers that were designed to work together, and only together, you
+simplify the directory configuration somewhat by binding the two together
+so that you need only specify the authentication handler.
+
+
+<P>
+
+To accomplish this trick, have the authentication handler call
+<EM>push_handlers()</EM> with a reference to the authorization handler code before it exits. Because
+the authentication handler is always called before the authorization
+handler, this will temporarily place your code on the handler list. After
+processing the transaction, the authorization handler is set back to its
+default.
+
+
+<P>
+
+In the case of <EM>Apache::AuthTieDBI</EM> and <EM>Apache::AuthzTieDBI</EM>, the only change we need to make is to place the following line of code in
+<EM>Apache::AuthTieDBI</EM> somewhere towards the top of the handler subroutine:
+
+
+<P>
+
+<PRE> $r-&gt;push_handlers(PerlAuthzHandler =&gt; \&amp;Apache::AuthzTieDBI::handler);
+</PRE>
+
+<P>
+
+We now need to bring in <EM>Apache::AuthTieDBI</EM> only. The authorization handler will automatically come along for the ride.
+
+
+<P>
+
+<PRE> &lt;Location /registered_users&gt;
+   AuthName Enlightenment
+   AuthType Basic
+   PerlAuthenHandler Apache::AuthTieDBI
+   PerlSetVar        TieDatabase mysql:test_www
+   PerlSetVar        TieTable    user_info:user_name:passwd
+   require $user_name eq 'fred'
+   require $level &gt;=2 &amp;&amp; $groups =~ /authors/;
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+Since the authentication and authorization modules usually share common
+code, it might make sense to merge the authorization and authentication
+handlers into the same .pm file. This scheme allows you to do that. Just
+rename the authorization subroutine to something like <EM>authorize()</EM> and keep <EM>handler()</EM> as the entry point for the authentication code. Then at the top of <EM>handler()</EM> include a line like this:
+
+
+<P>
+
+<PRE> $r-&gt;push_handlers(PerlAuthzHandler =&gt; \&amp;authorize);
+</PRE>
+
+<P>
+
+We can now remove redundant code from the two handlers. For example, in the <EM>Apache::AuthTieDBI</EM> modules, there is common code that retrieves the per-directory
+configuration variables and opens the database. This can now be merged into
+a single initialization subroutine.
+
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Cookie_Based_Access_Control">Cookie-Based Access Control
+
+</A></H1>
+The next example is a long one. To understand its motivation, consider a
+large site that runs not one, but multiple Web servers. Perhaps each server
+mirrors the others in order to spread out and reduce the load, or maybe
+each server is responsible for a different part of the site.
+
+
+<P>
+
+Such a site might very well want to have each of the servers perform
+authentication and access control against a shared database, but if it does
+so in the obvious way it faces some potential problems. In order for each
+of the servers to authenticate against a common database, they will have to
+connect to it via the network. But this is less than ideal because
+connecting to a network database is not nearly so fast as connecting to a
+local one. Furthermore the database network connections generate a lot of
+network overhead, and compete with the Web server for a limited pool of
+operating system file descriptors. The performance problem is aggravated if
+authentication requires the evaluation of a complex SQL statement rather
+than a simple record lookup.
+
+
+<P>
+
+There are also security issues to consider when using a common
+authentication database. If the database holds confidential information,
+such as customer account information, it wouldn't do to give all the Web
+servers free access to the database. A breakin on any of the Web servers
+could compromise the confidentiality of the information.
+
+
+<P>
+
+<EM>Apache::TicketAccess</EM> was designed to handle these and other situations in which user
+authentication is expensive. Instead of performing a full authentication
+each time the user requests a page, the module only authenticates against a
+relational database the very first time the user connects (see Figure 6.3).
+After successfully validating the user's identity, the user is issued a
+``ticket'' to use for subsequent accesses. This ticket, which is no more
+than an HTTP cookie, carries the user's name, IP address, an expiration
+date, and a cryptographic signature. Until it expires, the ticket can be
+used to gain entry to any of the servers at the site. Once a ticket is
+issued, validating it is fast; the servers merely check the signature
+against the other information on the ticket to make sure that it hasn't
+been tampered with. No further database accesses are necessary. In fact,
+only the machine that actually issues the tickets, the so-called ``ticket
+master'', requires database connectivity.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Figure 6.3: In Apache::TicketAccess the "ticket master" gives
+browsers an access ticket in the form of a cookie.  The ticket is then
+used for access to other Web servers.
+
+</A><br><img src="https://searchlores.nickifaulk.com/fig6.3.gif" alt="Figure 6.3"><br></STRONG><DD>
+</DL>
+The scheme is reasonably secure because the cryptographic signature and the
+incorporation of the user's IP address makes the cookies difficult to forge
+and intercept, and even if they are intercepted, they are only valid for a
+short period of time, preventing replay attacks. The scheme is more secure
+than plain Basic authentication, because the number of times the clear text
+password passes over the network is greatly reduced. In fact, you can move
+the database authentication functions off the individual Web servers
+entirely and onto a central server whose only job is to check user's
+credentials and issue tickets. This reduces the exposure of sensitive
+database information by restricting its access to one machine only.
+
+
+<P>
+
+Another use for a system like this is to implement non-standard
+authentication schemes, such as a one-time password or a challenge-response
+system. The server that issues tickets doesn't need to use Basic
+authentication. Instead it can verify the identity of the user in any way
+that it sees fit. It can ask the user for his mother's maiden name... or
+enter the value that appears on a SecureID card. Once the ticket is issued,
+no further user interaction is required.
+
+
+<P>
+
+The key to the ticket system is the MD5 hash algorithm, which we can use 
+in order to create message authentication checks (MACs).  
+We will use MD5 here to create authenticated cookies that
+cannot be tampered or forged. If you don't already have it, MD5 can be
+found in CPAN under the <EM>modules</EM> directory.
+
+
+<P>
+
+The tickets used in this system have a structure that looks something like
+this:
+
+
+<P>
+
+<PRE>  IP=$IP time=$time expires=$expires user=$user_name hash=$hash   
+</PRE>
+
+<P>
+
+The hash is an MD5 digest that is calculated according to this formula:
+
+
+<P>
+
+<PRE> my $hash=MD5-&gt;hexhash($secret .
+              MD5-&gt;hexhash(join &quot;:&quot;, $secret, $IP, $time, $expires, $user_name)
+           );
+</PRE>
+
+<P>
+
+The other fields are explained below:
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item__secret">$secret
+
+</A></STRONG><DD>
+This is a secret key known only to the servers. The key is any arbitrary
+string containing ASCII and 8-bit characters. A long set of random
+characters is best. This key is shared among all the servers in some secure
+way, and updated frequently (once a day or more). It is the only part of
+the ticket that isn't also sent as plaintext.
+
+
+<P>
+
+<DT><STRONG><A NAME="item__IP">$IP
+
+</A></STRONG><DD>
+The user's IP address. This makes it harder for the ticket to be
+intercepted and used by a third party because he would also have to
+commandeer the user's IP address at the same time.*
+
+
+<P>
+
+<DT><STRONG><A NAME="item__time">$time
+
+</A></STRONG><DD>
+This is the time and date that the ticket was issued, for use in expiring
+old tickets.
+
+
+<P>
+
+<DT><STRONG><A NAME="item__expires">$expires
+
+</A></STRONG><DD>
+This is the number of minutes a ticket is valid for. After this period of
+time, the user will be forced to reauthenticate. The longer a ticket is
+valid for, the more convenient it is for the user, but the more likely it
+is that an interloper can intercept the ticket and use it himself. Shorter
+expiration times are more secure.
+
+
+<P>
+
+<DT><STRONG><A NAME="item__user_name">$user_name
+
+</A></STRONG><DD>
+This is the user's name, saved from the authentication process. It can be
+used by the Web servers for authorization purposes.
+
+
+<P>
+
+</DL>
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__The">*The</A> incorporation of the IP address into the
+ticket can be problematic if many of your users are connect to the Web
+through a proxy server (America Online for instance!). Proxy servers make
+multiple browsers all seem to be coming from the same IP address, defeating
+this check. Worse, some networks are configured to use multiple proxy
+servers on a round-robin basis, so the same user may not keep the same
+apparent IP address within a single session! If this presents a problem for
+you, you can do one of three things: (1) remove the IP address from the
+ticket entirely; (2) use just the first three numbers in the IP address
+(the network part of a class C address); or (3) detect and replace the IP
+address with one of the fields that proxy servers sometimes use to identify
+the browser, such as <EM>X-Forwarded-For</EM>.
+
+
+<P>
+
+</DL>
+By recovering the individual fields of the ticket, recalculating the hash,
+and comparing the new hash to the transmitted one, the receiving server can
+verify that the ticket hasn't been tampered with in transit. The scheme can
+easily be extended to encode the user's access privileges, the range of
+URLs he has access to, or any other information that the servers need to
+share without going back to a database.  
+
+
+<P>
+
+We use two rounds of MD5 digestion to compute the hash rather than one.
+This prevents a malicious user from appending extra information to the end
+of the ticket by exploiting one of the mathematical properties of the MD5
+algorithm. Although it is unlikely that this would present a problem here,
+it is always a good idea to plug this known vulnerability.
+
+
+<P>
+
+The secret key is the lynchpin of the whole scheme. Because the secret key
+is known only to the servers and not to the rest of the world, only a
+trusted Web server can issue and validate the ticket. However, there is the
+technical problem of sharing the secret key among the servers in a secure
+manner. If the key were intercepted, the interloper could write his own
+tickets. In this module, we use either of two methods for sharing the
+secret key. The secret key may be stored in a file located on the file
+system, in which case it is the responsibility of the system administrator
+to distribute it among the various servers that use it (NFS is one option, <EM>rdist</EM>, FTP, or secure shell are others). The module also allows the secret to be
+fetched from a central Web server via a URL. The system administrator must
+configure the configuration files so that only internal hosts are allowed
+to access it.
+
+
+<P>
+
+We'll take a top-down approach to the module starting with the access
+control handler implemented by the machines that accept tickets. Listing
+6.12 gives the code for <EM>Apache::TicketAccess</EM> and a typical entry in the configuration file. The relevant configuration
+directives look like this:
+
+
+<P>
+
+<PRE>   PerlAccessHandler Apache::TicketAccess
+   PerlSetVar        TicketDomain   .capricorn.org
+   PerlSetVar        TicketSecret   http://master.capricorn.org/secrets/key.txt
+   ErrorDocument     403 http://master.capricorn.org/ticketLogin
+</PRE>
+
+<P>
+
+These directives set the access control handler to use
+<EM>Apache::TicketAccess</EM>, and set two per-directory configuration variables using <STRONG>PerlSetVar</STRONG>.  <EM>TicketDomain</EM> is the DNS domain over which issued tickets are valid. If not specified,
+the module will attempt to guess it from the server host name, but it's
+best to specify that information explicitly.  <EM>TicketSecret</EM> is the URL where the shared secret key can be found. It can be on the same
+server or a different one. Instead of giving a URL, you may specify a
+physical path to a file on the local system. The contents of the file will
+be used as the secret.
+
+
+<P>
+
+The last line is an <STRONG>ErrorDocument</STRONG> directive that redirects 403 (``Forbidden'') errors to a URI on the ticket
+master machine. If a client fails to produce a valid ticket -- or has no
+ticket at all -- the Web server it tried to access will reject the request,
+causing Apache to redirect the client to the ticket master URI. The ticket
+master will handle the details of authentication and authorization, give
+the client a ticket, and then redirect it back to the original server.
+
+
+<P>
+
+Turning to the code for <EM>Apache::TicketAccess</EM>, you'll find that it's extremely short because all the dirty work is done
+in a common utility library named <EM>Apache::TicketTool</EM>. The handler fetches the request object and uses it to create a new <EM>TicketTool</EM> object. The
+<EM>TicketTool</EM> is responsible for fetching the per-directory configuration options,
+recovering the ticket from the HTTP headers, and fetching the secret key.
+Next we call the <EM>TicketTool</EM>'s
+<EM>verify_ticket()</EM> method to return a result code and an error message. If the result code is
+true, we return OK.
+
+
+<P>
+
+If <EM>verify_ticket()</EM> returns false, we do something a bit more interesting. We're going to set
+in motion a chain of events that leads to the client being redirected to
+the server responsible for issuing tickets. However, after issuing the
+ticket we want the ticket master to redirect the browser back to the
+original page it tried to access. If the ticket issuer happens to be the
+same as the current server, we can (and do) recover this information from
+the Apache subrequest record. However, in the general case the server that
+issues the ticket is not the same as the current one, so we have to cajole
+the browser into transmitting the URI of the current request to the issuer.
+
+
+<P>
+
+To do this, we invoke the <EM>TicketTool</EM> object's
+<EM>make_return_address()</EM> method to create a temporary cookie that contains the current request's
+URI. We then add this cookie to the error headers by calling the request
+object's <EM>err_header_out()</EM>
+method. We then return a <CODE>FORBIDDEN</CODE> status code, triggering the
+<STRONG>ErrorDocument</STRONG> directive and causing Apache to redirect the request to the ticket master.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.12: Ticket-Based Access Control
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::TicketAccess;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::TicketTool ();
+ 
+ sub handler {
+     my $r = shift;
+     my $ticketTool = Apache::TicketTool-&gt;new($r);
+     my($result, $msg) = $ticketTool-&gt;verify_ticket($r);
+     unless ($result) {
+        $r-&gt;log_reason($msg, $r-&gt;filename);
+        my $cookie = $ticketTool-&gt;make_return_address($r);
+        $r-&gt;err_headers_out-&gt;add('Set-Cookie' =&gt; $cookie);
+        return FORBIDDEN;
+     }
+     return OK;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>A configuration file entry to go along with Apache::TicketAccess
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /protected&gt;
+   PerlAccessHandler Apache::TicketAccess
+   PerlSetVar        TicketDomain   .capricorn.org
+   PerlSetVar        TicketSecret   http://master.capricorn.org/secrets/key.txt
+   ErrorDocument     403 http://master.capricorn.org/ticketLogin
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+Now let's have a look at the code to authenticate users and issue tickets.
+Listing 6.13 shows <EM>Apache::TicketMaster</EM>, the module that runs on the central authentication server, along with a
+sample configuration file entry.  
+
+
+<P>
+
+For the ticket issuer, the configuration is somewhat longer than the
+previous one, reflecting its more complex role:
+
+
+<P>
+
+<PRE>   SetHandler  perl-script
+   PerlHandler Apache::TicketMaster
+   PerlSetVar  TicketDomain   .capricorn.org
+   PerlSetVar  TicketSecret   http://master.capricorn.org/secrets/key.txt
+   PerlSetVar  TicketDatabase mysql:test_www
+   PerlSetVar  TicketTable    user_info:user_name:passwd
+   PerlSetVar  TicketExpires  10
+</PRE>
+
+<P>
+
+We define a URI called <EM>/ticketLogin</EM>. The name of this URI is arbitrary, but it must match the URI given in
+protected directories' ErrorDocument directive. This module is a standard
+content handler rather than an authentication handler. Not only does this
+design allow us to create a custom login screen (Figure 6.4), but we can
+design our own authentication system, such as one based on answering a
+series of questions correctly. Therefore we set the Apache handler to
+<EM>perl-script</EM> and use a vanilla <STRONG>PerlHandler</STRONG> directive to set the content handler to <EM>Apache::TicketMaster</EM>.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Figure 6.4: The custom login screen shown by the ticket master
+server prompts the user for a username and password.
+
+</A><br><img src="https://searchlores.nickifaulk.com/fig6.4.gif" alt="Figure 6.4"><br></STRONG><DD>
+</DL>
+Five <STRONG>PerlSetVar</STRONG> directives set some per-directory configuration variables. Two of them
+we've already seen.  <EM>TicketDomain</EM> and <EM>TicketSecret</EM> are the same as the corresponding variables on the servers that use
+<EM>Apache::TicketAccess</EM>, and should be set to the same values throughout the site.
+
+
+<P>
+
+The last three per-directory configuration variables are specific to the
+ticket issuer.  <EM>TicketDatabase</EM> indicates the relational database to use for authentication. It consists of
+the DBI driver and the database name separated by colons.  <EM>TicketTable</EM> tells the module where it can find user names and passwords within the
+database. It consists of the table name, the user name column and the
+password column all separated by colons. The last configuration variable, <EM>TicketExpires</EM>, contains the time (expressed in minutes) for which the issued ticket is
+valid. After this period of time the ticket expires and the user has to
+reauthenticate. In this system we measure ticket expiration time from the
+time that it was issued. If you wish, you could modify the logic so that
+the ticket expires only after a certain period of inactivity.
+
+
+<P>
+
+The code is a little longer than <EM>Apache::TicketAccess</EM>. We'll walk through the relevant parts.
+
+
+<P>
+
+<PRE> package Apache::TicketMaster;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::TicketTool ();
+ use CGI '-autoload';
+</PRE>
+
+<P>
+
+<EM>Apache::TicketMaster</EM> loads <EM>Apache::Constants</EM>, the
+<EM>Apache::TicketTool</EM> module and <EM>CGI.pm</EM>, which will be used for its HTML shortcuts.
+
+
+<P>
+
+<PRE> sub handler {
+     my $r = shift;
+     my($user, $pass) = map { param($_) } qw(user password);
+</PRE>
+
+<P>
+
+Using the reverse logic typical of CGI scripts, the <EM>handler()</EM>
+subroutine first checks to see whether script parameters named <EM>user</EM>
+and <EM>password</EM> are already defined, indicating that the user has submitted the fill-out
+form.  
+
+
+<P>
+
+<PRE>     my $request_uri = param('request_uri') || 
+        ($r-&gt;prev ? $r-&gt;prev-&gt;uri : cookie('request_uri'));
+ 
+     unless ($request_uri) {
+        no_cookie_error();
+        return OK;
+     }
+</PRE>
+
+<P>
+
+The subroutine then attempts to recover the URI of the page that the user
+attempted to fetch before being bumped here. The logic is only a bit
+twisted. First, we look for a hidden CGI parameter named
+<EM>request_uri</EM>. This might be present if the user failed to authenticate the first time
+and resubmits the form. If this parameter isn't present, we check the
+request object to see whether this request is the result of an internal
+redirect, which will happen when the same server both accepts and issues
+tickets. If there is a previous request, we recover its URI. Otherwise, the
+client may have been referred to us via an external redirect. Using <EM>CGI.pm</EM>'s
+<EM>cookie()</EM> method, we check the request for a cookie named
+<EM>request_uri</EM> and recover its value. If we've looked in all these diverse locations and
+still don't have a location, something's wrong. The most probable
+explanation is that the user's browser doesn't accept cookies, or the user
+has turned cookies off. Since the whole security scheme depends on cookies
+being active, we call an error routine named <EM>no_cookie_error()</EM> that gripes at the user for failing to configure his browser correctly.
+
+
+<P>
+
+<PRE>     my $ticketTool = Apache::TicketTool-&gt;new($r);
+     my($result, $msg);
+     if ($user and $pass) {
+        ($result, $msg) = $ticketTool-&gt;authenticate($user, $pass);
+        if ($result) {
+            my $ticket = $ticketTool-&gt;make_ticket($r, $user);
+            unless ($ticket) {
+                $r-&gt;log_error(&quot;Couldn't make ticket -- missing secret?&quot;);
+                return SERVER_ERROR;
+            }
+            go_to_uri($r, $request_uri, $ticket);
+            return OK;
+        }
+     }
+     make_login_screen($msg, $request_uri);
+     return OK;
+ }
+</PRE>
+
+<P>
+
+We now go on to authenticate the user. We create a new <EM>TicketTool</EM>
+from the request object. If both the username and password fields are
+filled in, we call on <EM>TicketTool</EM>'s <EM>authenticate()</EM> method to confirm the user's ID against the database. If this is
+successful, we call <EM>make_ticket()</EM> to create a cookie containing the ticket information, and invoke our <EM>go_to_uri()</EM> subroutine to redirect the user back to the original URI.
+
+
+<P>
+
+If authentication fails, we display an error message and prompt the user to
+try the log in again. If the authentication succeeds, but
+<EM>TicketTool</EM> fails to return a ticket for some reason, we exit with a server error. This
+scenario only happens if the secret key can not be read. Finally, if either
+the username or password are missing, or if the authentication attempt
+failed, we call <EM>make_login_screen()</EM> to display the sign-in page.
+
+
+<P>
+
+The <EM>make_login_screen()</EM> and <EM>no_cookie_error()</EM> subroutines are straightforward, so we won't go over them. However <EM>go_to_uri()</EM> is more interesting:
+
+
+<P>
+
+<PRE> sub go_to_uri {
+     my($r, $requested_uri, $ticket) = @_;
+     print header(-refresh =&gt; &quot;1; URL=$requested_uri&quot;, -cookie =&gt; $ticket),
+     start_html(-title =&gt; 'Successfully Authenticated', -bgcolor =&gt; 'white'),
+     h1('Congratulations'),
+     h2('You have successfully authenticated'),
+     h3(&quot;Please stand by...&quot;),
+     end_html();
+ }
+</PRE>
+
+<P>
+
+This subroutine uses <EM>CGI.pm</EM> methods to create an HTML page that briefly displays a message that the
+user has successfully authenticated, and then automatically loads the page
+that the user tried to access in the first place. This magic is
+accomplished by adding a <EM>Refresh</EM> field to the HTTP header, with a refresh time of one second and a refresh
+URL of the original page. At the same time we issue an HTTP cookie
+containing the ticket created during the authentication process.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.13: The Ticket Master
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::TicketMaster;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Apache::TicketTool ();
+ use CGI '-autoload';
+ 
+ # This is the log-in screen that provides authentication cookies.
+ # There should already be a cookie named &quot;request_uri&quot; that tells
+ # the login screen where the original request came from.
+ sub handler {
+     my $r = shift;
+     my($user, $pass) = map { param($_) } qw(user password);
+     my $request_uri = param('request_uri') || 
+        ($r-&gt;prev ? $r-&gt;prev-&gt;uri : cookie('request_uri'));
+ 
+     unless ($request_uri) {
+        no_cookie_error();
+        return OK;
+     }
+ 
+     my $ticketTool = Apache::TicketTool-&gt;new($r);
+     my($result, $msg);
+     if ($user and $pass) {
+        ($result, $msg) = $ticketTool-&gt;authenticate($user, $pass);
+        if ($result) {
+            my $ticket = $ticketTool-&gt;make_ticket($r, $user);
+            unless ($ticket) {
+                $r-&gt;log_error(&quot;Couldn't make ticket -- missing secret?&quot;);
+                return SERVER_ERROR;
+            }
+            go_to_uri($r, $request_uri, $ticket);
+            return OK;
+        }
+     }
+     make_login_screen($msg, $request_uri);
+     return OK;
+ }
+ 
+ sub go_to_uri {
+     my($r, $requested_uri, $ticket) = @_;
+     print header(-refresh =&gt; &quot;1; URL=$requested_uri&quot;, -cookie =&gt; $ticket),
+     start_html(-title =&gt; 'Successfully Authenticated', -bgcolor =&gt; 'white'),
+     h1('Congratulations'),
+     h2('You have successfully authenticated'),
+     h3(&quot;Please stand by...&quot;),
+     end_html();
+ }
+ 
+ sub make_login_screen {
+     my($msg, $request_uri) = @_;
+     print header(),
+     start_html(-title =&gt; 'Log In', -bgcolor =&gt; 'white'),
+     h1('Please Log In');
+     print  h2(font({color =&gt; 'red'}, &quot;Error: $msg&quot;)) if $msg;
+     print start_form(-action =&gt; script_name()),
+     table(
+          Tr(td(['Name',     textfield(-name =&gt; 'user')])),
+          Tr(td(['Password', password_field(-name =&gt; 'password')]))
+          ),
+              hidden(-name =&gt; 'request_uri', -value =&gt; $request_uri),
+              submit('Log In'), p(),
+              end_form(),
+              em('Note: '),
+              &quot;You must set your browser to accept cookies in order for login to succeed.&quot;,
+              &quot;You will be asked to log in again after some period of time has elapsed.&quot;;
+ }
+ 
+ # called when the user tries to log in without a cookie
+ sub no_cookie_error {
+     print header(),
+     start_html(-title =&gt; 'Unable to Log In', -bgcolor =&gt; 'white'),
+     h1('Unable to Log In'),
+     &quot;This site uses cookies for its own security.  Your browser must be capable &quot;, 
+     &quot;of processing cookies &quot;, em('and'), &quot; cookies must be activated. &quot;,
+     &quot;Please set your browser to accept cookies, then press the &quot;,
+     strong('reload'), &quot; button.&quot;, hr();
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<DL>
+<DT><STRONG>An access.conf entry to go along with it
+
+</A></STRONG><DD>
+</DL>
+<PRE> &lt;Location /ticketLogin&gt;
+   SetHandler  perl-script
+   PerlHandler Apache::TicketMaster
+   PerlSetVar  TicketDomain   .capricorn.org
+   PerlSetVar  TicketSecret   http://master.capricorn.org/secrets/key.txt
+   PerlSetVar  TicketDatabase mysql:test_www
+   PerlSetVar  TicketTable    user_info:user_name:passwd
+   PerlSetVar  TicketExpires  10
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+By now you're probably anxious to see how <EM>Apache::TicketTool</EM> works, so let's have a look at it (Listing 6.14).  
+
+
+<P>
+
+<PRE> package Apache::TicketTool;
+ 
+ use strict;
+ use Tie::DBI ();
+ use CGI::Cookie ();
+ use MD5 ();
+ use LWP::Simple ();
+ use Apache::File ();
+ use Apache::URI ();
+</PRE>
+
+<P>
+
+We start by importing the modules we need, including <EM>Tie::DBI</EM>,
+<EM>CGI::Cookie</EM> and the <EM>MD5</EM> module.  
+
+
+<P>
+
+<PRE> my $ServerName = Apache-&gt;server-&gt;server_hostname;
+ 
+ my %DEFAULTS = (
+    'TicketDatabase' =&gt; 'mysql:test_www',
+    'TicketTable'    =&gt; 'user_info:user_name:passwd',
+    'TicketExpires'  =&gt; 30,
+    'TicketSecret'   =&gt; 'http://$ServerName/secret_key.txt',
+    'TicketDomain'   =&gt; undef,
+ );
+ 
+ my %CACHE;  # cache objects by their parameters to minimize time-consuming operations
+</PRE>
+
+<P>
+
+Next we define some default variables that were used during testing and
+development of the code, and an object cache named <CODE>%CACHE</CODE>.
+<CODE>%CACHE</CODE> holds a pool of TicketTool objects, and was designed to increase the
+performance of the module. Rather than reading the secret key each time the
+module is used, the key is cached in memory. This cache is flushed every
+time there is a ticket mismatch, allowing the key to be changed frequently
+without causing widespread problems. Similarly, we cache the name of the
+name of the server, by calling
+<CODE>Apache-&gt;server-&gt;server_hostname</CODE>.
+
+
+<P>
+
+<PRE> sub new {
+     my($class, $r) = @_;
+     my %self = ();
+     foreach (keys %DEFAULTS) {
+        $self{$_} = $r-&gt;dir_config($_) || $DEFAULTS{$_};
+     }
+     # post-process TicketDatabase and TicketDomain
+     ($self{TicketDomain} = $ServerName) =~ s/^[^.]+// 
+        unless $self{TicketDomain};
+ 
+     # try to return from cache
+     my $id = join '', sort values %self;
+     return $CACHE{$id} if $CACHE{$id};
+ 
+     # otherwise create new object
+     return $CACHE{$id} = bless \%self, $class;
+ } 
+</PRE>
+
+<P>
+
+The <EM>TicketTool</EM>  <EM>new()</EM> method is responsible for initializing a new
+<EM>TicketTool</EM> object, or fetching an appropriate old one from the cache. It reads the
+per-directory configuration variables from the passed request object, and
+merges them with the defaults. If no <EM>TicketDomain</EM>
+variable is present, it attempts to guess one from the server hostname. The
+code that manages the cache indexes the cache array with the values of the
+per-directory variables so that several different configurations can
+coexist peacefully.
+
+
+<P>
+
+<PRE> sub authenticate {
+     my($self, $user, $passwd) = @_;
+     my($table, $userfield, $passwdfield) = split ':', $self-&gt;{TicketTable};
+ 
+     tie my %DB, 'Tie::DBI', {
+        'db'    =&gt; $self-&gt;{TicketDatabase},
+        'table' =&gt; $table, 'key' =&gt; $userfield,
+     } or return (undef, &quot;couldn't open database&quot;);
+ 
+     return (undef, &quot;invalid account&quot;)
+        unless $DB{$user};
+     
+     my $saved_passwd = $DB{$user}-&gt;{$passwdfield};
+     return (undef, &quot;password mismatch&quot;)
+        unless $saved_passwd eq crypt($passwd, $saved_passwd);
+     
+     return (1, '');
+ }
+</PRE>
+
+<P>
+
+The <EM>authenticate()</EM> method is called by the ticket issuer to authenticate a user name and
+password against a relational database. This method is just a rehash of the
+database authentication code that we have seen in previous sections.
+
+
+<P>
+
+<PRE> sub fetch_secret {
+     my $self = shift;
+     unless ($self-&gt;{SECRET_KEY}) {
+        if ($self-&gt;{TicketSecret} =~ /^http:/) {
+            $self-&gt;{SECRET_KEY} = LWP::Simple::get($self-&gt;{TicketSecret});
+        } else {
+            my $fh = Apache::File-&gt;new($self-&gt;{TicketSecret}) || return undef;
+            $self-&gt;{SECRET_KEY} = &lt;$fh&gt;;
+        }
+     }
+     $self-&gt;{SECRET_KEY};
+ }
+</PRE>
+
+<P>
+
+The <EM>fetch_secret()</EM> method is responsible for fetching the secret key from disk or via the Web.
+The subroutine first checks to see whether there is already a secret key
+cached in memory and returns that if present. Otherwise it examines the
+value of the
+<EM>TicketSecret</EM> variable. If it looks like a URL, we load the LWP ``Simple'' module and use
+it to fetch the contents of the URL.* If
+<EM>TicketSecret</EM> doesn't look like a URL, we attempt to open it as a physical path name
+using <EM>Apache::File</EM> methods, and read its contents. We cache the result and return it.
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+<A HREF="passwo22.htm#item__The">*The</A> LWP library (Library for Web Access in Perl)
+is available at any CPAN site and is highly recommended for Web client
+programming. We use it again in order to develop banner-ad
+blocking proxies...
+
+
+<P>
+
+</DL>
+<PRE> sub invalidate_secret { undef shift-&gt;{SECRET_KEY}; }
+</PRE>
+
+<P>
+
+The <EM>invalidate_secret()</EM> method is called whenever there seems to be a mismatch between the current
+secret and the cached one. This method deletes the cached secret, forcing
+it to be reloaded the next time it's needed.
+
+
+<P>
+
+The <EM>make_ticket()</EM> and <EM>verify_ticket()</EM> methods are responsible for issuing and checking tickets.  
+
+
+<P>
+
+<PRE> sub make_ticket {
+     my($self, $r, $user_name) = @_;
+     my $ip_address = $r-&gt;connection-&gt;remote_ip;
+     my $expires = $self-&gt;{TicketExpires};
+     my $now = time;
+     my $secret = $self-&gt;fetch_secret() or return undef;
+     my $hash = MD5-&gt;hexhash($secret .
+                  MD5-&gt;hexhash(join ':', $secret, $ip_address, $now,
+                               $expires, $user_name)
+                );
+     return CGI::Cookie-&gt;new(-name =&gt; 'Ticket',
+                             -path =&gt; '/',
+                             -domain =&gt; $self-&gt;{TicketDomain},
+                             -value =&gt; {
+                                'ip' =&gt; $ip_address,
+                                'time' =&gt; $now,
+                                'user' =&gt; $user_name,
+                                'hash' =&gt; $hash,
+                                'expires' =&gt; $expires,
+                             });
+ }
+</PRE>
+
+<P>
+
+<EM>make_ticket()</EM> gets the user's name from the caller, his browser's IP address from the
+request object, the expiration time from the value of the <EM>TicketExpires</EM> configuration variable, and the secret key from the <EM>fetch_secret()</EM> method. It then concatenates these values along with the current system
+time and calls MD5's <EM>hexhash()</EM> method to turn them into an MD5 digest.
+
+
+<P>
+
+The routine now incorporates this digest into an HTTP cookie named
+``Ticket'' by calling <EM>CGI::Cookie-&gt;new()</EM>. The cookie contains the hashed information, along with plaintext versions
+of everything except for the secret key. A cute feature of <EM>CGI::Cookie</EM> is that it serializes simple data structures, allowing you to turn hashes
+into cookies and later recover them. The cookie's domain is set to the
+value of <EM>TicketDomain</EM>, ensuring that the cookie will be sent to all servers in the indicated
+domain. Note that the cookie itself has no expiration date. This tells the
+browser to keep the cookie in memory only until the user quits the
+application. The cookie is never written to disk.
+
+
+<P>
+
+<PRE> sub verify_ticket {
+     my($self, $r) = @_;
+     my %cookies = CGI::Cookie-&gt;parse($r-&gt;header_in('Cookie'));
+     return (0, 'user has no cookies') unless %cookies;
+     return (0, 'user has no ticket') unless $cookies{'Ticket'};
+     my %ticket = $cookies{'Ticket'}-&gt;value;
+     return (0, 'malformed ticket')
+        unless $ticket{'hash'} &amp;&amp; $ticket{'user'} &amp;&amp; 
+            $ticket{'time'} &amp;&amp; $ticket{'expires'};
+     return (0, 'IP address mismatch in ticket')
+        unless $ticket{'ip'} eq $r-&gt;connection-&gt;remote_ip;
+     return (0, 'ticket has expired')
+        unless (time - $ticket{'time'})/60 &lt; $ticket{'expires'};
+     my $secret;
+     return (0, &quot;can't retrieve secret&quot;) 
+        unless $secret = $self-&gt;fetch_secret;
+     my $newhash = MD5-&gt;hexhash($secret .
+                      MD5-&gt;hexhash(join ':', $secret,
+                               @ticket{qw(ip time expires user)})
+                   );
+     unless ($newhash eq $ticket{'hash'}) {
+        $self-&gt;invalidate_secret;  #maybe it's changed?
+        return (0, 'ticket mismatch');
+     }
+     $r-&gt;connection-&gt;user($ticket{'user'});
+     return (1, 'ok');
+ }
+</PRE>
+
+<P>
+
+<EM>verify_ticket()</EM> does the same thing, but in reverse. It calls
+<EM>CGI::Cookie-&gt;parse()</EM> to parse all cookies passed in the HTTP header and stow them into a hash.
+The method then looks for a cookie named ``Ticket''. If one is found, it
+recovers each of the ticket's fields, and does some consistency checks. The
+method returns an error if any of the ticket fields are missing, if the
+request's IP address doesn't match the ticket's IP address, or if the
+ticket has expired.
+
+
+<P>
+
+<EM>verify_ticket()</EM> then calls <EM>secret_key()</EM> to get the current value of the secret key, and recomputes the hash. If the
+new hash doesn't match the old one, then either the secret key has changed
+since the ticket was issued, or the ticket is a forgery. In either case, we
+invalidate the cached secret and return false, forcing the user to repeat
+the formal authentication process with the central server. Otherwise the
+function saves the username in the connection object by calling <EM>$r-&gt;connection-&gt;user($ticket{'user'})</EM> and returns true result code. The username is saved into the connection
+object at this point so that authorization and logging handlers will have
+access to it. It also makes the username available to CGI scripts via the
+<CODE>REMOTE_USER</CODE> environment variable. 
+
+
+<P>
+
+<PRE> sub make_return_address {
+     my($self, $r) = @_;
+     my $uri = Apache::URI-&gt;parse($r, $r-&gt;uri);
+     $uri-&gt;scheme(&quot;http&quot;);
+     $uri-&gt;hostname($r-&gt;get_server_name);
+     $uri-&gt;port($r-&gt;get_server_port);
+     $uri-&gt;query(scalar $r-&gt;args);
+</PRE>
+
+<P>
+
+<PRE>     return CGI::Cookie-&gt;new(-name =&gt; 'request_uri',
+                             -value =&gt; $uri-&gt;unparse,
+                             -domain =&gt; $self-&gt;{TicketDomain},
+                             -path =&gt; '/');
+ }
+</PRE>
+
+<P>
+
+The last method, <EM>make_return_address()</EM>, is responsible for creating a cookie to transmit the URI of the current
+request to the central authentication server. It recovers the server
+hostname, port, path and CGI variables from the request object, and turns
+it into a full URI. It then calls <EM>CGI::Cookie-&gt;new()</EM> to incorporate this URI into a cookie named ``request_uri'', which it
+returns to the caller.
+<EM>scheme()</EM>, <EM>hostname()</EM> and the other URI processing calls are explained 
+in detail elsewhere, 
+under <EM>The Apache::URI Class</EM>.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.14: The Ticket Issuer
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::TicketTool;
+ 
+ use strict;
+ use Tie::DBI ();
+ use CGI::Cookie ();
+ use MD5 ();
+ use LWP::Simple ();
+ use Apache::File ();
+ use Apache::URI ();
+ 
+ my $ServerName = Apache-&gt;server-&gt;server_hostname;
+ 
+ my %DEFAULTS = (
+    'TicketDatabase' =&gt; 'mysql:test_www',
+    'TicketTable'    =&gt; 'user_info:user_name:passwd',
+    'TicketExpires'  =&gt; 30,
+    'TicketSecret'   =&gt; 'http://$ServerName/secret_key.txt',
+    'TicketDomain'   =&gt; undef,
+ );
+ 
+ my %CACHE;  # cache objects by their parameters to minimize time-consuming operations
+ 
+ # Set up default parameters by passing in a request object
+ sub new {
+     my($class, $r) = @_;
+     my %self = ();
+     foreach (keys %DEFAULTS) {
+        $self{$_} = $r-&gt;dir_config($_) || $DEFAULTS{$_};
+     }
+     # post-process TicketDatabase and TicketDomain
+     ($self{TicketDomain} = $ServerName) =~ s/^[^.]+// 
+        unless $self{TicketDomain};
+ 
+     # try to return from cache
+     my $id = join '', sort values %self;
+     return $CACHE{$id} if $CACHE{$id};
+ 
+     # otherwise create new object
+     return $CACHE{$id} = bless \%self, $class;
+ } 
+ 
+ # TicketTool::authenticate()
+ # Call as:
+ # ($result,$explanation) = $ticketTool-&gt;authenticate($user,$passwd)
+ sub authenticate {
+     my($self, $user, $passwd) = @_;
+     my($table, $userfield, $passwdfield) = split ':', $self-&gt;{TicketTable};
+ 
+     tie my %DB, 'Tie::DBI', {
+        'db'    =&gt; $self-&gt;{TicketDatabase},
+        'table' =&gt; $table, 'key' =&gt; $userfield,
+     } or return (undef, &quot;couldn't open database&quot;);
+ 
+     return (undef, &quot;invalid account&quot;)
+        unless $DB{$user};
+     
+     my $saved_passwd = $DB{$user}-&gt;{$passwdfield};
+     return (undef, &quot;password mismatch&quot;)
+        unless $saved_passwd eq crypt($passwd, $saved_passwd);
+     
+     return (1, '');
+ }
+ 
+ # TicketTool::fetch_secret()
+ # Call as:
+ # $ticketTool-&gt;fetch_secret();
+ sub fetch_secret {
+     my $self = shift;
+     unless ($self-&gt;{SECRET_KEY}) {
+        if ($self-&gt;{TicketSecret} =~ /^http:/) {
+            $self-&gt;{SECRET_KEY} = LWP::Simple::get($self-&gt;{TicketSecret});
+        } else {
+            my $fh = Apache::File-&gt;new($self-&gt;{TicketSecret}) || return undef;
+            $self-&gt;{SECRET_KEY} = &lt;$fh&gt;;
+        }
+     }
+     $self-&gt;{SECRET_KEY};
+ }
+ 
+ # invalidate the cached secret
+ sub invalidate_secret { undef shift-&gt;{SECRET_KEY}; }
+ 
+ # TicketTool::make_ticket()
+ # Call as:
+ # $cookie = $ticketTool-&gt;make_ticket($r,$username);
+ #
+ sub make_ticket {
+     my($self, $r, $user_name) = @_;
+     my $ip_address = $r-&gt;connection-&gt;remote_ip;
+     my $expires = $self-&gt;{TicketExpires};
+     my $now = time;
+     my $secret = $self-&gt;fetch_secret() or return undef;
+     my $hash = MD5-&gt;hexhash($secret .
+                  MD5-&gt;hexhash(join ':', $secret, $ip_address, $now,
+                               $expires, $user_name)
+                );
+     return CGI::Cookie-&gt;new(-name =&gt; 'Ticket',
+                             -path =&gt; '/',
+                             -domain =&gt; $self-&gt;{TicketDomain},
+                             -value =&gt; {
+                                'ip' =&gt; $ip_address,
+                                'time' =&gt; $now,
+                                'user' =&gt; $user_name,
+                                'hash' =&gt; $hash,
+                                'expires' =&gt; $expires,
+                             });
+ }
+ 
+ 
+ # TicketTool::verify_ticket()
+ # Call as:
+ # ($result,$msg) = $ticketTool-&gt;verify_ticket($r)
+ sub verify_ticket {
+     my($self, $r) = @_;
+     my %cookies = CGI::Cookie-&gt;parse($r-&gt;header_in('Cookie'));
+     return (0, 'user has no cookies') unless %cookies;
+     return (0, 'user has no ticket') unless $cookies{'Ticket'};
+     my %ticket = $cookies{'Ticket'}-&gt;value;
+     return (0, 'malformed ticket')
+        unless $ticket{'hash'} &amp;&amp; $ticket{'user'} &amp;&amp; 
+            $ticket{'time'} &amp;&amp; $ticket{'expires'};
+     return (0, 'IP address mismatch in ticket')
+        unless $ticket{'ip'} eq $r-&gt;connection-&gt;remote_ip;
+     return (0, 'ticket has expired')
+        unless (time - $ticket{'time'})/60 &lt; $ticket{'expires'};
+     my $secret;
+     return (0, &quot;can't retrieve secret&quot;) 
+        unless $secret = $self-&gt;fetch_secret;
+     my $newhash = MD5-&gt;hexhash($secret .
+                      MD5-&gt;hexhash(join ':', $secret,
+                               @ticket{qw(ip time expires user)})
+                   );
+     unless ($newhash eq $ticket{'hash'}) {
+        $self-&gt;invalidate_secret;  #maybe it's changed?
+        return (0, 'ticket mismatch');
+     }
+     $r-&gt;connection-&gt;user($ticket{'user'});
+     return (1, 'ok');
+ }
+ 
+ # Call as:
+ # $cookie = $ticketTool-&gt;make_return_address($r)
+ sub make_return_address {
+     my($self, $r) = @_;
+     my $uri = Apache::URI-&gt;parse($r, $r-&gt;uri);
+     $uri-&gt;scheme(&quot;http&quot;);
+     $uri-&gt;hostname($r-&gt;get_server_name);
+     $uri-&gt;port($r-&gt;get_server_port);
+     $uri-&gt;query(scalar $r-&gt;args);
+ 
+     return CGI::Cookie-&gt;new(-name =&gt; 'request_uri',
+                             -value =&gt; $uri-&gt;unparse,
+                             -domain =&gt; $self-&gt;{TicketDomain},
+                             -path =&gt; '/');
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+<P>
+<HR>
+<H1><A NAME="Authentication_with_the_Secure_S">Authentication with the Secure Sockets Layer
+
+</A></H1>
+The Secure Sockets Layer (SSL) is a widely-used protocol for encrypting
+Internet transmissions. It was originally introduced by Netscape for use
+with its browser and server products, and has been adapted by the Internet
+Engineering Task Force (IETF) for use in its standard Transport Layer
+Security (TLS) protocol.
+
+
+<P>
+
+When an SSL-enabled browser talks to an SSL-enabled server, they exchange
+cryptographic certificates and authenticate each other using secure
+credentials known as digital certificates. They then set up an encrypted
+channel with which to exchange information. Everything that the browser
+sends to the server, including the requested URI, cookies, and the contents
+of fill-out forms is encrypted, and everything that the server returns to
+the browser is encrypted as well.
+
+
+<P>
+
+For the purposes of authentication and authorization, SSL can be used in
+two ways. One option is to combine SSL encryption with Basic
+authentication. The Basic authentication protocol continues to work exactly
+as described in the previous section, but now the user's password is
+protected from interception because it is part of the encrypted data
+stream. This option is simple and doesn't require any code changes.
+
+
+<P>
+
+The other option is to use the browser's digital certificate for
+authorization. The server automatically attempts to authenticates the
+browser's digital certificate when it first sets up the SSL connection. If
+it can't, the SSL connection is refused. If you wish, you can use the
+information provided in the browser's certificate to decide whether this
+user is authorized to access the requested URI. In addition to the user's
+name, digital certificates contain a variety of standard fields and any
+number of optional ones; your code is free to use any of these fields to
+decide whether the user is authorized.
+
+
+<P>
+
+The main advantage of the digital certificate solution is that it
+eliminates the problems associated with passwords -- users forgetting them
+or, conversely, choosing ones that are too easy to guess. The main
+disadvantage is that most users don't use digital certificates. On most of
+the public Web authentication is one-way only. The server authenticates
+itself to the browser, but not vice-versa. Therefore authentication by
+digital certificate is only suitable in intranet environments where the
+company issues certificates to its employees as a condition of their
+accessing internal Web servers.
+
+
+<P>
+
+There are several SSL-enabled versions of Apache, and there will probably
+be more in the future. The current list follows. Each offers a different
+combination of price, features and support.
+
+
+<P>
+
+Open-source (free) versions:
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_Ben">Ben Laurie's Apache SSL
+
+</A></STRONG><DD>
+<EM>http://www.apache-ssl.org/</EM>
+
+
+
+
+<P>
+
+<DT><STRONG><A NAME="item_Ralf">Ralf S.Engelschall's mod_ssl 
+
+</A></STRONG><DD>
+<EM>http://www.engelschall.com/sw/mod_ssl/</EM>
+
+
+
+
+<P>
+
+</DL>
+Commercial:
+
+
+<P>
+
+<DL>
+<DT><STRONG><A NAME="item_C2Net">C2Net Stronghold
+
+</A></STRONG><DD>
+<EM>http://www.c2.net/</EM>
+
+
+
+
+<P>
+
+<DT><STRONG><A NAME="item_Covalent">Covalent Raven SSL Module
+
+</A></STRONG><DD>
+<EM>http://raven.covalent.net/</EM>
+
+
+
+
+<P>
+
+<DT><STRONG><A NAME="item_Red">Red Hat Secure Server
+
+</A></STRONG><DD>
+<EM>http://www.redhat.com/products/</EM>
+
+
+
+
+<P>
+
+</DL>
+<P>
+<HR>
+<H2><A NAME="Using_Digital_Certificates_for_A">Using Digital Certificates for Authorization
+
+</A></H2>
+The SSL protocol does most of its work at a level beneath the workings of
+the HTTP protocol. The exchange and verificaton of digital certificates and
+the establishment of the encrypted channel all occur before any of Apache's
+handlers run. For this reason, authorization based on the contents of a
+digital certificate looks quite different from the other examples we've
+seen in this text. Furthermore, the details of authorization vary
+slightly among the different implementations of ApacheSSL. This section
+describes the way it works in Ralf S.Engelschall's <EM>mod_ssl</EM>. If you are using a different version of ApacheSSL, you should check your
+vendor's documentation for differences.
+
+
+<P>
+
+The text representation of a typical client certificate is shown in Listing
+6.15. It consists of a ``Subject'' section, which gives information on the
+person to whom the certificate is issued, and a ``Certificate'' section,
+which gives information about the certificate itself. Within the Subject
+section are a series of <EM>tag=value</EM>
+pairs. There can be an arbitrary number of such pairs, but several are
+standard and can be found in any certificate:
+
+
+<P>
+
+<PRE>  CN    User's common name
+  EMail User's e-mail address
+  O     User's organization (employer)
+  OU    Organizational unit (e.g. department)
+  L     User's locality, usually a city or town
+  SP    User's state or province
+  C     User's country code
+</PRE>
+
+<P>
+
+The user's distinguished name (DN) is a long string consisting of the
+concatenation of each of these fields in the following format:
+
+
+<P>
+
+<PRE> /C=US/SP=MA/L=Boston/O=Capricorn Organization/OU=Sales/CN=Wanda/Email=wanda@capricorn.com
+</PRE>
+
+<P>
+
+European users will recognize the footprints of the OSI standards committee
+here. The DN is guaranteed to be unique among all the certificates issued
+by a particular certificate-granting authority.
+
+
+<P>
+
+The Certificate section contains the certificate's unique serial number and
+other data, followed by more <EM>tag=value</EM> pairs giving information about the organization issuing the certificate.
+The standard fields are the same as those described for the Subject. This
+is followed by a Validity period, which gives the span of time that the
+certificate should be considered valid.
+
+
+<P>
+
+You are free to use any of these fields for authorization. You can
+authorize based on the user's CN field, on the certificate's serial number,
+on the validity period, or on any of the Subject or Issuer tags.  
+
+
+<P>
+
+The certificate information is actually stored in a compact binary form
+rather than the text form shown here. When the connection is established,
+the SSL library parses out the certificate fields and stores them in a
+private data structure. During the <EM>fixup</EM> phase, these fields are turned into various environment variables with
+names like <CODE>SSL_CLIENT_S_DN_CN</CODE> (the ``CN'' common name field). However the mappings between certificate
+field and environment variable differ from version to version of ApacheSSL
+and you will have to check your vendor's documentation for the details.
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.15: An example client certificate
+
+</A></STRONG><DD>
+</DL>
+<PRE> Subject:
+      C=US
+      SP=MA
+      L=Boston
+      O=Capricorn Organization
+      OU=Sales
+      CN=Wanda
+      Email=wanda@capricorn.com
+</PRE>
+
+<P>
+
+<PRE> Certificate:
+     Data:
+        Version: 1 (0x0)
+        Serial Number: 866229881 (0x33a19e79)
+        Signature Algorithm: md5WithRSAEncryption
+     Issuer:
+        C=US
+        SP=MA
+        L=Boston
+        O=Capricorn Consulting
+        OU=Security Services
+        CN=Capricorn Signing Services Root CA
+        Email=lstein@capricorn.com
+     Validity:
+            Not Before: Jun 13 19:24:41 1998 GMT
+            Not After : Jun 13 19:24:41 1999 GMT
+</PRE>
+
+<P>
+
+The most straightforward way to authenticate based on certificate
+information is to take advantage of the <STRONG>SSLRequire</STRONG> access control directive. In <EM>mod_ssl</EM>, such a directive might look like this:
+
+
+<P>
+
+<PRE> &lt;Location /certified&gt;
+    SSLRequire  %{SSL_CLIENT_S_DN_CN} in (&quot;Wanda Henderson&quot;,&quot;Joe Bloe&quot;) \
+                and %{REMOTE_ADDR} =~ m/^192\.128\.3\.[0-9]+$/
+ &lt;/Location&gt;
+</PRE>
+
+<P>
+
+This requires that the CN tag of the DN field of the <STRONG>S</STRONG>ubject section of the certificate match either ``Wanda Henderson'' or ``Joe
+Bloe'', and that the browser's IP address satisfy a pattern match placing
+it within the 192.128.3 subnetwork.  <EM>mod_ssl</EM> has a rich language for querying the contents of the client certificate.
+See its documentation for the details. Other ApacheSSL implementations also
+support operations similar to <STRONG>SSLRequire</STRONG>, but they differ somewhat in detail.
+
+
+<P>
+
+Note that to Apache, <STRONG>SSLRequire</STRONG> is an access control operation rather than an authentication/authorization
+operation. This is because no action on the part of the user is needed to
+gain access -- his browser either has the right certificate, or it doesn't.
+
+
+<P>
+
+A slightly more involved technique for combining certificate information
+with user authorization is to take advantage of the the <STRONG>FakeBasicAuth</STRONG> option of the <STRONG>SSLOptions</STRONG> directive. When this option is enabled, <EM>mod_ssl</EM> installs an authentication handler that retrieves the DN from the
+certificate. The handler synthesizes the DN along with a hard-coded
+password consisting of the string ``password'', into the <EM>Basic</EM> base64 encoded format, stuffs it into the incoming <EM>Authorization</EM> header field and returns <A HREF="passwo22.htm#item_DECLINED">DECLINED</A>. In effect this fakes the ordinary Basic authentication process by making
+it seem as if the user provided a username and password pair. The DN is now
+available for use by downstream authentication and authorization modules.   
+
+
+<P>
+
+However, using <STRONG>FakeBasicAuth</STRONG> means that <EM>mod_ssl</EM> must be the first authentication handler run for the request and that an
+authentication handler further down the chain must be able to authenticate
+using the client's DN. It is much simpler to bypass all authentication
+handlers altogether and get a hold of the DN by using a subrequest.
+
+
+<P>
+
+As an example, we'll show a simple authorization module named
+<EM>Apache::AuthzSSL</EM> which checks that a named field of the DN name matches that given in one or
+more <STRONG>require</STRONG> directives. A typical configuration section will look like this: 
+
+
+<P>
+
+<PRE> SSLVerifyClient require
+ SSLVerifyDepth 2
+ SSLCACertificateFile  conf/ssl.crt/ca-bundle.crt
+ &lt;Directory /usr/local/apache/htdocs/ID/please&gt;
+     SSLRequireSSL
+     AuthName SSL
+     AuthType Basic
+     PerlAuthenHandler Apache::OK
+     PerlAuthzHandler  Apache::AuthzSSL
+     require  C US
+     require  O &quot;Capricorn Organization&quot;
+     require OU Sales Marketing
+ &lt;/Directory&gt;
+</PRE>
+
+<P>
+
+The <STRONG>SSLVerifyClient</STRONG> directive, which must be present in the main part of the configuration
+file, requires that browsers must present certificates. The <STRONG>SSLVerifyDepth</STRONG> and <STRONG>SSLCACertificateFile</STRONG>
+directives are used to configure how deeply <EM>mod_ssl</EM> should verify client certificates, see the <EM>mod_ssl</EM> documentation for details. The <STRONG>SSLRequireSSL</STRONG> directive requires that SSL be active in order to access the contents of
+this directory.  
+
+
+<P>
+
+<STRONG>AuthName</STRONG> and <STRONG>AuthType</STRONG> are not required, since we are not peforming Basic authentication, but we
+put them in place anyhow just in case, as some modules might complain
+without them. Since the password is invariant when client certificate
+verification is in use, we bypass password checking by installing <EM>Apache::OK</EM> as the authentication handler for this directory.* We then install
+<EM>Apache::AuthzSSL</EM> as the authorization handler and give it three different <STRONG>require</STRONG> statements to satisfy. We require that the
+<STRONG>C</STRONG>ountry field equal ``US'', the <STRONG>O</STRONG>rganization field equal ``Capricorn Organization'', and the <STRONG>O</STRONG>rganizational <STRONG>U</STRONG>nit be one of ``Sales'' or ``Marketing''. 
+
+
+<P>
+
+Listing 6.16 gives the code for <EM>Apache::AuthzSSL</EM>. It brings in in
+<EM>Apache::Constants</EM> and the <EM>quotewords()</EM> text parsing function from the standard <EM>Text::ParseWords</EM> module. It recovers the request object, and calls its <EM>requires()</EM> method to retrieve the list of authorization requirements that are in
+effect.
+
+
+<P>
+
+The handler then issues a subrequest to retrieve the certificate's DN,
+which is added to the <EM>subprocess_env</EM> table during the fixup stage by <EM>mod_ssl</EM>. Notice early on, the handler returns <STRONG>OK</STRONG> if
+<EM>is_main()</EM> returns true, to avoid authorization checks during the subrequest. Once the
+DN is recovered, it is split into its individual fields using a pattern
+match operation. 
+
+
+<P>
+
+Now the routine loops through each of the requirements, breaking them into
+a DN field name and a list of possible values, each of which it checks in
+turn. If none of the specified values matches the DN, we log an error and
+return a <CODE>FORBIDDEN</CODE> (not an <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A>) status code. If we satisfy all the requirements and fall through to the
+bottom of the loop, we return an <A HREF="passwo22.htm#item_OK">OK</A> result code.
+
+
+<P>
+
+<DL>
+<DT><STRONG>footnote
+
+</A></STRONG><DD>
+*Apache::OK is always available, along with <STRONG>Apache::DECLINED</STRONG>, since they are imported from Apache::Constants by Apache.pm at server
+startup time. 
+
+
+<P>
+
+</DL>
+<DL>
+<DT><STRONG>Listing 6.16: Apache::AuthzSSL authorizes clients based on
+the contents of their digital certificate's DN.
+
+</A></STRONG><DD>
+<PRE> package Apache::AuthzSSL;
+ 
+ use strict;
+ use Apache::Constants qw(:common);
+ use Text::ParseWords  qw(quotewords);
+ 
+ sub handler {
+     my $r = shift;
+     return OK unless $r-&gt;is_main;
+ 
+     my $requires = $r-&gt;requires;
+     return DECLINED unless $requires;
+ 
+     my $subr = $r-&gt;lookup_uri($r-&gt;uri);
+     my $dn = $subr-&gt;subprocess_env('SSL_CLIENT_S_DN');
+     return DECLINED unless $dn;
+     my(%dn) = $dn =~ m{/([^=]+)=([^/]+)}g;
+ 
+   REQUIRES:
+     for my $entry (@$requires) {
+        my($field, @values) = quotewords('\s+', 0, $entry-&gt;{requirement});
+        foreach (@values) {
+            next REQUIRES if $dn{$field} eq $_;
+         }
+         $r-&gt;log_reason(&quot;user $dn{CN}: not authorized&quot;, $r-&gt;filename);
+         return FORBIDDEN;
+     }
+     # if we get here, then we passed all the requirements
+     return OK;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+The only sublety in this module is the rationale for returning
+<CODE>FORBIDDEN</CODE> in an authorization module rather than the more typical
+<EM>note_basic_auth_failure()</EM> call followed by <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A>. The reason for this is that returning <A HREF="passwo22.htm#item_AUTH_REQUIRED">AUTH_REQUIRED</A> will set in motion a chain of events that will ultimately result in the
+user being prompted for a username and password. But there's nothing the
+user can type in to satisfy this module's requirements, so this is just a
+tease. Returning <CODE>FORBIDDEN</CODE>, in contrast, will display a more accurate message denying the user
+permission to view the page. 
+
+
+<P>
+
+A more advanced certificate authorization module would probably go to a
+database to determine whether the incoming certificate satisifed the
+requirements.
+
+
+<P>
+
+The main limitation of the <EM>Apache::AuthzSSL</EM> module is that it only allows you to check fields in the user's DN. Other
+fields, such as the name of the certificate issuer, are not checked. If you
+need to use this information, you can combine <STRONG>Apache::AuthzSSL</STRONG> with
+<STRONG>SSLRequire</STRONG>. For example, by modifying the configuration slightly as shown below, you
+can make sure that the <EM>Apache::AuthzSSL</EM> tests will only be applied to certificates issued by the ``Capricorn
+Signing Services Root CA'': 
+
+
+<P>
+
+<PRE> SSLVerifyClient require
+ SSLVerifyDepth 2
+ SSLCACertificateFile  conf/ssl.crt/ca-bundle.crt
+ &lt;Directory /usr/local/apache/htdocs/ID/please&gt;
+     SSLRequireSSL
+     SSLRequire %{SSL_CLIENT_I_DN_CN} eq \
+                   &quot;Capricorn Signing Services Root CA&quot;
+     AuthName SSL
+     AuthType Basic
+     PerlAuthenHandler Apache::OK
+     PerlAuthzHandler  Apache::AuthzSSL
+     require  C US
+     require  O &quot;Capricorn Organization&quot;
+     require OU Sales Marketing
+ &lt;/Directory&gt;
+</PRE>
+
+<P>
+
+If you need full access to all the fields of the certificate and your needs
+are not met by <STRONG>SSLRequire</STRONG>, you can take advantage of the fact that <EM>mod_ssl</EM> copies all of the parsed certificate values into
+<EM>subprocess_env</EM> table.
+
+
+<P>
+
+To give you a concrete example, Listing 6.17 shows a small access handler
+that rejects all certificates issued by out-of-state issuers. It does so by
+looking at the value of the subprocess variable
+<CODE>SSL_CLIENT_I_DN_SP</CODE>, which returns the <STRONG>I</STRONG>ssuer's <EM>S</EM>tate or
+<EM>Province</EM> code. This handler can be installed with a configuration section like this
+one:
+
+
+<P>
+
+<PRE> SSLVerifyClient require
+  &lt;Location /government/local&gt;
+     SSLRequireSSL
+     PerlAccessHandler Apache::CheckCertState
+     PerlSetVar  IssuerState Maryland
+  &lt;/Location&gt;
+</PRE>
+
+<P>
+
+The code simply retrieves the contents of the <EM>IssuerState</EM>
+configuration variable and the <CODE>SSL_CLIENT_I_DN_SP</CODE> environment variables. If either is undefined, the handler returns <A HREF="passwo22.htm#item_DECLINED">DECLINED</A>. Next the handler checks whether the two variables are equal, and if so,
+returns <STRONG>OK</STRONG>. Otherwise the routine returns <CODE>FORBIDDEN</CODE>, displaying the ``access denied'' message on the user's browser. 
+
+
+<P>
+
+<DL>
+<DT><STRONG>Listing 6.17: Apache::CheckCertState checks the "SP"
+(state/province) field of the certificate issuer
+
+</A></STRONG><DD>
+</DL>
+<PRE> package Apache::CheckCertState;
+ # file: Apache/CheckCertState.pm
+ use Apache::Constants qw(:common);
+ 
+ sub handler {
+     my $r = shift;
+     return DECLINED unless $r-&gt;is_main;
+     my $state = $r-&gt;dir_config('IssuerState');
+     return DECLINED unless defined $state;
+     my $subr = $r-&gt;lookup_uri($r-&gt;uri);
+     my $client_state = $subr-&gt;subprocess_env('SSL_CLIENT_I_DN_SP') || &quot;&quot;;
+     return OK if $client_state eq $state;
+     return FORBIDDEN;
+ }
+ 
+ 1;
+ __END__
+</PRE>
+
+<P>
+
+By using a <EM>PerlAccessHandler</EM>, any number of certificate attribute modules can be installed:
+
+
+<P>
+
+<PRE> PerlAccessHandler Apache::CheckCertState
+</PRE>
+
+<P>
+
+We hope this text has given you some idea of the range and versatility
+of Apache modules for controlling who can gain access to your site and what
+they do once they've connected. With the tools and examples presented in
+this text as a starting point, you should be able to implement almost
+any access control system you can imagine.
+
+.
+
+<P>
+
+</DL>
+</DL>
+    <!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="ideale.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br> <!-- how to search the web, by fravia+, signet begin --><table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved <bR><!-- how to search the web, by fravia+, signet end -->
+<!-- begin da closing bit, duh -->
+</CENTER></body></HTML>

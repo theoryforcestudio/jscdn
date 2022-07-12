@@ -1,0 +1,205 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>(�`�.�(�`�.� How to fool SQL servers accessing... �.���)�.���)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+
+<body BACKGROUND="images/book.jpg" bgcolor="CCCCCC" TEXT="#001010" LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+
+<a name="anchortop">
+
+<table BORDER="0" CELLPADDING="0">
+<tr>
+<td width="120"><br>
+Back to the page
+<font color="blue">[</fonT><a
+href="javascript:history.back();">you came from</a><font
+color="blue">]</fonT><br>
+</td>
+<td width="90">&nbsp;</td>
+
+<td width="450" rowspan=2>
+<!-- Begin Introdo -->
+
+<center><font size=+5 color=blue>How to fool SQL servers accessing</font><br>
+(When a password is asked and you do not happen to know it...&nbsp;:-)</center>
+<bR><br>
+<i>The following snippet is worth reading especially for those among my visitors that 
+still fail to grasp WHY it is very important, for searchers, to have at least some 
+rudiments of programming (and/or software reversing) knowledge.
+</i>
+<br><br>
+<font size=+1>
+Dear fravia+,<br><br> 
+
+Most of
+what I		do is write perl cgi front ends	to sql databases.
+<br>
+Lots of
+sites
+that require registration (either paid, or just contact details)
+use a
+database for authentication rather than the htaccess method you
+talked
+about. Typically this is done with a POST method form as follows:
+<br><br>
+<table border=1><tr><td>
+<FORM METHOD=POST> 
+Username :<INPUT TYPE=TEXT NAME=username><br>
+Password: <INPUT TYPE=PASSWORD NAME=password> 
+</FORM> </td></tr></table><br><br>
+Which in html code looks like this:<br><br></font>
+&lt;FORM METHOD=POST> <br>
+Username :&lt;INPUT TYPE=TEXT NAME=username><br>
+Password: &lt;INPUT TYPE=PASSWORD NAME=password><br>
+&lt;/FORM> <br><br><font size=+1>
+
+now the perl script will have some code like this:
+<br><br></font><pre>
+my $username=$req?>param("username");	
+                #$req is a handle to CGI data
+my $password=$req?>param("password");
+my $sql="
+	SELECT username
+	FROM users
+	WHERE username='$username'
+	AND password='$password'
+	";
+my $result=$dbh?>query($sql);	
+               #$dbh is a handle to a db
+	       #connection
+	
+if ($result?>numrows==O)	{	
+               #did nothing match our select?
+	&bugger_off_evil_hacker_dude;
+} else	(
+	&come_on_down_paying_customer;
+)
+</pre><font size=+1>
+This is a fairly simple example, but you can see how the form
+variables are translated into an SQL statement. 
+Now, there is a big whole in this code, in that, since I am such 
+a lazy programmer, I have not checked the forms input for bad 
+characters.
+<br><br>
+The bad character that might cause problems here is a ' character,
+which is being used in the SQL statement to delimit strings. 
+Say I put in a username of blah' then the sql statement would have
+WHERE username='blah '' in it, and the SQL parser would treat the
+two '' as being a single inside the string, and choke with a 
+syntax error. <br>
+In this case, the cgi script would return either a generic error 
+message, spit out the full sql error message or just give a web 
+server error.<br><br>
+
+If I was messing around with such a site and I got an error when 
+I put a ' in my username, i'd know what was going on and the next 
+thing I would try as a username is the following: <br><br><font color=blue>
+blah' OR ' '<><br><br></font>
+and in the password: <br><br><font color=blue>
+'blah <br><br></font>
+this makes the full SQL statement above look something like this:<pre>
+SELECT username
+FROM users
+WHERE username='blah' OR ' '<>'
+AND password= " blah'
+</pre>
+which is a valid sql statement, which the SQL server parses like
+this:<br><br></font>
+(username='blah)' OR (is the string <font color=blue>" "</font> not equal to the string<br><font color=blue>"AND 
+password='blah"</font>)
+<br><br><font size=+1>
+clearly the two strings in the second comparision are different,
+so the select statement will infact return every single username,
+so the number of rows will not be zero, so the code above will let
+us in.
+<br><br>
+Of course you cant actually know what the SQL statement is,
+although you can make educated guesses.
+
+<br><br>
+Jonathan
+
+
+
+
+</fonT>
+<!-- End mover -->
+<hr>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</prE>
+<hr>
+<!-- Begin sillabus --><a href="http://www.fravia.net">
+<img SRC="images/bulletr.gif" ALT="red" ALIGN="BOTTOM" WIDTH="13" 
+HEIGHT="13" BORDER="0" VSPACE="0" HSPACE="0"></a>
+
+<font color="green">11 November 2001</font>
+<!-- End sillabus -->
+<hr>
+<center>
+<!-- a little script begin -->
+<script>
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='navy' face='arial' size='2'>"+dayarray[day]+" ~ "+daym+" "+montharray[month]+" ~ "+year+"</font>")
+</script><br><hr width=55%>
+<!-- a little script end -->
+</CENTER></td></tr>
+<tR>
+<td width="120">
+&nbsp;</td>
+<td width="90">&nbsp;</td>
+</td></tR>
+</table>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>paris6.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ Paris, ecole polytechnique ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CFCFCF" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table><tr>
+<td>
+<a href="paris.htm"><IMG SRC="ecolpoly.jpg" width=240 height=322></a>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<td><center><br><font size=+2><font color=blue>
+fravia @ Paris<br>Ecole polytechnique, 6 February 2001</font></center><br>
+<hr width=55%><br>
+<font size=+2>
+The importance of reverse engineering  for seekers
+</font>
+<br><br><i>
+ Reversing algos, reversing software, reversing reality</i>
+</center></td></tr></table><br>
+
+<hr>
+<font size=+2 color=blue>Cleaning the last version of Opera</font><font size=+1>
+<br><bR>
+
+
+Introduction
+<br><br>
+Opera is well known as the <u>best browser</u> for the windoze
+environment. <br>It has <SPAN STYLE="color: black; background: yellow">many advantages</span> vis-à-vis 
+bloated browsersaurii like Microsoft's Internet Explorer (which,
+beside being overbloated and buggy, <font color=blue>[</font><a href="https://searchlores.nickifaulk.com/paris/athei_06.htm">syphons your data</a><font color=blue>]</font> to third
+parties) or Netscape (whose code, to state it diplomatically, is quite overbloated 
+and buggy)<br>To start with, Opera has a
+"turn images off" on-the-fly button that -you'll have to admit- 
+is something one simply
+cannot live without any more if one wants to peruse  the silly ad-infested
+web of today effectively and without eccessives 
+delays.<br>But there's more: Opera has even a sort of BUILT-IN
+'<SPAN STYLE="color: black; background: yellow">anti-popup</span>' function: have a look at file ~ preferences ~ windows...
+see the checkbox for 'allow documents to create windows? Well...
+uncheck it! What are you waiting for?&nbsp;:-)<br>
+You think I have finished with the advantages that Opera offers? 
+Nossir...try this other one: file ~ preferences ~ multimedia...
+see the checkbox 'enable animation GIF images'? Well... uncheck
+it! Yep, believe or not: you can selectively <SPAN STYLE="color: black; background: yellow">kill those useless
+animated gifs</span> that nobody in their right mind would ever 'prefer' to
+load!&nbsp;:-)<br>Of course you can download <i>hic et nunc</i> <a
+href=http://metalab;unc;edu/pub/Linux/apps/www/browsers/opera-1999
+1224.tar.gz>Opera for LINUX</a> as well...<br>
+<br>
+If you think I have finished with Opera's advantages you'r wrong: if I 
+type in the URl window -look on the screen behind my shoulders- <font color=blue>q "advanced searching"</font>
+and then press ENTER... see? I'm searching with google! Similarly we have <font color=blue>a</font> 
+for Altavista and <font color=blue>h</font> for Hotbot... (see the whole list inside 
+preferences ~ search) not a bad choice! But I miss Fast... well,  
+ we can easily modify the source code of Opera to get the almost useless <font color=blue>t</font> 
+of GoTo to point to fast&nbsp;:-) 
+<br>
+
+<br>Ah yes, modifying code. An important activity for good seekers. For a long time Opera was distributed as shareware with an
+evaluation limit of 30 days, but it has always been so easy to
+find 'unlocking' serial numbers on the web that many a reverser
+was wondering if the idea wasn't rather to let it 'quietly' diffuse in
+order to compete against the 'big two' obsolete browsersaurii.
+<br><br>Version 5 of Opera is free, but has a
+horrible commercial bug.<br>
+<br>
+Let's have a look at a version 5 of Opera. For this
+lesson we'll use a version (Build 828, Platform Win32, System Windows
+98) with the executable <font color=blue>opera.exe</font> having a length of 1.884.207 
+bytes.<br>
+The bug is present: target's code triggers -apparently intentionally- an awful 'advertisement
+banner' inside the main window of the program, this sore moreover
+'rotates', annoying your eyes with many a vulgar advertisement.
+
+<br><br>
+<font size=+2 color=blue>The illegal temptation</font><font size=+1>
+<br><bR>
+Now, even before starting reversing the code, let's point out and
+underline that to kill these ads it wouldn't be necessary to reverse its code: 
+as many of you will already know, there are
+some very easy ways any zombie could have killed 
+ this tasteless advertising feature WITHOUT ANY NEED WHATSOEVER TO STUDY ITS
+CODE AT ALL: <br><br>
+<font color=blue>FIRST METHOD</font><br><ul><li>
+you just install a PREVIOUS version of opera;</li><li>
+fish an adequate serial number out of the web (<font
+color=blue>+opera +"4.01" +(serial OR register)</font> for instance,
+should you have downloaded and installed version 4.01); </li><li>
+register the previous version; </li><li>
+install version 5.0 <u>onto</u> the previous version; </li></ul>
+Voilà, c'est fait.
+<br><br>
+<font color=blue>SECOND METHOD</font><br>
+fish a complete cracked copy out of the web (<font
+color=blue>http://www.crack.ru/cgi-bin/crack_en.pl?what=crack&first=1&string=opera&.submit=Search</font>
+for instance).
+Voilà, c'est fait. <br><br>But we wont do it. We wont register 
+our 'free' copy of Opera with a crack (you should really register Opera, later, once you 
+have realized that it is indeed a very 
+good tool: it deserves it).<br> 
+We'll kill the advertisement in a legal way.
+
+
+<br><br>
+<font size=+2 color=blue>Keeping on the legal side</font><font size=+1>
+<br><bR>
+But I want today to show you the sheer and almighty POWER of
+software reverse engineering, besides, we are (supposed to be)
+reversers, not thieves, so let's have a deeper look inside Opera
+in order to understand how this 'advertisement bug' works. This approach will be 
+useful to ameliorate ANY software that dares annoy your eyes with advertisement 
+windows. Let's keep on the legal side: When I installed Opera on my portable I got 
+this window:
+
+<br><br><table width=99%><tr><td>
+<IMG SRC="ope_pre.jpg" width=465 height=354></a><br><br>
+</td><td>&nbsp;&nbsp;</td><td>
+<font color=gray>You shall not modify, translate, reverse engineer, 
+decompile or disassemble the Software or any part thereof or otherwise attempt 
+to derive source code or create derivative works therefrom.
+</font><br><i>This is terrible. I NEED to decompile AND disassemble ANY software 
+entering my memory! Why should I trust it?</i>
+<br><font color=gray>
+You are not allowed to remove, alter or destroy any proprietary, trademark or 
+copyright markings or notices placed upon or contained with the Software.
+</font><br><i>I should accept this? Why?</i><br><font color=gray>
+Registration Codes...
+</font><br><i>This does not interest us: even if it would be easy to find them on the 
+web we are NOT going to use any registration code...</i>
+</td></tr><table>
+<br><font size=+1>
+As you see, we have a problem. If we click onto the I accept button, we are supposed 
+not to modify, translate, reverse engineer, 
+decompile or disassemble... but that's exactly what we want to do with any software that 
+enters our systems and that we may decide to use: there are enough malwares around... 
+I know, I know, this is the windoze world, it is not GNU/Linux... but what can we 
+do? Easy! If clicking on '<font color=blue>I accept</font>' means we cannot reverse engineer, 
+then conversely clicking on 
+'<font color=blue>No thanks</font>' must mean that we CAN reverse engineer!<br><br>We just need a 
+'<font color=blue>No thanks</font>' button!<br>
+This is simple... at the 
+moment we have NOT yet clicked nutting, have we? So we may reverse engineer THIS SCREEN as much as we fancy... 
+a simple customizer 
+intervention will do the job:<br><br>
+
+<IMG SRC="ope_post.jpg" width=619 height=460></a><br><br>
+That's it, we may now proceed without breaking our EULA (end user licence agreement). 
+Our copy of Opera may now be 'tweaked' for study 
+purposes.
+
+<br><br></font>
+<font size=+2 color=blue>Descending inside Opera 5.0</font><font size=+1>
+<br><bR>
+
+As you can see on the big screen behind my shoulders, the advertisement window in
+Opera 5.0 (this software will be our 'target' today) is located in the top right corner of the
+main window.
+<br>In order to kill it we must identify the ad hoc drawing routine  inside the code of our target. There are MANY 
+paths that you can follow, we'll take the 'dimensional' one today.<br>
+We'll start from the DIMENSIONS of the advertisement window, they must, of course, reside 
+as parameters 
+inside the target's code.<br>In order to calculate them most reversers would 
+ use softice command <font color=blue>hwnd -x</font> when Opera is running.<br>
+Of course among  Opera's many big and small windows
+that softice will list, our specific advertisement window will be some sort of
+multiple document interface (MDI) child window... since Opera is a
+web browser that uses MDI, so that you don't have to open multiple
+browsers to view a number of websites at the same time (an important 
+'secret' of Opera revealed&nbsp;:-)<br>In this specific case, as we'll
+see in a second, our advertisement window will be a MDICHILD class window.
+<br>But forget this silly crackers' jargon and reversing approach:  you don't even NEED to
+know the reversing abc in order to fetch the data you need to kill it: 
+ there's a MUCH MORE SIMPLER way to get at
+the dimensions of this window. In fact, using a utility like our trusted <font
+color=blue>customizer</font>, you'll be able to fetch the
+exact dimensional (and "nominal") data of this indecent (and soon to be eliminated) 
+window of ours.<br>
+<br>
+Thus we fire the customizer again... see the yellow ball rolling on the big screen 
+ behind
+my shoulders?<br>
+Here we choose the 'edit window' option.<br>
+And then, in "windows details", with 'select' checked, we just
+click onto 'on'... 
+this approach is so easy that even your aunt, or a microsoft certified software developer 
+could follow it.<br>
+Now move the customizer's 'big' cursor slowly towards our target.
+AH! See how many 'hidden' windows are revealed while we are on our way there?<br>
+In fact there are a lot of "hidden processes" going on during any
+'normal' windoze's session (and you can bet that someone, somewhere is taking
+advantage of this matter of fact in order to gather data about you... but that's
+another story). Let's simply ignore these hidden windows for now, you'll be able to play 
+with the customizer all by yourself at some other time... we 
+want to tackle our target now...<br><br>
+
+Identifying the culprit advertisement window<br><br>
+So, here we come to our advertisement window, here are the data as reported by the 
+customizer... "size and position": x position=328,
+y position=4, height=64 and width=472... and, see, it is indeed a
+BLD_MDICHILD window... an MDI child window as we supposed.<br><br>
+A small digression about the 'standardized' dimensions 
+of advertisement windows: as it happens
+advertisement windows have often semi-standard heights and widths: in my experience 
+most advertisement windows
+are rectangularly shaped in the range 62-64 (height)  per 460-478 (width). Why this 
+"7 something to one" 
+relation (460/62=7.41 466/63=7.39; 472/64=7.37; 478/65=7.35)
+should be (grossomodo) constant beats me, but nonetheless what counts is that 
+you can be reasonably sure that
+somewhere inside the code of your average 'advertisement carrier' similar values will 
+be pushed onto the stack shortly before any window-drawing 'call' that will paint
+ the advertisement payload you're
+supposed to HAVE TO WATCH all the time.<br><br>
+Let's start with the value we got: as we have seen this Opera's ad-window has  following 
+dimensions (which are often enough standard in adwares):<br><br>
+<table width="472", height="64", border="1" bgcolor=aqua><tr><td><center>width="472", height="64"</center></td></tr></table>
+<br>The fixed 'start' advertisement image is just a somewhat smaller (468/60) OperaBanner.png image that you will 
+find  inside your Opera/images subdirectory where you will be able to modify it 
+as much as you fancy, for instance:<br>
+<br>
+
+<IMG SRC="OperaBanner.png" width=468 height=60></a><br><br>Or whatever else you may 
+fancy&nbsp;:-) Note also that the people at Opera use
+the png format. This deserves to be used  waay more often on the web (instead of the 'proprietary' gif&nbsp;:-P<br>
+<br>
+Anyway we would rather <u>eliminate</u> than simply change somehow an advertisement banner, n'est ce pas? The two <u>decimal</u> numbers that define the DIMENSIONS OF THE CONTAINING WINDOW 64 & 472 translate into 0x<font color=blue>40</font> and Ox<font color=blue>1D8</font> in
+<u>hexadecimal</u>.
+
+Since these two parameters must be pushed somewhere inside
+the code, we
+proceed
+to disassemble our target (use either wdasm or <font color=blue>[</font><a href="../zipped/idafree.zip">IDA</a><font color=blue>]</font>)
+and then we examine the 'dead listing' of the disassembled
+code.<br>
+What are we looking for? Just the values <font color=blue>40</font> and <font color=blue>1d8</font>?  
+No: we can be waaay more precise (if necessary we will afterwards always 
+'fall back' to 'broader' searches).<br><br>
+In fact we "should" find somewhere
+inside
+the code of our target BOTH our 40 & 1d8 dimensions values <font color=blue>pushed on the stack</font>.<br> 
+It's cosmic power! Assembly is assembly: no  matter 
+which 'higher' language has been used to program Opera, no matter which compiler has been 
+used to compile its code,  a 'long' push is <font color=blue>68xxxxxxxx</font> (with
+inverted notation for the xxxxxxxx address) 
+whilst  a 'short' push is <font color=blue>6Axx</font>, therefore we'll of course look
+for:<br>
+<font color=blue>68D8010000</font>    = push 000001D8 (note the inverted notation D801!)<br>
+and<br>
+<font color=blue>6A40</font> = push 00000040<br>
+I won't annoy you now with the possible slack variants or register variants of these values.
+Besides there's no point in being excessively cracking-smart here, since these 
+values are in effect 
+pushed "as such" inside Opera: note that since BOTH these parameters are to be pushed 
+in order
+to set the
+width and height of
+a given window, they
+will mostly be situated very near to each other inside the code.<br>
+Thus let's  simply 
+ fetch the code snippet where "our" width and height values are pushed inside the code.<br>
+ </font>
+ <pre>Jumping here from 6D35(Conditional)...
+6D3A A1A8305900   mov eax, dword ptr [005930A8]
+6D3F 3BC6         cmp eax, esi
+6D41 743D         je 406D80
+6D43 6A54         push 54
+6D45 6A40         push 40  ;height
+6D47 68D8010000   push 1D8 ;change to 6800000000 (push 0) and kill ads
+6D4C 81C128FEFFFF add ecx, FFFFFE28
+6D52 57           push edi
+6D53 51           push ecx
+6D54 56           push esi
+6D55 FF7014       push [eax+14]</pre><font size=+1>
+Note that this snippet holds the ONLY TWO references to both 
+<br>
+<font color=blue>68D8010000</font>    = push 000001D8 
+<u>and</u>  
+<font color=blue>6A40</font> = push 00000040<br>
+that do exist in the whole 'dead listing' of our target...&nbsp;:-)<br>
+That's called a <font color=blue>BINGO!</font> in crackers' jargon&nbsp;:-)
+<br><br>
+We're not finished, eh.<br>
+As you can see from the snippet above, the routine is conditionally 
+called from <font color=blue>6D35</font>.
+<br>Let's have a look</font><pre>
+6D18 FF15C8A55500 Call dword ptr [0055A5C8] ;GetClientRect
+6D1E 3975DC       cmp dword ptr [ebp-24], esi
+6D21 7448         je 6D6B  ;of course an unconditional jump would avoid
+                           ;the call below and <font color=blue>eb48</font> (jmp 6D6B no matter
+                           ;what) would kill our targeted ads as well&nbsp;:-)
+6D23 8B4DAC       mov ecx, dword ptr [ebp-54]
+6D26 8BD9         mov ebx, ecx
+6D28 2B5DA4       sub ebx, dword ptr [ebp-5C]
+6D2B 81EBDB010000 sub ebx, 1DB
+6D31 6683FB64     cmp bx,  64
+6D35 7D03         jge 6D3A ; call "vulgar_advertisement_settings"
+6D37 6A64         push 64
+6D39 5B           pop ebx
+</pre><font size=+1>
+<br>Note that THERE ARE MANY OTHER POSSIBLE APPROACHES TO KILL AN ADVERTISEMENT... or, more globally, 
+to find your mustard inside overbloated code... for instance 
+you could proceed also using the nice "colour" approach (window's  
+background is pale yellow? Let's say F3F55B?<br>
+
+<br>
+<table width="472", height="64", border="1" bgcolor="#F3F55b"><tr><td><center>bgcolor="#F3F55b"</center></td></tr></table>
+
+<br>
+Well by now you should know what you should be looking for in the dead listing&nbsp;:-)
+<br>
+Note that a 'positional' as opposed to 'dimensional' approach is also possible...
+<br><br>
+This concludes today's conference. We went a long way, from the macrocosmos of the 
+structure of
+the web to the microcosmos of Opera inner workings and assembly code. And yet these 
+two dimensions are more correlated than one would think, and -what is more 
+disturbing- the more you'll try to study and understand them, the more you'll realize that 
+there is even more to understand,  lest you be taken
+advantage of unknowingly. <br><br>Understanding searching and reversing matters is 
+of paramount importance in a world of hidden codes, secret meanings and concerted propaganda, 
+where you are supposed NOT EVEN TO UNDERSTAND what's going on.<br>
+Never before  the old words: <font color=blue>Fac sapias, et liber eris</font> have been 
+so true and I'm convinced that the clever students of the most brilliant and famous 
+university in France should and will understand this.
+
+I am honored of having being invited here. Any questions?<br><br>
+fravia+
+<br>
+#include "standard_disclaimer.h"
+
+<br><hR><br>
+<center>
+«««««&nbsp;&nbsp;<a href="paris5.htm">Back to paris5.htm</a> «««««&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;»»»»»
+<a href="paris.htm">Back to paris.htm</a>&nbsp;&nbsp;»»»»»
+<br> 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) III Millennium by <font color=blue>[</font><a href="https://searchlores.nickifaulk.com/paris/info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, 
+all rights reserved and reversed
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

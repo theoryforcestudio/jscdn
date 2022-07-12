@@ -1,0 +1,452 @@
+ <html> 
+   <head> 
+   <!-- web searching lore: pagename begin --> 
+   <title>scan_reb.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ scan_reb.htm ¸.·´¯)¸.·´¯)
+</title> 
+   <!-- web searching lore: pagename end --> 
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+   <meta http-equiv="Content-Style-Type" content="text/css"> 
+   <meta http-equiv="Content-Script-Type" content="text/javascript"> 
+   <meta name="description" content="This site teaches basic and advanced search 
+   techniques for people interested in finding any kind of information on the web. Here
+   are 
+   informations, documents, links, etc. related to web-searching"> 
+   <meta name="keywords" content="searching, combing, klebing, how to search,
+   search 
+   techniques, hints and tips for searching the web, How do I learn to search?,
+   Advanced 
+   Internet searching, How do I search the web?, fravia+"> 
+   <meta name="author" content="fravia+"> 
+   <meta name="copyright" content="Copyright(c) III Millennium fravia+"> 
+
+   <STYLE type="text/css"> 
+   A:link { color: #02F } 
+   A:visited { color: #808 } 
+   A:hover { color: purple; background: #AFB } 
+   </STYLE> 
+   </head> 
+   <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00
+   VLINK=#3366CC --> 
+   <!-- fravia's searching lore: bigtitle, begin --> 
+   <center> 
+   <!-- fravia's searching lore: bigtitle, begin --> 
+   <font size=+3>~ Essays ~</font> 
+   <!-- fravia's searching lore: bigtitle, end --> 
+   <br> 
+   <!-- internet searching techniques: imageheader begin --> 
+   <table border="0" ALIGN=CENTER><tr> 
+   <th bgcolor="#993300">     </th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th BGCOLOR="#993300"><a href="essays.htm"><IMG 
+   SRC="images/basipet.jpg" ALT="to essays" 
+   ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 
+   HSPACE=0></a></th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th bgcolor="#FF0000"><Font color="#993300" SIZE="3"> 
+   essays</th> 
+   </tR></table>(Courtesy of fravia's advanced searching 
+   lores)<br><bR> 
+   <!-- internet searching techniques: imageheader end --> 
+
+   <FONT SIZE=+3>(¯`·.¸ Simple REBOL scanner ¸.·´¯) 
+   </font><font size=+2><br>by -Sp!ke<BR></FONT>published at fravia's
+   searchlores in September 2000, updated in <font color=blue>March</font> 2001<br>Very slightly edited by fravia+ 
+   <br><font size=+1><hr width=44%>
+<font color=blue>[</font><a href="scan_reb.htm#ver1">scan.r version 1</a><font color=blue>]</font>
+<font color=blue>[</font><a href="scan_reb.htm#ver2">scan.r version 2</a><font color=blue>]</font>
+</font>
+</center><hr><i>Yep, back to this "work" after my two months 
+holyday I managed to 
+fish 
+this 
+little jewel by Sp!ke among the ruins of my exploded mailbox... exactly the kind of work we 
+so love: Sp!ke builds on Sonofsamiam and Sozni's works (and maybe Laurent's as well) and goes further & yonder... samo samo 
+as you will 
+be able to do now, dear readers!</i><hr><br> 
+
+   Oh gawd not another scanner :( <br><br> 
+
+   Ok I know there are many of you out there who will argue that scanners are lame
+   tools, or at least in the domain of the nasty hacker fraternity checking sites for cgi
+   exploits. Well in essence I would agree, however they do hold possibilities for a good 
+   <u>searcher</u> as well.<br> 
+   I suggest you <u>first</u> read <A HREF="magicfi.htm">Sozni's</A> superb essay
+   on guessing where your target hides important stuff. Done it? Good. Now imagine
+   you are trawling your target site looking for a file, or page, or zip file etc..<br> 
+   So you enter the URL by hand and BINGO .... Error 404 :(     Doh missed again..<br>
+
+   A lot of time can be spent manually typing the URL and not getting anywhere fast.
+   Well wouldn't you love to  automate this process with a simple bot like the one presented
+   below?<br><br> 
+   Note that with a small modification you can also use it to 
+break open gate-keepers as well. Generate
+   your list of possible pages offline, then import them to the scan function and 
+let it rip the hell out of your target.
+   (Perhaps if you are still stuck with the advanced Javascript entrance at fravia's old
+   fortress this may help you??)<br><br> 
+   Most scanners (CGI ones especially) blindly fire away at the target running through
+   hundreds of exploit checks with no concern as to what type of server they are scanning.
+   Ask yourself, is there any point in scanning an apache server for an IIS exploit? 
+   <br> Nope not really.<br> 
+   Thats why the best scanners such as <a 
+   href=" http://the.wiretapped.net/security/vulnerability-scanning/whisker/whisker.txt">Whisker</a>, 
+by scanmaster <a href="mailto:rfp@wiretrip.net">rain
+   forest puppy</a> allow customised scans.<br> 
+   Now in no way is my scanner as clever as whisker. I repeat: it is a <u>simple</u>
+   tool. It does however allow you to create subdivided scans which you can add to to
+   your hearts content.<br> 
+   There are of course many good reasons for -ahem- <u>not</u> using scanners, which 
+I don't think I
+   need to spell out. At the very least I suggest if you do need to use one, then run it
+   through a nice secure proxy from some 'throw-away' account.<br> 
+   Finally, the code below doesn't have any fancy extras like encryption of the scanned
+   url etc (not sure if REBOL supports 'em anyway, I'll have to check for 
+later versions). If
+   you want all the bells and whistles either modify the code yourself or use whisker.
+   Anyway here's the code, fairly commented and simple to modify, do with it whatever
+   you like. Knowledge to you, raw but useful. Enjoy<br><br> 
+
+   <!-- choke & die, spam-bot! Shamlessly stolen from sonofsamiam ;)--> 
+   <a href="mailto:spike@linuxmail.org">spike@linuxmail.org</a> 
+
+   <br><font size="3"> <a name="ver1"></a>
+   <hr><font size=+3>scan.r (version 1: september 2000)</font> 
+
+   <!-- Ah my favourite tag again eh Laurent ! (Tnx for the kind words btw) --> 
+   <xmp> 
+
+   REBOL[ 
+   Title: "Simple scanner" 
+   Author: "Sp!ke" 
+   Email: spike(AT)linuxmail(POINT)org 
+   File: %scan.r 
+   Date: 06-Aug-2000 
+   Purpose: "Scan for anything on a server" 
+
+   ] 
+
+   secure allow 
+   prin "^(page)" 
+   ef: 0 
+   set '++ func ['word] [set word (get word) + 1] 
+
+   ;# Vanity.... ;o) # 
+
+   print {~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} 
+   print {~ Simple file/directory scanner ~} 
+   print {~ Written by -Sp!ke ~} 
+   print {~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~} 
+   print #"^/" 
+
+   prin "Site to scan: " 
+   site: to-url join " http://" input 
+
+
+   ; Common (and some not so common) cgi directories 
+
+   cgi: [cgi cgibin cgis cgi-bin cgi-dos cgi-shl cgi-win scripts] 
+
+
+   ; Wanna break into a smut site? 
+   ; This may give you a startng point but there 
+   ; are loads you could add. (Some smut site owners 
+   ; are reaaaaaly dumb :) 
+
+   image: [galleries gallery gallery00 gallerys html htmls images 
+           thumbs thumbnails members pages private] 
+
+
+   ; Log file areas. I've found all of these at one time or another, 
+   ; although some were probably idiosyncratic with the particular 
+   ; site. 
+
+   log: [access access_log access_logs cool-logs counters error_log 
+         error_logs errors history info log logs log_files referrer 
+         referrer_log referrer_logs sitelog sitelogs site-log 
+         site-logs stats statistics url_log url_logs ] 
+
+
+   ; Perhaps ur looking for where they've hidden some software?? 
+
+   filez: [download downloads files filez full product zip 
+           zipp zips zipped] 
+
+
+   ; A number of odd and sometimes useful directories I've found 
+   ; occasionally. Depends on the type of site ur scanning, once 
+   ; again loads u could add... 
+
+   misc: [access base db doors faqs ftp info more old temp text tmp] 
+
+
+   ; You can scan for files as well..... 
+   ; NB: Personally I wouldn't scan for any of these directly like 
+   ; this as it will probably flag like mad. There are better ways 
+   ; of doing it... passwd?? passwords?? Yup... seen a few lying 
+   ; around!! 
+
+   root-files: [passwd passwd.txt password password.txt sam 
+                sam.bin sam._ robots.txt] 
+
+   ; Scan function 
+
+   scan: func[exp][ 
+   print [ {Server to scan: }site ] 
+   if find/match ask "Start scan? " "y" [ print "Working" 
+   foreach x exp [ ss: site/:x 
+   if exists? ss [ ++ ef 
+   write/append %scan.log reduce [newline ss]]] 
+   print [{Number of hits: }ef] 
+   prin "Hit &lt;cr> to resume" 
+   input 
+   ef: 0 ] 
+   ] 
+
+   ; Lets be fancy and make it all menu driven... 
+
+   menu: func [][ 
+   print "^(page)" 
+   print newline 
+   while [not integer? (menu-choice: load ask trim 
+   { 
+   1 > Scan for cgi type directories 
+   2 > Scan for image directories 
+   3 > Scan for log directories 
+   4 > Scan for file directories 
+   5 > Scan for misc directories 
+   6 > Scan for root files 
+   99 > Quit 
+
+   -> })] [print "^/"] 
+   if menu-choice == 99 [ 
+   print "Thanks for using Sp!kes simple scanner" wait 3 q] 
+   if menu-choice > 6 [menu] 
+   if menu-choice &lt; 1 [menu] 
+   menu-choice 
+   ] 
+   forever[ 
+   choice: menu 
+   if choice = 1 [scan cgi] 
+   if choice = 2 [scan image] 
+   if choice = 3 [scan log] 
+   if choice = 4 [scan filez] 
+   if choice = 5 [scan misc] 
+   if choice = 6 [scan root-files] 
+   ] 
+
+   ; fin... 
+   </xmp> 
+   <hR><br> 
+   
+      <br><font size="3"> <a name="ver2"></a>
+   <hr><font size=+3>scan.r (version 1: March 2001)</font> 
+
+<br><br>
+
+   
+   
+   An update to my rebol scanner. March 2001.<br>
+Now Includes encryption of scanned url single scans etc
+<br>
+(I didn't write as an essay as I don't think it needs re-introduction......)
+<br><br>
+Next project (part completed) is an offline processor of downloaded sites
+I.E. stripping htm pages into component parts (amazing what you can
+find 'hidden' inside page comments and javascripts... :^)<br>
+Keep up the good work<br>
+Regards Sp!ke..<br>
+   <xmp>
+<------------ cut cut cut ------------->
+REBOL[
+Title:  "Mark II Scanner"
+Author: "Sp!ke"
+Email:  delete_this.spike@linuxmail.org 
+File:   %scanner.r
+Date:   05-Jan-2001
+Purpose: "Scan for anything ya' want :^)"
+Comment: {
+Updated version
+Code's damned ugly but works OK
+New additions: URL obfuscator.*
+Single scans.
+Change URL without exiting.
+Time/Datestamp hits. (For re-scans, yet to be implemented) 
+All suggestions/additions very welcome
+* This only encodes the 'exploit' part of the url as
+encoding the whole url is IMO fairly pointless. *
+}
+]
+secure allow                                   ; set security level
+prin "^(page)"                                 ; clear screen
+set '++ func ['word] [set word (get word) + 1] ; increment like c (tidies the code a bit) 
+ef: 0                                          ; hits counter
+echk: 0                                        ; set unencrypted as default
+;###### Vanity.... ;o) ######
+print {######################################################}
+print {#              Multi Scanner Ver 2.22                #}
+print {#                     by -Sp!ke                      #}
+print {######################################################}
+print #"^/"
+wait 2
+prin "Site to scan: "
+site: to-url join " http://" input
+; Set up all the scan areas (The MOST important bit)
+; add watya' wan't.........
+;###############################################################################
+; Common (and some not so common) cgi directories
+cgi: [cgi cgibin cgis cgi-bin cgi-shl cgi-dos cgi-win scripts] 
+; Scan for files
+root-files: [.htpasswd .htaccess .passwd passwd.txt password password.txt sam sam.bin sam._ robots.txt]
+; Log file areas.
+log: [access access_log access_logs cool-logs counters error_log error_logs errors history info log logs log_files referrer referrer_log referrer_logs sitelog sitelogs site-log site-logs stats statistics url_log url_logs ]
+; Smut image holders
+image: [galleries gallery gallery00 gallerys html htmls images thumbs thumbnails members pages private] 
+; Odd misc areas
+misc: [access base db doors faqs ftp info more old temp text tmp] 
+; Possible file areas
+filez: [index.htm download downloads files filez full product zip zipp zips zipped]
+;###############################################################################
+; encoder function (allows you to 'obfuscate' your scans) 
+opt-in: charset " *-._"
+encode: make function! [ str[string!]] [  
+rslt: make string! ( (length? str ) * 3 )
+foreach  chr str [
+either ( find  opt-in chr  )
+[append rslt to-string chr]
+[append rslt 
+join "%" [back back tail(to-string(to-hex(to-integer chr)))]
+]
+]
+rslt 
+]
+;###############################################################################
+; Scan function (multi)
+scan: func[exp][
+print [ {Server to scan: }site  ]           
+if find/match ask "Start scan? " "y" [ print "Working"
+foreach x exp[ 
+if echk == 1 [                            ; are we running encrypted? if so>
+x: (encode (to-string x))]               ; part encode the URL's (ugly)
+ss: join site x 
+probe ss                                   ; display o/p (for testing purposes)
+if exists? ss [ ++ ef
+write/append %scan.log reduce [newline ss " "now/time " "now/date]]]
+print [{Number of hits: }ef]
+prin "Hit <cr> to resume" input
+ef: 0 ]
+]
+;###############################################################################
+; single-scan function , this should really go into multi scan func
+;                        but I like it this way to keep it simple
+;                        to read.
+single-scan: func[][
+target: ask "Enter target file/directory: "
+if echk == 1 [   
+target: to-url (encode (to-string target))]
+ss: join site target
+either exists? ss
+[print [ss {does exist}]]
+[print [ss {does NOT exist}]]
+if find/match ask "Another? " "y" [single-scan]
+]
+;###############################################################################
+; Menu's
+menu: func [][
+prin "^(page)" 
+print newline
+if echk == 1 [print "**RUNNING ENCRYPTED**"]
+while [not integer? (menu-choice: load ask trim
+{
+
+1 > Enter single file/dir to check
+2 > Scan for cgi type directories
+3 > Scan for image directories
+4 > Scan for log directories
+5 > Scan for file directories
+6 > Scan for misc directories
+7 > Scan for root files
+90 > Change url to scan 
+91 > Encrypted scan
+92 > Plain scan
+99 > Quit
+-> })] [print "^/"]
+if menu-choice == 90 [ prin "New site to scan: "
+site: to-url join " http://" input]
+if menu-choice == 91 [echk: 1] ;encrypt
+if menu-choice == 92 [echk: 0] ;plain text
+if menu-choice == 99 [print "Thanks for using Sp!kes multi scanner" wait 3 q]   
+if menu-choice > 7 [menu]
+if menu-choice < 1 [menu]
+menu-choice
+]
+forever[
+choice: menu
+if choice = 1 [single-scan]
+if choice = 2 [scan cgi]
+if choice = 3 [scan image]
+if choice = 4 [scan log]
+if choice = 5 [scan filez]
+if choice = 6 [scan misc]
+if choice = 7 [scan root-files]
+]
+; fin...
+</xmp> 
+   
+   <hr>
+   <font size=+3>mail-encode.r</font><br> 
+   And since you were kind enough to read this far here's a little bonus.<br> 
+   A very simple mailto: encoder as used in my e-mail address above.<br> 
+   Thanks to sonofsamiam for the original idea.<br><br> 
+
+   <xmp> 
+   REBOL[ 
+   Title: "mailto: Encoder" 
+   File: %mail-encode.r 
+   Date: "Aug-01-2000" 
+   Author: "Sp!ke" 
+   Purpose: { 
+   To encode mailto: strings leaving them useable but 
+   invisible to spam bots. 
+   Modified from script by Tom Conlin tomc@cs.uoregon.edu 
+   } 
+   Comment: {Any char u want dont want to encrypt add to the 
+   pass charset.. 
+
+   } 
+   ] 
+
+   pass: charset 
+   " *-_" 
+
+   mail-encode: make function! [ str[string!]] [ 
+   rslt: make string! ( (length? str ) * 3 ) 
+
+   foreach chr str [ 
+   either ( find pass chr ) 
+   [append rslt to-string chr] 
+   [append rslt 
+   join "&#" [back back back tail(to-string(to-integer chr))";"] 
+   ] 
+   ] 
+   rslt 
+   ] 
+   </xmp> 
+   <center><font size=+1><i>Micro$oft loosing in court? Sic semper tyranis, Billy
+   </i></font></center> 
+   <bR></font> 
+   <font size=+1><center> 
+   <a href= "essays.htm"><IMG SRC= "images/basipet.jpg" 
+   ALT= "Petit image" 
+   ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0 
+   HSPACE= 0 URLSRC=" http://www.searchlores.org/images/basipet.jpg"></a><br> 
+   <br> 
+   <!-- how to search the web, by fravia+, signet begin --> 
+   <table><tR><td width= "300" height= "2" bgcolor= "#993300"></tD></tR></table> 
+   (c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a 
+   href= "info.htm">fravia+</a><font
+   color= blue><font color= blue>]</fonT></font>, 
+   all rights reserved <!-- how to search the web, by fravia+, signet end --> <!-- begin
+   da closing bit, duh --> 
+   </CENTER> 
+   </body> 
+   </HTML> 

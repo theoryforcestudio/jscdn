@@ -1,0 +1,300 @@
+<html>
+<head>
+<title>ar1essay.htm: some web-searching knowledge, worked out and folded toghether</title>
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+
+<center>
+<font size=+3> <i>The "index +of" seekers' trick</i>
+<br>
+~ some web-searching knowledge ~<br>
+~ worked out and folded together ~</font><br>published at 
+<a target=_top href="http://www.searchlores.org">searchlores</a> 
+in September 2002<br>updated 
+in <font color=blue>november</font> 2002 with <a href="ar1essay.htm#roninad">quite 
+an addition</a> by Ronin and <a href="ar1essay.htm#nemoad">another  addition</a> by Nemo<br>
+last update in <font color=blue>September</font> 2003 with an <a href="ar1essay.htm#morad">addition </a> by Mordred
+</center>
+<br>
+
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;by &nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"><IMG
+SRC="images/petipand.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#996600"><Font color=black SIZE="3">aapje & ritz</th>
+</tR></table>
+<!-- internet searching techniques: imageheader end -->
+
+<hr>
+<p><center>
+<font size=+1><i>Most of you will already know the knowledge in this essay. It consists of small pieces of websearching-lore that we have learned by consuming searchlores and various other resources. But instead of just consuming, we have practised and refined these techniques, as we sometimes worked together. Instead of the usual "step by step, how did i get here" explanations that are so common in most essays, we will keep it short, for i consider reading another's web-hunt as tedious as reading another's code. My experience is that pseudo-code or a nicely worked-out mathematical proof gives a clearer view of an algorithm than the hard implementation or first draft, anyway. [not that we will be talking much about code in this essay, though]
+</i></center></p>
+
+<hr><p align="right"><font size="6">"index +of"</font></p>
+
+<hr width=66%>
+<p><center>
+<font size=+1><i>First, we will focus on a very well-known searchquery: "index +of". </i></font></center></p>
+
+<p>This query is used to find so called "open directories", by searching for certain standard-keywords that almost always appear in the server-generated pages of such directories. I believe that the first mention of this technique i have read, is in the solution to one of the labs[the one about "aqua" and "barbie"]. This trick will be explained for google, but can also apply for <a target=_top href="http://www.alltheweb.com">other searchengines</a></p>
+
+<p>Okay, perhaps a small example for those who have never heard of it. Let's say you want an etext of the book <i>Wizards First Rule</i> by Terry Goodkind [why? let's say because you were reading the hardcopy, but left it somewhere else, and you are very anxious to start reading again]. This might be your searchquery:</p>
+
+<p><SPAN STYLE="background: #AADDBB">
+<a target=_top href="http://www.google.com/search?q=%22index+%2Bof%22+name+size+goodkind+wizard+rule+txt">
+"index +of" name size goodkind wizard rule txt
+</a></SPAN></p>
+
+<p>Exactly one result [per 20/7/2002]. We're taking a shortcut here, cause it took me about 15 minutes before i had this result, but this doc is not about how to refine your searches, but to hand you some tools. One further note: since the most [interesting] ebooks are illegal due to copyright they are not always directly linked at html-pages, so looking in open directories is a good place to start searching them. [also if you happen to stumble on one, and want to bookmark it for later reading, better just download and save it, because usually it's gone the next time you look ;-) ]
+</p>
+
+<hr width=66%>
+<p><center>
+<font size=+1><i>You can have a lot of fun with queries like this. A friend of ours once spent half a day fun-surfing all the <i>me.jpg's</i> in open directories :) But let us now focus on what the optimal keywords are to search for in an open dir:</i></font></center>
+</p>
+
+<p>Ofcourse, there is <span style="background: #AADDBB">index +of</span> [note the '+', because sometimes a searchengine takes out this "commonly used word"]. We have found that this string <i>almost always</i> appears at the start of the title of an open directory. So a good sub-query would be <span style="background: #AADDBB">intitle:"index +of"</span> [too bad i don't know any searchengine capable of titlestartswith: queries :-) ].</p>
+
+<p>Another very good keyword is <span style="background: #AADDBB">"parent directory"</span>, because usually [sometimes automatically] there is a directory above the one you are now viewing. Sometimes, you want to hit a root-directory though. This is a bit strange, we have found root-directories that contain a parent directory link [that links right back to the same root], and we have found some without. Our guess is that it depends on the version and type of server that generated the page. Still, <span style="background: #AADDBB">"parent directory"</span> is a very good way to filter out all those pages with "index of" in the title that aren't real directories.</p>
+
+<p>Other keywords that you might want to use are
+<span style="background: #AADDBB">"server at" port</span> [look at the bottom of the directory-page],
+<span style="background: #AADDBB">name</span>,
+<span style="background: #AADDBB">size</span>,
+<span style="background: #AADDBB">last modified</span> or
+<span style="background: #AADDBB">description</span>. 
+ You must be careful with these queries, as we have found that not all open directory pages contain these keywords. Especially <span style="background: #AADDBB">description</span> is often found missing. <font color=#AAAABB>[btw notice the peculiar use of the words "found" and "missing" right next to each other :-P]</font></p>
+ 
+<p>The last searchkeyword we have found is not about what is <i>inside</i> the page, but about <i>what is</i> the page: Open directories never have the extension <i>htm</i> or <i>html</i> in their URL, because else they would be files and not directories: <i>http://www.someserver.com/something.html</i> is a file and <i>http://www.someserver.com/something/</i> is a directory. Of course <i>http://www.someserver.com/somestupidthing.html/</i> is a directory too, but it would be pretty weird if people would name their directories like this. [i also don't know what apache or google thinks about these extensions] So a very nice subquery to filter out even more non-directory pages is: <span style="background: #AADDBB">-filetype:htm -filetype:html</span>.
+</p>
+
+<hr width=66%>
+<p><center>
+<font size=+1><i>Now it is time to summarize, what we think, is the ultimate query for finding open directories:</i></font></center>
+</p>
+
+<p><span style="background: #AADDBB">
+<a target=_top href="http://www.google.com/search?q=intitle:%22index+%2Bof%22+-filetype:htm+-filetype:html+parent-directory">
+intitle:"index +of" -filetype:htm -filetype:html parent-directory
+</a></SPAN></p>
+
+<p>A few notes about this query: First, <span style="background: #AADDBB">parent-directory</span> means exactly the same as <span style="background: #AADDBB">"parent directory"</span>, just in case you are wondering.. Second, due to google's pageranking, you might still find non-directory pages appearing at the top of your results, especially for very broad searches. This is because google thinks that users rather see "real" html-pages instead of open directories [and indeed, most users do].
+</p>
+
+<p>Now for a few examples of open-directories that are not so standard as the default apache directory, just to keep you a bit edgy :) [btw they are not particulary interesting, except for the fact they differ from the standard]</p>
+
+<p>
+<a target=_top href="http://www.celebrityzone.co.uk/photos/reba/">Missing <span style="background: #AADDBB">"server at" port</span> and <span style="background: #AADDBB">description</span>.</a><br>
+<a target=_top href="http://5hdumat.samizdat.net/esprit/">Generally weird, missing <span style="background: #AADDBB">"server at" port</span>, and half-french.</a>
+</p>
+
+<p>One more note about open directories in other languages. Not open directories in non-english speaking countries, but open directories where the page that is being generated contains non-english terms, things like <i>ko</i> instead of 'kb' [the French call their bytes <i>octets</i> so in french it is <i>kilo-octet</i> instead of 'kilobyte'], or 'nom' instead of 'name'.. We first thought that there weren't any, but after some discussion at ~S~ board, <b>someone</b> didn't understand what i was talking about, so i gathered some more examples. It turns out that there are numerous open directories with the term <span style="background: #AADDBB">répertoire de parent</span>, like for example <a target=_top href="http://www.google.com/search?lr=lang_fr&cr=&q=r%C3%A9pertoire+de+parent&hl=en&ie=UTF-8&oe=UTF-8&safe=off">this query</a>. On the other hand, most of the open directories have their key-terms in plain english, searching for foreign generated open directories is a bit too much of an advanced topic for this essay.. If you want further information, we have only briefly touched the surface of this subject in <a target=_top href="http://www.2113.ch/phplab/mbs.php3/mb001?num=-1&thread=1031587817#1031587817">this thread on ~S~ board</a>. This is only a very short summary of french open directories, more research must be conducted for other languages [see also the thread].
+</p>
+
+<p>Two more things, still.. You can target a site specifically using 
+<span style="background: #AADDBB">site:de</span>, 
+<span style="background: #AADDBB">-site:msn.com</span> or
+<span style="background: #AADDBB">site:volkskrant.nl</span>. Second, in <a target=_top href="http://www.alltheweb.com">AlltheWeb</a> you can't specify the filetype, but omitting that and using only the rest of the query still gives very good results.
+</p>
+
+<p><i>
+We would like to thank Jeff for his comments, and especially for not understanding things :)
+</i></p>
+
+<hr><a name="roninad"></a>
+<p align="right"><font size="6">Quite an addition</font></p>
+<hr width=66%>
+<p><center>
+<font size=+1><i><b>"Just my way of summing up the Features of Open Directory Searching (ODS)", by Ronin (24/11/02)</i></b></font></center></p>
+
+<p>In a first time you need to generate your working context, a pool of pages that are directory listings. 
+To achieve this you can use some of the methods listed in aapje&ritz's essay, i personally choose : </p>
+
+<p><span style="background: #AADDBB">title:"index of /" AND "parent directory" NOT (filetype:htm OR filetype:html)</span></p>
+
+<p>This gives <font color=red>2,830,000</font> hits on google and <font color=red>10,617,311</font> hits on altavista.</p>
+
+<p>Now, we can think of searching inside the data pool by adding some filter to our query. 
+Just try to imagine you are searching for files inside a huge chaotic computer, and you 
+click on "Search files or directory" in your start menu. 
+You have different fields to fill: File name or Directory name / Filetype / Date / Size.</p> 
+
+<p>It's the same for ODS. But you need to build your query yourself. And be creative :) </p>
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>File Name or Directory name<b>]</b></i></center></p>
+
+<p>Remember how the wildcards work for your search engine (<a target=_top href="http://www.searchenginewatch.com/facts/ataglance.html">rtfm</a>, and <a target=_top href="http://www.searchlores.org/dark_rid.htm">r</a><a target=_top href="http://www.searchlores.org/sally_02.htm">t</a><a target=_top href="http://www.searchlores.org/ar1essay.htm">f</a><a target=_top href="http://www.searchlores.org/fly_wiz.htm">e</a>)
+You can search file and directory name juste by adding the keyword to the query.</p>
+
+<p>File example :</p>
+<p><span style="background: #AADDBB"><a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=intitle%3A%22index+of+%2F%22+%22parent+directory%22+ecd502+-filetype%3Ahtm+-filetype%3Ahtml&btnG=Google+Search">intitle:"index of /" "parent directory" ecd502 -filetype:htm -filetype:html</a></span></p>
+
+<p>One result, and in an open directory, you have ecd502.rar (157Mo), wich is the archive of
+Easy Cd Creator 5.02 Platinum Edition. Yes i now, the url is forbidden now, but it think
+you got the point :) </p>
+
+<p>Directory example : </p>
+<p><span style="background: #AADDBB"><a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&safe=off&q=intitle%3A%22index+of+%2F%22+%22parent+directory%22+intitle%3A%22mp3%22+-filetype%3Ahtm+-filetype%3Ahtml&btnG=Google+Search">intitle:"index of /" "parent directory" intitle:"mp3" -filetype:htm -filetype:html</a></span></p>
+<p>Again, i think you got the point :)
+To achieve directory searching, the best way is to search in title, or in url. Both aren't giving the 
+same results, just experiment and see wich you prefer.</p>
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>File Type<b>]</b></i></center></p>
+
+<p>adding keywords such as "*.mp3" or ".pdf" or ".txt" can be very effective. Just be creative&#33;
+Look at that one for example : </p>
+<p><span style="background: #AADDBB"><a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&safe=off&q=intitle%3A%22index+of+%2F%22+%22parent+directory%22+%2B%22%2A.nfo%22+%2B%22%2A.rar%22+%2B%22%2A.r05%22+%2B%22%2A.r10%22+-filetype%3Ahtm+-filetype%3Ahtml&btnG=Google+Search">intitle:"index of /" "parent directory" +"*.nfo" +"*.rar" +"*.r05" +"*.r10" -filetype:htm -filetype:html</a></span></p>
+<p>Check result 3 : Norton.SystemWorks.2002.Professional.Final.READ.NFO-ELUSiVE
+Note that this way of naming directory is somewhat a mark of quality : you know the archives 
+hadn't passed through many dudes before you get it, because it's the cracking scene way of packaging :
+(Name.Of.Your.Release.Version.AddtionalInfo-CRACKINGGROUP)
+The keyword "*.nfo" will filter to fish only directory that has sone file.nfo, wich is again
+a mark of quality. Finally by using "*.rar" and "*.r10" we're sure to fish medium sized software
+because it's the way Rar compressor name multipart archive.</p>
+<p>Other good queries, is to search for specific groups. If you know for example that
+Radium is a sound software cracking group, use "radium.nfo" as keyword : <span style="background: #AADDBB"><a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&safe=off&q=intitle%3A%22index+of+%2F%22+%22parent+directory%22+%2B%22radium.nfo%22+-filetype%3Ahtm+-filetype%3Ahtml&btnG=Google+Search">intitle:"index of /" "parent directory" "radium.nfo" -filetype:htm -filetype:html</a></span></p>
+<p>It is also a <a target=_top href="http://www.searchlores.org/synecdoc.htm">synecdochical</a> type query.</p>
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>Date<b>]</b></i></center></p>
+
+<p>Pretty simple to do. but i have no enlightening example to give :)
+I just use this functionnality to keep things 'fresh' ( <span style="background: #AADDBB">+2002</span>)</p>
+
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>Size<b>]</b></i></center></p>
+
+<p>Quoting erom in <a target=_top href="http://www.searchlores.org/dark_rid.htm">dark_rid.htm</a> : 'add <span style="background: #AADDBB">+"1M"</span> to have the chance to find galleries with hires pictures.'
+<br>Again, be <a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&safe=off&q=intitle%3A%22index+of+%2F%22+%22parent+directory%22+intitle%3A%22satellite%22+%2B%221M%22+-filetype%3Ahtm+-filetype%3Ahtml&btnG=Google+Search">inspired</a>.
+
+<hr width=66%><a name="nemoad"></a>
+<p><center><font size=+1><i><b>Even more tricks by Nemo(24/11/02)</b></i></center></p>
+
+<p>There are some other tricks that can be used. On altavista you can filter your results searching for pages which title <u>begins</u> with <span style="background: #AADDBB">index of</span>. Compare this two query strings:</p>
+
+<p><span style="background: #AADDBB"><a target=_top href="http://www.altavista.com/web/results?q=title%3A%22index+of%22&kgs=0&kls=0&avkw=qtrp">title:"index of"</a></span> <font color=red>11,441,981</font> hits</p>
+
+<p><span style="background: #AADDBB"><a target=_top href="http://www.altavista.com/web/results?q=title%3A%22index+of%22+AND+NOT+title%3A%22*+index+of%22&avkw=rf">title:"index of" AND NOT title:"* index of"</a></span> <font color=red>11,310,633</font> hits</p>
+
+<p>Unfortunatly this trick doesn't work well on Google:(</p>
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>Anchor<b>]</b></i></center></p>
+
+<p>Given that Open Directories (OD) shows allways links and anchors you can use them to filter your results. </p>
+
+<p>Only works on altavista.</p>
+<p>Exemple: Search the Brandenbourg concerts of Johann Sebastian Bach in mp3.</p>
+<p>Query: <span style="background: #AADDBB"><a href="http://www.altavista.com/web/results?q=title%3A%22index+of%22+AND+NOT+title%3A%22*+index+of%22+AND+anchor%3ABach+AND+anchor%3Amp3+AND+anchor%3Abrandenb**&kgs=0&kls=0&avkw=qtrp">title:"index of" AND NOT title:"* index of" AND anchor:Bach AND anchor:mp3 AND anchor:brandenb**</a></span></p>
+<p>Comments: given that altavista is case sensitive we can use capital letters on names to filter the results; I don't know in what language Brandenbourg was written, that's why I use truncation. </p>
+<p>OD usually truncate the anchors if they are too long, so its better to use the link field.</p>
+
+<hr width=66%><p><center><font size=+1><i><b>[</b>Link<b>]</b></i></center></p>
+
+<p>Works on altavista, alltheweb, lycos</p>
+<p>Example: search de mp3 of Pachelbel's Canon in D. Query strings:</p>
+
+<p>altavista: <span style="background: #AADDBB"><a href="http://www.altavista.com/web/results?q=title%3A%22index+of%22+AND+NOT+title%3A%22*+index+of%22+AND+link%3A%28Pachelbel+AND+mp3+AND+canon%29&kgs=0&kls=0&avkw=qtrp">title:"index of" AND NOT title:"* index of" AND link:(Pachelbel AND mp3 AND canon)</a></span></p>
+<p>alltheweb: <span style="background: #AADDBB"><a href="http://www.alltheweb.com/search?cat=web&cs=iso-8859-1&l=any&q=%2Bnormal.title%3A%22index+of%22+%2Blink.all%3Apachelbel+%2Blink.all%3Acanon+%2Blink.extension%3Amp3+-url.all%3Ahtm+-url.all%3Ahtml">+normal.title:"index of" +link.all:pachelbel +link.all:canon +link.extension:mp3 -url.all:htm -url.all:html</a></span></p>
+<p>lykos: <span style="background: #AADDBB"><a href="http://search.lycos.com/default.asp?loc=searchbox&tab=&query=%2Bnormal.title%3A%22index+of%22+%2Blink.all%3Apachelbel+%2Blink.all%3Acanon+%2Blink.extension%3Amp3+-url.all%3Ahtm+-url.all%3Ahtml&x=7&y=2">+normal.title:"index of" +link.all:pachelbel +link.all:canon +link.extension:mp3 -url.all:htm -url.all:html</a></span></p>
+
+<p>Comments:</p>
+<p><ul>
+<li>yes, on altavista, you can use bolean operators <u>inside</u> fields... <u>very useful</u> when used inside the anchor or link fields, because each anchor or link is matched against the boolean expression; 
+<li>yes alltheweb and lycos have the same field operators, that's what you can guess when you see on lycos <i>powered by fast</i>...
+</ul></p>
+
+<p>A litle off topic, once apon a time the field <span style="background: #AADDBB">title:</span> was supported by hotbot/MSN and you could do this query strings:
+
+<p>hotbot: <span style="background: #AADDBB"><a href="http://www.hotbot.lycos.com/text/default.asp?query=%2Btitle%3A%22index+of%22+%2BPachelbel+%2Bcanon+%2Blinkextension%3Amp3&act.query=Search&nummod=2&placeselection=georegion&dateoption=within&datedelta=730">+title:"index of" +Pachelbel +canon +linkextension:mp3</a></span></p>
+<p>MSN: <span style="background: #AADDBB"><a href="http://search.msn.com/results.asp?f=any&q=%2Btitle%3A%22index+of%22+%2BPachelbel+%2Bcanon+%2Blinkextension%3Amp3+&FORM=SMCA&cfg=SMCINK&v=1&ba=0&rgn=&lng=&depth=&sort=&d0=&d1=&cf=">+title:"index of" +Pachelbel +canon +linkextension:mp3</a></span></p>
+
+<p>Comments: 
+<p><ul>
+<li>yes hotbot and MSN are case sensitive and have the same field operators; 
+<li>yes <span style="background: #AADDBB">title:</span> doesn't seem to work anymore :(
+</ul></p>
+<p>Since hotbot and MSN search the inktomy database I tried the fields of hotbot/MSN on inktomy search engine. The fields <span style="background: #AADDBB">domain:</span>, <span style="background: #AADDBB">link:</span>, <span style="background: #AADDBB">linkdomain:</span>, <span style="background: #AADDBB">linkextension:</span> work, 
+<span style="background: #AADDBB">feature:</span>[
+<span style="background: #AADDBB">acrobat</span>, 
+<span style="background: #AADDBB">activex</span>, 
+<span style="background: #AADDBB">audio</span>, 
+<span style="background: #AADDBB">embed</span>, 
+<span style="background: #AADDBB">flash</span>, 
+<span style="background: #AADDBB">form</span>, 
+<span style="background: #AADDBB">frame</span>, 
+<span style="background: #AADDBB">image</span>, 
+<span style="background: #AADDBB">script</span>, 
+<span style="background: #AADDBB">shockwave</span>, 
+<span style="background: #AADDBB">table</span>, 
+<span style="background: #AADDBB">video</span>, 
+<span style="background: #AADDBB">vrml</span>] seams to do something/work, <u>but</u> 
+<span style="background: #AADDBB">title:</span> seams to fail miserably.</p>
+<p>I think you should also add this <a target=_top href="http://www.searchengineshowdown.com/features/">rtfm</a> because they are not always up-to-date, (or at least up-to-guess:) and this way we have a good list of <u>names</u> to do our own research.</p>
+
+<hr width=66%><a name="morad"></a>
+<p><center><font size=+1><b>IIS and custom open directories by Mordred (16 September 2003)</b></i></center></p>
+<p><br>
+As the 'regular' <i>index+of</i> trick mostly finds Apache OD pages, here's a query to catch other fish:
+<a href="http://www.google.com/search?q=%22parent+directory%22+dir+OR+gif+OR+jpg">"parent directory" dir OR gif OR jpg</a>.
+<br><br>It does look very similar, but not quite:
+<a href="http://www.google.com/search?q=%22parent+directory%22+dir+OR+gif+OR+jpg+-%22index%2Bof%22">"parent directory" dir OR gif OR jpg -"index+of"</a> 
+... oops <a href="ar1essay.htm#oops">(*)</a>...
+<a href="http://www.google.com/search?q=%22parent+directory%22+dir+OR+gif+OR+jpg+-%22index%2Bof%22+-sex">"parent directory" dir OR gif OR jpg -"index+of" -sex</a>
+
+<br><br>Or, for better filtering, try something like:
+<a href="http://www.google.com/search?q=%22parent+directory%22+dir+OR+gif+OR+jpg+-%22index%2Bof%22+-the">"parent directory" dir OR gif OR jpg -"index+of" -the</a> (~300k)
+
+<br><br>Note, that most of these sites are 
+<a href="http://uptime.netcraft.com/up/graph/?host=content.443.ch">running</a>
+IIS. A better filter exlusively for IIS servers is
+<a href="http://www.google.com/search?q=%22to+parent+directory%22+dir+OR+gif+OR+jpg+-%22index%2Bof%22+-the">"to parent directory" dir OR gif OR jpg -"index+of" -the</a> (~300k)
+
+<br><br>The <a href="http://www.google.com/search?q=%22parent+directory%22+-%22index+of%22+-%22to+parent+directory%22+dir+OR+gif">others</a> are either 
+<a href="http://uptime.netcraft.com/up/graph/?host=kaizo.us">stranger</a> fish or common servers with
+custom index pages (hence we shouldn't use '-the' on them, as they are likely to contain human-writ text).
+
+<br><br>Btw tricks like '-the' are a nice way of filtering out specialized generated content - 
+<a href="http://www.google.com/search?q=statistics+url+monday+friday+-the">stats</a>, 
+<a href="http://www.google.com/search?q=%2Bfor+%2Bif+%2Breturn+-the">sources</a>,
+<a href="http://www.google.com/search?q=lycos.com+hotmail.com+yahoo.com+mail.com+++-the">email lists</a>,
+or indeed <i>index+of</i> pages.
+
+<br><br>
+<a name="oops">
+(*) As it seems, not only <i>porn research is of FUNDAMENTAL teaching for seekers</i>, but it works 
+<a href="http://www.google.com/search?q=%22index+of%22+%22parent+directory%22+xxx+porn+sex+tits">the other way</a>
+ around too :)
+</p>
+
+
+<!-- begin da closing bit, duh -->
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="essays.htm"><IMG
+SRC="images/petipand.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2"
+bgcolor="#993300"></td></tr></table><b> Whatever <font color=blue>[<a href="info.htm">c</a>]</font> you want, we know we did it anyway.</b>
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+<hR>
+
+
+</body>
+</HTML>

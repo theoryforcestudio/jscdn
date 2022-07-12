@@ -1,0 +1,365 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>lazarus1.htm: LaZaRuS: What programmers can do to protect their work better</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<H1>What programmers can do to protect their work better</H1><br>by LaZaRuS, 
+March 1999<br>(edited by fravia+)<hr width=77%>
+<bR>Published at fravia's <a href="http://www.searchlores.org">www.searchlores.org</a> in May 2001<bR><br>
+<a href="protec.htm"><IMG SRC="../images/protec.gif" ALT="protec" 
+ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<bR><font color=gray>Back to 'how to protect better'</fonT><br>
+<br>
+
+<hR>
+<i>
+I discovered very late (time and synchronization problems on the web... this matter would deserve a full fledged essay) this little gem by LaZaRuS, that I deem important 
+for protectors. <br><font color=blue>"Best thing to do is to make wrong statements about the serial in
+the helpfile..."</font><br>Enjoy!  
+</i>
+<hr>
+
+</center><font size=+1>
+This tutorial is (almost) the translation of another one I have
+written for a national shareware
+organization. I just got rid of the leading chapters "Intentions
+of this tutorial", "Think
+like a cracker" and the word explaination.<br>
+Some parts of this turorial were influenced by the tutorials I
+found on Fravia's page
+(www.searchlores.org or www.searchlore.org, depending how quick you want your connection&nbsp;;-)
+<br><br>
+<font color=red><b>1</b></font>.Things you can do fast and easy<br>
+<font color=red><b>2</b></font>.The application Win-Dummy as an example what a programmer can do
+wrong<br>
+<font color=red><b>3</b></font>.Things that are harder to code/things I wasn't able to include
+in my Win-Dummy story and things
+  I invented writing this tutorial (I don't know if they work).
+<br><hr width=55 align=left><br>
+<font color=red><b>1</b></font>.Things you can do fast and easy<br>
+The first thing I want to say is that every shareware program that
+can be upgraded to the full
+version can be cracked. You cannot hide anything from a debugger or
+from a disassembler. If reversers search
+long enough they WILL find the protection (and its crack). So you cannot prevent your
+program from being cracked, but
+you can try to bore the cracker so that he doesn't keep on trying to
+crack the target. The following
+tips are useful to reach this.
+<br><br>
+At first a warning: Don't use any commercial protection scheme,
+because they are damn bad and
+all already cracked, anyway. The same is true for EXE packers. While reversers unpack
+the files they just go in the kitchen and get something to
+eat... so packers disturb as much as TV-advertisements: a silly useless nuisance you don't even take notice of.
+<br><br>
+Let's start with the smaller, easier things, you can do with a
+minimum of programming work. At
+first you should never use functions where the name of the
+function reveals what they do. For
+example the company Ulead calls their functions often
+something like <font color=blue>IsFullVersion</font>. Guess
+what this function does. I like <font color=blue>IsValidSerial</font>, too&nbsp;;-)
+<br><br>
+The same for the entries in INI files or the windows registry. For
+example BCM Diagnostics. This
+tool manages a value in the registry <font color=blue>IsRegistered</font> (or something
+like that). If this value is 0
+the program starts as shareware, is the value 1 the program is the
+full version. One-minute crack -if ever- 
+using Registry Monitor.
+<br><br>
+The coders of Pixel3D coded without using their brain, too. At
+first I thought they have done
+everything right, to make crackers' lives harder, but then I tried
+something I never read anywhere
+before. I deleted all registry values, Pixel3D manages and
+restarted it. Now I cracked away
+all "Cannot read data from registry" messages and Pixel3D <font color=blue>started
+as full version</font>. This should
+demonstarte to you an obvious truth: Whenever something unpredictable 
+happens, your program
+must start as shareware. The
+honest user -should you happen to find one- can register it again.
+<br><br>
+Another way to react if anything unpredictable happens, is to
+delete important values or files.<br>
+The program should have to be reinstalled. Another way is to
+reboot the computer. You should only use such  actions
+ if you are 100% sure that the part of the
+program that checks "if something
+strange happened" works absolutely correct, else you could turn 
+honest buyers angry.
+<br><br>
+If you write a helpfile you should in no way mention anything
+about the registration code.<br>
+The worst thing I ever saw was a helpfile where the structure of
+the code was mentioned:
+XXXXX-XXXX-XXX. The programmer was silly enough to make
+another heavy mistake. If you
+entered 0 as name the valid code would have been simply 00000-0000-000, since the
+programmer used only multiplications in order 
+to calculate the valid serial.<br>
+Best thing to do is to make wrong statements about the serial in
+the helpfile. Lie as a madman... honest users wont care. Example: Once
+I had a target that said in is helpfile something like "If you
+register this program you will get a keyfile
+called keyfile.dat that will upgrade your shareware version to the
+full version. Later I found out
+that the name of the keyfile was completely different. A smart one. 
+<br><br>
+Don't "hardcode" important strings. They are always the first
+waypoints for crackers. You better
+use something like char(65)+char(66)...
+Especially deadly are MessageBoxes and textareas in nag-screens.
+But as a programmer you can turn
+this thing around. Hide the important strings and declare
+somewhere in the program the real strings
+with the same value as the hidden strings. Or use strings that
+could be from your compiler like
+GetWindowText/EnableMenuItem... This can confuse some
+disassemblers so that they will produce
+confused code.
+<br><br>
+<font color =red><b>2</b></font>.The application Win-Dummy as an example what a programmer can do
+wrong<br>
+So far to the easy things. This chapter is about an imaginary
+application: Win-Dummy. I create
+an application that behaves like the average shareware program:
+nag-screen/reg-code/time limit/
+restrictions...<br>
+Let's start the program. *BANG* a nag-screen pops up. This is not
+a very good idea. If the program
+can be updated to the full version with a serial or keyfile or
+whatever there must be a
+check if the serial/keyfile... is valid. Crackers start usually by
+looking at the strings that
+appear in the nag-screen, so it would be better to use BMP
+pictures as nagscreen... but only if
+you program your own functions to show them. If you use the API
+functions there are no security
+improvements, because the relative angles of the code can easily be located.<br>
+Back to the nag-screen. To check if the program is shareware it
+has to read a value from a file
+or the windows-registry. This value can be something like:
+<br><br>
+IsRegistered=0/1
+<br><br>
+or
+<br><br>
+Name: XXX<br>
+Code: YYY
+<br><br>
+If the programmer used the first solution it is easy to get rid of
+the nag-screen. If he did choose
+the second one the code must be calculated before calling the
+nag-screen. So the cracker can easily
+find the calculation function that is perfectly hidden in the
+other parts of the program.
+<br><br>
+Normally a nag-screen is useful for showing the user how much time
+he has left in his evaluation
+period. Using something like GetSystemDate is not the best
+solution for the time calculation.
+The user can easily turn back the windows clock and the program
+will never expire. At least you
+programmers should check if something strange happened (time jumps
+or something like that).<br>
+A much more effective way to get the current date is the file
+SYSTEM.DA0. This file is updated
+every reboot and has always the correct date (if the user does
+have the correct date when he
+starts his computer).
+Another example: To make some programs never expire, you can do
+this: Add 10 years to your
+system date, install the application and switch back the date.<br>
+Start the application and you
+have more than 3600 days left for testing. (before such an expiration limit 
+there will be a newer version
+of your target&nbsp;;-)
+<br><br>
+OK, click away the nag-screen. Like in most programs you will see an
+UNREGISTERED window caption.<br>
+One more chance (angle) for the cracker. If you calculate the code inj your program you
+shouldn't change the window
+caption and other restrictions at once, because the place where the calculation code was hidden 
+can be easily found in this way.<br>
+Better change the caption some hundred lines later. (Note: Are
+there any programs that check
+if they are full versions by checking the window title? If there
+are some, the programmer has
+chosen the wrong job)
+<br><br>
+Looking around in Win-Dummy  we recognize that some functions
+are not available in the share-ware version. Some buttons and menus 
+are grayed or a messagebox pops
+up saying "This option will be available only in the full
+version". First of all remeber to define all menus during runtime, because
+predefined menus that are stored in
+the EXE file can easily be changed with a resource workshop tool.<br>
+Anyway, the "graying" of menus is a mistake. Somewhere in the
+program must exist the function
+EnableMenuItem. This function doesn't appear to often, so it can
+easily be located. It is better
+to create the menus at runtime, so the cracker doesn't know the
+name of them (watch at the help-file).
+<br><br>
+Now we start to figure out the serial:
+The first thing a cracker should say is: HELL, WHERE IS THE INPUT
+BOX ???<br>
+The best thing is a hidden Register window that can be enabled
+with a key combination. This can
+be something like [CTRL]+[ALT]+[DEL] or even better [CTRL]+[D]&nbsp;;-)
+<br><br>
+Now two of my beloved tricks I use in some crackmes. At first call
+the code-box "Enter name here"
+and the name box "Enter code here". The cracker has to figure this
+out, first.<br>
+The second trick is: Create two inputareas. A name-area and a
+code-area. One "Check code" button
+below them. The code is checked, if the values of the two are
+changed. If you hit the OK-Button,
+the "Wrong Code" message always appears.
+<br><br>
+Calculating the code:<br>
+At first you have to declare some variables. The program allocates
+memory where it can store the
+value of the variables and so on for the next variables. OK you
+should declare the variable for
+name, entered code and correct code should be declared far away
+from each other so the cracker
+can't get the code by simple memory dumping or browsing.
+<br><br>
+You should never calculate the whole serial. Better calculate a
+part of the serial and compare it
+with the entered serial. Then calculate the next part and compare
+it...<br>
+To calculate the serial you should use some KB of mathemathical
+instructions to confuse the
+cracker completely. The risk of a keygen is nearly 0 in this case.
+Giant loops, where the cracker cannot get that he is inside one
+are good to bore the cracker
+to hell. Let it loop 1000 times (users wont notice) and the cracker wastes hours of time
+just tracing through the loop.<br>
+I like fake serial calculations, too. Just code 15 different
+calculation schemes, where only
+one scheme gives users a valid serial.<br>
+Calculating not with variables, but with pointers is hard to reverse,
+too and the values are nowhere
+stored in the RAM.<br>
+After the calculation set the variables that contained the valid
+code to 0 or "", so that the cracker
+can't find the correct code by memory dumping.
+<br><br>
+If you show a "Wrong code" message, then check the code twice. One
+time with the message and
+one time without it.
+<br><br>
+Silly is when you write the valid serial to the file instead of
+the entered serial. Just jump
+over the IsValid check and the correct serial is written to the
+file (Goldwave) or a valid
+keyfile is created (HexWorkshop).
+<br><br>
+<font color=red><b>3</b></font>.Things that are harder to code/things I wasn't able to include
+in my Win-Dummy story and things
+  I invented writing this tutorial (I don't know if they work).<br>
+Then following things are hard to code. Sometimes too hard for a
+shareware program.
+<br><br>
+1.A single CRC check is mostly easily cracked. Better make one
+in the EXE file that checks if
+  a DLL file is valid and the other way round.<br>
+2.Make the name of the keyfile depend on the serial and point to
+that keyfile from the windows
+  registry if the valid serial is entered.<br>
+3.Make the input box look like the window so that nobody can see
+it who doesn't know that it
+  exists.<br>
+4.Let the last or first char of the valid serial be a "." - They are hard
+to see in a serial when dumping code. Example:<pre>
+
+OFFSET      HEX-CODE DES PASSWORTS         PWD IN ASCII
+XXXX:XXXX   00 00 00 00 00 00 00 00        ........
+XXXX:XXXX   65 66 67 68 69 70 71 19(?)     ABCDEFG.
+XXXX:XXXX   00 00 00 00 00 00 00 00        ........
+</pre>
+The last point in line two is part of the serial, not of the ASCII
+00.
+<br><br>
+5.Use "-" in your password, but not regularly, like
+X-XXXX-XXX-XX. Calculate the serial
+  without the "-", but check if they exist nevertheless.
+<br><br>
+6.Use control variables to check if a CALL was executed correctly.
+<br><br>
+7.If you code with Delphi or C++ Builder you can choose the
+predefined components like Label to
+  hide important string, because they are saved encrypted.
+<br><br>
+8.Make the serial depending on the hardware configuration, harddisk number etceteras.
+<br><br>
+9.Check if the name can be valid: ][ce, LaZaRuS [hf], ED!SON,
++wAj., _mammon can never be real
+  names.
+<br><br>
+
+    
+Greets to: Fravia+, tKC, ED!SON, Moral Insanity, The Sandman,
+Eternal Bliss, DaVinci and
+all [hf] members
+<br><br>
+All Tutorials by LaZaRuS [hf]
+     <pre>
+#|  date  |   name           |version|W32Dasm|Soft-Ice|kind of crack            |
+-|--------|------------------|-------|-------|--------|-------------------------|
+1|20.01.99|Jaylock           |1,0,0,1|  (X)  |   (X)  |serial#                  |
+2|31.01.99|Goldwave          |4.02   |  (X)  |   (X)  |serial#,nag-screens      |
+3|28.03.99|AxMan             |3.00   |  (X)  |   (X)  |serial#,remove date-limit|
+4|29.03.99|C++Builder Strings|       |  (X)  |   (X)  |how to find strings in   |
+ |        |                  |       |       |        |C++ Builder that are not |
+ |        |                  |       |       |        |hardcoded                |
+5|29.03.99|Better Protection |       |       |        |How to protect shareware |
+ |        |                  |       |       |        |better against crackers  |
+</pre>
+    
+LaZaRuS [hf]
+Visit Hellforge at http://members.xoom.com/hell_crack for more
+tutorials and high quality cracking links.
+If you want to mail me: lazarus666(ALT+64)gnwmail(DOT)com
+</font>
+
+<HR size=3>
+<!-- Begin mover -->
+<center><a href="protec.htm"><IMG SRC="../images/protec.gif"
+ALT="protec" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a
+href="https://searchlores.nickifaulk.com/protec/info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

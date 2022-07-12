@@ -1,0 +1,219 @@
+<HTML><HEAD><TITLE>Proxy Logs - The Other White Meat</TITLE>
+<META content="text/html; charset=windows-1252" 
+http-equiv=Content-Type>
+<META content=Finn61 name=Author>
+<META content="proxy logs searching" name=Keywords>
+<META content="Short essay on finding proxy logs to search" 
+name=Description>
+<META content="MSHTML 5.00.2919.6307" name=GENERATOR></HEAD>
+ <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00
+   VLINK=#3366CC --> 
+   <!-- fravia's searching lore: bigtitle, begin --> 
+   <center> 
+   <!-- fravia's searching lore: bigtitle, begin --> 
+   <font size=+3>~ Essays ~</font> 
+   <!-- fravia's searching lore: bigtitle, end --> 
+   <br> 
+   <!-- internet searching techniques: imageheader begin --> 
+   
+<table><tr><td>
+<table border="0" ALIGN=CENTER><tr> 
+   <th bgcolor="#993300">     </th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th BGCOLOR="#993300"><a href="essays.htm"><IMG 
+   SRC="images/basipet.jpg" ALT="to essays" 
+   ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 
+   HSPACE=0></a></th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th bgcolor="#FF0000"><Font color="#993300" SIZE="3"> 
+   essays</th> 
+   </tR></table>
+
+</td><td>
+
+<table border="0" ALIGN=CENTER><tr> 
+   <th bgcolor="#993300">     </th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th BGCOLOR="#993300"><a href="combing.htm"><IMG 
+   SRC="images/peticomb.jpg" ALT="to combing" 
+   ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 
+   HSPACE=0></a></th> 
+   <TH BGCOLOR="#993300">  </th> 
+   <th bgcolor="#FF0000"><Font color="#993300" SIZE="3"> 
+   combing</th> 
+   </tR></table>
+</td></tr></table>
+
+(Courtesy of fravia's <a href="http:\\www.searchlores.org\advanced.htm">advanced searching 
+   lores</a>)<br><bR> 
+   <!-- internet searching techniques: imageheader end --> 
+
+   <FONT SIZE=+2>(¯`·.¸ Proxy Logs - The Other White Meat ¸.·´¯) 
+   </font><font size=+2><br>by Finn61<BR></FONT>published at fravia's
+   <a href="http:\\www.searchlores.org">searchlores</a> in March 2002<br>Very slightly edited by fravia+ 
+   <br>
+<hr><i>
+This essay by Finn61 is extremely important for those seekers that never realized 
+the mighty power of a well-thought combing approach when searching signals among the noise.<br>
+See: loggings do not have (yet) commercial bias nor do they suffer 
+"politically correct" censorship attempts. Hence the richness, the beauty and the beaconing 
+power of these tiny "lighttowers" that will pinpoint the route to your well deserved tresaures 
+when navigating among the dark commercial sargassoes of today's web...<br>
+Try each and every link given in the essay, and gasp in awe...
+</i><hr></center>
+<H1>Proxy Logs - The Other White Meat</H1>
+<P><I>"Like I said earlier. There are logs all over the internet." - 
+Unknown</I></P></CENTER>
+<P>The log files of a proxy server are interesting to look at because 
+rather 
+than a normal webserver, which would log access to pages on that server 
+the 
+proxy server also logs access to locations all over the net.</P>
+<P>Where ever the users go, you can go there too. Outside linkers? 
+Hidden files? 
+You may find them here.</P>
+<P>So how do you find a proxy server that publishes it's logs on the 
+web? Search 
+engine of course, but using careful search terms to pluck out our 
+logs.</P>
+<P><B>Case 1 - PWEBSTATS</B></P>
+<P><A href="http://martin.gleeson.com/pwebstats/">Pwebstats</A> is a 
+pearl 
+script that analyses server logs and produces stats and graphs.</P>
+<P>By default, all the HTML pages that pwebstats produces include a 
+footnote 
+saying "These statistics produced by pwebstats".</P>
+<P>You could do a search for this in Google if you want to see what kind 
+of 
+output this thing produces.</P><A 
+href="http://www.google.com/search?hl=en&amp;as_qdr=all&amp;q=%22=these+statistics+produced+by+pwebstats%22&amp;btnG=Google+Search">"These 
+statistics produced by pwebstats"</A>
+<P></P>
+<P>To narrow it down, there is one particular page that is the most 
+interesting 
+to us. That is the requests list.</P>
+<P>Once again there is another default setting we can utilise. The page 
+displaying the requests uses the following format :</P>
+<P>/servername.n.total-accesses.html</P>
+<P>servername 3D the name of the server (strangely enough)<BR>n 3D an 
+incremental 
+number</P>
+<P>So now we can search for :</P>
+<P><A 
+href="http://www.google.com/search?hl=en&amp;as_qdr=all&amp;q=allinurl%3A%22total-accesses.html%22&amp;btnG=Google+Search">allinurl:"total-accesses.html"</A></P>
+<P>But this gives us other servers as well as proxies. Narrow it down 
+some more 
+with :</P><A href="http://www.google.com/search?hl=en&amp;as_qdr=all&amp;q=allinurl%3A%22total-accesses.html%22+proxy&amp;btnG=Google+Search">allinurl:"total-accesses.html" 
+proxy</A>
+<P></P>
+<P>This gets any that have the word proxy in the url.</P>
+<P>If you are looking for forbidden fruit you may find it doesn't hang 
+around 
+for very long in a particular location. That's why it's sometimes 
+important to 
+find the latest version of the logs. You may not have any luck if you 
+are 
+looking at a log from 1998.</P>
+<P>Try changing the incremental number in the URL. The highest number is 
+usually 
+the latest log.</P>
+<P>OK, now here's a nice one in Taiwan that you may find contains quite 
+a few 
+interesting links :</P>
+<P><A 
+href="http://proxy2.ncku.edu.tw/usage/days/requests/proxy2.360.total-accesses.html">http://proxy2.ncku.edu.tw/usage/days/requests/proxy2.360.total-accesses.html</A></P>
+<P>..and if you would like to find out exactly what day the incremental 
+numbers 
+correspond to go here :</P><A 
+href="http://proxy2.ncku.edu.tw/usage/g-index.html">http://proxy2.ncku.edu.tw/usage/g-index.html</A>
+<P></P>
+<P><B>Case 2 - WEBALIZER</B></P>
+<P>You didn't think pwebstats was the only utility for analysing log 
+files did 
+you?</P>
+<P>Same deal, different software. This time we look for the footnote 
+"generated 
+by webalizer".</P>
+<P>This search will give you some pretty stats to look at :</P>
+<P><A 
+href="http://www.google.com/search?hl=en&amp;q=inurl%3Aproxy+%22Generated+by+Webalizer%22&amp;btnG=Google+Search">inurl:proxy "generated by webalizer"</A></P>
+<P>Like before I've added the word "proxy" into the search to weed out 
+any 
+boring servers.</P>
+<P>Now if you look at one of these pages you may get the summary like 
+this one 
+:</P>
+<P><A 
+href="http://proxy.intechworld.net/webalizer/usage_200203.html">http://proxy.intechworld.net/webalizer/usage_200203.html</A></P>
+<P>You'll notice you only get the top 100 URL's. When the total is 
+102348 you 
+can be sure the top 100 are very common and very well known sites. If 
+you're 
+looking for that hidden jewel it is probably somewhere a little more 
+secretive! 
+:)</P>
+<P>You can click on "View All URLs" to get them all. You may not want to 
+do that 
+with the above example because the page will be quite massive! Try this 
+one 
+instead :</P>
+<P><A 
+href="http://www.pals.msus.edu/webstats/proxy/UCR/url_200108.html">http://www.pals.msus.edu/webstats/proxy/UCR/url_200108.html</A></P>
+<P>I've noticed not all of the tables have the "View All URLs" link. I 
+presume 
+it depends on the config.</P>
+<P>So now you should have some large lists of URL's you can scan for 
+that 
+hard-to-find document or program. Try amassing a few pages and searching 
+through 
+them all with a text scanner. You might find that hidden link.</P>
+<P>There's more log's out there. There's more log analysers too. Each 
+with their 
+own distinguishable defaults. Have a look for them.<br>
+Send back your findings, let's all build on the shoulders of each other!</P>
+<P>Ciao,</P>
+<P>Finn61</P>
+<hr><i>
+<font color=blue>DQ's addition (March 2002, probably true 
+for all other services &#224; la webalizer as well):</font></i>
+<pre>
+Finn61, very nice essay!! 
+
+A short addition: Webalizer stores its findings 
+by default in a raw file in the same subdirectory 
+as the generated html files. This raw file is named 
+webalizer.current. 
+
+Using your examples, we (and not google ;-) 
+are able to fish this file and extract whatever 
+additional info is held back from our prying eyes. 
+
+http://www.pals.msus.edu/webstats/proxy/UCR/webalizer.current 
+http://proxy.intechworld.net/webalizer/webalizer.current 
+
+HTH,
+
+DQ
+</pre>
+<hr><font color=blue>
+An interesting websearchstring?<br>
+<a href="http://www.google.com/search?as_q=%22webalizer.current%22&num=10&hl=en&ie=ISO-8859-1&oe=ISO-8859-1&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_occt=any&as_dt=i&as_sitesearch=&safe=off" target="_blank">"webalizer.current"</a>
+<br>
+there are MANY more, like weblog, calamaris, http-analyze, squii, pagestats, summary and last but not least loganalyzer (http://www.123loganalyzer.com/)</font>
+<br><br>
+ <font size=+1><center> 
+   <a href= "essays.htm"><IMG SRC= "images/basipet.jpg" 
+   ALT= "Petit image" 
+   ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0 
+   HSPACE= 0 URLSRC=" http://www.searchlores.org/images/basipet.jpg"></a><br> 
+   <br> 
+   <!-- how to search the web, by fravia+, signet begin --> 
+   <table><tR><td width= "300" height= "2" bgcolor= "#993300"></tD></tR></table> 
+   (c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a 
+   href= "info.htm">fravia+</a><font
+   color= blue><font color= blue>]</fonT></font>, 
+   all rights reserved and reversed <!-- how to search the web, by fravia+, signet end --> <!-- begin
+   da closing bit, duh --> 
+   </CENTER> 
+   </body> 
+   </HTML> 

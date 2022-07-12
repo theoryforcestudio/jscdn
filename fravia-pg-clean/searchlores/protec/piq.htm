@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>piq</title>
+<STYLE type="text/css"> A:link { color: #02F } A:visited  { color: #808 } A:hover { color: purple; background: #AFB } </STYLE></head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><h2>The "Prefetch Instruction Queue" idea<br>
+(A possible addendum to the "our protections" section)</h2><h4>by Camel Eater, 13 August 1997</h4>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif"
+ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0>Courtesy of Fravia's page 
+of reverse engineering<br><br><i>Well, an interesting idea. This trick has 
+been already used, though: it is one of the main "anti-debugger" measures 
+used by higher protections. Yet shareware programmers should take note: 
+it could let Micro$oft's "Steal-tank" eat dust! (They are not so good, when 
+it comes to tackle such tricks as we are :-)</i></center>
+<hr size=3>
+
+<pre>
+<Font size=+2><center>Prefetch Instruction Queue or PIQ</center></font>
+
+This method could be used to fool any debugger, or at least
+any process that executes one operation at a time. The PIQ
+reads instructions in advance so that they are already in the
+CPU when its time to execute them rather than executing an
+instruction and then waiting for the next one.
+
+The length of the PIQ was around only 4 or 6 in old computers,
+but is much longer in newer ones. 
+
+What the protectionist could do is change the instruction after
+itself into something unwishful. While debugging the instruction
+will be modified before it is read, but when run normally, it will
+be changed afterwards.
+
+
+;Example program for Prefetch Instruction Queue Manipulation
+;
+;This example is a modification of a 'Hello world!' program...
+;
+;Program by Camel Eater
+;Assemble with TASM
+
+Ideal   ; Ideal Mode
+P386    ; 386 CPU
+
+Model Tiny  ; Model for *.COM files
+
+DataSeg                 ; Data Segment
+MSG DB "Hello world!$"  ; Message to print if no debugger is
+			; used.
+
+CodeSeg                 ; Code Segment
+	startupcode     
+
+	mov bx,offset BitToChange  ; BX = address to change
+	mov dx,offset MSG          ; offset of message
+	mov [bx+1],4c00h           ; set to function 4ch
+BitToChange:
+	mov ax,0900h               ; function to print text
+	int 21h                    ; interrupt
+
+	mov ax,4c00h               ; exit program
+	int 21h
+	
+End
+
+If you are not using a debugger than writing 4c00h to
+BitToChange+1 (mov [bx+1],4c00h) has no effect, as the part
+being changed is already in the Prefetch Instruction Queue. 
+If the program is running inside a debugger, on the countrary, 
+it will change the line before it is loaded and so the program 
+will quit earlier as it should.
+
+In the case of our program, if it will be run under a debugger 
+then it just quits back out to dos, otherwise it writes 
+'Hello World!', first.
+
+Some Final Notes.
+
+I dont know if this works at all in any Windoze, I've tested it 
+in DOS and it worked, under windoze it may suicide, but then...
+it might not. Im not sure of how windows handles task swapping
+and stuff like that, but it would probably still work. 
+
+Well that is all I wanted to write about the Prefetch Instruction
+Queue. So goodbye for now,
+
+Camel Eater.
+ </prE>
+ <Font color=green>(c) Camel Eater, 1997. All rights reserved</Font>
+<HR ALIGN=CENTER WIDTH=100% SIZE=3>
+<center><i>You are deep inside fravia's <a href="https://searchlores.nickifaulk.com/protec/searchlores.org">searchlores org</a>,  
+choose your way out:</i></center>
+<br><center>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0>
+<A HREF="https://searchlores.nickifaulk.com/protec/protecti.htm">Our protections </A><bR>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0>
+<A HREF="index.html">homepage </A>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0> 
+<A HREF="https://searchlores.nickifaulk.com/protec/links.htm">links </A> 
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALT="red" ALIGN=BOTTOM WIDTH=13 HEIGHT=13 BORDER=0 VSPACE=0 HSPACE=0>
+<A HREF="https://searchlores.nickifaulk.com/protec/noanon.htm">anonymity </A> 
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM
+BORDER=0 VSPACE=0 HSPACE=0><A HREF="https://searchlores.nickifaulk.com/protec/orc.htm">+ORC </A>
+
+<IMG
+SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/student.htm">students' essays </A>
+<IMG
+SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/tools.htm">tools </A>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM
+BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/cocktail.htm">cocktails </A><br>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN=BOTTOM
+BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/ideale.htm">antismut CGI-scripts </A>
+
+
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif"
+ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/searengi.htm">search_forms </A>
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif"
+ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/info.htm">mail_Fravia </A><br>
+
+
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif"
+ALIGN=BOTTOM BORDER=0 VSPACE=0 HSPACE=0><A
+HREF="https://searchlores.nickifaulk.com/protec/legal.htm">Is reverse engineering illegal? </A></CENTER>
+<CENTER><HR ALIGN=CENTER WIDTH=100% SIZE=2></CENTER>
+</body>
+</HTML>

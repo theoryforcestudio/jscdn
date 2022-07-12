@@ -1,0 +1,324 @@
+<html>
+<head>
+<title>mammop5</title>
+</head>
+<body BGCOLOR="#C0C0C0" TEXT="#001010" VLINK="#405040">
+<center><font size="+3">Customizing Netscape's buttons and menus</font>
+<br>(Resource editing galore)<br>
+  <br>
+
+<h4>by Mammon_<br>
+<br>
+(20 September 1997, rebirth on searchlores.org: December 2000)</h4>
+<hr>
+<IMG SRC="images/bulletr.gif" tppabs="http://fravia.net/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0" WIDTH="13" HEIGHT="13">Courtesy of fravia's page 
+of reverse engineering<br><br>
+Well, this is a VERY interesting essay from Mammon_. I noticed part of this 
+work on Mammon_'s own and very <font color=blue>[</font><a href="http://www.eccentrica.org/Mammon/sprawl/">good page</a><font color=blue>]</font> more than four week ago, and I'm happy to see that he sent a nice ameliorated essay to the +HCU. As you'll read in Mammon_'s essay, there is a lot of resource editing going on, so let's clear these things out a little.<br><br>
+I &quot;presented&quot; myself the BRW resource 
+editor to the scene some time ago with my <a href="ultrae2.htm" tppabs="http://fravia.net/ultrae2.htm">ultraedit essay</a>, many knew this stuff already, yet many other did not, and anyone can see that resource editors are now much more used than a year ago :-).<br><br>There are on this planet (to my knowledge) following <u>main resource 
+editors</u>:<br><font color="blue">
+WRT</font> = Whitewater Resource Toolkit for Windows 3.1, A very good tool, greeted as &quot;Wizard stab&quot; when it appeared, father of all the following ones. Whitewater has been BOUGHT by Symantec in order to get this extraordinary 16-bit project<br><br>
+<font color=blue>[</font><a href="zipped/brw45.zip">BRW</a><font color=blue>]</font> = Borland Resource Workshop, last version 4.5 shipped with Borland C++ 4,5 (you can have it <font color="red">now</font> once more for less than 4 UK pounds on the next new <font color="red">October 1997</font> issue of PcPLUS, a UK computer magazine, see my old blackboard)<br>This 
+resource editor is, after so many years, still the best one IMO (by all means, if you have 
+better pointers send them over&nbsp;:-)&nbsp;&nbsp;Borland seems to have kept rights on WRT until 1994/5<br><br>
+<font color="blue">SRS</font> = Symantec Resource Studio 32, Version 1.0, (c) 1995, 
+nice graphic and frills, 
+works not as good as BRW. This is the Whitewater product <u>without</u> the knowledge of the Wizards at Borland, &quot;restyled&quot; and &quot;updated&quot; to 32 bit by the average programmers at Symantec.<br><br>
+<font color="blue">WRE</font> = Watcom resource Editor for Windows NT, versioN 11.0. A good resource editor, yet not as good as Borland's BRW 4.5. WRE.EXE is only 174.592, but it needs a lot of other &quot;parts&quot; and *.dlls to work<br><br>
+I am awaiting your contributions on these matters. As soon as enough material arrives, we'll move the above introduction to a special +HCU's section (Hackmore, are you reading this?)...<br><br>
+<i>
+And now enjoy this very interesting essay: I always hated those stupid useless &quot;Directory Buttons&quot; in Navigator :-)</i></center><hr size="6">
+
+<font size="+2">
+More Work On Project5<p></font>
+by Mammon_<p>
+
+
+Target File: Netscape.exe version 3.01 Gold, 3.02 MB (42.4 MB 
+Decompiled &quot;dead listing&quot;)<p>
+
+
+It is now, as I write, 1997. The Internet has become a combination 
+library, software warehouse, and television: more than ever before, a 
+cracker's Web Browser is as vital as his debugger, his disassembler, 
+even his hex editor. It is necessary, then, to trim these browsers so 
+they do not hinder our progress, and to tailor them to a style that 
+suits us. ACP and +YOSHi have both done well with Netscape Navigator's 
+windowing annoyances; I will here demonstrate how to customise the 
+application's user interface.<p>
+<br>
+<font size="+2">
+<b>1. The Location Bar</b></font><p>
+The best way to start out is with a string data search, as our targets 
+are going to be menus and buttons. As I was planning to do some extra 
+work in the .exe, I opened up Netscape in W32Dasm and got coffee while 
+it was disassembling. I exported the String Data Reference list into 
+WordPad (Notepad being, alas, not up to the task) and did a quick search 
+for &quot;http://&quot;, finding the string values relating to the items we will 
+be changing along (e.g., 
+&quot;http://guide.netscape.com/guide/what'snew.html&quot;). For the record, I 
+found a number of strings using BRW that were not in the W32Dasm 
+disassembly.<p>
+
+Here is where it gets interesting: I was scrolling through the string 
+data listing, waiting for my eyes to glaze over, when I cam across a 
+command I knew--&quot;about:global&quot;, which when typed in the location bar 
+causes the Netscape.hst file to be dumped onscreen. The first thought 
+that flashed through my mind was &quot;Undocumented commands!&quot;, and after 
+many minutes of sifting through meaningless strings I came up with the 
+following list of location-bar commands:<p><pre>
+about:xxxx           xxxx text appears on blank page (1.43K limit)
+about:               Displays the Netscape &quot;About Box&quot;
+about:blank          Displays a blank page
+about:cache          Dumps the contents of the URL cache
+about:document       The same as View-&gt;Document Info
+about:editfilenew    Opens a blank document called file:///Untitiled
+about:global         Shows the URL history from the Netscape.hst file
+about:image-cache    Dumps the contents of the image cache
+about:license        Displays the Netscape product license (snore)
+about:memory-cache   Displays the contents of the memory cache
+about:plugins        Displays stats on all of the plug-ins
+File:///             Opens a file in the browser; .,.., drive letter are all valid
+Javascript:          Opens a Javascript console (OK, we knew this one...)
+Mailto:              Opens the send-mail dialogue box (OK, we knew this one too)
+view-source:         Same as View-&gt;Document Source<p></pre>
+It gets even better. First of all, remember that these go in the 
+location bar, and therefore one can place them in the href= parameter of 
+an <a> tag  <font color="blue">--instantly, lots of new web-page tricks</font>. I experimented a bit 
+with the about: command and quickly learned that anything you type after 
+&quot;about:&quot; will show up on a blank document. I typed <b>&quot;about:When in danger 
+or in doubt, run in circles, scream and shout.&quot;</b> There it was, in black, 
+on a black page.<p>
+So I experimented some more, typing &quot;about:&lt;center&gt;When in &lt;font 
+color=&quot;ff0000&quot;&gt;danger&lt;/font&gt; or in doubt, &lt;P&gt; Run in circles, scream and 
+shout. &lt;/center&gt;&quot;, and sure enough it appeared in its full HTML-formatted 
+glory. <font color="blue">As good as document.writeln() without javascript!</font><p>
+Of course the next thing I tried was dumping the entire source code of 
+my tools page (after changing the double quotes to singles, and vice 
+versa) into the href= parameter of an <a> tag that read, originally 
+enough, TEST. I clicked it and a new page loaded with maybe <u>a tenth</u> of my 
+tools page displayed (due, of course, to the limitation of a Windows 
+edit control...effectively, the location bar can take up to a 1.43K text 
+file, as I found by testing).<p>
+Now what are we left with? An undocumented &quot;document.writeln()&quot;-ish 
+feature that allows you to enter up to 1400 characters of HTML code 
+(sans &lt;HTML&gt; and &lt;BODY&gt; tags) directly from an &lt;a&gt; tag! And who says 
+Netscape has no surprises.....<p>
+<br>
+<font size="+2">
+<b>2. The Buttons</b></font><p>
+The first thing to change in our target is going to be the buttons --you know 
+the ones, 
+those useless &quot;Directory Buttons&quot; that you always turn off (Options/ Show directory buttons) because they have 
+horrible titles (and contents) like &quot;What's New&quot;, &quot;What's Cool&quot;, and &quot;People&quot;. 
+If you 
+look in BRW you will find the labels for those buttons, and the URLs that 
+match them, inside strings 621-635. Needless to say, you can edit the strings 
+to reflect your six most-visited web pages. I chose to remap them as 
+follows:<p>
+
+<li>621 (What's New): from ...whats-new.html to 
+http://207.30.50.126/fravia (New Title: <font color="blue">+HCU</font>)
+<li>622 (What's Cool): from ...whats-cool.html to 
+http://kryten.eng.monash.edu.au/gspamt.html (New Title: <font color="blue">Net
+Tools</font>) 
+<li>623 (Destinations): from ...index.html to http://www.hotmail.com 
+(New Title: <font color="blue">HotMail</font>) 
+<li>624 (Net Search): from ...search.html to 
+http://cuiwww.unige.ch/eao/www/Internet/Nedashkovsky.html (New
+Title: <font color="blue">Search Engines</font>) 
+<li>625 (People): from ...white-pages.html to 
+http://www.anonymizer.com/open.html (New Title: <font color="blue">Anonymizer</font>) 
+<li>626 (Software): from ...upgrades.html to about: &lt;applet  
+codebase=&quot;file:///F|/Jdk/&quot; code=&quot;AppletKiller.class&quot; width=100 
+height=100&gt;Applet Killer&lt;/applet&gt; (New Title:
+<font color="blue">Applet Killer</font>)<p>
+
+Notice this last one: an application of the above principle, basically a 
+one-line web page that calls the compiled AppletKiller.class (watch it, 
+this thing makes your system very unstable) from the hard-drive. The 
+rest of them are pretty standard, your typical useful web pages...<p>
+<br>
+<font size="+2">
+<b>3. The Menus</b></font><p>
+But we are not done yet; there are still a couple of useless menus 
+lurking around here (Look at your Netscape window: &quot;Directories&quot; once again and also &quot;Help&quot;, both of 
+which use URLs to define their actions)...you'll find their strings 
+between 65000-65399, though I would suggest editing only the URLs and 
+changing the menus directly by editing the Menu2 resource through BRW.
+The menus originally look as follows:<p>
+Directory:
+<li>&quot;Netscape's Home&quot; <i>http://homenetscape.com</i>
+<li>&quot;What's New&quot; <i>http://guide.netscape.com/guide/what'snew.html</i>
+<li>&quot;Whats Cool&quot; <i>http://guide.netscape.com/guide/what'scool.html</i>
+<li>&lt;SEPARATOR&gt;
+<li>&quot;Customer Showcase&quot; 
+<i>http://home.netscape.com/home/netscape-galleria.html</i>
+<li>&quot;Netscape Destinations&quot; <i>http://netscape.yahoo.com/guide</i>
+<li>&quot;Internet Search&quot; 
+<i>http://home.netscape.com/escapes/search/ntsrchrnd-2.html</i>
+<li>&quot;People&quot; <i>http://guide.netscape.com/guide/people.html</i>
+<li>&quot;About the Internet&quot; <i>http://home.netscape.com/home/about-the-internet.html</i>
+<br><br>
+Help: 
+<li>&quot;About Netscape&quot; <i>about:</i>   ;Note the use of the about: tag!
+<li>&quot;About plugins&quot; <i>about:plugins</i>
+<li>&quot;Registration&quot; Information 
+<i>http://home.netscape.com/netcenter/prodreg/start.html</i>
+<li>&quot;Software&quot; 
+<i>http://home.netscape.com/comprod/upgrades/index.html</i>
+<li>&quot;Web Page Starter&quot; <i>http://home.netscape.com/home/starter.html</i>
+<li>&lt;SEPARATOR&gt;
+<li>&quot;Handbook&quot; <i>http://home.netscape.com/eng/mozilla/3.0/handbook</i>
+<li>&quot;Release Notes&quot; 
+<i>http://home.netscape.com/eng/mozilla/3.0/relnotes/windows-3.0Gold.html</i>
+<li>&quot;Frequently Asked Questions&quot; 
+<i>http://help.netscape.com/faqs.html</i>
+<li>&quot;On Security&quot; <i>http://home.netscape.com/info/security-doc.html</i>
+<li>&lt;SEPARATOR&gt;
+<li>&quot;How to Give Feedback&quot; 
+<i>http://cgi.netscape.com/cgi-bin/autobug.cgi</i>
+<li>&quot;How to Get Support&quot; <i>http://help.netscape.com</i>
+<li>&quot;How to Create Web Services&quot; 
+<i>http://http://home.netscape.com/home/how-to-create-web-services.html</i><p>
+
+These will never do. I opted to keep the layout of the separators, 
+though by all means I could have added or removed a few, and went with 
+the following layout:<p>
+
+Cracking:
+<li>Mammon_ (Home) <i>I'll avoid the obvious free plug :)</i>
+<li>Mammon_ (Links)
+<li>Mammon_ (Tools) 
+<li>&lt;SEPARATOR&gt;
+<li>Fravia <i>http://207.30.50.126/fravia/</i>
+<li>Greythorne <i>http://www.cracking.net/gthorne/ </i>
+<li>Hacker's Layer <i>http://www.lordsomer.com/ </i>
+<li>L0pht <i>http://www3.l0pht.com/ </i>
+<li>Silicon Toad <i>http://www.silitoad.org/ </i><p>
+
+Resources:
+<li>AngelFire <i>http://www.angelfire.com </i>
+<li>FortuneCity <i>http://www.fortunecity.com </i>
+<li>Geocities <i>http://www.geocities.com </i>
+<li>Send Fax <i>http://www-usa.tpc.int/sendfax.html </i>
+<li>Supernews <i>http://supernews.com </i>
+<li>&lt;SEPARATOR&gt;
+<li>FTP Search <i>http://ftpsearch.ntnu.no/ftpsearch/ </i>
+<li>SwiftSearch <i>file:///C|/Tools/SwiftSearch/SwiftSearch.exe</i>
+<li>NetInfo <i>file:///C|/Tools/NetInfo.exe </i>
+<li>JPadPro <i>file:///F|/Jdk/JPadPro/JPadPro.exe </i>
+
+<li>&lt;SEPARATOR&gt;
+<li>Webside Story 
+<i>http://www.hitbox.com/wc/MAKElists/Top100HackingPhreaking.html</i>
+<li>HTML Reference <i>http://sdcc8.ucsd.edu/~m1wilson/htmlref.html </i>
+<li>Javascript Reference <i> 
+http://home.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html 
+</i><p>
+
+Ah, much better. Once more now, theory into practice, by using the file:/// 
+tags to access files on my hard drive. To get this to work right, you 
+have to set the Netscape action for &quot;.exe&quot; to &quot;Launch this application:&quot; 
+with the application field left blank. This will give you a SaveAs... 
+box when you click on one of the &quot;file:///&quot; menu items (i.e., NetInfo); 
+if you press OK, the .exe will save, and if you press CANCEL, the .exe 
+will run (we could disable the box, but then you could never save .exe's 
+that you downloaded...).<p>
+To top it all off, I shuffled around the main items in Menu2 so that my 
+menu bar now reads 
+File...Edit...View...Go...Cracking...Resources...Bookmarks...Options...Window:
+perfecto! Now you just need to change the title bar to Crackscape....<p>
+<br><font size="+2">
+<b>4. Notes about the Registry</b></font><p>
+The obvious place to look for the URLs linked to each button and menu 
+item would have been the Registry, and this was in fact the first place 
+I checked. As shown above, however, the string values are hard-coded in 
+the executable itself. Netscape does keep a number of interesting values 
+in the Registry, all of them in<pre>
+HKey_Current_User\Software\Netscape\Navigator</pre> 
+(the HKey_Local_Machine\SOFTWARE key simply stores the version number of the 
+program), which has the following subkeys:
+<li>Address Book (where it is located)
+<li>Automation Protocols
+<li>Automation Shutdown
+<li>Automation Startup
+<li>Automation Viewers
+<li>Bookmark List (where it is stored)
+<li>Bookmark Window (schematics)
+<li>Cache (where it is stored)
+<li>Compose Window (schematics)
+<li>Cookies (where they are stored)
+<li>Default Plugin (name)
+<li>Editor (preferences)
+<li>History (URLs that drop down from Location Bar)
+<li>Images (settings)
+<li>INTL (settings)
+<li>Java (on or off)
+<li>Mail (settings/account info)
+<li>Mail Window (schematics)
+<li>Main (preferences)
+<li>Main Window (schematics)
+<li>Network (preferences)
+<li>News (preferences)
+<li>News Window (schematics)
+<li>Page Setup (schematics)
+<li>Proxy Information (proxy servers/IPs)
+<li>Publish (settings/account info)
+<li>Security (settings)
+<li>Services (servers for POP3, etc)
+<li>Settings (preferences)
+<li>Suffixes (file extensions)
+<li>Temporary File URL Resolution (file location)
+<li>Tool Bar (settings)
+<li>User (identity from Mail/News prefs)
+<li>User Trusted External Applications (file loactions)
+<li>Viewers (file locations)<p>
+
+It is generally a good idea to locate things like URL history and Cache 
+in a temp directory that gets <font color="blue">deleted</font> at bootup; these files will all 
+re-create themselves. Cookies.txt, however, cannot be replaced with a 
+nonexistent file; the last time I tried that I went to microsoft.com to 
+test it and my computer GPF'd so hard that soft-ice only showed a column 
+of &quot;FFFFFF: INVALID&quot; opcodes when I tried to pull out of it....<p>
+<br>
+
+There's not much to sum up in this essay, unless it is to point out how 
+simple it is to customise these programs with a good resource editor. Strings 
+are by all means a good starting point in reverse-engineering or 
+cracking a program; if you follow any one of the &quot;http:&quot; strings through  
+W32Dasm, you'll find that the first or second call following, leads to 
+the &quot;URL Parsing&quot; routine, an interesting routine which is referenced by about a hundred 
+different lines of code. <p>
+As a note of interest, I did the work on this project twice, once with 
+BRW, once with Symantec Resource Studio; both were equal until I juggled 
+the menus, which then did NOT link to the URLs in the Symantec version. 
+This is not to put down Resource Studio as an editor: in fact, it allows 
+me to edit at least some of explorer.exe while BRW flat-out crashes. But 
+it is more food for thought; some day we may have to &quot;repair&quot; these 
+tools....<pre>Mammon_ </pre>
+<font color="green">(c) Mammon_ 1997. All rights reversed</font>
+<hr ALIGN="CENTER" WIDTH="100%" SIZE="3">
+<center><i>You are deep inside fravia's searchlores.org</i></center>
+<br><center>
+
+
+<hr>
+<!-- internet searching strategies and hints content, end -->
+<center>
+  
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+<!-- t+s spellcheck April 2000 -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>
+
+</html>
+

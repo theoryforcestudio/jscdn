@@ -1,0 +1,261 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>opera_5.htm:Some "improving" thoughts on Opera version 5</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Some "improving" thoughts on Opera version 5  ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+Courtesy of <a href="http://www.searchlores.org">fravia's searchlores.org</a>, 
+December 2000<hr width=44%>
+<a href="opera_5.htm#wood">Woods+ock's contribution</a>
+&nbsp;
+<a href="opera_5.htm#beard">Beardo's contribution</a>
+</center>
+<a name="wood"></a><hr>
+<font size=+1>Opera 5.0 is out.
+<br><br>
+As soon as I read in the Opera-newsletter that Opera 5 was out, I went to get 
+it and tried it for a ride. I was stunned when I saw the new search window. 
+That's a great idea! I haven't used this since I patched my Netscape 3 
+browser, ages ago.<br><br>
+Trying it out, I noticed that Opera was using the Bfast service. I know Opera 
+5.0 is given away for free, "Opera 5.0 is free! Well, not entirely free 
+as 
+such, though there is no cost to the end user, but ad-banner 
+sponsored." <br><br>
+I do not really mind that they use this service to earn an extra bucks, 
+but I 
+felt betrayed in a way, as I own a 'registered' version, so I just had 
+to 
+examine that new feature.<br><br>
+As usual, I started to disassemble Opera with W32dsm89 and did a search 
+on 
+'bfast'. Hmmmm, 'text {bfast} not found'.<br><br>
+So I launched UltraEdit to do a Find in files, and there it was : 
+Opera.exe. 
+Clicking on the output-window brought me right to the URL's I was 
+looking for. 
+The first URL is at 00176b64h :
+<br><br>
+<a href="http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=svideo&q=%s&nbg=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=svideo&q=%s&nbg=%i</a>
+ v   Video   <br><br>
+<a href="http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=simage&q=%s&nbg=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=simage&q=%s&nbg=%i</a>
+ i   Image<br><br>
+<a href="http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=saudio&q=%s&nbg=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656059&bfpage=multimedia_smy&bfmid=22218516&user=befree&pg=q&stype=saudio&q=%s&nbg=%i</a>
+ m   Mp3/Audio   s   Stock quote<br><br>
+<a href="http://www.commissionjunction.com/track/track.dll?aid=893031&pid=645589&url=http://www.business.com/search/rslt_default_company.asp&query=%s" target=_blank>http://www.commissionjunction.com/track/track.dll?aid=893031&pid=645589&url=http://www.business.com/search/rslt_default_company.asp&query=%s</a>
+   c   Company<br><br>
+<a href="http://service.bfast.com/bfast/click?bfmid=2181&sourceid=19273554&categoryid=rn_booksearch&choice=keywordsearch&userInput=%s" target=_blank>http://service.bfast.com/bfast/click?bfmid=2181&sourceid=19273554&categoryid=rn_booksearch&choice=keywordsearch&userInput=%s</a>
+    b   Books   do=application&amp;domain=%s&amp;tld=.com   <br><br>
+<a href="http://opera.domaindirect.com/cgi-bin/register.cgi" target=_blank>http://opera.domaindirect.com/cgi-bin/register.cgi</a>  d   Domain Name 
+<br><br>
+<a href="http://www.goto.com/d/search/p/befree/?Promo=befree00192735881894411880&Keywords=%s" target=_blank>http://www.goto.com/d/search/p/befree/?Promo=befree00192735881894411880&Keywords=%s</a>
+ t   GoTo  <br><br>  
+<a href="http://service.bfast.com/bfast/click?siteid=19273676&bfpage=hotbot2&bfmid=5960107&MT=%s&DC=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=19273676&bfpage=hotbot2&bfmid=5960107&MT=%s&DC=%i</a>
+   h   HotBot  <br><br>
+<a href="http://service.bfast.com/bfast/click?siteid=30656059&bfpage=wsearch_sm&bfmid=22218516&user=befree&pg=q&q=%s&nbg=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656059&bfpage=wsearch_sm&bfmid=22218516&user=befree&pg=q&q=%s&nbg=%i</a>
+  a   AltaVista   <br><br>
+<a href="http://service.bfast.com/bfast/click?siteid=30656053&bfpage=horizontal&bfmid=27253343&q=%s&num=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656053&bfpage=horizontal&bfmid=27253343&q=%s&num=%i</a>
+   g   Google<br><br>
+
+Pretty straightforward (except for the Stock quote), I would say : The 
+URL, 
+the shortletter and Name, with the %s being the search-string and %i 
+the 
+number of results per page you saved in your preferences. All strings 
+are 
+null-terminated.<br><br>
+You can easily deduce for which search-engines the %i is accepted. They 
+could 
+have given that list in the Help-text.
+<br><br>
+So, what can we do with that? Well, modify it to our own taste of 
+course! 
+I remember, years ago, Opera always wanted the user to have the choice 
+to 
+change all possible settings. Now they made it a little bit harder, but 
+it 
+still is possible.
+<br><br>
+Assume that for Altavista you want always want to use the text version, 
+all 
+you have to do is change
+<a href="http://service.bfast.com/bfast/click?siteid=30656059&bfpage=wsearch_sm&bfmid=22218516&user=befree&pg=q&q=%s&nbg=%i" target=_blank>http://service.bfast.com/bfast/click?siteid=30656059&bfpage=wsearch_sm&bfmid=22218516&user=befree&pg=q&q=%s&nbg=%i</a>
+ <br><br>
+with
+<a href="http://www.altavista.com/web/text?&q=%s&nbg=%i" target=_blank>http://www.altavista.com/web/text?&q=%s&nbg=%i</a>
+<br><br>and set the remaining characters to 00h. It works.!
+Of course, if you're an affiliate with the bfast service, you could 
+change the 
+siteid to your own and earn a few cents for every search you do ;)
+<br><br>
+Search-UL8R,<br>
+Woods+ock<br>
+</font></font>
+<a name="beard"></a>
+<hr>
+
+I know you are against updating software but the new search utility on the 
+tollbar for Opera 5 could be useful if they had implemented it properly. 
+Here is an essay describing how to remedy this sad fact.<br>
+<br>
+Kittos!<br>
+
+Beardo<br><br>
+
+
+<font size=+2>
+The Integrated Search Engine Bar in Opera 5</font>
+<p>
+On 6th December 2000 Opera released a &quot;new&quot; version of their browser.  In reality 
+there does not seem to be much real change: the javascript error is still in 
+place, although I have not checked whether the email bugs have been fixed.<br>
+<p>
+There seem to be three additions:<br>
+<p>
+1. Opera have released a &quot;free&quot; version (provided you put up with an ad).  The 
+add disappears in the registered version though :)<br>
+<p>
+2.  Instant messaging via icq protocol has been integrated (possibly 
+unecessary bloat)<br>
+<p>
+3.  Several search engines have been integrated into the toolbar!!!<br>
+<p>
+The 3rd point is most interesting.  This can save speed as rather than hitting 
+&quot;home&quot; to head back to our page of search engines we can type directly into 
+the bar.<br>
+<p>
+However, this is not without it's faults, as we cannot (should not?) change the search 
+engines list by Opera.  To make matters worse, the Altavista query is the simple 
+one, not the advanced query.  Two of the options ("stock quote" and "company", which 
+noone in his right mind would ever use) point actually both to the same 
+(idiotical) query.  Even worse, they are not 
+directly querying the search engine, but are rather using a service called 
+&quot;bfast&quot; after which opera gives us a link in order to redirect the query to the 
+appropriate search engine.<br>
+<p>
+After toying with this for a bit (type "fravia", then hit return for google 
+responses.  Then click the small icon and select another engine... woha! New results 
+are automatically entered.  This is <u>good</u> for quickly querying one engine after 
+another) I decided to try to alter this.<br>
+<p>
+First line of approach: disassemble in W32Dasm and also load into Borland 
+Resource workshop and search the strings for &quot;http&quot; (Opera needs to know the 
+addresses to query, hmm?) No result.  Nor for &quot;altavista&quot;, &quot;google&quot; etc.  This 
+worried for a bit, as this was the way I had learned to edit such strings.  
+(Go looking for Fravia's old reverse-engineering site.  Once there find 
+<a href="mammop5.htm">Mammon's essay in project 5</a> on how to reverse Netscape 3 and read it!).<br>
+<p>
+<p>
+However having previously tried (and failed :( to fiddle around with Opera 4 
+by simply loading the exe into UltraEdit and searching the ascii strings, I 
+decided to try this approach.  Typed in altavista and bingo, there was the 
+code :)<br>
+<p>
+Now to try and make sense of this:<br>
+<p>
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=svideo&amp;q=%s&amp;nbg=%i" target="WMLink3A3C9299">http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=svideo&amp;q=%s&amp;nbg=%i</a><br>
+ v Video 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=simage&amp;q=%s&amp;nbg=%i" target="WMLink3A3C929A">http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=simage&amp;q=%s&amp;nbg=%i</a><br>
+ i Image 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=saudio&amp;q=%s&amp;nbg=%i" target="WMLink3A3C929B">http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=multimedia_smy&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;stype=saudio&amp;q=%s&amp;nbg=%i</a><br>
+ m Mp3/Audio 
+s Stock quote 
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.commissionjunction.com/track/track.dll?aid=893031&amp;pid=645589&amp;url=http://www.business.com/search/rslt_default_company.asp&amp;query=%s" target="WMLink3A3C929C">http://www.commissionjunction.com/track/track.dll?aid=893031&amp;pid=645589&amp;url=http://www.business.com/search/rslt_default_company.asp&amp;query=%s</a><br>
+ c Company 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?bfmid=2181&amp;sourceid=19273554&amp;categoryid=rn_booksearch&amp;choice=keywordsearch&amp;userInput=%s" target="WMLink3A3C929D">http://service.bfast.com/bfast/click?bfmid=2181&amp;sourceid=19273554&amp;categoryid=rn_booksearch&amp;choice=keywordsearch&amp;userInput=%s</a><br>
+ b Books do=application&amp;domain=%s&amp;tld=.com 
+<a href="https://searchlores.nickifaulk.com/redirect?http://opera.domaindirect.com/cgi-bin/register.cgi" target="WMLink3A3C929E">http://opera.domaindirect.com/cgi-bin/register.cgi</a> d Domain Name 
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.goto.com/d/search/p/befree/?Promo=befree00192735881894411880&amp;Keywords=%s" target="WMLink3A3C929F">http://www.goto.com/d/search/p/befree/?Promo=befree00192735881894411880&amp;Keywords=%s</a><br>
+ t GoTo 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=19273676&amp;bfpage=hotbot2&amp;bfmid=5960107&amp;MT=%s&amp;DC=%i" target="WMLink3A3C92A0">http://service.bfast.com/bfast/click?siteid=19273676&amp;bfpage=hotbot2&amp;bfmid=5960107&amp;MT=%s&amp;DC=%i</a><br>
+ h HotBot 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=wsearch_sm&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;q=%s&amp;nbg=%i" target="WMLink3A3C92A1">http://service.bfast.com/bfast/click?siteid=30656059&amp;bfpage=wsearch_sm&amp;bfmid=22218516&amp;user=befree&amp;pg=q&amp;q=%s&amp;nbg=%i</a><br>
+ a AltaVista 
+<a href="https://searchlores.nickifaulk.com/redirect?http://service.bfast.com/bfast/click?siteid=30656053&amp;bfpage=horizontal&amp;bfmid=27253343&amp;q=%s&amp;num=%i" target="WMLink3A3C92A2">http://service.bfast.com/bfast/click?siteid=30656053&amp;bfpage=horizontal&amp;bfmid=27253343&amp;q=%s&amp;num=%i</a><br>
+ g Google<br>
+<p>
+OK, so we have the string to query the engine, followed by the shortcut key 
+(type g followed by a string in the URL bar to search) and the name to appear 
+in the search engine toolbar.  In all these strings we have &quot;%s&quot; to represent 
+our query string.  Now all we have to do is to change these to the ones we 
+want.  Firing through some search engines I wanted (feel free to pick your 
+own) and searching for opera I got:<br>
+<p>
+<a href="https://searchlores.nickifaulk.com/redirect?http://ftpsearch.lycos.com/cgi-bin/search?form=medium&amp;query=opera&amp;doit=Search&amp;type=Case+insensitive+multiple+substrings+search&amp;hits=15&amp;matches=&amp;hitsprmatch=&amp;limdom=&amp;limpath=&amp;f1=Count&amp;f2=Mode&amp;f3=Size&amp;f4=Date&amp;f5=Host&amp;f6=Path&amp;header=none&amp;sort=none&amp;trlen=20" target="WMLink3A3C92A3">http://ftpsearch.lycos.com/cgi-bin/search?form=medium&amp;query=opera&amp;doit=Search&amp;type=Case+insensitive+multiple+substrings+search&amp;hits=15&amp;matches=&amp;hitsprmatch=&amp;limdom=&amp;limpath=&amp;f1=Count&amp;f2=Mode&amp;f3=Size&amp;f4=Date&amp;f5=Host&amp;f6=Path&amp;header=none&amp;sort=none&amp;trlen=20</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.alltheweb.com/cgi-bin/asearch?type=all&amp;query=opera" target="WMLink3A3C92A4">http://www.alltheweb.com/cgi-bin/asearch?type=all&amp;query=opera</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.deja.com/qs.xp?OP=dnquery.xp&amp;ST=MS&amp;DBS=2&amp;QRY=opera&amp;SUBMIT=search+Dejavue" target="WMLink3A3C92A5">http://www.deja.com/qs.xp?OP=dnquery.xp&amp;ST=MS&amp;DBS=2&amp;QRY=opera&amp;SUBMIT=search+Dejavue</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://ragingsearch.altavista.com/cgi-bin/query?q=opera&amp;search=Ragin_Search" target="WMLink3A3C92A6">http://ragingsearch.altavista.com/cgi-bin/query?q=opera&amp;search=Ragin_Search</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.netcraft.com/?restriction=site+contains&amp;host=opera&amp;lookup=Wait..&amp;position=limited" target="WMLink3A3C92A7">http://www.netcraft.com/?restriction=site+contains&amp;host=opera&amp;lookup=Wait..&amp;position=limited</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://hotbot.lycos.com/?MT=opera&amp;SM=MC&amp;DV=0&amp;LG=any&amp;DC=10&amp;DE=2&amp;AM1=MC" target="WMLink3A3C92A8">http://hotbot.lycos.com/?MT=opera&amp;SM=MC&amp;DV=0&amp;LG=any&amp;DC=10&amp;DE=2&amp;AM1=MC</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.google.com/search?q=opera&amp;btnG=Google+Search" target="WMLink3A3C92A9">http://www.google.com/search?q=opera&amp;btnG=Google+Search</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://astalavista4.box.sk/cgi-bin/robot?srch=opera&amp;submit=+search+&amp;project=robot&amp;gfx=robot" target="WMLink3A3C92AA">http://astalavista4.box.sk/cgi-bin/robot?srch=opera&amp;submit=+search+&amp;project=robot&amp;gfx=robot</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.northernlight.com/nlquery.fcg?qr=opera&amp;sb=search&amp;si=&amp;us=025&amp;cc=" target="WMLink3A3C92AB">http://www.northernlight.com/nlquery.fcg?qr=opera&amp;sb=search&amp;si=&amp;us=025&amp;cc=</a><br>
+<a href="https://searchlores.nickifaulk.com/redirect?http://www.altavista.com/cgi-bin/query?hl=on&amp;q=%s&amp;search=Search&amp;r=&amp;kl=XX&amp;pg=aq&amp;enc=iso88591&amp;text=yes&amp;d0=&amp;d1=" target="WMLink3A3C92AC">http://www.altavista.com/cgi-bin/query?hl=on&amp;q=%s&amp;search=Search&amp;r=&amp;kl=XX&amp;pg=aq&amp;enc=iso88591&amp;text=yes&amp;d0=&amp;d1=</a><br>
+<p>
+So now all we need to do (in theory) is replace &quot;opera&quot; with &quot;%s&quot; in these 
+strings then copy them across, correct?  Well almost.  As we cannot change the 
+byte settings all the new strings must begin at the same point, so we cannot 
+allow the new string to overrun the old.  The ridiculously long ftpsearch 
+query can be sliced down and then we simply allow the search engine to apply 
+it's default values, true for several of these strings.  Please note we only 
+have ten entries as the eleventh in the default is querying the same engine as 
+another one.  Also if the original string is longer (as it should be) switch 
+across to the hex codes and enter &quot;00&quot; for each of those.<br>
+<p>
+<a href="https://searchlores.nickifaulk.com/redirect?http://ftpsearch.lycos.com/cgi-bin/search?form=medium&amp;query=opera&amp;doit=Search&amp;type=Case+insensitive+multiple+substrings+search" target="WMLink3A3C92AD">http://ftpsearch.lycos.com/cgi-bin/search?form=medium&amp;query=opera&amp;doit=Search&amp;type=Case+insensitive+multiple+substrings+search</a><br>
+<p>
+seems to work fine.<br>
+<p>
+So by apllying this we can make the new feature close to useful.  Remember and 
+change the name that appears afterwords and enjoy :-)  (of course it is 
+equally possible to use this feature to sotre bookmarks...)<br>
+<p>
+Beardo.<br>
+<p>
+For comments mail to Beardo(at)operamail(dot)com<br>
+
+
+<hr>
+<!-- internet searching strategies and hints content, end -->
+<center>
+Finally, since we are on a "Opera" page, a famous svdism (Svd's wisdom):<br>
+<font size=+2>"<font color=blue>hit ctrl-B in opera. Then LEARN it by 
+mind!</font>"<br></font>
+you'll thank me more than once for this advice...</center>
+<hr width=66%><center><a href="tuttiope.htm"><IMG SRC="images/basipet.jpg"
+ALT="back to tutti all'opera!"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to tutti all'opera!<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

@@ -1,0 +1,815 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>phpregexspider.htm : PHP Regex Spider: A first draft</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced web searching, serching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">  
+<link rel="home" title="thiefsystems" href="http://thiefsystems.org/"/>
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<table><tr><td><center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to Advanced<br></center></td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><center>
+
+<font color=navy size=+5>~ PHP Regex Spider: A first draft ~</font><br> 
+by <font color=navy size=+2><u>Frank Mitchell</u> </font> 
+</td></TR></table>
+
+
+<br>
+<br><hr width=44%><br>Originally published @ 
+<a href="http://www.searchlores.org">searchlores</a> in September 2004
+&nbsp;&nbsp;&nbsp;  Version 1.02, Updated in <font color=blue>September</font> 2004
+<br><br></center> <hr width=44%>
+
+<br>
+
+
+<H1>PHP Regex Spider: A first draft</H1> or             <font size=+1>
+
+
+
+
+
+
+	<h1><span class="logo">thiefsystems</span>xi<sup>2</sup> : <span>object / verb</span></h1>
+
+</center>
+	<h2>PHP Regex Spider: A first draft</h2>
+
+
+	<h3>Still to do</h3>
+	<ol>
+		<li><p>Come up with some rules for displaying code within prose.</p></li>
+		<li><p>Add links to the appropriate manual pages when a function is first talked about.</p></li>
+		<li><p>Get someone with a less technical background to read over this and makes sure it's understandable.</p></li>
+		<li><p>Provide a zipped download of the full source so people don't have to cut and paste.</p></li>
+	</ol>
+
+	<h3>Introduction</h3>
+
+	<p>Spiders are one of those little tools in a seeker's bag of tricks that you really cannot appreciate the power and beauty of until you build (or at least tweak) one of your own. To that end, the purpose of this essay is the guide you through the evolution of a <acronym title="PHP Hypertext Preprocessor">PHP</acronym> spider from conception to code. My goal is that by the end you will have a working spider (whose workings you understand) that you can modify and send out into the wild web to find and retrieve your targets.</p>
+
+	<p>This essay is primarily directed towards those seekers who are new it <acronym title="PHP Hypertext Preprocessor">PHP</acronym>. It holds your hand every step of the way. If you don't want that kind of babysitting, please feel free to skip ahead to <a href="phpregexspider.htm#infieri" title="Skip to: &quot;As always, in fieri&quot;">the end</a> and <a href="phpregexspider.htm#spidercode" title="Skip to: &quot;Spider code&quot;">the completed code</a>.</p>
+
+
+	<h3>Your bag of tools</h3>
+
+	<p>You'll need <a target=_top href="http://php.net/" title="The homepage for PHP."><acronym title="PHP Hypertext Preprocessor">PHP</acronym></a> installed and running. I'm using version 5.0.1. Your milleage may very if you're got something newer or older. You'll also need a <a target=_top href="http://codingmonkeys.de/subethaedit/" title="SubEthaEdit: Collaborative text editing. Share and Enjoy.">good text editor</a> (or another 
+	<a href="srtools.htm#text">good one</a>).</p>
+
+
+	<h3>In the begining, there was a need...</h3>
+
+	<p>I've always wanted my own spider, but mostly I've been too lazy to either code one or learn enough <acronym title="PHP Hypertext Preprocessor">PHP</acronym> to understand the ones that have been coded by the wizard programers of <a target=_top href="http://www.2113.ch/phplab/phplab.htm" title="Fravia's PHP lab.">that castle</a>. I am not a programer; my background lies much more in the creation and study of human languages than it does in machine code. Still, one learns best by doing, though it wasn't until I came across a target that necessitated a spider that I decided to write this one.</p>
+
+	<p>The roads most traveled are the ones used by sheep. That means that quite a few of the locked sites you come across (the kind that ask for a user name and password) also provide some kind of functionality by which the user can retrieve their lost password. Lots of the time that retrieval is accomplished by answering a secret question. Becuase people are predictable, the answers to their secret questions are predictable as well.</p>
+
+	<p>Before you can guess, however, you must get a name. This is were the laziness of people becomes helpful. The kinds of people who will have easy to guess secret questions are also the kinds of people who would use the same user name for both a public forum and a member's only site.</p>
+
+	<p>It was in this sort of scenario that I found myself, and it was from here that my spider was born. It's job, harvest a list of user names from a website.</p>
+
+
+	<h3>So, you want a spider huh?</h3>
+
+	<p>Learning to read (and thus use) other people's code is something of an art form. However, authors can make it easy by providing verbose comments. If you don't like prose, feel free to skip to <a href="phpregexspider.htm#infieri" title="Skip to: &quot;As always, in fieri&quot;">the end</a>. All the source is provided there. Still here? Good, let's jump right in.</p>
+
+<pre>
+<code>
+#!/usr/bin/php
+&lt;?php
+    echo("\n");
+    ...
+?&gt;
+</code>
+</pre>
+
+	<p>Those four lines are my standard openers to any <acronym title="PHP Hypertext Preprocessor">PHP</acronym> program. The first lets my computer know where <acronym title="PHP Hypertext Preprocessor">PHP</acronym> can be found. The send begins a block of <acronym title="PHP Hypertext Preprocessor">PHP</acronym> code, and the third prints a new line to the screen so any output I generate from here on out isn't smashed up against the command line. The elipsis represent where a block of code has been removed to make explanations easier. The final line marks the end of a block of <acronym title="PHP Hypertext Preprocessor">PHP</acronym> code.</p>
+
+<pre>
+<code>
+$start = "http://searchlores.org/";
+</code>
+</pre>
+
+	<p>This line answers the question "Where should we start searching from?" The variable $start (in <acronym title="PHP Hypertext Preprocessor">PHP</acronym> all variables begin with a dollar sign) is initialized and told to contain the string "http://searchlores.org/" which is the <acronym title="Universal Resource Locator">URL</acronym> our spider will start searching from.</p>
+
+<pre>
+<code>
+$search = "/&lt;em&gt;(.*?)&lt;\/em&gt;/";
+</code>
+</pre>
+
+	<p>Another question answering line. "What should we be looking for?" The variable $search now holds a Perl compatible regular expression that will match anything between a set of emphasis tags. Yes, our spider has the ability to search within code. If you're not familiar with Perl regular expressions, I'd suggest you read up on them, 'cause this spider uses them quite a bit. Two of the resources I used during development were:</p>
+
+	<ul>
+		<li><p><a target=_top href="http://regular-expressions.info/" title="Billed as &quot;The premier web site about regular expressions&quot;">http://regular-expressions.info/</a> - Commercialized, yes, but it explained stuff in a way that made sense to me, and that's what I needed from it.</p></li>
+		<li><p><a target=_top href="http://www.quanetic.com/regex.php" title="Quanetic Software's regex tester.">http://www.quanetic.com/regex.php</a> - An excellent regex tester. Very useful for trying out your expressions on a small scale before you test them in your final project.</p></li>
+	</ul>
+
+	<p>Anyways, back to the spider and the code.</p>
+
+<pre>
+<code>
+if($url = parse_url($start))
+{
+    if(isset($url['scheme']))
+    {
+        $b_scheme = $url['scheme'];
+        $b_url = $b_scheme."://";
+    }
+    if(isset($url['host']))
+    {
+        $b_host = $url['host'];
+        $b_url = $b_url.$b_host;
+    }
+    if(isset($url['path']))
+    {
+        $b_path = dirname($url['path']);
+        $b_url = $b_url.$b_path;
+    }
+}
+else
+{
+    echo("\nError!\n");
+    echo("Description: Unable to parse starting URL. ");
+    echo("Please enter a different URL to start from.\n");
+    echo("Starting URL: " .$start. "\n\n");
+    exit;
+}
+</code>
+</pre>
+
+	<p>Wow, that's a lot of stuff. Let's look at it line by line. The parse_url function in the argument of the if statement takes the <acronym title="Universal Resource Locator">URL</acronym> held in $start and breaks it down into all it's separate pieces. These pieces (scheme, host, and path) are than stored in their own variables for use later. The else statement returns an error and terminates our spider if the <acronym title="Universal Resource Locator">URL</acronym> we provided was unparsable (because we typed it in wrong or whatever).</p>
+
+<pre>
+<code>
+$links = array($start => "0");
+$gold = array();
+</code>
+</pre>
+
+	<p>The variables $links and $gold are both arrays. While strings, like $start, hold only one thing, arrays can hold lots of things. $links holds the links that our spider is going to follow, and so we initialize it with the <acronym title="Universal Resource Locator">URL</acronym> held in $start. We give it an initial value of "0" (it's a key => value array) to indicate that that link hasn't been followed yet. Later, a value of "1" will indicate that a link has been followed; that way we don't end up following the same link twice.</p>
+
+	<p>$gold is what's going to hold the results of our search, and it's initialized as an empty numeric array. While the keys in $link take the form of <acronym title="Universal Resource Locator">URL</acronym>s, the keys in $gold take the form of numbers. Zero is the first element in the array, one is the second, two is the third, etc. Elements of arrays are accessed with brackets (as we shall see later), and it is possible to have arrays of arrays, but we'll get to that when we get to that.</p>
+
+<pre>
+<code>
+while($p_link = array_search("0", $links))
+{
+    ...
+}
+</code>
+</pre>
+
+	<p>The function array_search is going to do just what it says. In this case, it is going to search the array $links for the first value that is "0" and return its key, which we'll store in $p_link. That means that $p_link is going to contain the <acronym title="Universal Resource Locator">URL</acronym> of any links our spider hasn't followed yet. Making this the argument of a while loop means that the statements inside the while loop will continue to execute until all the links have been looked at. i.e. Our spider will keep going until it's run out of links.</p>
+
+<pre>
+<code>
+$links[$p_link] = "1";
+</code>
+</pre>
+
+	<p>Here we're simply marking a link as having been seen. See how we can access the element of the $links array with brackets? If $links were a multi-dimensional array (an array of arrays) we'd access its elements with multiple sets of brackets like this: $array[$value1][$value2]</p>
+
+<pre>
+<code>
+if(@ $contents = file_get_contents($p_link))
+{
+    ...
+}
+</code>
+</pre>
+
+	<p>The function file_get_contents will take the <acronym title="Universal Resource Locator">URL</acronym> stored in $p_link, retrieve it, and store its contents in the variable $contents. We're sticking it inside an if statement because if the file retrieval fails we want our spider to just go on to the next link. The at symbol tells <acronym title="PHP Hypertext Preprocessor">PHP</acronym> that it should supress any warnings generated by executing this line of code. We don't need a bunch of garbage filling our screen for every malformed <acronym title="Universal Resource Locator">URL</acronym> we come across. After all, there are a lot of them on the web.</p>
+
+<pre>
+<code>
+echo("Following link: " .$p_link. "\n");
+</code>
+</pre>
+
+	<p>It's good to know what links we're following, so here we output them to the screen. When outputing the contents of variables (like $p_link), they have to be escaped by putting periods around them.</p>
+
+<pre>
+<code>
+if($url = parse_url($p_link))
+{
+    $p_url = $p_link;
+    if(isset($url['scheme']))
+    {
+        $p_scheme = $url['scheme'];
+        $p_url = $p_scheme."://";
+    }
+    if(isset($url['host']))
+    {
+        $p_host = $url['host'];
+        $p_url = $p_url.$p_host;
+    }
+    if(isset($url['path']))
+    {
+        $p_path = dirname($url['path']);
+        $p_url = $p_url.$p_path;
+    }
+}
+</code>
+</pre>
+
+	<p>Again, we're gathering information about the <acronym title="Universal Resource Locator">URL</acronym> we're looking to for use later. The dirname function in the last if statement simply drops the file's name from the path. So /directory1/directory2/file1.html becomes /directory1/directory2.</p>
+
+<pre>
+<code>
+preg_match_all($search, $contents, $search_results);
+</code>
+</pre>
+
+	<p>More Peral regular expressions. preg_match_all searches $contents (the contents of the <acronym title="Universal Resource Locator">URL</acronym> we just followed) for any matches to $search (the regex we're looking for). The results are stored in $search_results, which just happens to be a multi-dimensional array.</p>
+
+<pre>
+<code>
+for($i = 0; $i < count($search_results[1]); $i++)
+{
+    $result = $search_results[1][$i];
+    if(array_search($result, $gold) === false)
+    {
+        $gold[] = $result;
+    }
+}
+</code>
+</pre>
+
+	<p>This for loop dumps our search results into our $gold array if they aren't there already. Notice how all the operations on $search_results are done from an array index of 1. That's because the array index of 0 contains matches for the entire regex we searched for, including the emphasis tags. Array index 1 just contains the stuff between the tags (which is the stuff we care about), so it's all we're going to look at.</p>
+
+<pre>
+<code>
+preg_match_all("/href=\"(.*?)\"/", $contents, $link_results);
+</code>
+</pre>
+
+	<p>More extracting of stuff from $contents. This time we're getting all the links. We use a regular expression to match anything between the quotes of href="" which is the bit in an anchor tag that forms a <acronym title="Universal Resource Locator">URL</acronym>. $link_results holds our results of that search.</p>
+
+<pre>
+<code>
+for($i = 0; $i < count($link_results[1]); $i++)
+{
+    $c_link = $link_results[1][$i];
+    $c_valid = true;
+    $c_link = trim($c_link);
+    ...	
+}
+</code>
+</pre>
+
+	<p>This for loop interates through all the links in $link_results and picks them out one at a time. A boolean variable, $c_valid, is initially set as true. For now, we'll assume that the link we got from the page is one worth following. That may change in the future. The trim function is simply a safety precaution that removes any whitespace from the begining and end of our link.</p>
+
+<pre>
+<code>
+if(@ $url = parse_url($c_link))
+{
+    if(isset($url['host']))
+    {
+        $c_host = $url['host'];
+    }
+    if(isset($url['query']))
+    {
+        $c_query = $url['query'];
+    }
+    if(isset($url['fragment']))
+    {
+        $c_fragment = $url['fragment'];
+    }
+}
+else
+{
+    $c_valid = false;
+}
+</code>
+</pre>
+
+	<p>Sometimes it seems like information gathering and error surpression is all our spider does. Look at $c_query and $c_fragment. Can you figure out what they might be holding? Don't worry, we'll use them here in a few minutes. If we can't parse the link, it's bad, so we'll set $c_valid as false.</p>
+
+<pre>
+<code>
+if(preg_match("/^(http:|https:|ftp:|file:)/i", $c_link) &&
+   strpos($c_host, $b_host) === false)
+{
+    $c_valid = false;
+}
+</code>
+</pre>
+
+	<p>Marking external links as bad keeps our spider from wondering outside of the current site. An external link is defined as one that starts with either an http, https, ftp, or file scheme, and whose host name ($c_host) doesn't match the host name of the site we started on ($b_host).</p>
+
+<pre>
+<code>
+elseif(preg_match("/^(mailto:|javascript:|news:)/i", $c_link))
+{
+    $c_valid = false;
+}
+</code>
+</pre>
+
+	<p>More bad links. mailto, javascript, and news are also schemes we want our spider to avoid. The i at the end of the regex marks it as being case insensitive. The carrot at the begining means "the begining of the string should look like". The pipe symbols stand for or, and the parenthesis are just a way to group stuff.</p>
+
+<pre>
+<code>
+elseif(preg_match("/\.(jpg|gif|png|ico)$/i", $c_link))
+{
+    $c_valid = false;
+}
+elseif(preg_match("/\.(zip|rar|tar|gz)$/i", $c_link))
+{
+    $c_valid = false;
+}
+elseif(preg_match("/\.(c|pl|py|js|reg|orig)$/i", $c_link))
+{
+    $c_valid = false;
+}
+elseif(preg_match("/\.(exe|java|class)$/i", $c_link))
+{
+    $c_valid = false;
+}
+elseif(preg_match("/\.(css|xml|txt|doc|pdf|lit)$/i", $c_link))
+{
+    $c_valid = false;
+}
+elseif(preg_match("/\.(mp3|wav|ra|pm)$/i", $c_link))
+{
+    $c_valid = false;
+}
+</code>
+</pre>
+
+	<p>Don't follow sound files, archived files, executable files, pictures, etc. Notice how easy it would be to modify our spider so it kept of list of such things instead. Image searching, anyone?</p>
+
+<pre>
+<code>
+if($c_valid)
+{
+    if(isset($c_query))
+    {
+        $c_link = preg_replace("/\?(.*?)$/", "", $c_link);
+    }
+    if(isset($c_fragment))
+    {
+        $c_link = preg_replace("/#(.*?)$/", "", $c_link);
+    }
+    ...
+}
+</code>
+</pre>
+
+	<p>Remember the fragment and query parts we stored above? Here we get to throw them away. Fragments are the part of the <acronym title="Universal Resource Locator">URL</acronym> that comes after a hash symbol. Queries are the part that comes after a question mark. Neither is good for our current purposes, though you'll have to evalute your own needs with regards to them. Some site use them extensively, thus making their pages that much harder for search engines (or spiders) to index.</p>
+
+<pre>
+<code>
+if(preg_match("/^\//", $c_link))
+{
+    $c_link = $b_scheme."://".$b_host.$c_link;
+}
+</code>
+</pre>
+
+	<p>Here's the parts of the code where we start transforming relative <acronym title="Universal Resource Locator">URL</acronym>s (those that contain ./ and ../) into absolute ones. This is arguably one of the trickier parts of spider writing. The above code looks for <acronym title="Universal Resource Locator">URL</acronym>s that that start with a /, and then tacks our starting scheme and host name onto them.</p>
+
+<pre>
+<code>
+if(preg_match("/^\.\.\//", $c_link))
+{
+    preg_match_all("/\.\.\//", $c_link, $count);
+    $count = count($count[0]);
+
+    $c_link = preg_replace("/\.\.\//", "", $c_link);
+
+    $p_path = preg_replace("/^\//", "", $p_path);
+    $p_path = preg_replace("/\/$/", "", $p_path);
+
+    $path_array = explode("/", $p_path);
+    $new_path = "";
+    for($j = $count; $j > 0; $j--)
+    {
+    array_pop($path_array);
+    }
+    for($j = 0; $j < count($path_array); $j++)
+    {
+        $new_path = $new_path.$path_array[$j]."/";
+    }
+
+    $c_link = $p_scheme."://".$p_host."/".$new_path.$c_link;
+}
+</code>
+</pre>
+
+	<p>Wow, that's a nightmare. Here's the line by line. The preg_match function in the if statement finds the <acronym title="Universal Resource Locator">URL</acronym>s that start with ../. The next two lines use preg_match_all and count to count how many directories we're going to have to back up from where we currently are i.e. how many ../'s there are in this <acronym title="Universal Resource Locator">URL</acronym>. The next line, preg_replace, removes those ../'s. Leading and trailing slashes are removed from our current path ($p_path) too. Finally, we get to the tricky part. Our path gets exploded into an array ($path_array) by seperating it wherever there's a slash. Then, the required number of directories are removed from the end of the array with the array_pop function. Finally, the path is reassembled as $new_path. Last but not least, our link is put together with the scheme and host from the page we extracted it from.</p>
+
+<pre>
+<code>
+$c_link = preg_replace("/^\.\//", "", $c_link);
+</code>
+</pre>
+
+	<p>This case is a lot easier than the last one. <acronym title="Universal Resource Locator">URL</acronym>s that start with ./ are simply rewritten without it.</p>
+
+<pre>
+<code>
+if(!preg_match("/^http:/", $c_link))
+{
+    if(preg_match("/\/$/", $p_url))
+    {
+        $c_link = $p_url.$c_link;
+    }
+    else
+    {
+        $c_link = $p_url."/".$c_link;
+    }
+}
+</code>
+</pre>
+
+	<p>Finally, all those <acronym title="Universal Resource Locator">URL</acronym>s that are simply file.html are handled. We tack an absolute <acronym title="Universal Resource Locator">URL</acronym> of the current working directory onto them and add a slash if they need it.</p>
+
+<pre>
+<code>
+$c_link = preg_replace("/^http:\/\/www\./", "http://", $c_link);
+</code>
+</pre>
+
+	<p>You may or may not want to include this line of code in your spider. It assumes that <a target=_top href="http://searchlores.org/" title="Fravia's web searching lores.">http://searchlores.org/</a> and <a target=_top href="http://www.searchlores.org/" title="Fravia's web searching lores.">http://www.searchlores.org/</a> resolve to the same place, and the links get rewritten appropriatly so we don't look at the same pages twice. For some sites, that might be true; for other, it might not be. Play around and see.</p>
+
+<pre>
+<code>
+if(!array_key_exists($c_link, $links))
+{
+    $links[$c_link] = "0";
+}
+</code>
+</pre>
+
+	<p>Don't worry, the end is in sight. If we don't already have this link, we need to add it to our list and mark it as being one we haven't looked at. Because of the way this spider's written, it performs a breath first search. All the links from the first page are extracted and followed, then all the ones from the second page, then the third, and so and so forth until it runs out of links.</p>
+
+<pre>
+<code>
+echo("\nTotal number of links followed was ".count($links).".\n\n");
+echo("\nSearch results: \n\n");
+for($i = 0; $i < count($gold); $i++)
+{
+    echo($gold[$i]. "\n");
+}
+echo("\nTotal number of search results found was ".count($gold).".\n\n");
+</code>
+</pre>
+
+	<p>Give us some results, spider! After all, that's what we built you for. Here's the total number of links we looked at, the results of our search, and the total number of results found. Of course, you could always save this stuff to a file if you so chose.</p>
+
+
+	<h3 id="infieri">As always, in fieri</h3>
+
+	<p>That's it; that's our whole spider. Of course there are many more paths you can take from here. An essay on common secret questions for password guessing seems like unexplored territory. In addition, the spider you now have can easily be modified to harvest email addresses instead of emphasis tags. Learn the techniques of the spammers and then perhaps we can develope methods to fight against them (email addresses that are stored on a non-public part of the server and encoded / decoded on the fly maybe?).</p>
+
+	<p>If you do make some changes to this spider, please let me know. It's a little <acronym title="Central Processing Unit">CPU</acronym> intensive due to all the Perl regex functions, so speed improvements would be welcome. Bugs in the code, spelling errors in my prose; feedback is always appreciated.</p>
+
+<p>- <a href="mailto:frank@thiefsystems.org" title="Contact me.">Frank</a></p>
+
+
+<h3 id="spidercode">Spider code</h3>
+
+<pre>
+<code>
+#!/usr/bin/php
+&lt;?php
+   echo("\n");
+
+
+   // Where should we start searching from?
+   $start = "http://searchlores.org/";
+
+
+   // What should we be looking for?
+   $search = "/&lt;em&gt;(.*?)&lt;\/em&gt;/";
+
+
+   // Build information about the site we're going to search.
+   if($url = parse_url($start))
+   {
+      if(isset($url['scheme']))
+      {
+         $b_scheme = $url['scheme'];
+         $b_url = $b_scheme."://";
+      }
+      if(isset($url['host']))
+      {
+         $b_host = $url['host'];
+         $b_url = $b_url.$b_host;
+      }
+      if(isset($url['path']))
+      {
+         $b_path = dirname($url['path']);
+         $b_url = $b_url.$b_path;
+      }
+   }
+   else
+   {
+      echo("\nError!\n");
+      echo("Description: Unable to parse starting URL. ");
+      echo("Please enter a different URL to start from.\n");
+      echo("Starting URL: " .$start. "\n\n");
+      exit;
+   }
+
+
+   // Initialize our array of links.
+   $links = array($start => "0");
+
+
+   // Initialize our array of search results.
+   $gold = array();
+
+
+   // Keep crawling until we run out of links.
+   while($p_link = array_search("0", $links))
+   {
+      // Mark this link as having been seen.
+      $links[$p_link] = "1";
+
+
+      // Get the contents of the link we're currently looking at.
+      // If we fail this, there's no point in going further.
+      // We're going to surpress PHP's warning messages here as well.
+      if(@ $contents = file_get_contents($p_link))
+      {
+
+         // What link are we following?
+         echo("Following link: " .$p_link. "\n");
+
+
+         // Build information about the link we're currently looking at.
+         if($url = parse_url($p_link))
+         {
+            $p_url = $p_link;
+            if(isset($url['scheme']))
+            {
+               $p_scheme = $url['scheme'];
+               $p_url = $p_scheme."://";
+            }
+            if(isset($url['host']))
+            {
+               $p_host = $url['host'];
+               $p_url = $p_url.$p_host;
+            }
+            if(isset($url['path']))
+            {
+               $p_path = dirname($url['path']);
+               $p_url = $p_url.$p_path;
+            }
+         }
+
+
+         // Extract all the search matches from the current page.
+         preg_match_all($search, $contents, $search_results);
+
+
+         // Put the search results into our pot of gold.
+         for($i = 0; $i < count($search_results[1]); $i++)
+         {
+            $result = $search_results[1][$i];
+            if(array_search($result, $gold) === false)
+            {
+               $gold[] = $result;
+            }
+         }
+
+
+         // Extract the links from the current page.
+         preg_match_all("/href=\"(.*?)\"/", $contents, $link_results);
+
+
+         // Loop through our extracted links and manipulate them.
+         for($i = 0; $i < count($link_results[1]); $i++)
+         {
+
+            // Get an extracted link from out list and assume it's good.
+            $c_link = $link_results[1][$i];
+            $c_valid = true;
+
+
+            // Trim any whitespace that might be on our link.
+            $c_link = trim($c_link);
+
+
+            // Build information about our extracted link.
+            // If we can't parse the URL, don't continue.
+            // Surpress all PHP warnings here as well.
+            if(@ $url = parse_url($c_link))
+            {
+               if(isset($url['host']))
+               {
+                  $c_host = $url['host'];
+               }
+               if(isset($url['query']))
+               {
+                  $c_query = $url['query'];
+               }
+               if(isset($url['fragment']))
+               {
+                  $c_fragment = $url['fragment'];
+               }
+            }
+            else
+            {
+               // If we won't be able to follow it, mark it as bad.
+               $c_valid = false;
+            }
+
+
+            // Decide wether this link is internal or external.
+            // If it's external, we don't want to follow it.
+            if(preg_match("/^(http:|https:|ftp:|file:)/i", $c_link) &&
+               strpos($c_host, $b_host) === false)
+            {
+               $c_valid = false;
+            }
+
+
+            // Don't follow javascript or mailto links.
+            elseif(preg_match("/^(mailto:|javascript:|news:)/i", $c_link))
+            {
+               $c_valid = false;
+            }
+
+
+            // Don't follow pictures, zip files, etc.
+            elseif(preg_match("/\.(jpg|gif|png|ico)$/i", $c_link))
+            {
+               $c_valid = false;
+            }
+            elseif(preg_match("/\.(zip|rar|tar|gz)$/i", $c_link))
+            {
+               $c_valid = false;
+            }
+            elseif(preg_match("/\.(c|pl|py|js|reg|orig)$/i", $c_link)
+            {
+               $c_valid = false;
+            }
+            elseif(preg_match("/\.(exe|java|class)$/i", $c_link))
+            {
+               $c_valid = false;
+            }
+            elseif(preg_match("/\.(css|xml|txt|doc|pdf|lit)$/i", $c_link))
+            {
+               $c_valid = false;
+            }
+            elseif(preg_match("/\.(mp3|wav|ra|pm)$/i", $c_link))
+            {
+               $c_valid = false;
+            }
+
+
+            // If our link's made it this far, it's good, so let's keep it.
+            if($c_valid)
+            {
+
+               // Remove queries from the end of a link.
+               if(isset($c_query))
+               {
+                  $c_link = preg_replace("/\?(.*?)$/", "", $c_link);
+               }
+
+
+               // Remove fragments from the end of a link.
+               if(isset($c_fragment))
+               {
+                  $c_link = preg_replace("/#(.*?)$/", "", $c_link);
+               }
+
+
+               // Case 1: The URL is of the form: /directory/file
+               if(preg_match("/^\//", $c_link))
+               {
+                  $c_link = $b_scheme."://".$b_host.$c_link;
+               }
+
+
+               // Case 2: The URL is of the form: ../directory/file
+               if(preg_match("/^\.\.\//", $c_link))
+               {
+
+                  // How many directories will we have to backtrack into?
+                  preg_match_all("/\.\.\//", $c_link, $count);
+                  $count = count($count[0]);
+
+                  // Remove the relative bits from our link.
+                  $c_link = preg_replace("/\.\.\//", "", $c_link);
+
+                  // Remove leading and trailing slashes from our path.
+                  $p_path = preg_replace("/^\//", "", $p_path);
+                  $p_path = preg_replace("/\/$/", "", $p_path);
+
+                  // Backtrack the required number of directories.
+                  $path_array = explode("/", $p_path);
+                  $new_path = "";
+                  for($j = $count; $j > 0; $j--)
+                  {
+                     array_pop($path_array);
+                  }
+                  for($j = 0; $j < count($path_array); $j++)
+                  {
+                     $new_path = $new_path.$path_array[$j]."/";
+                  }
+
+                  // Tack our new path onto the begining of our link.
+                  $c_link = $p_scheme."://".$p_host."/".$new_path.$c_link;
+               }
+
+
+               // Case 3: The URL is of the form: ./directory/file
+               $c_link = preg_replace("/^\.\//", "", $c_link);
+
+
+               // Case 4: The URL is of the form: file
+               if(!preg_match("/^http:/", $c_link))
+               {
+                  if(preg_match("/\/$/", $p_url))
+                  {
+                     $c_link = $p_url.$c_link;
+                  }
+                  else
+                  {
+                     $c_link = $p_url."/".$c_link;
+                  }
+               }
+
+
+               // Remove any www. stuff from the start of our link.
+               $c_link = preg_replace("/^http:\/\/www\./", "http://", $c_link);
+
+               // Add our extracted list to our list of links to look at.
+               if(!array_key_exists($c_link, $links))
+               {
+                  $links[$c_link] = "0";
+               }
+            }
+         }
+      }
+   }
+
+
+   // How many links did we end up following?
+   echo("\nTotal number of links followed was ".count($links).".\n\n");
+
+
+   // What kind of search results did we get?
+   echo("\nSearch results: \n\n");
+   for($i = 0; $i < count($gold); $i++)
+   {
+      echo($gold[$i]. "\n");
+   }
+   echo("\nTotal number of search results found was ".count($gold).".\n\n");
+
+?&gt;
+</code>
+</pre>
+</div>
+
+<div id="footer">
+	<p>Copyright &copy; 2004 by Frank Mitchell. All rights reserved.</p>
+</div>
+
+</div>
+<center> 
+
+<br><hr>
+<br>Published @ <a href="http://www.searchlores.org">searchlores</a> in September 2004
+&nbsp;&nbsp;&nbsp;
+Back to <a href="p2p.htm">P2P</a>
+&nbsp;&nbsp;&nbsp;
+Back to <a href="bots.htm">Bots</a><br></center><hr>
+<br>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+ (c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>

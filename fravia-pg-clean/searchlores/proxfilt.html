@@ -1,0 +1,468 @@
+<html>
+<title>The Proxomitron Filter Examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<body background="https://searchlores.nickifaulk.com/back.jpg" text="#000044" link="#0000FF" vlink="#000044">
+
+<table width="100%"><tr><td align=left>
+<h2>The Proxomitron</h2
+<h3>Filter Examples &nbsp; originally at <a href="http://www.sankey.ws">http://www.sankey.ws</a></h3></h3>
+<h4><a href="http://www.sankey.ws/contact.html">John Sankey</a></h4>
+<p><a href="http://www.sankey.ws/proxomitron.html"><b>Introduction</b></a>
+<br><a href="http://www.sankey.ws/proxtech.html"><b>Technical Details</b></a>
+<br><a href="proxlang.html"><b>The Filter Language</b></a>
+<br><b>Filter Examples</b>
+<br>&nbsp; <a href="proxfilt.html#1">Wipe out a feature of HTML</a>
+<br>&nbsp; <a href="proxfilt.html#2">Exception Filters</a>
+<br>&nbsp; <a href="proxfilt.html#3">Remove elements within a tag</a>
+<br>&nbsp; <a href="proxfilt.html#4">Convert one tag to another</a>
+<br>&nbsp; <a href="proxfilt.html#5">Get rid of CGI URL's</a>
+<br>&nbsp; <a href="proxfilt.html#6">Use lists to deal with our complex world</a>
+<br>&nbsp; <a href="proxfilt.html#7">Change the entire configuration of The Proxomitron</a>
+<br>&nbsp; <a href="proxfilt.html#8">Get rid of banner ads</a>
+<br>&nbsp; <a href="proxfilt.html#last">Further Sources</a>
+<td align=center nowrap>
+<img src="https://searchlores.nickifaulk.com/prox0.gif" width=155 height=155>
+<br><b>The Proxomitron</b>
+<br>Keeping an eye on the Web.
+<br>For You.
+</table>
+
+<a name="1"></a><h2>Wipe out a feature of HTML</h2>
+<p>
+Some features of the Web are so risky or obnoxious that they should be wiped out altogether.
+The top three are applets, ActiveX, and active scripting.
+<p><code>
+Name = "Kill applets"
+<br>Limit = 32767
+<br>Match = "&lt;applet\s*&lt;/applet&gt;"
+</code><p>
+Applets are programs sitting in your computer. Most run at the same privilege as your browser -
+they can read or write absolutely anything on your entire system (including any network to which
+you are connected). Some applets are distributed with your browser, but any kid on the Internet
+can download one to you if you have applets enabled (in IE at least). That new applet can take
+the name of an existing applet, and be a virus, trojan, or anything anyone in the world happens
+to feel like using you for
+(cf. <a target=_top href="http://www.grc.com/dos/grcdos.htm">The Attacks on GRC.COM</a>).
+Stopping them, possibly except from trusted sites, is a basic security step. (Turning off
+Outlook Express is even more important - that's how most viri and trojans are actually distributed.
+Old-fashioned BBS text-only mail systems have their merits!)
+<p>
+HTML invokes applets with a beginning and end tag: &lt;applet <i>appletname</i>&gt; starts one,
+and &lt;/applet&gt; ends it. So, this filter is triggered by the &lt;applet sequence (without
+the &gt; - remember that applet has one or more fields between &lt;applet and the tag completion
+&gt;, they can appear in any order and they could be anything at all including nonsense!) The
+filter then looks for anything at all (the *) until it finds &lt;/applet&gt;, then stops.
+Then, it simply deletes (replaces by nothing) the whole sequence - tag, fields and all.
+Your browser never sees it.
+<p>
+You can also turn off applets in most browsers, and you should - there are new ways found every
+month or so to sneak trojans and other destructive programs into your computer. For example,
+MIME type "multipart/x-mixed-replace" allows more than one HTML page for every GET request.
+Each has its own header, and they don't have to be HTML - application/octet-stream loads
+anything the remote site wants onto your computer, then runs it. The Proxomitron only knows
+how to filter HTML (http://) and SSL (https://).
+<p>
+Note the large Limit - applets are so dangerous that you want to be sure you get rid
+of them, no matter how long they are. If you meet up with a malformed page that doesn't
+close an applet, The Proxomitron will have to read all the way to the end of the page
+before it can send any of it to your browser - slow but safe.
+<p>
+If you want to be warned when you meet up with a site that uses applets, add
+<br><code>Replace = "[Applet Killed]"</code>
+<br>Just remember that this will only let you know of the 'up front' applets, not
+the sneaky ones.
+<p><code>
+Name = "Kill ActiveX"
+<br>URL = "^(*.microsoft.com/)"
+<br>Match = "&lt;object\s*&lt;/object&gt;"
+</code><p>
+This works the same as the Kill applets filter, but deletes ActiveX things except for Microsoft
+sites that supply updates for your operating system. (If you don't trust Microsoft, you're
+using Linux or something like it, and ActiveX won't work anyway!) As with applets, it's a good
+precaution to turn off ActiveX in your browser as well, and only activate it when you want to
+update Microsoft code online. (By the way, Microsoft provides file download executables for
+most updates; using them you don't need ActiveX at all, and you can back up your upgrades
+as well.)
+<p><code>
+Name = "Kill scripts"
+<br>Match = "&lt;script\s*&lt;/script&gt;"
+</code><p>
+This works the same as the Kill applets filter, but deletes all scripts, no matter what
+language they are written in. (JavaScript is the most common, of course.) JavaScript commands
+can be used to read anything on your computer that you can read as a user on most systems.
+They can only be 'understood' by a full-blown Java interpreter, as there are so many
+different ways the same code can be written. (For example, "expires" can be written
+"exp"+"ires" ...) So, it is not possible for a program as simple as The Proxomitron to
+filter them reliably. Killing them all, except for a few trustworthy sites, is a sensible
+option, particularly with browsers that have no facility to turn them off. (IE4.73,
+for example, only has an option to disable 'active scripting', not all JavaScript,
+and the distinction depends on where the source page comes from.)
+A large Limit is also advisable for this filter, since some pages are now entirely
+in JavaScript with HTML tags around the script to disguise them.
+<p>
+Use the same filter design to get rid of anything else that you don't want on your monitor:
+styles, iFrames (Microsoft's idea of progress) and Layers (Netscape's brainwave). Others are
+sure to turn up in the future! Just use a small Limit for anything that is not potentially
+destructive, so the page will load as quickly as possible.
+
+<a name="2"></a><h2>Exception Filters</h2>
+<p>
+Often you want to allow one form of a tag that you appreciate or trust, while barring
+other variants of it that cause you problems. &lt;Meta...&gt; is a prime candidate.
+You want to get the content-type meta (even if you aren't into Arabic or Chinese, quite a few
+sites use 16-bit Unicode now). But, every day browser writers seem to dream up a new meta that
+disables your back button (http-equiv=refresh),
+fouls up caching (expires, nocache, pragma), makes you twiddle your thumbs for ages
+with fades from one page to another (page-enter, page-exit, site-enter, site-exit),
+or is some other similar nuisance.
+<p><code>
+Name = "Allow content-type meta"
+<br>Bounds="&lt;meta\s*&gt;"
+<br>Match = "\1"content-type"\2"
+<br>Replace = "\1"content-type"\2"
+<br>&nbsp;
+<br>Name = "Kill metas"
+<br>Match = "&lt;meta\s*&gt;"
+</code><p>
+This introduces the <a href="https://searchlores.nickifaulk.com/proxtech.html#bound">Bounds</a> feature of The Proxomitron.
+A filter with Bounds will only be effective within the range matched by the Bounds -
+in this case within a meta tag.
+<p>
+The first filter says: within the limits set by the bound, record all characters that exist
+before <code>"content-type"</code> into variable \1, save all characters that
+exist after <code>"content-type"</code> into \2, then put everything back. If
+<code>"content-type"</code> doesn't exist, the filter does nothing and the tag
+gets passed on to the second filter.
+<p>
+When a filter matches a code in the input HTML, (unless you tell The Proxomitron otherwise
+with the <a href="https://searchlores.nickifaulk.com/proxtech.html#multi">Multi function</a>) it 'uses up' the code - it's not
+available to be grabbed by the second filter. That's how this combination of filters lets
+the desired meta tag through and blocks all the rest.
+<p>
+This multifilter method lets you do quite complex things, like accepting a specific meta
+from just one 'gotta-have' site, a second from just another site, etc. But, if you only
+want to let one thing through from everywhere, and block the rest (also from everywhere),
+there is a more elegant way (although the syntax is more confusing!):
+<a name="navd"></a><p><code>
+Name = "Allow content-type metas but no others"
+<br>Bounds="&lt;meta\s*&gt;"
+<br>Match="(^<font color=blue>[^&gt;]++"content-type"</font>)*"
+</code><p>
+This introduces the logical-test function of The Proxomitron [^], and the repeat function +.
+<code>[^&gt;]+</code> means: repeatedly test characters from here on until you find a
+&gt;. A negated expression doesn't 'use up' characters it doesn't match. The bound starts
+with &lt;, so there must be at least one character that <code>[^&gt;]+</code> doesn't match.
+Following it with the second + and <code>"content-type"</code> says: if, on the way, the
+test meets up with <code>"content-type"</code>, then set the result of the test
+(the 'value' of everything in blue) as TRUE. Otherwise, the result of the test is FALSE
+(the leading &lt;).
+<p>
+Then, apply the NOT function (the leading ^) to the blue test result. That makes the value of everything
+in the outer parentheses TRUE if <code>"content-type"</code> was not found,
+FALSE if it was found.
+<p>
+Finally, apply that TRUE/FALSE result to the match-everything function (the trailing *). That is,
+'use up' everything within the bounds if the value of the outer parentheses is TRUE,
+but take no action if the value is FALSE. Since there is no Replace in the filter,
+everything that is 'used up' in the Match is replaced by nothing.
+<p>
+Is there more than one meta tag you'd like to let through? Read on for how to use
+The Proxomitron <a href="proxfilt.html#6">OR function and lists</a>.
+
+<a name="3"></a><h2>Remove elements within a tag</h2>
+<p>
+Often you'll want to remove only one element of a tag while leaving the rest as they are. Or,
+you will want to write separate filters for each part of a tag, for flexibility or simplicity.
+<p><code>
+Name = "eliminate page background images"
+<br>Bounds="&lt;body\s*&gt;"
+<br>Multi = TRUE
+<br>Matching: "\1background="*"\2"
+<br>Replace = "\1\2"
+</code><p>
+This filter introduces the <a href="https://searchlores.nickifaulk.com/proxtech.html#multi">Multi function</a>. Normally, when a filter
+matches a code in the input HTML, it 'uses up' the code - it's not available to be grabbed
+by another second filter. When you change just one element of a tag, and other filters might
+need to grab other elements that occur before the element you have matched, use Multi=TRUE.
+Just remember that, if you do, <b>YOU</b> are responsible for ensuring that
+there is no way that the filter can match its replacement text. If it does,
+you will get an infinite loop and have to stop The Proxomitron with its Abort button.
+<p>
+Anyway, within the bound, this filter looks for the element that is used to specify a page background
+image. Everything before that element is put into variable 1. The equals = sign also matches
+spaces on either side of it. The doublequote matches either a single or double quote, the *
+matches everything up to the next quote. Finally, the rest of the bound is put into variable 2.
+\1\2 just puts everything within the bound back except for the element it removed.
+<p>
+Some elements can appear more than once within a tag. Then, you need a recursive filter -
+one that keeps being called until all elements have been removed. There are two ways of doing
+this - internal (stack) and external (added space). Here is how you do it with the stack.
+<p><code>
+Name = "Kill All Link Colors"
+<br>Multi = TRUE
+<br>Bounds = "&lt;body\s*&gt;"
+<br>Match = "(\#<font color=blue>(<font color=navy>(a|v|)link</font>=\w)</font>)+ \#"
+<br>Replace = "\@"
+</code><p>
+This introduces The Proxomitron's stack - a variable that can hold many things, not just one as
+in the case of \1. Here's how it works.
+<p>
+The part in <font color=navy>dark blue</font> matches alink, vlink or link. So, the part in
+blue matches all forms of a body link colour such as link=blue or alink="#FFFFFF". When one of
+these is matched, everything within the bounds prior to it is put in the stack. The + says
+to repeat until there are no more matches, then the final \# grabs the rest.
+<p>
+For example, consider
+<br><code>&lt;body link=black bgcolor=white alink=black&gt;</code>
+<br>The first match is to "link=black", so "&lt;body&nbsp;" is put in the stack (position 1).
+The filter is then pointing to the space following "link=black". On the next repeat, it
+matches "alink=black", and "&nbsp;bgcolor=white&nbsp;" is put in the stack (position 2).
+There are no more matches, so the trailing &gt; is put in the stack (position 3).
+<p>
+Now the replace \@ dumps the stack, first in first out: "&lt;body&nbsp;&nbsp;bgcolor=white&nbsp;&gt;".
+All link colours have been removed in one invocation of the filter.
+(Of course, if you are colour or vision impaired, you will actually want to remove the entire
+body tag - background colour and image too - so you see the colours you set in your browser.)
+
+<a name="4"></a><h2>Convert one tag to another</h2>
+<p>
+Comments are usually put in pages by HTML generators (those 'point click and ignore the
+crappy code' programs), but occasionally even by programmers so they can figure out what
+they are doing. You'd be surprised how often programmers mark off the beginning and end
+of ads and other corruption by comments! Sometimes, seeing them can be really useful.
+<p>
+But, converting tag&nbsp;1 to tag&nbsp;2 can be tricky. The first thing to do with any
+such conversion is to ensure that side effects do not occur with anything
+that is inside the changed tag.
+<p>
+Side effect 1: it is common practice to comment everything inside JavaScript tags so browsers
+without JavaScript support won't try to display them. (A browser is supposed to ignore anything
+it doesn't understand, and non-Java browsers don't understand script tags.) JavaScript ignores
+HTML comment marks but may not ignore what you replace them with. If you use JavaScript and
+want to ensure that it isn't fouled up by a Comment Viewer set, you need to start with:
+<p><code>
+Name = "Remove fake JavaScript comments"
+<br>Multi = TRUE
+<br>Bounds = "&lt;script\s*&lt;/script&gt;"
+<br>Limit = 32767
+<br>Match = "\1(&lt;!--|--&gt;)&nbsp;\2"
+<br>Replace = "&nbsp;\1&nbsp;\2"
+</code><p>
+This will remove all 'comment' markings within JavaScripts before the following stages have
+a chance to see them. Note the <a href="proxlang.html#bktvar">space between ) and \2</a>
+in the match.
+<p>
+Also note the space before the \1 in the Replace. The Proxomitron avoids infinite
+loops by 'using up' one character <a href="https://searchlores.nickifaulk.com/proxtech.html#multi">each pass</a> through the filter
+list. If you don't add the space, then the bounds would see "script..." the next pass, and
+wouldn't match. If you need to recursively activate a filter, you <b>must</b> add
+a leading space in the replace string, so that it will be the one character used up.
+<p>
+Side effect 2: If a page 'comments out' a section of code that doesn't work, simply removing
+the comment marks would activate that code! So, you need to replace all &lt; and &gt; within
+the comment to &amp;lt; and &amp;gt; respectively, so your browser will display them but not
+act on them. HTML comments begin with &lt;!-- and end with --&gt;, so the requirement is to
+change &lt; and &gt; within comments, and leave the comment available for further editing just
+as the background image filter did. There may be more than one &lt;&nbsp;&gt; pair within a
+comment, so recursion is needed. The following method allows The Proxomitron to take several
+passes through the filter list to complete the job, rather than using the stack to do
+everything in one pass.
+<p>
+Comments begin with &lt; and end with &gt; - if the leading &lt; were to be changed part way
+through the recursion, the bounds would stop matching; if the trailing &gt; were changed,
+the bounds would then extend to the end of the next comment after the one being worked on.
+So, to begin:
+<p><code>
+Name = "Comment Viewer stage 1"
+<br>Multi = TRUE
+<br>Bounds = "&lt;!--*--&gt;"
+<br>Match = "?\1&lt;\2"
+<br>Replace = "<\1&amp;lt;\2"
+</code><br>
+This filter changes all the &lt;'s. The 'match any single character' ? is used to match the
+leading &lt; so the rest of the match can't affect it, and the replace restores it.
+<p><code>
+Name = "Comment Viewer stage 2"
+<br>Multi = TRUE
+<br>Bounds = "&lt;!--*--&gt;"
+<br>Match="(^<font color=blue>[^&gt;]++--&gt;</font>)\1&gt;\2"
+<br>Replace = "&nbsp;\1&amp;gt;\2"
+</code><br>
+The ? technique of stage 1 can't be used for a trailing character - the preceding \2 will
+never leave anything left for a trailing ? to match. This filter changes a &gt; unless it
+is preceeded with --. As with the <a href="proxfilt.html#navd">meta filter</a>, the portion in blue
+is TRUE if the test reaches a --&gt;, but FALSE if a &gt; has been found before the --&gt;.
+The leading ^ inverts the blue value, so if the match occurs, the &gt; is replaced by &amp;gt;,
+otherwise stage 2 takes no action.
+<p>
+Note again the space before the \1 in the Replace of filter 2. In this
+case, since stage 1 and 2 operate as one, the recursion space need only be added by stage 2.
+<p>
+Now (at last!) you can safely make everything visible with
+<p><code>
+Name = "Comment Viewer stage 3"
+<br>Match = "&lt;!--\1--&gt;"
+<br>Replace = "&lt;small&gt;[\1]&lt;/small&gt;"
+</code><p>
+<p>
+The Match clause puts everything within the comment into variable \1. The Proxomitron then
+sends a 'set font one size smaller' to your browser, a left square bracket [, all the comment
+(variable \1), then right square bracket ], and finally restores normal font size.
+In short, it converts an invisible feature to a visible feature. And, at this point, neither Multi
+nor leading space are needed - the job is done.
+
+<a name="5"></a><h2>Get rid of CGI URL's</h2>
+Some search engines don't give you the real links to indexed sites, but instead bury them
+in a CGI code so they can collect revenue from clicks. Really, you should use impartial search
+engines - the CGI code is used to collect revenues from sites who pay for preferential appearance
+in your searches. But if you insist, here is how you get to the real sites with such engines.
+The syntax of these CGI links is:
+<ol>
+<li>they are within bounds &lt;a\s*&gt;,
+<li>they have a URL (that may be relative) prior to an ? and another after, and it is the latter
+one that is wanted,
+<li>the wanted URL begins with http:, https: or ftp: (that is, they are always offsite), and
+<li>the wanted URL may end with any of "'&lt;&amp; and may be escaped with %hh equivalents.
+</ol><p>
+So, within &lt;a\s*&gt; we have to look for href= followed by ? in turn followed by
+(http:|https:|ftp:) in turn followed by one of "'&lt;&amp; then grab the parts we want:
+<p><code>
+Name = "Convert CGI links to real ones"
+<br>Bounds = "&lt;a\s*&gt;"
+<br>Match = "*href=*\?*(http(s|):|ftp:)\1\2["'&amp;&lt;]*"
+<br>Replace = "&lt;a href="$UESC(\1\2)"&gt;"
+</code><p>
+? is a metacharacter in the filter language, so has to be escaped with \.
+Since there is no space between \1 and the preceding parenthesis, \1 grabs whatever is matched
+within the parentheses, that is, http: https: or ftp:, whichever it is. \2 grabs everything
+up to the next character that can't be part of a valid URL. $UESC then unescapes the hex code
+stuff in the URL you want so you can read it. Everything else is dumped, including
+JavaJunk that can spoof you into thinking that you are visiting mother.teresa.god when
+you are actually being sent to raw.sex.com.
+
+<a name="6"></a><h2>Use lists to deal with our complex world</h2>
+<p><code>
+Name = "Kill all Images on selected pages"
+<br>URL = "$LST(NoImages)"
+<br>Match = "&lt;i(mg|mage|nput)\s*&gt;"
+</code><p>
+Sometimes things get so messy that you need a big long <a href="https://searchlores.nickifaulk.com/proxtech.html#list">list</a>
+of things you trust, or things you
+don't. This filter uses such a list. Open up The Proxomitron Config/Blockfile window,
+and you will see a list called NoImages, followed by the name of the file that contains the list.
+$LST(NoImages) tells The Proxomitron  to start by checking to see if the URL you are viewing
+is in that list. If it isn't, then the filter is not activated, but if it is, the filter is
+triggered by any of the three ways in which images are identified in various versions of HTML.
+<p>
+The | character is the OR function. Parentheses () group rules together. So, the filter is triggered
+by &lt;i followed by (mg OR mage OR nput). In full, by &lt;img, &lt;image, or &lt;input.
+Everything about an image ends with the next &gt;, so all the filter has to do is to match
+everything that follows one of these three sequences until a &gt; is found, then stop.
+As with the previous filters, this filter just replaces the whole image tag with nothing,
+so your browser never sees it.
+<p>
+Want to replace images with [IMAGE] the way Lynx does? Just add
+<br><code>Replace = "[IMAGE]"</code>
+
+<a name="7"></a><h2>Change the entire configuration of The Proxomitron</h2>
+<p>
+If things really get desperate - if you can't access somesite.com you'll get fired or divorced
+&nbsp;<b>:-)</b>&nbsp; a filter can replace the entire configuration of The Proxomitron.
+First, put this filter in default.cfg:
+<br><code>
+URL = "*somesite.com/"
+<br>Match = "\1"
+<br>Replace = "$JUMP(http://load//altconfig.cfg?\1)"
+</code>
+<p>Then in altconfig.cfg put:
+<br><code>URL = "^(*somesite.com/)"
+<br>Match = "\1"
+<br>Replace = "$JUMP(http://load//default.cfg?\1)"
+</code><p>
+With these filters, when default.cfg is loaded and The Proxomitron sees a URL containing
+somesite.com, it will load altconfig.cfg. If altconfig.cfg is loaded and it sees any URL
+that isn't somesite.com, it will load default.cfg.
+
+<a name="8"></a><h2>Get rid of banner ads</h2>
+<p>
+This filter is distributed with The Proxomitron. Since ad merchants are continually modifying
+their methods, this description is designed to enable you to keep it up to date.
+<p><code>
+Name = "Banner Blaster"
+<br>Multi = TRUE
+<br>Bounds = "&lt;a\s*&lt;/a&gt;|&lt;input*&gt;"
+<br>Limit = 2048
+<br>Match = "
+<br><font color=maroon>\1&lt;(img|image|input)*&gt;\3</font>
+<br><font color=red size="+2"><b>&amp;</b></font>
+<br>(
+<br>&nbsp;<font color=blue size="+1">*</font><font color=green>(href|src)=\w
+<br>&nbsp;([^o]ads[./]|
+<br>&nbsp; /ad|
+<br>&nbsp; (ad|log_)click|
+<br>&nbsp; click(thru|er)|
+<br>&nbsp; (banner|ad|acct|source|click)id=|
+<br>&nbsp; (to|seed|banner|page)=|
+<br>&nbsp; banners|
+<br>&nbsp; adbanner|
+<br>&nbsp; adfu.|
+<br>&nbsp; sponsor|
+<br>&nbsp; adver|
+<br>&nbsp; promo|
+<br>&nbsp; redirect
+<br>&nbsp; )</font><font color=purple><b>|</b></font>
+<br>&nbsp;<font color=blue size="+1">*</font><font color=teal>http://*&lt;img\s
+<br>&nbsp;(*width=[#460-480] &amp; *height=[#55-60]|
+<br>&nbsp;  *src=\wcgi\w
+<br>&nbsp; )
+<br>&nbsp;*&gt;</font>
+<br>&nbsp;)<font color=blue size="+1">*</font>
+<br><font color=red size="+2"><b>&amp;</b></font>
+<br><font color=olive>(*alt="\2"|)</font>
+<br>"
+<br>Replace = "&lt;center&gt;\1[\2]\3&lt;/center&gt;"
+</code><p>
+This is one formidable filter - it's half of WebWasher&reg; or AdSubtract&reg; in one rule!
+To help understand it, it is shown above indented by structure without
+the <a href="proxlang.html#format">quotes</a> that would be required for it to actually work
+in The Proxomitron with indenting.
+<p>
+All ads are enclosed in an anchor or input tag, because the whole point is to persuade you
+to click on them to generate revenue. So, the bounds restrict filter activity to those tags.
+Multi is set TRUE because ad pushers try everything they can think of to get your attention.
+(The filter adds &lt;center&gt; at the beginning of its replace line so recursion works. If
+you take that out, add a space instead.)
+<p>
+The Match has three sections, connected by <font color=red size="+1">&amp;</font> (AND).
+So, all three sections must match for it to activate.
+<p>
+The <font color=maroon>first section</font> looks for an image or input tag. If there is one,
+everything within the bounds prior to the tag is put into \1, everything after into \3.
+(If there is no image or input, the filter quits right there.)
+<p>
+The second section is two lists of things to test for separated by the purple
+<font color=purple><b>|</b></font> (OR). So, if either of them is satisfied, this section matches
+and the filter is activated. The <font color=green>first list</font> begins with the first blue
+<font color=blue>*</font> and checks for either href or src followed by any one of the kinds of
+path or file names that servers use for ads. (Why [^o]ads[./]? To avoid blocking 'downlo<b>ads</b>'!) The
+<font color=teal>second list</font> begins with the second blue <font color=blue>*</font> and looks
+for an off-site image with dimensions that are almost always ads. It also checks for images delivered
+by CGI because these are invariably ads. The three blue <font color=blue>*</font>'s ensure that this
+section can match no matter where in the bounds the matched element is.
+<p>
+The <font color=olive>third section</font> looks for
+<a href="proxlang.html#tfson">something or nothing</a>, the 'something' being an ALT text.
+So this section puts any ALT text into \2, but matches even if there is no ALT.
+<p>
+Finally, if the filter matched, it outputs anything that existed before the image, any ALT text
+it found, then anything that existed after the image. So, you can still click on it if you really
+want to. If you simply want to get rid of ads altogether, omit the Replace and Multi lines.
+
+<a name="last"></a><h2>Further Sources</h2>
+<p>
+There are more filter explanations at
+<br>The Proxomitron <a href="http://www.sankey.ws/proxtech.html#tips">Tips and Tricks</a> and
+<br><a target=_top href="http://website.lineone.net/~pit-stop/downloads.htm">Dave's site</a>.
+<p>There are other filters at
+<br><a target=_top href="http://www.geocities.com/u82011729/prox/">Paul's site</a>.
+</body></html>

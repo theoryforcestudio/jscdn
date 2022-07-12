@@ -1,0 +1,506 @@
+<HTML>
+<HEAD>
+<TITLE>sono_bot.htm: spider.r: a handy search tool and intro to REBOL
+</TITLE></HEAD><BODY BGCOLOR=#C0C0C0 TEXT=#001010
+VLINK=#405040>
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%"  HEIGHT="22">
+<TR><td></td><td>
+<!-- Choose  a TITLE and a subtitle, choose well! -->
+<center><FONT SIZE="+2">
+spider.r
+</fonT><br><FONT SIZE="+1">
+a handy search tool and intro to REBOL
+</fonT></center></td><td>
+<!-- Choose  a PROJECT GIF, leave this if unsure -->
+<center><a href="bots.htm"><img SRC="https://searchlores.nickifaulk.com/botstart.gif"
+ALT="bots" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0
+VSPACE=0
+HSPACE=0></a><br><font color=gray>Bots section</FonT>
+<br><bR></center>
+</center></td></tr><tR><td
+bgcolor="#FFFFEA"><center><FONT COLOR="890000">
+<!-- CHOOSE A DATE (will probably be changed) -->
+21 September '99
+</FONT></center></td><td bgcolor="#FFFFEA"><center>by
+<font size=+3>
+<!-- CHOOSE A HANDLE , i.e. your pseudo (wont be
+changed) -->
+sonofsamiam
+</fonT></center></td><td VALIGN="center"
+bgcolor="#FFFFEA">
+<!--
+<a href="hcu98_3.htm"><IMG SRC="hcu1.gif"
+ALT="+cracker" ALIGN=BOTTOM
+WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+-->
+</td></tr><TR><td><center><a href="index.htm"><IMG
+SRC="images/bulletr.gif" 
+ALIGN="BOTTOM"
+BORDER="0" VSPACE="0" HSPACE="0"></a></center></td>
+<TD BGCOLOR="898030"><center>Courtesy of Fravia's searchlores.org</center>
+</center></TD><td BGCOLOR="898030"><center>
+<!-- Your truly+ will edit only if really necessary
+-->
+very slightly edited
+<br>
+by fravia+
+</center></td></TR>
+<!-- this is for the
+data.....fra_00xx....yymmdd....handle..beg+int...not 
+ass... -->
+<tr><td><font 
+color="#C4C0CF">fra_00xx<bR>980921<br>sonofsamiam<br>1000<br>BO<br>PC<br></fonT></td><td><i><center>
+Ahah... a new language for bot building... seems pretty impressive as well...<bR>
+Will we produce REBOL-bots to battle PERL-bots?
+</i></center></td><td></td></tr><TR><td></td>
+<!-- Leonard Coehn's old song, because we are poets,
+not only crackers -->
+<TD BGCOLOR="898030"><center></i><b>There is a crack,
+a crack in everything
+That's how the light gets in</b></center>
+<!-- Leonard Coehn's old song, because we are poets,
+not only crackers -->
+</center></TD><td></td></TR><TR><td VALIGN= "MIDDLE"
+bgcolor="#C6E7C6"><font
+color=blue><center>Rating</FONT></FONT></center>
+</TD><td VALIGN = "MIDDLE" bgcolor="#C6E7C6"><font
+color=blue><center>
+<!-- CHOOSE A RATING (may be changed) -->
+(X)<B>Beginner</B> ( )<B>Intermediate</B> (
+)<B>Advanced</B> ( 
+)<B>Expert</B></FONT>
+</center></td><td></td></tr></table>
+<!-- END HEAD  --><bR>
+<!-- CORPUS  -->
+<!-- CHOOSE A COMMENT (may be changed)  -->
+<a href="http://www.rebol.com">REBOL</a> is a good
+language for internet, i 
+don't know if it's as good as perl yet, but it's
+coming along. It's very 
+flexible and easy to work with.
+<hR><center><FONT SIZE="+2">
+<!-- Repeat your TITLE  -->
+spider.r
+   </FONT><BR>
+   <FONT SIZE="+2">
+<!-- Repeat your SUBTITLE -->
+a handy search tool and intro to REBOL
+   </FONT><BR><FONT COLOR="0B7FC1">
+<!-- REPEAT YOUR CHOSEN HANDLE HERE -->Written by
+<font color=#4f2010><u>sonofsamiam</u></font>
+</FONT></center><br><br>
+
+<!-- INTRO STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%"  HEIGHT="22" 
+ >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font 
+color=blue>Introduction</fonT>
+</fonT></center></td></tr></table>
+REBOL is an extremely simple but powerful language.
+It's designed entirely 
+for the internet, so you don't have to muck around w/
+protocols (unless you 
+want to).  What you're gonna make is your own (simple)
+search spider that 
+outputs the results in a formatted html page. Very
+handy.
+
+<br><br>
+
+<!-- TOOLS STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%"  HEIGHT="22" 
+ >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Tools 
+required</fonT>
+</fonT></center></td></tr></table>
+<uL><li>the <a href="http://www.rebol.com">rebol</a>
+interpreter for your 
+platform (small download, &lt; 200k!)<hr>
+<a href="http://www.rebol.com/downloads.html">http://www.rebol.com/downloads.html</a> &lt;-- here
+<hr>
+</li><li>a text editor.</li><li>a web
+browser</li></uL>
+
+<br><br>
+
+<!-- REAL ESSAY  STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%"  HEIGHT="22" 
+ >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font 
+color=blue>Essay</fonT></fonT>
+</center></td></tr></table>
+<p>I noticed that all the bots in the bots section
+were written in perl. I 
+like perl a lot, but when i just want to get something
+<i>done</i> i usually 
+open up my rebol interpreter. it's more portable, and
+generally needs less 
+code to get stuff done. So here's a rebol-bot for a
+change of pace. One 
+large drawback is that, as a new language, there are
+few resources to learn 
+about it. The tutorials on the rebol website are
+helpful, but don't go into 
+enough detail for me. Another place to look is <a 
+href="<a href="http://www.rebol.org/">rebol.org</a>, a new
+script repository.  That 
+should be enough to get you started, so I won't be
+going over all th' basics 
+here. The complete source code to the bot is at the <a
+
+href="sono_bot.htm#source">end.</a><br>
+<p>Oh, I know my programming style sucks, I probably
+should have just stuck 
+the bosch function in the while loop, but it's more
+clear to me this way. 
+Apollyloggies to the confused ones.
+<p>Some people have shied away from rebol because of
+it's lack of regular 
+expressions, but it can accomplish everything that
+regexes can w/ it's 
+<code>parse</code> rules. This is just another format
+for expression 
+matching. There is a great tutorial on the rebol site
+that shows how to use 
+them. So you can follow what goes on in this essay,
+here is the summary of 
+the rules:<br><br>
+<pre>   |       - specify alternate rule
+   [block] - sub-rule grouping
+   none    - match nothing (catch on no match)
+
+   12      - repeat pattern 12 times
+   1 12    - repeat pattern 1 to 12 times
+   0 12    - repeat pattern 0 to 12 times
+   some    - repeat one or more times
+   any     - repeat zero or more times
+
+   skip    - skip any character (or chars if repeat given)
+   to      - advance input to the given string (or char)
+   thru    - advance input thru the given string (or char)
+
+   copy    - copy the next match sequence to a variable
+   (paren) - evaluate a REBOL expression
+
+   word    - look-up value of a word
+   word:   - mark the current input series position
+   :word   - set the current input series position
+   'word   - (reserved for dialecting support)</pre>
+<br><br>
+Now we get to the bot! All the variables are set up
+ahead of time, not 
+prompted. I think it's quicker this way...
+<pre>
+
+;these are the url(s) you want the spider to start the
+search on...
+urls: [
+    <a href="http://www.foo.com" target=_blank>http://www.foo.com</a>
+    <a href="http://www.ceb.org/bar.htm" target=_blank>http://www.ceb.org/bar.htm</a>
+]
+;how many levels deep you want the spider to go...the # of links increases
+;almost exponentially, so watch out!
+deep: 4
+;a block of words to search for.
+keywords: ["fravia" "REBOL"]
+summary_size: 100
+
+</pre><br><code>urls</code> is a block of urls that
+you want to start your 
+search on. <code>deep</code> is how many levels you
+want to search. For 
+instance, if bar.htm and foo.com had links to 7 pages
+all together, then 
+those 7 pages would be the next level, and all their
+links would be searched 
+next.
+<p><pre>level: 0
+format: reduce [&lt;html&gt; &lt;head&gt;
+&lt;title&gt; "Search results from 
+" now/date
+    {&lt;/title&gt;&lt;/head&gt;&lt;body
+bgcolor=#C0C0C0 text=#001010 
+vlink=#405040&gt;&lt;center&gt;
+    &lt;h1&gt;spider_search&lt;/h1&gt;by
+sonofsamiam&lt;table border=1&gt;
+    &lt;th bgcolor=#ff0000&gt;url&lt;th
+bgcolor=#ff0000&gt;keyword&lt;th 
+bgcolor=#ff0000&gt;
+    count&lt;th bgcolor=#ff0000&gt;summary}
+]
+links: [] ;block to hold the links.
+db: []    ;block to store the database for sorting.
+out: []   ;block to store the outputted html
+</pre><br>This sets up the header for the output file.
+Notice that sometimes 
+the tags aren't in quotes, that's because rebol has a
+built-in html tag 
+datatype.
+<p><pre>;this is the sample html parser off the rebol
+home page. works good 
+for me!
+html-code: [
+    copy tag ["&lt;" thru "&gt;"] (append tags tag) |
+    copy txt to "&lt;" (append text txt)
+]</pre>
+<p>
+<code>html-code</code> is a <code>parse</code> rule.
+it searches for all the 
+&lt;'s and puts all the tags in a block and all the
+text in a block. It 
+doesn't handle weird html, w/ tags inside tags &amp;
+stuff. It will still work 
+fine, but the summary might be lacking.
+<p>
+<pre>
+;...Hieronymous Bosch...
+;this function slurps the data from the page
+bosch: func [page url][
+    tags: make block! 100
+    text: make string! 8000
+    parse page [to &amp;quot;&lt;&amp;quot; some html-code]
+    ;get the links
+    foreach tag tags [
+        if parse tag [&amp;quot;&lt;a&amp;quot; thru
+&amp;quot;href=&amp;quot;
+            [{&amp;quot;} copy link to {&amp;quot;} | copy
+link to &amp;quot;&gt;&amp;quot;]
+            to end
+        ][append links link]
+    ]
+    foreach keyword keywords [
+        c: 0
+        a: text
+        while [a: find/tail a keyword][c: c + 1]
+        either (c = 0) [
+            links: []
+        ][
+            insert/only db reduce [c url keyword
+copy/part text 
+summary_size]
+        ]
+    ]
+]</pre><p>
+here is the function (<code>bosch</code>) that is
+called w/ the contents of 
+each page. It grabs all the links, searches for the
+keywords, and then 
+sticks the info into a database, stored in
+<var>db</var><p>
+<pre>;!_!_!_this_is_where_it_starts_!_!_!
+while [level &lt;= deep][
+    foreach url urls [bosch read url url]
+    urls: links
+    links: []
+    level: level + 1
+]
+
+;sort &amp; format
+db: sort db
+foreach x db [
+    foreach [c u k t] x [
+        insert out reduce [&lt;tr&gt; &lt;td&gt; u
+&lt;td&gt; k &lt;td&gt; c 
+&lt;td&gt; t newline]
+    ]
+]
+insert out format
+append out [&lt;/table&gt; &lt;/center&gt; "thanx for
+using sonofsamiam's 
+spider!"
+    &lt;/body&gt; &lt;/html&gt;
+]
+
+;write the html file
+write %spider.htm out
+q</pre><p>
+I think all this is pretty self-explanatory. The
+<code>while</code> loop 
+controls what pages it searches &amp; the rest formats the
+data into an html 
+page. Then <var>out</var> is written to a file and the
+interpreter exits. 
+It's speedy as hell, and it's helped my searching a
+huge amount.  <p>I put 
+in what I'm looking for in Altavista, and then search
+those results w/ my 
+spider. You find info much quicker and easier this
+way.<p>
+Here is a sample output page:
+<center>
+    <h1>spider_search</h1>by sonofsamiam<table
+width="100%" border=1>
+    <th bgcolor=#ff0000>url<th
+bgcolor=#ff0000>keyword<th bgcolor=#ff0000>
+    count<th
+bgcolor=#ff0000>summary<tr><td>rt_bot1.htm<td>fravia<td>9<td>
+
+rt_bot1.htm The HCUbot: a simple Web Retrieval
+Bot in Perl
+
+
+
+
+
+
+
+The HCUbot: a simple Web
+Retriev
+<tr><td>hunt_01a.htm<td>fravia<td>8<td>Hunting Lesson
+I
+_____________________________________________________________________
+®—&gt;&gt;&amp;gt
+</table></center>thanx for using sonofsamiam's spider!
+<p>
+Now, this robot is very simple. If it comes across a
+bad url, it can die. 
+Also, the search is limited to just single words, not
+any boolean or 
+anything. What you should do is make it 'smart.'  This
+isn't hard, if you 
+know a little rebol. Consider using <code>parse</code>
+rules for a search 
+string. Anyway, I hope you enjoy this little spider.
+I've had a lot of fun 
+with it, and I'd be interested in any comments you
+have on it.
+<p>
+<a name="source"><h3>.~the full code~.</h3></a>Here is
+the full source code. 
+It's very small, as you can see, most of the space is
+taken up w/ 
+html-formatting. REBOL is pretty efficient.
+<p><pre>REBOL[
+    Title:  "spider.r"
+    Author: "sonofsamiam"
+    Home:   <a href="http://sonofsamiam.tsx.org/" target=_blank>http://sonofsamiam.tsx.org/</a>
+    Date:   19-Sep-1999
+    Purpose: {
+        A helpful little web-indexing search bot.
+Outputs sorted &amp; html- formatted.
+    }
+    Comment: {
+        I curbed my usual programming style of cramming the entire
+        script on 5 lines :p I figure most of the readers won't be
+        especially familiar w/ rebol, so i went for clarity.
+    }
+]
+
+secure none
+
+urls: [
+    <a href="http://www.rebol.com" target=_blank>http://www.rebol.com</a>
+    %rt_bot1.htm
+    %hunt_01a.htm
+]
+deep: 4
+keywords: ["fravia" "REBOL"]
+summary_size: 100
+
+level: 0
+format: reduce [&lt;html&gt; &lt;head&gt;
+&lt;title&gt; "Search results from 
+" now/date
+    {&lt;/title&gt;&lt;/head&gt;&lt;body
+bgcolor=#C0C0C0 text=#001010 
+vlink=#405040&gt;&lt;center&gt;
+    &lt;h1&gt;spider_search&lt;/h1&gt;by
+sonofsamiam&lt;table width="100%" 
+border=1&gt;
+    &lt;th bgcolor=#ff0000&gt;url&lt;th
+bgcolor=#ff0000&gt;keyword&lt;th 
+bgcolor=#ff0000&gt;
+    count&lt;th bgcolor=#ff0000&gt;summary}
+]
+links: []
+db: []
+out: []
+html-code: [
+    copy tag ["&lt;" thru "&gt;"] (append tags tag) |
+    copy txt to "&lt;" (append text txt)
+]
+
+bosch: func [page url][
+    tags: make block! 100
+    text: make string! 8000
+    parse page [to &amp;quot;&lt;&amp;quot; some html-code]
+    foreach tag tags [
+        if parse tag [&amp;quot;&lt;a&amp;quot; thru
+&amp;quot;href=&amp;quot;
+            [{&amp;quot;} copy link to {&amp;quot;} | copy
+link to &amp;quot;&gt;&amp;quot;]
+            to end
+        ][append links link]
+    ]
+    foreach keyword keywords [
+        c: 0
+        a: text
+        while [a: find/tail a keyword][c: c + 1]
+        either (c = 0) [
+            links: []
+        ][
+            insert/only db reduce [c url keyword
+copy/part text 
+summary_size]
+        ]
+    ]
+]
+
+while [level &lt;= deep][
+    foreach url urls [bosch read url url]
+    urls: links
+    links: []
+    level: level + 1
+]
+
+db: sort db
+foreach x db [
+    foreach [c u k t] x [
+        insert out reduce [&lt;tr&gt; &lt;td&gt; u
+&lt;td&gt; k &lt;td&gt; c 
+&lt;td&gt; t newline]
+    ]
+]
+insert out format
+append out [&lt;/table&gt; &lt;/center&gt; "thanx for
+using sonofsamiam's 
+spider!"
+    &lt;/body&gt; &lt;/html&gt;
+]
+
+write %spider.htm out
+q
+</prE>
+<!-- FINAL NOTES STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%"  HEIGHT="22">
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Final 
+Notes</fonT>
+</fonT></center></td></tr></table>
+REBOL is really platform-independent, and all versions
+work exactly the 
+same, so it's quite portable. <Br>This is just a small
+example to give you 
+ideas on how to use rebol for robots.<br>Bots are
+nothing short of your most 
+useful tool on the web, and everyone should take the
+time to at least 
+understand how they work, even if you're too lazy to
+make your own. The web 
+is moving more and more in the direction of
+automation. <p>
+keep it real...<center><i>"How does it feel? To be
+using a borrowed recycled 
+drug they told you was real?"</i> <br>-geek-core kings
+Don't Know</center>
+
+<!-- WAY OUT STARTS HERE -->
+<hr>
+</BODY>
+</HTML>

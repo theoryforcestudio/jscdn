@@ -1,0 +1,270 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>proxies.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ proxies ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>NOT YET OPERATIVE<br></font><font size=+2>Warning: proxies.htm 
+page not yet 'consolidated'<br>
+Back to the <font color=blue>[</font><a href="proxy.htm">proxy.htm</a><font color=blue>]</font> 
+section</font><hr width=44%>  
+
+<i>
+You can already use the following (and - of course - anything else "about proxies" that you'll find on my site 
+ as well) but this is still a <font color=blue>complete 
+and unorganised mess</font> that I intend to re-order asap.<br>In the mean time either 
+you go and study some other lore or you read this and try to see what you can do - all alone on yourself - 
+with the following knowledge snippets... eheh
+</i><hr width=44%>
+<font color=blue>[</font><a href="proxies.htm#snippe">Other interesting snippets</a><font color=blue>]</font>
+<br>
+</center>
+<hr>
+
+<prE>
+Vlad's site allows for port 81 proxy 
+searches  
+
+proxy search:
+<a href="http://prx3.virtualave.net/cgi-bin/sps.pl?pattern=%3B81%3B&max=50&nskip=0&file=proxlog.csv">http://prx3.virtualave.net/cgi-bin/sps.pl?pattern=%3B81%3B&max=50&nskip=0&file=proxlog.csv</a>
+       
+gives plenty of them. All recent. All port 81. They can't all be dead. 
+
+It can be used to search for port 82 (change the pattern to %3B82%3B) as 
+well, but of the many checks done, it only gives 3 (two are already on 
+my page and the other one is censored anyway).
+
+You can always just go to <a href="http://prx3.virtualave.net/cgi-bin/sps.pl">http://prx3.virtualave.net/cgi-bin/sps.pl</a>, of 
+course and do the searches. But his search pattern has bugs, so things
+like ;8[2-9] don't seem to work.  
+
+I tried various ways to get it to search on 
+NOT (8080, 80, 3128 ...) once, but the facility didn't seem to be there. 
+
+A search for port 9000 gave one... invest.nnov.city.ru:9000
+I'm sure there are many more on the unblocked ports listed on my page.
+If someone went through these and posted the results, it would be a
+Good Thing 
+                      
+
+<hr>
+                                                             
+if you add certain ascii character after
+the .com, .net, etc... of an URL such as http://www.sex.comþ
+it'll get right past my ISP's proxy.
+so far i haven't found one that works with everything.
+they can also be combined with the Dword proccess. so even though
+http://3483057532/ is blocked, http://3483057532ü/ isn't...       
+              
+
+ have checked a number of sites using this method 
+(www.playboy.comô, www.penthouse.comô etc), and they seem to work! i was 
+checking using a suffixed ô (Alt-147). Sometimes it didn't work, maybe to do 
+with particular servers in the proxy array???
+
+again, anyone have any ideas on this?    
+             <hR>
+ I once used %a0 at the end like that. 
+But then they fixed the problem. Surprised to hear it's back!
+
+The thing that always amazed me was that the DNS servers returned the 
+right address when the proxy sent them that weird string!
+
+It's a painful (and unreliable from what you say) way to access the 
+internet though.     
+       <hr>
+Here are the results from Saudi
+http://www.sex.comþ fails the proxy's DNS lookup
+http://3483057532/ is blocked
+http://3483057532ü/ is rejected by the proxy               
+<hr>
+ Remember that even mediocre admins have you by the throat though.
+EVERY packet you send out must go through a machine under their control.
+They just need to:
+1) notice it
+2) ask their (smarter) consultants what to do about it.
+3) do it.
+and you're fscked.
+<hR>  
+
+ Check your own IP address and netmask to see 
+> > if you are on the same subnet as one of the 'internet enabled' machines 
+> > which is off. Then change your IP address to the IP address of that machine!
+> 
+> But, the problem is that I don't know what IP have the right! I f I would be able to know that ...
+
+Have you ever used a network sniffer? IIRC, even l0phtcrack will tell you about
+what's happening on your net. It should be easy to see these guys - 
+they'll be the ones using the network bandwidth (when they are on, 
+and web surfing). Try around lunch-time or the last hour of the work day. 
+These are usually the guys who don't really need to work for a living :-)
+
+The ones who are powered off and never surf, but still 'internet enabled' will 
+be hard to find. If you prefer to use one of these we'd have to do some 
+IP spoofing tests. Maybe the easiest (time-consuming, but technically easy) 
+way to do this would be for you to ping (starting) at the beginning of the 
+subnet IP address range, see if anyone is there, change your own IP address 
+to that address, and see if you get internet access. For NT at least this 
+IP address change is a quick thing - not sure about win9*
+
+I don't know how much time you have to bang on this ...
+
+> > If the machine you want to 'impersonate' is still powered on and booted 
+> > up, then if you try to use his address there may be alarms going off 
+> > everywhere. Be careful - that's just a bit too obvious.
+> 
+> OK, I know that.
+
+Good.
+
+> Well, I hope you go on helping me. At the moment the "mediocre" admins won.
+
+Well yeah, only because you need some 'hacker' education :-)
+And that always takes time, hey? It took me years.
+They have the upper-hand in the first place. It's kinda like
+attacking a castle with a moat and all.
+<hr>
+Alstone version 0.32 is out and it can append strings to hostnames.
+This version could be of interest to persons inside the UAE.
+
+
+How to URL-encode and URL unencode Type into the webbrowser
+
+javascript:alert(escape("ô"))
+javascript:alert((w = window.open(),w.document.write(escape("ô")),w.document.close()))
+javascript:alert(unescape("%F4"))
+javascript:var w = window.open();w.document.write(unescape("%F4"));w.document.close()
+
+
+------------------------------------------------------
+Sample use of the proxy:
+
+
+S:\aznlp>java Alstone -h
+The Alstone Java proxy 0.32, 10-Feb-00.   Usage:
+ -n  Near_port
+ -f,-r [far_hostname_or_IP:]far_port
+ -x      Hostname 0xHH.0xHH.0xHH.0xHH encoding (default = 4294967296 encoding)
+ -z %FF  String to append to hostname. (String is first URL decoded)
+ -s      Server/decode mode (defaults to client/encode mode)
+(Desertweed Research, http://www.ijs.co.nz/pml.htm, research@ijs.co.nz)
+
+
+S:\aznlp>java Alstone -n 84 -f 85 -z %f4
+Client_Mode = true, Encoding_Mode = '4294967296', Tail = 'ô'
+Listen = 84, Remote = localhost:85
+------>  www.kacst.edu.sa  --->  3558485005ô  <------
+------>  ****blocked****  --->  3489041000ô  <------
+
+
+If a client and server are connected, then the proxy converts hostnames
+ to IP numbers.
+
+
+At 04:09 09.02.00 , Craig Carey wrote:
+
+>The proxy now would change a browser request for:
+>http://etisalat.charges.too.much.net/discussions/charges/index.htm
+>into this: http://3471288708/discussions/charges/index.htm
+>
+...
+Download!  alstone_proxy_032.zip  (about 76KB, source code, free)
+>
+>>     http://www.altern.org/research/code/
+>>     http://www.is.co.nz/code/
+>
+>Java would be needed too.
+
+// To run this program
+// Option 1, run it without changing the code:
+//    http://java.sun.com/products/jdk/1.1/jre/index.htm  (2.6MB)
+//
+// Option 2, run and be able to modify the code
+//    http://oss.software.ibm.com/developerworks/opensource/jikes/project/
+//    http://java.sun.com/products/jdk/1.1/
+...
+
+Craig Carey
+                  
+
+<hR>
+http://www.ijs.co.nz/proxies3.htm<bR>
+          http://www.onelist.com/archive/proxy-methods-list<bR>
+         http://www.escribe.com/internet/proxy-methods/
+<hr>
+           <hr>
+The reason I suggested l0phtcrack is to get their passwords, so you 
+could log into their computer and use it (install a redirector, say). 
+You seem to be willing to take the risks involved.
+
+You might be able to get their IP address anyway, so you can use that 
+next time they are powered off. If you can see their computer in 'network 
+neighbourhood', so you know the computer name, you might see if nslookup with 
+the same name resolves to an IP address (then ping to be sure). nbtstat -a may also 
+give useful info.
+
+> > > > Have you ever used a network sniffer? IIRC, even l0phtcrack
+> > > No, I haven't used one.
+> > 
+> > I think you should learn.
+> 
+> OK. I'm going to begin with l0phtcrack
+
+l0phtcrack gives some sniffer info, but it's not really designed 
+with that use in mind. But ok, ya gotta start somewhere.
+<hr>
+If your ISP gives you a fixed IP number, then it might be doing thorough
+ blocking using a firewall. You can run WINIPCFG.EXE to find out your IP
+ number (do you have Win9x/NT?).
+
+Quite apart from the blocking, the ISP may be incompetent with matters
+ having to do with the Internet, since it is (your say), using Microsoft's
+ Proxy software.
+<hr>
+
+
+
+</prE>   
+       <a name="snippe"></a>
+<center><table border=1 width=88%><tr><td <td bgcolor="#C6E7C6"><center><font size=+3>Other interesting snippets</font></center></td></tr></table><br>
+     <center>
+<font color=blue>[</font><a href="tntunne.htm">Telnettunneling</a><font color=blue>]</font>
+&nbsp; &nbsp;
+<font color=blue>[</font><a href="030300.htm">030300.htm</a><font color=blue>]</font>
+
+<br>       
+
+  
+<!-- internet searching strategies and hints content, end -->
+<hr><center><a href="proxy.htm"><IMG SRC="images/proxpeti.jpg"
+ALT="Back to proxy.htm"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><bR>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

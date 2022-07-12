@@ -1,0 +1,85 @@
+<html> <html>
+<head>
+<title>dword-converter, hex & octal</title>
+ <!-- various ip-obfuscation functions by sonofsamiam -->
+ <script language="Javascript">
+ <!-- 
+ function convet(ip,level){
+ n=ip.split('.'); 
+ for(i=0;i<4;i++) 
+{n[i]=parseInt(n[i]);} 
+ var dword=(n[0]*16777216)+(n[1]*65536)+(n[2]*256)+n[3]+(parseInt(level)*4294967296);
+ prompt('dword:',dword); return; } 
+
+ function tooct(a){ 
+ n=a.split('.'); 
+ for(i=0;i<4;i++){ n[i]=parseInt(n[i]);
+ if(n[i]>255||isNaN(n[i])){alert('invalid ip!');
+ return;}
+ 
+ var one=Math.floor(n[i]/64); 
+ var t=n[i]%64; 
+ var two=Math.floor(t/8);
+ var three=n[i]%8; 
+ n[i]='0'+one+two+three; } 
+ var octip=n.join('.');
+ //needed 'coz of a bug in opera's join()
+ if(octip.substring(octip.length-1,octip.length)=='.')
+ {octip=octip.substring(0,octip.length-1);} 
+ prompt('octal ip:',octip); 
+ return;
+ } 
+
+ function tohex(ip){ 
+ n=ip.split('.'); 
+ for(i=0;i<4;i++)
+ { n[i]=parseInt(n[i]);
+ if(n[i]>255||isNaN(n[i])){alert('invalid ip!');
+ return;}
+ var two=numlet(n[i]%16); 
+ var one=numlet(Math.floor(n[i]/16));
+ n[i]='0x'+one+two; } 
+ var hexip=n.join('.');
+ //needed 'coz of a bug in opera's join()
+ if(hexip.substring(hexip.length-1,hexip.length)=='.')
+ {hexip=hexip.substring(0,hexip.length-1);} 
+ prompt('hexed ip:',hexip); 
+ return; }
+
+ function numlet(num){ 
+ if(num==10){return 'a';} 
+ if(num==11){return 'b';}
+ if(num==12){return 'c';} 
+ if(num==13){return 'd';} 
+ if(num==14){return 'e';}
+ if(num==15){return 'f';} 
+ return num; } 
+ //-->
+</script>
+</head>
+<!-- body -->
+ <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+ 
+ really, just some simple (and none too pretty :) javascript aping unfrozen.exe
+ i wrote to get around my school's censoring.
+ <form name="r">
+<h3>dword:</h3>
+<form>
+ip:<input type="text" name="ip" size=15 value="127.0.0.1">
+<input type="text" size=2 name="level" value="0">
+:level
+<br>
+<input type="button" value="convert to dword" onclick="convet(ip.value,level.value);">
+</form> 
+
+<form> 
+<h3>hexed ip's:</h3>
+ ip:<input type="text" name="hex" size="15" value="127.0.0.1">
+<br>
+<input type="button" value="convert to hex" onclick="tohex(hex.value);"></form><form>
+ <h3>octal ip's:</h3>
+ ip:<input type="text" name="oct" size="15" value="127.0.0.1"><br>
+<input type="button" value="convert to octal" onclick="tooct(oct.value);"> 
+</form>
+ </body></html> 

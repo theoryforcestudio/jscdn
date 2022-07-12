@@ -1,0 +1,471 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title></title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+2>Database accessing : Reversing Simple Java Protections 
+<br>The Joylock Case (version < 4.0)</font></center></td></tr></table>
+
+<br>Published at <a href="http://www.searchlores.org">www.searchlores.org</a> in April 2002
+<hr width=44%>
+<i>Fundamental lore for seekers, that should not and never be stopped by <b>any</b> 
+webgate
+</i>
+<hr>
+</center><br>
+<br>We'll see in this tutorial how to bypass a simple web protection that uses a java applet. This 'JoyLock' applet is a component of the <a href="https://searchlores.nickifaulk.com/the&#32;http://www.coffeecup.com/java/password/sample.html">CoffeeCup Password Wizard</a> solution (new version out, see below)
+<br><br><b>Context :</b> 
+<br><ul>http://www.infotoday.com/fso/default.htm<br></ul>
+<ul><i>Fulltext Sources Online is a directory of periodicals accessible online in full text through more than 25 aggregators. FSO is published biannually in January and July, 
+<br>and lists over 17,000 newspapers, journals, magazines, newsletters, newswires, and transcripts. Each issue is complete and replaces previous issues.</i></ul>
+<br>This is not the target, which appears later :
+<br>
+<br><ul><i>FSO subscribers also receive access to the Private Zone, a special feature that lists publications with free archives on the Internet and the direct link to the publisher's URL. 
+<br>This is an up-to-date listing that provides access to full-text back issues of individual publications found in the print edition of FSO. The Private Zone is located on the Information Today web site at www.infotoday.com. </i></ul>
+<br><hr width=50%>
+<br>
+<br><b>Tools Used :</b>
+<ul><li> A Java Decompiler - <a href="http://kpdus.tripod.com/jad.html">Jad</a> is free and worked perfectly
+<li>A note pad and a sourceviewer - I used <a href="http://www.ultraedit.com">Ultraedit</a> 
+<li>A brain</ul><br>
+<br><hr>
+<br>
+<br>Okay, this is our gate : http://www.infotoday.com/fso/private.html.
+<br>This door leads to the protection, a java applet : <a href="http://www.infotoday.com/fso/fso.htm">http://www.infotoday.com/fso/fso.htm</a>
+<br><br>
+<br><center><i>Enter your July 2001 or January 2002 ID and Password.</i></center>
+<br>
+<br>Yeah sure, we will. Now, enter anything you want. See that the page isn't reloading : The check (good/bad user) MUST BE INSIDE the applet.
+<br>
+<br>Check the html source code : 
+<br>
+<br><ul><code>APPLET CODE="joylock.class" WIDTH=350 HEIGHT=150
+<br>PARAM NAME="GENERAL" VALUE="2|11|CC3333|FFFFFF|vhjdnkdnm/rhnndcdynp.odb| |Login Complete.|Enter your July 2001 or January 2002 ID and Password.| | |"
+<br>PARAM NAME="0" VALUE="AKfSIjJxChizHySpC|jiJWHycUiTnEK|"
+<br>PARAM NAME="1" VALUE="XZcidZnLXUGEhinFd|QJzCLhkoTAcAlnGPp|"</code></ul>
+<br>Looks like there are crippled data send to the applet. "vhjdnkdnm/rhnndcdynp.odb" must be an url... let's look inside the java dragon.
+<br>First, download the .class by entering the whole path in the url : http://www.infotoday.com/fso/joylock.class
+<br>Save it in the jad directory.
+<br>
+<br>Jad is a decompiler, and will give you the source code of the applet. It'll be obvious after to guess/read what the protection does.
+<br>Execute "jad.exe joyclock.class", and now you can open the source code, which should be name joyclass.jad.
+<br>
+<br>After a fast tracing, the important part seems to be the decript function :
+<br>
+<br><font size=-1><pre>
+    String decript(String s, boolean flag)
+    {
+        String s1 = "";
+        StringBuffer stringbuffer = new StringBuffer(s);
+        for(int i = 0; i &lt; stringbuffer.length(); i++)
+            switch(stringbuffer.charAt(i))
+            {
+            case 81: // 'Q'
+                if(flag)
+                    s1 = s1 + 'Y';
+                break;
+
+            case 87: // 'W'
+                if(flag)
+                    s1 = s1 + 'Q';
+                break;
+
+            case 69: // 'E'
+                if(flag)
+                    s1 = s1 + 'B';
+                break;
+
+            case 82: // 'R'
+                if(flag)
+                    s1 = s1 + 'F';
+                break;
+
+            case 84: // 'T'
+                if(flag)
+                    s1 = s1 + 'X';
+                break;
+
+            case 89: // 'Y'
+                if(flag)
+                    s1 = s1 + 'L';
+                break;
+
+            case 85: // 'U'
+                if(flag)
+                    s1 = s1 + 'W';
+                break;
+
+            case 73: // 'I'
+                if(flag)
+                    s1 = s1 + 'N';
+                break;
+
+            case 79: // 'O'
+                if(flag)
+                    s1 = s1 + 'H';
+                break;
+
+            case 80: // 'P'
+                if(flag)
+                    s1 = s1 + 'S';
+                break;
+
+            case 65: // 'A'
+                if(flag)
+                    s1 = s1 + 'G';
+                break;
+
+            case 83: // 'S'
+                if(flag)
+                    s1 = s1 + 'K';
+                break;
+
+            case 68: // 'D'
+                if(flag)
+                    s1 = s1 + 'T';
+                break;
+
+            case 70: // 'F'
+                if(flag)
+                    s1 = s1 + 'J';
+                break;
+
+            case 71: // 'G'
+                if(flag)
+                    s1 = s1 + 'Z';
+                break;
+
+            case 72: // 'H'
+                if(flag)
+                    s1 = s1 + 'R';
+                break;
+
+            case 74: // 'J'
+                if(flag)
+                    s1 = s1 + 'O';
+                break;
+
+            case 75: // 'K'
+                if(flag)
+                    s1 = s1 + 'C';
+                break;
+
+            case 76: // 'L'
+                if(flag)
+                    s1 = s1 + 'V';
+                break;
+
+            case 90: // 'Z'
+                if(flag)
+                    s1 = s1 + 'A';
+                break;
+
+            case 88: // 'X'
+                if(flag)
+                    s1 = s1 + 'U';
+                break;
+
+            case 67: // 'C'
+                if(flag)
+                    s1 = s1 + 'I';
+                break;
+
+            case 86: // 'V'
+                if(flag)
+                    s1 = s1 + 'P';
+                break;
+
+            case 66: // 'B'
+                if(flag)
+                    s1 = s1 + 'M';
+                break;
+
+            case 78: // 'N'
+                if(flag)
+                    s1 = s1 + 'E';
+                break;
+
+            case 77: // 'M'
+                if(flag)
+                    s1 = s1 + 'D';
+                break;
+
+            case 97: // 'a'
+                s1 = s1 + 'g';
+                break;
+
+            case 98: // 'b'
+                s1 = s1 + 'm';
+                break;
+
+            case 99: // 'c'
+                s1 = s1 + 'i';
+                break;
+
+            case 100: // 'd'
+                s1 = s1 + 't';
+                break;
+
+            case 101: // 'e'
+                s1 = s1 + 'b';
+                break;
+
+            case 102: // 'f'
+                s1 = s1 + 'j';
+                break;
+
+            case 103: // 'g'
+                s1 = s1 + 'z';
+                break;
+
+            case 104: // 'h'
+                s1 = s1 + 'r';
+                break;
+
+            case 105: // 'i'
+                s1 = s1 + 'n';
+                break;
+
+            case 106: // 'j'
+                s1 = s1 + 'o';
+                break;
+
+            case 107: // 'k'
+                s1 = s1 + 'c';
+                break;
+
+            case 108: // 'l'
+                s1 = s1 + 'v';
+                break;
+
+            case 109: // 'm'
+                s1 = s1 + 'd';
+                break;
+
+            case 110: // 'n'
+                s1 = s1 + 'e';
+                break;
+
+            case 111: // 'o'
+                s1 = s1 + 'h';
+                break;
+
+            case 112: // 'p'
+                s1 = s1 + 's';
+                break;
+
+            case 113: // 'q'
+                s1 = s1 + 'y';
+                break;
+
+            case 114: // 'r'
+                s1 = s1 + 'f';
+                break;
+
+            case 115: // 's'
+                s1 = s1 + 'k';
+                break;
+
+            case 116: // 't'
+                s1 = s1 + 'x';
+                break;
+
+            case 117: // 'u'
+                s1 = s1 + 'w';
+                break;
+
+            case 118: // 'v'
+                s1 = s1 + 'p';
+                break;
+
+            case 119: // 'w'
+                s1 = s1 + 'q';
+                break;
+
+            case 120: // 'x'
+                s1 = s1 + 'u';
+                break;
+
+            case 121: // 'y'
+                s1 = s1 + 'l';
+                break;
+
+            case 122: // 'z'
+                s1 = s1 + 'a';
+                break;
+
+            case 48: // '0'
+                s1 = s1 + '3';
+                break;
+
+            case 49: // '1'
+                s1 = s1 + '2';
+                break;
+
+            case 50: // '2'
+                s1 = s1 + '4';
+                break;
+
+            case 51: // '3'
+                s1 = s1 + '5';
+                break;
+
+            case 52: // '4'
+                s1 = s1 + '1';
+                break;
+
+            case 53: // '5'
+                s1 = s1 + '6';
+                break;
+
+            case 54: // '6'
+                s1 = s1 + '9';
+                break;
+
+            case 55: // '7'
+                s1 = s1 + '8';
+                break;
+
+            case 56: // '8'
+                s1 = s1 + '7';
+                break;
+
+            case 57: // '9'
+                s1 = s1 + '0';
+                break;
+
+            case 58: // ':'
+            case 59: // ';'
+            case 60: // '&lt;'
+            case 61: // '='
+            case 62: // '&gt;'
+            case 63: // '?'
+            case 64: // '@'
+            case 91: // '['
+            case 92: // '\\'
+            case 93: // ']'
+            case 94: // '^'
+            case 95: // '_'
+            case 96: // '`'
+            default:
+                s1 = s1 + stringbuffer.charAt(i);
+                break;
+            }
+
+        return s1;
+    }
+</pre></font>
+<br>
+<br>It is called from :
+<ul><code>
+  linkURL = decript(linkURL, true);
+<br>  username[j] = decript(username[j], false);
+<br>  password[j] = decript(password[j], false);
+<br></code></ul>
+<br>Note the boolean parameter. Only true when the first parameter is 'linkURL'. And in the decript function, the boolean flag is checked only for the capitalized characters. ( if  the letter is an element of {A..Z} and the flag set to false, then do nothing. Else permute)
+<br>
+<br>StringTokenizer(getParameter(Integer.toString(j)), "|", false); must indicate that username and password is filled with parameters. "|" serve as a token to delimit username from password.
+<br><br><hr width=50%><br>
+<br>The decript function is really obvious. We are in front of a substitution cipher. If you're new with these sort of encryption methods i may recommand you a nice article on javascript strings and encryption : http://www.dickinson.edu/~braught/courses/cs131s99/Labs/Lab10.html
+<br>I'm sure you won't regret it.
+<br>You can fastly extract the cipher table :
+<br><font size=-1><pre>
+<br>Q W E R T Y U I O P A S D F G H J K L Z X C V B N M   a b c d e f g h i j k l m n o p q r s t u v w x y z  0 1 2 3 4 5 6 7 8 9 
+<br>| | | | | | | | | | | | | | | | | | | | | | | | | |   | | | | | | | | | | | | | | | | | | | | | | | | | |  | | | | | | | | | |
+V V V V V V V V V V V V V V V V V V V V V V V V V V   V V V V V V V V V V V V V V V V V V V V V V V V V V  V V V V V V V V V V
+<br>Y Q B F X L W N H S G K T J Z R O C V A U I P M E D   g m i t b j z r n o c v d e h s y f k x w p q u l a  3 2 4 5 1 6 9 8 7 0</pre></font>
+<br>To decipher the username and password, just do it letter by letter (and remember that flag is FALSE), for instance in the first parameter :
+<br>
+<ul>username : AKfSIjJxChizHySpC 
+<br>password : jiJWHycUiTnEK</ul>
+gives (remove caps)
+<ul>username : journals 
+<br>password : online</ul>
+<br>easy no ? :)
+<br>
+<br>And for the crippled url, boolean flag set to TRUE, so using the {A..Z} :
+<ul>vhjdnkdnm/rhnndcdynp.odb --> protected/freetitles.htm</ul>
+<br>You have now granted access to and index of 1000 "Journals with Free Archives on the Web ".
+<br>The deciphered url 'protected/freetitles.htm' is in itself a backdoor. No need to login again, juste use this url to access the protected stuff.
+<br>Enjoy, and share your findings &#33; :)
+<br><br> ~ loki ~ @ <i>RAGNAROCK</i>
+<br><br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+2>Comments and additions</font></center></td></tr></table></center><br>
+<br> Again, there was a nice thread on the <a href="http://www.2113.ch/phplab/mbs.php3/mb001?num=1014051650&thread=1014051650">~S~ Board</a>, wich gave birth to a lot of interesting ideas and findings :
+<br> 
+<br>After publishing the first 'essay', Veliti and Jeff found other tutorials related to joylock reversing, you can reach them here : 
+<br>http://members.tripod.com/~Antiquus/passwiz.txt 
+<br>http://home.earthlink.net/~childzplay/coffee.txt
+<br>
+<br>Jeff founds a cracked version of the whole program : http://members.tripod.lycos.co.kr/ljh7710/Joylock/ 
+<br>It is packaged by a warez scene group; looking at the nfo, note the date : 12/11/98 
+<br>and the info for unlocking the program : UserName : EFG89W / Password : 312ZXC 
+<br>
+<br> Cinix also pointed out that the flash version was easily crackable with <a href="http://www.buraks.com/asv">active script viewer</a> (Cinix : what about a small tutorial ? ;)
+<br>
+<br>Other interesting comments/ideas :
+<br><br><hr width=50%>
+<u>Mordred</u> (18/02/02 18:57:45) :<br>
+<br>http://www.altavista.com/sites/search/res_text?hl=on&q=applet%3Ajoylock%0D%0A&r=&kl=XX&search=Search&d0=&d1=&stq=130 
+<br>
+<br>and why not 
+<br>
+<br>http://www.altavista.com/sites/search/ res_text?sc=on&hl=on&q=applet%3Alogin%0D%0A%0D%0A&q=applet%3Ajoylock%0D%0A&r=&kl=XX&search=Search&d0=&d1= 
+<br>
+<br>o, sancta simplicitas! (see where reading too much of fravia's leads - I'm already quoting in latin :)<br>
+<br><hr width=50%>
+<br>By using this query, you'll quickly notice that there are other versions of the joylock applet. The protection seems to be a little bit different.
+<br>See the other <a href="lokijoy2.htm">joylock essay</a> to read the reversing the version 4.0
+<br>
+<br>The "search by file format" ability of some search engines made us think about a way to (auto)break ALL indexed site protected by such applets. 
+<br><br><hr width=50%>
+<u>Mordred</u> (18/02/02 20:47:23) :<br>
+<br>I was thinking about something, maybe I should xpost it to the PHP forum ... 
+<br>
+<br>One could run a local webserver and put on it all such "scrolls" (including all those cerulean, ink-colored, etc. scripts:). For this encryption you could make a script that takes the target URL as a parameter, downloads it and decrypts all passwords + the backdoor. 
+<br>
+<br>I have JADed :) a very similar applet, which used a different encryption, but was keeping all login info in exactly the same manner (including the "backdoor"). This either means that all idiots think likewise, or someone makes (and sells) such scripts with very small modifications
+<br><br><br>
+<u>loki</u> (19/02/02 01:26:57) :<br>
+<br>try to imagine, if the cypher table doesn't evolve as it looks to not do (<i>wrong, but look at the  other <a href="lokijoy2.htm">joylock essay</a></i>)  ... Make a DB with the whole results of the 'applet:joylock' query, and launch the decypher scroll/bot on the 2 thousand results. That'd mean ... don't know, maybe some hundreds of site cracked in a same move ? :) 
+<br>
+<br>imo, we'd have more fun with a bot .. we could use a spider with the <a href="http://www.2113.ch/phplab/skeleton.php">skeleton</a> and the <a href="http://www.2113.ch/phplab/agent.htm">agent</a> classes of the PHPLab. Then we'd need to write the script to detect when a page is valid, the reg exp to fetch the strings, the decypher script, and a feedback (mail - hmtl - files - report to search engine). And to plug the whole together. 
+<br>
+<br>After we'll enjoy looking those little insects scanning tons of web pages (from results fished from local, general, and regional search engine), opening and indexing the database for us :) 
+<br>
+<br>that sounds definitely good :)
+<br><br><br>
+<u>gs</u> (23/02/02 03:03:47) :<br>
+<br>You got a well-protected server ? 
+<br>I would not do it from my usual POP. 
+<br>
+<br>Beware of DMCA and the like. Be careful. 
+<br>Go on ;)
+<br><br><hr width=50%>
+<br> Do not underestimate the advice of GS ;)
+<br>
+<br> If anybody wants to comment, flame, give ideas or join this project, you can reach me here : lokiange(at)hotmail.com
+</font><hr><center>
+<br>Back to 
+<a href="http://www.searchlores.org">www.searchlores.org</a> &nbsp;&nbsp;
+Back to 
+<a href="password.htm">passwords lore</a>
+<hr>
+
+</body>
+</html>

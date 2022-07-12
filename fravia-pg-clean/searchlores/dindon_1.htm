@@ -1,0 +1,73 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>dindon_1.htm: How to search the web, by fravia+
+tools</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+
+<table>
+        <tr class="row">
+          <td class="odd" rowspan="2" valign="top" width="20%" nowrap><a name="ID5"></a><font class="row"><b>DinDon</b></font></td>
+          <td class="subject" width="80%">
+            <table border="0" width="100%" cellspacing="0" cellpadding="0">
+              <tr>
+                <td nowrap></td>
+                <td width="100%"><font class="subject">5. Re:Breakpointing Winice</font><br>
+(courtesy of fravia's <a href="http://www.searchlores.org">searchlores.org</a> ~ 
+original thread <a href="http://www.woodmann.com/cgi-bin/Ultraboard/UltraBoard.cgi?action=Read&BID=5&TID=640&SID=">here</a>)</td>
+                <td align="right" nowrap>
+                 
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="row">
+          <td class="body" valign="top">
+            <table border="0" height="100" width="100%" cellspacing="2" cellpadding="2">
+              <tr>
+                <td valign="top"><font class="body"><blockquote><hr><br>Would it be possible to debug a winice (with winice) running on a vmware virtual machine on the same computer??<br>Like i don&#39t know how im gonna learn how it works if i can&#39t debug it :-). (remote debugging??)<br>Again thanks for your help.<br>Latigo.<hr></blockquote><p>Hi Latigo,<p>I tried that kind of masochistic approach<br>some time ago, but since that project took me a lot more than the expected time, I threw it in the big list of my waiting projects. It was anyway a big fun. Here is what I did and what I learned.<p>You cannot debug Winice with Winice itself. You must use another kernel debugger. The only kernel debugger I am aware of, besides Softice (never tried with TRW2000, because at that time my platform was WindowsNT) is Microsoft WINDBG (take it for free at <a href="http://www.microsoft.com/ddk/debugging/)." target="_blank">http://www.microsoft.com/ddk/debugging/).</a><br>Tip: I think TRW2000 could be a good solution for Win9x platforms, but I am not sure of...<p>Unfortunately WINDBG cannot debug the kernel on the same machine where it runs but it requires a remote computer.<br>The target machine will run the kernel with the /DEBUG option. In this way the serial port (COM1 or COM2) will be used by the kernel to send and receive information for the remote debugger, with a simple protocol nearly undocumented by Microsoft.<br>It seems that Windows Whistler could be debugged by WINDBG on the same machine...<br>So you have two chances:<br>(a) buy another PC and connect it to the target one with a null-modem cable<br>(b) put your hands on VMWARE<p>I followed the second chance, and after some troubles installing Softice on the VMWARE virtual machine (you must set a standard VGA driver on it, selecting only 16 colours in order to have a not-garbled screen when softice pops-up), another problem arose: how can the virtual machine dialogate with WINDBG? You have again two chances:<br>(a) use a null-modem cable to connect COM1 with COM2. Configure the virtual machine kernel in order to use one of them, and instruct WINDBG to use the other one. I did not try this solution: on the paper it should work... who knows?<br>(b) thanks to VMWARE facility of redirecting all the COMx flow to a named pipe, another way to connect the two machines would be via pipes. But this requires an NT driver (VMWARE runs only on Windows NT) in order to redirect the COM to a pipe, since WINDBG can use only a COM port to connect to the target machine.<p>Well, I wrote a filter NT driver on the top of the standard serial one, which simply redirects all the WINDBG I/O to a named pipe and gets there the answers from the VMWARE redirected kernel I/O. I was in the stage of debugging this one when I realized that VMWARE was yet full of bugs: a lot of times it crashed. I lost my patience and I decided to stop the project and to spend my time with some more interesting, waiting for some new releases of VMWARE.<p>In the following weeks I found another way to manage the problem. You could use Bochs (the Intel emulator with full source code) with its debugger built-in, in order to step inside Winice. Could it work? I would have the time to try... Grab a Windows version of Bochs with the debugger enabled at <br><a href="http://www.reactos.com/tools/bochsget.html" target="_blank">http://www.reactos.com/tools/bochsget.html</a><p>Ok, please let me know if you have the time and the skillness to make some progress...<br>I would be very interested at it.<br>My best 
+regards.<br><br>DinDon</font></td>
+              </tr>
+            </table>
+            <table border="0" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><font class="sub-body"><b>Date:</b> 12-11-2000 on 17:03</font></td>
+</table>
+
+
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="tools.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to tools<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue><font color=blue>[</fonT></font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all 
+rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

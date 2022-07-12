@@ -1,0 +1,313 @@
+<HTML><HEAD>
+<title>Proxy Info</title>
+
+</HEAD>
+
+<body bgcolor="#B8B8B8">
+
+<CENTER><h2>Proxies, firewalls, where to find proxies
+ and check them, other proxy related soft and ANON Remailers</H2></CENTER>
+
+ A Proxy is simply a server to connect a users to a network. 
+Usually it connects to another network (for example, the Internet)
+ from a local network or a part of it, for example a hospital. 
+They exist in very diverse capacities and powers, 
+from proxys to connect a complete government to the 
+Internet, to one in which the user can have a setup in his house to connect 
+his brother, his grandmother and the cat to the Internet using a single modem.
+
+At first it doesn't seem like anything 
+special; nevertheless, due to the architecture (the way the things are made)
+ of the Internet, these servers can be very useful, contributing security,
+ speed and privacy to those people who wish to enjoy the Internet without
+ resigning their "privacy".
+
+<P> If you read the <A HREF="ip.html"> Whats an IP number FAQ</A>, you'd know
+ how each computer on the Internet is marked with its own special address.
+You have probably deduced, (but I will tell you anyway) 
+that the IP points directly to us.  That is, if we are the bad guy on 
+the computer, it is possible to locate us, because a specific IP at a 
+specific time is connected to a single person or machine.
+<Br>And not only when we are the bad guy can we have problems. 
+Whenever we are connected with another computer (for example a Microsoft page),
+the other computer registers our IP and what we have done inside, the pages 
+we have watched, the files we have taken, etc. etc. Some sites even
+deny us access ("you do not have permission...") to certain pages because 
+we are not from the server's country (the single IP number does not say 
+anything, but in conjuntion with the DNS or "Domain name system" it indicates 
+the country and the company).
+
+<P> Here is where the proxy comes in.  We have said that these computers
+connect several people or machines to the network; that is, that
+several machines have the same IP facing the outer world, although for the 
+proxy each computer continues to have its own unique IP. What
+happens if we connect to a server using one of these proxys?
+The target server will believe that the downloader was the proxy and not
+us, with the proxy acting like a shield.
+ For example, say our IP is 195.104.193.192 and we want to get
+
+some photos of Pamela Anderson from a site, but we do not want anyone to 
+know that we have seen those pictures.  It's very simple.  We say 
+to the proxy (if the proxy admits calls from the outside), "Please make 
+a call to the computer X and request the photos from him."  If the IP 
+of the proxy is 109.109.100.100, in the computer which contains the photos, 
+the lurker IP will be 109.109.100.100 and not 195.104.193.192.
+
+ Appears very hard?  It is not.  All (or almost all) 
+browsers, like Netscape, Opera or Internet Explorer, allow us to indicate
+a proxy for our connections, correctly configuring our browser.  We will
+surf as always but the navigator gets the pages or files through the proxy.
+<P> But the proxy does not serve only for that.  Imagine that you
+want to download a file from Japan, but your conection is very
+slow and you die waiting for it, but when you try to get one page from America
+or Europe the speed is superior.  Ok, you will try to find a proxy
+with a good conection between the target and you, and request
+the files through the proxy.  Sometimes this system greatly accelerates the
+speed of downloading, although at other times it does the opposite.  
+Thats all there is to it. Unfortunatly, proxies are only available for
+ HTTP, FTP, but there is also a trick way to use SOCK proxies for NTTP...:-) 
+<BR>
+
+
+All, right so the next step is to find a good fast
+working proxy and to set up your browser to work with it.
+To learn how to set your browsers with proxies, read the
+<A HREF="setproxy.html">How to set a proxy FAQ</A>.<BR>
+<BR>
+
+<CENTER><H2>PROXIES, PROXY CHECKERS, PROXY RELATED SOFT
+and ANON REMAILERS</H2></CENTER>
+ 
+<CENTER>Why would you want to use a proxy?..check 
+<A HREF=http://internet.junkbuster.com/cgi-bin/show-http-headers> junkbuster.com-show-headers</A> then</CENTER><BR>
+
+a few <FONT COLOR=red>NOTES & TIPS </FONT>on using proxies:
+<UL>
+<LI>when using a proxy, ANY proxy remember that it's usually better not to swim against the current ;-) 
+as every access is probably monitored in log files.<BR>
+<LI><FONT COLOR=red> DO NOT USE </FONT>
+<A HREF=http://www.anonymizer.com/>Anonymizer.com</A>,
+<A HREF=http://anon.free.anonymizer.com/>Anon.Free.anonymizer.com</A>,
+they are NOT secure proxies, read the 
+<A HREF="https://searchlores.nickifaulk.com/fiatlu/notsafe.txt">Richard Smith's article</A>   
+posted on alt.comp.virus.<BR>
+<LI>for a proxy to be effective, turn OFF ALL
+<FONT COLOR=red>Java</FONT>, <FONT COLOR=red>Java Script</FONT>, <FONT COLOR=red>Active X</FONT> and <FONT COLOR=red>Cookies</FONT>!<BR> 
+<LI>you can also chain several proxies together- 
+<FONT COLOR=red>proxy.name.com:8080/proxy2.name.com</FONT> with the
+ name of the port for  the second proxy in the port column (do not forget,
+ proxies are not WWW servers). you can put the proxies in either in the 
+address/URL field of your browser- 
+<FONT COLOR=red>proxy.name.com:8080/www.URL.you.want.to.visit</FONT> 
+or inside where manual proxy config is<BR>
+<LI> You actually do not need to visit the 
+anonymizer or any other proxy, all you need to do
+is to precede the *exact and complete* 
+http://...address you want to visit, writing (even per hand in the 
+"address" field of your browser) 
+<FONT COLOR=red>"http://www.anonymizer.com:8080/" </FONT>
+before it. 
+</UL><BR>
+
+<BR>
+<H4>Sites with Lists of Working Proxies:</H4>
+<A HREF=http://proxys4all.cgi.net/>Proxys4all.cgi.net</A>
+<a href=http://akihiro.gd.nu/PRX/class.html>
+akihiro.gd.nu/PRX/class.html</a> 
+<a href=http://allfreeweb.hypermart.net/proxy.html>
+allfreeweb.hypermart.net/proxy.html</a> 
+<A href=http://altern.org/cortomalt/tools.htm>  
+altern.org/cortomalt/tools.htm</A>
+<a href=http://www.angelfire.com/md/ROA/proxy.html>
+angelfire.com/md/ROA/proxy.html</A>,
+<a href=http://cavency.virtualave.net/proxy/>
+cavency.virtualave.net/proxy/</a>,
+<a href=http://come.to/proxys/>come.to/proxys/</A>,
+<a href=http://www1.freeweb.ne.jp/~yzz/cgi-bin/startproxy.cgi>
+freeweb.ne.jp/~yzz/cgi-bin/startproxy.cgi</A>
+<a href=http://www1.freeweb.ne.jp/~yzz/cgi-bin/cgiproxy.cgi>
+freeweb.ne.jp/~yzz/cgi-bin/cgiproxy.cgi</A>
+<a href=http://ians.978.org:8801/>ians.978.org:8801</A>
+<A HREF=http://lightning.prohosting.com/~cex/anony.htm>
+lightning.prohosting-proxies</A>
+<a href=http://www.cyberarmy.com/lists/proxy/>cyberarmy.com/lists/proxy/</A>,
+<a href=http://www.ijs.co.nz/index.htm>ijs.co.nz</A>
+<a href=http://www.ijs.co.nz/sorm.htm>ijs.co.nz/sorm.htm</A>,
+<a href=http://www.ijs.co.nz/proxies2.htm>
+ijs.co.nz/proxies2.htm</a> 
+<A HREF=http://www.ijs.co.nz/proxies.htm> Ijs.Co.Nz </A>(and subsequent pages),
+<a href=http://www.geocities.com/SiliconValley/Network/1120/fp-anonim.html 
+>geocities.com/SiliconValley/Netwoanonim.html</a>
+<a href=http://freebooks.hypermart.net/proxy/proxies.htm> freebooks.hypermart.net/proxy/proxies.htm</a>
+<a href=http://www.lightspeed.de/irc4all/index.htm>
+lightspeed.de/irc4all/index.htm</a>,
+<A HREF=http://proxys4all.cgi.net/proxy.html>Proxys4All</A>,
+<a href=http://www.theargon.com/anonymity/proxies.shtml>
+theargon.com/anonymity/proxies.shtml</a>
+<a href=http://www.novelsoft.com/dark/proxy/1_3.htm> novelsoft.com/dark/proxy/1_3.htm </a>
+<a href=http://fsu.virtualave.net/cgi-bin/fp.pl?showlog>
+fsu.virtualave.net/cgi-bin/fp.pl?showlog</a>
+<a href=http://proxylist.hypermart.net/list.htm>
+proxylist.hypermart.net/list.htm</a></div>
+
+<A HREF=http://fsu.virtualave.net/proxy/81.htm>
+Virtualave.net/proxy/81.htm</A>
+<A HREF=http://fsu.virtualave.net/proxy/proxies.htm>
+Virtualave.net/proxy/proxies.htm</A>
+
+
+<A HREF=http://www.wiktor.dk/~jymbio/proxy_list.htm>
+wiktor.dk-proxy list.htm </A>, or
+
+<A HREF=http://www.wiktor.dk/~jymbio/proxy.htm>
+wiktor.dk-proxy.htm</A>,
+
+<A HREF=http://www.angelfire.com/wy/waynes/>Wayne's proxies</A>,
+
+
+<A HREF=http://www.cl.spb.ru/sparta/list.htm>
+cl.spb.ru/sparta/list.htm</A>,
+
+
+for a list of proxies servers by country, go to
+<A HREF=http://www.infovlad.net/internet/proxydata.html>
+infovlad.net</A>,
+a Russian <A HREF=http://www.geocities.com/SiliconValley/Network/1120/proxy.html>
+list</A> of proxies, 
+
+<a href=http://www.deny.de./>www.deny.de</A>,
+<BR>
+<BR><BR>
+
+
+
+ <H4>Additional Software for Proxies:</H4> 
+<UL>
+<LI><A HREF=http://www.wiktor.dk/~jymbio/proxyp.htm>wiktor.dk-proxy</A>
+carries the Proxy Hunter, the Proxy Checker, PlooUp, ets<BR>
+
+<LI>the <A HREF=http://a4proxy.hypermart.net/>a4p shareware </A>will checks the degree of anonimouslity of the proxy you are using, <BR>
+<LI>the <A HREF=http://members.tripod.com/Proxomitron/>freeware Proxomitron</A>  will stop all sorts of info your browsers carelesly tell the outside world, and it act as a proxy too, to set it up, read the 
+<A HREF="https://searchlores.nickifaulk.com/fiatlu/Proxomitron.txt">
+instructions </A><BR>
+<LI><A HREF=http://proxomitron.cjb.net>proxomitron.cjb.net</A>
+<LI>the <A HREF=http://member.netease.com/~windzh/software/proxyht/download.htm>
+ Proxy hunter </A>will find proxies in ANY domain you desire, <BR>
+
+<LI><a href=http://www.leader.ru/magic/>leader.ru-online proxy testers, whois, trace</A>(in russian)
+
+<LI><a href=http://www.deny.de./>www.deny.de</A> 
+excelent place for proxies, proxy toolz, proxy checkers and MUCH more, or if www.deny.de doesn't work, try 
+<LI><A HREF=http://www.wiktor.dk/~jymbio/proxyp.htm>wiktor.dk-proxy</A></UL><BR>
+<BR><BR>
+
+
+
+
+<H4> check how anon the proxy you are using really is:</H4>
+<FONT COLOR=red>NOTE*
+trully anon proxies will NOT show HTTP_FORWARDED or HTTP_X_FORWARDED_FOR  variables, HTTP_FROM will show if they can grab your email address from the browser, HTTP_REFERER will show the page you came from,</FONT><BR>
+ to see your IP address quick, type <FONT COLOR=red>WINIPCFG</FONT> on the <FONT COLOR=red>START+RUN</FONT><BR>
+MANY places to visit and find out what they say about YOU AND your proxy, some will say your proxy is secure, some won't, so it's YOUR judgment:<BR>
+<BR>
+<UL>
+<LI><A HREF=http://www.leader.ru/secure/who.html>who.html</A>in russian
+<LI><A HREF=http://www.wiktor.dk/~jymbio/proxy.htm>
+wiktor.dk/~jymbio/proxy.htm</A>
+several links to check to see if yor proxy is really ANON
+<LI><A HREF=http://cgi.anonymizer.site.ne.jp/e/prxjdg-e.cgi>
+http://cgi.anonymizer.site.ne.jp/e/prxjdg-e.cgi</A>
+<LI><A HREF=http://www.icefortress.com/html/guest/prxjdg-e.cgi>
+http://www.icefortress.com/html/guest/prxjdg-e.cgi</A>
+<LI><A HREF=http://internet.junkbuster.com/cgi-bin/show-http-headers>
+internet.junkbuster.com/cgi-bin/show-http-headers</A>
+<LI><A HREF=http://www.rental-web.com/~azuma/cgi-bin/env.cgi>
+rental-web.com/~azuma/cgi-bin/env.cgi</A><LI><A HREF=http://towerofbabel.virtualave.net/cgi-bin/proxjudge.cgi>
+http://towerofbabel.virtualave.net/cgi-bin/proxjudge.cgi</A>
+<LI><A HREF=http://cavency.virtualave.net/proxy/>Cavency.virtualave.net</A>
+ If the proxy is anonymous, it will see the proxy's IP and the text 
+"anonym" or "none" in green. if it could see the real IP (Start Button/Run/winipcfg to know it) a little red skull, will appear, so you BETTER look for another  proxy.
+<LI><A HREF=http://www.gemal.dk/browserspy/>Gemal.dk-browserspy</A>
+<LI><a href=http://www.tamos.com/privacy>tamos </a>
+<LI><A HREF=http://www.tamos.com/bin/proxy.cgi>tamos cgi</A> 
+<LI><A HREF=http://www.tiac.net/users/smiths/anon/test.htm>Tiac.net</A> with Java and Java Script tests, refresh tests, ets,
+<LI><A HREF=http://www.grc.com/x/ne.dll?bh0bkyd2>Shields UP!</A>-will lists your open ports and tell you your computer name on the Net,
+<LI><A HREF=http://groucho.dbc.bib.dk:1080/cgi-bin/dumpx> groucho.dbc.bib.dk:1080</A>,
+
+<LI><A HREF=http://ba1979.hypermart.net/cgi-bin/diag.cgi>ba1979.hypermart</A>,
+<LI><A HREF=http://www.cs.ndsu.nodak.edu/~breid/mycgi/test.cgi>
+cs.ndsu.nodak.edu, test</A>,
+<LI><A HREF=http://www.cs.ndsu.nodak.edu/~breid/mycgi/echo.cgi>
+cs.ndsu.nodak.edu, echo</A>, 
+<LI><A HREF=http://dq.xodox.org/>DQ XodoX</A>,
+<LI><A HREF=http://www.forsmark.uu.se/cgi-bin/test.cgi>forsmark.uu.se</A>,
+<LI><A HREF=http://kryten.eng.monash.edu.au/cgi-bin/printenv>kryten.eng.monash.edu.au</A>
+<LI><A HREF=http://www.helie.com/BrowserCheck/>
+helie.com-BrowserCheck</A>,
+<A HREF=http://www.anonymizer.com/snoop.cgi>the Anonimizer
+Proxy checker</A>,
+<LI><A HREF=http://carl.blackout.org/>carl.blackout.org</A>,
+<LI><A HREF=http://www.glr.com/danger/>the GLR proxy check </A>,
+<LI><A HREF=http://echo.znet.de:8888/>echo.znet.de</A>,
+<LI><A HREF=http://cavency.virtualave.net/proxy/>
+cavency.virtualave.net</A>-a proxy checker and a list of proxies too!,</UL><br>
+<BR><BR><BR>
+
+
+<A HREF=http://www.junkbuster.com/cgi-bin/show-http-headers>
+http://www.junkbuster.com/cgi-bin/show-http-headers</A>
+
+<H4> and Several Remailers you can use to ANONIMOUSLY
+send e-mail:</H4>
+
+<A HREF=http://www.gilc.org/speech/anonymous/remailer.html>
+
+gilc.org e-re-mailer</A>
+<A HREF=http://freedom.gmsociety.org/remailer/mixmaster.cgi>the Freedom Remailer?</A>
+
+<A HREF=http://www.anonymizer.com/email/remailer-simple.cgi>
+
+the Anonimizer remailer</A>
+
+<A HREF=http://www.anonymizer.com/email/remailer-simple.cgi?to=>
+
+the encripted version of the above</A>
+
+<A HREF=http://www.informatik.tu-muenchen.de/~pircher/anonymicer/news/>use this to post text messages to usenet anonimously</A><BR>
+<BR>
+
+<BR><BR>
+
+
+<H4>open proxies-use at your own risk!</H4>
+<A HREF=http://lightning.prohosting.com/~cex/anony.htm>
+lightning.prohosting-proxies</A>
+
+<a href=http://www.informatik.tu-muenchen.de/~pircher/anonymicer/>german anonimizer</A>
+<a href=http://www.privada.net>Privada.net</A> (like anonimiser)
+<a href=http://dc-proxy.allserve.net/surf/>The DefCon proxy</A>
+<a href=http://www.peacefire.org/bypass/Proxy/>PeaceFire proxy </A>
+<a href=http://www.cyberarmy.com/portal.shtml>cyberarmy.com/portal.shtml
+</A>
+<a href=http://www.chenxq.webprovider.com/startproxy.cgi>chenxq.webprovider.com/startproxy.cgi</A>
+<a href=http://www.tag4tag.com/scripts/tools/anonymizer/startproxy.cgi>
+tag4tag.com/scripts/tools/anonymizer/</A>german anonimizer<BR>
+<BR><BR><BR>
+
+
+to be checked:<BR>
+
+     
+<a href=http://www.df.lth.se/~nh/cgi-bin/nph-proxy.cgi>
+df.lth.se/~nh/cgi-bin/nph-proxy.cgi</A>
+<a href=http://www.angelfire.com/wy/0waynes/>angelfire.com/wy/0waynes/
+</A>learn much more about proxies
+http://www.angelfire.com/wy/0waynes/newbiesGuide.html
+<BR><BR>
+
+I wellcome ANY corections, tips, additions,ets...<BR>
+<BR>
+
+</body>
+</html>
+

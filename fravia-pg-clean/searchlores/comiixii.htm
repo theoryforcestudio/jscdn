@@ -1,0 +1,319 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>comiixii.htm: How to make Opera v4.02 usable</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ How to make Opera v4.02 usable ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+Courtesy of <a href="http://www.searchlores.org">fravia's searchlores.org</a>, November 2000
+<br>
+Original file @ <a href="http://members.fortunecity.com/iixii/">http://members.fortunecity.com/iixii/</a>
+<hr><i>Well, iixii had to send me this file twice, since opera's email function is malfunctioning as well :-)<br>
+A great essay in the best reversers' tradition: we ameliorate our tool, we fix bugs, we do whatever 
+we want and fancy with our software... and the people at Opera (who should be ashamed to let 
+such a good program on a bug infested downhill path) should thank us (in this case iixii), 
+gefaellig... have a look and enjoy (and then, by all means, use the ameliorated version of Opera)
+</i>
+<hr>
+<FONT COLOR="Red" SIZE=+3>
+
+<B>How to make Opera v4.02 usable</B><BR>
+
+</FONT>
+
+<I>
+Update: 19.11.00 (javascript bug, email sort bug, attachment bug)<BR>
+Last Update: 24.11.00 (mail retrieving bug finally corrected)
+</I>
+</CENTER>
+<BR>
+OK, so you just downloaded Opera for Windows 4.02 -- The Best Getting Even
+Better --, and discovered that it really has got <B>worse</B>. The major
+version change means they have completely redone it, and introduced LOTS of
+new bugs on the way. Nonetheless, it is a great program, small, efficient,
+lots of features you always wanted, and with the email and news integration,
+it is a really good all-in-one browser.<BR>
+Just that the email client is the source of the most horribly obvious bugs.
+The minor version "02" suggests it isn't exactly a beta version anymore,
+but some bugs are so overwhelmingly stupid one might think the programmers
+are blind or constantly drunk.<BR>
+Anyway, I sat down and did what I had to do. Apart from fixing real bugs,
+there were things which I wanted Opera to do MY way, so there are two sections
+below, the first deals with real bugfixes, the second with "adjustments".
+The bytes which have to be changed in the appropriate DLL and the
+corresponding offsets are given in hexadecimal. If you don't know how
+to do byte patches (which by the way you SHOULD, there are quite enough
+tutorials and tools out there), the fixed and tweaked files are available
+for download at the bottom, but of course just downloading and replacing them
+denies you the possibility of choosing which bugfixes/tweaks to apply and
+which not.<BR>
+Feel free to submit this site to any mailing lists/search engines/discussion
+groups/FAQs, it is important to reach those desperate Opera users which would
+otherwise turn their backs on this good program and return to Nutscrape or
+Internet Exploiter.<BR>
+If you have any suggestions concerning this site or discover/repair bugs which
+aren't addressed here yet, <A HREF="mailto:iixii@newmail.net">email me</A>.
+<BR><BR>
+Hope this helps,<BR>
+IIXII<BR>
+<BR><BR>
+All byte changes apply to OMAIL32.DLL, whose size should be 262193 bytes, to
+be sure you have exactly the same version.<BR>
+<U><I>New:</I></U> This page now also can be found at
+<A HREF="http://www.fravia.net/">Fravia</A>'s (Introduction/Tutti all'opera!).
+<BR><BR>
+<B>Bugfixes:</B>
+<UL>
+<LI><A HREF="comiixii.htm#mailpref">Mail preferences of type number aren't saved</A>
+<LI><A HREF="comiixii.htm#colsort">Mailbox columns aren't sorted</A>
+<LI><A HREF="comiixii.htm#riched">Email characters per line word wrap doesn't work correctly</A>
+<LI><A HREF="comiixii.htm#javascr">Javascript variable error</A>
+<LI><A HREF="comiixii.htm#getmail">Hangs while downloading mail</A>
+<LI><A HREF="comiixii.htm#attach">Wrong email borders render attachments useless</A>
+<LI><A HREF="comiixii.htm#langde">German language file interpreted incorrectly for mail buttons popup help</A>
+</UL><BR>
+<B>Tweaks:</B>
+<UL>
+<LI><A HREF="comiixii.htm#mailwin">Permanently resizing the mail list</A>
+<LI><A HREF="comiixii.htm#mailxchg">Exchanging mailbox columns</A>
+<LI><A HREF="comiixii.htm#mailcol">Changing the default mailbox column size</A>
+<LI><A HREF="comiixii.htm#langinc">Incomplete german language file</A>
+</UL><BR>
+<B><A HREF="comiixii.htm#download">Downloads</A></B><BR><BR><BR>
+<U><A NAME=mailpref>Mail preferences bug</A></U><BR>
+The newsgroups and mailing lists are being FLOODED with complaints about this
+unbelievable failure of notice. I just had to include the disassembled source
+(for those who are interested).<BR>
+This is the guilty part of OMAIL32.DLL:
+<PRE>
+.text:1001D364 83 7D 0C 00    cmp     [ebp+arg_4], 0
+.text:1001D368 74 3A          jz      short use_default_val
+.text:1001D36A 83 65 0C 00    and     [ebp+arg_4], 0
+.text:1001D36E 8D 4D 0C       lea     ecx, [ebp+arg_4]
+.text:1001D371 6A 0A          push    0Ah        ;number base
+.text:1001D373 51             push    ecx        ;pointer to result
+.text:1001D374 50             push    eax        ;pointer to cfg value
+.text:1001D375 E8 AA 9B 00 00 call    _strtol    ;convert string to int
+.text:1001D37A 8B F8          mov     edi, eax
+....
+.text:1001D38F 8B 45 08       mov     eax, [ebp+result]
+....
+.text:1001D39D 89 38          mov     [eax], edi
+....
+use_default_val:
+</PRE>
+It's part of a function which converts all preferences which are numbers
+(also on/off preferences). As you can plainly see, there is an argument to
+the function which tells it to always use the default value if it's zero.
+I suppose the programmers put this in for testing, BUT FORGOT TO REMOVE IT
+AGAIN, causing Opera to use DEFAULT VALUES every time you restarted it.
+The astonishingly simple solution is to delete the jump. 
+<PRE>
+OFFSET 1D368   74 3A -> 90 90
+</PRE>
+<U><A NAME=colsort>Column sort bug</A></U><BR>
+In a mail folder window, you can click on the column headers of the mail
+list and the mails are sorted accordingly. This setting is saved, on opening
+a new mail folder window, the red arrow is where it should be, only the
+sorting isn't performed! This bug is nearly as stupid as the preferences bug,
+because on adding a new mail to the list, its expected position is
+calculated, but not USED, it is always inserted at the end of the list.
+This time a jump has to be inserted to FORCE resorting of the list.
+If you apply the patch, the bug still occurs when unread mails are retrieved
+from the server, they are always inserted at the beginning of the list.
+Just change to a different folder and back to Inbox, then they are sorted.
+<PRE>
+OFFSET 15E29   74 2D -> EB 24
+</PRE>
+<U><A NAME=riched>Word wrap bug</A></U><BR>
+In the email preferences, you can specify the maximum characters per line,
+longer lines are automatically wrapped. The mail input field is a RichEdit
+control, which supports wrapping automatically, but the line width must
+be set in twips, which are calculated using the current screen resolution
+in dpi. On all three machines I tested this on, Windows tells Opera that the
+resolution is 96 dpi, while the RichEdit control seems to use 108 dpi.
+Can anyone give me a hint on this?? If you experience the same problem,
+that the lines are 12.5% longer than specified, use the following patch.
+<PRE>
+OFFSET 13FC0   75 03 6A 60 -> 90 90 6A 6C
+</PRE>
+<U><A NAME=javascr>Javascript variable error</A></U><BR>
+There is a very annoying Javascript interpretor bug in the allocation of
+global variables. If a function is called across document boundaries, e.g.
+a frame child calls a function of the parent document, the latter function
+cannot allocate ANY global variable!! I haven't been able to fix this up to
+now.
+<BR><BR>
+<U><A NAME=getmail>Hangs while downloading mail</A></U><BR>
+Many people also experienced this bug, but lots of others didn't.
+Unfortunately I belonged to the latter, so I couldn't reproduce the bug at
+first. Then I found an account per chance which showed the same error:
+While retrieving mail, sometimes one or two mails were received correctly,
+but then Opera invariably stopped in the middle of a mail. The mail transfer
+could be aborted normally by clicking on the red x.
+The error was hard to trace, but here it is:
+When retrieving mail, the end of the mail body is marked by the server with
+2E 0D 0A, a line containing only a single dot. Mails are always splitted
+into blocks when being transmitted, and just a few mail servers send this
+end marker in a seperate block, just containing these three bytes. But
+Opera checks for 0A 2E 0D 0A, so the line with the single dot is only
+noticed if it follows a line with other contents. If the end marker
+is sent in a single block, Opera won't notice, and try to receive more mail
+contents, which will never come. Once found, not too hard to patch:
+<PRE>
+OFFSET 1C8E4   04 -> 03
+OFFSET 1C8F0   04 -> 03
+OFFSET 1C8F2   DC -> DD
+OFFSET 1C8F9   FC -> FD
+</PRE>
+<U><A NAME=attach>Attachment bug</A></U><BR>
+Many people have reported problems with mail attachments. I never had any,
+but based on those reports, the problem is that Opera specifies a content
+boundary string like "_OPERAB__-H1HtX6bHMUjxHyf6zh47KD", and something
+about that seems to be illegal. Any comments??
+<BR><BR>
+<U><A NAME=langde>Language file bug</A></U><BR>
+I suppose this affects all language files. The language files specify
+replacement strings for menu and dialog items and popup tooltips. The
+numbers are identical to the internal IDs. But the programmers assigned
+some IDs *twice*, so the tooltips alternate between the right and the
+wrong string. You have to comment out the duplicates, which isn't so bad
+because those don't have to be translated anyway!!
+<PRE>
+Comment out the following lines in DE402.LNG
+;10966="*.bmp"
+;10969="http"
+;10970="https"
+;10972="ftp"
+;10973="gopher"
+;10974="wais"
+;10949="Bitte Nickname eingeben"
+;10945="Beschreibung"
+;10955="Screenreader kompatible Men�s"
+;10958="TN3270 Programm"
+</PRE>
+<U><A NAME=mailwin>Mail list window size</A></U><BR>
+A mail folder window is initially divided equally into the mail list
+(upper part) and the mail view (lower part). My mail list is usually short,
+while the mails themselves aren't. You can move the separator up, but
+this setting isn't saved. The size is calculated as follows:
+<PRE>
+Percentage relative to whole window = (Dword at Offset 2000C)/655.36
+Example: To make the mail list have 9 entries (28% of whole window), change
+OFFSET 2000C   00 80 00 00 -> 00 48 00 00
+</PRE>
+<U><A NAME=mailxchg>Exchanging mailbox columns</A></U><BR>
+The columns can be resized, but not exchanged. This is bad because I'm
+used to having the subject appear before date and size. So what?
+BTW: There are quite a lot of bytes to change. The first three exchange
+the labels, the next three exchange the contents, and the rest are responsible
+for making the sort criteria work again.
+<PRE>
+OFFSET 14A6B   CC -> CB
+OFFSET 14A90   CF -> CC
+OFFSET 14ABF   CB -> CF (labels)
+OFFSET 14C6E   1C -> 20
+OFFSET 14C78   20 -> 24
+OFFSET 14C8C   24 -> 1C (contents)
+OFFSET 157E4   0F 84 9E 00 00 00 49 74 51 49 0F 85 09 02 00 00
+            -> 74 0E 49 0F 84 9B 00 00 00 49 EB 4E 90 90 90 90
+OFFSET 153BA & 153BD & 153DA & 153DD   1C -> 20
+OFFSET 15802 & 1581C 06 -> 04
+OFFSET 1584C & 15866 05 -> 06
+OFFSET 15896 & 158B0 04 -> 05
+OFFSET 157F7   AC -> A8
+OFFSET 15841   AA -> AC
+OFFSET 1588B   A8 -> AA (sort on header click)
+</PRE>
+<U><A NAME=mailcol>Default mailbox column size</A></U><BR>
+This is more or less a bugfix, but closely related to the previous tweak,
+thus listed here. You can resize the columns, the setting is saved in
+COLUMNS.DAT, but not always properly loaded. So you can change the
+default sizes, the values given correspond to the exchanged columns.
+<PRE>
+OFFSET 14958   14    -> 00    Column 1&2
+OFFSET 149F1   14    -> 13    Column 3
+OFFSET 14A3D   A0             Column 4
+OFFSET 14A7F   78 00 -> 8B 01 Column 5
+OFFSET 14AAA   32    -> 78    Column 6
+OFFSET 14ABC   -1             Column 7
+</PRE>
+<U><A NAME=langinc>Incomplete german language file</A></U><BR>
+The translator forgot several items.
+Add the following lines in DE402.LNG in the appropriate sections:
+<PRE>
+[Translation]:
+10920="Lesezeichen f�r aktuelle Seite erstellen"
+10921="Lesezeichenordner erstellen"
+10922="Lesezeichenbefehle"
+10925="Adresse erstellen"
+10926="Adressordner erstellen"
+10927="Adressbefehle"
+14494="Wollen Sie wirklich:\r\n\r\n     Alle Fenster schlie�en\r\n\r\n     
+       Alle nicht-dauerhaften Cookies l�schen\r\n\r\n     Alle Passw�rter
+       l�schen\r\n\r\n     Alle Dokumente aus dem Cache entfernen, die mit
+       einem Passwort oder Verschl�sselung geladen wurden\r\n\r\n\r\nSind
+       sie sicher?"
+14495="Private Daten l�schen"
+
+[Menu]:
+14493="Private &Daten l�schen"
+10059="�ffne &WWW-Adresse (URL)\tF2"
+10087="Zu &Lezeichen hinzuf�gen\tCtrl+T"
+12035="&Verkn�pftes Fenster �ffnen"
+10523="Fenstereinstellungen speichern"
+</PRE>
+Download patched <a href="https://searchlores.nickifaulk.com/zipped/omail32.zip">omail32.zip</a> (145920 bytes)<BR>
+Warning: The DLL contains all bugfixes and tweaks mentioned above. It is
+compressed with ASpack, so it is downloaded faster and makes Opera even
+smaller on your hard disk. Still check that the size of the file you replace
+is 262193 bytes.<BR><BR>
+Download ZIPed german language file <A HREF="http://members.fortunecity.com/iixii/de402.zip">DE402.LNG</A> (28480 bytes)<BR>
+<BR>
+<CENTER><I>Made with Norton Editor 2.0 for DOS [und vieeel Zeit]</I></CENTER>
+
+
+
+<hr>
+<!-- internet searching strategies and hints content, end -->
+<center>
+Finally, since we are on a "Opera" page, a famous svdism (Svd's wisdom):<br>
+<font size=+2>"<font color=blue>hit ctrl-B in opera. Then LEARN it by 
+mind!</font>"<br></font>
+you'll thank me more than once for this advice...</center>
+<hr width=66%><center><a href="tuttiope.htm"><IMG SRC="images/basipet.jpg"
+ALT="back to tutti all'opera!"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to tutti all'opera!<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+<!-- t+s spellcheck April 2000 -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

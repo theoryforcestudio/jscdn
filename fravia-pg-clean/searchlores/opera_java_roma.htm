@@ -1,0 +1,160 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>opera_java_roma.htm: How to search the web, by fravia+</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Tutti all'opera! ~ Essays ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER WIDTH="64" HEIGHT="64"><tr>
+<th bgcolor="#183d6b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#183d6b"><a href="tuttiope.htm"><IMG SRC="images/spirale2.gif" ALT="spirale2 " WIDTH="64" HEIGHT="64"  ALIGN="BOTTOM"></a></th>
+<TH BGCOLOR="#183d6b">&nbsp;&nbsp;</th>
+<th bgcolor="#183d6b"><Font color="#993300" SIZE="3">
+Fravia's<br>special<br>pages</th>
+</tR></table>
+<!-- internet searching techniques: imageheader end -->
+
+<hr width=44%>
+
+
+
+<br><font color=blue size=+3>
+Personalising Opera using javascript</font><br>
+by ~Roman<br>this was written 27 March 2005
+</center><br><br><hr><br>
+There are several good pages on searchlores
+(e.g. <a href="http://www.searchlores.org/ritz__3.htm">http://www.searchlores.org/ritz__3.htm</a>) 
+that describe using bookmarklets to
+add functionality to browsers. However, simply using bookmarks is not, I
+believe, using this technique to its fullest potential.
+<br><br>
+Opera has an excellent feature which enables you to add buttons to the toolbars
+using a special syntax:
+<br><br>
+This special type of hyperlink is recognized by Opera:
+<br><br>
+<a href="opera:/button/<action text>"
+  title="<default button title>">
+    Clickable and draggable link</a>
+<br><br>Code for the above link looks like this:<br><font color=blue>
+&lt;a href="opera:/button/&lt;action text>"<br>
+  title="&lt;default button title>"><br>
+    Clickable and draggable link&lt;/a><br></font>
+<br><br>
+Replace &lt;action text> with the button action.
+<br><br>
+see "<a href="http://nontroppo.org/wiki/CustomButtons">http://nontroppo.org/wiki/CustomButtons</a>" for a 
+lot of custom buttons using
+opera's built in functionality (try dragging these buttons into your toolbar,
+cool eh?). <br>How do the bookmarklets fit into this ?
+<br><br>
+Try using<br>
+"<font color=blue>opera:/button/Go to page,"javascript: &lt;insert javascript>;</font>"
+<br>
+This allows you to create buttons in opera that will do anything a bookmarklet
+can do. You may be thinking "how does this improve over using bookmarklets?",
+well this syntax that opera recognises is not limited to buttons, but can also
+be used in <font color=blue>mouse gestures</font> and <font color=blue>keyboard shortcuts</font>.
+<br><br>
+This opens up all sorts of new functionality... try going to
+<font color=blue>Tools->preferences</font>, then finding your way to the mouse shortcuts (you may want to
+duplicate your current mouse gestures, so you can modify them without losing
+them), finding the <font color=blue>GestureDown</font> field, double clicking on the action and
+deleting the text that is there ("Open link in new page | New page"). Replace
+it with the following:<br><i>put everything on a single line</i>
+<br><br>
+Go to page,"javascript:expr=prompt('Length in kilometers:','');
+<br>if(expr){if(isNaN(parseFloat(expr))){alert(expr+' is not a number')}
+<br>else
+<br>{void(prompt('Length in miles is',Math.round(expr*6214)/10000))}}
+<br>else
+<br>{void('')}"
+<br><br>
+ I took this piece of javascript from "MarcFou" in the customizing Opera
+"bookmarklet" thread in my.opera.com forums 
+<br><br>
+Try it now. After this is complete, try holding the left mouse button down and
+dragging the mouse downwards. It should prompt you for a length in kilometers,
+which it will then convert to miles.
+<br><br>
+This is obviously not all you can do with it - anything you can do with
+javascript can be done with this. Look at any bookmarklet page for ideas. 
+<br><br>
+Also, don't forget that anything that can be done with mouse gestures can also
+be done with keyboard shortcuts and buttons. All of this could greatly increase
+the efficiency of using a browser.
+<br><br>
+Wanna learn more ? "<a href="http://nontroppo.org/wiki/AllActions">http://nontroppo.org/wiki/AllActions</a>" for 
+Opera's button
+commands.<br><br>
+also "<a href="http://my.opera.com/community/">http://my.opera.com/community/</a>" and look for "customizing Opera" forum.<br>
+-------------------<br>
+<br>
+Continuing, not only can arbitrary javascript be executed, but also <i>
+arbitrary executables </i>. For example, you are in opera and want to see what
+the current page would look like in IE?
+<br><br><font color=blue>
+opera:/button/Execute program,"iexplore","%u",,"Ie"
+<br><br></font>
+That button will do the trick. But now you are not just limited to javascript.
+Think of the possibilities&nbsp;:-)<br> Experiment a little.
+<br><br>
+--------------------
+<br><br>
+Adding google search to the side panel in opera.
+<br><br>
+create a bookmark called: <font color=blue>http://www.google.com/ie</font>
+(this is the "no adds" version of google) and tick the "Show In Panel" box.<br>
+You can then do google searches in the side panel, and keep all your results
+visible while you browse the pages. Remember, this is not only for google! And
+remember to select "<font color=blue>view->small screen</font>" to make it look right.
+<br><br>
+p.s. I'm doing this in opera 8 beta 3, so there are no promises about any of
+this working in earlier versions, but chances are it will.
+<br><br>
+
+<hr>
+<!-- internet searching strategies and hints content, end -->
+<center>
+Finally, since we are on a "Opera-related" page, a famous svdism (Svd's wisdom):<br>
+<font size=+2>"<font color=blue>hit ctrl-B in opera. Then LEARN it by 
+mind!</font>"<br></font>
+you'll thank me more than once for this advice...</center>
+<hr width=66%><center><a href="tuttiope.htm"><IMG SRC="images/basipet.jpg"
+ALT="back to tutti all'opera!"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to tutti all'opera!<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 1952-2032: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

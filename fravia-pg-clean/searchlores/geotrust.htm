@@ -1,0 +1,354 @@
+<html>
+<head>
+<title>Exploring eCommerce websites backed by GeoTrust</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="Commercial stupidity and corporate hubris: two faces of the same ugly medal. A sad story of today's web, where incompetent buffoons have money,  servers, clients and no knowledge.">
+<meta name="keywords" content="Credit card validity, commercial idiotical behaviour, corporate idiocy">
+<meta name="author" content="Anonymous Lee">
+<meta name="copyright" content="Copyright(c) 2004 Anonymous Lee">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+ <center>
+
+<font size="+3">~ Exploring eCommerce websites backed by GeoTrust ~</font><br>
+
+"<font color=blue>Protocols spelunking adventures</font>"<br>
+<b>By <font color="blue">Anonymous Lee</font></b><br>
+           <br>
+<table border="0" align="center"><tr>
+<td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+<td bgcolor="#993300"><a target=_top href="essays.htm"><img SRC="images/basipet.jpg" ALT="to essays" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+</tr>
+</table>  <br>
+
+<b>Published @ <a href="http://www.searchlores.org">Searchlores</a> in <font color="blue">April 2004</font> | </b>
+<b>Version <font color="blue">0.02</font> | </b>
+<b>By <font color="blue">Anonymous Lee</font>
+
+
+ | </b><b>Slightly edited by <font color="blue">fravia+</font>
+
+
+</b><br>   
+
+
+  
+<hr>     
+
+<i>
+    Commercial stupidity and corporate hubris: two faces of the same ugly medal. A sad story of today's web, where incompetent buffoons have money, 
+    servers, clients and no knowledge.</i><pre>
+    "<font color=blue>Excuse me?   
+Did I read that correctly? 
+You want me to have the credit card transaction response to bounce off the
+buyer's browser? You want me to rely on what the buyers machine has to say 
+about the validity of the credit card?</font>" </pre>
+
+     <hr>    <font size=+2>
+             Exploring eCommerce websites backed by GeoTrust.<br><br>
+                by Anonymous Lee<br> </center><br></font>
+<table cellpadding=0 cellspacing=0 border=0 width="100%""><tr><td>
+Good day (morning or evening) Fravia+ 
+   <br>
+I have some information that I think might be of some
+interest to you since it involves commercial websites
+and payment processing. 
+ <br>     <br>
+First of all I do not pretend to be a hot-shot hacker
+and you will not find me roaming the net under some
+cool name like <font color=blue>v33zRd</font> or whatever else. I am just a
+developer who worked with web based stuff from quite
+some time. I nether got up one morning and decided to
+become a hacker, nor have I planned this for years. It
+just happened that I was assigned by my employers to
+some projects that involved security and coding for
+load test. Well enough about me lets get to the meat
+of the matter. 
+   <br>   <br>
+In one of my recent  projects I had to build a payment
+processor integration for an eCommerce website. A
+decision was made to try out the GeoTrust. GeoTrust
+provides SSL certificates for websites and also
+resales credit card transactions from SkipJack for the
+commercial web. An astonishing discovery GeoTrust
+encourages its clients to bounce the credit card
+transaction from the buyers browser! Unbelievable
+stupid way of clearing a credit card. This opens the
+door for anyone with half way programming skill to
+compromise the response and order products and
+services from the merchant without actually paying for
+it. 
+     <br><br>
+Of cause I have notified GeoTrust about it but they
+have buried their head in the sand on this issue. In fact
+they do not consider it an issue. I wonder why? It is
+either due to the fact that they do not want to admit
+to such as stupidity or due to the fact that they do
+not want to refund the money for the Quick Payments
+account closed by the merchant once I informed the
+merchant that the buyer's machine would be the last
+link in the credit card transaction chain. 
+        <br><br>
+As many corporate swines GeoTrust has really pathetic
+support and rather poor understanding or web
+technology. Just the fact that they are using
+Microsoft ASP (Active Server Pages) speaks of it. But
+I will not go in to arguments of what technology is
+superior or inferior. That is not the point. <br>The point
+is that <font color=blue>some so called developers at this organization
+are so damn blind that they literally can not see
+beyond their noses</font>. Here is how it works:
+      <br><br>
+A transaction is initiated from the server side by the
+merchant and sent to GeoTrust server over secure HTTPS
+connection for validation. The transaction contains a
+list of parameters and values and acts as an HTTP
+post. Here is the example of the string being passed
+to the gateway server: 
+        <br><br>
+(I replaced the serial numbers with Xs and domain name
+is changed)
+<pre>
+szSerialNumber=XXXXXXXXX&amp;
+szDeveloperSerialNumber=XXXXXXXXXX&amp;
+szOrderNumber=777&amp;
+szDesiredStatus=AUTHORIZE&amp;
+szAmount=1.45&amp;
+szTransactionId=&amp;
+szForceSettlement=0&amp;
+serialnumber=XXXXXXXXXXX&amp;
+orderstring=1%7E1%7E1.45%7E1%7EN%7E%7C%7C&amp;
+ordernumber=2&amp;
+sjname=Test+Dude&amp;email=null40Ssomewebsite.com&amp;
+streetaddress=8320&amp;streetaddress2=&amp;
+city=Some+City&amp;
+state=FL&amp;
+zipcode=85284&amp;
+transactionamount=1.45&amp;
+accountnumber=4445999922225&amp;
+month=09&amp;
+year=05&amp;
+shiptoname=Test+Dude&amp;
+shiptostreetaddress=8320&amp;
+shiptostreetaddress2=8320&amp;
+shiptocity=85284&amp;
+shiptostate=FL&amp;
+shiptozipcode=85284&amp;
+shiptophone=8005551212&amp;
+comment=123456789 
+ </pre>
+Simple thing and simple to achieve. Here is a JSP
+example of how this can be posted:
+     <br><br>
+1)      // Define and connect to quickpayments URL <br>
+2)      URL u = new URL("<a href="https://developer.quickpayments.com/scripts/evolvcc.dll?Authorize" target=_blank>https://developer.quickpayments.com/scripts/evolvcc.dll?Authorize</a>");
+<br>3)      URLConnection uc = u.openConnection();  <br>
+4)      uc.setDoOutput(true);<br>
+5)      uc.setDoInput(true);<br>
+6)     
+uc.setRequestProperty("Content-Type","application/x-www-form-urlencoded"); <br>
+7) 	  // POST the data <br>
+8)      DataOutputStream output = new
+DataOutputStream(  <br>
+9)      uc.getOutputStream() );  <br>
+10)  <br>
+11)     // post the query string <br>
+12)     // to the server and get the response <br>
+13)     output.writeBytes( str.toString() ); <br>
+14)     output.close();<br><br>
+The query string is the string above. So far so good,
+server side and secure, but now we have to get a
+response from quickpayments connection: <br>
+
+15) 		// get the response <br>
+16) 	BufferedReader in = new BufferedReader(  <br>
+17) 	new InputStreamReader(    <br>
+18) 	uc.getInputStream()) );  <br>
+19) 	tags = in.readLine();   <br>
+20)   in.close(); <br><br>
+
+and it comes something like this: <br><br>
+
+NOTE:  <br>
+I have replaced the &lt; with [ and &gt; with ] since this
+mailer acts weird when an HTML snippet is used in the
+email. 
+   <pre>
+tags= 
+“[html][head][title]Response File
+Redirect[/title][/head][body
+onload="document.myForm.submit()"][form
+action="<a href="http://www.mywebsite.com/servlet/jspcontroller" target=_blank>http://www.mywebsite.com/servlet/jspcontroller</a>"
+name="myForm"][input type="hidden" name="comment"
+value="test"][input type="hidden" name="shiptophone"
+value="8005551212"][input type="hidden"
+name="shiptozipcode" value="85284"][input
+type="hidden" name="shiptostate" value="FL"][input
+type="hidden" name="shiptocity" value="123 Some
+Street"][input type="hidden"
+name="shiptostreetaddress2" value=""][input
+type="hidden" name="shiptostreetaddress"
+value="8320"][input type="hidden" name="shiptoname"
+value="Test Dude"][input type="hidden"
+name="transactionamount" value="49.95"][input
+type="hidden" name="zipcode" value="85284"][input
+type="hidden" name="state" value="NY"][input
+type="hidden" name="city" value="123 Some
+Street"][input type="hidden" name="streetaddress2"
+value=""][input type="hidden" name="streetaddress"
+value="8320"][input type="hidden" name="email"
+value="<a href="https://searchlores.nickifaulk.com/ym/Compose?To=test@nowhere.net&amp;YY=28365&amp;order=down&amp;sort=date&amp;pos=0&amp;view=a&amp;head=f">test@nowhere.net</a>"][input type="hidden"
+name="sjname" value="Test Dude"][input type="hidden"
+name="ordernumber" value="28976"][input type="hidden"
+name="orderstring" value="1~1~49.95~1~N~||"][input
+type="hidden" name="serialnumber"
+value="XXXXXXXX"][input type="hidden"
+name="szForceSettlement" value="0"][input
+type="hidden" name="szTransactionId" value="1"][input
+type="hidden" name="szAmount" value="10.95"][input
+type="hidden" name="szDesiredStatus"
+value="AUTHORIZE"][input type="hidden"
+name="szOrderNumber" value="777"][input type="hidden"
+name="szDeveloperSerialNumber" value="XXXXXXX"][input
+type="hidden" name="szSerialNumber"
+value="XXXXXXXXXX"][input type="hidden"
+name="szTransactionAmount" value="1095"][input
+type="hidden" name="szAuthorizationResponseCode"
+value=""][input type="hidden"
+name="szAuthorizationDeclinedMessage"
+value="Authorization failed, try again."][input
+type="hidden" name="szAVSResponseCode"
+value="0"][input type="hidden"
+name="szAVSResponseMessage" value=""][input
+type="hidden" name="szOrderNumber" value="2"][input
+type="hidden" name="szReturnCode" value="1"][input
+type="hidden" name="szCVV2ResponseCode"
+value=""][input type="hidden"
+name="szCVV2ResponseMessage" value=""][input
+type="hidden" name="szIsApproved" value="0"][input
+type="hidden" name="szTransactionFileName"
+value="XXXXXXXXXX.XXX"][input type="hidden"
+name="szCAVVResponseCode"
+value=""][/form][/body][/html]”
+   </pre>
+When I saw that at first I was wondering whether what
+I was seeing is really true. Look for yourself. This is
+nothing less then a complete simple HTML page with a
+form filled with all the values meant to be posted
+back to my server via onLoad java script. From
+where(?) you might ask. <font color=blue>From the buyer's browser</font>!
+               <br><br>
+I was not too happy with that and at first I was
+convinced that I am just delusional and that this is
+not meant to be posted to the user browser. But if so
+I would have to parse this garbage. <br>So I have
+contacted support at GeoTrust. It was not an easy task
+to get some one to talk to. My questions were: Can I
+get a response from your transaction server that I can
+parse and make the decision to mark the order as paid
+or unpaid before displaying my own response page to
+the user? <font color=blue>Why do you post my serial numbers in the
+transaction that returns back to me</font>? The first four
+emails were answered “I do not understand you
+question”. But after few futile attempts some bozo
+from second level support answered the following:
+                   <br><br>
+“GeoTrust provides easiest integration... (blah blah
+blah) ... the data sent from our server should be
+printed in to the user browser and the  javascript
+would redirect the client browser back to your server,
+so you can have your response page be in any language
+you desire...”
+           <br><br>
+Excuse me?   <br>
+Did I read that correctly? You want me to have the
+credit card transaction response to bounce off the
+buyer's browser? You want me to rely on what the
+buyers machine has to say about the validity of the
+credit card? 
+          <br><br>
+Turns out that this is in fact what they mean. 
+                                 <br><br>
+I am not a hacker but I can write my own browser using
+APIs available and change the [input type="hidden"
+name="szIsApproved" value="0"] to [input type="hidden"
+name="szIsApproved" value="1"] and post that instead.
+Simply use apache web browser API and HTMLUNIT code
+both are available on the net and really easy to use.
+<br><br>
+Build a simple class that would walk the website and
+gather the goods in to the shopping cart then process
+the information and make sure that you parse the
+responses for the hidden tag mentioned above. Now replace
+the value from 0 to 1 and you would get all kind of free stuff!
+          <br><br>
+I asked the senior level integration engineer why they
+not use XML and the response was “XML does not support
+tag/value pairs”. Ok this tells me that this
+particular engineer does not know a thing about XML.
+May be his boss should buy her a book. Only he would probably 
+understand even less himself. 
+           <br><br>
+GeoTrust does not see this as security hole and
+refuses to admit to it's own stupidity. But I know,
+that if I can enter so easily, anyone can, and no cookies or
+javascritps would save you. The simple command lane
+browser can be build from the available APIs. It would
+present itself as any browser you want and will
+keep the session going and everything else that a
+browser does. It would take about a day and a half
+to write and debug. The pages coming from the merchant
+server are set in to HTMLPage object and all the data
+can be accessed and changed on the fly. I have done
+that for unit test of HTML on my previous jobs and I
+could do that again, only this time in order to get some free stuff. If
+I can do that – anyone can.<br><br>
+
+Anonymous Lee. 
+         <br>
+
+   <hr>
+
+</font><br><center> <i>
+I hope that, publishing this @ <a href="http://www.searchlores.org">searchlores</a>, those "GeoTrust" (nomen est omen) clowns will finally take notice 
+of their serious security holes: Lee tried more than once to alarm them, but 
+ to no avail.   </i>
+        <table align=right><tr><td><font color=blue>fravia+</font></td></tr></table><br>
+      <hr><font color=blue size=+2>Addenda</font> (April 2004)<br><br>           
+                 
+                Just a little note to point out that you could also do this stuff 
+with <a href="proxy.htm">proxomitron (etc)</a> instead of writing your own custom browser. 
+
+(<a href="http://www.searchlores.org/zipped/ProxN44.zip">proxo</a> changes your browser into a custom browser hehe :)  
+   
+<table align=right><tr><td><font color=blue>- ritz</font></td></tr></table><br> 
+
+             <hr>
+You don't need proxomitron for  this endeavour (most recent versions of javascript allows DOM 2 access;=) see for instance what bookmarklets can do with <a target=_top href="http://www.squarefree.com/bookmarklets/forms.html">forms</a>... see in particular <a target=_top href="http://www.squarefree.com/bookmarklets/forms.html#show_hiddens">show hiddens</a> bookmarklet...
+  <table align=right><tr><td><font color=blue>Nemo</font></td></tr></table><br> 
+<hr width="66%">
+<a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>
+
+

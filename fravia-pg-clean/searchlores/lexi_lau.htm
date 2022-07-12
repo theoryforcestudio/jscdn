@@ -1,0 +1,523 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ lexi_lau.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Essays ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="advanced.htm"  target="_blank">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;600 engines for next to nothing&nbsp;¸.·´¯)</font>
+  <br>
+  <FONT SIZE=+2>Part Two - Delving Deeper</font>
+  <br>
+  <br>
+  <font size=+2>by Laurent</FONT>
+  <BR>
+  (very slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org"  target="_blank">searchlores</a> in 
+  April 2001
+  <br>
+  <hr width=44%><i>
+My friend <a href="photos.htm#dqlau">Laurent</a> caches his 
+extraordinary capabilities behind an exagerate modesty. He is 
+ a very good PHP-wizard, that in the last months has 
+definitely changed the messageboard landscape 
+of many 'communities' that orbit around reversing matters. His talent for transforming 
+vaguely muttered ideas into working code-realities is already legendary in the scene. 
+He has also started a 
+specific searching project, the <font color=blue>[</font><a href="http://www.2113.ch/phplab/oslse.htm">oslse project</a><font color=blue>]</font>, that 
+represents, afaik, the most useful public bot project around.<br><br>
+Ah yes, you think I'm exagerating Laurent's modesty? Why do you think that the 
+title of this essay is <a href="http://www.2113.ch/phplab/600_se.php">600 engines for next to nothing</a>?&nbsp;:-)
+<br><hr>
+  </i>
+</center>
+<H2>Introduction </H2>
+<P>
+When I originally saw <i>wayoutthere</i>'s post on the <a href="http://www.2113.ch/phplab/mbs.php3/mb001"  target="_blank">messageboard</a>, 
+I said to myself <cite>this is another meta searcher, probably very similar to webferret&co</cite>. So I didn't
+checked it further until <i>RH</i> catched my attention again. After all, why not give
+ it a try? Maybe I'll 
+find some interesting ideas that could be usefull for the oslse project.
+<br>After I wrote a first draft, the least I could do was to ask wayoutthere if he didn't wanted to add some notes of his own. 
+After all, he is the originator of this essay. It turns up that he had more than a few comments to add : He wrote a complete 
+<a href="lexi_wot.htm"  target="_blank">essay </a> describing his own journey through the search engines world (taking a very interesting approach) 
+which I greatly advice you to read.
+<br>The purpose of this essay is to gather ideas and informations that could be useful for the oslse project and, more
+generally, for building our own bots. We're going to find out how Lexibot, our today's target, manages the
+query building and the results parsing of the (many!) different search engines it supports.
+<p>
+<H2>Investigations</H2>
+<P>
+During my first visit to lexibot home page, I came accross their technical support section.
+Somewhere there you can download what they call <cite>The most recently released version of the search engines supported by the LexiBot</cite>,
+namely <code>engine2.dat</code> (note that it was released in July 2000). Would it be so nice that they offer their whole treasure for nothing? Let's download that file.
+<br>No luck, the file seems to be encrypted. But well, from it's size (almost 500Kb)
+we may suppose it contain some valuable informations (that make about 0.8Kb info/engine, not a bad ratio).
+Moreover, looking at the file content, we can see lots of repetitive patterns. This probably indicates a simple 
+permutation cipher. So, let's put some reversing efforts in it.
+<P>
+<H2>Reversing</H2>
+<P>
+After disasembling the file, it become obvious that, even if it claim to be a <cite>Very small program size</cite>,  
+the software wasn't quite optimized (you can find many redundancy code and data). Anyway,
+let's search for <code>engine2.dat</code>, the filename we are interested in. 7 occurances are found.
+3 in sub_40866D and 4 in sub_40A0E8. A quick check shows that the file is open in read mode in
+the first function and in write mode in the second. So we may assume the decryption take place
+somewhere in the sub_40866D function. I'll skip the boring details and jump directly into the decryption function :
+<pre>
+Decode_String proc near   
+          
+Flag    = dword ptr -10h
+Count   = dword ptr -0Ch
+cur_pos   = dword ptr -8
+offset    = dword ptr -4
+string    = dword ptr  8
+
+    push  ebp
+    mov ebp, esp
+    sub esp, 10h
+    cmp [ebp+string], 0
+    jnz short loc_0_418C25
+    jmp Return
+
+loc_0_418C25:             ; CODE XREF: Decode_String+Aj
+    mov [ebp+cur_pos], 0
+
+BigLoop:                  ; CODE XREF: Decode_String+A1j
+    mov eax, [ebp+string]
+    push  eax
+    call  _strlen
+    add esp, 4
+    cmp [ebp+cur_pos], eax
+    jnb short Return
+    mov eax, [ebp+cur_pos]
+    xor edx, edx
+    mov ecx, 80
+    div ecx               ; DX:AX / CX => AX (remainder=>DX)
+    mov [ebp+offset], edx
+    mov [ebp+Count], 0
+    mov [ebp+Flag], 0
+
+Decod_loop:               ; CODE XREF: Decode_String+82j
+    cmp [ebp+Count], 95
+    jnb short done
+    cmp [ebp+Flag], 0
+    jnz short done
+    mov edx, [ebp+string]
+    add edx, [ebp+cur_pos]
+    movsx eax, byte ptr [edx]
+    mov ecx, [ebp+Count]
+    imul  ecx, 320
+    mov edx, [ebp+offset]
+    cmp eax, CryptTable[ecx+edx*4]
+    jnz short loc_0_418C8D
+    mov [ebp+Flag], 1
+    jmp short loc_0_418C96
+
+loc_0_418C8D:             ; CODE XREF: Decode_String+6Ej
+    mov eax, [ebp+Count]
+    add eax, 1
+    mov [ebp+Count], eax
+
+loc_0_418C96:             ; CODE XREF: Decode_String+77j
+    jmp short Decod_loop
+
+done:                     ; CODE XREF: Decode_String+4Aj
+                          ; Decode_String+50j
+    cmp [ebp+Flag], 0
+    jz  short loc_0_418CAC
+    mov ecx, [ebp+Count]
+    add ecx, 20h
+    mov edx, [ebp+string]
+    add edx, [ebp+cur_pos]
+    mov [edx], cl
+
+loc_0_418CAC:              ; CODE XREF: Decode_String+88j
+    mov eax, [ebp+cur_pos]
+    add eax, 1
+    mov [ebp+cur_pos], eax
+    jmp BigLoop
+
+Return:                    ; CODE XREF: Decode_String+Cj
+                           ; Decode_String+27j
+    mov esp, ebp
+    pop ebp
+    retn  
+Decode_String endp
+</pre>
+This function is called several times, always from the same subroutine which seems to carry the parsing of the engine2.dat file.
+On entry, arg_0 point to a crypted string which will be decrypted on exit.
+<br>The encryption sheme looks like what i'll call (I lack the correct term) a <u>position dependent permutation</u> : each char in 
+the original string get replaced by another one (permutation) and the replacement character depend on the current position in the 
+string (position dependent). 
+<br>Let's translate this into some C code so we can try to decipher that engine2.dat file on our own :
+
+<pre>
+void decode_line(char* string)
+{
+  int cur_pos=0;
+
+  while (cur_pos&lt;strlen(string)) {  //Big Loop
+  
+   int offset=cur_pos%80;
+   int Count=0;
+   bool Flag=false;
+
+   while((Count&lt;=95) && !Flag) {
+     if (string[cur_pos]==CryptTable[Count*320+offset*4]) Flag=true;
+         else Count++;
+   }
+   if (Flag==true) {
+     string[cur_pos]=Count+32;
+   }
+   cur_pos++;
+  }
+}
+</pre>
+Here is an extract of the crypted file (on left), along with the same snippet decrypted by the above function (on right). 
+<P>
+<center>
+<TABLE BORDER=1>
+<TR><TH>crypted</TH><TH>plain</TH></TR>
+<TR><TD><PRE><font size=-1>&lt;#;-2J-nI@,)}I5rc
+gEta+Q6*w-Fw9)z3\Ofv{x'OnI
+?:lm2s.H
+2&lt;|0gimI6
+gwZ
+'hlc2a.H+E:;&2!Ow,9v?;60S_6C,vKlya&lt;B7Sa}o|LDK+.VMywVBySqVJl`5
+]Y|a/kjoIE_+\2rOwE-h.Qr+&O:I6Vtf1&&3zF;*)jx%OCwev.z&gt;nTYc'R*Y1^O[tK/M2&gt;Tf?V^OXiQhAR8^W
+&gt;h|{/F+I3-FB
+DXSfA6$H;{M]LUFX|&gt;#qn@{IAN!s"6
+]`8axT&Dn9Ai9bQLqh
+gwZ
+]`8axT&Dn9oY_)-:Dn'
+&lt;EEAxo_SID^T8r[
+gwZ
+?n|0S0&lt;q|9:Yv5W
+;5|=d;[!OZ1[]!wx{E&3~_
+;5|=d;[y}a_[jO5L!M$jKN(=@\D3zfv
+;5|=d;[*q5.Rct`?+wN9Uuj`@
+;5|=d;[ynWZYv5\kyE&3~
+;5|=d;[P}u1[9)zh\Ofv/zA1
+;5|=d;[3&gt;a_=T1'ky^:jKunm(
+;5|=d;[f|OZ=TA\2k{
+;5|=d;[f}u*kd!UB+0z
+;5|=d;[zn'"=T1'ky^:jKunm(
+;5|=d;[z|uyRTA\2k{
+;5|=d;[z}iZ@d!UB+0z
+;5|=d;[D@Zw=TA\2k{
+;5|=d;[n@@yGkx'eXneB%unm(
+;5|=d;[n3Gy#Zxzh!x;'
+;5|=d;[!OZ1[9)zh\Ofv/zA1
+;5|=d;[!OZ1G]@QB+0z
+;5|=d;[!OZ1WA0I)Xx$B'27anO
+;5|=d;[!OZ1}j)5)\Lsv?;xb#8g
+;5|=d;[!OZ1nko@9\uHA'([
+;5|=d;[!OZ1#h/zaZMzA'([
+;5|=d;[!OZ1.X1tOXF998Y
+gwZ
+?n|0CQ|'&'"#h/Oz
+gwZ
+O8E?j6ks6
+M&lt;R"&lt;imP6
+.hRDKTf'|G=Q
+gwZ
+</FONT></PRE></TD><TD><PRE><FONT size=-1>
+[AltaVista - Web]
+EngineName=AltaVista - Web
+SubName=
+Category=
+END
+WebPage=http://www.altavista.com/cgi-bin/query?pg=aq&what=web
+Action=http://www.altavista.com/cgi-bin/query?pg=aq&q=%QUERY_STRING%&r=&kl=XX&d0=&d1=
+MethodType=0
+Boolean=AND,OR,(),NOT,NEAR,",*
+AdditionalUrlList=
+END
+AdditionalTextList=
+[next &gt;&gt;]
+END
+SiteUrlFilters=
+http://www.amazon.com/
+http://companies.altavista.com/
+http://ad.doubleclick.net
+http://careers.av.com
+http://doc.altavista.com
+http://jump.altavista.com
+http://live.av.com
+http://local.av.com
+http://mail.altavista.com
+http://microav.com
+http://money.av.com
+http://news.av.com
+http://search.thetrip.com
+http://sports.av.com
+http://www.altavista.com
+http://www.cmgi.com
+http://www.doubleclick.net
+http://www.intelihealth.com
+http://www.shopping.com
+http://www.teragram.com
+http://www.wildweb.com
+END
+SiteTextFilters=
+END
+UserName=
+Password=
+Description=
+END
+</FONT></PRE></TD><TR>
+</TABLE></CENTER>
+<p>
+Woooowww, how nice ! The first things that pop to the eyes is that nice Action url along with the Boolean operators 
+supported. But we don't see any immediate traces of any result page parsing rule, ie, anything that could tell lexibot 
+where, in the result page, to find valuable info like <i>url</i>, <i>title</i>, <i>summary</i>, <i>ranking</i>, ... Ok, let's keep that in mind for 
+later.
+<BR>Decrypting the whole engine2.dat file gives the same details for almost 600 engines. Not bad for a little reversing 
+effort :-)
+<P>
+Note that if you want to decrypt the file by yourself, you'll need not only the above decode_line() function but also the permutation 
+table itself. You can find it in lexibot.exe from offset 0x0DB1B0 up to 0x0E286F (7600 dwords). 
+<P>              
+So now we have almost 600 search engines urls along with the correct query syntax (and even with some categorization, see below <u>Practical application</u>).
+But the next question is : How the hell do they extract information from the results pages ? 
+After spending some times trying to figure out where they hide their parsing rules, it becomes obvious
+that there were NO parsing rules involved. So, you probably wonder how they manages to extract valuable info from the search engines ?
+<br>Well the answer is quite simple actually. The only thing lexibot wants from the search engine are urls to possible matching pages. It
+doesn't care about any summary, ranking, whatever else provided by the search engines.
+<br>Roughly, what lexibot does is to first build a table of each and every links -url and text anchor (the string between &lt;a&gt; and &lt;/a&gt;)-
+ it found in the results page. Then it search for any 'more results' page by keeping only the links that either matches the 
+ <code>AdditionalUrlList</code> values (against the url) or either match the <code>AdditionalTextList</code> values 
+ (against the text anchor).
+<br>Now, in order to keep only the links pointing to actual results (and throwing away any <i>useless</i> link), it uses the 
+<code>SiteUrlFilters</code> and <code>SiteTextFilters</code>
+ to keep only the interesting links. Every link that match a filter rule is simply discarded.
+<br>And that's all ! The <i>parsing</i> is done.
+<br>Finally lexibot can fetch the actual matching pages pointed by the search engine and compute on its own
+all necessary information like title, summary, ranking, ... 
+<P>
+<H2>Practical application</H2>
+<P>
+We now have a plain text file containing all the data necessary for lexibot to
+support all those engines. Unfortunately, it seems that this file isn't quite up to date
+(it was last released in july 2000). So you may want to update it on your own. Or you may
+even want to add some new engines to the list. Nothing easier ! Just edit the plain text file
+and it's done. But you'll tell me that we have to encrypt the file before it can be used by lexibot.
+No sir ! Simply name it <code>engine2.une</code> and it works ! Indeed, before checking for the <code>engine2.dat</code> file,
+lexibot first check for a <code>engine2.une</code> file (une probably means <u>une</u>ncrypted, hehe) and if it
+exists, it opens that one.
+<br>Ok, let's do something practical. We'll add Searchlores's namazu engine to the lists. For this, we will write a new section to
+<code>engine2.une</code>.
+<br>The first lines are quite easy to figure out. They should look something like :
+<pre>
+[Namazu - Searchlores]        
+EngineName=Namazu - Searchlores
+SubName=
+Category=
+END
+WebPage=http://www.searchlores.org/
+Action=http://www.searchlores.org/cgi-bin/search?query=%QUERY_STRING%&amp;submit=Search%21&amp;max=20&amp;result=normal&amp;sort=score
+MethodType=0
+Boolean=AND,OR,(),NOT,,",*
+</pre>
+Now we have to tell lexibot which links to consider as matching results, which links to eventually follow for 'more results' and which 
+links to discard. 
+<pre>
+AdditionalUrlList=
+&whence=
+END
+AdditionalTextList=
+END
+SiteUrlFilters=
+http://www.searchlores.org/cgi-bin/
+END
+SiteTextFilters=
+searchlores.org
+how to search
+END
+UserName=
+Password=
+Description=
+END
+</pre>
+This tells lexibot to consider all links containing &amp;whence= as links to more results. All links pointing to /cgi/bin/ or 
+having the strings 'searchlores.org' or 'how to search' as anchor will be ignored as they don't actually point to matching pages. 
+<br>
+Now, before that new engine can actually be used by lexibot, we need to define into which category it belong. Although there is
+a Category line into each <code>engine2.une</code> sections, it seems lexibot doesn't use it. Checking the other files around (or reading the documentation)
+we find another file 'engine.gdb' which defines each and every Engines Group recognized by lexibot. So we'll add our own group.
+Simply add the following lines at the beginning of the [Engine Groups] section :
+<pre>
+My Own=
+Namazu - Searchlores
+END
+</pre>
+This will create a new group, named 'My Own', which contain a single search engine, namazu (of course you could add 'Namazu - Searchlores' to an already
+existing group).
+<br>Now you can launch lexibot, select 'My Own' as the source to search and send a query to searchlores.
+<br>Note : If you carefully compare the results returned by lexibot against those you get from a direct namazu query, you'll see that they
+aren't COMPLETE (this is especially the case when many pages matches your query). The only explanation i have for this is because when lexibot
+extract the 'more results' links from the first page it end up with a lot of links to follow. Indeed, there is no 'Next' link in the namazu result
+page, so I couldn't restrict the 'more result' link to only one page at a time. Let's take an example : Imagine that, when fetching the first result page,
+lexibot found 4 links pointing to results pages 2, 3, 4, 5. There is no way for lexibot to know that page 2 contain results of higher importance than
+page 5. So he consider them to be of same 'ranking level' and thus in place of first fetching all the matching pages from result page 2 then all from result page 3 and so on,
+it will fetch the x first matching pages from page 2 then the x first matching pages from page 3, ... This seems to cause lexibot to skip some matching pages. 
+Although I suppose there is a way to prevent this (there is one, is it ?) the only solution i see would be to ask namazu to return for example 100 results and then prevent
+lexibot from following any 'more results' link. 
+<br>Anyway, you can experiment on your own if you want.
+<p>
+Also, while writting this essay, I wondered what to do with those 600 urls. Browsing through the <code>engine2.une</code> file
+isn't quite easy. So I thought about formatting it into a nice html table which could be put online. But this wouldn't take any
+advantages of all the categorization information stored into engine.gdb and wouldn't make it very usefull. So I end up with a little php <a href="http://www.2113.ch/phplab/600_se.php"  target="_blank">script</a> which will parse both
+the <code>engine2.une</code> and the <u>[Engine Group]</u> section of <code>engine.gdb</code> to generate a nice dynamic html table presenting all the engines related to a user-selectable category. 
+<br>I didn't tried to optimize the script nor to optimize the file format (in order to easily update it whenever a new engine2.dat file comes out). So
+the script is actually slow. But you can easily download it and run it on your local machine :-). I don't plan to maintain this list of urls, but if you
+have any additions or corrections, I could update it from times to times. Or even better : you may try to send them to lexibot people themselves :-)
+<P>
+<H2>Conclusion</H2>
+<P>
+Lexibot's basic idea (fetching each and every matching page) is quite interesting. Indeed it allows operators that are not
+commonly supported by classical search engine like NEAR, AFTER, BEFORE to be fully supported by lexibot. For this, a minimal subsuming 
+query (ie, replacing proximity operators by AND) is sent to the search engines. Then, once the possible matching pages are fetched, distance
+between words can be computed. This allow lexibot to evaluate the proximity operators in order to discard some non-fully matching pages.
+<p>
+On the other hand, such an implementation wouldn't fit well into the oslse project which main objective is to offer an on-line meta-search engine. Beeing online,
+it should avoid any time and bandwidth consuming tasks like fetching so many pages, most of the time only to compute information
+already available on the search engine results page. However, we could implement this fetching feature in a second phase in order to refine
+the search over a small user-definable subset of the initial results.
+<p>
+This point of view seems to be shared by wayoutthere :
+<br><cite>
+This tool would seem to be a bandwidth hog, and also there is another view to be held.
+When you do a query, it gets all the pages on the link pages (upto 100). 
+<BR>
+So what is the big deal you ask?
+<BR>
+When it was getting those pages, your details were placed in the logs for each and
+every page grabbed. Pages that held no interest for you and which would have been
+discarded whilst scanning through the results by eye have been grabbed and retrieved.
+<BR>
+From my own experiences you always turn up a lot of dummy results, especially if the
+search is on a subject with widely used keywords. Do you really want every single
+page in the results to be grabbed? Your tracks to be placed on all those web servers
+that you never have and may never visit again, you didnt visit it but your bot
+did and it left tracks all over(unless you were careful).
+<BR>
+Another side effect of this process is that if you use a proxy, and rely on
+the cached pages to store information then this process can wipe out entries
+which you intended to keep. 
+<BR>
+This also becomes a problem if any of the target pages are large files which
+can make the search process a lot slower while they are retrieved. This is
+more of a consideration for modem users, but they still number the most around
+the world.
+<BR>
+I agree that the best approach would be to grab the results, rank them and
+then on a selected subset, retrieve them and perform another level of processing
+on them to get the results wanted. This can be done by using a local search
+tool to search the files themselves once they are present on the local machine,
+which allows almost any type of search imaginable and will be very configurable
+as it is locally controlled.
+</cite>
+<P>
+Well, what else to say ? Not much actually. I would just point out once again that I wouldn't have written this essay if wayoutthere
+didn't posted that message on the messageboard. And he wouldn't have written his own essay (that I hope you have now <a href="lexi_wot.htm"  target="_blank">read</a>)
+ if I didn't wrote this one and asked his comments on it.
+<br>So, who said that messageboard aren't that useful ? :-) 
+<p>
+<BR>Thank you for reading this essay, hope it was worth it.
+<P>(c) Laurent 2001<hr></font>
+    <font size=+1><center>
+<table><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to essays"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to essays</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm"  target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

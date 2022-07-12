@@ -1,0 +1,217 @@
+  <HTML>
+  <HEAD>
+  <TITLE>ftpbot1.htm: A bot to help FTP searches
+  </TITLE></HEAD>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010
+  VLINK=#405040>
+  <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1" WIDTH= "100%"
+  HEIGHT="22">
+  <TR><td></td><td>
+  <!-- Choose  a TITLE and a subtitle, choose well! -->
+  <center><FONT SIZE="+2">
+  ftpbot1.pl
+  </fonT><br><FONT SIZE="+1">
+  A bot to help FTP searches
+  </fonT></center></td><td>
+  <!-- Choose  a PROJECT GIF, leave this if unsure -->
+  <center><a href="bots.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to <a href="bots.htm">bots.htm</a><bR></center>
+  </center></td></tr><tR><td
+  bgcolor="#FFFFEA"><center><FONT COLOR="890000">
+  <!-- CHOOSE A DATE (will probably be changed) -->
+March 2000
+  </FONT></center></td><td bgcolor="#FFFFEA"><center>by
+  <font size=+3>
+  <!-- CHOOSE A HANDLE , i.e. your pseudo (wont be changed) -->
+  DarkWyrm
+  </fonT></center></td><td VALIGN="center"
+  bgcolor="#FFFFEA">
+  <!--
+  <a href="hcu98_3.htm"><IMG SRC="hcu1.gif"
+  ALT="+cracker" ALIGN=BOTTOM
+  WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+  -->
+  </td></tr><TR><td><center><a href="index.htm"><IMG
+  SRC="images/bulletr.gif"
+  ALIGN="BOTTOM"
+  BORDER="0" VSPACE="0" HSPACE="0"></a></center></td>
+  <TD BGCOLOR="898030"><center>Courtesy of Fravia's searchlores.org</center>
+  </center></TD><td BGCOLOR="898030"><center>
+  <!-- Your truly+ will edit only if really necessary
+  -->
+  </center></td></TR>
+  <!-- this is for the
+  data.....fra_00xx....yymmdd....handle..beg+int...not
+  ass... -->
+  <tr><td><font
+  color="#C4C0CF">fra_00xx<bR>980921<br>darkwyrm<br>1000<br>BO<br>PC<br></f
+  onT></td><td><center><i>DarkWyrm will -I hope- develop this project further 
+and send more info and 
+more projects. The help of all the readers (that's you, duh) that will want 
+to comment or contribute is welcome.
+<bR><br></i>Feedback: <font size=+1>darkwyrm(at)home(point)com</font>
+</center></td><td></td></tr><TR><td></td>
+  <!-- Leonard Coehn's old song, because we are poets, not only crackers -->
+  <TD BGCOLOR="898030"><center></i><b>There is a crack, a crack in everything
+  That's how the light gets in</b></center>
+  <!-- Leonard Coehn's old song, because we are poets, not only crackers -->
+  </center></TD><td></td></TR><TR><td VALIGN= "MIDDLE" bgcolor="#C6E7C6"><font
+  color=blue><center>Rating</FONT></FONT></center>
+  </TD><td VALIGN = "MIDDLE" bgcolor="#C6E7C6"><font
+  color=blue><center>
+  <!-- CHOOSE A RATING (may be changed) -->
+  (X)<B>Beginner</B> ( )<B>Intermediate</B> ( )<B>Advanced</B> ( )<B>Expert</B></FONT>
+  </center></td><td></td></tr></table>
+  <!-- END HEAD  --><bR><center>
+  If you can't find the right tool for the job, make your own: an FTP Search
+  bot.
+  <hR><FONT SIZE="+2">
+  <!-- Repeat your TITLE  -->
+  ftpbot1.pl
+     </FONT><BR>
+     <FONT SIZE="+2">
+  <!-- Repeat your SUBTITLE -->
+  A bot to help FTP searches
+     </FONT><BR><FONT COLOR="0B7FC1">
+  <!-- REPEAT YOUR CHOSEN HANDLE HERE -->Written by
+  <font color=#4f2010><u>DarkWyrm</u></font>
+  </FONT></center><br><br> <P> <!-- INTRO STARTS HERE -->
+  <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+  WIDTH= "100%"  HEIGHT="22"
+   >
+  <tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+  color=blue>Introduction</fonT>
+  </fonT></center></td></tr></table>
+  Sifting through the indexing done by archie and FTP search sometimes *still*
+  doesn't prove to be enough to get a file from a site. This is a basic tool I
+  am currently developing which helps for when you think a file is on a site,
+  but don't want to slog through the tedium of finding it yourself. <P> <br><br> <P> <!-- TOOLS STARTS HERE -->
+  <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+  WIDTH= "100%"  HEIGHT="22"
+   >
+  <tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+  color=blue>Tools
+  required</fonT>
+  </fonT></center></td></tr></table>
+  Perl (standard on Linux and readily available for other platforms)<br>
+  WWW access<br>
+  text editor (I prefer UltraEdit)<br> <P> <br><br> <P> <!-- REAL ESSAY  STARTS HERE -->
+  <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1" WIDTH= "100%"
+  HEIGHT="22">
+  <tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+  color=blue>Essay</fonT></fonT>
+  </center></td></tr></table> <P> FTP Search, while useful in its own right like any other search engine,
+  still suffers the same limitations any other search engine has - a, well,
+  <i>obscene</i> amount of information to index and constant change of this
+  information from moment to moment. To work around this, you need to use a
+  tool that is not nearly as broad in scope as a search engine. A bot will
+  work nicely.<P>
+  I won't explain the code too much -- if you don't know Perl, learn it. If
+  you do, then my first programming project will likely be an exercise in
+  boredom. The code is fairly well-commented and straight-forward. If you wish
+  to find what you want, you must have a desire to be good at looking for
+  it.<P>
+  In short, this script takes two arguments - a URL and a filename. It logs in
+  and literally reads every directory and filename on the site. If it finds
+  another directory, it adds it to the list of paths to search. If not, it
+  checks to see if the file is a match. Only the first result is displayed on
+  the screen. No wildcards, no cool file I/O, and almost no error checking for
+  now. ;^) This was tested on Win32 Perl, but shouldn't cause any problem on
+  other platforms. As a bot, it doesn't play nice - it wastes no time in
+  searching for stuff, but I doubt it will cause any serious bandwidth
+  problems. Don't blame me if some nice admin sends you a very, um, polite
+  e-mail about this. <P> <P><P>
+  <PRE>
+  #! /usr/bin/perl -w <P> ############################################################################
+  ###########
+  # FTP Site Searchbot
+  ############################################################################
+  ########### <P> # Current functionality - searches site & exits if it finds a match. Tweak
+  to your
+  # heart's content <P> # Mods to include
+  use Net::FTP;
+  use Cwd;
+  use Getopt::Std; <P> $ftp =""; <P> $remotehost = '';
+  $remotedir = '/';   # current path on remote host
+  $username = 'anonymous';
+  $password = 'anonymous@anonymous.com';
+  $isdir=0;
+  $pathindex = 0;
+  $currentfile = "";   # placeholder var for file name in current entry
+  $filename = "";     # Name of file to be searched for
+  $done=0;      # Exit flag
+  @dirlisting = "";    # Holds the listing generated by a dir command
+  @currententry="";    # Current entry in question in a dirlisting
+  @pathlist="/";     # List of all the directories on a site <P> # Start off the process by getting host and file from cmdline
+  $remotehost=lc($ARGV[0]);
+  $filename=lc($ARGV[1]); <P> # Did they even give us a host and filename?
+  if ( !($remotehost) or !($filename) )
+  { print "\nSyntax:\n\tftpbot.pl URL filename.xxx\n";
+   exit 4;
+  } <P> # Log in
+  if ($ftp = Net::FTP->new("$remotehost",0))
+   { print "Connected to host $remotehost.\n"; }
+  else
+  { print "Couldn't connect to host $remotehost.\n";
+   exit 5;
+  } <P> print "Logging in as $username.\n"; <P> if ($ftp->login("$username","$password"))
+  { print "Login successful.\n";
+  }
+  else
+  { print "Couldn't login";
+   exit 10;
+  } <P> 
+  # Start from root and search <P> while(defined($pathlist[$pathindex]))
+  { <P>  # Change to new directory
+   $remotedir = $pathlist[$pathindex];
+   $ftp->cwd("$remotedir"); <P>  # Get new directory listing
+   @dirlisting = $ftp->dir(); <P>  #extract directories from listing, save, and print
+   for($i=0; $i<=$#dirlisting; $i++)
+   {
+    @currententry = split / /, $dirlisting[$i]; <P>   # Skip any 'total files' listings
+    if( (lc $currententry[0]) eq 'total') {next;}
+    $isdir = substr($currententry[0],0,1); <P>   $currentfile = lc($currententry[$#currententry]); <P> 
+    # If entry is a directory, save and print
+    if($isdir eq 'd') <P> 
+     # Construct full path and place at end of list
+     push @pathlist, ($remotedir . $currentfile . '/');
+    }
+    elsif($currentfile eq $filename)
+    { # This sucker's a match. Print & quit.
+     print "$remotedir" . "$currentfile" . '/';
+     $done = 1;
+     last;
+    }
+   }
+   $pathindex++;
+   if ($done) {last;}
+  } <P> print "\nClosing connection to $remotehost.\n";
+  $ftp->quit;
+  </PRE> <P> <!-- FINAL NOTES STARTS HERE -->
+  <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+  WIDTH= "100%"  HEIGHT="22">
+  <tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+  color=blue>Final
+  Notes</fonT>
+  </fonT></center></td></tr></table>
+  This is still a work in progress. Plenty of bots are out there, but if you
+  want something done right, do it your own damn self. You know what your own
+  search needs and wants are, take what I've started and make it something a
+  bit more complex and much more useful to yourself. I certainly plan on it. I
+  might even release a later version if there's interest... Being a leech can
+  only get you so far - I should know. Building on one anothers' strengths can
+  we stand against the commercial zombie masters... <P> 
+<!-- WAY OUT STARTS HERE -->
+  <hr><center><table border="1"><tR><td bgcolor="#C6E7C6">
+<center><font size=+1>fravia's <a href="http://www.searchlores.org">searchlores.org</a></fonT></center></td>
+</tR></table><table><tR>
+<td><center> 
+<a href="bots.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to <a href="bots.htm">bots.htm</a>
+</center></tD></tr></table>  
+  </BODY>
+  </HTML>

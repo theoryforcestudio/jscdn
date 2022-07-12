@@ -1,0 +1,966 @@
+<html>
+<head>
+<title>proxomitron_powerusing.htm: A set of examples and ideas for all proxomitron fanatics.</title> 
+ <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="author" content="have">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><font color=black>
+
+<a target=_top href="anonyweb.htm"><img SRC="images/bilibin103.jpg" ALT="to anonymity" 
+ALIGN=BOTTOM WIDTH="399" HEIGHT="425" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+
+<b>Published @ <a target=_top href="http://www.searchlores.org">http://www.searchlores.org</a> in <font color="blue">August 2006</font> | </b>
+<b>Version <font color="blue">0.03</font></b><br>(part of the <a href="anonyweb.htm">anonyweb</a> section)<br>
+
+
+
+<hr>
+<font color=blue size=+2>A set of examples and ideas for all proxomitron fanatics.<bR><br><font size=+1>  Ideas from a old (2004) thread, collated and resuscitated 
+by <u>have</u> </font></font>
+ 	<br><hr width=55%>
+ 	
+ 	
+      <br><br><i>For all those readers that do not fully grasp the incredible power of proxomitron, this stuff, collated by have, is <u>a must read</u>. 
+      	It starts 'slowly', but it grows pretty quickly to considerable heights. Indeed: "<font color=blue>You NEED Proxomitron! It is the only part of the MSWin-world 
+that worth its price - and it does not cost money. It is a weapon, an artistic 
+tool, and a debugger, the firewall of the web, the defender of the weak and 
+more!</fonT>"<br><hr width=55%><br>Also: 
+      	    "<font color=blue>If 
+you publish this, someone will start to write exploits to it - and the propaganda-world 
+begin to tell terrible things about proxomitron, a software which is IMO a must for every 
+netizen. But If you don't publish, does it make  things better? If  
+this thread about it should be eased, and the lore left to those  able to figure it out alone, would it 
+make a better future? Or is it better to publish this stuff everyhere - with a patch for the 
+masses?</fonT>"  <br><hr width=55%><br>
+Note that if you ARE using proxomitron reading this right now, funny things may happen to your browser&nbsp;:-)
+</centeR>
+      	</i><hr width=55%>
+      	       <br>
+<font size=+1>      	       
+<prE>
+
+From: "some"
+Subject: Client side hack to 3564020356. Color changing. Working beta.
+Date: 2004-01-27 23:08:11
+
+I was bored to the greens of this site ( but not the scheme ), so made some 
+Proxo-script to tune it. 
+ 
+
+ For the newbies: You NEED Proxomitron! It is the only part of the MSWin-world 
+that worth its price - and it does not cost money. It is a weapon, an artistic 
+tool, and a debugger, the firewall of the web, the defender of the weak and 
+more! 
+ 
+ The HTML coloring goes like 3x2 digit number in hexadecimal: 
+(00-FF)(00-FF)(00-FF) each means a color channel, like RRGGBB red-green-blue. 
+What generally a normal author is doing for having a "style" leave two channel 
+lower ( even zero ), and play with the third for having the same color in 
+different tones. What I'm doin' is: 
+ 
+1. catch the colors from the pages  
+2. SWAP them so save the scheme but in different color-base.
+
+The first pair of filters are the correct ones ( the third of this kind is the 
+original green one ):
+ 
+
+Name = "Malattia blue theme"
+Active = FALSE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\1\3\2"
+
+Name = "Malattia red theme"
+Active = FALSE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\2\3\1"
+
+The next two is plays outside the rules: I'm 'hardcode' one of the channels, to 
+have mixed colors:
+ 
+
+Name = "Malattia yellow theme"
+Active = FALSE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "ff\2\3"
+
+Name = "Malattia cyan theme"
+Active = TRUE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\1\2ff"
+
+The next two are worse, but this is playing anyway so:
+
+Name = "Malattia mixed theme"
+Active = FALSE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\2ff\3"
+
+Name = "Malattia mixed theme"
+Active = FALSE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\3ff\2"
+
+"some" conclusion:
+Mala - one socially sensitive being - wrote his code in a way we can catch parts 
+of the page/text by its "color" value:
+ 
+text="#008000"
+bgcolor="#000000" 
+link="#FF0000" 
+vlink="#808080" 
+alink="#FF0000"
+page table: 
+bgcolor=#005000
+new hits number ( for bot-makers :-) ):
+font color=#77ff77
+message header font:
+color="#00ff00"
+message body:
+td bgcolor=#003000
+
+From: "loki"
+Subject: thanks !
+Date: 2004-01-28 07:18:35
+
+colors needs to be softer, but it's a nice hack base !
+
+hmm, it would be possible to do the same for the phplab boards. Even simplier. 
+Just need to create a new filter that adds internal css between the head tags 
+:)
+ 
+
+From: "loki"
+Subject: PHPLab CSS Injection
+Date: 2004-01-28 08:38:13
+
+I'm new in filter creation, have to look at it in details.
+This is the first try to customise the phplab boards :
+
+Name = "PHPLab CSS Injection"
+Active = TRUE
+URL = "*.2113.ch/phplab/mbs.php*"
+Limit = 256
+Match = "&lt;html>*&lt;body bgcolor=#C0C0C0>"
+Replace = "&lt;html>&lt;head>&lt;STYLE type=text/css>body { 
+COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 
+8pt; } P { COLOR: #FFFFFF; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+FONT-SIZE: 8pt; } A { COLOR: #E6E6FA; FONT-FAMILY: Verdana, Arial, Helvetica, 
+sans-serif; FONT-SIZE: 8pt; TEXT-DECORATION: none } A:hover { COLOR: #E10106; 
+FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt; 
+TEXT-DECORATION: underline } &lt;/STYLE>&lt;/head>&lt;body 
+bgcolor=#000000>"
+ 
+
+Not finished, i have to add css for the forms too.
+Funny :)
+
+From: "loki"
+Subject: an explanation for the newbies, like me
+Date: 2004-01-28 08:40:57
+
+No complex matching here, the source of the boards show that there is no head 
+tags. You just have to insert it with the css style tags, between &lt;html> 
+and &lt;body bgcolor=#C0C0C0>. And replace the bgcolor, of course :) 
+
+From: "loki"
+Subject: an explanation for the newbies, like me
+Date: 2004-01-28 08:41:43
+
+No complex matching here, the source of the boards show that there is no head 
+tags. You just have to insert it with the css style tags, between &lt;html> 
+and &lt;body bgcolor=#C0C0C0>. And replace the bgcolor, of course :) 
+
+From: "loki"
+Subject: damn reload.. sorry. (no content)
+Date: 2004-01-28 08:41:58
+
+Empty message
+
+From: "loki"
+Subject: PHPLab CSS Injection v2
+Date: 2004-01-28 13:02:36
+
+Name = "PHPLab CSS Injection"
+Active = TRUE
+URL = "*.2113.ch/phplab/mbs.php*"
+Limit = 256
+Match = "&lt;html>*&lt;body bgcolor=#C0C0C0>"
+Replace = "&lt;html>&lt;head>"
+          "&lt;STYLE type=text/css>"
+          ""
+          "body { "
+          "	"
+          "	COLOR: #FFFFFF; "
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; "
+          "} "
+          "	"
+          "P { "
+          "	"
+          "	COLOR: #FFFFFF; "
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; "
+          "} "
+          ""
+          "A { "
+          ""
+          "	COLOR: #E6E6FA; "
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; TEXT-DECORATION: none "
+          "} "
+          ""
+          "td {"
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; "
+          "}"
+          ""
+          "A:hover { "
+          ""
+          "	COLOR: #E10106; "
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; "
+          "	TEXT-DECORATION: underline "
+          "} "
+          ""
+          "A:visited { "
+          ""
+          "	COLOR: #666699; "
+          "	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; "
+          "	FONT-SIZE: 8pt; "
+          "} "
+          ""
+          ""
+          "pre { "
+          ""
+          "	COLOR: #FFFFFF; "
+          "	FONT-FAMILY: Terminal; "
+          "	FONT-SIZE: 8pt; "
+          ""
+          " }"
+          ""
+          "&lt;/STYLE>"
+          "&lt;/head>&lt;body bgcolor=#000000>"
+
+Sorry for the presentation, i pasted from UltraEdit to proxomitron, keeping the 
+tabulations and all. Easier to read.
+ 
+
+One last problem, is the box used to submit new posts. It's a table, so 
+switching the color to black is impossible, because the content of a post is 
+also inside a table. I don't know enough css to perform a test. And it'd 
+probably need to add some class, therefore adding complexity to the proxo 
+filter.
+ 
+Anyway, i find it nice for my usage. You will probably dislike the color, and 
+the choice of verdana for font, but he, just modify to fit your taste :)
+ 
+
+(crossposting to the phplab board)
+
+From: "malattia"
+Subject: thank you very much
+Date: 2004-01-28 17:11:51
+
+I've never changed my colors 'cause I wanted someone to do exactly THIS.
+Whatever color I might choose, there will be someone who doesn't like it. So, 
+why don't user change it? And the proxy-like idea (even if Opera is somehow 
+easier :)) is exactly what I wanted to see here :)
+ 
+
+... now I can go and create some CSS ;)))
+
+byez,
+
+  +mala
+
+From: "Scientist"
+Subject: So...
+Date: 2004-01-30 22:54:16
+
+... how does it work?
+Match = "(00|77|80|AA|FF)\1(30|50|80|bb|dd|FF)\2(00|77|80|AA|FF)\3"
+Replace = "\1\3\2"
+\1 and \3 is the same, mala's site numbers? I haven't found 77 and AA in this 
+site...
+ 
+From: "some"
+Subject: uhh...
+Date: 2004-01-31 00:31:37
+
+Firs I thought you are plain dumb, to not reading the thing, then I'm gone back 
+and check my post. I wrote up there:
+ 
+
+"Mala - one socially sensitive being - wrote his code in a way we can catch 
+parts of the page/text by its "color" value:
+ 
+
+text="#0080ff
+bgcolor="#000000
+link="#FF0000
+vlink="#8080ff
+alink="#FF0000
+page table:
+bgcolor=#0050ff
+new hits number ( for bot-makers :-) ):
+font color=#77ffff
+message header font:
+color="#00ffff
+message body:
+td bgcolor=#0030ff"
+So while I found that the new-posts-number's color is 77ffff ( here is 77 ), 
+even myself don't find any AA. I put those when I was testing my script, and 
+found the value 'accidentaly' in some html. So you are an aware guy congrats   
+about it, thanks for really reading my work. And don't try to find a riddle 
+behind it - it is really a mistake of mine - but a harmless one. IF there is 
+'AA' then the script rotate it well, but if there isn't it don't do anything.
+ 
+
+From: "Harlequin"
+Subject: Any colours
+Date: 2004-02-02 14:11:05
+
+Hey some this is pretty neat, I am having fun here :-)
+Heres another method which allows you to change to any colour scheme you wish. I 
+am just playing and learning here so go gentle with me:
+ 
+
+[Patterns]
+Name = "Malattia New Theme"
+Active = TRUE
+Multi = TRUE
+URL = "*3564020356.org*"
+Limit = 256
+Match = "(#00bb00 $SET(1=#0000FF) | #000000 $SET(1=#C0C0C0) | #00FF00 
+$SET(1=#FFFF00) | #808080 $SET(1=#000000) | #005000 $SET(1=00FFFF) | #aaffaa 
+$SET(1=#FFFFFF) )"
+ 
+Replace = "\1"
+
+
+The match basically works as an if then elseif routine. 
+ie: if matched pattern #00bb00 then set variable 1=#0000FF elseif .....
+
+I know the replacement colours stink, christ you'd go blind in 30 seconds but I 
+am only playing, you set the buggers up how you want them. I also only did this 
+for the main page so I may have missed some colours in the site somewhere.
+ 
+Now let the learning continue :-)
+
+From: "some"
+Subject: Hi,there :-)!
+Date: 2004-02-02 22:16:42
+
+
+<font color=blue>
+Come on, you are better than this ( I'm a Harlequin-fan since your 
+kernel-patching essay )! You wrote:
+ 
+"I also only did this for the main page so I may have missed some colours in the 
+site somewhere"
+ 
+ In my previous post(s), I recited mala's all colors ( with some comments ), so 
+if you <i>read</i> them you can extract them from there 
+:-).<br><br>
+It looks funny how different knowledge running different directions, 
+then converging to the same target. You understand how to use $SET, while I'm 
+not, so 'only' playing through regexes. Maybe your colors are bad, but good to 
+learn from how you applied them. Another path is Loki's - style-sheets. 
+Style-sheets are for typographers, and with good taste one can do beautiful 
+things with it, with little coding.
+
+<br><br>Also my original target was to preserve the 
+<i>color-relations</i>, while changing the values - so playing 
+under self-made harder rules, not only 'patching' them to anything. I did some 
+research about color(coding&theory), maybe I share it with you one day. Any idea 
+about using Proxo to 'calculate' values by proportions?</p>
+   <bR><br>
+Finally here is another bad idea, the 'negative' filter: swap bg and font color! 
+ 
+</font>
+
+From: "Harlequin"
+Subject: LOL
+Date: 2004-02-02 22:34:11
+
+I love your brutal honesty some. Fact is all I do these days is play a little, I 
+have forgotten twice what I knew and am still trying to forget the rest.
+ 
+
+As for using $SET, come on some you are better than this ;-)
+Google gave me this:
+http://www.sankey.ws/proxlang.html
+
+If by calculate you mean +/- the values, I was looking at that myself and have 
+not found a way YET. 
+
+From: "some"
+Subject: LOL? the reverse of the medal...
+Date: 2004-02-03 00:57:51
+
+
+<bR><br><font color=blue>From the fan's side it is <i><u>always</u> 
+sad</i> if seeing someone talented to wasting himself :-(. IMO from the 
+time of the mentioned concept-essay with a Steve Jobs( manager ) on your back, 
+'till now you must be a <u>retired</u> millionaire security 
+professional, selling software which <i>actually</i> making 
+windows secure, instead of what the idiot virii-show-business doing. And a 
+lesson for all of us: If you publish on the net you show your best, and not more 
+from the real person. The net-people trust you after your work. So it is similar 
+mechanism like the pop-stars who you see shining ( and maybe love them ), but 
+not their totally different personal life. But this talking is only half-sober, 
+I don't think you looks and acts like the later Elvis did :-)! But don't forget 
+- you are never beeing secure from beeing a 'star' of others!<bR><br>
+I 'understand' the SET command, just it is not in my fingers ( now I 
+try to change it :-)!<bR><br>
+Yeah we can write it w/out calculating I thought something like:
+(00|33|66|99)\1 to (\1)*1.1 changing each by 10%.
+Possible solutions are the correct change one-by-one with precalculated values, 
+and javascript-injection with code to do this.
+
+<br><bR>
+If you grep out the strings from Proxomitron, there is an 
+undocumented 'EXEC' function too ( 4.5 )! Now if somebody would able to kick 
+that to work :-). EXEC - what I know about, in most languages are calling for 
+any outer function passing parameters to it, and catch its output! </p>
+ 
+</font>
+
+From: "Harlequin"
+Subject: Strange
+Date: 2004-02-03 01:15:21
+
+You should mention the EXEC function at the very time of your post I was looking 
+at it in Olly.
+ 
+The sequence for checking the commands is pretty simple and there is no 
+protection. It should be a fairly easy task to inject some code to add new 
+commands.
+ 
+Am still studying the code and I dont have a lot of time these days, will let 
+you know if I find anything with the EXEC command. If it does as it suggests 
+then the need for injection might be redundant.
+ 
+From: "Harlequin"
+Subject: EXEC
+Date: 2004-02-03 06:51:38
+
+EXEC:
+This function will only serve as a tool to enhance and develop Proxomitron 
+further if it allows passing of the proxo variables and awaits ammended returns. 
+From first glance this does not appear to be the case.
+ 
+
+An alternative option is to inject our own functions into proxo.
+Although new sections could be added we are initially limited by the available 
+space, also by altering the program code directly it remains a hard coded 
+program. The ideal enhancement would make the program flexible enough to allow 
+other developers to make new commands and plugins for Proxo.
+ 
+A possible solution would be to load a new dll which handles scripted commands 
+and/or plugins.
+ 
+To be of any use Proxo would have to make available to the DLL all its variables 
+and then update with any returned values.
+ 
+It didn't look like this would prove to difficult so I started to look. Thinking 
+that the unknown EXEC command might be a good place to inject any code and I 
+might figure out how it works along the way.......
+ 
+
+I eventually managed to make the proxo url commands work, although I still 
+cannot get them to work in Opera and had to resort to Firebird.
+ 
+Attempted to find the format of the EXEC command by trial and error without 
+success. So Tried debugging, Olly doesnt handle proxo very well due to SEH 
+problems so I thought (although I swore I never would again) I would install 
+softice.
+ 
+After some device conflict which nearly wiped out my system and hour of swearing 
+I finally managed to get my machine back to normal.
+ 
+At this point I thought "what the f*** am I doing? it's a nice day outside!!!", 
+uninstalled softice, wrote this shit and went out to play.
+ 
+While I dont think making proxomitron more flexible would be a major problem, it 
+is not my problem :-)
+ 
+
+Good luck.
+
+I think I will spend the evening counting my $'s from my security company, 
+that'll keep me busy. 
+
+From: "some"
+Subject: EXEC
+Date: 2004-02-03 15:51:51
+
+ Uh, check some documents how perl or php using exec(). In that form it is 
+<u>much better</u> than make it possible to write plugins. It 
+means you can use about any other existing command-line program with looped to 
+your proxo scripts!
+ 
+ Like php have internally mkdir(), but this is not recursive. To do it without 
+writing own script, one can use something like 
+ 
+exec(mkdir -p /long/path/here/goes/, 0555)
+      ^this is just the real *nix mkdir. After it made our needed directories, 
+we can continue with our stuff.
+ 
+ So with a correct Proxo EXEC one can pass a freshly downloaded ( and maybe 
+filtered ) page to Swish/Namazu for indexing, or use it for mirroring, or any 
+html2(some other extension) program, or...
+ 
+ Anyway I'm enough dumb to don't understand if our EXEC is only a string written 
+there, or a real working - but hidden/non documented - function. I tried to use 
+it in one function but it did nothing for me. But one day you forget enough, and 
+I became so smart like you :-)!. Maybe it only allow executing stuff from the 
+proxo-root?
+ 
+
+
+>I think I will spend the evening counting my $'s from my security company,
+that'll keep me busy.
+Wish you that one! Or better spend your $'s on countless evenings :-)?
+( Can you pass me your manager's phone-number, PLEASEEE :-)? )
+
+Enjoy!
+
+From: "some"
+Subject: Harlequin? Mala, some moral support?
+Date: 2004-02-05 22:12:56
+
+ So I'm proudly present to you my findings about the exec function of 
+Proxomitron. Tool to use - Filemon! 
+ 
+I'm not boring you with the details, so
+1. The syntax is: $EXEC(filename.ext). 
+2. It is working with every extension which is executable by windows.
+3. It is working with extensions associated with programs ( so Faultlog.txt 
+opens in notepad ). 
+ 
+4. Folders opened by explorer ( escaped backslashes! ).
+5. In its path-walk the first is Proxomitron's own directory, then the regular 
+check.
+ 
+ I didn't figured out any communication-scheme command-line parameters, pipeing 
+back the output and such, but...
+ 
+ I have already made a page with specially-created proxo-shortcuts to programs ( 
+concept only no really useful - if we don't count a link to the clipboard-wiper 
+program )
+ 
+ Of course I know it is a big security-risk too. Soft-checked out Google 
+yesterday but it didn't show up any result, so perhaps I'm the first who 
+publishing about it here ( and I'm not sure if I want to open it for the masses 
+). There is always Melkor's spawns who abusing to death anything. I don't want 
+to do any harm to the program's, nor its author's reputation.( Perhaps writing a 
+little about patching out the function for security? Mala? )
+ 
+Your opinions are welcomed! And of course I hope you find it useful for your own 
+purpose.
+ 
+One more thing Harley: You mentioned, to using Proxo's url-commands. What's your 
+solution against giving them out through the referer-strings, when using 
+repeatedly? 
+
+From: "Harlequin"
+Subject: Nice work
+Date: 2004-02-05 23:32:21
+
+Thats good work some.
+
+Ok dont know how much or little you know some so excuse me if I am teaching you 
+to suck eggs here.
+ 
+Proxomitron uses ShellExecuteA in order to run the external programs. If you 
+have Olly/Softice a break on this should pop at 415716h.
+ 
+Unfortunately it currently does not push any parameters instead pushing a 
+hardcoded '0'. In fact proxo makes no attempt to look for parameters and any 
+included on the line will simply be included in the file name and result in the 
+execution failure.
+ 
+As you noted, just before the attempt to execute the program proxo sets the 
+current directory to its own, and further searches on failure are, as you found, 
+via the system itself through the normal paths.
+ 
+
+As to the referer string I had not given them any thought, I browse with 
+referers off anyway. The only reason I wanted the URL commands was so that I 
+could use the http://file//path command and then work offline to test my filters 
+and debug proxo. 
+
+From: "some"
+Subject: Thank you :-)!
+Date: 2004-02-06 00:51:29
+
+ It's have some interest possibilities. Like calling correctly perl/php from any 
+of your webpages passing to it your page for filtering/spidering anything, and 
+have the result back to you! Better than javascript. Wish it keep me motivated 
+to learn what I need to. ( I'm about nowhere at code-level, but good in hack 
+with a pitchfork - like in this case :-) ). But I think this is some closed 
+project.
+ 
+ For such purposes there is a simpler-looking hack called the "Run protocol 
+handler". IMO also a security-bitch. 
+
+From: "malattia"
+Subject: moral support
+Date: 2004-02-07 12:23:56
+
+Here's the moral support: (pat, pat) you're doing great, mate!
+
+:)
+
+And here are the serious things: you're _really_ doing great, all this 
+proxomitron stuff is very interesting IMO and the proof is that many other folks 
+are working on it at the moment:
+ 
+
+- middleman software you suggested me some time ago
+- a group of talented searchers/programmers at 
+  http://fravia.2113.ch/phplab/mbs.php3
+  who are working on a php "port" of proxomitron
+- you friends who are getting great results hacking with config files... just 
+think what would happen whenever you start to code something!
+ 
+
+Why am I telling you this? Because knowing what happens around you'll avoid 
+wasting time on problems which have been solved yet or which might be related to 
+software which will become obsolete once you solve them.
+ 
+
+This said, working with any proxy software at the moment is a very good idea, 
+and here are some things you could do with them I haven't seen described around 
+yet (please tell me if I'm wrong, I'd be happy to follow such threads if they 
+exist):
+ 
+
+1) Some time ago a good coder wrote, in w32asm if I remember well, a software 
+which used some HTTP capabilities (such as the simple "download starting from 
+this byte") to allow you the download of a file inside an online ZIP. Think 
+about a proxy that, given a zipped file url, shows it as a directory you can 
+browse and choose a file to download from.
+ 
+
+2) Transform (and make available to anyone) some HTML content in XML, such as 
+forums, data lists and so on. Think about an app like TWO (well, maybe better 
+;)) which is given ready-to-parse XML instead of HTML code. I don't know if 
+around the world you have a game like italian "fantacalcio", but those who play 
+it would agree that having player's votes in a ready format 
+_WITHOUT_HAVING_TO_PAY_A_CENT_ would be a nice thing :) Ah, NOTE that in this 
+case the proxy would work in the classical way only on one side (the one which 
+gets a page on a website for you).
+ 
+
+3) Now, if you just swap the side on which the proxy works, keeping it like a 
+real HTTP proxy on the client side and making it do something else on the other 
+one, you might guess what we can do. Yes, you can take any non-HTML content and 
+make it available to your browser anyway, such as POP3 (yes someone's talking 
+abt it in another forum, I guess), news, or whatever open or closed file format 
+you can convert in HTML (remember google's PDF-to-HTML conversion?).
+ 
+
+
+Of course, many of these apps won't be proxy at all, but many of them can be 
+obtained starting from proxies' basic technologies or even just by adding 
+plugins to a hipothetic "proxy engine".
+ 
+
+Anyway, I think I'll have to add a section completely devoted to proxies inside 
+my PowerBrowsing project... gosh, I'll never finish it! My idea is to put it on 
+a wiki, if anyone wants to participate (well, I've put it there yet, I just have 
+kept the URL secret. And NO, it's not on this machine so stop bruteforcing it 
+;-P)
+ 
+
+That's all for now.
+
+byez,
+
+  +mala
+
+From: "some"
+Subject: Uhm...
+Date: 2004-02-07 21:47:54
+
+1. I mostly needed the opinion/moral support about the security-part. I hoped a 
+general pointer about cases like this. You found such a feature - so what? If 
+you publish it, someone will start to write exploits to it - and the propaganda-world 
+begin to tell terrible things about proxomitron, a software which is IMO a must for every 
+netizen. But If you don't publish, does it make  things better? If  
+this thread about it should be eased, and the lore left to those  able to figure it out alone, would it 
+make a better future? Or is it better to publish this stuff everyhere - with a patch for the 
+masses? Which is the more responsible way?
+ 
+
+>the proof is...:-(
+There are not <u>so many</u> people 
+<u>working</u> on proxy-filtering actually :-)...
+ 
+
+1. I know/use the mentioned zip-downloader, even throw it at Rudolf in these 
+boards somewhere else. After we screw zips a little at riddles,( and we have the 
+source of the program ) I think it is not a difficult-task - just don't 
+understand that the whole earth is so dumb, only we have brain?
+ 
+
+2. If someone figure out this php-proxo, there is already exist code to do about 
+everything you want to plug-in to. I don't know about XML's advantages, I 
+personaly dreamed about a TWO-like database-confluence eating all inputted doc ( 
+parsed to death ), and feeding any converter we need.
+ 
+
+3. You know what looks enough good to be true, is true. In our case this is 
+netsed (http://lcamtuf.na.export.pl/netsed.tgz 6k ) - a packet-level sed. For 
+having a taste try the "Lotus Domino: security hole the size of Texas" article 
+at neophasis from the author ( not that I'm care about such hacking, the TOOL is 
+great. I swear you love it! ). This thing is exactly the missing part of any 
+firewall, the ultimate net-tool - it needs some nice filter-scripts only - and 
+only bloody 6k!.
+ 
+
+ Google's Pdf2html is a public code. I'm using/testing things like Namazu/Swish, 
+and from their website you can take/learn everything what needed to set up such 
+a system, together with (Excel/Word/ppt)2normal filters and such. 
+ 
+
+And now a little "hacking-together":
+ I thought most of our solutions growing too big, and needs some code writing, 
+but we know the programmers virtue is lazyness - and I'm even not a programmer 
+just lazy :-). So there must to be a shortcut to our targets. Here is one 
+concept-art v0.0.1 :
+ 
+ You know command-line and pipes. So we can reach Proxo-like functions with a 
+network client and a regular parser :-) ? 
+ 
+ See this:
+
+curl "http://www.google.com/search"|sed "s/Cached/Patched/">sedded.htm
+
+( of course it is pseudo-code, G kick you without a decent UA-camouflage! )
+Curl and sed is enough platform-independent :-). So path this going somewhere 
+too.
+ 
+
+ My other dream is a proxy-like binary-filter, which patch-software-on-the-way 
+to your HD ( Perl/php know \x80 hex-regexes ). How funny it would be a proxy 
+which removing unneeded features from programs BEFORE you download them :-)?
+ 
+( Ever read the 'Netscape patching with sed' article :-)? )
+
+Go back to my pitcfork...
+
+From: "some"
+Subject: Uhm II...:-) ( +Xml )
+Date: 2004-02-09 00:34:00
+
+...So if there is someone, who interested about Perl+content-filtering+XML 
+conversion, he just must to throw his wish at Google - '"perl proxy" filter' - 
+Do I feel lucky :-)? First hit is:
+ 
+FilterProxy - Filtering (HTML modifying) HTTP proxy with a modular modular 
+filter system in perl, at http://filterproxy.sourceforge.net/. Quote:
+ 
+"An XSLT module has been contributed by Mario Lang.XSLT will let you transform 
+XML/HTML by examining the file's structure and writing an XML stylesheet."
+ 
+ So if we are able to kick this guy to work, I may tinker on your 
+filtering-game-score-idea (?). I crosspost some of this to cheezit at Perl-01 
+too. 
+
+From: "malattia"
+Subject: ... mhU
+Date: 2004-02-10 11:05:00
+
+D'oh!
+
+I had to wait until I had the time to read the whole message and prepare an 
+answer, so sorry for the delay ;)
+ 
+
+About the moral support, I can give you but my personal opinion: I think that, 
+most of the times, making a possible security flaw available to anyone is the 
+best choice, to avoid people using it for bad purposes "just because others 
+still don't know it". Giving a patch together with a paper where you explain 
+what's up would be perfect, but if you don't want/can't build one someone else 
+might create it after you've published the info. And well, making them public 
+means more public than here, otherwise they remain almost unknown to the world 
+;)
+ 
+
+I remember only an exception I did years ago, when we +HCUckers wrote a paper 
+about formmail bug. We didn't share it immediately because we needed a more 
+secure way to communicate in that very moment, and we had to use it for our 
+(noble ;)) purposes. The result is that YEARS later someone published that bug, 
+so everyone could patch the script to avoid spammers using it to send anonymous 
+emails.
+ 
+
+>There are not <u>so many</u> people 
+><u>working</u> on proxy-filtering actually :-)...
+
+Well, it depends on how many people you consider many, and what you consider 
+working :) Anyway, IMO they're enough to _really_ work on a serious project, if 
+only they joined together.
+ 
+
+For what concerns XML, it's very useful for anyone wanting to get data with 
+programs different than TWO (or any name you'll choose for your specific 
+program). Parsing XML (and most of its sons, like RSS) is as easy as eating a 
+candy, and a service which provides data in this format would allow anyone to 
+view data in whatever way they want, with not so many lines of code. Of course, 
+a ready-made reader should always be provided (not everyone's a coder ;)
+ 
+
+I had read about netsed in some board like searcher's or phplabs, don't 
+remember, but it really seemed a good toy to play with. I still haven't tried it 
+yet, so anyone's feedback/experiments/tutes about it are welcome :)
+ 
+
+Patching on the fly is funny: no more cracks around the web, just think about a 
+huge offset distributed database (would this be illegal or not?) with XML files 
+like this:
+ 
+
+&lt;patch>
+ &lt;offset>0x000010ab&lt;/offset>
+ &lt;oldval>0x75&lt;/oldval>
+ &lt;newval>0xeb&lt;/newval>
+&lt;/patch>
+
+The proxy could download the file (well, most of the times it's an installation 
+file, but we're just using fantasy here so use MORE fantasy and think about the 
+ready .exe!), automatically find its matching XML in the DB, patch it and save 
+it on your HD. Bwahahahah, it's EVIL :)
+ 
+
+(and well, XML was not compulsory there, I just was fantasizing too much ;)
+
+About piping commands to parse web results, we did some experiments a while ago 
+(gosh, MORE THAN ONE YEAR! It's time to draw some conclusions now!) on reteam 
+forum:
+ 
+
+http://www.reteam.org/board/viewtopic.php?t=24
+
+Of course, you're welcome to join the thread - it's never too late and the job 
+isn't finished at all.
+ 
+
+Thanx about you filterproxy link too: I guess I'll have to spend more time than 
+I imagined retrieving info for powerbrowsing, but they all seem interesting 
+ones. 
+ 
+
+byez,
+
+  +mala
+
+From: "some"
+Subject: Nothing can stop us :-)! What to dream next?
+Date: 2004-02-11 00:41:28
+
+( Thanks for your link, you even did this hex-patch at that times ! )
+
+ So basically I did a hex-patch of Proxomitron with Proxomitron itself, to 
+render useless the EXEC function. It means my/our dream IS ALREADY TRUE. If you 
+have an univocal hex string, you can change it with Proxomitron. Look here:
+ 
+Name = "Patching Proxomitron's undocumented EXEC to nothing"
+Active = TRUE
+URL = "*Program%20Files/Proxomitron/Proxomitron.htm"
+Limit = 23
+Match = "(([%00])\1EXEC)\2$ALERT(This filter's function is to remove the 
+undocumented\n'EXEC' funcion from Proxomitron 4.4 or 4.5.\nIt is assumed that 
+you load your file with \p=*Program%20Files/Proxomitron/Proxomitron.htm")"
+ 
+Replace = "\1\1\1\1\1"
+
+It match a hex symbol by %00 ( 00h ), and put it to variable \1. So while we 
+can't write hex-code to the replacing part, we can do this with the variable. 
+ 
+ It needs one little work on Proxo, because it don't filter binaries by default. 
+So we may rename them (on-the-fly also), or 
+ 
+ Also it is not a programmer-like patch, only crippling the call - after the 
+patch if you call the function, you get the dump of your script ( so it works). 
+But the function is still there I don't know if it is exploitable after this 
+patch so need more work or not.
+ 
+
+ And of course we cannot only patch binaries, but pdf's too. Or filter out 
+viruses from mail/program ( already exist ), malbehaving code from programs, put 
+update-fixes to download-streams, or pass good|bad hacked copies of given 
+programs to harmless users by our free proxy service...
+ 
+
+Your "Powerbrowsing", and TWO projects, and XML/XSLT, and all this stuff is 
+point to the same direction. What we need is some intelligent scripts to clean 
+the noise/spam without too much human intervention - so making 
+self-modifying/updating filters. There is a try from Paul Graham, which looks 
+usable ( paulgraham.com or such - mostly gpled stuff ).
+ 
+
+Finally here is something - offtopic - to read ( if you don't already ):
+http://www.securityfocus.com/news/7977 ( embedded system hack )
+
+"...mentioned to DerEngel that she was looking for a better MIPS assembler for 
+the job, she expected him to suggest one of the free programs already available. 
+Instead, he wrote a new one from scratch, filling it with features particularly 
+useful to firmware hacking. "He wrote a good assembler," she says..."    
+
+</pre>     
+
+
+<br><br>
+<center>(<i>To be continued?</i>)</center>
+<br>
+<br><br> </font>
+<hr><center>
+<p><a target=_top href="evalessa.htm"><img src=
+"images/basipet.jpg" alt="Petit image" align="bottom"></a></p>
+
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>(c) 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, revealed and
+reviled</center>
+</center>
+</body>
+</html>

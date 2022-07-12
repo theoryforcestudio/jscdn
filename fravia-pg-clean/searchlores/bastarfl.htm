@@ -1,0 +1,308 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>(¯`·.¸(¯`·.¸ bastarfl.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Troll lore ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="trolls.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to trolling"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  trolling</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="http://www.searchlore.org">searching
+  lores</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;A "flamebot"&nbsp;¸.·´¯)</font>
+  <br>
+ A perl script that makes automatic replies to one or more usenet posters of
+your choice<br>
+  <br>
+  <font size=+2>by Dr. Flonkenstein</FONT>
+  <BR>
+  (slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org"  target="_blank">searchlores</a> in 
+  February 2002
+  <br>
+  <hr width=44%><i>
+A very interesting essay by a master troller, that readers may use, improve or change in order 
+to amuse themselves on <a href="usenet.htm">usenet</a> or anywhere they need to <a href="trolls.htm">flame</a> 
+someone. 
+</i>
+<br>
+</center>  <font size=+1>
+<pre>
+
+
+THE 'BASTARD' PERL SCRIPT  ----  Dr. FLonkenstein, Alcatroll Labs Inc.
+===========================================================================
+
+		I. Purpose
+The purpose of this quick and dirty written script is to generate 
+automatic postings on usenet. You can specify one or more usernames,
+and newsgroup(s) where your preferred bastards post in, and the script 
+will "hook" a message to each and every post the bastards make. 
+The reply itself is made up of a text, randomly chosen omong others 
+in a given directory. This textfile is a template text with here and there 
+nouns replaced by the tag &lt;n>, and adjectives replaced by the tab &lt;a>.
+The script will then replace these tags with randomly chosen nouns and
+adjectives that are picked up from standard nous and adjective files. 
+This ensures that your BI stays low. The goal of using this script is 
+essentially for flaming. Your bot can insult your preferred bastards 
+whole night long, while you're doing entirely different things (like 
+having a drink with your friends). It is gauaranteed fun seeing your 
+opponents reply to a bot, and others that draw their attention upon 
+this fact. 
+But maybe there are other applications, let me know, and have fun.
+
+		II. Modalities
+a) Copyright.
+-------------
+This is copyleft software, so you may freely modify it, distribute it, 
+and all that stuff, only if you leave a reference to the 
+(totally fake) Alcatroll Labs Incorporation (:-)
+
+b) State of the software
+-------------------------
+The code is very clumsy, I admit, but what do you want, 
+it's free isn't it?
+I tried to comment here and there. Have a look about the tricky way (=easy)
+to keep an object oriented structure in a text file, this is in fact 
+(ohhh great tabou !!!!!!) self modifying code, hehehehe, why not !
+
+c) Installation
+---------------
+In a directory of your choice you will have following files :
+
+<a href="https://searchlores.nickifaulk.com/bastards.pl">bastards.pl</a>
+<a href="bastards.pm">bastards.pm</a>
+<a href="news.pm">news.pm</a>
+<a href="post.pm">post.pm</a>
+<a href="trbot.pm">trbot.pm</a>
+bastarfl.htm (this file)
+
+For each bastard you target, you have to have a separate directory.
+In these directories you place the template files you invent for
+your bastard (the extension of the file does not matter). 
+Here's an example :
+
+-------&lt;template example>---------
+proving to be a paranoid &lt;a> &lt;n> again. Get a life, lame luser !
+------&lt;/template example>---------
+
+You have to have a (series of) noun file(s) somewhere, and a 
+(series of) adjective file(s) too. The extension and name does 
+not matter.
+Once everything is in place, you must edit the bastard.pm file. This 
+is the database that you keep of the bastards that you are targetting.
+this file looks like this :
+
+-------&lt;database example>---------
+$bastards = [
+"test",
+{Nouns=> ".\\enouns.txt",
+Group=> "alt.test",
+From=> "Heartbeat",
+Prefs=> ".\\pref.txt",
+Last=> "",
+Templ=> "JSF",
+Botname=> " \"Ben Bareta\" &lt;ben\@yahooo.com>",
+Adj=> ".\\eadj.txt",
+}
+,
+]
+-------&lt;/database example>--------
+
+This is an example where there is only one target, the poster
+with the nick 'Heartbeat'. This is (at this very moment since 
+a few months) a real usenet 'from header' in the alt.test group
+that posts every 9 mins (or so I think). This is this an ideal
+way to test your bot !
+The first line inside the structure is "test", this denotes a 
+name that you give to your bastard. It is a name of your choice
+and does not influence the application. Then, on the second line you 
+specify the name and path of your nouns file (watch out for the
+quoted backspaces !!). On the third line you mention the group
+where the bastard posts. You can add more groups to this line
+(separated by commas) to indicate that the message will also
+be crossposted to these groups too. The fourth line indicates 
+where your 'prefixes' file is. This is only for the french language
+where you can have an additionnal list of 'prefixes'. Create an
+empty file if you're not intending working in french.
+The fifth line keeps track of the last time the messages from
+your bastard were  read. You do not have to change this, the 
+scripts rewrites the database to the file on a regular base, 
+so your script is always synchronized with the postings of your
+bastards. The sixth line tells the script in which direcory 
+the template files belonging to this bastards are residing.
+The seventh line explaines how the "from" header will look like, 
+and finally the eighth line shows the name and path of the 
+adjective file.
+After having edited the database file, you have to edit the packages
+post.pm and news.pm so that they reflect a newsserver that posts
+the messages and a newsserver that reads messages. They can be the
+same, but in my case I had to use two for personal reasons. I have 
+put the templates "your_news_server", "your_username", "your_password",
+in order to be replaced by yourself.
+You are also strongly advised to change the headers so that your 
+posts seem to come from any location you want.
+
+Launch the perl script bastards.pl to activate the robot.
+
+
+		III. How it works
+
+First, the script reads your database in order to find out
+which bastards there are, their newsgroups, the corresponding 
+template directories, the used noun, prefix and adjective files.
+Then, bastard per bastard, the script looks up the message id's
+of your target in his own ng. This is done by the 'news.pm' package 
+that receives a database structure object as a parameter, and 
+returns the list of message ids of this poster. At the same time it 
+updates the database in central memory. 
+Then the package 'post.pm' takes care of each of these messages, 
+calls the 'trbot.pm' package to construct a reply and posts it.
+The trbot.pm package does the substitution of the nouns and 
+adjectives in the random chosen template file.
+
+
+		IV. Modifications that can be done
+
+a) Avoid your target morphs
+--------------------------------
+
+If you study the news.pm package, you will see that this package scans
+the headers of each message of the newsgroup. This includes occasional
+NNTP-header IP addresses, and email addresses. It is possible to modify
+the code so that it also keeps these data in the database. This way you
+can avoid that your target changes his nickname resulting in your bot 
+loosing its prey. The target must, to avoid your bot, change email, nick 
+and IP address at the same time.
+
+b) Let the bot morph itself, in order to avoid killfiles
+--------------------------------------------------------
+
+Indeed, you can use a random algorithm like the one used 
+in the trbot.pm package to compose a different nickname for
+each post.
+
+
+c) Change the reply policy
+--------------------------
+
+You can change the way your bot replies in different ways. It must be 
+possible to analize the text of the original message, get a clue about 
+the content and respond corrspondingly. Another funny effect is to 
+make your reply by modifying the original text with a command like:
+
+s/([bdfkmnpqrstvw])([aeiou])/$1j$2/gi
+
+
+d) Change the default wait time
+-------------------------------
+
+After an outburst of replies, a sleep command is issued that puts
+the script asleep for a while. If you keep this time short the script
+will answer almost instantly when the target posts, but is will consume
+system resources on the other hand.
+
+e) Change the default 'Last' value
+----------------------------------
+
+The first time when using the script, you installed the value of the field
+'Last' to NULL. When the script sees this value it automagically assumes
+that it has to look for messages younger than an hour ago. You can also 
+change this value to a bigger value, resulting in a huge spew of replies
+to your bastard (if he posts a lot).
+
+</pre>
+
+<P>
+(c) Dr. Flonkenstein 2002
+</P>
+<br><br><font size=+1><center>
+<table><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="trolls.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to trolling"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to trolls lore</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>   </font>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm"  target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved  and reversed, some wrongs revealed and reviled
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

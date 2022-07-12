@@ -1,0 +1,273 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>drwho_01.htm: Extension Identification Bug and IE Registry Manipulation</title>
+
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's  <a href="http://www.searchlore.org">searchlore.org</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+<hr>
+<font size=+2>
+<br><b>(¯`·.¸(¯`·.¸&nbsp;Extension Identification Bug&nbsp;¸.·´¯)¸.·´¯) 
+                                 <br>
+and IE Registry Manipulation&nbsp</b><br>
+by Doc~</font> <br>
+<br> published @ <a href="https://searchlores.nickifaulk.com/www.searchlores.org">searchlores</a> 
+in <b>June 2002</b><br>
+<hr><i>
+I received this per email, at the beginning of June. I read it with interest. Then I went downstairs and 
+had a glass of white wine. Then the coin went down: "d-lling!". So I went upstair and printed 
+for myself 
+the stuff you will now read. 
+Then I re-read it. Woha! Satori!  I suddendly, fully aware of the ashaming delay, 
+understood what this means&nbsp;:-)
+
+
+      </i></center><hr><br>
+<CENTER>Written by Doc~<BR>Released 
+in May 2002, published at <a href="http://www.searchlores.org">http://www.searchlores.org</a> in June 2002.<BR>www.megasecurity.org<BR>Extension Identification Bug and IE Registry 
+Manipulation; <BR>Public Release v1.0<BR>
+<hr width=44%>
+</CENTER><FONT size=+1>This article and 
+the opinions are the sole belief of the author, and not those of the website. 
+The author acknowledges that there maybe some false information, the author 
+releasing everything at this time fully believes everything to be true, and 
+unless proved otherwise, should be taken so. By reading and or distributing this 
+information you the user are responsible for any actions or responses that may 
+occur, while copying or replicating situations mentioned in this paper. 
+<BR><B>Tested on:</B><BR>IE 5.5<BR>Windows 2000 sp2 
+<P>This paper was previously not intended for public viewing. I've changed my 
+mind so here you guys are. 
+<P><B>History</B><BR>Recently I was working on developing an advisory for some 
+CLSID problems I came across, and figured out something quite interesting. 
+Something the coders might be interested in. I'll start from the beginning just 
+follow along hopefully everything will become clear by the time you reach EOF. 
+First lets create our very own file extension. Our file extension is going to be 
+called <B>.mr</B> so in your HKCR folder create a .mr 
+<BR><B>HKCR\.mr\<BR>HKCR\.mr\ (Default) = MRFile<BR>HKCR\.mr\ Content Type = 
+application/x-mr</B> <BR>
+<TABLE bgColor=#c0c0c0>
+  <TBODY>
+  <TR>
+    <TD><FONT size=+1><B>HKCR\.mr\<BR>HKCR\.mr\ (Default) = MRFile<BR>HKCR\.mr\ 
+      Content Type = application/x-mr<BR></B>What is happening here is pretty 
+      simple. We are setting up an extension. Whenever you run an .exe it will 
+      check HKCR\.* for that extension. If it finds it, it will continue on with 
+      the instructions of how to handle the extension. Right now we are telling 
+      windows that if <B>.mr</B> extension is run that it is to find the 
+      instructions at <B>MRFile</B>. This is sort of like a pointer too the 
+      instructions. For those of us that are c++ oriented.<BR>I ll run through 
+      the registry settings and what I mean by what. First you create a key 
+      <B>HKCR\.mr\</B> The <B>(Default) </B>value should be <B>MRFile </B>(or 
+      your own extension etc). The <B>(Default) </B>string should be type 
+      <B>REG_SZ</B> we only deal <B>with REG_SZ</B> and <B>REG_BINARY</B>. Now 
+      <B>Content Type </B>is what explorer will use. I created my own content 
+      type <B>application/x-mr</B>, so for my <B>Content Type = application/x-mr 
+      </B></FONT></TD></TR></TBODY></TABLE>Note that you can change <B>Content Type 
+</B>to <B><REG_SZ>application/x-anything</B> or <B>application/anything </B>or 
+<B>image/anything </B>you get the idea this is what IE reads so it knows how to 
+handle the file. I have fooled around with it and was able to create my own 
+content type as well as download and run a file without the victim being 
+prompted (well talk about it later ;) ) 
+<P>
+<P>
+<P>Next were are going to create a key <B>HKCR\MRFile</B>, the <B>(Default) 
+MRFile </B>is what is displayed when you click the file once, in the left side 
+of my computer, for example you click on a .html file it will say HTML Document 
+in the left hand corner of my computer. <BR><B>HKCR\MRFile\ (Default) = MR 
+File<BR>HKCR\MRFile\DefaultIcon\ (Default) = 
+%SystemRoot%\System32\shell32.dll,-151 </B><I>Note that, that entry will make 
+all .mr files have the icon of a WordPad 
+document...<B></I><BR>HKCR\MRFile\Shell\<BR>HKCR\MRFile\Shell\Open (Default) = 
+&amp;Open </B><I>Note that if you want to open with you can do something like 
+&amp;Open with &amp;txtfile its up to you too fool around with that. That is one 
+of many ways to utilize open with </I><B><BR>HKCR\MRFile\Shell\Open EditFlags = 
+00 00 00 00 </B><I>Stay tuned for changes on this key below 
+<BR><B></I>HKCR\MRFile\Shell\Open\command (Default) = C:\winnt\server.exe 
+</B><I>I recommend utilizing "%1" %* instead of the server location </I><BR>
+<TABLE bgColor=#c0c0c0>
+  <TBODY>
+  <TR>
+    <TD><FONT size=+1><B>HKCR\MRFile\Shell\<BR>HKCR\MRFile\Shell\Open (Default) 
+      = &amp;Open </B><I>Note that if you want to open with you can do something 
+      like &amp;Open with &amp;txtfile its up to you too fool around with that. 
+      That is one of many ways to utilize open with 
+      </I><B><BR>HKCR\MRFile\Shell\Open EditFlags = 00 00 00 00 </B><I>Stay 
+      tuned for changes on this key below 
+      <BR><B></I>HKCR\MRFile\Shell\Open\command (Default) = C:\winnt\server.exe 
+      </B><I>I recommend utilizing "%1" %* instead of the server location 
+      </I><BR>Lets go through this entry-by-entry. We create the <B>MRFile</B> 
+      remember that <B>HKCR\.mr</B> pointed too <B>MRFile</B>. The 
+      <B>HKCR\MRFile\ (Default) = MR File </B>will be displayed on the right 
+      side of my computer when you select a <B>.mr </B>file it will show "MR 
+      File" You can change it too MR Document or what ever you want to see. The 
+      <B>DefaultIcon</B> key sets the default icon it is pretty 
+      self-explanatory. Things get interesting here the Open key's default value 
+      can be nothing if wanted. I m not fully sure why the <B>&amp;Open</B> is 
+      used...But it can also be used to use the open_with command. For example 
+      you can do "<I>&amp;Open with &amp;MRFile</I>" file it will know to open 
+      file the file with <B>MRFile</B> instructions. By specifying the command 
+      <B>(Default) </B>value equaling server location every time a .mr file is 
+      run, the actual <B>.mr </B>file doubled clicked on wont execute only the 
+      file it points to will, I recommend using the <B>"%1" %* </B>instead of 
+      specifying a server location but both serve their purpose. You could 
+      instead of doing <B>"%1" %* </B>point to an <B>.lnk</B> file and from the 
+      <B>.lnk</B> file extension have it run the server so you are confusing the 
+      user even more. </FONT></TD></TR></TBODY></TABLE><BR>Now we have our own 
+executable file type we are half way there! 
+<P>
+<P>
+<P>Since we are mad elite I m going to show you how to make it so that the new 
+file extension is downloaded and run by explorer no prompting...Were going to 
+have to make some registry entries so bear with me. First we want to fully 
+create the content type so that explorer and any other Internet protocol program 
+can handle it. We will add these 
+entries:<BR><B>HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/x-mr 
+HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/x-mr (Default) = (value 
+not set) HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/x-mr Extension 
+= .mr</B><I> you can make the application/x-mr anything you please as long as it 
+points to an extension.</B> Hypothetically you could modify an existing type to 
+execute your file type that is not recommended because I fore see errors</I> 
+<P>
+<TABLE bgColor=#c0c0c0>
+  <TBODY>
+  <TR>
+    <TD><FONT size=+1><B>HKEY_CLASSES_ROOT\MIME\Database\Content 
+      Type\application/x-mr HKEY_CLASSES_ROOT\MIME\Database\Content 
+      Type\application/x-mr (Default) = (value not set) 
+      HKEY_CLASSES_ROOT\MIME\Database\Content Type\application/x-mr Extension = 
+      .mr</B><I> you can make the application/x-mr anything you please as long 
+      as it points to an extension.</B> Hypothetically you could modify an 
+      existing type to execute your file type that is not recommended because I 
+      fore see errors</I><BR>Alright basically we are creating the type so that 
+      when IE receives the <B>Content Type</B> part of the header it will search 
+      the data base and find <B>application/x-mr</B>, x-mr points to the 
+      <B>.mr</B> extension in <B>HKCR\.mr\ </B>this intern points to <B>MRFile 
+      </B>and we are brought back to the file instructions. Now to utilize this 
+      to update your server with a new version you must use the <B>"%1" %* 
+      </B>as the command instead of the server location. Because if you have the 
+      server location instead of <B>"%1" %* </B>it will run the old server and 
+      not update with the new one. </FONT></TD></TR></TBODY></TABLE>After much testing 
+I found the correct key needed to make it execute. As the above keys don't help 
+towards the actually downloading and executing they serve other purposes as I 
+have found out the hard way lol. <B>HKCR\MRFile EditFlags <REG_BINARY>= 00 00 01 
+00</B><BR>So simple but yet so complex. ;) <BR>**Note that the above example 
+works on IE 5.5 and was not tested on any other version. It *should* work on IE 
+6 and I haven't even thought of testing it on netscape that is up too you guys. 
+Send me results though I am intrested. 
+<P>
+<P>As I started to write this section I figured something else out. So your in 
+luck I m going to give you to brilliant examples. We will take it from least 
+brilliant to most brilliant. I m going to show the registry entries that need to 
+be made or that are important. <BR><B>HKCR\lnkfile\ </B><I>Note the nevershowext 
+just thought you might take a peek at it ;)</I><BR><B>HKCR\lnkfile\shell 
+<BR>HKCR\lnkfile\shell\open\<BR>HKCR\lnkfile\shell\open\command<BR>HKCR\lnkfile\shell\open\command 
+(Default) = file location </B><BR>A couple things to cover first is that I don't 
+know why there isn't a handler in the command key it is the way my registry was. 
+Secondly adding the server's location is one way of running it but that means 
+that all .lnk files will run an invisible file (the server) making it awful 
+suspicious. But this example doesn't accour when clicking desktop links. I don't 
+know why. What you must do is create a file and rename it too a <B>.lnk</B> that 
+will make it run the <B>(Default) </B>value. I m currently working on a method 
+to run the executed file and to run the server at the same time. <BR>Note this 
+is nothing to get too excited over in my opinion at least. But this is one way 
+to allude AV's as well you can create for example <B>c:\winnt\kernel32.lnk</B> 
+which will execute an exe or .mr file. Or if you wanted you could make DLL's 
+executable and see the results, it's up to you to test that idea. With registry 
+knowledge the ideas are endless...<BR>Anyway moving right along...This idea 
+hasn't been tested but very hypothetically it should work! If you test it please 
+e-mail me to let me know how it went. 
+<P>Basically we are upping the anty in this next trick. Instead of a <B>.lnk 
+</B>file why not pick a file extension windows starts up 
+automatically...catching on? Here's a hypothetic example... (I would not be 
+scared to try this just back up your registry no guarantees)<BR>Now 
+<B>HKCR\sysfile </B>consist of relatively no registry entries...so did <B>.lnk 
+</B>and it worked. The only concern is if you modify it will it stop the <B>.sys 
+</B>from loading and just execute the server, how ever yoru server could then 
+startup those needed .sys files as I stated above I m currently working on away 
+to run both at once. The results of testing this I can't predict nor will I try 
+too.<BR><B>HKCR\sysfile\<BR>HKCR\sysfile\shell\<BR>HKCR\sysfile\shell\Open<BR>HKCR\sysfile\shell\Open\command<BR>HKCR\sysfile\shell\Open\command 
+(Default) = server location </B><I>maybe point it to an .lnk file to fool the 
+user?</I><BR>Lets go through some strings stored in the <B>HKCR\sysfile\</B>. 
+The <B>EditFlags</B> key is very important as it decides if IE will download 
+without prompting, I can only imagine what this version of <B>EditFlags 
+</B>does, and the <B>NoOpen </B>key is awful suspicious. If you have a second 
+computer I encourage you to test it. I will contribute extra information if you 
+e-mail me. I m curious to see if this works. 
+<P><B>Misc.</B><BR>I did discover how to figure out what the file extension's 
+CLSID would be. The CLSID makes the extension more real and increases the 
+possibilities and ways to call the file. You can run applications from the web 
+using window.open=file:///clsid::/clsid ...I didn't include how to find the 
+CLSID but if you are interested e-mail me.<BR><B>EOF</B> 
+<P>I came up with a couple more pages of start-ups like using control panel and 
+CLSID alias's to startup the files. I don't feel they are qualified. There is 
+much I have found but wont release because its "not good enough" this is my 
+contribution too you guys. Enjoy it will probably be my last.<BR>Thanks. 
+<BR><B>No one is perfect if there is false information or spelling and 
+grammatical errors please e mail me and help me correct them I am firmly against 
+false information and have gone to great lengths to verify everything mentioned 
+above</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; E mail -&gt; <A 
+href="http://tnt2.ath.cx:5080/kernel32/xxx_drneo_xxx@yahoo.com?subject=false info/error">http://tnt2.ath.cx:5080/kernel32/xxx_drneo_xxx@yahoo.com?subject=false 
+info/error</A><BR>Thanks goes to the following people in no special 
+order:<BR>Cyberfly, M_R and Magus(Thanks for all your help and support :-) ), 
+weed(congrats bro), SilenceGold, dragnet, Elektik, #tnt, Connected, and 
+ap0calaps. Also a huge thank you too Olympus(<A 
+href="http://www.lithiumrat.org/" target=_blank>http://www.lithiumrat.org/</A>) 
+for developing proof of concept code, and to mf4(<A 
+href="http://areyoufearless.com/" target=_blank>areyoufearless.com)</A> for also 
+developing code, and for both of their constant programming help. I would like 
+to thank ·=[KïÐ ÄRCåÐê]=· for letting me borrow and publish his code. If you 
+have been forgotten I m sure I was having a memory lapse thanks to you too. 
+</P></FONT></FONT></FONT><hr>
+    <font size=+1><center> 
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a>
+  <br><A HREF="http://www.baidu.com/gaoji/advanced.html" target="_blank">B</a><A HREF="http://www.kartoo.com/" target="_blank">k</a>:<A HREF="http://www.alltheweb.com/advanced" target="_blank">f</a><A HREF="http://search.lycos.com/adv.asp" target="_blank">l</A><a href="http://www.altavista.com/web/text?" target="_blank">a</a><a href=http://groups.google.com/advanced_group_search target="_blank">n</a><a href="http://www.google.com/advanced_search" target="_blank">g</a><A HREF="http://www.infospace.com/info.xcite/" target="_blank">e</a><a href="http://web.archive.org/collections/web/advanced.html" target="_blank">&nbsp;</a><a href="http://fravia.2113.ch/phplab/scroll.htm" target="_blank">o</a><A HREF="ftp.htm" target="_blank">f</a><A HREF="http://www.wisenut.com/" target="_blank">&nbsp;</a><A HREF="http://search.msn.com/advanced.asp" target="_blank">m</a><A HREF="http://search.yahoo.com/web/advanced" target="_blank">y</a><A HREF="http://s.teoma.com/AdvancedSearch?q=" target="_blank">t</a><A HREF="http://www.hotbot.com/adv.asp?prov=Inktomi&tab=web" target="_blank">h</a><a href="http://a9.com/-/search/advSearch">&nbsp;</a>
+
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

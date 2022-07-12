@@ -1,0 +1,281 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>(¯`·.¸(¯`·.¸ ab4_aure.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to malware"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's <a href="advanced.htm">advanced searching</a>
+  lore)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Some fun with Aureate&nbsp;¸.·´¯)
+  </font><font size=+2><br>by garph0<BR></FONT>published at <a href="http://www.searchlores.org">searchlores</a> in
+  October 2001<br>
+<hr width=55%>
+<i>
+An amazing essay, that will teach you more than you would believe just perusing it, especially 
+if you examine carefully the files contained in this</i>  <font color=blue>[</font><a href="zipped/AureateBust.zip">../zipped/AureateBust.zip</a><font color=blue>]</font> 
+<i>package that 
+garphO has been so kind to prepare...
+<br>
+The package contains the following files:</i></center><pre>
+TFDE     DLL        40,960  27/09/01  14:21 tfde.dll
+ADVERT   DLL        40,960  27/09/01  14:20 Advert.dll
+ADIMAGE  DLL        40,960  27/09/01  14:20 adimage.dll
+and in the subdir SRC
+ADIMAGE  DEF           251  23/09/01  15:10 adimage.def
+ADIMAGE  CPP         3,168  27/09/01  14:26 adimage.cpp
+ADVERT   DEF           830  24/09/01  13:56 advert.def
+ADVERT   CPP         2,353  27/09/01  14:27 Advert.cpp
+TFDE     CPP         1,162  27/09/01  14:28 tfde.cpp
+TFDE     DEF           270  24/09/01  15:37 tfde.def</pre>
+<i>
+Enjoy!
+</i>
+</center><hr>
+
+<pre>
+Some fun with Aureate
+
+It's amazing how many softwares are going to use Aureate/Radiate 
+advertising to show us some ads! I'm not against the concept of 
+adware software: i can get some proggies that I want to try (and 
+that usually I want to zap off my hard disk as quickly as I can ;)
+for free. I'm definitevly against the Aureate & Co. way of thinking 
+adware... 
+
+Ok, now that I gave my (unasked :P ) two cents to the adware topic, 
+let's start with the real stuff :
+
+[TOOLS] 
+	- A brain (maybe a working one, and it's better if it's yours  ;) 
+	- Old good IDA 
+	- Depends (it's a Microsoft SDK tool)
+	- AdAware (www.lavasoft.de or www.lavasoftUSA.com) 
+	- A compiler 
+
+[TARGETS] 
+	- NetAnts (www.netants.com) 
+	- NetVampire (?www.netvampire.com?) 
+	- Go!Zilla (www.aureate.com) <- Yessir! 
+	- Possibly other (all?) aureate powered bugware
+
+The problem with that adware things is that you cannot 
+remove the spyware files, or your latest cute nice proggie
+youcannotlivewithout will stop working. 
+Now, when I installed NetAnts I had to leave it running for 
+some days (a big download, yes ;) but I didn't want to have 
+the aureate stuff doing its work with my data, so I retrieved 
+AdAware and let it have a run on my hard disk. 
+This baby seems quite good at removing spyware: it wiped 
+aureate (and some other things I didn't knew as spywares) 
+off my system. 
+
+Then I gave a run to NetAnts: it showed an error message saying 
+LoadLibrary(adimage.dll)[126], followed by some other complains.
+
+So the problem was in the adimage.dll library, which I had just 
+removed...
+I reinstalled NetAnts to get aureate back, and I made a backup of 
+the dll aureate stuff before deleting it.
+
+Ok, now I had something to study :) 
+
+A quick dependency check on NetAnts shows that it doesn't 
+links implicitly any of the aureate's DLL, so I disassembled 
+it with IDA: searching all the LoadLibrary occurrences I 
+saw that only adimage.dll was used by NetAnts.
+
+In a first time I thought to patch NetAnts where it loads 
+adimage.dll, but the I would have had to fix also all the 
+GetProcAddress mess, and all the calls to the functions 
+loaded from the DLL... too much effort! So I thought to 
+write my version of adimage.dll, and put it in the place 
+of the original one: I expected to have to write some 
+code to at least partially emulate the original functions, 
+but it seemed to be easier than all the patching work.
+
+Let's write a DLL exporting the same functions as the 
+original one: it's easy: 
+
+- create an adimage.c file, with this function:
+  BOOL APIENTRY DllMain(HANDLE hMod, DWORD dw, LPVOID lpV)
+  {
+  	return TRUE;
+  }
+
+- use Depends to see all the functions exported from 
+adimage, you can select all of them and copy the names 
+in your adimage.c file
+ 
+- now for each exported function make a write function like this:
+
+           DWORD Initialize ()
+           {
+           	return 1;
+           }
+
+- now we need to know the right number of parameters 
+  that the function accepted: disassemble adimage.dll 
+  with IDA, search for the function you want and you can 
+  see all the infos we need:
+  
+10002F6E                                                                      
+10002F6E ;               S u b r o u t i n e                                  
+10002F6E ; Attributes: bp-based frame                                         
+10002F6E                                                                      
+10002F6E                 public Initialize                                    
+10002F6E Initialize      proc near      ; CODE XREF: std_Initialize+1
+10002F6E                                                                      
+10002F6E var_260         = byte ptr -260h                                     
+10002F6E var_15D         = byte ptr -15Dh                                     
+10002F6E var_15C         = byte ptr -15Ch                                     
+10002F6E var_58          = byte ptr -58h                                      
+10002F6E var_24          = byte ptr -24h                                      
+10002F6E var_4           = dword ptr -4                                       
+10002F6E arg_0           = dword ptr  8		<-- arg #1                                       
+10002F6E arg_4           = dword ptr  0Ch              .                       
+10002F6E arg_8           = dword ptr  10h              .                       
+10002F6E arg_C           = dword ptr  14h              .                       
+10002F6E arg_10          = dword ptr  18h       <-- arg #5                              
+10002F6E                                                                      
+10002F6E                 push    ebp                                          
+10002F6F                 mov     ebp, esp                                     
+10002F71                 sub     esp, 260h                                    
+
+Initialize will accept 5 parameters. Here's the C code:
+
+  DWORD Initialize (DWORD a1, DWORD a2, DWORD a3, DWORD a4, DWORD a5) 
+         { 
+         	return 1; 
+         }
+
+  please note that we can completely ignore the original 
+  type of the parameter (if it was a char, or an int or 
+  a pointer...) since once linked all the variables are 
+  referenced through pointers, that have DWORD size. 
+  Should you need a particular type for programing 
+  needs you can cast it, once you've discovered what 
+  it is.
+  Set the right parameter number in each function.  
+
+- now prepare a simple DEF file (adimage.def)
+
+  LIBRARY	adimage
+
+  EXPORTS
+
+  Initialize		@1
+  std_Initialize	@2
+  StartMessaging	@3
+  std_StartMessaging	@4
+  SetThrottle		@5
+  std_SetThrottle	@6
+  SetProxy		@7
+  std_SetProxy		@8
+  Spuck			@9
+  std_Spuck		@10
+  SetOffline		@11
+  std_SetOffline	@12
+
+- compile, link and put the resulting adimage.dll in 
+  NetAnts.exe's directory (I'm not going to bother you 
+  with details on this part :P ).
+
+At this point I expected some problems with NetAnts, 
+since the library function are totally fake, so I 
+launched NetAnts to see what needed a fix-up ...
+
+IT WORKED! there is no check, nothing at all! 
+just return a nonzero value and you're ok!
+Amazing :)
+
+At this point I downloaded the other two targets, 
+just to see if this thing worked also with those: 
+obviously it didn't :(
+Fortunately the problem is that NetVampire and 
+Go!Zilla use other DLLs:
+
+Advert.dll and
+tfde.dll
+
+I tryed to make two more fake dlls, exactly in the 
+same way, and both the programs worked fine :)
+
+tfde.dll is a COM object, and it exports also 
+DllCanUnloadNow,DllGetClassObject, DllRegisterServer 
+and DllUnregisterServer but we don't need to export these 
+functions, since these are function called by the system 
+if some COM client wants to use tfde COM functions (and we 
+have not created a COM object, so it would not work anyway 
+if COM functionalities are needed).
+
+Finally, if you debug a little your new adimage DLL 
+you'll find that the first parameter in Initialize 
+is the handle of the window that contains the 
+banner... that's how i managed to write there :)
+
+I only tested my dll with these three targets, so I 
+can't assure this will work with everything (writing 
+these dll it's a simple task, but quite boring, you 
+know). If you need help, have suggestion, discover 
+something that doesn't work with this method, or 
+have any comments/suggestions please feel free 
+to write me.
+
+ work well, and forgive my bad english ;)
+
+          garph0 ( xmarkix (at) katamail (dot) com )
+          </pre>
+          
+<hr>
+ <bR></font>
+<center> 
+    <a href= "malware.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 4 VSPACE= 0
+  HSPACE= 0></a><br><font color=gray>Back to Malware.htm</fonT>
+    <br><br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved and reversed
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

@@ -1,0 +1,222 @@
+<HTML>
+<HEAD>
+
+<NOSCRIPT>
+<!--<BODY>-->
+</NOSCRIPT>
+
+<TITLE>Searching the Web : Part One : Getting stuff via mail / practical exercises</TITLE>
+<!-- nb_se002.html       -->
+
+
+<SCRIPT LANGUAGE="JavaScript"> 
+  <!-- 
+      function no_error_window() {
+	  return true
+	  } 
+	window.onerror=no_error_window  
+  //-->
+</SCRIPT> 
+
+ <META NAME="keywords" CONTENT=", Search, JavaScript, JavaScript">
+ <META NAME="description" CONTENT="searching, how to search, javascript tricks, passwords, encryption, javascript for the masses">
+ <META NAME="generator" CONTENT="Notepad">
+ <META NAME="author" CONTENT="the seeker"> 
+ <META NAME="copyright" CONTENT="copyright jan 2000 by The Seeker">
+ <META NAME="distribution" CONTENT="global">
+ <META NAME="resource-type" CONTENT="document">
+ <META NAME="language" CONTENT="en">
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+ <META NAME="organisation" CONTENT="Dark_Tower">
+ <META NAME="timestamp" CONTENT="18/01/00">
+    
+</HEAD>
+
+<BODY TEXT="#001010" BGCOLOR="#C0C0C0" VLINK="#405040">
+<FONT FACE="Arial,Helvetica">
+
+<CENTER>
+<H2>HOW TO SEARCH THE WEB</H2>
+<H3>Part One : Get your stuff via mail</H3>
+</CENTER>
+<CENTER><H4>Part One/b : Practical exercises</H4></CENTER>
+<HR WIDTH=50%>
+<CENTER>Use email to surf the Web
+<BR><FONT COLOR="green">compiled by The Seeker</FONT>
+<BR><FONT COLOR="red">always under heavy construction</FONT>
+<BR>last modified : 18 Jan 2000
+<BR><BR>will be updated without further announcement
+</CENTER>
+
+<HR WIDTH=50%>
+<BR>
+
+
+<BR>
+<B><U>1. Using WWW4MAIL SERVERS</U></B>
+<BR><BR>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" valign="top"><font color="red"><B>action</B></font></td>
+    <td width="50%"><font color="red"><B>result</B></font></td>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : www4mail@wm.ictp.trieste.it
+           <BR><B>body</B> : GET http://www.lombardiaonline.com/Mailmax/warp.js
+   </td>
+    <td width="50%" valign="top">brings you 'warp.js' <B>attached</B>&nbsp;(plain-text)
+    </td>
+  </tr>
+   
+  <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : www4mail@wm.ictp.trieste.it
+           <BR><B>body</B> : 
+		   <BR>http://skyscraper.fortunecity.com/scanner/943/warp071098.zip   
+		   <BR>http://skyscraper.fortunecity.com/scanner/943/nb_jsnotes.gif  
+   </td>
+    <td width="50%" valign="top">brings you <B>2</B> mails with the above files <B>attached</B>
+    </td>
+  </tr>
+  
+   <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : www4mail@wm.ictp.trieste.it
+           <BR><B>body</B> : 
+		   <BR>http://skyscraper.fortunecity.com/scanner/943/nb_problem.html  
+		   <BR>http://skyscraper.fortunecity.com/scanner/943/nb_snippets.html  
+		   <BR>http://www.lombardiaonline.com/Mailmax/ 
+   </td>
+    <td width="50%" valign="top">brings you <B>3</B> mails with the above files <B>attached</B>
+		   <BR><BR><B><FONT color="green">interesting :</FONT></B>
+		   <BR>- no graphics attached (pure html)
+		   <BR>- no working links 
+		   <BR>- no *.js-files included 
+		   <BR>- no Fortune-banners
+		   <BR>- and a footer to order more information from www4mail
+    </td>
+  </tr>
+</table>
+<FONT SIZE=-1>
+<BR>and you will get always your 'statistics' :
+<BR><I><PRE>
+Dear User,
+Statistics of your (per week) usage of this service
+===================================================
+Remaining Quota :	297
+Used Quota      :	3
+Last access     :	
+</PRE></I>
+</FONT>
+
+
+
+<HR WIDTH=25%>
+<B><U>2. Using GETWEB SERVERS</U></B>
+<BR><BR>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" valign="top"><font color="red"><B>action</B></font></td>
+    <td width="50%" valign="top"><font color="red"><B>result</B></font></td>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : getweb@emailfetch.com
+           <BR><B>body</B> : GET http://www.lombardiaonline.com/Mailmax/warp.js 
+   </td>
+    <td width="50%" valign="top">brings you 'warp.js' <B>attached</B>&nbsp;(plain-text)
+		<BR>+ a friendly reminder :-)
+     	<BR><I>Due to the heavy load of the server, please restrict your request to 
+            research and academic sites only. This helps the server live longer.</I>
+		<BR>	
+		<BR>BTW : the warp.js was <B>attached</B> (not in the body). Gotta check this out ..	
+    </td>
+  </tr>
+   
+  <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : getweb@emailfetch.com
+           <BR><B>body</B> : 
+		   <BR>GET http://skyscraper.fortunecity.com/scanner/943/nb_problem.html  
+           <BR><FONT COLOR="yellow"><I>remember the blank lines !</I></FONT>
+		   <BR>GET http://skyscraper.fortunecity.com/scanner/943/nb_snippets.html  
+           <BR><BR>GET http://www.lombardiaonline.com/Mailmax/ 
+           <BR><BR>GET http://skyscraper.fortunecity.com/scanner/943/warp071098.zip   
+           <BR><BR>GET http://skyscraper.fortunecity.com/scanner/943/nb_jsnotes.gif  
+   </td>
+    <td width="50%" valign="top">brings you <FONT COLOR="red"><B>2</B></FONT> mails with the wanted files <B>in the body</B>
+		   <BR><BR><B><FONT color="green">interesting :</FONT></B>
+		   <BR>- no graphics (pure text)
+		   <BR>- no working links 
+		   <BR>- no *.js-files etc included 
+		   <BR>- a lot of '[ ]'-numbers
+		   <BR>- and a large footer with all the references to the '[ ]' (for additional request)
+		   <BR><BR><FONT COLOR="red"><B>PROBLEM</B></FONT>
+		   <BR>the weekly quotes :
+           <BR><FONT SIZE=-1><I>
+		   How quotas limit server load
+		   <BR>=============================
+		   <BR>Casual users on this server are limited to a certain maximum number
+               of bytes, and a certain maximum number of messages. Access to pages
+               at www.healthnet.org are not counted towards quota.
+           <BR><BR>Quotas are currently 2 messages for most users during the course of a
+               week. This may be altered at any time due to changes in system load.
+           <BR><BR>Quotas are regenerated after seven full days; for example, if you run 
+               out of quota on a Wedensday, you will be able to use the system again
+               the next Wedensday. If you run out on a Friday, you will have to wait
+               until the following Friday. 
+          </I></FONT>
+          <BR><FONT COLOR="red"><B>2 messages a week only :-((</B></FONT>
+	 </td>
+  </tr>
+  
+</table>
+
+
+<BR><BR>
+<HR WIDTH=25%>
+
+<BR>
+<B><U>3. Using AGORA SERVERS</U></B>
+<BR><BR>
+
+<table border="1" width="100%">
+  <tr>
+    <td width="50%" valign="top"><font color="red"><B>action</B></font></td>
+    <td width="50%"><font color="red"><B>result</B></font></td>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><B>to</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : agora@dna.affrc.go.jp
+           <BR><B>body</B> : SEND http://www.lombardiaonline.com/Mailmax/warp.js
+   </td>
+    <td width="50%" valign="top">brings you 'warp.js' <B>in the mail's body</B>&nbsp;(plain-text)
+	<BR>+ a friendly reminder :-)
+	<BR><I>Due to the heavy load of the server, please restrict your request to 
+            research and academic sites only. This helps the server live longer.</I>
+    </td>
+  </tr>
+</table>
+
+<BR><BR>
+<HR WIDTH=25%>
+
+<B><U>4. Using WEBMAIL SERVERS</U></B>
+<BR><BR>
+service seems to be down (at least at the moment :-(
+
+<BR><BR>
+<HR WIDTH=25%>
+<B><U>5. Using DownloadSlave</U></B>
+
+  
+
+<BR><HR WIDTH=25%>
+
+<FONT COLOR="red"><H2><B>useful additions ? Please let me know !!</B></H2></FONT>
+
+<BR><HR width=50%>
+
+
+</BODY>
+</HTML>

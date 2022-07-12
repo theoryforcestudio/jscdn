@@ -1,0 +1,176 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>shokiwcd.htm: How to search the web, by fravia+ (�`�.�(�`�.� shokiwcd.htm �.���)�.���)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+"> 
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+4 face="Arial">Our own bots</font>
+<bR><font size=+2 face="Arial">What can I do?</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="obscure.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Obscure</th>
+</tR></table>Version October 2000
+ <br><hR><center><font size=+2>
+What can I do?<br>(two tools for seekers)<br>
+by Shoki</font><hr width=44%><i>
+I am moved. Shoki "figured it oughta be easy to write a program that parsed everything out, so (he) sat down to write one" 
+wish that one reader out of hundred would do that. I am moved. Read and understand why.
+
+</i></center><hr width=44%>
+
+
+What can I do?
+<br><br>
+Well I sent an email to Fravia+ letting him know about 2 programs I
+had written.  He asked if I would write a short introduction to them
+for his site.  Wow! On the one hand I was honored that I actually got
+a response from him.  On the other, I didn't really want to have to
+sit down and write something about my programs.
+<br><br>
+I got to thinking about why I wrote these programs, what they do, why
+I emailed Fravia+ about them and lots of similar thoughts. (basically
+I was procrastinating and trying to put off something I didn't really
+want to do)  But the more I thought about it, the more I realised that
+I needed to write this and maybe I might even end up with a usable
+essay.
+<br><br>
+It started about a year ago when I first ran across PCHelp's web page
+on "How to obscure any URL" (Fravia+ <a href="obscure.htm">has this page</a> mirrored on
+his site).  I had run across obfuscated URLs as links in webpages, but
+I never knew you could obfuscate the ip.  This turned out to be very
+useful, because the sysadmin at work didn't block hex, oct or dword
+ips until the middle of this last summer.  The thing that caught my
+eye tho was the phrase on the page that said "I know of no DOS or
+Windows program made specifically to do a dword conversion" At the
+time I was plyaing with Visual Basic because I needed some things done
+for an install I was writing that the install program couldn't handle.
+I figured this could be a good learning experience, and sat down to
+write a dword&lt;&gt;ip converter.
+<br><br>
+Ok, by now you're asking yourself "Where the heck is he going with
+this?"  Well, the title of this essay is "What can I do?", this is a
+very interesting, powerful phrase.  The meaning varies depending on
+the usage.  Follow along and we'll see if I ramble like an idiot or
+maybe actually have a point to make.
+<br><br>
+As I was saying, I started writing a dword<>ip converter and soon
+added the ability to convert hex and oct too.  Now why was I writing
+this program?  Well I wanted to see if I had the ability to do it.  I
+also figured it would be a good learning experience.  Was I planning
+to release this program to the world? No.
+<br><br>
+While I was finishing up the program I thought back to PChelp's page
+and remembered that the ip conversion was only half the battle.  The
+other half was to be able to take an obfuscated URL and see where it
+was really going.  So I figured I would make my program have 2
+functions.  The first would take a decimal ip and show the
+corresponding dword, hex and oct addresses. The second would take an
+obfuscated URL like
+<br><br>
+http://www.fravia.net:frozen@www.searchlores.org/%6E%65%77%73.%68%74%6D
+<br><br>
+and turn it into a readable format.
+<br><br>
+http;//www.searchlores.org/news.htm
+<br><br>
+In order to define some rules for the program, I ran URLomatic, a cgi
+script that does what I was attempting to write for the PC, many times
+using examples from PChelp's page and many I made up. This also let me
+make sure my program was giving the same results. (Hey this kinda
+sounds like reverse engineering :)
+<br><br>
+I finally finished my program and was rather proud of it.  I wanted
+people to see it, but I didn't want to put up a web page to announce
+it to the world.  I contemplated sending it anonymously to Fravia+,
+but he had just frozen his fortress.  So what did I do with it?  You
+guessed it, nothing, nada, zip, zilch, it sat on my harddrive.
+<br><br>
+Well this spring rolls around and I stumble across Fravia+'s new site,
+Searchlores.org.  Now the farthest thing on my mind was my program.  I
+was thinking, cool more learning material!  One day I saw Dark Wyrm's
+essay on MapQuest reversing.  He explained how he broke down the cgi
+string to see what variables were being sent and with what values.  I
+hadn't used VB for a while, but I figured it oughta be easy to write a
+program that parsed everything out, so I sat down to write one.
+<br><br>
+It started out simple, just read the URL and parse out the variables,
+but, like most programs, there were some enhancements I felt it
+needed.  So I added some features to it.  The program stores the
+variables and their values  in different ini files, one for each
+search engine, and a main one listing the search engines and their
+"query keys" I called them query keys because I was using altavista to
+test my program, and they use "query?" to signify, you guessed it, a
+query.
+<br><br>
+The program acts as a collector of variables for your search strings.
+If you know the name and possible values for the variables of a
+specific search engine, or just want to enter your own to test, you
+can just edit the search engine's ini file. You can also launch your
+test urls in your default browser (Opera of course :)
+<br><br>
+So now that I've finished this program, I get to thinking "Boy now I
+have 2 programs that someone might find of use, what can I do with
+them?"  Well after letting them both sit around for couple more
+months, I finally put up a rather small web page for the programs, but
+I didn't actually upload the programs.  Why?  Because I was scared
+someone might actually download them!, haha.
+<br><br>
+I saw that Fravia+ was back and updating his sight with new material.
+After some more hemming and hawing, I finally decided I needed to
+actually upload my programs to my web page, and send them to +Fravia,
+so I did.
+<br><br>
+Now we come full circle.  Back to the beginning.  What can I do?
+<br><br>
+Well it turns out more than I thought.  I wrote 2 tools, and this
+essay.  I think the important thing is I finally kicked myself in the
+butt and made myself answer that question, what can I do?  I can
+contribute.
+<br><br>
+<hr><center><fomnt size=+1>The two tools</font></center><br>
+ <font color=blue>[</font><a href="zipped/mysearch.zip">mysearch.zip</a><font color=blue>]</font>: ~ 20233 bytes
+ <font color=blue>[</font><a href="zipped/urlcalc.zip">urlcalc.zip</a><font color=blue>]</font>: ~ 43844 bytes
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="obscure.htm"><img SRC="images/antiadv.gif" ALT="antiadv" BORDER=0 
+height=43 width=114 align=BOTTOM></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

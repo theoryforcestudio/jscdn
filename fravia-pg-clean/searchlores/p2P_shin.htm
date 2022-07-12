@@ -1,0 +1,309 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>p2P_shin.htm : The crazy world of P2P applications or How I learned to hate KaZaA</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced web searching, serching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><font color=navy size=+5>~ The crazy world of P2P applications ~</font><br> by <font color=navy size=+2><u>Shinohara</u> </font> <br>
+<br><hr width=44%><br>Originally published @ 
+<a href="http://www.searchlores.org">searchlores</a> in September 2004
+&nbsp;&nbsp;&nbsp;  Version 1.02, Updated in <font color=blue>September</font> 2004
+<br><br> <hr width=44%>
+
+<br>
+
+
+<TITLE>p2P_shin.htm: The crazy world of P2P applications or How I learned to hate KaZaA 
+or These people must think we all are complete idiots&nbsp;(and they just might be right!)</TITLE>
+
+
+<H1>The crazy world of P2P applications</H1> or <H1>How I learned to hate KaZaA but love 
+eMule</H1> and/or <H1>These people must think we all are complete idiots (and they just 
+might be right!)</H1>             <font size=+1>
+
+by Shinoara, September 2004<br><hr width=44%><br>   </center> 
+
+
+I have been wanting to review the most popular P2P file sharing programs for a while now. My previous article on <A HREF=http://www.searchlores.org/scumware.htm>spyware</A> drew great response, people are still emailing me to ask me for the rights to reprint it, so I finally sat down on my butt and began my investigation into the shadowy and nasty world and P2P applications and all the various spyware they carry.</P>
+
+Even tho I <U>thought</U> I was prepared, I quickly got totally disgusted after fighting with just one file sharing software-KaZaA. The sheer audacity of these assholes, the way they installed over 20 spyware and adware modules on my system plus a bunch of "free offers" left me flabbergasted. I simply couldn't believe they expected people to be so dumb as to actually fall for these "free offers" and for those MySearch buttons added to the toolbar of my Internet Explorer browser.</P> 
+
+
+
+
+<H2>KaZaA</H2>
+I begin with KaZaA, since it the the most famous one. Honestly speaking, they managed to surprise me by offering two different version of KaZaA- a KaZaA Plus version that cost $29.95, free of ads or pop ups, build in protection and a free version that had ads engine build in, but it still also had build-in virus protection. That's what I get for not keeping up with the new KaZaA versions...;-). The requirement for running KaZaA was that I had Internet Explorer ver 5 or higher installed. I chose the free 2.7 version.</P> 
+
+When the installation began, I was given a screen where I was shown what exactly was going to be installed on my system. It was called <B>"Important Information: What you agree to install"</B>. The list included the following known(and loved by millions) spywares:</P>
+<UL><LI>The GAIN Network (since when have they become a network??) and 
+<LI>Cydoor</UL>
+
+several more:</P>
+<UL><LI>BulllDog Virus protector,
+<LI>Altnet Top Search,
+<LI>Perfect Nav</UL>
+
+and a nice AltNet Peer Points Package that included: 
+
+<UL><LI>Altnet Peer points Components,
+<LI>MySearch tool bar and 
+<LI>JoltID P2P networking</UL>
+   <br><br>
+
+<IMG SRC="images/shImage01.jpg">
+      <br><br>
+I DID have to check a box to show my agreement for the installation to continue. On the next screen I also had to agree to a GAIN installation on the next screen. Supposedly, after checking these two, a user cannot plead ignorance. Huh. How many of you out there actually <U>do</U> read those long and boring user's agreements?  Do you really understand what the spywares do and how much and what kind of information they collect? Yeah, enough said. Anyway, let's move on.</P>
+
+ 
+The next screen gave me more options, most of them are better left unchecked. Next, the KaZaA installer began downloading and installing various components including the Altnet system and so on. Since I had nothing better to do until the download was finished(7 Mbs) I began checking to see if:<BR>
+1. any .exe files were added to any of my start up places and<BR> 
+2. if my Registry was already modified.</P>
+
+
+The startup folder in <I>C:\Windows\Start Menu\Programs\StartUp</I> was clean. The Registry had been changed accordingly:
+
+
+<B>HKEY_LOCAL_MACHINE-->Software-->Microsoft-->Current Version-->Run</B> had the P2P NETWORKING key added pointing to <I>C:\Windows\System\P2P Networking\P2P Networking.exe /Autostart</I>. I left that in place for now, I would try to remove it later and see if KaZaA would continue to function without it. Gain had left 2 agreement text files in <I>C:\Windows\Temp\clt02f57\</I> folder: the eula_gain.txt and eula_gain_txt.js(A java Script file). Plus the temp folder contained tons of exe files, image files and a P2Psetup.exe file. I left everything as it was.</P>
+
+The installation finally began. Immediately I noticed several new icons popping up on my desktop:
+<B>"Your Free chips await"</B>, <B>"Play Cards now"</B>, <B>"My Shared folder"</B>(a short cut to KaZaA's shared folder), and a KaZaA icon. Plus, KaZaA also placed an icon inside my System Tray, a practice that I <U>really, REALLY</U> hate.</P>
+
+But first let's investigate those two gambling offers. Clicking on <B>"Play cards now"</B> icon I was send to the following web site: 
+
+<I>http://www.thunderluckpoker.com/default.asp?BTag=MS_846600_258350_115803</I>.  
+I guess it was a poker or something web site. I shut it down.  Clicking on <B>"Your chips away"</B>, I was sent to the following web site:
+<I>http://www.thunderluck.com/0/default.asp?btag=MS_858100_258340_115608$tlnew_direct</I> that featured crap roulette and blackjack games, plus slots games and all sorts of other junk. Lovely.</P>
+
+In the meantime, a PeerPoints Manager icon was <U>also</U> added to my systray. Clicking on it, I was presented with a REGISTER NOW! screen, where i was told I had 0(zero) points and was told that sharing files will win me points that I can redeem for prices. An ad featuring a smiling young guy surrounded by iPod gadgets, a flat screen monitor and some earphones drove the point by using the old "a picture is worth a thousand words" trick. A list on the right side listed the current top point winners (or lusers, depending on how you define all this crazy commercial junk. This was the Peer Points Manager by Altnet.</P>
+           <br><br>
+<IMG SRC="images/shImage05.jpg"></P>
+            <br><br>
+This looks like all the every day "You might already be a winner" or all the other junky sweepstake tricks we all receive every day by snail mail. I guess they have also invaded the Internet. We surely have missed them. Since this article is about what damage KaZaA and other P2P apps cause to your average user's system, I won't go into details about each spyware and what they do.I already covered that part. let's go back to kaZaA.</P>
+I minimized this screen and it was time to launch KaZaA. It took a surprisingly long time for the KaZaA desktop to launch on my 950 MhZ AMD Duron 512 RAM system Windows 98 SE never patched system. I guess the 56 K modem wasn't good enough for it, hehehe.</P>
+
+Then the Bulldog P2P Virus protection App popped up and began downloading and updating virus definitions. It did have a button option to "Update Later", plus a free trial for BullGuard(more ads!), so I stopped it.</P> 
+
+While writing all this, KaZaA disconnected itself, so I had to connect it. It has been 5 minutes now, and KaZaA is <U>still</U> trying to connect and download a few images. It appeared to finally go online, but when i tried to d a quick search it again told me it was disconnected.</P> 
+
+Oh well, let's do some more research as to what damage KaZaA did to my system.
+
+<B>HKEY_LOCAL_MACHINE-->Software-->Microsoft-->Current Version-->Run</B> is now sporting several new entries. Here's a snapshot:</P>
+                <br><br>
+<IMG SRC="images/shImage09.jpg"></P>  
+<br><br>
+As you can see, the following spywares were added:<BR>
+
+<B>AltNetPoints Manager</B>, <B>P2P NETWORKING</B>, <B>Search Upgrader</B>, and <B>Trickler</B>(GAIN, sporting a new name).
+
+The rest, Run Once, Run OnceEx, RunServices and Run Services Once were clean. The startup foldrer in <I>C:\Windows\Start Menu\Programs\StartUp</I> was clean. But when I opened Internet Explorer, several icons and tools were icons were added to its tool bars. Those included 
+a <B>My Search</B> icon and tool, plus a Yahoo button, Ask Jeeves button, LookSmart button, a file option that sent me to <I>http://kd.mysearch.myway.com/jsp/FLmain.jsp?st=bar&ptnrS=KD&searchfor=</I> site, plus a customize and My Search.</P> 
+
+I closed KaZaA down and tried to resume my normal everyday activities which amouted to downloading off UseNet and writing this article. No go. My Internet connection had slowed down to a virtual crawl. I started HandleEx (which is a small application that will show you <U>all</U> the apps and programs currently running on the PC) to see what was actually going on. This is a screen shot of what i got:</P>
+                <br><br>
+<IMG SRC="images/shImage11.jpg"></P>
+               <br><br>
+As you can plainly see, there are several spywares currently running. They are: <B>P2P NETWORKING</B>, <B>ASM.EXE</B>(Altnet Manager), <B>SEARCHUPGRADER</B>, <B>FSG_4104.EXE</B> and  <B>ADM4005.EXE</B>. No wonder my PC and Internet were so slow! There was nothing else to do but to begin killing them one by one via HandleEx, then re-booting. </P>
+
+Upon reboot I went to <B>Start-->Settings-->Control Panel-->Add remove programs</B>. <B>My Search bar</B> was in there and I uninstalled it.  <B>Peer Points Manager</B> was in there too and it did ask me twice(!) if I wanted it removed. 
+While emptyyng the temp folder from <I>C:\Windows\Temp</I> I had trouble removing the PerfectNavBHOLog.tmp. Obviously the file was in use somewhere. Amazing! I ran HandleEx again, but there was nothing suspicious. So I did a quick search for "perfect"(<b>Start button-->Find</B>) and found it inside <I>C:\Program Files\PerfectNav\Bho</I>.</P>
+ 
+
+Next, I removed the <B>SearchUpgrader</B> folder that was inside <I>C:\Program Files\Common Files\</I> 
+
+Even more surprises: Inside KaZaA folder, I found the <B>Magnet.exe</B>. Upon clicking on it to see what it would do I was told: <B>Magnet is not registered as your default link handler. Would you like to register it now?</B> What the hell is a magnet link handler I wondered, so I clicked on No and that was that. Magnet.exe went into the Recycle bin.   
+
+Finally, I decided it was a good idea to install and run both AdAware and SpyBot just to see what they would find and if I missed something. I didn't see GATOR anywhere, so I figured AdAware would find it. I was right, two sets of GATOR at <B>HKEY_CLASSES_ROOT:CLS\{21FFB60-ODA1F...</B> so on and <B>HKEY_LOCAL_MACHINE:SOFTWARE\gator.com\</B>.</P>
+
+Running SpyBot, I found a Cydoor infection in <I>C:\Windows|System\AdCache</I>.</P>
+
+I had had enough at this point, so i decided to uninstall KaZaA. When I began, my Mozilla browser sprang up and it went to a questionare <I>http://www.kazaa.com/exitsurvey/</I> where i was asked if I can please fill it up. How annoying can one get?</P>
+As a final step I also emptied my <I>C:\Windoes\Temporary Internet Files\</I> folder even tho I didn't use IE at all for this session!.</P>
+ 
+Conclusions: I don't understand what computer luser, sorry user in their right mind would ever want to download, install and ever use KaZaA. Speaking honesty KaZaA is nothing more than a clearing house for a bunch of sleazeball advertisers and creeps who have no redeeming qualities whatsoever and should be shot on the spot. To so arrogantly take over my machine is beyond believe. Of course, everything they do is still legal. They have made sure of that. That doesn't make any more ethical.</P>
+<BR><BR>
+
+
+
+
+<!==================================================================================>
+
+<H2>Grokster</H2>
+
+began by flashing me a welcoming screen where I was given a choice:
+to download the Grokster Pro for $29.95, Upgrade to Grokster Pro or get the Free Grokster download. I choose the free one.
+Here the Grokster installer crashed on me. I waited for a minute or two, then went to where the installer exe was and clicked on it again. This time a screen came up asking me to agree to a GAIN install. I did. Next, I was given the Grokster's legal agreement. I had to click on a button called Agree for the installation to continue. Next, I was given a set of options for Grokster. I unmarked them <U>all</U> and clicked Next. Grokster crashed again. It recovered and began downloading the Grokster application.</P> 
+
+
+This was getting to be fun. Grokster told me it would need 80 minutes to download over a dial up. I decided to wait and see what presents it would give me. Icons after icons began appearing on my desktop. They included <B>Casino</B> from
+
+  <I>http://sportsbook.mayancasino.com/servlet/sportsbook.user?Page=Index</I>,
+<B>Sportsbook</B> from <I>http://sportsbook.mayancasino.com/servlet/sportsbook.user?Page=Index</I>
+<B>Guardster</B> from <I>http://www.guardster.com/</I> that claimed among other things to be a proxy site and to protect users privacy by offering a free proxy for use. (Yeah, RIGHT! Like I will ever use them!)
+
+<B>Golden Spur</B> from <I>http://www.goldenspurcasino.com/index.php?adid=22</I> that offered to give me free software "to take advantage of their spectacular 100% bonus" whatever that meant) via a Java Script pop up when I visited their web site, "Free Web" icon which offers "cost effective web site hosting & domain name registration" at <I>http://www.hostsltd.com/</I> plus a "My grokster files"  folder.</P> 
+
+Meantime, my HandlerEx was going crazy showing me software after software being silently installed in the background via Grokster. These included the ever present <B>Altnet</B>, <B>G181511.exe</B>, a <B>Promulgate</B> installer, <B>JAVAW.exe</B>, a <B>Webrebates.exe</B> <B>Websearch.exe</B>, more <B>Webrebates0</B> and <B>wwebrebates1</B> exes,  and so on.</P>  
+               <br><br>
+<IMG SRC="images/shImage24.jpg"></P>
+                <br><br>
+
+Just look how many treads P2P NETWORKING is using: 13. Grokster itself is using an alarming 32 treads and I am not even utilizing it. No wonder people's PC slow down conciderably even when just one or two spywares are running.</P>
+
+
+My Internet Explorer sprang up and went to <I>http://download2.abetterinternet.com/download/cabs/FON19113/downloading.php</I>
+where i was told I must click on yes to complete my Flash installation. Suddenly the Grokster download was over and i was presented with the Grokster welcoming screen.</P> 
+
+
+The Magnet link popped up again. I told it No and Grokster began and crashed my Explorer. Since I am accustomed to this Windows behavior, i simply shrugged. Then Grokster demanded I insert my CD with the Cab file in my CD-ROM. I laughed. It was funny. I wasn't even told WHAT Cab it required. What a badly written piece of sh*t this is. It was even aping the KaZaA interface, with the same identical icons. No matter how many times I'd click on File-->Connect, Grokster wouldn't do anything. So OK, I killed it and restarted it. A pop up immediately appeared, but since I cleverly(if I do say so myself)  had disabled the images rendering in IE ALL I could see what a blank white screen. Constant pop ups that I couldn't close began to assault my screen. They were all white empty of course.</P>
+
+I got tired of this pretty quickly, so I decided to see how the Registry looked.  Here is a snapshot of <B>HKEY_LOCAL_MACHINE-->Software-->Microsoft-->Current Version-->Run</B> after I installed Grokster:
+<br><br>
+<IMG SRC="images/shImage25.jpg"></P>  
+<br><br>
+</P> 
+
+You can see 13 new entries  including <B>AdRoar Update</B>, <B>Altnet Points manager</B>, <B>Belt</B>, <B>Breg</B>, <B>BTV</B>, <B>P2P networking</B>(more Altnet), <B>PGstub</B>,  <B>Trickler(</B>this is GAIN), <B>Wast</B>, <B>Web rebates</B>, <B>Web rebates0</B>, <B>web search</B> and <B>win server Update</B>. All these "services" will restart next time I reboot Windoze, since they are inside Run. RunOnce included <B>Btvc</B> in <I>C:\Program Files\BTV\btvclean.exe</I> and <B>djtopr1150.exe</B> that was in  <I>C:\Windows\Temp</I> folder. see why it's a good idea to always empty your Temp folder before rebooting your PC.
+On top of that, there was a Grokster live update in the C:\Windows\Start Menu\Programs\StartUp folder that placed there to start up and update grokster the next time I would have rebooted my PC.</P>
+
+Cleaning after Grokster took about half an hour. It was a long and annoying proccess. I shall never try Grokster again.</P> 
+Conclusions: Grokster is worse, much than KaZaA. I'd suggest to stay AWAY from it as far as possible. You have been warned!!</P>  
+
+
+More bad news about both kaZaA and Grokster:<BR>
+Www.zeropaid.com has posted a security advisory on their web site warning of a serious hole in both KaZaA and Grokster. It can be found at 
+<A HREF=http://zeropaid.com/news/articles/auto/09112004c.php>http://zeropaid.com/news/articles/auto/09112004c.php</A> The hole has to do with our by now well known friend Altnet that is included inside both KaZaA and Grokster. It can allow hackers to take over a vulnerable PC via a malicious Web page, according to an advisory from Danish security firm Secunia.</P>
+<BR><BR>
+
+
+<BR><BR>
+
+<!======================================================================================>
+<H2>BearShare</H2>
+
+<!===================40 41 42 43 etc are bear share=======================>
+was next on the disecting table. It is "the world best Gnutella client" or so their web site sez. As usual, I chose to get the "free ad supported" version 4.6.0.</P>
+
+ BearShare began with the usual welcoming screen. Next I had to read and agree to the BearShare End-User Software License Agreement. This time I DID take the time to read it. No mention of any spywares. Good so far. Opps, spoke too soon. here comes the first one: Save! with Weather Cast. from WhenU.com.</P>
+<br><br>
+<IMG SRC="images/shImage40.jpg"></P>  <br><br>
+
+
+I had to click on Agree to continue. Save! popped upa screen, asking me if I was a US user, and if I was, for my zip code. If NOT, I was asked to choose my country from a drop down menu. Also They DID have an licensing agreement for me to scroll down at the left site. Let's try Bulgaria, Sofia for the heck of it. A temperture icon popped up inside my system try showing me 18 degrees, and when I opened it up, it gave me a quick weather map of Sofia Bulgaria including wind, humnidy, heath index and a barometer reading. This was the WeatherCast utility which (AGAIN!) had installed itself inside my systray. There were some icons on it but since I had turned images off in IE, they were all blank. I guess this could appear very useful to people and entice them to keep the WeatherCast there. To me that's just very clever marketing and a way to make you install and keep something you otherwise will never put on your PC.</P>
+
+ The rest of the installation was quick and painless. I was asked if i wanted to start and run BearShare. I declined and closed it down. I was more interested to see what was going on in other places.</P>
+  <br><br>
+<IMG SRC="images/shImage43.jpg"></P>   
+<br><br>
+
+ HandleEx showed me another spyware called <B>Save.exe</B> running. <B>Weather.exe</B> was still active AFTER I had closed BearShare down and more interestingly, that <B>PStores.exe</B> had also began running. That was interesting because <B>PStores.exe</B> is a Microsoft program and is part of Windows OS. It serves as a ""protected" storage server" for any passwords and/or IDs I wanted to type/save according to Microsoft. It can be found in <I>C:\Windows\System\stores.exe</I>. I have managed to keep mine from starting up by NOT using Outlook, ever. Yet here it was. Who activated it? As far as i could tell, something in BearSHare did, since there was nothing else running at the time.</P>
+
+There were four new folders inside my <I>C:\Program Files</I>:
+<UL><LI>Save,
+<LI>WeatherCast and
+<LI>BearShare plus a mysterous 
+<LI>Vvs folder that had a vvsn.cfg file in it just created not too long ago.</UL></P>
+<B>HKEY_LOCAL_MACHINE-->Software-->Microsoft-->Current Version-->Run</B> had the WhenUSave added, which meant it would automatically start each time I reboot my PC. When I tried to remove uninstall WeatherCast via the usual way Start-->Settings-->ContrilPanel-->Add Remove Programs  my Internet Exploder(even tho it was NOT set to be my default browser) started up instead and I was sent to the following site <I>http://web.whenu.com/uninstall_weather.html?id=8EF1F49926F84638A8C871DE7E484106&ver=1.51&partner=EEPE0404</I> where a program began downloading. Luckily, I had IE set up so a warning applet poped up asking me if I REALLY wanted to download and install something called <B>WeatherInstMain.exe</B>. And here I was trying to uninstall something, yet they were truying to make me install something else??? What clowns.</P>
+<br><br>
+<IMG SRC="images/shImage44.jpg"></P>
+<br><br>
+
+Conclusions: Overall BearShare is pretty tame when compared to KaZaA and Grokster. Maybe they haven't been able to attract as many sleazeball advertizers as others have. In that case they might die sooner. Oh well, don't expect me to shed any tears, haha.</P><BR>  
+<BR>
+
+
+My next target is the WeatherBug utility which was included in BearShare but is also available for download as a stand-alone utility. I have noticed it on many people's computers. When I asked about it I was told it was useful and cute. So I decided to see if it was as harmless as it appeared. 
+<!==========================================================================>
+
+<H2>WeatherBug ver 6.0</H2>
+stared by asking me for my Zipcode.</P>
+
+The next screen showed me what exactly will be installed on my system. That was the "free" WeatherBug 6.0, plus the WatherBug companion which would add the following buttons on my IE's task bar: <B>MySearch</B>, <B>Google</B>, <B>Yahoo</B> and <B>Ask Jeeves</B>.</P>
+<br><br><IMG SRC="images/shImage50.jpg"></P><br><br>
+
+As you can plainly see, the MySearch was offered again. I consider MySearch a spyware. I unchecked the box and continued. Next, I was asked to fill in a bunch of info. They asked me for my:
+gender, email address, zip code(again), year of birth, type of Internet connection I have, how many times have I previously registered Weatherbug, if I wanted to receive product updates and "special offers"read SPAM!, Industry, Job function and job title, whether(couldn't resist) i participate in outdoor activities, what my income is, and so on. I clicked next. Almost immediately, an ad icon advertising a $9.95 service was placed on my desktop. I clicked on it to see where it would send me. The link was: <I>https://register.isp.netscape.com/default.jsp?promo=NS_2_6_24_2004_1_1</I>. Is Netscape in ISP bisiness now days? I decided to check IE, and even tho I had unchecked the MySearch option, it was again on planted on the tool bar of my Internet Explorer.</P>
+<BR>
+<BR>
+
+<!================================================================================>
+
+If you cannot live without your file-sharing app and you are crying now: "But what P2P can I use then?" here are several I have found:
+
+ <!======================================================================================>
+
+<H2>Kazaalite++</H2>
+is the spyware and adware free version fo KaZaA. It is getting a bit harder to find, but it is still available if you know where to look. The best place to try downloading from is
+
+<I>http://download.freeweb-hosting.com/.</I>  I would stick to the K-Lite 2.4.3 version for now. If you want to experiment, try one of the later versions, but some need old versions to update, others don't, it gets a little confusing.</P>
+
+When began Kazaalite++ installing, it gave me the usual welcoming screen. I had to click on "I accept the agreement" for the installation to begin. I was told to first uninstall KaZaA Media Desktop before continuing with installing Kazaalite++. Next, I was shown what components will be added to my system. They included the Kazaa Lite++ v2.4.3, Avi preview ver 0.26a, K-Dat, K-Sig, KaZuper Nodes, IP Blocker Updater and so on. </P>
+The installation was quick. Kazaalite++ looks and acts exactly like the spyware infested KaZaA. It uses the same interface, but without the ads on the bottom of the screen.</P> 
+Of course I checked if Kazaalite++ had placed anything inside my REgistry and if anything else was running along with Kazaalite. Kazaalite++ appears to be totaly free of spywares and adwares. I would obviously recommend it instead of the normal KaZaa version</P>
+<BR><BR> 
+
+<!============================================================================>
+
+<H2>Shareaza</H2> is a GNU application. When I stared it, it gave me the standard GNU agreement licence.</p> 
+
+The installation was quick. After it was done, it was time to set up Shareaza. I was asked for the type of my internet connection, what my dsharing folder would be, what name I wanted to use, how old I was(I choose 109) and what country i was from. I choose Japan.</P>
+ 
+Shareaza has a multimedia player included inside it. Shareaza will also cconnect to and travers the edK (eDonkey) network, giving you more returns for your seaches.</P>
+ 
+I am happy to report that Shareaza also appears to be totaly free of any spywares and adwares.</P>
+<BR><BR> 
+
+
+<H2>eMule</H2>
+is one of the few P2P file sharing applications that has no spyware, doesn't server you any ads and is as clean and as can be. Recommended.</P>
+
+<H2>WinMX</H2>
+is another totally spyware/adware free file sharing application. The new version is 3.53, but I recommend the old 3.31 since it will works with the QuickMX ver 1.2.3 accelerator.</P>
+
+This is a short article dealing with just a few P2P apps. A long data base list of know spywares can be found at <I>http://www.spywareguide.com/</I>.</P>
+
+ 
+Last, here is a short description of spyware removal utilities. There are the ONLY known ones that actually work. Be careful downloading and installing any other ones because many companies/individuals are jumping on the spyware-removal bandwagan and trying to get you to buy and use some programs that basically do NOTHING. in fact, I am making a list of fake spoyware removal applications that are out there. That will be my next project.</P> 
+
+<B>Spybot Search&Destroy</B> from <A HREF=http://security.kolla.de>http://security.kolla.de</A> is one of the best. In both Deutsch and English is it totally free - Wow! This program has the most complete detection list I have ever seen. It upgrades itself to add new spywares to its list. Spybot S&D is also able to replace some spyware files with dummy files so that other programs don't notice them missing.</P>
+
+
+<B>Lavasoft AD-aware</B> from <A HREF=http://www.lavasoftusa.com>http://www.lavasoftusa.com</A> is the undisputed champ utility for Windows that detects and removes many adware products, including GAIN/gator, Cydoor, TimeSink TSADBOT, Aureate/Radiate files, Comet Cursor and MANY MANY more. Free version available (for non-commercial users), Pro version also available.</P>
+
+<B>Pest Patrol</B> from http://www.pestpatrol.com/ looked great, but then I noticed how it listed ordinary .gif files inside KaZaA folder as spyware. Obviously they are trying a bit too hard. Worse, when i asked it to clean the infections, it smugly informed me that the free download cannot do that, ONLY the paid version can. Screw them. What rip off artists.</P><BR>
+<BR>
+             </font>
+<CENTER></CENTER></P><BR>shinohara-at-ziplip-dot-com<BR>
+<center> 
+
+<br><hr>
+<br>Published @ <a href="http://www.searchlores.org">searchlores</a> in September 2004
+&nbsp;&nbsp;&nbsp;
+Back to <a href="p2p.htm">P2P</a>
+&nbsp;&nbsp;&nbsp;
+Back to <a href="essays.htm">Essays</a><br></center><hr>
+<br>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="further.htm"><IMG SRC="images/classpet.jpg" ALT="Petit image" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+ (c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>

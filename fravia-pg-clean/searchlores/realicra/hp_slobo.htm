@@ -1,0 +1,1186 @@
+<html>
+<head>
+<title>hp_slobo.htm: Understanding, Reversing, and Hacking HP Printers</title>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF"
+ALINK="#00FF00" VLINK="#3366CC">
+   <center>
+<a href="realicra.htm"><IMG SRC="../images/realicra.gif"
+ALT="reality cracking" ALIGN=BOTTOM
+WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br>
+<font color=gray>Back to fravia's Reality Cracking
+section</font></center>
+ <bR>
+<a NAME="anchortop"></a>
+<!-- Begin Introdo -->
+Slobotron wrote: "<font color=blue>It has come to my attention your essay "The Great Printer Scam". 
+As a former HP Engineer i found it quite superficial and misinformative, 
+because the reality about printers is MUCH worse than in your writings</font>"&nbsp:-(<br>
+He added further: "<font color=blue>You posed many interesting and still unanswered questions.
+You also noticed  how much is "extremely difficult" to find related infos on
+the web.
+
+Being my mission rationality and research, i took some time to write
+for you and for your readers a brief essay...</font>"<br>
+This essay is indeed an eye opener. High level of reality cracking. That's what reality cracking should be all about. A clear target, real knowledge, cleverly applied, lotta teachings. Print it with your own printer&nbsp;:-) and sip it slowly this evening. You will 
+NOT forget it, nor the many reversing lessons inside it, never.<hr
+width=88%>
+<center>
+<font size=+3>
+Understanding, Reversing, and Hacking HP Printers</fonT><br>"<i>Knowledge is power, but i think that first we should learn HOW to learn</i>"<br>by Slobotron,
+April 2002<bR><br>(see also Fravia+'s older essay <font color=blue>[</font><a href="g_prscam.htm">g_prscam.htm</a><font color=blue>]</font>, June 2000)</center>
+  <hr width=44%>
+
+<br>
+<font size=+2>Reality Cracking: 
+Understanding, Reversing, and Hacking HP Printers 
+</font>
+<br>
+<br>Author :  SLOBOTRON (slobotron@yahoo.com)
+<br>Place  :  Europe 
+<br>Date   :  Feb.2002 (published at 
+
+<a href="http://www.searchlores.org">http://www.searchlores.org</a> 
+in April 2002)
+<br><br> 
+
+INTRODUCTION :
+<br><br>
+This essay is designed for researchers to improve and spread their knowledge in
+a field that is often 
+underestimated and &quot;closed&quot; about details and specifications.<br>It seems extremely difficult nowadays to find any kind of detailed infos on the
+subject.<br>
+Due to my vast experience in the sector i felt obliged to put on paper some 
+useful hints for seekers, reversers and crackers, hoping that this essay can
+be for many an eye-opener.<br>
+However this doesnt mean that you should expect a full-disclosure approach, at
+least for now.<br>
+Knowledge is power, but i think that first we should learn HOW to learn.<br>Feel free to contact the author for any additional questions or to
+reprint/edit/publish this text.<br>
+<br>
+GOAL :
+<br><br>
+The contents of this essay will give the reader a wider scenario about printing
+technologies, explaining
+why some models are &quot;locked&quot;, how to customize a printer, refilling
+techniques, marketing background and how to &quot;hack&quot; a printer. 
+<br><br>
+
+
+SECTIONS :
+<br><br>
+&#9;- Understanding the Printing Market<br>
+&#9;- Understanding Product Development<br>
+&#9;- Evil Techniques to Enslave Customers<br>
+&#9;- Inks and Cartridges Explained<br>
+&#9;- Refilling Explained<br>
+&#9;- WaterMarks Explained<br>
+&#9;- Cost-per-Page Explained<br>
+&#9;- Hacking HP Printers<br>
+&#9;- Buying the right printer<br>
+<br>
+
+
+UNDERSTANDING THE PRINTING MARKET
+<br><br>
+Printers are the main HP's &quot;cash-cow&quot;, they produce an average of 10 billions
+$ per year and are the most
+profitable product-line of the company.<br>HP has &quot;stolen&quot; part of the concept and the technology about ink-jet and laser
+printing from Xerox in the early 80's.<br>Since then, the company developed  an amazing reputation on manufacturing
+strong and reliable products
+expecially with the LaserJet family.<br>In the 80's HP was a so called &quot;product-focused&quot; company.Unfortunately after
+the takeover of the old
+CEO by the new one (Carly Fiorina), HP is now a so called &quot;customer-focused&quot;
+company.<br>This is very important and explains why nowadays HP products are often the
+shadow of the old good ones.<br>HP's founders were the  famous engineers Bill Hewlett and Dave Packard.<br>They believed in science, technology and in a company made &quot;by engineers for
+engineers&quot;.<br>After their death the company is now ruled with few exceptions by salesmen,
+marketers, and bankers.<br>The last step to obfuscate the identity of this old good company is the claimed
+evil merge with Compaq  which deserves no comments.<br><br>
+We MUST understand first some brief basics regarding the market.<br>When a product is made it follows this process :
+<br><br>
+--&gt; Marketing Research --&gt; Market Segmentation --&gt; Product Development --&gt;
+Advertising / Propaganda
+<br><br>
+--&gt; Market Segmentation :
+<br><br>
+&#9;Marketing Research tells us that there are mainly 4 different types of
+customer segments :
+<br><br>
+&#9;--&gt; Home-Users<br>
+&#9;--&gt; Small Enterprises<br>
+&#9;--&gt; Enterprises<br>
+&#9;--&gt; Graphic Designers<br>
+&#9;<br>
+&#9;Segmenting the customers in more rational groups is fundamental to satisfy <br>
+&#9;the completely different demands that millions of users request every day.<br>
+&#9;This led the company to develop different models for each segment of users<br>
+&#9;in order to dominate the market.<br>
+&#9;--&gt; Customer's Needs :<br><br>
+
+&#9;--&gt; Home Users         --&gt; Cheap prices, &quot;photo&quot;-quality, 
+bundle with poor sw appz.<br>
+&#9;--&gt; Small Enterprise   --&gt; Good cost-per-page ratio, fair price, 
+flexibility, tech-support.<br>&#9;--&gt; Enterprise         --&gt; High productivity, backward compatibility,
+unix/mac support,
+cost-per-page,
+&#9;                           worldwide support 24x7 etc.<br>&#9;--&gt; Graphic Designers  --&gt; Support for different papers, Pantone, 
+cmyk, productivity,
+&#9;                           high quality, sw compatibility (autocad etc).<br>&#9;
+&#9;Every customer segment  can use different platforms, networks, 
+software, hardware, people, customs,
+&#9;and has a different concept on how much is willing to pay to print.<br>&#9;A successfull company must then design a specific product for each of this
+groups to match
+&#9;the demand.(--&gt; product segmentation).<br>&#9;
+--&gt; Product Segmentation :
+<br><br>
+&#9;--&gt; Home Users          --&gt; low-end DeskJets, low-grade OfficeJets<br>
+&#9;--&gt; Small Enterprises   --&gt; mid/high end Deskjets, Laserjets and Officejets<br>
+&#9;--&gt; Enterprises         --&gt; high-end Laserjets, Officejets and often Deskjets<br>
+&#9;--&gt; Graphic Designers   --&gt; Plotters, high-end Deskjets, Color Laserjets<br>
+<br>
+&#9;Please take care that the product is never meant for create the best technical
+innovations, 
+&#9;but only to match exactly what the customers want,
+&#9;based on the previous market-segmentation.<br>&#9;Note also that sometimes innovation doesnt pay, and while HP made some very
+strong products (like LaserJet 3     &#9;family),others were doomed to fail 
+(like the terrible PaintJet and the ColorPro series).<br>&#9;(more interesting details in the next section)<br><br>
+&#9; --&gt; Maximizing Profits :<br>
+&#9;--&gt; Note that in most cases the huge revenues are NOT coming selling the
+printers but obviously
+from selling the &#9;    HIGH-cost &quot;consumables&quot; such as toners and inks.<br>&#9;    THESE are the real &quot;cash-cows&quot;, and the printers are just a mirror to
+attract the customers.<br>&#9;    * Read the details in the &quot;Evil Techniques to Enslave Customers&quot; section.<br>
+<br><br>
+
+Note for the reader :
+<br><br>
+As a rational and analytic person, the reader should NEVER be fooled into
+thinking that a company is led by innovation or love for technology 
+(--&gt; &quot;made by engineers for engineers&quot;, &quot;HP Invent&quot;,
+&quot;The HP way&quot;, etc.).<br>People MUST realize once and for all that the one and only company-mission is
+to SUCK as much
+money as possible from 
+each of the customer segments and possibly to bankrupt the competitors in order
+to gain a
+monopoly-status 
+(HP has 80% of the worldwide laser market by instance).<br>
+<br>
+
+UNDERSTANDING PRODUCT DEVELOPMENT
+<br><br>
+HP's Printers are developed and manufactured in many sites around the world.<br>In Europe we have only the Barcelona Division that makes OfficeJets and
+Designjets
+and the Grenoble Division for various stuff related to cartridges.<br>In US and Singapore they make DeskJets and LaserJets.<br>
+--&gt; You can see where your printer has been made from the s/n.<br>    the first 2 letters tag the country, for example   --&gt; SG --&gt; Singapore<br>
+       &#9;&#9;&#9;             &#9;&#9;       --&gt; ES --&gt; Espana (Barcelona) <br>
+       &#9;&#9;&#9;             &#9;&#9;       --&gt; FR --&gt; France (Grenoble)<br>
+       &#9;&#9;&#9;<br><br>             
+A printer is basically a motorized electronic-embedded device.<br>To make one you need first an embedded-device development-toolkit.<br>You can find many toolkits around the globe to make every kind of small or
+portable
+devices.The leader in this field is WIND RIVER Technologies
+(www.windriver.com).<br>The most successfull product of Windriver is VxWORKS, a real-time OS with
+powerful tools,IDE,
+compiler, debugger, simulator etc that runs on Unix and NT.<br>HP uses VxWorks to make the firmware of almost all the printers and also other
+products
+like the famous HP JetDirect Cards.<br><br>
+Each board uses a specific CPU with often custom memory, bus and flash-bios.<br>(Mostly used are the Motorola CPUs)
+<br><br>
+--&gt; note that MANY printers do NOT support flash-bios (at least &quot;officially&quot;).<br>
+Actually only high-end products support flash-bios.<br>This is done sending to the printer the bios file via raw LPT under DOS or UNIX
+, via raw TCP/IP
+or 
+with the stinking HP's Flash Utilities under Windoze or Mac.<br><br>
+--&gt; Unmounting a Printer we can easily see the CPU model, the memory model, 
+    and if present the flash-eeprom model (AMD,Intel,Hitachi,ST,etc).<br>    Using expensive (and dangerous) flash-readers is possible (not always) to
+rip-off the firmware
+    and theoretically (using IDA for instance), dis-assemble the firmware.<br>    Note that most fw are of course encrypted in some way.  
+      <br><br>
+To drive the printers internals HP developed many languages since the 80's.<br>There are 2 segments of languages used by the printer :
+<br><br>
+--&gt; Internal Languages (PML,EML,VarWare etc) that drive
+    the mechanic, the half-toning, the render etc  using small macro-opcodes.<br>    (the REAL machine language).<br>    The latest trend now seems to use the EIFFEL language that claims to speed
+up
+    a lot the r&amp;d development.<br>    Apart Eiffel, these languages are NOT accessible from a sw driver, nor
+you can find ANY kind
+of decent
+    reference on the web, they're kind of &quot;secret&quot; and copyrighted by HP Labs
+(www.hpl.hp.com).<br>    Only 3rd party developers interested in writing a specific RIP (Raster
+Image Processor)
+    can have access to the full language data-sheets, paying a huge sum of
+money and 
+    becoming &quot;HP 3rd Party Official Developer&quot;. (such as Adobe, AutoDesk etc).<br>    Unfortunately every model has its own set of additional internal opcodes so
+there's not a 
+    common rule to write for example a hacked driver except for very basic
+tasks.<br>      
+--&gt; External Languages :
+<br><br>
+    Regarding &quot;external languages&quot; on the web you can find tons of .pdf files
+with full
+documentation, 
+    also on good bookstores you can find something.<br>      
+&#9;PJL (Printer Job Language)      &#9;
+&#9;This small scripting language is used only to manage the job session and is
+very useful.<br>&#9;With just few commands you can tell the printer how many copies to print,
+which orientation, 
+&#9;b/w or color, zoom factor, scaling, resolution etc.<br>&#9;
+&#9;HPGL (HP Graphic Language)
+&#9;This is a vector-only language (--&gt; unable to print rasters), was mainly used
+in old plotters 
+&#9;for mechanical drawings / technical projects / etc, and was the &quot;de facto&quot;
+standard in every 
+&#9;high-end applications.<br>
+&#9;
+&#9;HPGL2 (HP Graphic Language 2.0)
+&#9;Version 2.0 of the old HPGL, adding full raster support, and a larger set of
+instructions,
+&#9;used nowadays in all high-end plotters.<br>&#9;Other similar languages were RTL (Raster Transform Language) and CALS, now
+obsolete but 
+&#9;still supported in high-end machines for backward compatibility.<br>&#9;
+&#9;PCL (Printer Common Language)
+&#9;This Language is raster-only, and is used in ALL hp's printers except rare
+cases.<br>&#9;There are many versions of PCL : PCL, PCL2, PCL3, PCL5 and custom versions
+&#9;(like the infamous PCL5-GUI) mainly made for &quot;windoze-only&quot; deskjets
+&#9;(like the 720c series that used HPPA, a kind of machine-language made by 
+&#9;the driver itself to speed up the process and make it incompatible).<br>&#9;About PCLxx programming you'll find tons of documentation everywhere in the
+web 
+&#9;but the problem is that often if not ALWAYS each model has also its own
+proprietary
+&#9;set of additional commands and specifications that are of course NOT public
+except for 
+&#9;3rd parties paying lot of money for the dev-kits.<br><br>
+&#9;TCL
+&#9;This language is pure TCL (as the TCL/TK under Unix) but has just a reduced
+set
+&#9;of intructions to drive the printer internals.<br>&#9;It's used mainly for testing and debugging by the R&amp;D and of course
+&#9;you can NOT find any kind of specification on it related to printing.<br>&#9;Even here each printer can have different sets of instructions or special
+opcodes.<br><br>
+&#9;** Using TCL can be useful to write data inside protected memory areas 
+&#9;   if you know the right memory mapping.<br>&#9;*  Read the &quot;Hacking HP Printers&quot; section for more details.<br>
+&#9;   
+&#9;   
+To print a document, even an empty one, the sw driver must :
+<br><br>
+--&gt; Create a file containing the PJL HEADER.<br>--&gt; The PJL Header will then tell the printer to switch in a specific supported
+language
+    using a specific PJL opcode (&quot;@PJL ENTER LANG=&lt;lang&gt;&quot;).<br>--&gt; After this instruction the driver will attach the encoded file.<br>--&gt; At the end of the file there's the PJL EOF command to terminate the job.<br>
+While the majority of these languages are well documented, many others are not
+, that's why 
+is sometimes impossible to write for example a driver for UNIX (like a simple
+filter for
+GhostScript).<br>Note also that HP gives public just the documented features and commands but
+often there are
+undocumented
+ones that may be VERY important for performance or quality.<br>(a typical example under unix is the HPPA driver for the 720xx series that
+sucks compared to
+original
+windoze-only made by HP).<br><br>
+** A lot of .pdf files and some poor bad-documented dev-kits can be found in
+the HP's developer
+site.<br>   ---&gt; 
+<A HREF="https://searchlores.nickifaulk.com/realicra/developer-solutions.hp.com" TARGET="_blank">http://developer-solutions.hp.com</A>
+
+<br><br>
+
+EVIL TECHNIQUES TO ENSLAVE CUSTOMERS
+<br><br>
+There are many evil tricks that the marketing can use to suck money from our
+pockets.<br>Lets see and reverse the most interesting ones used to enslave the customer on
+buying only HP recharges, paper, inks, etc.<br>
+--&gt; Charging inks at premium price while selling the printer as fair price.<br>
+&#9;The best way to start enslaving a customer on a specific brand is to make the
+product 
+&#9;cheaper, attractive and bundled with useless software for beginners (light
+editions of Corel
+etc)
+&#9;Average home-lusers are unaware of the fact that buying just 3-4 new
+cartridges they can spend
+&#9;more than an entire new printer loaded with 2 carts, and that he cannot use
+3rd party parts or 
+&#9;3rd party drivers or 3rd party papers to achieve good results.<br>&#9;* Epson cartridges are much worse than HP's regarding price, *real* amount of
+ink and
+durability.<br>&#9;   They also dont mount the printhead on the cartridge.When the printhead is
+deteriorating you
+got to
+&#9;   change the entire carry for a totally crazy waste of money.<br>&#9;   As a result Epson has a very expensive global-cost, even using it as b/w
+in econo-mode.<br>&#9;*  Read the details in the &quot;Inks &amp; Cartridges Explained&quot; and &quot;Refilling
+Explained&quot; sections.<br>&#9;&#9;
+--&gt; Forcing customers into buying insulting and unwanted features
+<br><br>
+&#9;The majority of home users print mainly text and rarely some photos.<br>&#9;To achieve a good text quality a *real* 300x300 dpi is far enough.<br>&#9;600x600 makes sense only for vector/technical drawings or very complex fonts.<br>&#9;Epson started years ago fooling customers on the equation that &quot;more dpi=more
+quality&quot; 
+&#9;(like Intel with the Mhz-race for the cpu) being sure that the normal customer
+doenst know 
+&#9;what quality means in typographic terms. 
+&#9;Nowadays we can all see that is impossible to buy a normal 300x300dpi inkjet
+&#9;to print for example just b/w text documents at low price (like an old Deskjet
+500).<br>&#9;Marketing Research tells that customers now want the so called &quot;photo&quot; quality
+&#9;so that we're now overcrowded by all these 2400dpi printers that have NO
+option to print
+&#9;for example in less than 600dpi.<br>&#9;* Read the details in the &quot;Cost-per-page&quot; section.<br><br>
+--&gt; Avoiding the possibility of using only b/w colors.<br>
+&#9;To push the user on throwing away more money as possible on inks a good
+&#9;method is to forbid him to print using only the black color.<br>&#9;This way is well known in low-end deskjets for example.<br>&#9;Using this trick the printer is programmed to use a &quot;composite&quot; black
+&#9;instead of pure pigmented black, or in other cases to request the mandatory
+&#9;presence of a working color cartridge even if we wanna print b/w.<br>&#9;* Read the details in the &quot;Inks &amp; Cartridges Explained&quot; section.<br>&#9;
+--&gt; Promising amazing quality but ONLY using HP paper.<br>
+&#9;This is maybe the only thing that technically makes sense.<br>&#9;Every printer in the world is programmed, tested and certified
+&#9;to achieve a &quot;Gamut&quot; gamma output on specific papers only.<br>&#9;High-end models are very flexible about it and in many cases can
+&#9;be programmed by color experts to work good even on Epson paper
+&#9;for example.<br>&#9;Low-end Deskjet are UNprogrammable, not because they suck
+&#9;but to avoid customers on using 3rd party papers and enslave them on 
+&#9;buying only from his local HP dealer.<br>&#9;(note that HP paper is the most expensive and is in part made by Xerox).<br>&#9;In this case using HP paper is the ONLY way to achieve decent results.<br>&#9;* Read the details in the &quot;Inks &amp; Cartridges Explained&quot; section.<br>&#9;
+--&gt; Forcing the printer to be INcompatible with standard inks
+<br><br>
+&#9;To avoid the customer buying refilled or 3rd party inks
+&#9;HP changes the size, the electronic and the ink chemical of the cartridges
+&#9;quite often, even in models that have similar specifications.<br>&#9;Doing this is quite difficult for refiller companies to stay in business,
+&#9;because actually they're just able to make inks for the old deskjets but not
+the new models.<br>&#9;* Read the details in the &quot;Refilling Explained&quot; section.<br>&#9;
+--&gt; Forcing inks to expire after a short date
+<br><br>
+&#9;This is one of the most offending and poisonous techniques.<br>&#9;In many new high-end products like DesignJets apart all the tricks discussed
+before
+&#9;HP now puts a smart-chip on each cartridge, officially for a more accurate 
+&#9;diagnostic.<br>&#9;--&gt; While is it true that diagnostic is much improved and sharper, these
+results can be achieved
+&#9;    even without a protected chip.<br>&#9;--&gt; The cartridge will be &quot;disabled&quot; after a specific time date written on it
+, EVEN if full of
+ink
+&#9;    so the user will have to buy a new one in ANY case, moreover, HP can
+then predict 
+&#9;    in advance how many $ can be sucked from a customer.<br>&#9;--&gt; The smart-chip drives a sensor inside the cart to detect any movement in
+the amount of ink.<br>&#9;    If we try to refill it for example the chip will detect that the ink
+amount is greatly
+increased 
+&#9;    and will mark the cartridge as FAIL, stop functioning, and requiring to
+buy a new one.<br>&#9;* Read the details in the &quot;Hacking HP Printers&quot; section.<br>&#9;
+--&gt; Forcing the Printhead to stop functioning avoiding &quot;force-mode&quot; options
+<br><br>
+&#9;In high-end products a sensor will take care of numbering the dead &quot;nozzles&quot;
+in a matrix.<br>&#9;(nozzles are the holes from which the ink comes out).<br>&#9;To avoid that customers use the same expensive print-head for too much time 
+&#9;instead of buying a new one, the machine is programmed to detect how many
+&#9;nozzles are functioning (in a quite arbitrary way).<br>&#9;When more than 30% of the nozzles are marked &quot;dead&quot; the machine
+&#9;will stop asking for a new printhead (lets say 200 euros) AVOIDING the
+possibility
+&#9;to &quot;force&quot; the machine to continue printing.<br>&#9;* Read the details in the &quot;Inks &amp; Cartridges Explained&quot; section.<br>&#9;
+--&gt;  Avoiding Customization and Software Flexibility
+<br><br>
+&#9;In order to force the customer on buying the high-end versions of a product
+&#9;many printers come out &quot;windoze-only&quot; or &quot;mac-only&quot;.<br>&#9;In some frequent cases they have only support for a specific OS version 
+&#9;like W98 but not W2000 or XP trying to force the user to upgrade to a new
+machine.<br>&#9;In many other cases the bundled driver is programmed to lock some useful
+functions
+&#9;like b/w-only, use of compatible papers etc, but unlocking this functions in
+the higher
+&#9;versions (that have normally the same hw board but with a different firmware).<br>&#9;* Read the details in the &quot;Hacking HP Printers&quot; section.<br>&#9;
+--&gt; PostScript sw RIP sold as Real PostScript
+<br><br>
+&#9;All the high-end LaserJets and DesignJets supports natively (--&gt; built in the
+firmware)
+&#9;Adobe PostScript Level I/II/III.<br>&#9;To do this HP must pay Adobe a small fee for each printer sold with PS3.<br>&#9;In the low-end segment instead of embedding a real PS3  parser inside the
+printer
+&#9;they make the same machine with a horrible Software-PS3-Parser masqueraded as
+RIP, 
+&#9;and selling the product as &quot;PS3 Printer capable&quot; (note the &quot;capable&quot; instead
+of &quot;supported&quot; or
+&quot;built-in&quot;).<br>&#9;--&gt; Doing this way the driver will create a huge PCL file, send the file to
+the PS3 RIP 
+&#9;    that for a complex A3 color page can take no less than 20-30 minutes to
+process on a PIII
+500.<br>&#9;    After that sends this monster file (can be even half a Gb if you use CADs
+etc) via LPT or
+USB.<br>&#9;    (and remember that low-end printers cannot mount network card).<br>&#9;--&gt; In some cases the driver has bugs converting PCL to PS3 and there's NO WAY
+to solve
+&#9;    the issue except waiting for a new driver release that sometimes never
+comes.<br>&#9;    (like in the evil HP ColorPro series).<br>&#9;--&gt; During the PS3 render the cpu is 100% used by the RIP and you have to wait
+ages to
+&#9;    finish your work, and crashes are not rare even on Mac.<br>&#9;&#9;
+--&gt; Making crap plastic chassis to save money on manufacturing
+<br><br>
+&#9;To make a printer cheap and let it look &quot;consumer&quot; and trendy, the first step
+is make a crap
+plastic chassis
+&#9;with poor-imitated Imac colors, instead of a good &quot;old-school&quot; LaserJet3-like
+rock-solid-chassis.<br>&#9;* Note that is clearly written in the proof of purchase that NO parts of the
+chassis are to be 
+&#9;  considered part of the warranty.<br>&#9;* Replacing plastic part is a huge waste of money on consumer product lines.<br>&#9;* Note also that no one ever read the proof of purchase. <br><br> 
+&#9;  
+--&gt; Feature Creep
+<br><br>
+&#9;When a new product is designed it must satisfy the customer needs, based on
+Marketing research 
+&#9;normally starting defining the most lucrous versions (high-end).<br>&#9;Then when designing the SoHo and consumer version, based on the final budget
+and
+&#9;price the product will be mutilated of some important features..<br>&#9;In the majority of the cases if you open your cheap deskjet together with an
+high-end one 
+&#9;and check whats inside you will see the same mainboard, similar mechanic,
+similar
+&#9;chips, memory etc.<br>&#9;Often the ONLY things that really change are the chassis and the FIRMWARE.<br>&#9;--&gt; The Firmware is responsible for example to limit the resolution to
+1200x1200dpi
+&#9;      or avoiding using b/w-only, connecting a network card (even if you got
+the socket
+&#9;      well hidden inside) etc.<br>&#9;--&gt; Other cases are the ones where the firmware is &quot;locked&quot; to receive only
+&#9;      one printjob at once and only from one user at time, while the
+&quot;high-end&quot; version is
+&#9;      unlocked and cost 4-5 times more.<br>&#9;--&gt; To avoid that smart users can force a firmware upgrade to the high-end
+version 
+&#9;      the flash-updater program is locked to avoid this and download the
+firmware is 
+&#9;      often forbidden to users not subscribed to the online support where is
+checked
+&#9;      their s/n and model.<br>&#9;      &#9;&#9;
+--&gt;Confusing Cost-per-page DataSheets
+ <br><br>
+&#9;Read well the &quot;Cost-per-page Explained&quot; section.<br>
+
+<br><br>
+INKS AND CARTRIDGES EXPLAINED
+<br><br>
+In order to fully understand anything related to ink-jet printers
+we must first know the details inside the printing process.<br>We'll now see a brief basic description.<br><br>
+--&gt; Cartridge
+<br><br>
+&#9;There are many types of HP cartridges, based on supported resolution,
+&#9;model, capacity, color, etc.<br>&#9;An HP cart is composed by the ink supply and the printhead, packed all
+together.<br>&#9;The high-end printers have separate ink-cartridge-only with a
+vacuum-tube-system
+&#9;that sends the ink to 4 or more separate printheads for an amazing quality.<br>&#9;This way the user can have change the colors while printing and have an ink
+storage of
+&#9;even 1 liter for color.<br>&#9;In the consumer printers we have only embedded ink+printhead solutions, or
+worse, 
+&#9;like 1 cartridge for ALL colors.(--&gt; &quot;composite&quot;).<br>
+&#9;The supply is designed as a plastic box connected to a pluggable mechanic
+carry.<br>&#9;It communicates with the printer via many electric contacts on the back of
+itself.<br>&#9;This electric contacts are nothing more than a kind of &quot;matrix&quot; to tell the
+printhead
+&#9;which one of the nozzles must fire out an ink drop.<br><br>
+&#9;* PrintHead
+&#9;
+&#9;The &quot;core&quot; is the printhead, an electric-driven matrix of micro &quot;holes&quot;.<br>&#9;Each hole is connected electronically to the matrix part in the back of the
+cart 
+&#9;and is called &quot;NOZZLE&quot;.<br>&#9;Each nozzle can make only one ink-drop at once but they can do it all together
+&#9;in various speed depending on resolution and software settings.<br>&#9;The size of the nozzle determines the size of the ink drop so the maximum 
+&#9;resolution we can achieve.<br>&#9;* The measure unit for an ink drop is the PICOLITER.<br>&#9;Old carts were designed to produce an average drop-size of 20-30 picoliters,
+&#9;nowadays the drop-size is 3 picoliters (for a 2400x2400 dpi res).<br><br>&#9;
+--&gt; Inks
+<br><br>
+&#9;You can read entire books realted to inks.<br>&#9;I'm not gonna write here a bible but lets see just the basic things to know.<br>&#9;
+&#9;There are mainly 4 different inks : 
+&#9;C (Cyan), M (magenta), Y (Yellow), K (Black).<br>&#9;With the combination of these 4 colors the printer using the half-toning
+matrix
+&#9;is able to &quot;fool&quot; the human eye and create tens of thousands of shades.<br>&#9;Note that these are NOT real colors, just a pattern of the 4 c-m-y-k ones.<br>&#9;
+&#9;Each ink is developed and tested to react chemically with specific kind of
+&#9;paper and bring the user an acceptable color output (&quot;gamut&quot;).<br>&#9;The paper factor is the most important.<br>&#9;How can an ink compound give similar colors on papers SO different ?
+&#9;Well, its done by the halftoning matrix that driven by the driver settings
+&#9;fires up less drops using for example lucid paper and the opposite using
+&#9;coated paper.<br>&#9;Without using this techniques it could be impossible to print on so many
+papers
+&#9;using the same inks, you should need more inks for each kind of media.<br>&#9;
+&#9;--&gt; Of course HP guarantees good results ONLY using HP medias and i agree.<br>&#9;    Why sould someone guarantee good colors using Epson/Xerox paper ?
+            (the word &quot;guarantee&quot; in the hi-end printers means that the
+customer
+            can SUE the company if colors are not Pantone/etc!).<br>            
+&#9;HP has an entire chemical lab division for the development of inks.<br>&#9;The second thing an ink must do is to be able to be squizzed out in very small
+&#9;drops.<br>&#9;The actual printers can make 3 picoliters drops for example.<br>&#9;This is fundamental to achieve HIGH-res, old inks for example are not
+&#9;capable of achieve even 600x600, making drops of even 30 picoliters.<br>&#9;
+&#9;Some problems can be encountered using special medias.<br>&#9;While some colors react fine on normal papers, it can happen that using 
+&#9;an expensive media one of the 4 colors doesnt work good and therefore
+&#9;the color output tends to be greenish or dark or too bright.<br>&#9;This are common issues on high-end machines and the only way to fix it
+&#9;is using a RIP or trick with the driver settings but in the average cases 
+&#9;it should be considered a &quot;product feature&quot;.<br>&#9;
+&#9;Lets stress that is almost impossible to make an ink that works fine on 
+&#9;all the media types and in all resolutions.<br>&#9;Every ink has a lot of limitations as every chemical compound.<br>&#9;Many have also limitation regarding the dry-time or athmospherical factors
+&#9;like umidity, light, etc.<br>&#9;Its a hell for a company to guarantee results with so many factors involved.<br>&#9;Thats why some machines are sold with just the basic possibilities and
+supported
+&#9;medias. 
+&#9;
+&#9;Last, inks must not react with adjacent drops, otherwise it will create a
+color-melt.<br>&#9;
+&#9;Achieving all these results is quite difficult, that explains why colors from
+different
+&#9;brands are so different in gamut, prices, and performances.<br><br>&#9;
+--&gt; Half-Toning
+<br><br>
+&#9;Half-Toning is a quite old but effective technique to represent colors on
+paper.<br>&#9;Its based on the concept that the human eye cannot see all the dots in an
+image
+&#9;from a short distance.<br>&#9;That means that using the 4 CMYK colors we can create unlimited patterns of
+&quot;colors&quot;
+&#9;and the human eye will be fooled in seeing real color shades while we just
+used
+&#9;cmyk.<br>&#9;
+&#9;Technically is a color matrix where we define wich nozzle the printhead must
+use
+&#9;based on a specific color-scale embedded into the firmware.<br>&#9;You can NOT change easily the half-tone matrix except using specific RIPs and
+its
+&#9;only possible on high-end devices.<br>&#9;Even if you could i suggest you to avoid it unless you're a real
+color-professional.<br>&#9;
+&#9;Note that the resolution factor here is very important.<br>&#9;A 300x300 printout will never make acceptable colors from a short distance, 
+&#9;but will be good to see from 1-2 meters.<br>&#9;Nowadays we can use 2400x2400 hires printers so this issue is no more
+important
+&#9;at least for photo applications.<br>&#9;
+&#9;Each company use its own halftoning patters and optimization alghorithms.<br>&#9;This way the same file can have HUGE differences regarding color outputs if
+printed
+&#9;by instance using an Epson or an HP printer.<br><br>
+--&gt; Resolution
+<br><br>
+&#9;Resolution is a mix of 2 factors :<br>
+&#9;
+&#9;- Hardware resolution<br>
+&#9;- Ink Resolution<br>
+&#9;<br>
+&#9;The measure unit is the DPI (dot-per-inch) and common res are
+300x300/600x600/1200x1200/2400x2400
+&#9;and some other variants.<br>&#9;
+&#9;The hardware res is the amount of dots that the printhead is able to produce
+in one inch.<br>&#9;(horizontal dots * vertical dots = resolution).<br>&#9;Note that in order to do that there are also many other mechanical tricks
+involved.<br>&#9;
+&#9;The Ink resolution is generically meant as the dot SIZE.<br>&#9;To achieve a REAL hires 2400x2400 the ink drop should be around 3-4
+picoliters.<br>&#9;Some cheap and some old printers were instead sold with a hardware res of
+600x600 
+&#9;but with inks just capable of 300x300 dots.<br>&#9;The results in these cases are of course not good except for a home user.<br>&#9;
+&#9;To get a REAL resolution you must have both printheads and inks capable of 
+&#9;supporting a specific res.<br>&#9;Note also that there are even here many tricks to fake the human eye, and
+also 
+&#9;to FOOL customers.<br>&#9;The most typical example is INTERPOLATION that claim to produce a double-res
+&#9;shifting the printhead of half a dot and printing another halftone mask.<br>&#9;
+&#9;Using interpolation is never good, expecially because apart producing faked
+hi-res
+&#9;prints the dots stay bigger that supposed and the entire process is slowed
+down a lot.<br>&#9;
+<br><br>
+
+REFILLING EXPLAINED
+<br><br>
+There are lots of companies right now selling so called &quot;refilled&quot; cartridges
+claiming full
+compatibility with most common printers like hp deskjet, epson stylus color
+etc.<br>Often you can even find this no-brand supplies in your local supermarket or
+tobacconist.<br>The fact that original supplies have poisonous prices force many users sick of 
+paying big money to print their stuff on buying &quot;cloned&quot; cartridges&quot; in the
+hope
+of making a bargaign.<br>Lets analyze in detail whats really inside a refilled cart and why in many
+cases
+it can be a waste of money or damage our printer.<br>
+Having read the section &quot;Inks and Cartidges Explained&quot; we should have a clear
+idea of how the printing process is made.<br>To clone an HP cartridge a manufacturer must produce a poor copy of the plastic
+container,
+of the small electronic part (one thin flat cable) and more important 
+
+--&gt; the printhead containing the nozzles.<br> 
+While the manufacturing of a printhead that produces ink drops of 14 picoliters
+(--&gt; 300/600dpi)
+is nowadays not so diffucult, its harder and expensive to make one that does 3
+picoliters
+like in the newest printers supporting 2400x2400 dpi.<br>
+A normal refilled cart can easily achieve resolutions of 300x300, 600x600 but 
+hardly 1200x1200 or more.<br>There are some refillers that claim to achieve this high-res but you have NO
+WAY
+to be sure of that without checking with specific expensive devices or at least
+with
+good lens how much the ink drop is big.<br>In many expositions you'll see companies selling this kind of cloned supplies
+trying to fake gullible users showing them high-quality printouts specifically
+pre-made.<br>
+* note that is much easy to fake high-res quality printing photos than complex
+technical files.<br>  They normally try to show you printouts with naked girls etc but never an
+electronic datasheet.<br>   
+From my own personal experience in the best cases i found good 600x600 dpi 
+cartridges but never ever real 1200x1200dpi ones.<br>Another point is the consistency of the nozzles and their durability.<br>Many refilled supplies have NOT all the nozzles with the same sharp size,
+that means that some of the drops will produce 13-14 picoliters, others 20,
+others 10 etc.<br>These are very hard details to see for an inexpert home user but are very clear
+while printing
+sharp cad/cam projects expecially in A3 format.<br>Durability also have absolutely no warranty being 99% of this cloned supplies
+companies nothing
+more than fly-by-night operations, often with even no-brand at all.<br>
+The interesting part is the real refilling, that means you already own a real
+empty HP cartridge
+with a real HP printhead that does real high-resolution.<br>I've seen many cases where the refillers sell used empty hp supplies with their
+home-made inks.<br>This cases are maybe the only good ones to take in consideration to save some
+money
+because at least the most delicate part is an original HP supply.<br>
+* Take care that even if the printhead is original you dont know how many
+nozzles are DEAD.<br>   Theoretically can be even the 50%, causing missing lines, ink drops and
+other unacceptable 
+   behaviours.<br>
+Lets explain now the delicate ink chemical part.<br>Refilled inks are normally water-based, in rare cases they add some pigments 
+to claim them as 
+
+--&gt; &quot;pigmented black&quot;.<br>
+Again, you've NO proof of it unless you can try it before.<br>The gullible user has also no way to ensure that while a cloned ink
+prints good on plain paper it does that also on photo or glossy paper.<br>Another important point is that to refill you need in most case to put the ink
+in the cart
+from a hole, doing that you change the pressurization inside the cart so you
+can hardly
+achieve the original one.<br>The industrial process to manufacture original supplies is quite sharp and
+tested using
+very expensive machines assuring a perfect pressurization, ink ratio, bubble
+cheking etc.<br>Doing this at home is a matter of luck and trial&amp;error.<br>This process can cause bad quality after a few dozens of good prints and in
+some cases
+missing print at all if there is too much air inside the cartridge in the form
+of air bubbles.<br>What you can easily encounter is a decent quality with rare &quot;ink-drops&quot;
+somewhere
+due to poor quality of the ink-mix of air bubbles, pressure and fake inks.<br>
+The most important and delicate factor is the ink/nozzle mix.<br>Being not sure of what kind of cloned ink are you using and not even of the
+real
+nozzle's size, having a linear good quality is far from being an easy step.<br>
+Last but not least, lets stress the fact that you have no warranty that the
+electronic part
+of a cloned supply will run flawlessy.You cannot exclude the possibility that
+it can short-circuit
+one or more signals and damage your printer's internals.<br>
+The reader can now have a wider look at the refilling market taking his own
+conclusions.<br>While for a decent and cheap econo-mode print of text documents in 300x300 or
+600x600
+refilled supplies can be a very good choice, for hi-res on photo paper i
+definetely suggest
+to AVOID them.<br>
+
+<br><br>
+WATERMARKS EXPLAINED
+<br><br>
+There are rumors in the internet claiming that every printer embeds secret
+marks, logos,
+or hidden micro-shapes to recognize from a document which model had been used.<br>People claim with no technical datas at all, that this hidden, unwanted and
+unremovable
+&quot;feature&quot; can be even be put on special fonts, being invisible at the human
+eye
+but recognizeable with special devices used by scientific police, fbi, cia,
+europol etc.<br>
+As far as i know these are just URBAN LEGENDS.<br>
+There are more easy way to reverse a paper document in order to get these
+informations
+with no need of special techno-cop-devices.<br>
+Lets see in details what we can reverse from a document written for example
+with 
+an HP DeskJet.<br>
+--&gt; 1 - Fingerprint
+<br><br>
+&#9;On each paper sheet we use is quite easy to trace at least one of our
+fingerprint.<br>&#9;The police with a good fingerprint can trace back the real identity of a
+person, 
+&#9;but not which printer was used.<br>&#9;To avoid it the only way is performing the entire printing process wearing
+gloves.<br>&#9;Buying a new set of sheets, putting it in the printer tray and printing,
+always using
+&#9;gloves.<br>&#9;Even using gloves and leaving no fingerprints at all the cops can trace back
+at least 
+&#9;which brand of paper was used, even if it was common plain paper.<br>&#9;&#9;
+--&gt; 2 - Colors 
+<br><br>
+&#9;With good lens we can zoom and see with our eyes if the black color is pure or
+&quot;composite&quot;.<br>&#9;(--&gt; made with CMY colors)&#9;
+&#9;This way is possible to shrink the possible targets in case someone want to
+know just the
+printer's family.<br>&#9;(ex : low-end Deskjet or high-end OfficeJet).<br>
+--&gt; 3 - Ink Drops &amp; Satellites
+<br><br>
+&#9;After having checked the black factor, with some more professional devices is
+possible
+&#9;to measure the ink-drop-size in order to detect which resolution has been used
+, type of
+printhead
+&#9;and expecially number of &quot;satellites&quot; in the ink drop.<br>&#9;Satellites are very important :
+&#9;- when we draw a dot the printhead fire up one ink-drop, the drop drawn on
+the paper is just a
+small
+&#9;  circular dot for our human eyes but if we zoom it we can easily see a range
+of 5-10 micro-dots
+&#9;  around it.This micro-dots are called satellites and each kind of ink on the
+market has a
+specific
+&#9;  range and properties regarding them.<br>&#9;  Some special inks are &quot;satellites free&quot; to claim that the quality is higher.<br>&#9;  This is true only in technical drawings, instead more satellites makes a
+better visual quality
+
+&#9;  when printing photos due to the &quot;smoothness&quot; that they creates between the
+dots.<br>&#9;- Counting the number of satellites in the dot will reveal which ink has been
+used, and trace
+back
+&#9;  the brand and family model.(ex: Deskjet instead of OfficeJet)
+&#9;- Techno-cops can also use a more rude approach, analyzing the ink in
+laboratory and ask
+&#9;  the manufacturers the chemical compounds datasheet to reverse back the
+results in order
+&#9;  to gather brand and family model and in some special cases the exact model
+name.<br>
+--&gt; 4 - Country
+<br><br>
+&#9;As explained in the first chapters, regarding HP, there are NO
+&quot;country-specific&quot; printers.<br>&#9;In Europe for example only high-end printers are made, deskjets etc are made
+in Singapore
+&#9;or in some cases assembled in Ireland, shipped in Grenoble and bundled with
+local manuals
+&#9;but there's no way to trace back the country of a printer's user, even from
+the s/n.<br>&#9;The s/n can only be used to trace back WHERE the printer was sold but it needs
+the cops
+&#9;to ask confidential information to the sales division of HP.<br>&#9;(An easier way is to just call the HP tech support giving them the s/n and use
+some obvious
+&#9;social-engineering techniques).<br>&#9;
+--&gt; 5 - Halftoning &amp; Watermarks
+<br><br>
+&#9;There's indeed the possibility that some printers have been secretely
+programmed to 
+&#9;embed in the half-toning a random watermark to identify itself, hidden in
+some
+&#9;particular fonts for example.<br>&#9;As written before i have no data of the real existance of these features but
+the 
+&#9;possibility is real.<br>&#9;To ensure of the truthfullness of this theory the only way should be to
+disassemble
+&#9;the firmware and check the halftoning matrix pattern.<br>&#9;
+&#9;
+&#9;<br><br>
+COST-PER-PAGE EXPLAINED
+<br><br>
+The most confusing marketing propaganda is regarding the &quot;cost-per-page&quot;
+factor.<br>This is a very important field because it impacts the REAL hidden costs of a
+printer
+and is always misperceived by customers, while being abused by marketers.<br>
+Lets see in detail the truth about it and why it makes NO SENSE to speak of
+&quot;cost-per-page&quot;
+at least regarding the average home users.<br>
+The impossibility to calculate a good, sharp cost-per-page can be explained
+simply because there 
+are TOO MANY factors involved, causing even the most detailed report to become
+a guessing.<br>
+The factors involved are mainly :
+<br><br>
+--&gt; Paper type
+<br><br>
+&#9;It must be clear once and for all that the printer uses different halftoning
+matrix 
+&#9;for each type of paper and for each resolution.<br>&#9;Each paper has a huge number of chemical properties, how it reacts with inks, 
+&#9;how much ink it absorbs, how the colors are brilliant, and so how the
+halftone
+&#9;must be programmed in the firmware to achieve decent colors on many different
+&#9;medias while using the same ink type.<br>&#9;Diffentent Halftoning matrix affects how MUCH ink goes out of the cartridge.<br>&#9;For example plain paper absorbs a lot, while glossy much less.<br>&#9;Selecting from the software driver &quot;plain paper&quot; and then using satinated
+glossy 
+&#9;for example we will see that a lot of ink drops off the page, due to the 
+&#9;low-absorb ratio of satinated/lucid glossy.<br>&#9;Thats why in the halftone matrix the glossy uses a lot less ink than plain
+paper
+&#9;while having greater colors thank to his &quot;lucid&quot; property.&#9;&#9;
+&#9;<br><br>
+--&gt; Resolution 
+<br><br>
+&#9;Resolution is the second most important factor.<br>&#9;Normal printers let the user choose between some preset factory defaults
+&#9;like &quot;economode&quot;, &quot;normal&quot;, &quot;max quality&quot;, &quot;b/w&quot;.<br>&#9;These settings tell the printer which halftoning matrix to use.<br>&#9;High-resolution printers eat a huge amount of ink compared to old one.<br>&#9;This is ONLY good for printing photos.For a normal text document 
+&#9;300x300 is far enough, 600x600 is necessary only for very particular 
+&#9;and complex fonts or technical cad/cam projects.<br>&#9;Using 600x600 you will use 4 times the ink of a 300x300 print.<br>&#9;With 1200x1200 16 times and 2400x2400 64 times.<br>&#9;As you can easily understand using hires is a crazy WASTE OF MONEY 
+&#9;being the average user printing in the 90% of the cases just a text doc
+&#9;using M$ Word.<br><br>
+--&gt; Interpolation
+<br><br>
+&#9;Many printers have also extra features like &quot;ultra high quality&quot;, &quot;max 
+&#9;res - high quality&quot;, and other esoteric names. What all these features 
+&#9;do is in general a simple &quot;interpolation&quot; and a more slower and accurate 
+&#9;&quot;multi-pass&quot; print. This kind of techniques are usually found in high-
+&#9;end products but also in photo-oriented Deskjets. Actually they're 
+&#9;nothing more than tricks to get a fake higher resolution and claim it in 
+&#9;the product propaganda. (older high-end deskjets were 600x600 but 
+&#9;sold as 1200x1200 &quot;capable&quot; using interpolation). What is important to 
+&#9;know is that using multi-pass tricks the printer will drop even the 
+&#9;DOUBLE of ink necessary, using a special halftone mask, in some cases 
+&#9;putting more than one color in the same dot (thats why this option slows 
+&#9;down the process and why it can be used only on special papers). 
+&#9;Interpolation techniques are intended to put drops between 2 or more 
+&#9;adiacent dots but you can easily understand that is a fake &quot;double-res&quot; 
+&#9;because the drop-size is still the same.It results anyway in a double 
+&#9;amount of ink that has to be used and in any case all these techniques dont 
+&#9;produce the same quality of a real 2400x2400 or higher. 
+<br><br>
+--&gt; Composite Black
+<br><br>
+&#9;The black color is the most important in printing, and the HP one is with no
+doubt the
+&#9;best in the market, expecially because in most of the cases is also
+PIGMENTED-based
+&#9;and not water-based as the other 3 colors (CMY).<br>&#9;This results in a great, lucid black, perfect for text, cad/cam and photos.<br>&#9;(There are many urban legends on the subject HP-black VS Epson-black).<br>&#9;But in higher resolutions some papers cannot react chemically in the proper
+way, often 
+&#9;because the printing speed is too high or because the pigment reacts with the
+adiacent colors
+&#9;creating a melt of unwanted colors.<br>&#9;To avoid this problem the firmware is set up to produce the black using only
+CMY colors
+(&quot;composite&quot;)
+&#9;and this means a weaker black lucidity together with a LOT of ink color wasted
+off by the CMY
+cartridges.<br>&#9;(note that all these details are obviously not clearly written in the software
+driver).<br><br>&#9;
+--&gt; Printing Content
+<br><br>
+&#9;After having explained the physical details of the printing-mix 
+&#9;(paper/res/quality), there is the most random and confusing factor : 
+&#9;WHAT we print in a document. Some users print just text documents, web 
+&#9;pages etc, taking care of using low-res, plain paper and 
+&#9;economode.This is the BEST way to save money on printing.<br>&#9; What is cause of misperception and randomization of the statistic is what the
+average users
+print. <br><br>
+&#9;There are too much segment of users : end-user printing just text, end-
+&#9;users printing just photos, others printing just from excel/powerpoint 
+&#9;(mixed text + photos). Moreover there are cad/cam users that print also 
+&#9;text-only, dtp and excel, all together. Thats why declaring a cost-
+&#9;per-page factor is so difficult, abused, and also dangerous for the 
+&#9;company (infact you will only see &quot;minimal&quot; cost-per-page in the 
+&#9;depliants, never &quot;average&quot;).<br><br>
+--&gt; Benchmarks
+<br><br>
+&#9;People that want to benchmark cost-per-page can only make a very
+&#9;complex diagram with different statistics for each kind of paper and 
+&#9;each resolution printing only text, or only vector graphic or only
+&#9;photos.<br>&#9;This way you can have an approximate idea of the real costs.&#9;
+&#9;<br><br>
+--&gt; Conclusion 
+<br><br>
+&#9;Cost-per-page datagrams are more or less faithful when we talk about
+&#9;b/w laserjets or high-end color-only plotters for the simple reason
+&#9;that those users are known to print almost always the same stuff.<br>&#9;What makes not much sense is talking of cost-per-page about Deskjets
+&#9;and other home-user printers.<br>&#9;I suggest the reader to have NO faith in all the esoteric datasheets 
+        related to cost-per-page that can be found in the printer's manuals or
+on the web.<br>        The only rule should be to definetely realize that QUALITY COSTS A LOT.<br>        * See also the section &quot;Buying the right printer&quot;.<br>
+<br><br>
+
+HACKING HP PRINTERS
+<br><br>
+Unfortunately despite the section-title there's honestly not much to crack in a
+printer, apart
+refilling and hacking of some internals, but there are still many malicious 
+interesting cases to study :
+<br><br>
+- How to print in LOWER resolutions<br>
+- How to force B/W mode<br>
+- Using an UNsupported OS<br>
+- Firmware UNlocking (product &quot;upgrade&quot;)<br>
+- Smartchip-protected Cartridges<br>
+- Firmware Debugging<br>
+- Remote Firmware Erasing<br>
+- Remote Exploits<br>
+- Driver &quot;hacking&quot;<br>
+- Applied Printing : FAKE Banknotes<br><br>
+
+
+
+--&gt; How to print in LOWER resolutions<br><br>
+&#9;    
+&#9;How can we save money printing in unsupported low-res like 300x300 ?
+        Well, in newest printers officially you cant, the lowest res is
+        normally set as 600x600.<br>        Depending on your model, you can in most of the cases try the manual
+approach.<br>        Check your printer's datasheets on hp.com and developersolutions.hp.com
+        for additional PDFs.<br>        There's the chance that your model can print in 300x300 or lower using
+this
+        PJL opcode : 
+&#9;    
+        @PJL SET RES=&lt;res&gt; (es : @PJL SET RES=300)
+<br><br>
+&#9;You must create your file, then edit the header and change/add this string
+&#9;before the @PJL SET LANG=xxxx one.<br>&#9;
+&#9;Skilled crackers can of course hack the driver itself to avoid using the
+&#9;manual approach every time.<br>&#9;
+&#9;Note that some printers does NOT react to value minor of 600, or they dont
+use PJL at all.<br>&#9;When this happens is because the firmware is coded to dont care on lower
+values.<br>&#9;In these cases there's not much else to do, i'm sorry.<br>
+<br><br>
+
+--&gt; How to force B/W mode
+<br><br>
+&#9;Same as above but the PJL string is :
+&#9;
+&#9;@PJL SET MODE=MONO
+&#9;
+&#9;or 
+&#9;
+&#9;@PJL SET COLOR=MONO
+&#9;&#9;
+&#9;
+<br><br>
+--&gt; Using an UNsupported OS
+<br><br>
+&#9;How to print under UNIX with a Windoze-only printer ?
+&#9;There are just 2 ways : 
+&#9;Using Ghostscript, CUPS, or a print-server under NT/2K.<br>&#9;
+&#9;Just remember that almost all HP printers support PCLxxx and many also
+&#9;PS3, HPGL3, RTL and CALS.<br>&#9;The issue is that there are many different versions and implementations of
+PCL.<br>&#9;Read carefully the PDFs on developersolutions.hp.com then check 
+&#9;if your version of ghostscript or CUPS supports at least your printer's family
+&#9;(es : Deskjet 5xx/6xx/9xx) and create your own &quot;FILTER&quot; (not much difficult).<br>&#9;Note that you can also just use a generic filter, but this means you will not
+be 
+&#9;able to use the advanced features of the printer.(es: hi-res,
+color-management,
+&#9;ICC profiles,etc).<br>&#9;This is good only for print b/w docs but i suggest to use a print-server for
+&#9;photo applications or serious color hackings.<br>&#9;
+&#9;Issue : you're using a Windoze-only printer like the Deskjet 720.<br>&#9;
+&#9;Well, there is an HPPA parser for ghostscript but it sucks in my opinion.<br>&#9;In these cases is better to use a remote print-server under Windoze that is 
+&#9;controlled by UNIX using LPD/IPP or whatever protocol you like.<br>&#9;From my personal experiments is much simpler and better to always use a
+print-server
+&#9;unless you just want to print text docs.<br>&#9;(you need NT4 server/2K Server, just install the &quot;Printing Services&quot; and 
+&#9;&quot;UNIX Printing Services&quot; or for Mac the 3rd party &quot;PC Mac Lan 8.xx&quot;).<br>&#9;Using a print-server you'll also be able to print from Macinto$h using
+&#9;the simple HP-laserjet utility for Mac (tcp/ip only).<br>
+<br><br>
+
+--&gt; Firmware UNlocking (product &quot;upgrade&quot;)
+<br><br>
+&#9;BRUTE FORCE APPROACH :
+<br><br>
+&#9;Issue : your model doesnt support all the features of the higher one
+&#9;        but you know that is based on the same identical board/cpu/etc.<br>
+&#9;For reason of space i cannot write a list of the hundreds of HP printers
+&#9;capable or not of flash-bios, PS3, simm-rom, locked eeprom etc.<br>&#9;As a reverser you should know where to find these details in the vast
+&#9;hp.com web site and the multitude of subdomains 
+&#9;(in primis developersolutions.hp.com), if in doubt contact the author.<br>&#9;Many low-end printers are nothing more than the hi-end version but with 
+&#9;&quot;locked&quot; features.<br>&#9;Unfortunately only mid and hi-end printers support flash-bios upgrade.&#9;
+&#9;In these cases just grab the hi-end's firmware file from hp.com and send it 
+&#9;directly using an LPT cable (using DOS or unix, *NOT* the stinking HP Flash
+&#9;Updater because is &quot;locked&quot; and does not let you force the upgrade).<br>&#9;If the printer has a Jetdirect Card, you can also send the fw via IP using
+for
+&#9;example NETCAT by Hobbit.<br>&#9;
+&#9;--&gt; netcat &lt;firmware.bin&gt; &lt;IP&gt; &lt;port&gt;
+&#9;    --&gt; ex: netcat firmware.bin 192.168.0.1 9100 &lt;-- port is always 9100.<br>&#9;    
+&#9;** be very careful, if the flash fails your printer will be fucked up.<br>&#9;*** dont try to flash a PS3 firmware on a low-end, postscript is always 
+&#9;inside a separate &quot;simm-rom&quot; module and cannot be flashed/upgraded
+&#9;except on special high-end models (where the ps3-bios is stored on hdd and
+&#9;can be even 130Mb).<br>&#9;
+&#9;Unfortunately it seems that no-one of the cheap deskjets are flashable
+&#9;unless you use take off the chip and use an eprom/eeprom programmer.<br>&#9;
+<br><br>
+
+--&gt; Smartchip-protected Cartridges
+<br><br>
+&#9;Some high-end inkjets are bundled with huge ink-only cartridges, connected
+&#9;with a vacuum tube system to the printhead.<br>&#9;These carts are very expensive (lets say 200 euros) and contain even 1 liter
+of ink.<br>&#9;Due to the HP's evil politic against refillers, there is now a smartchip on
+each
+&#9;cartridge designed to detect sabotages, refilling, and tweaking.<br>&#9;Inside the cart there is a sensor to detect sharply the amount of ink.<br>&#9;The value is written inside the smartchip itself, NOT in the mainboard's
+flash-rom.<br>&#9;The smartchip contains also other datas like umidity factor, s/n, system
+date and the
+&#9;infamous EXPIRE DATE.<br>&#9;Its &quot;officially&quot; impossible to modify any of these locked values, nor you
+will find any
+&#9;useful information on the web.<br>&#9;However, as for any smartcard/smartchip/sim/etc there is a very easy way to
+reset
+&#9;and change ALL these parameters, knowing in advance the smartchip memory
+&#9;mapping and how to have to access to it.<br>&#9;To access the data you need to write a PJL file embedding the &quot;secret&quot; TCL
+opcode for 
+&#9;address-cell datawriting (which i'm not gonna tell you here).<br>&#9;Sending the file via raw LPT or IP will &quot;execute&quot; the micro-script on-the-fly.<br>&#9;In this way is possible to reset the expiration date and the damn
+anti-refill-sensor.<br>&#9;As far as i know is also possible to clone the entire smartchip from a brand
+new 
+&#9;cartridge in order to refill an empty one.<br><br>
+
+&#9;
+--&gt; Firmware Debugging
+<br><br>
+&#9;The only way to even think about starting firmware debugging is to 
+&#9;have a fresh copy of VxWorks,( find the details on their web site
+www.windriver.com).<br>&#9;There's a free evaluation package with tons of .pdf files but not much
+&#9;advanced support for many cpus, just the basic ones.<br>&#9;In order to debug your printer you should unmount it and see whats
+&#9;the cpu model.<br>&#9;If its not supported by your VxWorks' eval-copy than you need 
+&#9;the full version with ALL the cpu files, search the web and grab it down.<br>&#9;(--&gt; very very difficult to find).<br>&#9;You need also your printer's fw file otherwise you should try to rip it off
+&#9;by yourself using special hardware readers.<br>&#9;Keep in mind that using VxWorks at home makes only sense for testing purpose
+&#9;or to debug flash-bios-enabled products.<br>&#9;Note also that fw are often crypted.<br>&#9;Once you have selected your target you can start learning the printer's
+&#9;cpu assembly and play with it.<br>&#9;Lets stress that some firmwares are quite small (100kb) but others
+&#9;are monsters of 120Mb if embedding PS3, PS Fonts etc.<br>&#9;If you are REALLY but really fed up with your printer  
+&#9;you can try to debug and patch the firmware but actually 
+&#9;i suggest you to asolutely AVOID it unless you're already familiar
+&#9;with embedded devices and VxWorks.<br>&#9;Apart my suggestions, learning VxWorks is a highly considered skill nowadays
+&#9;in the embedded-devices' industry and every good reverser should at
+&#9;least try a &quot;test-drive&quot; with it.<br>
+<br><br>
+
+--&gt; Remote Firmware Erasing
+<br>
+&#9;I explained before how to brute-force a flash-bios upgrade.<br>&#9;It seems strange but HP printers have NO protection at all for these
+&#9;things.(of course only the ones supporting flash-bios).<br>&#9;Being malicious guys we can fill the fw file with zeros (except the header)
+&#9;using Ultraedit or any hex-editor and send it to the enemy's printer 
+&#9;to completely fuck it up.<br>&#9;What is amazing is that there are almost NO checks whatsoever, even 
+&#9;in printers costing 40.000 euros.<br>&#9;After this operation  the printer has NO way to come back to life
+&#9;and the victim will have to change the entire mainboard.<br>&#9;(as far as i know the firmware has NO &quot;boot block&quot; sections).<br>&#9;If not enough, is possible to send via IP also a &quot;zeroed&quot; firmware
+&#9;for his JetDirect Card to complete the attack.<br>&#9;Similar process in case the enemy has a rack-mounted HP spooler
+&#9;&quot;print-server&quot;, HP ProCurve stacks, and other HP network switches.<br>&#9;
+&#9;* note : Some of these models could give you a &quot;checksum&quot; error, then just
+&#9;         create a file full of garbage but with correct cheksum.<br>&#9;
+&#9;* note : this kind of funny tricks are conceivable on a big LAN/WAN, 
+&#9;         i discourage doing it on internet or via email, batch files, vb
+scripts 
+&#9;         etc due the huge size of the fw files.<br>&#9;
+&#9;* As far as i know HP tech support can only diagnose these cases as
+&#9;  a kind of &quot;no post, no leds, no power on&quot; symptoms, and replace
+&#9;  the mainboard in warranty or bill the owner if warranty is expired.<br>&#9;  Its almost impossible to trace you back, or the IP used to send the fake fw
+&#9;  because JetDirect Cards always reset their poor logs after a &quot;successfull&quot;
+&#9;  fw upgrade.<br>&#9;  Moreover, after having &quot;zeroed&quot; a firmware nobody will be able to read
+&#9;  logs (in the few models that support IP logging) or do anything else.<br>
+
+ &#9;   <br><br>
+--&gt; Remote Exploits&#9;
+<br><br>
+&#9;Remote Exploits are only regarding HP JetDirect Cards (the only 
+&#9;network card used in HP printers).<br>&#9;On the web you can find some old exploits for early jetdirects 
+&#9;or in conjunction with HP JetAdmin software.<br>&#9;(JetAdmin had a root exploit in older versions like the 6.xx).<br>&#9;
+&#9;Early versions of jetdirect had the option to be used as PROXY 
+&#9;and with NO LOGS.<br>&#9;Of course this nice feature has not been implemented in newer
+&#9;versions.If your LAN has still these prehistoric jetdirects you can
+&#9;try to downgrade their fw  and use them as full anonymous proxy.<br>&#9;
+&#9;Some high-end printers (es: Designjets) have a 20Gb hdd
+&#9;as storage and PS3-scratch-disk.<br>&#9;Connecting via IP or even HTTP (embeddd web server in newer
+&#9;jetdirects) just activate the FTP, and you can use it as remote storage
+&#9;for your own files (a private LAN ftp).<br>&#9;(the printer just process the ps3/hpgl2/rtl files but holds in hdd every
+&#9;other format).<br>&#9;&#9;
+&#9;Newer jetdirects support also SNMP and IPP protocol offering a full remote 
+&#9;IP management, even over the internet but i'm not aware of any remote
+&#9;exploits with these cards at the moment.<br>
+
+&#9;<br><br>
+--&gt; Driver Hacking
+<br><br>
+&#9;Before talking of driver hacking keep in mind that ALL the documentation
+&#9;regarding printer's languages like PCLxx, PS3, EML, HPGL1/2/RTL etc 
+&#9;and also some dev-kits with source code and .pdf files can be freely
+&#9;downloaded from 
+<A HREF="https://searchlores.nickifaulk.com/realicra/http%3A%2F%2Fdevelopersolutions.hp.com" TARGET="_blank">http://developersolutions.hp.com</A>
+&#9;
+&#9;Most HP drivers have some small &quot;easter eggs&quot;, often by pressing F8
+&#9;or other function keys in the &quot;about&quot; field inside the driver's property
+panel.<br>&#9;Using any resource-hacking tool like BRW/Symantec Resource Studio
+&#9;you can see not only &quot;hidden&quot; settings panels to tweak the printer but 
+&#9;in some cases also the UGLY *photos* of the low-paid enslaved developers.<br>&#9;There's not a common rule to access the &quot;hidden tweak panel&quot; and not 
+&#9;all models have it.(high-end models all have it)
+&#9;First of all the driver must be HP and not the one bundled with Windoze.<br>&#9;Many uses the F8 key but others dont, or require the combination of
+&#9;mouse and keyb together.<br>&#9;(and I'm not gonna write here all the hundreds of shortcuts for each driver,
+&#9;as a reverser you should find them by yourself).<br>&#9;
+&#9;If you're unsatisfied of your driver's customizability or performance you 
+&#9;can have a good time writing your own.<br>&#9;All you need is M$ VC++, the M$ NT/9x/2K DDK (freely downloadable)
+&#9;and the HP's DDK for your printer family (this too is free).<br>&#9;Keep in mind that HP drivers are already quite good 
+&#9;(compared to Epson and Canon) and the few bugs you can have 
+&#9;encountered are on 99% due to dinosaur DTP programs 
+&#9;made by low-paid slave-engineers (--&gt; read *Corel Draw*).<br>&#9;
+&#9;A good thing to play with can be the porting of a printer driver to 
+&#9;UNIX, quite fast expecially using GhostScript or CUPS.<br>&#9;(you've just to write a &quot;filter&quot; file defining all the printer's
+characteristics).<br>&#9;Note that what you can do is just write a &quot;generic&quot; filter because MOST of the
+&#9;product-specific opdodes and specifications are NOT public except if
+&#9;you're a 3rd party that paid a hugh fee to have the full dev-kit.<br>&#9;(so they can even track you down if you unleash these details in public).<br>&#9;
+&#9;The main limitation writing your own driver is that you can NOT 
+&#9;drive the mechanic or write down from scratch your own 
+&#9;half-toning matrix.<br>&#9;To do this you gotta use a printer internal language such
+&#9;as EML/Varware/etc that is absolutely not much standard and has custom opcodes
+&#9;for each models.<br>&#9;A much more funny approch is creating real-time scriptings with
+&#9;TCL (that again, i'm not gonna explain here) to drive the 
+&#9;printer's internals.(--&gt; absolutely useless if not for fun or hacking).<br>&#9;
+&#9;* note also that creating your own halftoning matrix is in the best
+&#9;  case a total waste of time, unless you're working for a
+&#9;  company developing a RIP (raster image processor) or you really
+&#9;  know what you're doing.<br>&#9;
+&#9;
+&#9;<br><br>
+--&gt; Applied Printing : Fake Banknotes
+<br><br>
+&#9;There are many urban legends telling about youngsters faking banknotes
+&#9;using high-res inkjets..<br>&#9;Lets clarify once and for all that is NOT possible, even with special 
+&#9;inks (you have not the right paper, and you can NOT find it), or
+&#9;special hologram-devices (forget it).<br>&#9;First of all, even scanning a banknote at amazing quality, your hires
+&#9;printer will never be able to produce the wide gamma of *colors*
+&#9;of a real euro and you cant print the hologram, timbres, 
+&#9;trasnparency details and silver lines.<br>&#9;Moreover, even if i could ever know the manufacturing process be sure
+&#9;i'll never write it here.<br>&#9;
+&#9;What can be funny is instead the cracking of electronic devices
+&#9;accepting banknotes of 5/10 euros (like the evil slot/poker-machines,
+&#9;coin-changer, Sigarettes-machines and other small &quot;cheap&quot; devices).<br>&#9;** Do NOT even think about trying with gas-stations, ATM, banks etc.<br>&#9;   &#9;     
+&#9;Common cheap banknotes-loaders follow normally the same basic process.<br>&#9;When you insert the (fake) banknote 3 &quot;scanner-leds&quot; (note : 3 because they're
+&#9;RGB, but your printer use *CMYK*) scan the beginning and compare the 
+&#9;scanned image (as far as i know NOT more than 150 or 300dpi),
+&#9;with the one resident in their flash-rom (re-programmable using dip-switches).<br>&#9;There is of course a great &quot;tolerance&quot; factor to avoid refusing all semi-used,
+&#9;old, or dirty banknotes.<br>&#9;If the first test is successfull the mechanic loads the rest of the banknote
+&#9;and then check all the other important parameters (and here there's NO 
+&#9;tolerance factor) like exact lenght, width, shape, size.<br>&#9;Some more complex ones also perform a simple check to detect the
+&#9;paper type.<br>&#9;This is done calculating how much time it takes to load the paper based 
+&#9;on a comparison matrix inside the firmware.<br>&#9;(so in this case a good choice is to avoid lucid, glossy, photo and plain
+paper
+&#9;and prefere low-weight opac-high-glossy, the only one similar to banknotes).<br>&#9;If step 1 and 2 are passed successfully the machine then perform a scan
+&#9;of the entire banknote (in cheaper models only SINGLE SIDE).<br>&#9;
+&#9;Now the damn machine compares a low-grade 150 or 300 dpi *RGB* image
+&#9;with our hires 2400x2400 *CMYK* one.<br>&#9;There is a tolerance factor, depending on the model, in cheaper ones
+&#9;is quite high (5-10%), in good ones is minimal.<br>&#9;How much then is important the RGB vs CMYK factor ?
+&#9;
+&#9;I think i've written enough on this subject and gave you enough details.<br>&#9;      
+&#9;Using the good paper, scanning at best quality, and printing in max
+resolution
+&#9;and details you *should* be able to fool at least older sigarettes-machines..<br>&#9;Unfortunately after the advent of the euro most of these machines could have
+been
+&#9;&quot;upgraded&quot; to newer and complex banknote-readers.<br>&#9;For any doubts read from scratch this essay.<br>&#9;
+&#9;** i'm of course NOT legally responsible for any damage you could do.<br>&#9;     this section had been written for *didactic* purposes only.<br>&#9;
+&#9;
+<br><br>
+BUYING THE RIGHT PRINTER
+<br><br>
+Having read all the contents of this brief essay the reader could ask himself
+what is then the right printer to buy.<br>First of all i suggest to keep in mind all the sections discussed before and
+then
+clarify whats the main thing he needs from a printing-experience.<br>Knowing exactly the need will close the possibile candidates to few ones
+so the choice will be quite easy.<br>By opposite, having no idea of the real needs will just produce
+a waste of time and money.<br>
+As last section in this essay i'll briefly explain the important differences 
+between the key players in the printing-arena so that the reader
+can have an idea of what fits best for him.<br>
+--&gt; Hewlett Packard
+<br><br>
+&#9;HP use &quot;classic&quot; ink-jet technology.<br>&#9;(This way the dot-size cannot be changed.)
+&#9;HP pigmented black is absolutely the best in the market.<br>&#9;(very important for text-only documents).<br>&#9;HP cartridges embed the PRINTHEAD, so when you buy a new one
+&#9;all the nozzles are brand new.<br>&#9;HP has the wider driver support for any OS and is the company that sets 
+&#9;the &quot;standards&quot;.<br>&#9;HP has a 24h ONSITE warranty bundled with the product by default.<br>&#9;HP Toners, parts, and consumables can be found everywhere in
+&#9;the world at fair price.<br>&#9;
+--&gt; Epson
+<br><br>
+&#9;Epson use &quot;micro-piezo&quot; technology, an &quot;improved&quot; classic ink-jet.<br>&#9;--&gt; the key difference is that micro-piezo can CHANGE the dot-size,
+&#9;      very important in hires photos, not much for the rest.<br>&#9;Epson has inferior color-gamut compared to HP.<br>&#9;Epson has NO onsite warranty bundled with the product,
+&#9;and spare parts are very expensive.<br>&#9;Epson has NO printhead embedded in the cartridge.<br>&#9;Epson drivers have  inferior quality and support by major graphic
+&#9;companies and OS.<br>&#9;Epson cartridges are much SMALLER than HP while costing only few euros less.<br>&#9;Epson is with no doubt the best choice for photographers and photo-only 
+&#9;applications.<br>&#9;
+--&gt; Canon 
+<br><br>
+&#9;Canon claims to use &quot;bubble-jet&quot; technology, that technically is 
+&#9;a clone of classic HP's inkjet.<br>&#9;Canon printers never had good reputation, expecially because they 
+&#9;tend to focus in the low-end market segment only.<br>&#9;Canon's chassis are 100% cheap plastic, the worst i ever seen.<br>&#9;Canon's drivers are not well supported by all the OS.<br>&#9;Canon too has NOT onsite warranty bundled with the product.<br>&#9;Canon colors are fairly &quot;unusual&quot; and aimed for low-end applications.<br>&#9;I would never suggest to buy a Canon inkjet personally, by opposite high-end
+&#9;laser printers, copiers, fax, scanners and cameras are fantastic.<br>&#9;
+--&gt; Lexmark 
+<br><br>
+&#9;I would not even take in consideration Lexmark, that used to produce
+&#9;cheap &quot;re-branded&quot; products for Compaq, IBM, Olivetti, and other OEMs.<br>&#9;While it can be a decent choice in some segments of color-laser and high-end 
+&#9;lasers, the inkjets are awful, cheap, poor in design, performance, driver
+&#9;support and global quality.All this for just few euros less than a good HP or
+Epson.<br>&#9;
+--&gt; Others
+<br><br>
+&#9;Other brands are to be considered &quot;toys&quot; and to be carefully avoided.<br>&#9;I've seen and used many no-brand printers sold for 50 euros or less, often
+&#9;bundled with special offers in supermarkets during Easter or Christmas.<br>&#9;In the best scenario they're just a waste of money.Forget it. <br>
+&#9;
+--&gt; &quot;Old-School&quot; Pin-Printers
+<br><br>
+&#9;There is the possibility that the reader disgusted by the contents of this
+essay
+&#9;decides to go back to &quot;old-school&quot; pin-printers.<br>&#9;This is absolutely the most cheapest solution for text-only documents.<br>&#9;There are not much printers left in this segment, but by far the best choice
+&#9;is the rock-solid Epson LQ series.<br>&#9;Fast, ultra-reliable, cheap, and very very noisy as all the pin printers.<br>&#9;Its a quite &quot;romantic&quot; choice and the tapes cost just 5-10 euros.<br>&#9;No more cartridges nor colors nor frills .. back to the roots.<br>&#9;
+
+&#9;
+
+<br><br>
+
+(C) Feb 2002 SLOBOTRON  (slobotron@yahoo.com)
+For any feedback or questions feel free to contact the author.<br>
+
+<br><br></fonT>
+
+ <hr>
+
+
+<center><i>You are deep inside fravia's searchlores.org, 
+choose your way out:</i></center>
+<br><center>
+<hr width=66%><center><a href="realicra.htm"><IMG
+SRC="../images/petireal.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="https://searchlores.nickifaulk.com/realicra/info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

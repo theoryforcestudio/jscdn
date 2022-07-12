@@ -1,0 +1,444 @@
+ <html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>scan_php.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ scan_php.htm ¸.·´¯)¸.·´¯
+)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search
+techniques for people interested in finding any kind of information on the web. Here are
+informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search
+techniques, hints and tips for searching the web, How do I learn to search?, Advanced
+Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 2000 fravia+">
+ 
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>   
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+ 
+  <FONT SIZE=+3>(¯`·.¸&nbsp;a php network security scanner&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Devergranne<BR></FONT>published at fravia's searchlores in
+  May 2000<br>
+<br>Included at the bottom: <font color=blue>[</font><a href="scan_php.htm#dqcomm">DQ open comments to Devergranne</a><font color=blue>]</font><bR>
+ <hr width=44%>
+
+<font size=+2 color=purple>This essay has been TAKEN DOWN<br> on Devergranne's request<br> in September 2002</font>
+
+<hr width=44%>
+You'll anyway be able to find it  elsewhere trough 
+ the usual public '<font color=blue>[</font><a href="fu_speci.htm#disapp" target="_blank">time 
+machines</a><font color=blue>]</font>'.
+</center>
+
+<!--
+<pre>Here you will find a php network security scanner. Actually 2
+files are  included :
+- <font color=blue>[</font><a href="#scan">scan.php3</a><font color=blue>]</font>: a very
+simple port scanner.
+- <font color=blue>[</font><a href="#cgiscan">cgi-scan.php3</a><font color=blue>]</font>: a
+cgi scanner (111 checks)
+I might write some more soon but for now I don't have more time to spend on it :-(
+
+Why a php scanner ?
+
+Many free web hosting companies are proposing a php support for your web pages.
+While you can forget about cgi's for security reasons, many trust php to be a
+more secure language. In fact it is not.
+And we are not even talking about variables here.
+Firstly because it allows you to scan networks while the source of the scan
+appears to be the the person hosting the script. Secondly because by chaining
+proxies the person using the script might remain anonymous.
+And finally because poorly configured hosts might alloud a local port scan while
+denying remote scans.
+3 reasons to write a php network scanner.
+Both scripts are very simple, they were just made quickly to demonstrate a new
+problem.
+The port scanner goes in 5 lines code that is:
+for($port = $from; $port &lt;= $to; $port++)
+{
+$fp = fsockopen("$host", $port);
+if ($fp)
+{
+print("port $port opened \r");
+fclose($fp);
+}
+
+Obviously you can't scan more than 40 000 ports at the time (time limitations).
+The cgi scanner checks only for a file and if it gets a "200 OK" it will tell
+you what file was found.
+It's simple but it works.</pre>
+<font color=gray>Devergranne</font><hr>
+   
+  <br><center>
+ <font size=+3>&quot;a php network security scanner&quot;<bR>
+  </font>
+    <font size=+1>
+  <br>by Devergranne<BR></center><P>
+    </font><font size="3">
+<a name="scan"></a>
+<hr><font size=+3>scan.php3</font>
+<Pre>
+&lt;FORM ACTION="&lt;?PHP echo($PHP_SELF); ?>" METHOD="post">
+Host to scan
+&lt;INPUT TYPE="text" NAME="host" SIZE="30" MAXLENGTH="100" value="127.0.0.1"> &lt;br>
+Number of ports to scan &lt;br>
+
+from :&lt;INPUT TYPE="text" NAME="from" SIZE="8" MAXLENGTH="100">
+to :&lt;INPUT TYPE="text" NAME="to" SIZE="8" MAXLENGTH="100">
+
+&lt;INPUT TYPE=submit VALUE="Find out">
+&lt;/FORM>
+
+&lt;?PHP
+
+
+/*
+*  Php network security scanners
+*
+* (c) 2000 by: Devergranne thié¢¡ut
+*
+* View Example @  http://persoweb.francenet.fr/~tbilger/linux/
+*
+* Permission to use and modify this software and its 
+* documentation for any purpose other than its incorporation 
+* into a commercial product is hereby granted without fee, 
+* as long as the author is notified that this piece of software 
+* is being used in other applications. 
+* Permission to copy and distribute this software and its 
+* documentation only for non-commercial use is also granted 
+* without fee, provided, however, that the above copyright 
+* notice appear in all copies, that both that copyright notice 
+* and this permission notice appear in supporting documentation. 
+* The author makes no representations about the suitability 
+* of this software for any purpose.  It is provided ''as is'', 
+* without express or implied warranty. 
+*
+* I'm not responsable for the use you make of those files.
+* Do not abuse.
+*/
+
+function zob()
+{
+$count = 0;
+$toobad = 0;
+}
+
+for($port = $from; $port &lt;= $to; $port++)
+{
+$fp = fsockopen("$host", $port);
+if ($fp) 
+{
+print("&lt;b>port $port opened &lt;/b>&lt;br>\r");
+$count++;
+$toobad++;
+fclose($fp);
+}
+else { $count++; }
+}
+if ($count > 1){
+print("&lt;br>number of scanned port: $count &lt;br>");
+print ("number of open ports: ");
+if ($toobad &lt; 1){ print ("0"); }
+elseif ($toobad != 0) {
+print ("$toobad &lt;br>");
+}
+
+}
+?>
+
+</pre> <hr><a name="cgiscan"></a>
+<font size=+3>cgi-scan.php3</font>
+<Pre>
+&lt;?PHP
+
+
+/*
+*  Php network security scanners
+*
+* (c) 2000 by: Devergranne thié¢¡ut
+*
+* View Example @  http://persoweb.francenet.fr/~tbilger/linux/
+*
+* Permission to use and modify this software and its 
+* documentation for any purpose other than its incorporation 
+* into a commercial product is hereby granted without fee, 
+* as long as the author is notified that this piece of software 
+* is being used in other applications. 
+* Permission to copy and distribute this software and its 
+* documentation only for non-commercial use is also granted 
+* without fee, provided, however, that the above copyright 
+* notice appear in all copies, that both that copyright notice 
+* and this permission notice appear in supporting documentation. 
+* The author makes no representations about the suitability 
+* of this software for any purpose.  It is provided ''as is'', 
+* without express or implied warranty. 
+*
+* I'm not responsable for the use you make of those files.
+* Do not abuse.
+*/
+
+$cginame[] = "AnyForm2";
+$cginame[] = "AT-admin.cgi";
+$cginame[] = "AT-generate.cgi";
+$cginame[] = "architext_query.pl";
+$cginame[] = "anyform.cgi";
+$cginame[] = "aglimpse";
+$cginame[] = "ax-admin.cgi";
+$cginame[] = "axs.cgi";
+$cginame[] = "bb-hist.sh";
+$cginame[] = "bnbform";
+$cginame[] = "bnbform.cgi";
+$cginame[] = "campas";
+$cginame[] = "carbo";
+$cginame[] = "cachemgr.cgi";
+$cginame[] = "classified.cgi";
+$cginame[] = "classifieds";
+$cginame[] = "Count.cgi";
+$cginame[] = "count.cgi";
+$cginame[] = "dfire.cgi";
+$cginame[] = "download.cgi";
+$cginame[] = "dumpenv.pl";
+$cginame[] = "environ.cgi";
+$cginame[] = "finger.pl";
+$cginame[] = "finger.cgi";
+$cginame[] = "finger";
+$cginame[] = "flexform";
+$cginame[] = "flexform.cgi";
+$cginame[] = "file.pl";
+$cginame[] = "filemail.pl";
+$cginame[] = "faxsurvey.cgi";
+$cginame[] = "formail";
+$cginame[] = "guestbook";
+$cginame[] = "glimpse";
+$cginame[] = "handler";
+$cginame[] = ".htaccess";
+$cginame[] = "htmlscript";
+$cginame[] = "hello.bat";
+$cginame[] = "info2www";
+$cginame[] = "imagemap.exe";
+$cginame[] = "jj";
+$cginame[] = "loadpage.cgi";
+$cginame[] = "LWGate";
+$cginame[] = "lwgate";
+$cginame[] = "LWGate.cgi";
+$cginame[] = "lwgate.cgi";
+$cginame[] = "man.sh";
+$cginame[] = "maillist.pl";
+$cginame[] = "nph-test.cgi";
+$cginame[] = "nph-publish";
+$cginame[] = "nph-test-cgi";
+$cginame[] = "nlog-smb.pl";
+$cginame[] = "pfdispaly.cgi";
+$cginame[] = "perl.exe";
+$cginame[] = "perlshop.cgi";
+$cginame[] = "php";
+$cginame[] = "php.cgi";
+$cginame[] = "phf";
+$cginame[] = "plusmail";
+$cginame[] = "ppdscgi.exe";
+$cginame[] = "printenv";
+$cginame[] = "responder.cgi";
+$cginame[] = "rwwwshell.pl";
+$cginame[] = "s97.cgi";
+$cginame[] = "search97.vts";
+$cginame[] = "survey.cgi";
+$cginame[] = "survey";
+$cginame[] = "test-cgi";
+$cginame[] = "textcounter.pl";
+$cginame[] = "uploader.cgi";
+$cginame[] = "view-source";
+$cginame[] = "visadmin.exe";
+$cginame[] = "webdist.cgi";
+$cginame[] = "webgais";
+$cginame[] = "websendmail";
+$cginame[] = "webbbs.cgi";
+$cginame[] = "webmap.cgi";
+$cginame[] = "wwwacl";
+$cginame[] = "../wwwboard/wwwboard.pl";
+$cginame[] = "ws_ftp.ini";
+$cginame[] = "w3-sql";
+$cginame[] = "www-sql";
+$cginame[] = "whois_raw.cgi";
+
+// other specials
+
+$cginame[] = "../~root/";
+$cginame[] = "../_vti_pvt/users.pwd";
+$cginame[] = "../_vti_pvt/administrators.pwd";
+$cginame[] = "../_vti_pvt/service.pwd";
+$cginame[] = "../_vti_pvt/authors.pwd";
+$cginame[] = "../_vti_bin/shtml.dll";
+$cginame[] = "../_vti_bin/shtml.exe";
+
+
+$cginame[] = "../scripts/issadmin/bdir.htr";
+$cginame[] = "../scripts/CGImail.exe";
+$cginame[] = "../scripts/tools/newdsn.exe";
+$cginame[] = "../scripts/fpcount.exe";
+$cginame[] = "../scripts/counter.exe";
+
+$cginame[] = "../?PageServices";
+$cginame[] = "perl?-v";
+
+// let's check for a shell
+
+$cginame[] = "ash";
+$cginame[] = "bash";
+$cginame[] = "csh";
+$cginame[] = "ksh";
+$cginame[] = "sh";
+$cginame[] = "tcsh";
+
+
+$cginame[] = "..//etc/passwd";
+$cginame[] = "../../../../../../etc/passwd";
+
+$cginame[] = "../webcart/orders/";
+$cginame[] = "../webcart/orders/carts/.txt";
+$cginame[] = "../webcart/config/";
+$cginame[] = "../webcart/carts/";
+$cginame[] = "../webcart/config/clients.txt";
+$cginame[] = "../webcart-lite/config/clients.txt";
+$cginame[] = "../webcart-lite/orders/import.txt";
+
+
+$cginumber = count($cginame);
+
+
+if ($host) {
+
+ for ($count = 0 ; $count &lt; $cginumber ; $count++) {
+  $fp = fsockopen($host, 80);
+        if(!$fp){ echo "Could not open connection \n"; }
+          
+    else {
+    fputs($fp,"GET  $path$cginame[$count] HTTP/1.0\n\n");
+
+         while(!feof($fp))
+         {
+
+            $nom=fgets($fp,200);
+         
+            if (ereg("200 OK",$nom))
+            {
+             print("&lt;b>Found something here: $cginame[$count] &lt;/b>&lt;br>\n");
+             break;
+            }
+
+                                         // else > break;
+             else
+            {
+             print("not found $cginame[$count] &lt;br> \n");
+             break;
+            }
+        }
+
+  fclose($fp);
+
+      }
+
+ }    
+}
+
+?>
+
+&lt;FORM ACTION="&lt;?PHP echo($PHP_SELF); ?>" METHOD="post">
+
+HOST &lt;INPUT TYPE="text" NAME="host" SIZE="10" MAXLENGTH="100" value="localhost">
+&lt;br>
+Here's the path : &lt;INPUT TYPE="text" NAME="path" SIZE="10" MAXLENGTH="100"
+value="/cgi-bin/">
+
+&lt;INPUT TYPE=submit VALUE="Find out">&lt;INPUT TYPE=reset VALUE="Reset">
+&lt;/FORM>
+</pre>
+<br><font color=gray>Devergranne, May 2000</font>
+
+
+-->
+<a name="dqcomm"></a>
+<hr>
+<center><font size=+2>DQ's comments to Devergranne's essay</font></center><hr width=44%>
+<BR>Devergranne, I had a look at your essay "a php network security scanner" and
+like to make some comments. You can hit me afterwards ;-)<BR><BR>Let's first start with
+cgi-scan.php3. That's a nice CGI scanner, but I would <u>strongly</u> advise anyone against
+using it!<BR><BR>Is that code copyrighted by yourself? Are you the author or did you just do
+a rewrite, taking sources out of the web and translating them into PHP? There's something
+called <a href="http://www.deepquest.pf/cgicheck99.htm">CGIcheck99</a>, which is coded in
+REBOL and written by deepquest.<BR><BR>Anyway, before running that CGI scanner, please have
+a look at the excellent specifications for <a
+href="http://the.wiretapped.net/security/vulnerability-scanning/whisker/whisker.txt">Whisker
+</a>, done by <a href="mailto:rfp@wiretrip.net">rain forest puppy</a>.<BR><BR>As a general
+advice to those who just want to start with this stuff: Please be aware of the inner
+workings of the servers you want to attack. Study them, learn the configuration options,
+know about <u>booby-traps</u>, and please stop scanning for the phf
+vulnerability!<BR><BR>Now regarding scan.php3. Please resolve the host name to an IP
+<u>before</u> starting your loop through your XXXX ports, that way you contribute to reduce
+internet pollution. Relevant functions are:<BR>string gethostbyname(string
+hostname);<BR>array gethostbynamel(string hostname);<BR><BR>Second point: Do you really want
+to scan all those ports? What are you going to do once you found an open port? Why don't you
+just create an array with those ports you really care about?<BR>For example, if you want to
+scan for available services, include 21, 23, 25, 80, 110, etc.<BR>If you want to check for
+proxy access, include 80, 81, 3128, 8080, 8081, etc.<BR>If you want to check for SubSeven
+and other backdoors, include only <u>those</u> relevant ports.<BR><BR>Just scanning from
+zero to who knows what glorious 5 digit number just wastes your patience, increases your
+phone bill and does nothing useful.<BR><BR>A quick patch would be to reduce the default
+timeout of ten seconds to 3 in the fsockopen() line as follows:<BR>$fp = fsockopen("$host",
+$port, &$errno, &$errstr, 3);<BR><BR>Nevertheless, you have a point when demonstrating this
+new security problem. Perhaps this activates the awareness of people regarding PHP.<br>
+DQ, May 2000
+<BR>
+<BR>
+
+<hR>
+ <bR></font>
+    <font size=+1><center>
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg"
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin -->
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all
+rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+ 
+ 
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+ 
+ 
+

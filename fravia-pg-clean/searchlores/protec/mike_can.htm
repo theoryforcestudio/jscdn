@@ -1,0 +1,190 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>mike_can.htm: Mike Stay about protecting better</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<H1>A short rant on copy protection</H1><br>by Mike Stay, May 2001<hr width=77%>
+<bR>Courtesy of fravia's searchlores.org<bR><br>
+<a href="protec.htm"><IMG SRC="../images/protec.gif" ALT="protec" 
+ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<bR><font color=gray>Back to 'how to protect better'</fonT><br>
+<br>
+
+<hR>
+<i>
+Mike Stay is a wise wizard and a talented  password breaker (winzip famous). He's inter alia the 
+Author of the recent "ZIP Attacks with Reduced Known Plaintext", that 
+springer is going to publish next summer... head his words and enjoy this small snippet. Let's hope 
+he'll send more!<br><font color=blue>"One bit of commitment, \ That's all I really need, \ So send me your hashed answer \ And the random seed..."</font><br>Enjoy!  
+</i>
+<hr>
+
+</center>
+<pre>Hi, Fravia.  Find below some thoughts on copy protection.  I don't
+think there's anything particularly new here, but many may not have
+considered some of these things before.  It's probably the most
+coherent version of my opinion that I've written to date...
+
+...Work well,
+Mike
+</pre>
+<font size=+2 color=blue>
+
+A short rant on copy protection
+</font><br><br><font size=+1>
+As a protectionist, our goal is simple: we want to make lots of money.
+Where there's money, there's economics, and we have to analyze
+opportunity costs and other similar stuff.  It pretty much boils down
+to the fact that we have a skill that others don't, and we're
+willing to trade our time and skill for their money.  They believe
+that our skills are worth their money; they believe that if they pay
+us some small amount of money, then their software will be protected
+from those who want to steal it, thus earning them more money than
+they paid us, and so are willing to make the trade.
+<br><br>
+The most important part of this is that the customer believes it's
+beneficial to him in the long run.  At this point we also have to
+factor in ethics.  We can lie to our potential customers and sell them
+a wrapper that does absolutely nothing; it's a lot cheaper and just as
+effective as most other copy protections!  Of course, if anyone finds
+out that it doesn't do anything, we could be sued for fraud, so we can
+make a token effort and then advertise it like mad.
+<br><br>
+This seems to be the tack that Microsoft has taken, and it has worked
+very well for them.  Bill Gates knows how to market products.  He is
+extraordinarily good at it, as his assets attest.  Most of us,
+however, especially those who are likely to be reading this, are much
+better programmers than marketers.  We generally have to be
+content to write good software until word of mouth has given us enough
+business that we can pay someone that's better at advertising than we
+are to go push our product to the masses of exploited software authors.
+<br><br>
+This also has the added benefit of being completely ethical and
+rewarding in a way that money could never be: we can take pleasure our
+entire lives in a job well done.  Since I believe that souls are
+eternal, that's a very good investment.
+<br><br>
+Now we come to the elements of good security design.  What are the
+goals of the software author?  What threat model is he most concerned
+about?  How much is he willing to spend?  Once we have addressed these
+questions, we can design a system that fits the parameters, or show
+that it cannot possibly be done.
+<br><br>
+The goal of the software author is the same as ours: to make money.
+If the software is valued by the market such that if people could not
+steal it, they would not buy it, there is no need for copy protection.
+In fact, in such cases it is advantageous to have the software
+distributed for free: if any of those that at one time were pirating
+ever decide to buy, they are much more likely to buy the software
+they had been pirating than a competitor's product.  In many cases,
+however, illegal copying of software leads directly to loss of
+revenue.  Software authors in this kind of market have a need for our
+services.
+<br><br>
+For most shareware, updates are so frequent, the software is such low
+quality, and the pricing is so cheap that simple serial unlocking
+schemes are sufficient.  It's true that it only takes one NOP to break
+the scheme, but it's usually not worth the cracker's time to look at
+it in the first place.
+<br><br>
+When it is worth doing something more, it has to be something
+significantly more.  A glance at the stuff going on at places like
+fraviamb.cjb.net is enough to see that even the best commercial
+protections on the market are broken within days, if not hours.
+FlexLM, ASProtect, VBox, and most dongles are swept aside with
+impunity.
+<br><br>
+<b>From the cracker's point of view, the copy protection is like a tumor
+that has to be excized.  Too often, it's a self-contained benign
+cyst.  What we need are malignant tumors that have tendrils extending
+to every part of the program</b>.  It will take the cracker's equivalent
+of chemotherapy to even phase the protection, and even then it may
+only go into remission for a while.  Variables in the program should
+be initialized dependent on the serial code that's entered.  A small
+check can prevent most typing errors while allowing many invalid
+codes that prevent the program from functioning at all.
+<br><br>
+Often, only a part of the functionality is disabled.  If this is the
+case, there is a simple, straightforward way to prevent access to the
+code: don't give it to them.  When they register, send them a .dll
+with the functionality in it.  What if the cracker distributes the
+.dll?  That's fine.  He could more easily have distributed a valid
+serial number.
+<br><br>
+An equivalent scheme uses cryptography; instead of sending the .dll
+when the customer registers, one sends an encrypted .dll with the
+program and provides a decryption key on registration.
+<br><br>
+On a related topic, Bram Cohen (<a href="http://www.gawth.com/bram" target=_blank>http://www.gawth.com/bram</a>) has
+conjectured "There is a method of encoding any program such that the
+encoded form of the program can be sent to an untrusted party and the
+untrusted party will be able to determine the outputs of the program
+when given any particular set of inputs but will be incapable of
+determining anything about the program's structure other than what can
+be deduced from the amount of time it took to compute the answer and
+the amount of memory it used."
+<br><br>
+While there has been some work in the field of secure computing, the
+model here is significantly different.  In secure computing, at least
+two exchanges are necessary.  In one model, Alice sends blinded data
+to Bob, who acts on it and returns it; then Alice unblinds the result.
+Alice learns nothing about Bob's function other than that single data
+point, and Bob learns nothing about Alice's data other than its size
+and the running time.  In another model, Bob sends Alice a blinded
+function; she computes a blinded answer and sends it to Bob, who
+unblinds it for her and returns it.
+<br><br>
+Here, there is only one transfer, from Bob to Alice.  Alice computes
+real outputs from a blinded function.  If anyone figures out a way to
+do this, it will be a huge advance in cryptography and computer
+science.
+<br><br>
+Bob's blinded function, however, can be distributed freely.  What if
+he is concerned with distribution of the fully functional software?
+As far as anyone knows, this situation requires processing power that
+is not under the cracker's control.  A java dongle or a server on the
+internet can authenticate a client and perform some of the program's
+functionality.  In order to break the system, a cracker must write new
+code to fill in the blanks; that is as good as one can hope for.
+<br><br>
+--<br>
+Mike Stay<br>
+coryphæus reperiendi<br>
+www.accessdata.com/crypto<br>
+
+</font>
+
+<HR size=3>
+<!-- Begin mover -->
+<center><a href="protec.htm"><IMG SRC="../images/protec.gif"
+ALT="protec" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a
+href="../info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

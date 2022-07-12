@@ -1,0 +1,353 @@
+<html>
+<head>
+<title>
+staltec1.htm: Enemy investigation: email stalking techniques
+</title>
+</head>
+
+<body bgcolor="C0C0C0" text="#001010" vlink="#405040 Alink=#00FF50">
+<a name="top">
+<!-- Fun with colors Begin -->
+<table bgcolor="#FF0000" CELLPADDING="7" CELLSPACING="0">
+<tr><th bgcolor="#FF0000">
+<Font color="#804000"><H1><bR>
+G<br>O<br>T<br>C<br>H<br>A<br>!<br><br>
+</H1></th>
+<TH BGCOLOR="#804000" width="250">
+<FONT COLOR="#FF8000" FACE="ARIAL"><H2>
+fravia's<bR>anonymity pages<br><br></H2></fonT><FONT COLOR="#FF8000" FACE="ARIAL"><H3>Enemy 
+tracking<br><br>EMAIL 
+STALKING TECHNIQUES AND DYNAMIC IPs
+</H3><p><br><br><br><br><FONT COLOR="#FF8000" SIZE="2" FACE="ARIAL">
+Fravia's Nofrill<br>
+Web design<br>
+
+</font>
+</TH>
+
+
+<TH BGCOLOR="#804000"><br>
+<FONT COLOR="#FF8000" SIZE="2" FACE="ARIAL">Very old and partly obsolete (1998)<br>~<br>updated<br>November 2001
+</TH>
+<TH BGCOLOR="#C0C0C0"><center><center> <a href="noanon.htm"><IMG SRC="images/petianon.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>
+
+<h1>Enemy tracking</h1><h3>Email stalking techniques</h3></center>
+<center><h3><i>(Fravia shows you what you can do - or try - and where you can learn some 
+advanced stalking techniques)</i></h3>
+
+ <br>~<br>
+Enemy tracking, a very difficult art, can be divided into stalking, "logical reversing" and luring. In order to 
+stalk you need a deep knowledge of Usenet spamming (and war) techniques like flaming, 
+trolling and crossposting. Here you'll learn some simple tricks in order to gather information 
+about your target WITHOUT contacting directly his website.
+<hr width="33%">
+
+</CENTER>
+</Font>
+</TH>
+<TH BGCOLOR="#804000"><pre> </prE></TH>
+</TR>
+</TABLE>
+<br>[<a href="staltec1.htm#anc1">1) scan the http server port for your target domain</a>]<br>
+[<a href="staltec1.htm#anc11">1.1) a port scanning Perl script</a>]<br>
+[<a href="staltec1.htm#anc12">1.2) get da relevant RFC</a>]<br>
+[<a href="staltec1.htm#anc2">2) get servers list and operator names for your target domain</a>]<br>
+[<a href="staltec1.htm#anc3">3) importance of a dynamic ip chain</a>]<br><br></center>
+<!-- Fun with colors End -->
+There are a couple of useful stalking tricks (in fact this approach is MUCH more 
+anonymous than directly browsing onto your target domains :-)...
+<a name="anc1"></a><hr width=44%><h3>
+1) TRICK TO SCAN THE HTTP SERVER PORT FOR YOUR TARGET DOMAIN</H3><br>
+This trick is useful to scan port 80 (or whatever :-) of your target (I'll use here fortunecity.com). 
+Just use your email program - of course one of your "free webaddresses" aliases (like yahoo.com) 
+accessed through a dynamic IP provider - onto an agora server in the following way:
+</center><font color=purple><prE>
+TO: 		agora@ictp.trieste.it  (or any other agora)
+SUBJECT:	nutting
+-----------------------
+BODY:		send http://www.netcraft.com/cgi-bin/Survey/whats?\
+                host=www.fortunecity.com&port=80<br><br>
+</pre></fonT>
+Netcraft (not you) will scan the HTTP server port of your target 
+domain, and you'll get the following answer emailed to your alias:<font color=purple><pre>www.fortunecity.com is running Apache/1.2.5.</prE></fonT>
+Substitute a 
+domain name of your choice to the <font color=blue>www.fortunecity.com</fonT>  
+using the following schema (note the <b><font color=blue>\</fonT></b> linebreak sign, because most email apps will else 
+break your line arbitrarly)...:<br>
+<font color=blue>send http://www.netcraft.com/cgi-bin/Survey/whats?\<br>
+host=XXXXXX.XXX&port=80</font><br>...and you'r done.<br>
+This will tell you the name of the server that is running your target web site, a very useful 
+kind of information for your anti-smut attacks and/or for your general stalking activities... 
+as you'll understand elsewhere on my pages.<br>
+Of course if you prefer to use your full Internet access you can use a port scanner. 
+This will scan a domain IP for all available ports and report the protocols they serve.
+<a name="anc11"></a>
+<hr><h3>
+1.1) a little scanning Perl script</H3><br>
+For those among you that don't know much about ports, here's a little Perl script:
+<font color=purple><prE>
+#!/usr/local/bin/perl -w
+# findport - find a server running at an unknown TCP port
+# &lt;title&gt;findport.pl&lt;/title&gt;
+# Copyright (C) 1996 by John J. Chew
+
+unshift(@INC, "$ENV{HOME}/lib/perl");
+require 'getopts.pl';
+require 'sys/socket.ph';
+
+sub Usage {
+  die "Usage: $0 [-m] [-O] [-q] host [start-port]\n".
+    "-m  allow multiple matches\n".
+    "-O  try `obvious' ports\n".
+    "-q  be quiet\n".
+    "";
+  }
+
+&Getopts('mOq') || &Usage;
+$#ARGV &lt; $[ && &Usage;
+$#ARGV &gt; $[ + 1 && &Usage;
+$#ARGV &gt; $[ && $opt_O && &Usage;
+
+($serverhostname, $serverportname) = @ARGV;
+$serverportname = 7777 unless defined $serverportname;
+
+@gObvious = (
+  # popular port numbers for MOOs
+  7777, 8888, 6666, 6969, 1234, 1701, 4444, 2112, 2499, 4000, 8000, 9595,
+  1138, 1359, 1709, 1848, 1961, 1975, 1996, 2000, 2001, 2029, 2345, 3000,
+  3175, 4201, 4242, 5000, 5678, 6464, 7000, 7007, 7200, 7700, 7878, 8080,
+  8889, 9000, 9020, 9030, 9040, 9999, 3434,
+
+  # other `obvious' numbers
+  1111, 1112, 1113, 1996, 1997, 1998, 1999, 2222, 2223, 2224, 3001, 3333,
+  3334, 3335, 3456, 4001, 4445, 4446, 4567, 5001, 5556, 5557, 6000, 6001,
+  6667, 6668, 6789, 7001, 7778, 7779, 7890, 8001, 9001,
+  );
+
+sub die { die $_[0] unless $opt_q; exit 1; }
+
+sub lint { $opt_m; }
+
+$sockaddr_t = 'S n a4 x8';
+
+($name, $aliases, $protocol) = getprotobyname('tcp');
+socket(S, &PF_INET, &SOCK_STREAM, $protocol) || &die("socket() failed:
+$!");
+
+chop($clienthostname = `hostname`);
+(($name, $aliases, $type, $length, $clientaddress)
+  = gethostbyname($clienthostname))
+  || &die("gethostbyname($clienthostname) failed: $!");
+$clientname = pack($sockaddr_t, &AF_INET,     0, $clientaddress);
+bind(S, $clientname) || &die("bind() failed: $!");
+
+(($name, $aliases, $port) = getservbyname($serverportname, 'tcp'))
+  || ($port = $serverportname);
+(($name, $aliases, $type, $length, $serveraddress)
+  = gethostbyname($serverhostname))
+  || &die("gethostbyname($ARGV[0]) failed: $!");
+
+$| = 1;
+$port = shift @gObvious if $opt_O;
+while (1) {
+  $servername = pack($sockaddr_t, &AF_INET, $port, $serveraddress);
+  print "$port" unless $opt_q;
+  if (connect(S, $servername)) {
+    print "\n\a" unless $opt_q;
+    print "$port is active.\n";
+    exit 0 unless $opt_m;
+    }
+  else {
+    print " ";
+    $opt_O ? (($port = shift @gObvious) || exit) : $port++;
+    close(S);
+    socket(S, &PF_INET, &SOCK_STREAM, $protocol) || &die("socket()
+failed: $!");
+    bind(S, $clientname) || &die("bind() failed: $!");
+    }
+  }
+
+</pre></fonT>
+<a name="anc12"></a>
+<hr><h3>
+1.2) Retrieve your relevant RFC!</H3><br>
+If you want to know even more about ports, just retrieve RFC1060 to get a 
+list of the assigned numbers. And don't ask how d'you retrieve a RFC... you 
+should already know it...<br>No? Well, <u> 
+per email</u>, of course here is it:<font color=purple><prE>
+To: 			RFC-INFO@ISI.EDU
+Subject: 		[nutting: leave blank]
+----------------------------------------------
+Body:			Retrieve: RFC
+			Doc-Id: RFC1060</pre></fonT><H4>
+The RFC1060 above is the "alfa and omega" of any good commercial_porn_sites buster, 
+this report on the parameters (i.e., numbers and
+   keywords) used in protocols in the Internet community belongs among your most coveted study materials! :-)
+<br>Retrieve it as I told you and, in the mean time, have a look at its contents.
+</H4><font color=purple><pre>
+RFC 1060: Table of Contents
+
+INTRODUCTION.................................................... 2
+Data Notations.................................................. 3
+Special Addresses............................................... 4
+VERSION NUMBERS................................................. 6
+PROTOCOL NUMBERS................................................ 7
+PORT NUMBERS.................................................... 9
+UNIX PORTS......................................................13
+INTERNET MULTICAST ADDRESSES....................................19
+IANA ETHERNET ADDRESS BLOCK.....................................20
+IP TOS PARAMETERS...............................................21
+IP TIME TO LIVE PARAMETER.......................................23
+DOMAIN SYSTEM PARAMETERS........................................24
+BOOTP PARAMETERS................................................25
+NETWORK MANAGEMENT PARAMETERS...................................26
+ARPANET AND MILNET LOGICAL ADDRESSES............................30
+ARPANET AND MILNET LINK NUMBERS.................................31
+ARPANET AND MILNET X. 25 ADDRESS MAPPINGS.......................32
+IEEE 802 NUMBERS OF INTEREST....................................34
+ETHERNET NUMBERS OF INTEREST....................................35
+ETHERNET VENDOR ADDRESS COMPONENTS..............................38
+ETHERNET MULTICAST ADDRESSES....................................41
+XNS PROTOCOL TYPES..............................................43
+PROTOCOL/TYPE FIELD ASSIGNMENTS.................................44
+PRONET 80 TYPE NUMBERS..........................................45
+ADDRESS RESOLUTION PROTOCOL PARAMETERS..........................46
+REVERSE ADDRESS RESOLUTION PROTOCOL OPERATION CODES.............47
+DYNAMIC REVERSE ARP.............................................47
+X.25 TYPE NUMBERS...............................................48
+PUBLIC DATA NETWORK NUMBERS.....................................49
+TELNET OPTIONS..................................................51
+MAIL ENCRYPTION TYPES...........................................52</prE></font>
+
+<a name="anc2"></a><hr><H3>
+2) TRICK TO GET SERVERS LIST AND OPERATOR NAMES FOR YOUR TARGET DOMAIN</H3><br>
+Now let's say you want some more info about WHO ARE the people that have 
+registered your target server, then simply 
+use once more an agora and query with:
+
+<pre>send  http://www.switch.ch/cgi-bin/info/whois?Query=fortunecity.com\
+&Server=whois.internic.net
+</pre>
+And thou shall get the following:<font color=purple>
+<pre>Results from WHOIS server whois.internic.net for query: fortunecity.com
+
+--------------------------------------------------------------
+
+FortuneCity.Com Ltd (ASKRIGG-DOM)		   ASKRIGG.COM
+FortuneCity.Com Ltd (FORTUNECITY4-DOM)	       FORTUNECITY.NET
+FortuneCity.Com Ltd (FCMAIL-DOM)	            FCMAIL.COM
+Software Direct (FORTUNECITY-DOM)	       FORTUNECITY.COM
+
+To single out one record, look it up with "!xxx", where xxx is the
+handle, shown in parenthesis following the name, which comes first.</pre></fonT>
+
+Now, as you have read, you must be patient (the foremost quality of a good 
+stalker): let's go on with what they asked:
+<pre>send  http://www.switch.ch/cgi-bin/info/whois?Query=!FCMAIL-DOM\
+&Server=whois.internic.net
+</prE>
+And now we'll get a wealth of stalking information:
+<font color=purple><pre>Registrant:
+FortuneCity.Com Ltd (FCMAIL-DOM)
+   140 Offord Road,
+   Islington London., N1 1PF
+   UK
+
+   Domain Name: FCMAIL.COM
+
+   Administrative Contact:
+      Metcalfe, Dan  (DM10032)  dan@FORTUNECITY.COM
+      0171 700 1617 (FAX) 0171 609 2815
+   Technical Contact, Zone Contact:
+      Donnahoo, Lee  (LD2352)  lee@COMMTOUCH.COM
+      408-245-8682 (FAX) 408-245-3466
+   Billing Contact:
+      Metcalfe, Dan  (DM10032)  dan@FORTUNECITY.COM
+      0171 700 1617 (FAX) 0171 609 2815
+
+   Record last updated on 29-Apr-98.
+   Record created on 24-Feb-98.
+   Database last updated on 16-Sep-98 04:13:51 EDT.
+
+   Domain servers in listed order:
+
+   PRONTODNS.PRONTOMAIL.COM	209.185.72.9
+   NS1.INFORMAIL.COM		207.135.122.6
+   NS3.EXODUS.NET		206.79.240.13
+</prE></font><br>Of course you should perform the same query for all other addresses 
+you got (ASKRIGG.COM etcetera...)
+
+<a name="anc3"></a><hr><H3>
+3) IMPORTANCE OF A DYNAMIC IP CHAIN</H3><br>
+And the really funny thing is that you have NOT directly connected neither netcraft.com 
+nor internic.net from your real net-access provider. You went through 
+a "tier" procedure like this:
+<br><br>
+YOUR_FREE_DYNAMIC IP -&gt; YOUR_FREE_EMAIL_WEB_PROVIDER -&gt; INTERNIC -&gt; TARGET_SERVER
+<br>
+<br>
+Hope you understand what a dynamic IP is: it is the Web_access 
+offered by AOL, Compuserve, whatever.<br>Of course it is <i>de facto</i>
+You'll find plenty of 2 months trial for 
+free. You'll find plenty of 'trial' offers on every magazines' 
+CD-Rom, and of course you'll bnever confirm the contract at the end of the trial 
+period: just discard and begin (a week before the trial end) <u>another</u> 
+free-trial with <u>another</u> dynamic provider. (Ask for permission and then 
+use your friends/colleagues/parents/grocers 
+name and addresses if needed, you can carry on 50 years like that :-) 
+Now, the point is that all great providers will connect you to the web 
+through ONE of their many servers. This specific IP (for instance 212.211.27.146 for 
+compuserve) will change EVERY TIME you access your 
+provider, and it is very difficult to track down. 
+Add to this the fact that the free email address hosting services (like yahoo.com, 
+hotmail.com etcetera) use a plethora of different servers as well, 
+and you'll udnerstand that tracking back your own stalking activities (especially 
+if you have followed my advices and done them 
+through an agora server) will be a nightmare even for a determined 
+government agency! Not that it couldn't be done at all, mind you, 
+yet it would require the collaboration of 
+so many different entities (and it would violate so many privacy rules) that 
+I consider it extremely unlikely that your average targeted smut-side will ever be 
+able to understand what's going on under his nose :-)<br><br>
+For added security yuou can of course configure <u>A CHAIN</u> of free web_email_providers 
+that you have instructed to resend automatically everything they get to the next one, where 
+the last one has been instructed to query ALWAYS an agora server with the content it gets.<br>
+<br>Hope you understand the possibilities this open to your stalking activities in general (remember 
+that agoras accept only THREE commands: SEND, DEEP and SOURCE (for an <i>ad hoc</i> explanation see my old  <a href="https://searchlores.nickifaulk.com/howtosea" tppabs="http://fravia.net/howtosea.htm">how to 
+search</a> lessons. The main agoras you would have used once upom a time were the following: [<a href="mailto:agora@www.eng.dmu.ac.uk">british agora</a>] ~ 
+[<a href="mailto:agora@ictp.trieste.it">italian agora</a>] ~ 
+[<a href="mailto:agora@dna.affrc.go.jp">nippon agora</a>]
+
+<hr size="3">
+
+
+
+
+<br><center><i>This section of my site, under perennial  construction, 
+ was started on 23 september 1998</i>
+<hr size="3">
+
+
+
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="noanon.htm"><IMG SRC="images/petianon.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

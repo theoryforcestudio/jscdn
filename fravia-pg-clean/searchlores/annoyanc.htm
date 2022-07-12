@@ -1,0 +1,511 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>annoyanc.htm: How to search the web, by fravia+ annoyanc</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Windoze annoyances you should consider ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="intro.htm"><IMG SRC="images/begiptit.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Annoyances<br>you should<br>consider</th><th> <!-- &nbsp;&nbsp; <IMG SRC="../images/moronclippy.gif"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="160" HEIGHT="160" BORDER=0 VSPACE=0
+HSPACE=0></a> --></th>
+</tR></table>Version <font color=blue>January</font> 2005
+<!-- internet searching techniques: imageheader end -->
+<hr><table><tr><td width="500"><center>
+<i>I never really understood how there could be things that would drive you 
+insane just because you knew them until I ran into Windows.
+</i></center><td>&nbsp;&nbsp;</td><td><br>[<a href="http://www.taronga.com/~peter/">Peter da Silva</a>]</td></tr></table>
+</center>             
+<hr><center>
+
+<script>
+<!--
+
+
+	agent = navigator.userAgent;
+	osver = '';
+
+	if (agent.indexOf('Windows NT 5.1') > 0) {
+		osver = 'Windows XP';
+	}
+	else if (agent.indexOf('Windows NT 5.0') > 0) {
+		osver = 'Windows 2000';
+	}
+	else if (agent.indexOf('Win 9x 4.90') > 0) {
+		osver = 'Windows Me';
+	}
+	else if ((agent.indexOf('Windows 98') > 0) || (agent.indexOf('Win98') > 0)) {
+		osver = 'Windows 98';
+	}
+	else if ((agent.indexOf('Windows 95') > 0) || (agent.indexOf('Win95') > 0)) {
+		osver = 'Windows 95';
+	}
+	else if ((agent.indexOf('Windows NT') > 0) || (agent.indexOf('WinNT') > 0)) {
+		osver = 'Windows NT';
+	}
+
+	if (osver != '') {
+		document.write('It appears you are using ' + osver + '.');
+	}
+
+
+
+//-->
+</script>
+On this page you'll find:<hr width=44%>
+<font color=blue>[</font><a href="annoyanc.htm#first">The files that change</a><font color=blue>]</font>  
+&nbsp;
+
+<font color=blue>[</font><a href="annoyanc.htm#annsta">Annoying starting programs</a><font color=blue>]</fonT> 
+&nbsp;
+<font color=blue>[</font><a href="annoyanc.htm#prepa">Pre-Preparing for the search</a><font color=blue>]</font>  
+<br>
+<font color=blue>[</font><a href="annoyanc.htm#regwiz">Avoid some Microsoft spying</a><font color=blue>]</font>  
+&nbsp;
+<font color=blue>[</font><a href="annoyanc.htm#vatips">Various tips</a><font color=blue>]</font>  
+&nbsp;
+
+<br>
+<font color=blue>[</font><a href="annoyanc.htm#altavis">On-the fly  searchmasks: AV</a><font color=blue>]</fonT> 
+
+
+
+<hr>On other pages of mine<hr width=44%>
+<font color=blue>[</font><a href="pdffing.htm">Those annoying pdf files</a><font color=blue>]</font>  
+                 
+<hr>
+<i>Let's imagine you have a brand-new PC with windows on it. I'm not saying you 
+SHOULD have a windows PC, I'm just assuming you have. See: I wont even try 
+to push you onto the GNU/Linux optimum path, because it is NOT necessary: you'll do it by yourself once 
+you will 
+have understood some basic lore (always with sound <a href="http://catalog.com/hopkins/unix-haters/x-windows/disaster.html">caveat</a>s, eh&nbsp;:-)<br>I will just, instead, 
+try to help you <u>hic et nunc</u> to iron some things out... and 
+to understand some issues you may not be aware of...</i><br></center>
+
+<pre>&lt;Newbies mode on&gt;</pre>
+
+
+<!-- internet searching strategies and hints content, begin --> 
+<a name="first"></a><hr>
+<center><table border=1 width=88%><tr><td <td 
+bgcolor="#C6E7C6"><center><font size=+3>The files that change</font></center></td></tr></table>
+<br></center>
+Slowly everyone is learning what a can of worms windows is... but sadly there are still 
+some people that are not aware of the consequences of having such a "vicious", buggy and poorly 
+documented operating system. Let's begin with some MUST KNOW about the "hidden" activities 
+going on under the hood. Bear with me: those of you that did not know nothing will 
+begin to see some light...<br><br>
+If you want to have some
+exhilarating experiences on your own computer, you may begin by pointing your iexplorer 
+browser to <font color=blue>[</font><a href="C:\Windows\Temporary Internet Files">this link</a><font color=blue>]</font> (also note that there are a couple of 
+hidden directories there that you cannot see this way), 
+or your 
+Netscape browser to <font color=blue>[</font><a href="file:///c%7C/Program%20Files/NETSCAPE/Users/">this link</a><font color=blue>]</font> (you'll need to click on your own profile in 
+this case), or
+your Opera browser (that you should by all means use instead of the two browsersaurii above) either 
+to <font color=blue>[</font><a href="file://localhost/c:/Program%20Files/Opera/global.dat">this link</a><font color=blue>]</font> 
+or to <font color=blue>[</font><a href="file://localhost/c:/Program%20Files/Opera/CACHE/">this link</a><font color=blue>]</font>.
+<br>For obvious anonymity reasons you should not 
+forget to check and tamper as well, for Opera, <font color=blue>C:\Program Files\Opera\cookies.dat</font> & 
+<font color=blue>C:\Program Files\Opera\vlinks.dat</font> ("visited links"). There is almost no way you 
+can have any control over your own data if you use iexplorer, so I'll not even try to 
+explain you the MANY places where this Microsoft abomination gathers and hides info about you 
+(see the old mm256 discussions or just do a grep for your data on your c:\ drive). Either you 
+set iexplorer and windows into a special 
+harddisk all on its own, and then you reformat and reinstall every day, or you - better - 
+just de-install it.
+
+<br><br>
+That's pretty scary eh, yet it is NOTHING: carry on: 
+just try the following command sequence:<br>Start ~ Find ~ Files or Folders ~ tag DATE ~ 
+Find all files ~ Modified ~ During the Previous ~ 1 day ~ Find now...<br>
+Have you done it?<br>I got 371 files found a minute ago...<br>Of course there 
+is a much quicker dos way: Start ~ Programs ~ MS-dos prompt<br>Then you'll have the magic 
+dos box, and you can issue either the command<br> 
+<font color=blue>dir /od</font> 
+(for c:\windows only)<br>or the commands<br><font color=blue>cd..</font> 
+~ <font color=blue>dir /s /od > lemmesee.txt</font> (to get a listing for the 
+whole c:\drive inside lemmesee.txt)<br>
+<br>Do you want some more thrills? Download <font color=blue>Filemon</font> by Mark Russinovich and Bryce Cogswell
+(you are supposed to be searchers, so I really 
+do not think that I should  
+provide a link to this gorgeous utility) and fire it..<br>
+<br>Do you want to descend even more deep into this buggy operating system? 
+Fetch and use <font color=blue>Softice</font>, by Numega, and once installed - windows will run 
+"inside" it - have "a good look around" 
+using the various 
+heap / thread / addr / class / task / tss (task state seg) / gdt (general 
+descriptor) / ldt (local) / hwnd / map32 / mod / vxd and so on commands... 
+scary 
+eh?<br><br> Mind you: it is not so much the fact that windoze is complicated (every operating system 
+is complicate) but the fact that it is so buggy and that it 
+leaves so many "open" (and hidden) traces that is 
+quite annoying, as you will soon discover on your own.
+<br><br>
+
+<a name="annsta"></a><hr>
+<center><table border=1 width=88%><tr><td <td 
+bgcolor="#C6E7C6"><center><font size=+3>Annoying starting programs</font></center></td></tr></table>
+<br><i>
+Ok, this is a must know, that seekers should be able to find by themselves, but since 
+many friends don't know how to 'clean' their own system, I decided to post 
+this basic stuff here.
+<br><br>Just follow the instructions below, you'll learn quite a lot just doing it.</i></center>
+
+<br><br><font size=+2>Older Windoze 9*</font>
+<br><br>
+Under Windows98 click <font color=blue>Start</font>, then choose the 
+option <font color=blue>Run</font>, then 
+type in <font color=blue>C:\windows\system\Msconfig.exe</font>
+and finally press
+enter.  Note that Msconfig can also be run on Windows 95 once you
+have first downloaded from the web (or from the windows CD-ROM) the 
+correct version.<br>
+Once Msconfig is running click the  <font color=blue>Startup</font> 
+ option and <u>uncheck
+every box
+except TaskMon, SysTray and LoadPowerProfile</u>. If you'r scared and you'r 
+really convinced  that 
+some other options must be kept checked then, by all means, 
+leave them checked... (you'll 
+later be able to finetune the system even more unchecking them 
+as well :-)<br>
+
+Once you have unchecked the unwanted parasites, re-boot and now check that
+Windows loads without error prompts and especially 
+check that sounds and everything else 
+you need is working fine.<br>
+This procedure disables the automatic loading of most software that
+has been happily installing itself since Windows was first setup.<br> 
+This plethora of unwanted crap is one of the more 
+annoying aspects of the annoying Windoze OS people believe to be 
+compelled to use (until 
+they understand the need to move to GNU/Linux :-)
+<br>
+ Having
+everything loaded all the time eventually causes conflicts and generally makes the
+system run slow.  Almost ALL those programs can be run from 
+on the fly 
+when needed, and should be closed after finishing.
+<br><br><font size=+2>Newer Windoze XP</font>  
+<br><br>
+Under Windows XPpro, click <font color=blue>Start</font>, then choose the 
+option <font color=blue>Run</font>, then 
+type in <font color=blue>cmd</font>
+and finally press
+enter.<br>
+In the dos box, at the command prompt, type <font color=blue>cd c:\</font> (and enter)<br> 
+Now  type <font color=blue>tasklist</font> in the dos box<br> 
+If you want to see all the services running, grouped per svchost instance, type  <font color=blue>tasklist /svc</font><br> 
+If you want to see all the services running and save the output to a file, say <u>myservices.txt</u>, type 
+<font color=blue>tasklist /svc > myservices.txt</font><br>
+Alternatively,  to have a look att the services running on your box, 
+ type at the command prompt
+<font color=blue>msconfig</font>, and then choose the 'services' tag. However, 
+do NOT use <font color=blue>msconfig</font> to disable services, type <font color=blue>services.msc</font> 
+at the command prompt instead.<br>
+<br>
+In order to kill any instance of svchost that in your opinion hogs too many resources for 
+nothing, use 
+<font color=blue>tskill (pid)</font>, where <u>pid</u> is the process id number you have 
+previously seen using tasklist...<br>
+<br><br>
+
+For windows 2000 use, instead of tasklist, <font color=blue>tlist.exe</font>  
+from the Windows 2000 Diagnostics Tools CD-ROM: the syntax is <font color=blue>tlist -s</font> at the command prompt.
+<br><br>
+<font size=+2>SVCHOST.EXE</font>  
+<br><br>
+
+
+This is one of the most annoying (alongside ctfmon.exe) of the windows processes, 
+hogging resources, memory and CPU-time 
+like there were no tomorrow. It is however responsible for 
+(quite a few) useful things, e.g. printing spool, sound drivers etc, 
+so you should not eliminate it, just disable the services you do not 
+need (type <font color=blue>services.msc</font> 
+at the command prompt, click on your unneded service and disable through the 'options' tag).<br>The original svchost.exe file is located in the 
+<font color=blue>c:\windows\System32</font> folder (or C:\WINNT\system32) folder;
+ a copy may exist in the 
+<font color=blue>c:\windows\System32\dllcache</font> (or C:\WINNT\system32\dllcache) folder. <br>
+
+
+
+<br><br>
+In ALL other occurrences, a svchost.exe file is a virus, spyware, trojan or worm, hence you should 
+regularly check your computer for all instance of <u>*host*.exe</u>.
+<br>
+Note also that a few trojans mix the letters before "host", like scvhost.exe or add numbers after "host", 
+like svchost3.exe hence the reason 
+for the asterisks in the search for <u>*host*.exe</u>.<br>
+When checking for files on your own harddisks, use 
+a good <a href="bangla.htm">free</a> filefinder, like 
+<a href="zipped/agentran.zip">agent ransack</a>... (use options/dos expression and then input 
+<font color=blue>*host*.exe</font>).<br>  
+Do not -NEVER- use 
+windows' own "search" function: the start/search function in windows xp 
+is just <a href="malware.htm">spyware</a> that  has been 
+built inside windoze itself,  and will connects on port 80 to sa.windows.com (207.46.248.249) in order 
+to deliver to microsoft's spyes your IP and <font color=blue>what you are searching for on your own harddisk</font>.
+<br><br>
+ONLY two SVCHOST.EXE files should be found, they reside in your 
+<font color=blue>c:\windows\System32</font> (or
+C:\WINNT\system32) 
+and in your <font color=blue>c:\windows\System32\dllcache</font> (or C:\WINNT\system32\dllcache) folders.
+
+
+If you only have these two SVCHOST.EXE files your system is fine.
+<br><br>
+<a name="prepa"></a><hr>
+<center><table border=1 width=88%><tr><td <td 
+bgcolor="#C6E7C6"><center><font size=+3>Pre-Preparing for the search</font></center></td></tr></table>
+</center><br>
+
+ "Pre-Preparing for the search"? Since there is a whole searchsession phase, 
+the first one, called  
+"<font color=blue>Preparation (layout of the search strategy)</fonT>" I should probably have found a better description for 
+this part, which is aimed to newbies. What I want to point out is that many readers don't know the most 
+elementary tricks you can apply in windoze, so that for some of you (of course 
+I am not daring to speak to the real conoisseurs out there :-) the following could 
+be of some use.<br><br>
+Glide your icons! (windoze 98)<br>
+You have obtained Opera, Ultraedit & the Proxomitron (the "starting set"
+ or 
+"little seeker's box n.1") 
+and want to use my own collection of search engines forms as homepage? <br>
+Then do the following<ul><li>
+Opera ~ Navigation ~ Set home ~ file://localhost/c:/main.htm</li><li>
+Now glide Opera into the startbar of windoze98:</li><li>
+Start ~ Programs ~ Windows Explorer</li><li>
+"navigate" your Windows Explorer to 
+<font color=blue>c:\Program files\Opera</font> (assuming you 
+have installed it there)</li><li>
+Click right on Opera.exe and choose create shortcut</li><li>
+Click ctrl and glide this shortcut to the 
+taskbar (one centimeter right from "Start"). Now you have the shortcut 
+there.</li><li>
+Do the same for the Proxomitron and for Ultraedit.</li><li>
+Glide the three shortcuts to the <font color=blue>c:\windows\Start</font> subdir 
+as well</li><li>
+Glide Ultraedit to the <font color=blue>c:\windows\send</font> subdir as 
+well.</li></ul>
+OK... banal, but necessary if you want to work a little more effectively.
+
+
+
+<bR>
+<br><br>
+
+<a name="regwiz"></a><hr>
+<center><table border=1 width=88%><tr><td <td 
+bgcolor="#C6E7C6"><center><font size=+3>Avoid some Microsoft spying</font></center></td></tr></table>
+<br></center>
+    Microsoft offers 'automatical' and often hidden updates
+and fixes through your connection to the internet using their
+<font color=blue>Registration Wizard</font> application. 
+However this 'feature'
+allows Microsoft to gather information from your system, including what
+programs are installed, who they are registered to and so on.  You may prefer
+not to make available such info. 
+
+You may modify the register importing the key 
+<font color=blue>Regwiz-off.reg</font> 
+and you may prepare a batch file that automatically executes the
+following command in order to turn off Registration Wizard at Dll level.
+Here is how you do it right now on the fly: 
+<font color=blue>Start</font>, 
+<font color=blue>Run</font>
+and then copy  this line, paste it inside and run it:<br>
+<font color=blue>regsvr32.exe -u regwizc.dll</font><br>
+Bye bye registration wizard!
+<br><br>
+
+
+
+<a name="vatips"></a><hr>
+<center><table border=1 width=88%><tr><td <td 
+bgcolor="#C6E7C6"><center><font size=+3>Various Microsoft-savy tips</font></center></td></tr></table>
+<br></center>
+
+Make a shortcut on the desktop (rightclick on the desktop and choose 
+<font color=blue>New</font>, 
+<font color=blue>Shortcut</font>)
+
+and enter  this command in order to start Windows
+Explorer in a mode to show everything:<br><br><font color=blue>
+C:\WINDOWS\EXPLORER.EXE /e, ::{20D04FE0-3AEA-1069-A2D8-08002B30309D}</font><br>
+once you have done it, glide the icon on th bottom bar (see <a href="annoyanc.htm#prepa">above</a> how to glide)
+<hr width=55% align=left>
+
+Ever wondered why windoze seems 'to go asleep' for quite a while when you 
+browse your harddisks?<br>
+The swap file in Windows stores information to your hard
+drive when memory runs low but week after week will grow huge, making the system
+load slower and run slower (it takes longer to find data 
+ inside such an huge file). The option to limit this file in windows itself 
+is VERY unreliable and prone to crashes (the whole windoze bazar is prone to crashes, 
+come to think of it).
+Once every month restart your machine in dos mode and <u>delete</u> 
+<font color=blue>C:\windows\win386.swp</font>, the swap
+ file that cannot be deleted while windows is running. You'll notice a 
+ remarkable performance improvement.  
+ <br>
+ While doing that
+ use the powerful (and potentially destructive) command 
+ Deltree to remove all temporary files in the Windows temp
+folders (besonder nasty is the <font color=blue>Temporary Internet Files</font> 
+folder. Windows will rebuild all these folders when it restarts. 
+<hr width=55% align=left>
+<br><br>
+
+<pre>&lt;Newbies mode off&gt;</pre>
+<hR><center><i>All the above is in fieri, of course, in the meantime those among you that 
+are security conscious may enjoy following quote:</i>
+<br><table><tr><td width="400"><center>"<font color=blue>For their next act, they'll no doubt be buying a firewall running 
+under NT, which makes about as much sense as building a prison out 
+of meringue</font>"</center></td><td>&nbsp;&nbsp;</td><td><br>
+-:Tanuki:-</td></tr></table>
+</center>
+            
+            
+            
+<a name="altavis"></a><hr>
+<center><font size=+3><font color=blue>On-the-fly
+searchmasks: altavista</fonT></fonT></center><hr width=44%><font 
+size=+1>
+<center>
+<!-- Begin AltaVista Search form ~ Very quick! Text-only version,
+of course! -->
+<br>
+<FORM name=mfrm method=GET
+action="http://www.altavista.com/cgi-bin/query">
+<INPUT TYPE=hidden NAME=pg VALUE=q>
+<INPUT TYPE=hidden NAME=text VALUE=yes>
+<font face=arial size=-1><B>Type query</B>&nbsp;&nbsp;And evtl.
+choose
+<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language
+<OPTION VALUE=zh>Chinese
+<OPTION VALUE=cs>Czech
+<OPTION VALUE=da>Danish
+<OPTION VALUE=nl>Dutch
+<OPTION VALUE=en>English
+<OPTION VALUE=et>Estonian
+<OPTION VALUE=fi>Finnish
+<OPTION VALUE=fr>French
+<OPTION VALUE=de>German
+<OPTION VALUE=el>Greek
+<OPTION VALUE=he>Hebrew
+<OPTION VALUE=hu>Hungarian
+<OPTION VALUE=is>Icelandic
+<OPTION VALUE=it>Italian
+<OPTION VALUE=ja>Japanese
+<OPTION VALUE=ko>Korean
+<OPTION VALUE=lv>Latvian
+<OPTION VALUE=lt>Lithuanian
+<OPTION VALUE=no>Norwegian
+<OPTION VALUE=pl>Polish
+<OPTION VALUE=pt>Portuguese
+<OPTION VALUE=ro>Romanian
+<OPTION VALUE=ru>Russian
+<OPTION VALUE=es>Spanish
+<OPTION VALUE=sv>Swedish
+</SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="">
+<br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT
+TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit
+VALUE=Submit><br>
+ <P><font face=arial size=-1>Search - <A
+HREF="http://www.altavista.com/cgi-bin/query?pg=aq&what=web&text=y
+es">Advanced</a> - <A
+HREF="http://www.altavista.com/cgi-bin/query?pg=&what=news&text=ye
+s">Usenet</a></font><BR></FORM>
+<br></font>
+<!-- End AltaVista Search FORM -->   
+
+
+      
+<!-- googlette at fravia begin -->   
+<form method=GET action=http://www.google.com/search target=_blank name=gs>
+<table border=1 cellpadding="0" cellspacing="0"><tr><td>
+<input type=text name=q value="" size=30><input type=hidden name=unde value="searchlores"></font>
+<input type=hidden name=num value=100><input type=hidden name=safe value="off"><input type=hidden name=hl value="en"><input type=hidden name=lr value=""><input type=hidden name=ie value="ISO-8859-1">
+</td><td width="99"><center><input TYPE="submit" NAME=btnG VALUE="Googlette">
+</td><td><center>&nbsp;Always 100 rez, safe off
+</td></tr>
+</form>		
+<!-- googlette at fravia end --> 
+<tr></Tr> 
+<!-- fastette at fravia begin  -->
+<form action="http://www.alltheweb.com/search?" method="get" target=_blank> 
+<tr><td><input type="text" name="query" value="" size="30"> 
+<input type=hidden name=hits value=100><input type=hidden name=unde value="searchlores"><input type=hidden name=ocjp value=1></td>
+<td width="99"><center><input type="submit" value="&nbsp;Fastette&nbsp;">
+</td>
+<td>
+&nbsp;&nbsp;fastsearching for: 
+<select name="type"><option value="all">all of the words</option><option value="any">any of the words</option><option value="adv">boolean expression</option><option value="phrase" selected="selected">the exact phrase</option></select>
+</td>
+</tr>
+</form>  
+<!-- fastette at fravia end  -->     		
+<tr></tr>	
+<!-- teomette at fravia begin -->
+<form name="searchForm" action="http://s.teoma.com/search?=" method="get">
+<tr>
+<td><input style="font-size: 10pt;" size="30" name="q"></td>
+<td width="99"><center><input type="submit" value="&nbsp;Teomette" name="submit"></td> 
+<TD><input type=hidden name=unde value="searchlores"><center><INPUT type=checkbox value=1 name=p>Find this  Phrase</FONT><input type=hidden name=u value=100></TD>
+</TR>
+</form>
+</table> 
+<!-- teomette at fravia end  -->     
+<br>
+</center>
+</fonT>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="intro.htm"><IMG SRC="images/begiptit.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 1952-2032: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

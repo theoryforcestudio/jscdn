@@ -1,0 +1,323 @@
+<html>
+<head>
+<title>bash_galore.htm:  Assorted command line tricks and tips</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<meta name="generator" content=
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content= "This site teaches basic and advanced search techniques for people interested in de-streaming any kind of information on the web. Here are informations, documents, links, etc. related to de-streaming">
+<meta name="keywords" content= "searching, de-streaming, combing, klebing, how to search, how to de-stream, de-streaming techniques, hints and tips for de-streaming, How do I catch a stream?, Advanced Internet de-streaming, How do I de-stream?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright" content="Copyright(c) 1952-2032 fravia+">
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#214131" alink=
+"#405040" vlink="#8850AA">
+<center>
+<div align="center">
+<table border="1" width=88%><TR><TD width="37%"><FONT size=-1 align="left">&nbsp;  <A target="_blank"  
+      href="index.html">portal</A> &#8594; <a target="_blank" href="linux.htm">linux</a>  &#8594;  
+      bash_galore.htm</FONT>
+<TD>&nbsp;</TD>
+<TD width="37%" align=right><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</TD></TR></table>
+<p align="center"><strong><font size="+5"><u>GNU/Linux: Assorted command line tricks and tips
+</u></font></strong></p>
+</div>
+<table width="98%" align="center" border="0">
+<tr>
+<td width="66%" colspan=3>
+<center>
+<p align="center"><font size=
+"+2"><em>...the shell is awesome!</em></font><br>(by _Mammon, 
+first published at <a href="http://www.searchlores.org">searchlores</a> in April 2008)</p>
+</td></tR><tr><td>
+<table border="0">
+<tr>
+<td>
+<div align="center"><a href="bash_galore.htm#Intro"><font size=
+"+2">General Introduction</font></a><hr width=55%></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="bash_galore.htm#Introma"><font size=
+"+2">_Mammon's Introduction</font></a><hr width=55%></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="bash_galore.htm#poor"><font color="#FF0000" size=
+"+2">bash galore: the functions</font></a><hr width=55%></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center"><a href="bash_galore.htm#onemore"><font color="#FF0000" size=
+"+2">Bash galore: One more</font></a><hr width=55%></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="bash_galore.htm#comments"><font color="#FF0000" size=
+"+2">Bash comments</font></a><hr width=55%></div>
+</td>
+</tr>
+
+
+<tr>
+<td><br><hr><br>
+<div align="center"><font size=
+"+2">Related Sections</font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="linux.htm"><font size=
+"+1">going to GNU/Linux</font></a><br><a href="useful_findings.htm"><font size=
+"+1">useful findings</font></a>  &nbsp; &#8596; &nbsp;<a href="find_the_command.htm"><font size=
+"+1">Find, locate and grep</font></a>
+<br>
+<a href="linux_games.htm"><font size=
+"+1">Linux games</font></a>
+</div>
+</td>
+</tr>
+</table>
+</center>
+</td>
+<td width="105">
+&nbsp;
+</td>
+<td width="282">
+<center>
+<p><a href="linux.htm">
+<img src="images/bash_cookbook.jpg" alt="da bash cookbookz" width="498"
+height="587" border="0"></a>
+</p>
+<p><font size="+1">Version <font color="blue">0.03</font>:
+<font color="blue">April</font>&nbsp;2008</font></p>
+</center>
+</td>
+</tr>
+</table>
+<br>
+<div align="center"><a name="Intro" id="Intro"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">General Introduction</font></center>
+</td>
+</tr>
+</table></center>
+<p align="left">
+Every modern operating system has at least one shell and some have many. Some
+shells are command-line oriented, such as the GNU/Linux bash shell. Others are
+graphical, like Windows Explorer or the Macintosh Finder. Some users will interact
+with the shell only long enough to launch their favorite application, and then never
+emerge from that until they log off. But most users spend a significant amount of
+time using the shell. The more you know about your shell(s), the faster and more pro-
+ductive you can be.<br>
+Whether you are a system administrator, a programmer, or an end user, there are
+certainly occasions where a simple (or perhaps not so simple) shell script can save
+you time and effort, or facilitate consistency and repeatability for some important
+task. Even using an alias to change or shorten the name of a command you use often
+can have a significant effect, as you will be able to constate in _Mammon's 
+<font color="blue">.bash_alias.rc</font> script.
+</p>
+
+See <a href="http://tiswww.case.edu/php/chet/bash/bashref.html">Bash Reference Manual</a> or, for 
+beginners, Machtelt Garrels's 
+<a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/index.html">Bash Guide for Beginners</a>, both, full texts,  
+on line.
+<br><br>
+Alternatively, <a href="reversing_our_searching_habits.htm#quarry">search</a> for 
+<pre>The bash cookbook (OReilly.bash.Cookbook.May.2007.pdf)
+Classic Shell Scripting (Classic_Shell_Scripting_OReilly_2005.chm)
+Learning The BASH Shell (O'Reilly - Learning The BASH Shell, 3rd Edition_2005.chm)
+</pre>
+ which have been massively uploaded on the web, 
+  and consult them on line.
+<br><br>
+<div align="center"><a name="Introma" id="Introma"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">_Mammon's Introduction</font></center>
+</td>
+</tr>
+</table></center>
+<p align="left">
+Here are a couple of things that you can add to your ~/.bashrc 
+(which should be probably symlinked to ~/.login) 
+in order to make the CLI prompt more interesting.<br><br>
+</p>
+
+<div align="center"><a name="poor" id="poor"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">bash galore: the functions</font></center>
+</td>
+</tr>
+</table>
+</center>
+<p align="left">
+
+Download
+
+<a href="zipped/bash_setup.tgz">zipped/bash_setup.tgz</a> and untar.
+<br>
+You'll find inside it:<ul><li>
+.bash_colors.rc: Bash variables for console/terminal colors
+</li><li>
+.bash_env.rc: Bash environment variables
+</li><li>
+/.bashrc: Bash config file for non-login shells
+</li><li>
+.bash_alias.rc: Standard aliases (e.g. shortcuts)
+</li><li>
+.bash_app.rc:Bash aliases for application defaults and overrides
+</li><li>
+.bash_fn.rc: Useful shell functions
+
+ 
+</li></ul>
+
+In the last rc file you'll find, among other things, the following useful search function:
+
+<pre># -------------------------------------------------------------------
+# ifind : case insensitive find from the current directory
+function ifind () {
+        if [ -z "$1" ]
+        then
+		echo Usage: ifind pattern
+		return 1
+	fi
+
+	find . -iname \*$*\*
+}
+# ------------------------------------------------------------------</pre>
+
+</p><br>
+
+<br>
+You will be able to find updated versions of these  (and other) files at _Mammon's 
+<a href="http://dotfiles.org/~mkfs">http://dotfiles.org/~mkfs</a>.
+
+<br><br>
+<div align="center"><a name="onemore" id="onemore"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Bash galore: One more</font></center>
+</td>
+</tr>
+</table>
+</center>
+<p align="left">
+
+Oh, one more people might be interested in:
+<pre>
+# ------------------------------------------------------------------ %<
+# alt_wm: run an alternate window manager in a new XServer session.
+# Allows two XSessions to be run concurrently. Useful for testing
+# new window managers that are buggy, e.g. Beryl or E17.
+alt_wm () {
+       if [ -z "$1" ]
+       then
+               echo Usage: alt_wm path [screen]
+               return 1
+       fi
+
+       SCREEN_NUM=$2
+       [ -z "$SCREEN_NUM" ] && SCREEN_NUM="1"
+
+       xinit $1 -- :${SCREEN_NUM}
+}
+# ------------------------------------------------------------------ %<
+</pre>
+To use, Ctrl-Alt-F1, then "alt_wm `which fluxbox`" assuming you have 
+ <a href="http://en.wikipedia.org/wiki/Fluxbox">fluxbox</a> installed.<br> 
+You should know about backticks (``): see the difference between 
+<prE>echo `date`</pre>
+and
+<prE>echo 'date'</pre>.
+You can also assign to a variable:
+<prE>TODAYDATE=`date`
+echo $TODAYDATE</pre>
+
+<br><br>
+Make sure to type ". ~/.bashrc" if you want the changes to take effect in your current shell session.
+<br><br>
+There are quite a few more customizations that really make laptops useful. <br>
+One of them is to set up a 'battery mode'
+run level, then edit the ACPI events to switch to that runlevel when the power cord 
+is removed (and to switch back when it is
+plugged int). The big draw here is that each runlevel specifies shell scripts and 
+programs that are run/started/stopped, so
+you can stop all unnecessary processes (e.g. CUPS, apache, etc), spin 
+down the hard drive, darken the display, disable wireless,
+and so on.
+<br><br>
+Have fun!
+<br><br>
+_m
+
+<br><br>
+<div align="center"><a name="comments" id="comments"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Bash comments</font></center>
+</td>
+</tr>
+</table>
+</center>
+<p align="left">
+<font size=+2>The Z shell</font><br>
+~S~ Kane points out that <font color="blue">the interactive zsh shell</font> deserves a mention, 
+"<i>as it makes doing most of the crap you need to do with bash more than ten times easier out of the box. 
+Most distros have a seperate package called zsh-completion that pretty much sets it up without any effort</i>".
+<br>
+The z shell has indeed many interesting improvements (like a common command history among all running shells), 
+and  its ability to interactively evaluate arguments is indeed dramatically powerful.<br> 
+Check its <a href="http://zsh.sunsite.dk/Doc/">documentation</a>. 
+<br>The choice of shell is one of 
+the most religious choices for 
+GNU/Linux users. If you are new to GNU/Linux just accept (and delve into) 
+ the default shell bash, but as time goes and you get more advanced, you many want to change 
+ shell because you really miss  certain features. This said, I 
+ would advise readers to stick to bash until they 
+ understand it adeguately, and consider changing shell only in a second phase.
+
+<bR><br><br>
+<center>
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>(c) 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"http://searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, revealed and
+reviled</center>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

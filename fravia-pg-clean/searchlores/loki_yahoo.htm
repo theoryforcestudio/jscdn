@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>loki_yahoo.htm: Loki on Yahoo's filter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="The most comprehensive ( AFAIK :) reference for Inktomi, HotBot and MSN advanced search syntax on the web.">
+<meta name="keywords" content="Inktomi, HotBot, MSN, search syntax, advanced search, fields, features">
+<meta name="author" content="Loki">
+<meta name="copyright" content="Copyright(c) 2004 Loki">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+ <center>
+
+<font size="+3">~ Loki on Yahoo's filter - a short pointer ~</font><br>
+
+<b>By <font color="blue">Loki</font> (slightly edited by fravia+)</b><br>
+           <br>
+<a target=_top href="essays.htm"><img SRC="images/Orna_032a.jpg" ALT="to essays" 
+ALIGN=BOTTOM WIDTH="216" HEIGHT="216" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+
+<b>Published @ <a href="http://www.searchlores.org">http://www.searchlores.org</a> in late <font color="blue">February 2006</font> | </b>
+<b>Version <font color="blue">0.01</font></b><br>
+
+
+   </center>
+<hr>
+<p align="center">
+<font size="+3">~ Loki on Yahoo's filter - a short pointer ~</font><br>
+
+By <font color="blue">Loki</font><br><br></center>
+<font size=+1>
+<p>Lately, all eyes are turned on the diva Google, and every sidestep is
+noticed, blogged, commented, flamed etc.. For good reason
+or not. I don't really care. But people tend to forget about the other
+big players in this industry, be it for good or bad things. <br>New
+interesting features coming out of Yahoo's labs are ignored, useful MSN sliders
+are underused, yet nobody miss the latest crappy packaged
+solution promoted by Google and his partners. And it goes the same for
+all bad stuff..
+<br>
+<p>Recently, Google launched his China version of websearch, generating a
+lot of discussions about censoring results for chinese users at
+the request of China government.
+<br>Everybody knows by now the visual proof of this censor, by performing
+the (infamous) following queries:
+<br>
+<p><A HREF="http://images.google.cn/images?q=Tiananmen" TARGET="_blank"> http://images.google.cn/images?q=Tiananmen</A>
+<br><A HREF="http://images.google.com/images?q=Tiananmen" TARGET="_blank"> http://images.google.com/images?q=Tiananmen</A>
+<br>
+<p>Shortly after, some guys published a way to bypass this filter by using
+capitalised queries, and managed to output uncensored results
+<br>(ie: [Tienanmen] instead of [tienanmen]).
+<br>See here :
+<A HREF="https://searchlores.nickifaulk.com/cgi-bin/sqwebmail?redirect=http%3A%2F%2Fwww.crypticide.com%2Fdropsafe%2Farticles%2Fsecurity%2Fpost20060129233439.html&amp;timestamp=1140455348&amp;md5=hFVQ0acmSRisHOQ6Lq4o5g%3D%3D" TARGET="_blank"> http://www.crypticide.com/dropsafe/articles/security/post20060129233439.html</A>
+<br>But it was quickly corrected and this trick isn't working anymore.
+<br>
+<p>But what about Yahoo (or MSN) ? Are they also filtering the results ?
+<br>Compare the same query on Yahoo (tld .com) and Yahoo China :
+<br>
+<p><A HREF="http://images.search.yahoo.com/search/images?p=tiananmen" TARGET="_blank"> http://images.search.yahoo.com/search/images?p=tiananmen</A>
+<br><A HREF="http://image.yahoo.com.cn/search?p=tiananmen" TARGET="_blank"> http://image.yahoo.com.cn/search?p=tiananmen</A>
+<br>
+<p><font color=blue>It's not even filtered</font>. You do not have ANY result at all. Do you really
+think that is a better solution ?
+<br>Same goes on for the web search, but instead of having no results you
+are redirected to the news results, where sources are obviously filtered
+<br>and subject to censorship.
+<br>
+<p><A HREF="http://www.yahoo.com.cn/search?p=test" TARGET="_blank"> http://www.yahoo.com.cn/search?p=test</A>
+<br>
+<p>No problem.
+<br>
+<p><A HREF="http://www.yahoo.com.cn/search?p=tiananmen" TARGET="_blank"> http://www.yahoo.com.cn/search?p=tiananmen</A>
+<br>
+<p>Response: HTTP/1.x 302 Found
+<br>Location:
+<A HREF="http://xinwen.yahoo.com.cn/search.html?p=tiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult" TARGET="_blank"> http://xinwen.yahoo.com.cn/search.html?p=tiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult</A>
+
+<p>
+<p>Bounced to yahoo news. also note the source parameter :
+ysearch_www_filter_noresult
+<br>The usual one is 'ysearch_www_result_topsearch' when it's not filtered.
+<br>
+<p>So. Is there anything we can do, as some did for Google, to bypass this
+filter ? And how long will it take to be spotted and corrected by
+<br>Yahoo's teams ? Yahoo and other competitors of Google don't have the
+same hype around them, and if you publish something about them,
+<br>it won't spread like any Google related news.
+<br>
+<p>I tried to bypass the filter, using similar "poke around" techniques.
+tried different approaches, mixing caps, adding useless keywords
+(-dsfasdfds for ex),
+<br>multiple quotes etc.. Nothing. But finally, I tried to 'overflow' it, by
+feeding the query parameter with big numbers of chars.. and it worked !
+<br>Apparently, if you add enough '+' before your queries, the filter is
+bypassed, and you get censor free output.
+<br></font><font size=-1>
+<p>[tianamen] :
+<A HREF="http://xinwen.yahoo.com.cn/search.html?p=tiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult" TARGET="_blank"> http://xinwen.yahoo.com.cn/search.html?p=tiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult</A>
+<br>['+'(338 times) tiananmen] :
+<A HREF="http://xinwen.yahoo.com.cn/search.html?p=%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2Btiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult" TARGET="_blank"> http://xinwen.yahoo.com.cn/search.html?p=%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2Btiananmen&amp;ei=utf-8&amp;source=ysearch_www_filter_noresult</A>
+<br>['+'(339 times) tiananmen] :
+<A HREF="http://www.yahoo.com.cn/search?ei=UTF-8&amp;fr=fp-tab-web-ycn&amp;p=%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2Btiananmen&amp;meta=vl%3Dlang_zh-CN%26vl%3Dlang_zh-TW&amp;pid=ysearch&amp;source1=ysearch_www_hp_button" TARGET="_blank"> http://www.yahoo.com.cn/search?ei=UTF-8&amp;fr=fp-tab-web-ycn&amp;p=%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2Btiananmen&amp;meta=vl%3Dlang_zh-CN%26vl%3Dlang_zh-TW&amp;pid=ysearch&amp;source1=ysearch_www_hp_button</A>
+<br></font><font size=+1>
+<p>'+' is encoded for urls in '%3B'
+<br>
+<p>338 times '+' -&gt; 338*3 = 1014
+<br>339 times '+' -&gt; 339*3 = 1017
+<br>
+<p>tiananmen -&gt; 9 chars
+<br>
+<p>338 '+' and tiananmen -&gt; 1023 chars
+<br>339 '+' and tiananmen -&gt; 1026 chars
+<br>
+<p>We've reached and crossed the 1024 bytes limit for the value used for
+the filter. So this query does bypass it :)
+<br>
+<p>But this is quickly changing, between the time when I made those tests
+and now, they seem to have added more limits, and the query field seems
+to be restricted to 1024 chars. But if you feed the
+parameter directly into the URL is will still work (as per late february 2006).<br>
+<br>Also, I did not manage to make it work on Yahoo Images.</font>
+<br><hr width=44%>
+<font size=-1>
+(c) Loki 2006 &nbsp;&nbsp;
+<font color="#0000FF">nem0@nowhere.org</font> &nbsp;&nbsp;ahem! &nbsp;'linux'+'mail'</font>
+
+
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"essays.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>
+

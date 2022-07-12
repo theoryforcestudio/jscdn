@@ -1,0 +1,2257 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function ShowFixes() {
+return 'Alterations:\n'+
+'12Dec: URLs of HotBot,goo,Snap!, & SearchNZ altered. Checkboxes for Direct Hit & Ink.yahoo added. '+
+'30Sep: DN "&" bug fix. 21Sep: Opening speeded. 20-19Aug: link: for Google fix. 3 DejaN options added. 25Jul: PlanetSearch URL chng. Update for Google\'s removing of "domain:". '+
+'16Jul: Profusion[Google] added. Made public domain. 3Jul: Anzwers date in URL fixed. 1Jul: New URLs for Profusion + Matchsite(NLi) + MetaCrawler. 31May: Excite-AU/NZ URLs fixed. 14May: DejaNews URL altered; For HB, [url:A.htm] is now deleted. '+
+'22Apr: Google. Fixed [a|b]->[a b] (Infoseek & Yahoo). Returned to DejaNews\' fullest DB=1 database, from DB=2. '+
+'11Apr: Stack Ovfl in Nav3.04. HB text Bool/Simple bug fixed. 9Apr: Open Window accepts "./", "../". title:X added for Excite & removed for PlanetSearch. 30Mar: [!]->[&!]. DejaNews Simp->Bool. Text/Graphic option for HotBot & AVs. HotBot Boolops now: &,|,!. (38.2) '+
+'5Feb: Excite URLs improved. 28Jan: AV-Bool->Simp if no date. Added MetaCrawler; Profusion; Dates-html; \'Domain for\' font encodings; Fix for Lycospro which now allows "title:X" & "domain:Y.Z"; Restrict by domain with Lycos. .. . '+
+'15Jan: Simple->Bool for AV (for dates) & PubMed. AV-B2S-Dates checkbox added. Demo & bracketing(Maori) modes. Transl. of site->AV"host:" altered. '+
+'10Jan: "&!" not sent to Excite. Lowercase Bool-Ops "and", "or", "and not", "not" are allowed. '+
+'3Jan99: NL URL fix. 30Dec: Added 1. geo=[net.co]->qry=[domain:co & host:net.co &..] 2. Simp->Bool [a&b&!c&!d]->[+a +b -c -d] (for Infoseek,PlanetSearch,Yahoo [e.g. if using Dates+AV]). '+
+'19Dec98: size of results windows alterable in MSIE4. Spaces can be omitted around &,|,!. DejaNews ~s/title:"x y" expanded. '+
+'8-10Dec: For NorthernLight, "title:" & "url:" terms with their LHS bool ops are moved into their fields. '+
+'\nThis page tested only in (Win95): Netscape 4.61, 3.04, (& MSIE 5beta). Opera 3.6 can\'t run this page. Bug reports invited, e.g. fixable bugs in Netsc/IE in other OSs.';
+};
+
+
+/* --------------
+This page written by
+Craig Carey, Avondale, Auckland, NZ.
+Ph: (09)-828-3959 July 1999
+
+From 15 July 1999, this page is available under a public domain licence.
+Page is free.
+The notice in
+    http://www.ijs.co.nz/info/sn_refm.htm
+is obsolete.
+Hosting inside of NZ is not ideal.
+
+Copyright notice can be deleted.
+Persons adapting this for no profit can get free help.
+
+WARNING: Nothing else in this page's directory & the dirs above,
+ else 4kb limit of server (& browser) exceeded (= lockout)
+
+TO DO:
+
+Bug in URL fld of Northern Light with [strongnet &! site:strongnet.co.nz], 20-Dec-99
+Bug S2B on "+A B" for AltaV
+Bug: 5Jul: title:"x y" (Deja) conv badly if not Bool
+Unfixed Bug 21June: should not S2B [link:netcomputing.de -site:netcomputing.de +java windows]
+ with not-Bool, is-date, can-AV-S2B.
+
+Date bug? with AV-AU-Bool
+Check on AV-Simple Dates bug
+Was Bug in AV engine for [+link:h.c.n.nz/p/r -host:h.c.n.nz] musthave host->url
+jp enc to do or test
+Imitate? Gold Search?: frames (add: #frams, vert/horiz)
+Check on Anzwers domain "au,fr,uk" bug
+
+REPORT BUGS(!), esp. when in non-Win95 OS
+
+--------------- */
+
+// !Reference manual: http://developer.netscape.com/docs/manuals/javascript.html
+// Only 2 URL line options: (a) snooz.htm?cookie_string; (b) snooz.htm?s0=LHS&s1=RHS&b0...
+// MSIE/Nav: y=1 sometimes 2, y="a".split("a").length
+
+var fail = true;
+var nL, dg0=(1==0), dg1=(0==1);
+
+var nav, nav4up, major, bv4, msie, ie4up, js11up, IEW=1;  //**SNO
+function Is() { //developer.netscape.com/library/examples/javascript/browser_type.html
+var a=navigator.userAgent.toLowerCase()
+major = parseInt(navigator.appVersion,10);
+bv4 = (4<=major);
+nav = (0<=a.indexOf('mozilla') && 0>a.indexOf('spoofer') && 0>a.indexOf('compatible'));
+nav4up = nav && bv4;
+msie = (0<=a.indexOf("msie"));
+ie4up = msie && bv4;
+var opera = (0<=a.indexOf("opera"));
+js11up = (nav && 3<=major) || (msie && bv4) || opera;
+return;
+};
+function ale(s) { Is(); return (nav && 3>=major ? "\n"+s : s); };
+function al(s) { alert(ale(s)); };
+function con(s) { return confirm(ale(s)); };
+function jsVer11() { Is(); return js11up; };
+function jsVerErr() { al("Error: Javascript 1.1 (of Navigator 3.0+, IE 4.0+) is not available"); };
+function jsOK() { Is(); { if (!js11up) jsVerErr(); }; return js11up; };
+
+function WinOpen(url) { return WinOpen2(url,""); };
+function WinOpen2(url,nam) {
+var x="", f=document.forms[1];
+Is();
+if (ie4up && 1==IEW || 2==IEW) {
+FIE();  var iW=parseInt(f.iW.value,10), iH=parseInt(f.iH.value,10);
+if (-9999<iH) x += ",height="+(bv4 ? (screen.availHeight-iH) : iH);
+if (-9999<iW) x += ",width=" +(bv4 ? (screen.availWidth -iW) : iW);
+// IE: innerHeight is document.body.clientHeight but no w.outerheight
+// IE: directorybar/personalbar prev state = ?
+document.forms[0].newurl.value=L(x,","," ");
+};
+
+if (nav4up) x += ",personalbar="+((window.personalbar.visible) ? "yes" : "no" )+
+",copyhistory=yes"
+else if (ie4up) x += ",replace=true";
+
+x = "toolbar=yes,location=yes,directories=no,status=yes,menubar=yes," +
+"scrollbars=yes,resizable=yes" + x;
+
+var w = window.open(url, (""==nam || "_"==nam.charAt(0) ?
+"w"+((Math.random()+"w234567890").substring(2,10))+nam : nam), x);
+if (null==w) al("Browser failed to open window");
+return w;
+};
+
+function FIE() { var f=document.forms[1]; FIE0(f.iH,""); FIE0(f.iW,""); };
+function FocC(x) { var t=x.value; var s=L(t,' ',''); if (t!=s) x.value=s; };
+function FIE0(x,de) {
+if (!jsVer11()) return;
+FocC(x); var v=x.value; if (""==v) return;
+var n=parseInt(v,10);
+if (v!=""+n) x.value=de;
+};
+
+function NewWinUpd(t) {
+var u=location.href, j=0;
+while ("."==t.charAt(0)) { // "../"
+u=u.substring(0,u.lastIndexOf("/"));
+t=t.substring(1,t.length);  j=1;
+};
+return (1==j || t=="" ? u+t : ((1<=t.indexOf("://") || 0==t.indexOf("file:/")
+|| 1<=t.indexOf(":\\")) ? t :
+(0==t.indexOf("ftp.") ? "ftp://" : "http://")+t ));
+};
+
+function L(s,p1,p2) { // Replace substrs
+var h, k=0, t="", tru=(""!=s && ""!=p1);
+while (tru) {  // A!: t==L(s[0..k-1]), ""<p1
+h = s.indexOf(p1,k); // ""!=s for Nav2.02
+if (-1==h) break;
+t += s.substring(k,h) + p2;
+k = h + p1.length;
+};
+if (0==k) return s
+else return t + s.substring(k,s.length);
+};
+
+//function rpL2(s,p1,p2,q1,q2) { { if (null==q1) al("ERR74"); }; return L(L(s,p1,p2),q1,q2); };
+
+function tr(s) { // Trim
+var t="", k=0, g=s.length, tru=(""!=s);
+while (0<g && " "==s.charAt(g-1)) g--;
+while (k<g && " "==s.charAt(k)) k++;
+while (tru) {  // A!: t = tr2(s[0..k-1])
+h = s.indexOf("  ",k);
+if (-1==h || h>=g) break;
+t += s.substring(k,h)+" ";
+k = h+2;
+while (" "==s.charAt(k)) k++;
+};
+return t + s.substring(k,g);
+};
+
+function trLR(s) {
+if (s==null) al("Err: trLR got null arg");
+var h=s.length-1, k=0;
+while (h>=0 && " "==s.charAt(h)) h--;
+while (k<=h && " "==s.charAt(k)) k++;
+return (k>h ? "" : s.substring(k,h+1));
+};
+
+
+function clean(s) { return L(L(L(L(s,"\t"," "), A0," "), "\n"," "), "\r"," "); };
+function trLRc(s) { return trLR(clean(s)); };
+
+function unesc(s) { return unescape((0<=s.indexOf("%20") ? s : L(s,"+","%20"))); };
+function e(s) { return L(L(L(escape(s), "+","%2B"), "%20","+"),"/","%2F"); };
+function e_tr(s) { return e(tr(s)); };
+//  escape() does not alter: (*,@,-,_,.,+,/). Not OK:+,/
+function e2(s) { return L(L(L(L(e(s),"%5B","["), "%5D","]"), "%28","("), "%29",")"); };  //is slow
+
+function es2(s) { return L(L(escape(s),"/","%2F"), "+","%2B"); };
+
+var fD, fM, fY, fDS, fYf;
+function Datz(M) { // s,d,m,y
+if (!jsOK()) return 0;
+var zz="";
+var f=document.forms[1];  var y=f.DY;  var eY=y.selectedIndex;
+var qY=(1<=eY), qY0=(0==eY);
+if ('yf'==M) {
+fYf=eY;
+if (qY) fY=eY; else if (qY0) y.selectedIndex=-1;
+return null;
+};
+var d=f.DD, n=f.DM;
+var dv0=(""==d.value), ns0=(n.selectedIndex<0), yM=("y"==M);
+var clr=(!qY && ("s"==M || yM && (1<=fYf || !(dv0 && ns0) || fY<=0)));
+if ("s"!=M && !clr) {
+if (dv0) d.value = fD;
+if ("d"!=M && ns0) n.selectedIndex = fM;
+if (yM && fYf<=0 && (dv0==ns0) && (qY0 || qY && eY==fY)) {
+if (qY0) { y.selectedIndex = fY; eY=fY; };
+f.DS.checked = fDS;
+if (qY0) zz="Y";  else zz="y";
+} else		zz="*ys";
+};
+var eD=parseInt(d.value,10), eM=n.selectedIndex;
+var qD=(1<=eD), qM=(0<=eM);
+if (!clr) {
+if (!(qD && eD<=31 && eD+""==d.value)) d.value = fD;
+if ("d"!=M && !qM) n.selectedIndex = fM;
+};
+if (qD) fD=d.value;
+if (qM) fM=eM;
+var a = ((qD || qM) && !qY && !yM), c=(qD && qM);
+if (a || c) {
+fDS = (a || "s"==M && !qY ? false : f.DS.checked);
+if (c && qY) fY=y.selectedIndex;
+};
+if (clr) {
+d.value="";
+n.selectedIndex = -1;
+f.DS.checked = false;
+};
+//f.ta1.value=M+':'+fD+','+(12-fM)+','+(2000-eY)+'('+(2000-fY)+';'+
+//			(fYf)+'):'+fDS+"; "+zz+" d0="+dv0+",n0="+ns0+";"+clr+" --"+nL+f.ta1.value;
+if (0==eY) y.selectedIndex=-1; // to other blank for onChange
+if ("s"==M) return (eY<=0 ? 1910 : y.options[eY].text-0);
+return null;
+};
+
+var QuA=" &|~^!()*-+@", QuB=unescape("@%14%15%16%17%18%19%1A%1B%1C%1D%1E"); //20..30,fromCharCode !in Nav3
+function Qu0(u,Enc) { //Eg. [A|B@ ] -> [A@_@B@_@@@]
+var g, v="", c, x;
+if (Enc)
+for (g=0; g<u.length; g++) {
+c=u.charAt(g);
+x=QuA.indexOf(c); //For "|"->" OR ",...
+v += (-1==x ? c : QuB.charAt(x))+"@"; }
+else
+for (g=0; g<u.length; g += 2)
+if ("@"==u.charAt(g+1)) {
+c=u.charAt(g);
+x=QuB.indexOf(c);
+v += (-1==x ? c : QuA.charAt(x));
+} else
+{ v += u.substring(g,u.length); break; };
+return v;
+};
+function Quo(s) { return Quot(s,2); };
+function Quot(s,m,pre) { // 1:Encode, 2:Decode
+//  3: [+title:"A B" C]->[+title:A +title:B +"A B" C], for Inktomis
+var TI=(3<=m), T4=(4==m);
+var L1 = (TI ? (T4 ? pre : "title:") : ''), AN=(T4 ? " &" : " AND");
+var k=0, h=-9, h2, t="", u, v, out=true, Lq=L1+'"', Pb, P, sL=s.length;
+var Lp=(TI ? L1 : Lq);
+while (k<s.length) {
+h2=h;
+h = s.indexOf((out ? Lq : '"'),k);  if (-1==h) h=sL;
+u = s.substring(k,h);
+if (out) {
+t += u;
+k = h+Lq.length;
+} else {
+u = trLR(u);
+if (!TI) {
+t += Lp + Qu0(u, 2!=m);  if (h<sL) t += '"';
+} else {
+Pb = "+"==s.charAt(h2-1) && !Bo;  P = (Pb ? " +" : " ");
+v = u.split(" ");  u ='"'+u+'"';
+if (v.length<2) t += Lp + u
+else if (!Bo) t += Lp + v.join(P+L1) + P+u
+else t += "("+ Lp + v.join(AN+P+L1) +AN+" "+u+")";
+};
+k = h+1;
+};
+out = !out;
+};
+if (!out && h<sL) t += Lp;
+//if (4==m) al("Quo("+s+")=["+t+"]\n u=["+u+"], k="+k+", h="+h+", t=["+t+"], out="+out);
+return t;
+};
+
+function de_par(s,m) { // A! (s=tr(s) && " "s around parens); Strips (): "(((X) Y))"->"(X Y)"
+var nch, j, z, t, d=(3==m ? 2 : m);
+while (true) { //eg. d=1:"()"->"", d=2:"(X)"->"X"; m=3:logic
+nch = true;  z = s.split(" ");
+for (j=0; j<z.length-d; j++) if ("("==z[j] && ")"==z[j+d]) //incl. [,(,(,),]
+{ z[j]=""; z[j+d]=""; nch=false; };
+if (m<3)
+for (j=0; j<z.length; j += Math.max(1,z.length-1))
+{ t = z[j]; if ("&"==t || "|"==t || ("&!"==t && j!=0)) { z[j]=""; nch=false; };	}; //***
+if (nch) break; //only exit if no change after last tr.
+s = tr(z.join(" "));
+};
+if (1==d) { t = s; s = de_par(s,2); };
+return s; //A! s=tr(s)
+};
+
+var taRows, taCols;  // globals (not 1st in time)
+
+function fta(r) { return !(1<=r && r<=500) };
+function Fix_RC(row,col) {
+var r = parseInt(row,10), c = parseInt(col,10);
+if (fta(r) && taRows!=null) r = taRows;
+taRows = (fta(r) ? 9 : r);
+if (fta(c) && taCols!=null) c = taCols;
+taCols = (fta(c) ? 68 : c);
+};
+function FixFRC() {
+with (document.forms[1]) {
+Fix_RC(rows.value, cols.value);
+if (rows.value!=taRows) rows.value = taRows;
+if (cols.value!=taCols) cols.value = taCols;
+};	};
+
+function GetCookie(name) {
+var s = document.cookie,  arg = (""==name ? Main("KyName") : name) + "=",  s2;
+var alen = arg.length,  clen = s.length,  k = 0;
+while (k < clen) {
+var h = k + alen;
+if (s.substring(k,h) == arg) {
+s2 = s.indexOf (";", h);
+return s.substring(h, (-1==s2 ? s.length : s2));
+};
+k = s.indexOf(" ", k) + 1;
+if (k == 0) break;
+};
+return "";
+};
+
+function setCookie(name, ev, expires, path) {
+var gc=GetCookie(name), N=name.length+1;
+var lost = document.cookie.length - (gc.length+N);
+var mxev = 3990-(lost+N), expd = new Date(), domain=null, secure=false, c;
+if (ev.length>mxev) ev=ev.substring(0,mxev);
+if (ev==gc) return;
+if (0<=path.indexOf(":")) path = "/"; //MSIE 4 only
+expd.setTime(expd.getTime() + expires);
+var K = (expires ? "; expires=" + expd.toGMTString() : "") +
+(path ? "; path=" + path : "") +
+(domain ? "; domain=" + domain : "") + (secure ? "; secure" : "");
+c = name + "=" + ev + K;
+document.cookie = c;
+if (ev!=GetCookie(name)) document.forms[0].newurl.value = "Can't write to cookie file";
+};
+
+function KyChk(n) { return ("kL"!=n); };
+function KyRad(n) { return false; };
+function KyText(n) { return ("cols"!=n && "rows"!=n && null!=n); };
+
+function Save_Ky(m) {  // retns false if failed. Silent if (m==0)
+if (dg1) al("saving form to cookie:");
+
+var f=document.forms[1], e, et, en, en2, ev, chk, n, cL="?v=0&rows=", cR="", k, ok="", maxky= 3866; //3866: 980716
+
+if (null==f.ta1) ok="2"
+else f.ta1.blur(); // blur fixes Nav4.05 bug, textarea cu unLoad was != && older than visible_ta1, 28Apr98
+
+if (""==ok)
+for(k=0;k<f.elements.length;k++)
+if (null==f.elements[k]) ok="1"  //Nav4.05, unLoad too soon
+else if ("ta1"==f.elements[k].name &&  //Nav3.04 reload & no ta1
+!((f.rows!=null) && (f.ta1!=null))) { ok="5"; break; } // Nav3.04 needed?
+
+if (""==ok) {
+chk="";
+cL += f.rows.value + "&cols=" + f.cols.value + "&";
+for (i=0; i < f.elements.length; i++) {
+e = f.elements[i];  // was crashes here
+if (e == null || null==e.name) ok="20";
+if (""!=ok) break;
+et=e.type;  en=e.name;  en2=en.substring(0,2);  ev=e.value;
+n = "&" + en2 + "=";
+if ("checkbox"==et) {
+if (KyChk(en)) cR += n+("on"!=ev && "off"!=ev ? ev : (e.checked ? "1" : "0"));
+} else if ("radio"==et) { if (KyRad(en)) cR += n+(e.checked ? "1" : "0");
+} else if ("text"==et || "hidden"==et) { if (KyText(en)) cR += n+escape(ev);
+} else if ("select-one"==et) cR += n + e.selectedIndex;
+chk += en2;
+};
+// 		*****************
+if (2==1) { var fz1=window.open("","j34ms"); fz1.document.write(chk); fz1.document.close(); }
+if (chk!="exinhoyiwcalalsngoNLauangodhplsksec2d2c1d1lyDNnzpuMSGLyakLfififiMCprBos2rocoavDDDMDYDSbutaLkgHgAsuredBdOdRiHiW")
+ok="3";
+
+// 		*****************
+};
+var cq;
+if (""==ok) {
+//Nav4.05 30May98 was =="on" ("off" is jic)
+var cqmL = maxky-cL.length-cR.length-2;
+cq = Main("q=",cqmL);
+//**
+if (!MqFail) { }
+else if (0==m) {
+cq = Kyta1(); if (cq.length>cqmL) cq = cq.substring(0,cqmL);
+} else {
+ok="30";
+if (0!=m) Main("A", "Warning: The form's data is not being saved to the cookie."+
+'\n\nEither there is no visible data in the textarea field, or the form is '+
+'bad, or the query data equals "on", or "off".\n\n');
+};	};
+
+if (""!=ok) {
+
+if ((1==m || dg0) && "30"!=ok) al("Form is bad. Data not saved to cookie. (Error "+ok+")");
+return false;
+};
+
+var c = (cL + "q=" + cq) + cR;
+
+cL=location.pathname;
+cL=cL.substring(0,cL.lastIndexOf("/"));
+   setCookie(Main("KyName"), c, 120*(24 * 60 * 60 * 1000), cL); //SNOOZ/MEDLINE ****
+// www.ijs.co.nz/
+return true;
+};
+
+var kyL, demo, ms0,ms1,mb0,mb1;
+
+var ky, kyJ, u0, u1, LoadKy;
+
+function xCut(s,e) {
+var h=s.indexOf(e), L1=s.length;  if (-1==h) h=L1;
+u0=s.substring(0,h);  u1=s.substring(h+e.length,L1);
+};
+function KyP(K,m) {
+if (kyJ >= K.length || !(m == u0)) return "";
+kyJ++;
+var z = u1;
+if (kyJ != K.length) xCut(K[kyJ],"=");
+return unesc(z);
+};
+
+function Load_Ky_Set_Globals(d) {
+// Assigns taRows, taCols.  Form may not exist.
+var c, r, f=document.forms[1];
+if (LoadKy) {
+if (dg1) al("Reading cookie data");
+ky = GetCookie("").split('&');
+};
+demo=false;  kyL=null;  r=location.search;
+if (4<r.length) { // maori|demo
+kyL = r.substring(1,r.length).split("&");
+demo = (27 <=kyL.length);
+if (demo) {
+if (4<=ky.length) { xCut(ky[3],"="); kyL[3] += nL+"-- " + u1; }; //ta1
+ky=kyL; kyL=new Array();  // not: kyL.length=0, which kills ky also.
+};	};
+
+ms0=""; ms1="";  mb0=""; mb1="";
+var sss="sss In Load_KySG, LoadKy="+LoadKy+",  RC ";
+if (LoadKy) { // **
+if (ky.length < 3) { ky = new Array("?v=1","rows=","cols="); };
+kyJ = 1;  xCut(ky[kyJ],"=");
+r = KyP(ky,"rows");
+c = KyP(ky,"cols");
+sss+="from Ky";
+} else{
+sss+="from form";
+r=f.rows.value; c=f.cols.value;
+};
+Fix_RC(parseInt(r,10),parseInt(c,10));
+};
+
+function AddToEnds() {
+if (null==kyL || kyL.length == 0) return;
+kyJ = 0;  xCut(kyL[kyJ],"=");
+ms0 = KyP(kyL,"s0");  if (""!=ms0) ms0 += " ";
+ms1 = KyP(kyL,"s1");  if (""!=ms1) ms1=" "+ms1;
+mb0 = KyP(kyL,"b0");  if (""!=mb0) mb0 += " ";
+mb1 = KyP(kyL,"b1");  if (""!=mb1) mb1=" "+mb1;
+};
+
+function Put_Ky_Into_Form() {
+
+var f=document.forms[1], e, et, en, i, k, c1, c2, x, x2;
+//al("PutKyF: LoadKy="+LoadKy+",  cookie.ta1 ='"+x+"';\n\n kyJ="+kyJ); // +", ky.length="+ky.length+".\nky="+ky); // **
+
+if (taRows==null || taCols==null) {
+al("Put_Ky:Fail1 (File came from Netscape cache?): taRows="+taRows+", taCols="+taCols);
+taRows=f.rows.value; taCols=f.cols.value; };
+
+if (null==f.ta1) al("Load failed: No query field");
+else if (LoadKy) {
+if (ky == null) { al("Re-loading cookie data...");  Load_Ky_Set_Globals(1);  }; // **
+f.rows.value = taRows;
+f.cols.value = taCols; // A!: kyJ==3 **SNO
+x = KyP(ky,"q");
+f.ta1.value = (null==x || "null"==x || "undefined"==x || ""==x ? "?" : x);
+
+for (i=0; i < f.elements.length; i++) {
+if (kyJ >= ky.length) break;
+e = f.elements[i];
+c1=ky[kyJ]; k=c1.indexOf("="); if (0>k) k=c1.length;
+c2=c1.substring(k+1,c1.length); c1=c1.substring(0,k);
+et=e.type;  en=e.name;
+if ("checkbox"==et) {
+	if (KyChk(en)) {
+		if("0"==c2 || "1"==c2) e.checked=("1"==c2)
+		else e.value = c2;
+		kyJ++;
+	};
+} else if ("radio"==et) {
+if (KyRad(en)) {
+if ("1"==c2) e.checked=true;
+kyJ++;
+};
+} else if ("text"==et || "hidden"==et) {
+if (KyText(en)) {
+e.value = unescape(c2);
+kyJ++;
+};
+} else if ("select-one"==et) {
+x = parseInt(c2,10);
+if (-1<=x) {
+e.selectedIndex = x;
+kyJ++;
+};	};	};	};
+Datz("s");
+if (f.rows.value != taRows) al("Put_Ky:Fail2:rows!=taRows, rows.value="+
+f.rows.value+", taRows="+taRows+", \nta1="+trunc(f.ta1.value,500)) // <-- delete
+};
+
+var ROpL, ROpR;
+var PuLd, PL1;
+
+function rpNS(s,op1,op2, M, EifDO) {
+EifDO=true; //: 'Erase Op:Url If Deleting Op'
+// -1:"-title:", 0:(del trail "/"), 1:site, 3: -link, 2: +link, 7:PubMed, 6:site:->AV
+// 20:returns PuLd = all leftop+prefix+arg
+var j, x, u, xtb, op2b, u01, p, q1, q0b, Slash, IsDm, Dm;
+x = s.split(op1);    // Eg. op1="url:", s="url:a.nz/b  c url:d" -> (0=>"", 1=>"a.nz/b c", 2=>"d")
+if (x.length <= 1) return s;
+s = x[0];
+for (j=1; j < x.length; j++) {
+xCut(x[j]," "); //u0,u1
+xtb = ((""!=x[j] && " "==x[j].charAt(x[j].length-1)) ? " " : "");
+if (7==M) { //title:X -> X[TI]
+u0 = u0 + op2;
+} else {
+op2b = op2;
+if (0<=M && ""!=u0 && "/"==u0.charAt(u0.length-1)) u0=u0.substring(0,u0.length-1);
+if (20==M) {
+ROp(s); if (""!=ROpR) s=ROpL;
+PuLd += (""==PuLd ? "" : " ") + ROpR + u0;
+} else if (2<=M) { // 980601-HotBot: "-url:x.y/z" -> "" (or "-x.y/z")
+p = (u0+"/").indexOf("/");
+q1 = u0.indexOf(".",1);
+q0b = ("."==u0.charAt(0));
+Slash = (u0.length!=p);
+if (3==M) {  // -
+if (Slash) { if (!EifDO) op2b="-"; else { op2b=""; u0="" };	};
+} else {
+IsDm = (1<=q1 && q1<p);
+if (IsDm) { Dm = u0.substring(u0.lastIndexOf(".",p-1)+1,p);
+IsDm = (2==Dm.length || 0<="com edu gov int mil net org".indexOf(Dm));
+};
+if (2==M) {  // +
+if (IsDm || (q0b && 2<=p)) { if (Slash) u0=u0.substring(0,p); }
+else { if (!EifDO) op2b=""; else { op2b=""; u0=""; };	};
+} else if (8==M) {  // Google
+if (!(IsDm || (q0b && 2<=p))) { op2b=""; u0="";
+};	};	};	};
+if (6!=M) u0 = op2b + ((EifDO && (""==op2b || " "==op2b)) ? "" : u0);  //creating "& &"s etc. for dyad()
+else { // site: ->... AV
+u01="domain:"+u0.substring(1+u0.lastIndexOf("."),p);
+if (!IsDm) u0 = u01
+else if (Bo) u0 = "("+u01+" & host:"+u0+")"
+else { ROp(s); u0 = ("+"==ROpR ? u01+" "+ROpR : "")+"host:"+u0;
+};	};	};
+s += u0+" "+u1+xtb;  // multip trail " "
+};
+return s;
+};
+
+function ROp(s) {
+var j, L1=s.length;
+while (2<=L1 && "  "==s.substring(L1-2,L1)) L1--;
+for (j=L1-3; j<=L1-1; j++) {
+ROpR = s.substring(j,L1);
+if (0<="@+@-@& @| @&! @! @~ @^ @".indexOf("@"+ROpR+"@")) {
+ROpL=s.substring(0,j);
+return;
+};	};
+ROpR = "";
+};
+
+function Pull(pL,pre) { //Results in vars PuLd, PL1
+PuLd = "";  PL1 = rpNS(pL, pre, " ", 20, true);
+};
+function NLPull(pL,pre) {
+Pull(tr(pL),pre);
+return cp(tr(NLEnglBool(BoolFix(FixAfterRpNS(PuLd)))));
+};
+
+function rpdU(s,op1, EifDO, M) {
+if (0==M || EifDO) return rpNS(s,op1,"", M, EifDO);
+else return L(s,op1,"");
+};
+var trb4="", trc4="";
+function BoolFix(s) { // A!: result=tr(result)
+var sL, TS;
+s = tr(s);
+if (s==trb4) {
+return trc4; };
+trb4=s;
+while (true) {
+while (true) { sL = s.length;
+s = L(L(L(L(s, "( &","("), "( |","(" ), "& )",")"), "| )",")" );
+s = L(L(s, "( ~ ","( "), "~ )",")" );
+s = L(L(L(L(s, "& &","&"), "| |","|"), "& |","|"), "| &","|" );
+s = L(L(L(L(s, "& ~ ","& "), "~ &","&"), "| ~ ","| "), "~ |","|" );
+s = L(L(s, "~ &!","&!"), "&! ~ ","& ");
+s = L(L(L(L(s, "& &!","&!"), "| &!","&!"), "&! |","|"), "&! &","&" );
+if (0<="& | &! ! ( )".indexOf(s)) s="";
+if (s.length == sL) break;
+};
+sL = s.length;
+TS = s;
+s = de_par(s,1); // s=tr(s) in, so s=tr(s) out
+if (s.length >= sL) break;
+};
+trc4=s; return s;
+};
+function FixAfterRpNS(s) { // "VA-503+ - - - - - + +" -> "VA-503+"
+return L(L(L(L(" "+s+" ", " + ", "  "), " - ","  "), " + ", " "), " - "," ");
+};
+function cp(s) { return Quo(L(L(s, "( ","("), " )",")")); }; // A!:tr'd
+
+function FixHotZ(QH,EifDO) {
+QH = L (QH, "site:","host:");
+QH = rpNS(QH, "host:","domain:", 1, false);
+QH = rpNS(QH, "-url:","-domain:", 3, EifDO);
+QH = rpNS(QH,  "url:","domain:", 2, EifDO);
+QH = rpNS(QH, "-link:", "-linkdomain:", 3, EifDO);
+QH = rpNS(QH, "link:", "linkdomain:", 2, EifDO);
+return L(QH, "domain:.", "domain:"); // fixes "link:.X"
+};
+function fix_2_simp(s, EifDO) { // res tr'd
+s = rpdU(L(s,"linkdomain:","link:"), "link:", EifDO, 0);
+s = rpdU(s, "domain:", EifDO, 0);  // after linkdomain:
+return BoolFix(FixAfterRpNS(s));
+};
+function fix_title(s) {
+return L(L(rpNS(rpNS(s, "&! title:","", -1,true), "-title:","", -1,true), "+title:","+"), "title:", "");
+};
+
+function FixC0(x) {
+var t=x.value, k;  var s=L(t," ","");
+while (true) {
+k=s.indexOf(".");
+if (0==k) s=s.substring(1,s.length)
+else { { if (-1==k) s=s.toLowerCase(); }; break;
+};	};
+if ("0"==s || "1"==s) s="";
+if (t!=s) x.value = s;
+};
+function FixC() {
+if (!jsVer11()) return;
+var f=document.forms[1];
+FixC0(f.d1);
+FixC0(f.d2);
+FixC0(f.Lk);
+if (null!=f.c1 && ""==f.d1.value && f.c1.checked) f.c1.checked=false; //Nav3.04 980716
+if (null!=f.c2 && ""==f.d2.value && f.c2.checked) f.c2.checked=false;
+};
+
+var c1,c2,dor,dand,nad2,Bo;
+var d1,d2;
+function nadk(k) { return (0==k ? nad2 : (1==k ? d1 : d2)); };
+
+function onz(s,pre,k) { return onzb(s,pre,k,Bo); };
+
+function Atom(s,c) { return (0<=s.indexOf(" ") ? "("+c+s+c+")" : s); };
+
+var onzA;
+function onz1(d) { // no leading "."
+var L1 = d.length, h = d.lastIndexOf("."), u="domain:";
+var f = (1<=h && h<L1-1);
+onzA=(f || h==L1-1 ? "host:"+d : u+d);
+return (f ? u+d.substring(h+1,L1) : "");
+};
+function onz2(a,b,boo) {
+return (!boo ? (""!=b ? "+"+b+" " : "")+"+"+a : (""!=b ? b+" & " : "")+a); };
+
+function onzb(q,pre,k,boo) {
+if (""==q || !dor) return q;
+var U=dand, c1k=c1, f1=false,f2=false, a1,a2, b1="",b2="", e1,e2;
+if (1<=k && k<=2) { U=false; c1k=(1==k); };
+if ("AV"==pre) { b1=onz1(d1); a1=onzA; b2=onz1(d2); a2=onzA; }
+else { a1=pre+d1;  a2=pre+d2; };
+e1 = onz2(a1,b1,boo); e2 = onz2(a2,b2,boo);
+return (!boo ? (U ? "E" : (c1k ? e1 : e2)+" "+q) :
+(U && ""!=b1 && b1==b2 ? b1+" & ("+a2+" | "+a1+")" :
+(U ? "("+e2+" | "+e1+")" : (c1k ? e1 : e2))) + " & "+Atom(q,""));
+};
+
+// www.yahoo.com/Regional/Countries/
+var ydms=".ca.Canada.uk.United Kingdom.au.Australia.nz.New Zealand.it.Italy.cn.China.ie.Ireland.in.India"+
+".de.Germany.fr.France.es.Spain.jp.Japan.br.Brazil.nl.Netherlands.mx.Mexico.tw.Taiwan.se.Sweden"+
+".sg.Singapore.za.South Africa.ch.Switzerland.my.Malaysia.dk.Denmark.il.Israel.th.Thailand"+
+".ru.Russia.kr.Korea, South.be.Belgium.ar.Argentina.gr.Greece.ph.Philippines.id.Indonesia"+
+".no.Norway.tr.Turkey.is.Iceland.at.Austria.us.United States.fi.Finland.pt.Portugal.pl.Poland"+
+".cr.Costa Rica.cz.Czech Republic.pk.Pakistan.gb.Great Britain.co.Colombia"+
+//Following Was not in Yahoo
+".hu.Hungary.hr.Croatia.ro.Romania.si.Slovenia.ee.Estonia.sk.Slovakia.lt.Lithuania.lv.Latvia.",
+excibad=" ie in de za ch dk il th ru kr be gr ph no tr is at us fi pl cr cz pk gb hu hr ro si ee sk lt lv ";
+
+function yUSdm(s) {
+var k = ydms.indexOf("."+s.toLowerCase()+".");
+if (0<=k) { k+=2+s.length; s=ydms.substring(k,ydms.indexOf(".",k)); };
+return s;
+};
+
+var LkE, LkV, LkCN, ZT, ZTall;
+function get_LkE_LkV_LkCN_ZT_ZTall(Lk) {		//not tested, no
+LkV="";  LkE="";  LkCN="";  ZT="";  ZTall=false;
+if (""==Lk) return;
+u1=Lk;
+var E="", V="", h, b;
+while (""!=u1) {
+xCut(u1,",");
+h=u0.length;
+if (3==h && 0<=",jp0,jp1,jp2,jp3,jp4,jp5".indexOf(","+u0)) { if (""==ZT) ZT=u0.substring(2,3); }
+else if ("china"==u0) { if (""==LkCN) LkCN=u0; }
+else if (h<=2) { if (""==E) E=u0; }
+else if (""==V) V=u0;
+};
+if (""!=ZT) {
+h=(ZT-0);
+ZT="zip-translator.dna.affrc.go.jp:30"+ (h % 3) +"01/-_-http://";
+// http://lsd.pharm.kyoto-u.ac.jp:10085/-_- #chars->gifs
+ZTall=(h>=3);
+if (""==V+E) E="jp";
+};
+if (""==E) E =
+("sjis"==V || "eucjp"==V || "jaauto"==V || "jis"==V ? "jp" :
+("euckr"==V ? "kr" :
+("cp1251"==V || "koi8r"==V || "iso88595"==V ? "ru" :
+("big5"==V || "euccn"==V ? "cn" : "")))); //gb=GBNavy
+
+if (""==V) V =
+("jp"==E ? "sjis" :
+("kr"==E || "kp"==E || "ko"==E ? "euckr" :
+("ru"==E ? "cp1251" :
+("cn"==E || "zh"==E ? "big5" : ""))));
+LkE=E; LkV=V;
+};
+
+function ptd(c,d) { return (c ? (0<=d.indexOf(".") ? d : "."+d) : ""); };
+function EnglBool(s) { return tr(L(L(L(L(s,"&!"," NOT "),"&"," AND "), "|", " OR "), "!"," NOT ")); };
+function Deja990930Bool(s) { return tr(L(L(s,"&!"," ! "),"&"," AND ")); };
+function NLEnglBool(s) { return tr(L(L(L(s,"&!"," NOT "), "|", " OR "), "!"," NOT ")); };
+
+function n1z(dm,nd) {
+var s=(""==dm ? "" : ", dm="+dm)+(""==nd ? "" : ", >="+nd);
+return (""==s ? "" : "@"+s);
+};
+
+var BQB;
+function BQry(sA,s,m) {  // A! sA tr'd, & Qu enc'd
+ //Autodetect Bool, & can return "+" before s
+if (m<=1) {
+var t = " " + sA;
+var yS = false, yB = false, j;
+for (j=0; j<5; j++) if (0<=t.indexOf("&|()!".charAt(j))) yB = true;
+yB = yB || 0<=t.indexOf(" ~ ");
+yS = yS || 0<=t.indexOf(" +") || 0<=t.indexOf(" -") || (0<=sA.indexOf(" ") && !yB);
+BQB = (yB ? (yS ? '?1' : 'B') : (yS ? 'S' : '?2'));
+};
+if (1==m && ('B'==BQB || 'S'==BQB)) Bo=('B'==BQB);
+if (1<=m && -1==s.indexOf(" ") && (2==m || !Bo) && -1=="+-~^&|()!".indexOf(s.charAt(0)) && ""!=s)
+s = "+" + s;
+return s;
+};
+
+function B2S(s,Bo) { // A! s tr'd. A! res tr'd. Bool->Simp.
+if (!Bo || ""==s) return s;
+var t=s;
+t = L(L(" "+tr(t), " ! "," -"), " &! "," -");
+if (0<=t.indexOf(" | ")) t = L(t," | "," ");
+else t = (0<="+-".indexOf(t.charAt(1)) ? "" : "+")+L(t.substring(1,t.length)," & "," +");
+BQry(tr(t),"",0);
+if ('S'!=BQB) t=""
+else t=tr(t);
+//else if (1==m && S2B(t,1)!=s) { {if (fail) alert("*B2S-info*["+s+"]*"); t=""; }; **
+return t;
+};
+
+function S2B(q,m) { // Simp->Bool: q="+a b -c": 0=m:[a&(a|b)&!c]; 1=m:[a&!c]AV[wontsort]/PubMed[exact]
+q=tr(q); Pull(" "+q," -");  var s, b, c, mi=PuLd, rank=tr(L(" "+PL1," +"," "));
+Pull(tr(PL1),"+");
+b = (""==PuLd);  PL1=tr(PL1);
+if (""!=PL1) {
+//alert("q=["+q+"], mi=["+mi+"], rank=["+rank+"], PuLd=["+PuLd+"], PL1=["+PL1+"]")
+s = (b ? "" : L(PuLd," "," & ")) +(b || 0==m && ""!=rank && ""!=PL1 ?
+(b ? "" : " & ")+Atom(L(rank," "," | ")," ") : "");
+if (""!=mi) s = s+(""!=s ? " &! " : "! ")+L(mi," "," &! ");
+} else {
+c = q.charAt(0);
+s = tr(("-"==c ? "! " : "")+L(L(q.substring(1,q.length), " +"," & "), " -"," &! "));
+};
+//if (1==m) if (q!=B2S(s,true))...... Bug not fixed: AV errs in conv "+a b" to "a"
+return s;
+};
+
+var Qr0, Qr1, Qr2;
+function Qr() {
+if (Qr0) {
+Qr2 = L(L(L(L(L(" "+tr(Qr1)+" ", " &! "," -"), "title:", ""), " | "," "),  " & "," "), " ! "," -");
+Qr2 = rpNS(Qr2, " -"," ", 0, true); // alter "-X Y" to "Y"
+Qr2 = tr(Quo(L(" "+L(L(Qr2, "(",""), ")",""), " +"," ")));
+Qr0=false;
+};
+return Qr2;
+};
+
+var n,q,n1,r;
+
+function AltaV(QV,Bo,U1,U2,av1,avD,avB2S,DS,NoD,d0D,ndM,d0Y70,nd70,VBQr,usav,aualta,skali,gA) {
+var enc=(""==LkV ? "" : "&enc="+LkV);
+if (Bo) { av1=(av1 || avD); avD=false; };
+var avSD = !Bo && !NoD && avD;
+
+var Bo0=Bo, BoV, SD1=(avSD ? 2 : 0), QVD, t;
+QV = tr(rpNS(QV,"site:","", 6, false));
+if (Bo && NoD && !dand) { //to Simp if Poss
+t=B2S(QV,Bo);
+if (""!=t) { Bo0=false; QV=t;
+};	};
+QVD=QV;  BoV=Bo0;
+if (VBQr) { QV=S2B(QV,1); BoV=true; };
+
+var U1V=(BoV ? 0 : U1), U2V=(BoV ? 0 : U2),
+Vd = "&d0="+d0D+"%2F"+ndM+"%2F"+d0Y70+"&d1=",
+Vr = (BoV ? "&r="+e(Qr()) : ""),
+tg = (gA ? "" : "&text=yes");
+var j, k, m, eT=0, eD=4, eZ=8, eQ=12, eS=16, b, V = new Array(20);
+for (k=U1V; k<=U2V; k++) for (j=0; j<=SD1; j+=2) { m=j+k;
+b = (NoD || (0==j) && !BoV);
+V[m+eT] = (b ? "" : nd70);
+V[m+eD] = (b ? "" : Vd);
+V[m+eZ] = (!BoV || 0<j ? ".S" : ".B")+n1z("",V[m+eT]+(0<j ? " (buggy)" : ""));
+V[m+eQ] = cp((0==j ? onzb(QV,"AV",k,BoV) : onzb(QVD,"AV",k,Bo0)));
+V[m+eS] = "&q="+e(V[m+eQ]);
+};		// To AV 22Jul98:msg, de-indexed by 12Aug.
+
+var sq="pg=q"+enc, aq="pg=aq"+enc;
+
+if (usav) for (k=U1V; k<=U2V; k++) for (j=(av1 ? 0 : 2); j<=SD1; j+=2) { m=j+k;
+n1[++n] = "AltaVista"+V[m+eZ];
+q[n] = V[m+eQ];
+r[n] = ZT+"www.altavista.com/cgi-bin/query?";
+if (!BoV || 0<j)
+r[n]+= sq+tg+"&kl=XX"+V[m+eS]+(0<j ? V[m+eD]+"31%2FDec%2F99" : "")+"&act=search";
+else
+r[n]+= aq+tg+"&kl=XX&"+Vr+"&act=search"+V[m+eS]+V[m+eD];
+};
+
+if (aualta) for (m=U1V; m<=U2V; m++) {
+n1[++n] = "auAltaVista"+V[m+eZ];  q[n] = V[m+eQ];
+r[n] = ZT+"altavista.yellowpages.com.au/cgi-bin/query?";
+if (!BoV) r[n]+= "mss=simple&"+sq+"&what=web"+tg+"&kl=XX&locale=xx"+V[m+eS];
+else r[n]+= "mss=advanced&"+aq+"&what=web"+tg+"&kl=XX&locale=xx"+Vr+
+"&act=search"+V[m+eS]+V[m+eD];
+};
+if (skali) for (m=U1V; m<=U2V; m++) { // Telia gone by 16Oct98
+n1[++n] = "SkaliAV"+V[m+eZ];  q[n] = V[m+eQ];
+r[n] = ZT+"altavista.skali.com.my/cgi-bin/query?mss=";
+t = tg+"&what=web&enc=&kl=";
+if (!BoV) r[n]+= "simple&"+sq+t+V[m+eS];
+else r[n]+= "advanced&"+aq+t+Vr+V[m+eS]+V[m+eD];
+};	};
+
+function lushd(u,t,m,f) {
+	var s=u;
+	if (1==m) {
+		u=L(L(L(L(u,"host:link:", "host:"),  "link:host:", "link:"),
+				"url:link:", "url:"),  "link:url:", "link:");
+		u=L(L(L(L(u,"url:site:", "url:"),  "site:url:", "site:"),
+				"link:site:","link:"), "site:link:","site:");
+	};
+	if (0<=u.indexOf(":"+t)) {
+		u=L(L(L(u,"site:"+t,"site:"), "host:"+t,"host:"), "domain:"+t,"domain:");
+		u=L(L(u,"link:"+t,"link:"), "url:"+t,"url:");  //if (2!=m)
+	};
+	if (1==m && s!=u) {
+		u=L(L(u, "/ ", " "), "/"+nL, nL);
+		f.ta1.value=Quo(u)+"--"+u1;
+		f.ta1.focus(); f.ta1.blur(); //foc+blur for Nav4.5
+	};
+	return u;
+};
+
+function Look(t0,LkE) { return (""==LkE && 0<=",nz,au,".indexOf(","+t0+",") ? t0 : LkE); };
+function Vs(x) {
+if (0>x.selectedIndex) x.selectedIndex=0;
+return x[x.selectedIndex].value;
+};
+
+var s0; // no Nav3.04 stack ovflow on recurse for '+link:'
+var d0D, d0M, d0Y, d0Y2, NoD, d0Y70, W;
+var HSGG, EWM, s0S;
+var cnz, cau, cnzau, AVW, NoUL;
+var QS, usav, alta, VBQr, nd, nd70, U1, U2, U1B, U2B, QV, ndM;
+var JP, ZTA, t0, QP;
+var t3, QGo2, sm, H_MD, H_MDY, hq, ehq, hq2, ehq2, enad2, Hn1z, QH, QLyc;
+var Qwc, QE, s_wc, t2;
+var QY, yh, QX, GL;
+var NoL, NoU;
+
+var aualta,skali,anzw,hotb,snap,gotoc,yink,goo,info1,GL,ya1,
+	DN,exci,wc,NLi,medn,pla1,dh,lycos,nzexp,srnz,mc,prof,ms,gH,gA,nt;
+
+
+function StartSearches(f) {
+
+var t, k;
+if (msie) {
+	f.ta1.focus(); // jic for MSIE401
+	f.ta1.blur(); // jic
+};
+fillb(f,"s");
+xCut(f.ta1.value,"--");
+
+Bo = f.Bo.checked;
+s0 = Quot(u0, 1);
+s0 = tr(clean(lushd(s0, "http://", 1, f)));
+s0 = L(L(s0, ")", " ) "), "(", " ( ");  // for Excite's bug & BoolFix's de_par
+s0 = s0.toLowerCase();
+s0 = L(s0, "^","~"); // no DN ^ for BoolFix
+s0 = L(L(L(s0, "&"," & "), "|"," | "), "!"," ! "); // not ~. 981218
+s0 = L(L(L(" "+s0+" ", " and "," & "), " or "," | "), " not "," ! ");
+s0 = tr(lushd(s0, "www.", 2, f));
+s0 = BQry(s0,s0,1); //if(sbN) ..
+if (!Bo && (""!=ms0 || ""!=ms1)) s0 = ms0+s0+ms1;
+if (Bo  && (""!=mb0 || ""!=mb1)) s0 = mb0+s0+mb1;
+s0 = L(L(s0, "& !", "&!"), " !", " &!");
+
+d0Y2 = Datz("s");
+d0D = f.DD.value;  d0M = 12-f.DM.selectedIndex;
+NoD = (d0Y2<=1910), DS=f.DS.checked;
+if (NoD) { d0D=1; d0M=1; };
+d0Y = d0Y2 - (d0Y2>=2000 ? 2000 : 1900);
+d0Y70 = (d0Y2>=1970 ? d0Y : 70); //AV:>=1970,NL:>=1951
+W=(!DS||NoD);
+
+FixC();
+c1=f.c1.checked; c2=f.c2.checked;
+d1=f.d1.value; d2=f.d2.value;
+if (c1 && c2 && d1==d2) c2=false;
+if (c2 && !c1) { c2=false; c1=true; d1=d2; };
+if (!c1) d1="";
+if (!c2) d2="";
+
+dor = c1 || c2;  dand = c1 && c2;
+nad2 = (dor ? (dand ? d2+","+d1 : (c2 ? d2 : d1)) : "");
+cnz = ("nz"==d1 || "nz"==d2);  cau = ("au"==d1 || "au"==d2);
+cnzau = cau && cnz;  AVW=true;  NoUL=(NoU || NoL);
+
+var nanz = cnz || !(c1 && "nz"!=d1 || c2 && "nz"!=d2),
+delu = true, //DelURLifDeletingPrefixOp gone on 980722
+av1 = f.alta.checked && AVW,
+avD = f.altaD.checked,
+avB2S = f.avB2S.checked;
+
+aualta = f.aualta.checked && AVW;
+skali = f.skali.checked && AVW;
+anzw = f.anzwers.checked;
+hotb = f.hotbot.checked;
+snap = f.snap.checked;
+gotoc = f.gotoc.checked && W;
+yink = f.yi.checked && W;
+goo = f.goo.checked;
+
+info1 = f.infoseek.checked && W;
+GL = f.GL.checked && !dor && NoU && W;
+ya1 = f.yahoo.checked && NoL && W;
+
+DN = f.DN.checked && !dor && NoUL;
+exci = f.excite.checked && NoUL && W;
+wc = f.wc.checked && NoUL && W;
+NLi = f.NLi.checked;
+medn = f.pubmed.checked && !dor && NoUL; //&&Bo
+pla1 = f.planets.checked && !dor && NoUL && W;
+dh = f.dh.checked && !dor && NoUL && W;
+lycos = f.lycos.checked && NoUL && W;
+nzexp = f.nzexp.checked && (nanz || cnz && Bo) && NoUL && W;
+srnz = f.searchnz.checked && (nanz || cnz && Bo) && NoUL && W;
+mc = f.MC.checked;
+prof = f.prof.checked;
+ms = f.MS.checked;
+gH = f.gH.checked;
+gA = f.gA.checked;
+
+HSGG = hotb || snap || gotoc||yink || goo;
+EWM = exci || wc || medn;
+
+s0S = B2S(s0,Bo);
+
+if (""!=s0S && NoL && NoU && (ya1||GL||DN||EWM||pla1||nzexp||srnz)) { // del query not terms
+NoL = !((0<=s0S.indexOf("+link:") || 0<=s0S.indexOf("+linkdomain:")));
+NoU = !((0<=s0S.indexOf("+url:")));
+if (!NoL || !NoU) return;
+};
+
+QS = L(L(s0, "site:","url:"), "host:","url:");
+QS = rpdU(QS, "url:", delu, 0);
+QS = fix_2_simp(QS, delu); // tr'd for DN S2B B2S
+
+usav = av1 || avD;
+Qr0 = true;  Qr1 = L(QS, " ~ ", " & ");
+
+alta = (usav || aualta || skali);
+
+VBQr = (!Bo && !NoD && (avB2S || DS));
+
+n = -1;
+
+nd="";  nd70="";
+ndM="JanFebMarAprMayJunJulAugSepOctNovDec".substring(3*d0M-3,3*d0M);
+
+if (!NoD) { nd = d0D+"/"+ndM+"/"; nd70 = nd+d0Y70; nd += d0Y; }
+
+U1=(dand ? 1 : 0);  U2=(dand ? 2 : 0);  U1B=(Bo ? 0 : U1);  U2B=(Bo ? 0 : U2);
+
+if (alta || NLi || nzexp ) QV = L(L(s0, "linkdomain:", "link:"), "^","~");  // DN "^"
+
+get_LkE_LkV_LkCN_ZT_ZTall(f.Lk.value);
+
+JP = ("jp"==(""==LkE && dor && !dand && "jp"==d1 ? d1 : LkE));
+
+ZTA=(JP && !ZTall ? "" : ZT);
+
+if (alta) AltaV(QV,Bo,U1,U2,av1,avD,avB2S,DS,NoD,d0D,ndM,d0Y70,nd70,VBQr,usav,aualta,skali,gA);
+
+QP="";
+
+if (info1 || ya1 ||GL) {
+QP = L(L(L(s0, "host:","site:"), "linkdomain:","link:"), "domain:","site:");  // no linksite:
+QP = B2S(L(tr(QP)," ~ ", " & "), Bo);
+QP = L(QP, "|"," "); 	// no Info 'pipe's
+};
+if (info1 && ""!=QP) {
+t = tr(Quo(L(QP,"site:.","site:")));
+for (k=U1; k<=U2; k++) {
+t0 = Look(nadk(k),LkE);
+n1[++n] = "Infoseek";
+q[n] = onzb(t,"site:",k,false);
+r[n] = ZTA+("jp"==t0 ? "www.infoseek.co.jp" : "infoseek.go.com")+"/Titles?qt=" + e(q[n]) +
+"&col=WW&sv=" + t0.toUpperCase() + "&lk=noframes&nh=25";
+};	};
+
+if (HSGG || anzw || lycos) QLyc = FixHotZ(s0,delu);
+
+if (HSGG || anzw) {
+QH = 	L(QLyc, " ~ ", " & ");
+sm = "SM=" + (Bo ? "B" : "SC");
+H_MD = "&DM="+ d0M +"&DD="+ d0D;
+H_MDY = H_MD +"&DY="+ d0Y;
+enad2 = e(nad2);
+Hn1z = n1z(nad2,nd);
+QGo2 = BoolFix(FixAfterRpNS(QH));
+if (snap || goo || anzw) { t2=EnglBool(QGo2); hq = Quot(cp(t2),3); ehq = e(hq); };
+if (hotb) { hq2 = Quot(cp(L(QGo2, "&!", "!")),3); ehq2 = e(hq2);
+};	};
+
+if (snap) {
+	n1[++n] ="Snap"+Hn1z; q[n] = hq;
+	r[n] = ZT+"www.snap.com/search/power/results/1,180,home-0,00.html?KM="+ (Bo ? "b" : "o")+
+	"&KW="+ehq+"&AM0=m&AT0=w&AK0=&AN=1&NR=40&FR=f&PL=a"+
+	"&DR=1&FM="+d0M+"&FD="+d0D+"&FY="+d0Y2+"&TM=12&TD=31&TY=2010&XT=&DM="+enad2+"&LN=";
+};
+
+if (goo) {
+	n1[++n] ="Goo"+Hn1z;
+	t3=" "+t2;
+	if (0<=t3.indexOf(" +")||0<=t3.indexOf(" -")) t2=S2B(t2,0);
+	q[n] = Quot(cp(t2),3);
+	r[n] = ZTA+"www.goo.ne.jp/default.asp?MT="+ e(q[n]) + "&WTS=ink&"+sm +
+		"&DE=2&DC=25&AT0=words&AM0=SC&AW0=&AT1=words&AM1=MC&AW1=&AT2=words&AM2=MC&AW2=" +
+		"&DV=6&DU=years&date=range&DY="+d0Y+H_MD+"&DR=newer&RG=NA&RD=DM&Domain="+enad2+
+		"&Path=&FS=&_v=2&top_ver=expert&ES=1&OPs=MDR";
+};
+if (yink)
+	for (k=U1B; k<=U2B; k++) {
+		n1[++n] = "Yahoo Inktomi";
+		q[n] = Quot(cp(tr(EnglBool(onz(QGo2,"domain:",k)))),3);
+		r[n] = ZT+"ink.yahoo.com/bin/query?p=" + e(q[n]) + "&hc=0&hs=0";
+	};
+
+if (gotoc)
+	for (k=U1B; k<=U2B; k++) { //980625
+		n1[++n] = "GoTo";
+		q[n] = Quot(cp(tr(EnglBool(onz(QGo2,"domain:",k)))),3);
+		r[n] = ZT+"www.goto.com/d/search/?Keywords=" + e(q[n]);
+	};
+
+if (anzw) {
+t3 = (Bo && dand);
+t = "&radio_location=";
+for (k=U1B; k<=U2B; k++) {
+t0=(cnzau ? nad2 : (!t3 ? nadk(k) : ""));
+n1[++n] ="Anzwers"+n1z(t0,nd);
+q[n] = ((cnzau || !t3) ? hq : Quot(cp(tr(EnglBool(onz(QGo2,"domain:",k)))),3));
+r[n] = ZT+"www.anzwers.com.au/cgi-bin/process_search.pl?pageid=powersearch&query="+
+e(q[n])+"&query_type="+(Bo ? "boolean+phrase" : "any+of+the+words")+
+
+(cnzau ? t+"geographic&location=Australia+%26+New+Zealand&domain="
+: "&location=The+World"+t+"domain&domain="+(t3 ? "" : t0)) +
+
+"&radio_date=specific&beforeafter=after&month="+ndM+"&day="+d0D+"&year="+d0Y2+
+"&media_ext=&wf1_contain=must&wf1_the=words&wf1_query=&wf2_contain=must"+
+"&wf2_the=words&wf2_query=&radio_page=any&depth=&numperpage=25"+
+"&result_type=detailed&submit.x=1&submit.y=1"; //new on 981021
+
+if (cnzau || t3) break;
+};	};
+
+if (hotb) {
+	n1[++n] ="HotBot"+Hn1z; q[n] = hq2;
+	t0 = "&AM0=MC&AT0=words&AW0=&AM1=MN&AT1=words&AW1=&savenummod=2&DV=0&date=range&DR=newer"+
+			H_MD +"&DY="+ d0Y2;
+	if (!gH) {
+		r[n] = ZT+"hotbot.lycos.com/text/default.asp?" + sm + "&MT=" +ehq2+
+		"&DC=50&DE=2" + t0 + "&LG=any&FS=&RD=DM&Domain=" + enad2 +
+		"&RG=all&PS=A&PD=&search=SEARCH&RD=DM&BT=T&NUMMOD=2";
+	} else {
+		r[n] = ZT+"hotbot.lycos.com/?MT="+ehq2+
+		"&" + sm + "&LG=any" + t0 + "&FS=&RG=all&RD=DM&Domain=" + enad2 +
+		"&PS=A&PD=&DC=25&DE=2&SUBMIT=SEARCH&RD=DM&BT=H&NUMMOD=2";
+};	};
+
+if (exci || wc) {  // E&M fail for "-url:ac.nz ..."
+	QE = L(L(L(L(" "+Qr1+" ", " -ac.nz ", " "), "&! ac.nz", ""), " -ac.au ", " "), "&! ac.au", "");
+	Qwc = fix_title(QE);
+	QE = L(BoolFix(QE), "&!", "NOT");
+	Qwc = L(BoolFix(Qwc), "&!", "NOT");
+};
+
+if (exci) {
+	for (k=U1; k<=U2; k++) {
+		t0=nadk(k);
+		t = Look(t0,LkE);
+		t = ("nz"==t ? "au" : ("at"==t||"ch"==t ? "de" : t));
+		t2 = ZTA+("jp"==t||"uk"==t ? "www.excite.co."+t :
+		("nz"==t||"au"==t ? "www.excite.com."+t :
+		("de"==t ? "www.excite.de" :
+		("nl"==t||"fr"==t||"it"==t||"se"==t ? t+".excite.com" :
+		"search.excite.com")))) + "/search.gw?";
+		t3=(0<=excibad.indexOf(t0));
+		if (-1==t0.indexOf(".")) { // && !(t3 && Bo)) {
+			n1[++n] = "Excite";
+			q[n] = cp(!t3 ? QE : onz(QE,"",k));
+			nt=t0;
+			if (""!=t0) { n1[n]+=n1z(t0,""); nt="&c=web."+t0; };
+			if ("china"==LkCN)
+				r[n] = ZTA+"chinese.excite.com/search/search.dcg?search="+
+				e(q[n])+"&collection="+(""==t ? "china" : "web."+t)+"&look=default"
+			else
+				if (!("nz"==t0||"au"==t0))  // before 31 May 1999
+					r[n] = t2+"search="+e(q[n])+(""!=t ? "&lk=excite_"+t : "") +
+					nt+"&perPage=30&showSummary=true";
+					// &c=web for JP
+				else
+					r[n] = t2+(""!=t ? "look=excite_"+t : "")+"&search="+e(q[n]) +
+					"&submit3=Search"+nt+"&perPage=30";
+};	};	};
+
+if (wc) {
+for (k=U1B; k<=U2B; k++) {
+t0=nadk(k);
+if (-1==t0.indexOf(".")) {
+n1[++n] = "WebCrawler"; //"Magellan"
+q[n] = cp(EnglBool(onz(Qwc,"",k)));
+r[n] = ZT+"www.webcrawler.com/cgi-bin/WebQuery?search="+
+e(q[n])+"&showSummary=true&perPage=40";
+};	};	};
+
+if (DN) {
+	t0 = S2B(QS,1);
+	var QDN = (B2S(t0,true)==QS ? t0 : QS);
+	n1[++n] = "Deja News"+n1z("",nd);
+	var QDN = L(rpdU(QDN, "-title:", true, -1), "title:","~s "); // "&! ~s" ok but "-~s" bug
+	QDN = L(L(L(tr(QDN), " ~ ", " ^ "), '" ^ ', '" & '), ' ^ "', ' & "');
+	QDN = Deja990930Bool(QDN); // new: misencodes & misinterprets '&'
+	q[n] = Quot(Quot(cp(QDN),4,"~s "),4,"~a "); // AV's ~; OK for ~g too
+	// DBS-OP-sort added 18 Aug 99
+	// alter DB=2 to =1 21Apr99 // 14 May 99
+
+	r[n] = ZT+"www.deja.com/"+(f.dOP.checked ? "=dnc/" : "")+"[S0=00]/qs.xp?ST=PS&svcclass=dnyr&QRY="+e(q[n])+
+					"&defaultOp=OR&DBS="+Vs(f.dBS)+"&OP=dnquery.xp&LNG=ALL&subjects=&groups=&authors="+
+ 					"&fromdate="+ndM+"+"+d0D+"+"+d0Y2+"&todate=&showsort="+Vs(f.dR)+"&maxhits=100&threaded=1";
+};
+
+if (GL) { QY=QP;
+//QY = rpdU(QP, "link:", delu, 0);
+QY = fix_title(QY);
+QY = L (QY, "site:", "domain:");
+QY = rpNS(QY, "url:", "domain:", 8, true);
+QY = Quo(tr(FixAfterRpNS(QY)));
+for (k=U1; k<=U2; k++) {
+n1[++n] = "Google";
+q[n] = onzb(QY,"domain:",k,false);
+ 			r[n] = ZT+"www.google.com/search?q=" + e(q[n]) + "&num=35"; //&sa=Google+Search
+};	};
+
+
+if (medn) {
+var Qmd = L(QS, " ~ ", " & ");
+if (!Bo) Qmd = S2B(Qmd,1);
+Qmd = cp(tr(rpNS(L(Qmd, "&!"," NOT "), "title:", "[TI] ", 7, true)));
+n1[++n] = "PubMed"+n1z("",nd);  q[n] = Qmd;
+r[n] = ZT+"www.ncbi.nlm.nih.gov/htbin-post/Entrez/query?form=4&mode=0&db=m&term=" + e(q[n]) +
+"&dispmax="+(""==ZT ? "30" : "3")+
+(NoD ? "" : "&minpubdate="+d0Y2+"%2F"+d0M+"%2F"+d0D)+"&dopt=r";
+// see ../PubMed/linking.html
+};
+
+if (dh) {
+	n1[++n] = "Direct Hit";
+	q[n] = cp(B2S(tr(fix_title(QS)),Bo));
+	r[n] = ZT+"www.directhit.com/fcgi-bin/DirectHitWeb.fcg?service=web&type=srch&fmt=html&template=search&qry="+
+		e(q[n]) +"&submit.x=1&submit.y=1";
+};
+
+if (pla1) {
+n1[++n] = "PlanetSearch";
+q[n] = cp(B2S(tr(fix_title(QS)),Bo));
+r[n] = ZT+"www.planetsearch.com/?a=8&text=" + e(q[n]) +
+"&olda=1&count=25&b0=1&b1=1&sess=1&bw=0&sess=1&do.x=1&do.y=1";
+
+};
+
+// Bytesearch removed: null doc, doc cont no data 990329
+
+if (lycos) { //no regional on 24Jul98
+for (k=U1B; k<=U2B; k++) {
+n1[++n] = "Lycos";
+QLyc = L(BoolFix(FixAfterRpNS(rpdU(QLyc, "linkdomain:", delu, 0))), " ~ ", " NEAR ");
+q[n] = cp(tr(onz(QLyc,"domain:",k)));
+r[n] = ZT+"lycospro.lycos.com/cgi-bin/pursuit?mtemp=nojava&etemp=error_nojava" +
+"&npl=matchmode%3Dor%26adv%3D1&query=" + e(q[n]) + "&maxhits=40" +
+"&cat=lycos&npl1=ignore%3Dfq&fq=&lang=&rtwm=850&rtpy=50&rtpy=50" +
+"&rtfd=50&rtpn=15&rtpn=15&x=1&y=1";
+};	};
+
+
+if (ya1) {  // url,site,link. My/Yahoo big 'o=1&' bug 14Jun98
+QY = rpdU(QP, "link:", delu, 0);
+QY = L(L(QY, "site:","u:"), "url:","u:");
+QY = L (QY, "title:", "t:"); //unnec in 990124
+QY =  Quo(tr(FixAfterRpNS(QY)));
+if (JP) QY = tr(L(Qr(),'"',' '));
+// &h=s removes categ matches ("&y=n&za=default&h=s&g=0&n=60")
+
+if (cnzau) { //AU+NZ
+n1[++n] = "Yahoo"+n1z("aunz","");  q[n] = QY;
+r[n] = ZT+"search.aunz.yahoo.com/search/aunz?p="+e(q[n])+"&y=a&n=80";
+
+} else {
+yh=ZTA+"search.yahoo."+(JP ? "co.jp/bin" : "com")+"/search?p=";
+for (k=U1; k<=U2; k++) {
+n1[++n] = "Yahoo";
+t0 = nadk(k);
+t = yUSdm(t0);
+if (t!=t0) {
+q[n] = QY;
+r[n] = (("nz"==t0 || "au"==t0) && !JP ?
+ZT+"search.aunz.yahoo.com/search/aunz?p=" : yh) +
+e(q[n]) + "&y=n&n=80&r=Regional"+
+(JP ? ("jp"==t0 ? "%2FJapanese_Regions" : "%2FCountries%2F"+L(t," ","_"))
+    : "%02Countries%02"+L(t," ","+") ); //980916
+n1[n] += n1z(t0,"");
+} else { // "+u:co.nz" best here, YahooAU-bug: finds "u"s.6Sep98
+q[n] = onzb(QY,"u:",k,false);
+r[n] = yh +e(q[n])+ "&d=y&za=default&g=0&n=80"; //&h=s<->NoCategories
+};	};	};	};
+
+if (NLi && ""!=QV) { // won't allow: url:, title:, "|", "&!". (981210)
+
+	PL1 = L(L(L(QV, "host:","site:"), "site:","url:"), " ~ "," & ");
+	PL1 = L(L(PL1, "domain:.","domain:"), "domain:","url:.");
+	var nLT, nLU, nLR;
+	nLT = NLPull(tr(PL1),"title:");
+	nLU = NLPull(tr(PL1),"url:");
+	nLR = cp(tr(NLEnglBool(BoolFix(FixAfterRpNS(PL1)))));
+
+	t = ptd(c1,d1)+(dand ? " OR " : "")+ptd(c2,d2); // not "|"
+
+	t3 = true;
+	if (!dor) t0 = nLU
+	else if (""==nLU) t0 = t
+	else {
+		BQry(nLU,"",0);
+		if ('S'!=BQB) t0 = "("+nLU+") & "+(dand ? "("+t+")" : t)  // Bo
+		else t3 = false;
+	};
+	for (k=U1; k<=U2; k++) {
+		if (!t3) t0 = "+"+ptd(true,nadk(k))+" "+nLU;
+
+		n1[++n] = "Northern Light"+n1z("",(NoD ? "" : nd70));
+
+		q[n] = nLR + (""==nLT ? "" : (""!=nLR ? ", " : "") + "title:["+nLT+"]");
+		if (""!=t0) q[n] += (""!=q[n] ? ", " : "") + "url:["+t0+"]";
+
+		r[n] = ZT+"www.northernlight.com/nlquery.fcg?dx=1004&us=025&qr=" +e(nLR)+
+		"&qt="+e(Quo(tr(nLT))) + "&pu=&qu="+e(Quo(tr(t0))) +
+		"&si=&d1="+(NoD ? "" : d0M +"%2F"+ d0D +"%2F"+ d0Y70)+
+		"&d2=&la=All&qc=All&sb.x=1&sb.y=1";
+		//must omit d1="" rather than use 1970
+		if (t3) break;
+};	};
+
+
+
+if (srnz) {  // ignores "-"s
+n1[++n] = "Search NZ";
+q[n] = Qr();
+r[n] = ZT+"www.searchnz.co.nz/cgi-bin/search?query=" + e(q[n]) +
+"&t=650&h=3&f=99&search.x=1&search.y=1";
+};
+
+if (nzexp) {
+QX = rpdU(L(L(QV, "site:","url:"), "host:","url:"), "url:", delu, 0);
+QX = L(" "+L(L(QX, " ~ "," & "), "|"," "),  " +"," ");
+
+QX = fix_2_simp(L(fix_title(QX), " +"," "), delu); //retns tr'd
+
+QX = L(L(L(L(L(QX, "(",""), ")","")+" ", "&! "," -"), " &"," "), "! ","-");
+Pull(tr(QX), "-");
+QX = tr(L(L(Quo(PL1), '"',''), "'",""));
+if ("" != QX) {
+t0 = tr(L(L(Quo(PuLd), '"',''), "'",""));
+n1[++n] = "NZExplorer";  q[n] = QX+(""!=t0 ? ", -["+t0+"]" : "");
+r[n] = ZT+"www.ijs.co.nz/info/sn_nzex1.htm?" + es2(QX) + "&" + es2(t0);
+};	};
+
+if (prof || mc || ms) {
+
+var j, p="", pr="", pm="", ps="", go = info1 && !Bo, ya2 = ya1 && !Bo;
+var xmc, xpr, xms, xhotb, xsnap, xgotoc, xgo, xHSG, xHSGL, exwc, xmetas = new Array(3), xNLi;
+
+for (j=1; j<=3; j++) {
+xmc=(1==j);  xpr=(2==j); xms=(3==j);
+xhotb=(xms && hotb);
+xsnap=((xpr||xms) && snap);
+xgotoc=(xpr && gotoc);
+xgo=((xmc||xms) && go);
+xNLi=(xms && NLi);
+xGL=(xpr && GL);
+
+xHSG=(xhotb || xsnap || xgotoc);  xHSGL=(xHSG || lycos);  exwc=(exci || wc);
+nt = 0 + usav + xHSGL + xgo + ya2 + exwc + xNLi + xGL;
+t0 = s0;
+if (0==nt) t0 = ""
+else if (!dor) { }
+else if (exwc) t0 = (!dand && (0==nt-exwc) ? onz(t0,"",0) : "")
+else if (0==nt-usav) t0 = (Bo || !dand ? onz(t0,"AV",0) : "")
+else if (xHSGL) t0 = ((Bo || !dand) && !(xgo || ya2) ? onz(t0,"domain:",0) : "")
+else if (dand) t0 = ""
+else if (ya2 || usav && xgo) t0 = onz(t0, "url:.", 0)
+else if (xgo) t0 = onz(t0, "site:", 0)
+else t0 = ""; // A!:false
+if (xHSG || wc || xNLi) t0 = EnglBool(t0);
+xmetas [j] = t0;
+};
+
+if (usav)	{ t="=AltaVista"; p+="&1"+t; pr+=t; pm+=t; ps+=t; };
+if (exci)	{ t="=Excite"; pm+=t; ps+=t; };
+if (hotb)	ps+="=HotBot";
+if (go) 	{ t="=InfoSeek"; p+="&4"+t; pr+=t; pm+=t; ps+=t; }
+if (lycos)	{ t="=Lycos"; pm+=t; ps+=t; };
+if (snap)	{ t="=Snap"; p+="&5"+t; pr+=t; ps+=t; };
+if (exci)	{ t="=Excite"; p+="&2"+t; pr+=t; };
+if (wc)		{ t="=WebCrawler"; p+="&6"+t; pr+=t; ps+=t; pm+=t; };
+if (gotoc)	{ t="=GoTo"; p+="&9"+t; pr+=t; };
+if (GL)	{ t="=Google"; p+="&3"+t; pr+=t; };
+if (ya2)	{ t="=Yahoo"; p+="&7"+t; pr+=t; ps+=t; pm+=t; };
+if (gotoc)	pm+="=GoTo";
+if (xNLi)	ps+="=NorthernLight";
+
+for (j=0; j<=n; j++) q[j]="";
+
+if (W && ms && ""!=ps) {
+n1[++n] = "MatchSite:("+L(ps.substring(1,ps.length),"=",",")+")";
+q[n] = cp(tr(xmetas[3]));
+r[n] = ZT+"www.matchsite.com/cgi-bin/SEARCH.cgi?text=" +e(q[n])+
+L(ps,"=","&s=") + "&wait=10&print=40&get=10&x=1&y=1";
+};
+if (W && mc && ""!=pm) {
+n1[++n] = "MetaCrawler:("+L(pm.substring(1,pm.length),"=",",")+")";
+q[n] = cp(tr(xmetas[2]));
+r[n] = ZT+"search.go2net.com/crawler?rpp=30&general=" +e(q[n])+
+"&method=1&target=&hpe=30&region=0&timeout=120&sort=0&format=text&power=1"+
+L(pm,"=","&eng=");
+};
+if (W && prof && ""!=pr) {
+n1[++n] = "Profusion:("+L(pr.substring(1,pr.length),"=",",")+")";
+q[n] = cp(tr(xmetas[2]));
+r[n] = ZT+"www.profusion.com/cgi-bin/nph-ProFusion.pl?queryterm=" +
+e(q[n])+  //L(..,'%22','"%22') +
+"&option=" + (Bo ? "boolean" : "default") +
+"&display=30&summary=yes&totalverify=0&auto=manual" + L(p,"&","&engine") +
+"&search=web";
+};	};
+Qsend(f,nd,(prof||mc||ms),W); //glob n,q,n1,r
+return;
+};
+
+function Qsend(f,nd,meta,W) {
+	var j, k, dr = false, searches, m4=false; // dr: f.dontrun.checked
+	var sc, su=f.surls.checked, msg = "", msg2 = "", G=0;
+
+	rLast = -1;
+	for (j=0; j<=n; j++) if (q[j]!="") { r[++rLast]=r[j]; q[rLast]=q[j]; n1[rLast]=n1[j]; };
+
+	sc=f.s2.checked;
+	if (6<=1+rLast) sc=true;
+
+	if (sc || su) {
+		for (j = 0; j <= rLast; j++) {
+			if (0<=n1[j].indexOf(">=")) G++;
+			xCut(n1[j],"@");
+			if (sc) msg += "\n   "+u0+" ["+A0+ q[j]+A0+"]"+u1;
+			if (su)
+				msg2 +=((j==0 && ! sc) ? "\n":"\n\n") + L(u0," ","_") + A0+"["+A0+r[j]+A0+"]";
+		};
+		msg = msg + msg2;
+	};
+	searches = 0<=rLast;
+	if (searches || sc || su) f.Bo.checked = Bo;
+	if (!searches && !(sc||su)) { sc=true; f.s2.checked=true; };
+
+	if (sc || su) {
+		u0 = "Mode:  " + (Bo ? "B":"not B")+"oolean" + (meta ? ",  Profusion/MetaCrawler/MatchSite" : "");
+		u0 = u0+(!dor ? "" : ",  "+(dand ? "(" : "")+(c1 ? yUSdm(d1)+(dand ? " + " : "") : "")+
+		(c2 ? yUSdm(d2) : "")+(dand ? ")" : "")+" only") +
+		((0<G || !W) ? ",  "+(G<1+rLast ? "some" : "all")+" not before "+nd : "");
+		if (searches) searches = con(u0 +" \n"+msg+"\n\nExecute th"+
+				(0==rLast ? "is search ?" : "ese searches ?"));
+		else al(u0 + "\n\nNo searches");
+		document.forms[0].newurl.value = "";
+	};
+
+	if (searches && ! dr) {
+		rTP=600, rTC=500, CantWait=20000; //ms
+		rS = new Array(Math.round(CantWait/rTP));
+		for (j=0; j<rS.length; j++) rS[j]=-1-j;
+		rBlank=0;
+		rCries = 0;
+		rwr = new Array();
+		for (j=0; j<=rLast; j++) {
+			rwr[j] = (j>=3 ? WinOpen("snblank2.htm") : (WinOpen("http://"+r[j]), null));
+			if (null!=rwr[j]) rBlank += 1; };
+			rj = 0;
+			Kill(1);
+			rQNum=0;
+			rQRsetInt();
+			if (f.refoc.checked) f.ta1.focus();
+	};	};
+
+function rQRsetInt() { //Nav3
+	if (0<=rQNum && rQNum<36000) {
+		rQNum++;
+		rQsend();
+		setTimeout("rQRsetInt()",rTP);
+};	};
+
+function Kill(clr) {
+	var g=document.forms[0].newurl;
+	if(0<=rQNum && 0!=clr) { g.value='';  g.blur(); };
+	rQNum=-1;
+};
+
+var rCries, rwr, rj, rLast, rQNum=0, rBlank, rTP, rTC, rS; // rCries,rTC common
+
+
+function rQsend() {
+	var g=document.forms[0].newurl, b=true, M = rBlank, OutAhead=3.0;
+	if (rj>rLast) {
+		Kill(1);
+	} else {
+		for (var j=rS.length-1; j>=1; j--) rS[j]=rS[j-1];
+		rS[0]=rj;
+		var y = Math.round(10* (rCries*rTC/rTP - OutAhead) )/10.0;
+
+		var t=y+""; if (t.length<3) t=" "+t;
+		if (y <= M) 	t+="<="+M+")->sending";
+		else if (rS[0]==rS[rS.length-1])
+			t+=">"+M+") sent, too slow";
+		else {			t+=">"+M+")->waiting";  b = false; };
+		g.value=rQNum+"("+t+"; "+rj+":"+rBlank;
+		if (b) {
+			if (null!=rwr[rj]) { if (null!=rwr[rj].location) {
+					rwr[rj].location.href = "http://"+r[rj]; //reduces y
+					rBlank += -1; //decr M only if decr y
+			};	};
+			rj += 1;
+		};
+		rCries = 0;
+};	};
+
+function trunc0(s,x) {
+if (s.length<=x) return s;
+s = s.substring(0,x-3);
+var a = s.lastIndexOf("%");
+if (a>=s.length-2) s=s.substring(0,a);
+return s+"...";
+};
+function trunc(s,x) { return (null==s ? "<null>" : L(L(trunc0(s,x), "\r",""), "\n"," / ")); };
+
+var allOK, A0;
+function Init() {
+A0=unescape("%A0")
+init_sa();
+n = -1; q = new Array(); n1 = new Array(); r = new Array();
+fD="1"; fM=11; fDS=false; fY=-1; fYf=-1;  // Datz()
+};
+
+var f, MqFail;
+
+function Main(m,A2) {
+f = document.forms[1];
+if (!jsVer11()) return "";
+if ("undefined"==typeof(allOK) || null==allOK)
+if ("onUnLoad"==m) { al("Unloading without saving to cookie"); f.kL.checked=true; return null; } //delete in Sept98
+else if ("S"==m) { al("Attempting again read of data from cookie"); Main("onLoad"); }; //?necc
+dbg=0;
+//WARNING: in HTML, kL must be checked
+if (m == "RC") {
+nL=(0<=navigator.appVersion.lastIndexOf("Win") ? "\r\n" : "\n");
+if (taRows == null || taCols==null) {
+if (dg0) al("Main:RC, kL="+f.kL.checked);
+LoadKy = f.kL.checked || (null!=f.ta1 && ""==f.ta1.value);
+Load_Ky_Set_Globals(0);
+};
+return '<TEXTAREA NAME="ta1" ROWS="' +taRows+ '" COLS="' +taCols+
+'" WRAP="virtual" VALUE="Query"></TEXTAREA>';
+
+} else if ("KyName"==m) {
+return "Sn_Search"; //alter allows 4kb server disasters
+
+} else if (m == "S") {
+Kill(0); //kill subm
+if (Save_Ky(1)) {
+f.kL.checked = false;
+NoL=true;  NoU=true;
+StartSearches(f);
+if (!NoL || !NoU) StartSearches(f);
+};
+
+} else if ("q="==m) {
+var g1 = e(f.ta1.value);
+MqFail = (""==g1 || "on"==g1 || "off"==g1);
+if (MqFail) {
+g1 = ""; 	// g1=Kyta1();
+} else {
+if (g1.length>A2) g1 = trunc0(g1,A2);
+};
+return g1;
+
+} else if (m == "onLoad") {
+ 		Init();
+if (dg0) al("Main("+m+"), Before Put_Ky; rows.value="+f.rows.value)
+document.forms[0].newurl.value=""; //**
+Put_Ky_Into_Form();
+if (dg0) al("Main("+m+"), After Put_Ky before AddtoEnds; rows.value="+f.rows.value)
+
+FixC(); //zap "1"s in dm
+
+f.kL.checked = false;
+//f.ta1.focus();
+
+allOK=50; //stop button
+if (!demo) AddToEnds()  // ***
+else Main("S");
+
+} else if (m == "onUnload") {
+if (dg0) al("Main-onUnload");
+f.kL.checked = ! Save_Ky(0); // must save if js reload(), later removed so ?
+//If form data lost-no-matter-how or not saved, then kL.checked at onLoad
+// MSIE4 bug, can't assign at unload so prepare
+if (dg0) al("FinalBye, kL="+f.kL.checked);
+
+} else if ("A"==m) {
+f.kL.checked = true;
+var t1=f.ta1; var s1=(null==t1 ? "???" : t1.value), s2=unesc(Kyta1());
+if (con(A2+"(Cookie checkbox)\nThe query data in the form is currently this:\n[ "+trunc(s1,1700)+A0+"]\n\n" +
+"The query data in the cookie in memory is "+
+(s1==s2 ? "identical.\n\n" : "this:\n[ "+ trunc(s2,1700)+A0+"].\n\n") +
+"Replace all the data in the form with the data in the cookie in memory"+A0+"?"))
+{
+LoadKy = true;
+Load_Ky_Set_Globals(0);
+ 			Main("onLoad");
+};
+f.kL.checked = false;
+};
+return "";
+};
+function Kyta1() { return ((GetCookie("")+"&&&&").split("&")[3]+"q=q=").split("q=")[1]; };
+
+//
+var sv1, sv2, sa;
+
+function init_sa() {
+var f=document.forms[1],a,z=-1,e,j;
+sa=new Array();
+for (j=0; j<50; j++) { e = f.elements[j];
+if ("checkbox"==e.type) { a=e.name;
+if ("kL"!=a && "c1"!=a && "c2"!=a && "MS"!=a) sa[++z]=j;
+if ("yahoo"==a) break;
+};	};
+sv1=new Array(z+1); sv2=new Array(z+1);
+for (var j=0; j<=z; j++) { sv1[j]=false; sv2[j]=false;
+};	};
+
+function fillb(f,m) {
+if (!jsOK()) return;
+var len=sa.length, d=f.fill;
+var j, ea = f.elements, t;
+var top0 = true, top1 = true, b = ("1"==m), z;
+for (j=0;j<len;j++) if(ea[sa[j]].checked) top0 = false; else top1 = false;
+if ("s"==m) {
+if (!top0 && !top1 && !d[1].checked) d[1].checked=true;
+} else if ("m"==m) {
+for (j=0;j<len;j++) {
+t = f.elements[sa[j]].checked;
+f.elements[sa[j]].checked = sv1[j];
+if (top0 || top1) { t=sv2[j]; sv2[j]=sv1[j]; };
+sv1[j]=t;
+};
+} else {
+if (!( (b && top1) || (!b && top0) )) { // a visible change
+var bot0 = true, bot1 = true;
+for (j=1;j<len;j++) if (sv1[j]) bot0 = false; else bot1 = false;
+if ((bot0 || bot1) || !(top0 || top1))
+for (j=0;j<len;j++) { sv2[j]=sv1[j]; sv1[j]=ea[sa[j]].checked; };
+for (j=0;j<len;j++) f.elements[sa[j]].checked = b;
+};
+if (!b) { f.prof.checked=b; f.MC.checked=b; f.MS.checked=b;
+};	};	};
+
+function NewLine(m,s,k2) {
+if (!jsOK()) return null;
+
+
+
+
+
+var a=document.forms[1].ta1, j, k, c, cmnt, sL = nL;
+if (2!=m) s=a.value;
+k=0; if (1==m) k=k2;
+for (j=k; j<=s.length-1; ) {
+c = s.charAt(j);
+if ("\n"!=c && "\r"!=c && " "!=c) break;
+else j++;
+if (" "!=c) sL += c;
+};
+if (1==m) return j;
+c = s.substring(j,Math.min(j+2,s.length));
+cmnt = ("--"==c); // **
+
+
+
+
+
+
+if (0==m && cmnt) s = Delet(7,j);
+else s = s.substring(j,s.length);
+sL = (""==s ? "" : sL + "-- " + s);
+if (2==m) return sL;
+a.value = sL;
+a.focus();
+return null;
+};
+
+var qL,qRHS;
+function Delet(m,k0) { //m== 0:onClick,7:Ins
+if (!jsOK()) return null;
+
+var a=document.forms[1].ta1, j,h,k,s;
+k = a.value.indexOf("--",(7==m ? k0 : 0));	if (k<0) k=a.value.length;
+if (k<0) k=a.value.length;
+if (1==m) return k;
+h=k+2;
+while (h+1<=a.value.length) {
+for (j=0; j<=1; j++) {
+s=a.value.substring(h-j, Math.min(h-j+2,a.value.length));
+if ("--"==s) { h = h+2-j; break;
+};	};
+if (2<=j) break;
+};
+h = NewLine(1,"",h)
+s = a.value.substring(h,a.value.length);
+if (7==m) return s
+else a.value = s;
+return null;
+};
+
+// end hiding -->
+</SCRIPT>
+<META NAME="Author" Content="Craig Carey, research@ijs.co.nz, AK-828-3959">
+<TITLE>Snooz Metasearch: syntax translation, regional metaseaching, Javascript.</TITLE>
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A: visited  { color: #808 }
+ A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC" marginwidth="5"  marginheight="2" leftmargin="5" topmargin="2">
+
+<CENTER>  
+<font size=+2>Courtesy of fravia's advanced searching lores</a></fonT><br>
+<a href="basic.htm"><IMG SRC="images/basipet.jpg" ALT="to basic" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>      
+
+<br>Snooz's metasearch, by Craig Carey<br>  
+Carey's page is at <a href="http://www.ijs.co.nz/basic.htm">http://www.ijs.co.nz/basic.htm</a>  <br>
+<br>
+He is a proxy expert and an anonymity wizard, very active and helpful on the    proxy-methods-list(at)onelist(point)com maillist
+<hr width=44%>
+<font size=+1><i>Look at the source, Luke!</i></fonT><bR><font size=-1> (have a look at the source code of this page: you'll learn a little javascript...)</fonT>
+<hR>
+
+
+<P><!--#include virtual="/logs/banner"-->
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<TR>
+		<TD WIDTH="7"><FORM METHOD="POST" ENCTYPE="application/x-www-form-urlencoded" onsubmit="if (jsOK()) {WinOpen(NewWinUpd(document.forms[0].newurl.value));document.forms[0].newurl.value='';};return false;"></TD>
+		<TD VALIGN="MIDDLE"><FONT COLOR="#B0A080">Snooz</FONT> <A HREF="http://www.ijs.co.nz/info/snooz.htm">Metasearch</A></TD>
+		<TD WIDTH="33">&nbsp;</TD>
+		<TD>
+			<DIV ALIGN="RIGHT">
+				<P><INPUT TYPE="TEXT" NAME="newurl" SIZE="27" onFocus="Kill(0)">
+			</DIV>
+		</TD>
+		<TD WIDTH="2">&nbsp;</TD>
+		<TD VALIGN="TOP"><A HREF="javascript:location.href" target="_blank" onClick="if (jsOK()) {this.href=NewWinUpd(document.forms[0].newurl.value);document.forms[0].newurl.value='';};true"><I><FONT
+			SIZE="2">Open in a<BR>
+			New Window</FONT></I></A></TD>
+		<TD> 			</FORM>
+<FORM METHOD="POST" ENCTYPE="application/x-www-form-urlencoded"></TD>
+	</TR>
+</TABLE>
+<!--TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="#FFFFFF">
+<TR>
+<TD-->
+<TABLE BORDER="1" CELLSPACING="1" BGCOLOR="white">
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="excite"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.excite.com/"><FONT SIZE="2">Excite</FONT></A><FONT SIZE="1"> /
+			</FONT><A HREF="http://magellan.excite.com/"><FONT SIZE="1">Mag</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.excite.com.au/"><FONT
+			SIZE="2">AU</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.excite.com/Info/searching3.html"><FONT SIZE="2">h</FONT></A><FONT
+			SIZE="2"> </FONT><A HREF="http://www.excite.com/info/add_url"><FONT SIZE="2">a</FONT></A><FONT SIZE="2"> </FONT><A
+			HREF="http://www.excite.com.au/info/add_url"><I><FONT SIZE="2">a</FONT></I></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="infoseek"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://infoseek.go.com/?lk=noframes&nh=25"><FONT SIZE="2">Go Infoseek</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://infoseek.go.com/Help?pg=SyntaxHelp.html&lk=noframes&nh=25"><FONT SIZE="2">h</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://www.go.com/AddUrl?&lk=noframes&nh=25&pg=SubmitUrl.html"><FONT SIZE="2">a</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="hotbot"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://hotbot.lycos.com/text/default.asp?SM=SC&MT=&act.super=+More+Options+&DC=50&RD=DM&BT=T"><FONT
+			SIZE="2">HB</FONT></A><FONT SIZE="1"> </FONT><A HREF="http://hotbot.lycos.com/?MT=&SM=SC&DV=0&LG=any&RD=DM&Domain=&RG=all&DC=50&DE=2&BT=H&act.super.x=1&act.super.y=1"><FONT
+			SIZE="2">HotB</FONT></A><FONT SIZE="1"> </FONT><A HREF="http://hotbot.lycos.com/help/search/adv_search.asp"><FONT
+			SIZE="2">h</FONT></A><FONT SIZE="1"> </FONT><A HREF="http://hotbot.lycos.com/addurl.asp"><FONT SIZE="2">a</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="yi"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://search.msn.com/advanced.asp?MT=&RS=CHECKED&CO=50&TP=Should"><FONT SIZE="2">Ya
+			Ink</FONT></A></TD>
+	</TR>
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="wc"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.webcrawler.com/"><FONT SIZE="2">WebCrawler</FONT></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://webcrawler.com/Help/Advanced.html"><FONT SIZE="2">h</FONT></A><FONT SIZE="2">&nbsp; </FONT><A
+			HREF="http://www.webcrawler.com/Help/GetListed/AddURLS.html"><FONT SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="alta"></TD>
+		<TD COLSPAN="3">
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+				<TR>
+					<TD BGCOLOR="#F7F7F7"><INPUT TYPE="CHECKBOX" NAME="altaD"></TD>
+					<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.altavista.com/cgi-bin/query?pg=q&what=web&text=yes"><FONT SIZE="2">Alta</FONT></A><FONT
+						SIZE="2">.</FONT><A HREF="http://www.altavista.com/web/text?"><FONT SIZE="2">Vist.</FONT></A><FONT
+						SIZE="2"> </FONT><A HREF="http://www.altavista.com/cgi-bin/query?pg=q&what=web"><FONT SIZE="2">A</FONT></A><FONT
+						SIZE="2">.</FONT><A HREF="http://www.altavista.com/cgi-bin/query?pg=aq&kl=XX&r=&search=Search&q=&d0=1%2FJan%2F92&d1="><FONT
+						SIZE="2">V</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.altavista.com/av/oneweb/"><FONT SIZE="2">I</FONT></A><FONT
+						SIZE="2"> </FONT><A HREF="http://www.altavistacanada.com/en/help_keywords.htm"><FONT SIZE="2">h</FONT></A><FONT
+						SIZE="2"> </FONT><A HREF="http://www.altavista.com/av/content/addurl.htm#remove"><FONT SIZE="2">a</FONT></A><FONT
+						SIZE="2">&nbsp;</FONT></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="snap"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.snap.com/search/power/form/0,179,home-0,00.html"><FONT SIZE="2">Snap</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://www.snap.com/main/help/item/0,11,home-7840,00.html"><FONT SIZE="2">h</FONT></A><FONT
+			SIZE="2">&nbsp;&nbsp;</FONT><FONT SIZE="1"> </FONT><A HREF="http://www.icqit.com/help/expert_help.asp"><I><FONT
+			SIZE="1">h</FONT></I></A></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="gotoc"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.goto.com/"><FONT SIZE="2">GoTo</FONT></A><FONT SIZE="2">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
+	</TR>
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="NLi"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.northernlight.com/power.html"><FONT SIZE="2">Northern Light</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://www.northernlight.com/docs/search_help_optimize.html"><FONT SIZE="2">h</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://www.northernlight.com/docs/regurl_help.html"><FONT SIZE="2">a</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="aualta"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;A</FONT><FONT SIZE="1">ustral.</FONT><A HREF="http://altavista.yellowpages.com.au/cgi-bin/query?mss=simple&pg=q&text=yes"><FONT
+			SIZE="2">Alta</FONT></A><FONT SIZE="2">.</FONT><A HREF="http://altavista.yellowpages.com.au/cgi-bin/query?mss=advanced&pg=aq&text=yes&d0=1%2FJan%2F94"><FONT
+			SIZE="2">Vist.</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://altavista.yellowpages.com.au/cgi-bin/query?mss=simple&pg=q"><FONT
+			SIZE="2">A</FONT></A><FONT SIZE="2">.</FONT><A HREF="http://altavista.yellowpages.com.au/cgi-bin/query?mss=advanced&pg=aq&d0=1%2FJan%2F94"><FONT
+			SIZE="2">V</FONT></A><FONT SIZE="1">&nbsp; </FONT><A HREF="http://altavista.yellowpages.com.au/av/content/addurl.htm#spam"><FONT
+			SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="anzwers"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.anzwers.com.au/cgi-bin/process_search.pl?pageid=powersearchmore&query=&query_type=any+of+the+words&location=The+World&radio_location=domain&domain=&radio_date=specific&beforeafter=after&month=Jan&day=1&year=90&media_ext=&wf1_contain=must&wf1_the=words&wf1_query=&wf2_contain=must&wf2_the=words&wf2_query=&wf3_contain=must&wf3_the=words&wf3_query=&wf4_contain=must&wf4_the=words&wf4_query=&radio_page=any&depth=&numperpage=50&result_type=detailed&less.x=4&less.y=7"><FONT
+			SIZE="2">Anzwers</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.anzwers.com.au/cgi-bin/print_addurl.pl?"><FONT
+			SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="goo"></TD>
+		<TD  NOWRAP><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.goo.ne.jp/default.asp?act.revise=1&top_ver=expert&SM=SC&WTS=ink&DC=50&RD=DM&date=range&DM=12&DD=31&DY=89"><FONT
+			SIZE="2">Goo</FONT></A><FONT SIZE="2">&nbsp; </FONT><A HREF="http://www.goo.ne.jp/help/url_t.html"><FONT SIZE="2">a</FONT></A><FONT
+			SIZE="2">&nbsp;&nbsp;</FONT></TD>
+	</TR>
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="dh"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.directhit.com/"><FONT SIZE="2">Direct Hit</FONT></A><FONT SIZE="2">
+			</FONT><A HREF="http://www.directhit.com/util/addurl.html"><FONT SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="planets"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.planetsearch.com/?a=0&flags=3&count=25"><FONT SIZE="2">Pl.</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="skali"></TD>
+		<TD  NOWRAP COLSPAN="3"><FONT SIZE="2">&nbsp;Asia </FONT><A HREF="http://altavista.skali.com.my/cgi-bin/query?mss=simple&pg=aq&text=yes"><FONT
+			SIZE="2">A</FONT></A><FONT SIZE="2">&nbsp; </FONT><A HREF="http://altavista.skali.com.my/av/content/addurl.htm#spam"><FONT
+			SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="searchnz"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.searchnz.co.nz/"><FONT SIZE="2">Search NZ</FONT></A><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+		<TD ROWSPAN="3" COLSPAN="2">
+			<CENTER>
+			<P><FONT SIZE="2" COLOR="#447788">&nbsp;&nbsp;Region</FONT><A HREF="javascript:al('Metasearching inside of countries:\n\nTo confine search results to be about one or two domains, enter the domain names into the text boxes and tick the checkboxes on the left.')"><SUP><FONT
+			SIZE="2">*</FONT></SUP></A><FONT SIZE="2">
+			<TABLE BORDER="0" CELLSPACING="1">
+				<TR>
+					<TD><INPUT TYPE="CHECKBOX" NAME="c2"></TD>
+					<TD><INPUT TYPE="TEXT" NAME="d2" SIZE="4" VALUE="nz" onFocus="FocC(this)" onBlur="FixC()"></TD>
+				</TR>
+				<TR>
+					<TD><INPUT TYPE="CHECKBOX" NAME="c1"></TD>
+					<TD><INPUT TYPE="TEXT" NAME="d1" SIZE="4" onFocus="FocC(this)" onBlur="FixC()"></TD>
+				</TR>
+			</TABLE>
+</FONT>
+</CENTER>
+		</TD>
+	</TR>
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="lycos"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://search.lycos.com/adv.asp"><FONT SIZE="2">Lycos</FONT></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://www.lycosuk.co.uk/help/quickref.html"><I><FONT SIZE="2">h</FONT></I></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://www.lycosuk.co.uk/help/boolean.html"><I><FONT SIZE="2">H</FONT></I></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://www.lycos.com/addasite.html"><FONT SIZE="2">a</FONT></A></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="DN"></TD>
+		<TD COLSPAN="3"><I><FONT SIZE="2">&nbsp;</FONT></I><A HREF="http://www.dejanews.com/[S0=00]/home_ps.shtml"><FONT SIZE="2">Deja
+			News</FONT></A><I><FONT SIZE="2">&nbsp;</FONT></I><FONT SIZE="2"> </FONT><A HREF="http://www.deja.com/=dnc/[S0=00]/home_if.shtml"><FONT
+			SIZE="2">IF</FONT></A><FONT SIZE="2">&nbsp; </FONT><A HREF="http://www.deja.com/=dnc/[S0=00]/help/help_lang.shtml"><FONT
+			SIZE="2">h</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="nzexp"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://nzexplorer.co.nz/"><FONT SIZE="2">NZExpl.</FONT></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://nzexplorer.co.nz/addurl.html"><FONT SIZE="2">a</FONT></A></TD>
+	</TR>
+	<TR>
+		<TD><INPUT TYPE="CHECKBOX" NAME="pubmed"></TD>
+		<TD COLSPAN="3"><FONT SIZE="2">&nbsp;</FONT><A HREF="https://searchlores.nickifaulk.com/med/medline.htm"><FONT SIZE="2">Medline</FONT></A><FONT SIZE="2"> </FONT><A
+			HREF="http://www.ncbi.nlm.nih.gov/PubMed/"><FONT SIZE="2">PM</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.nlm.nih.gov/medlineplus/"><FONT
+			SIZE="2">plus</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.ncbi.nlm.nih.gov/PubMed/boolean.html"><FONT
+			SIZE="2">B</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.ncbi.nlm.nih.gov/PubMed/pubmedhelp.html"><FONT
+			SIZE="2">h</FONT></A><FONT SIZE="2">&nbsp;</FONT></TD>
+		<TD BGCOLOR="#F7F7F7"><INPUT TYPE="CHECKBOX" NAME="MS"></TD>
+		<TD BGCOLOR="#F7F7F7"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.matchsite.com/basic.html"><FONT SIZE="2">MatchSit.</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="GL"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.google.com/"><FONT SIZE="2">Google</FONT></A></TD>
+		<TD><INPUT TYPE="CHECKBOX" NAME="yahoo"></TD>
+		<TD><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.yahoo.com/"><FONT SIZE="2">Yahoo</FONT></A><FONT SIZE="2"> </FONT><A
+			HREF="http://www.yahoo.com.au/"><FONT SIZE="2">AU</FONT></A><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+	</TR>
+	<TR>
+		<TD BGCOLOR="#FFFBF0">
+			<TABLE BORDER="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%" BGCOLOR="#FFFFFA">
+				<TR>
+					<TD WIDTH="100%"><INPUT TYPE="CHECKBOX" NAME="kL"  CHECKED onClick="Main('A','')"><!--Must be checked for reloads--></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD VALIGN="MIDDLE" COLSPAN="3">
+			<CENTER>
+			<P><INPUT TYPE="RADIO" NAME="fill" onClick="fillb(this.form,'0');"><FONT SIZE="2">0 <INPUT TYPE="RADIO" NAME="fill"  CHECKED
+			onClick="fillb(this.form,'m');">m <INPUT TYPE="RADIO" NAME="fill" onClick="fillb(this.form,'1');">1</FONT>
+</CENTER>
+		</TD>
+		<TD BGCOLOR="#F7F7F7"><INPUT TYPE="CHECKBOX" NAME="MC"></TD>
+		<TD BGCOLOR="#F7F7F7"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.go2net.com/index_power.html"><FONT SIZE="2">MetaCra.</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD BGCOLOR="#F7F7F7"><INPUT TYPE="CHECKBOX" NAME="prof"></TD>
+		<TD BGCOLOR="#F7F7F7"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.profusion.com/basic.html"><FONT SIZE="2">Profus.</FONT></A><FONT
+			SIZE="2">&nbsp;</FONT></TD>
+		<TD BGCOLOR="#F7F7F7"><INPUT TYPE="CHECKBOX" NAME="Bo"></TD>
+		<TD BGCOLOR="#F7F7F7"><FONT SIZE="2">&nbsp;</FONT><FONT SIZE="2" COLOR="#440000">Boolean</FONT><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+		<TD COLSPAN="2" BGCOLOR="#F7F7F7">
+			<CENTER>
+			<P><INPUT TYPE="CHECKBOX" NAME="s2"  CHECKED><FONT SIZE="1"> </FONT><FONT SIZE="2">Confirm</FONT><FONT SIZE="1">&nbsp;</FONT>
+</CENTER>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN="10" BGCOLOR="#F7F7F7">
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" HEIGHT="100%">
+				<TR>
+					<TD WIDTH="3">&nbsp;</TD>
+					<TD>
+						<P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Insert" onClick="NewLine(0,'')">
+					</TD>
+					<TD><FONT SIZE="2">&nbsp;</FONT></TD>
+					<TD>
+						<P ALIGN="CENTER"><INPUT TYPE="button" VALUE="Del" onClick="Delet(0)">
+					</TD>
+					<TD>&nbsp;&nbsp;</TD>
+					<TD>
+						<CENTER>
+						<P>
+						<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+							<TR>
+								<TD><INPUT TYPE="TEXT" NAME="rows" SIZE="2" MAXLENGTH="4" onBlur="FixFRC();">x<INPUT TYPE="TEXT" NAME="cols" SIZE="2"
+									MAXLENGTH="4" onBlur="FixFRC();"></TD>
+								<TD><I><FONT SIZE="1">&nbsp;</FONT></I><A HREF="javascript:al('To update the page or the size of the TEXTAREA field, use browser\'s reload/refresh feature, or [sometimes faster]: click on the search button [which saves data to the cookie], cancel the search, and click on the \'Open in a New Window\' link.')"><I><FONT
+									SIZE="1">rl</FONT></I></A><FONT SIZE="1">&nbsp;&nbsp;</FONT></TD>
+							</TR>
+						</TABLE>
+
+</CENTER>
+					</TD>
+					<TD>
+						<CENTER>
+						<P><SUP><FONT SIZE="2">&nbsp;</FONT></SUP><FONT SIZE="2"><INPUT TYPE="CHECKBOX" NAME="avB2S"  CHECKED></FONT><SUP><FONT
+						SIZE="1">&nbsp;</FONT></SUP><A HREF="javascript:al('Checkbox on the Left.\nQueries for AltaVista are converted to a Boolean form if and only if a not-before date is specified and either the checkbox on the left or the checkbox on the right is ticked.\n\n'+
+'Checkbox on the Right.\nIf ticked, then the selected date is made to be strictly complied with by excluding some of the selected engines.')"><SUP><FONT
+						SIZE="2">*</FONT></SUP></A><SUP><FONT SIZE="2">&nbsp;</FONT></SUP>
+</CENTER>
+					</TD>
+					<TD>
+						<CENTER>
+						<P>
+						<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+							<TR>
+								<TD  NOWRAP><INPUT TYPE="TEXT" NAME="DD" SIZE="2" MAXLENGTH="3" VALUE="1" onChange="Datz('d')">&nbsp;</TD>
+								<TD  NOWRAP>
+									<SELECT NAME="DM" onChange="Datz('m');this.blur()">
+									<OPTION>Dec</OPTION>
+									<OPTION>Nov</OPTION>
+									<OPTION>Oct</OPTION>
+									<OPTION>Sep</OPTION>
+									<OPTION>Aug</OPTION>
+									<OPTION>Jul</OPTION>
+									<OPTION>Jun</OPTION>
+									<OPTION>May</OPTION>
+									<OPTION>Apr</OPTION>
+									<OPTION>Mar</OPTION>
+									<OPTION>Feb</OPTION>
+									<OPTION SELECTED>Jan</OPTION>
+									</SELECT>
+
+									<SELECT NAME="DY" onFocus="Datz('yf')" onChange="Datz('y');this.blur()">
+									<OPTION SELECTED> </OPTION>
+									<OPTION>1999</OPTION>
+									<OPTION>1998</OPTION>
+									<OPTION>1997</OPTION>
+									<OPTION>1996</OPTION>
+									<OPTION>1995</OPTION>
+									<OPTION>1994</OPTION>
+									<OPTION>1993</OPTION>
+									</SELECT>
+ <INPUT TYPE="CHECKBOX" NAME="DS"></TD>
+								<TD>&nbsp;</TD>
+							</TR>
+						</TABLE>
+
+</CENTER>
+					</TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+		<TD COLSPAN="2" BGCOLOR="#F7F7F7">
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLSPACING="0">
+				<TR>
+					<TD><INPUT TYPE="button" NAME="but" ONCLICK="Main('S');" VALUE="Search"></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+	</TR>
+</TABLE>
+<!--/TD></TR></TABLE --><NOSCRIPT><FONT SIZE="2" COLOR="#AA0000">ERROR: Javascript 1.1 (of Navigator 3.0+, IE 4.0+)
+is not available</FONT><BR>
+</NOSCRIPT><SCRIPT LANGUAGE="JavaScript1.1"><!--
+
+document.write(Main("RC"));
+
+// -->
+</SCRIPT><NOSCRIPT><TEXTAREA
+NAME="ta1" ROWS="9" COLS="68" WRAP="virtual"></TEXTAREA><BR>
+</NOSCRIPT>
+<TABLE BORDER="1" CELLPADDING="0" CELLSPACING="1" BGCOLOR="white">
+	<TR>
+		<TD COLSPAN="4">
+			<P ALIGN="CENTER"><FONT SIZE="2" COLOR="#006677">Query syntax:&nbsp;</FONT><FONT SIZE="2" COLOR="#006644"> + -
+			&amp; ~ | &amp;! ! (...) &quot;...&quot; site: url: link: link:. title: *</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD  NOWRAP>
+						<P ALIGN="RIGHT"><A HREF="http://www.bcpl.net/~jspath/isocodes.html"><FONT SIZE="2">Domain</FONT></A><FONT SIZE="2">
+						results<BR>
+						&nbsp;&nbsp;&nbsp;&nbsp;are for&nbsp;</FONT><A HREF="javascript:al('These may be entered for AltaVista (& Infoseek, Excite, & Yahoo):'+
+'\n\n Excite, Infoseek: domain names of countries.'+
+'\n Excite: china.'+
+'\n AltVista:'+
+'\n Japanese: sjis, eucjp, jaauto, jp;'+
+'\n Korean: euckr, kp, kr, ko;'+
+'\n Chinese: big5, euccn, cn;'+
+'\n Cyrillic: cp1251, koi8r, iso88595;'+
+'\n Arabic: iso88596, cp1254;'+
+'\n Vietnamese: cp1258;'+
+'\n Western: iso88591, cp1252;'+
+'\n Central European: iso88592, cp1250;'+
+'\n Greek: iso88597, cp1253;'+
+'\n Hebrew: iso88598, cp1255;'+
+'\n Baltic: cp1257;'+
+'\n Others: iso88593, iso88594.'+
+'\n\n EtoJ (English to Japanese) translator: jp0,jp3 (LifeSci), jp1,jp4 (LifeSci+JIJI), jp2,jp5 (JIJI).'+
+'\n\nExamples: \'jp4\' [max translation], \'sg,big5,china\'.')"><FONT
+						SIZE="2">*</FONT></A><FONT SIZE="2">:</FONT>
+					</TD>
+					<TD  NOWRAP><FONT SIZE="1">&nbsp;</FONT><FONT SIZE="2">&nbsp;<INPUT TYPE="TEXT" NAME="Lk" SIZE="7" onFocus="FocC(this)" onBlur="FixC()"></FONT></TD>
+					<TD><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+		<TD>
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+				<TR>
+					<TD><FONT SIZE="1">&nbsp;<INPUT TYPE="CHECKBOX" NAME="gH">&nbsp;</FONT></TD>
+					<TD  NOWRAP><FONT SIZE="1">Graphic HotBot</FONT></TD>
+					<TD ROWSPAN="2"><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+				</TR>
+				<TR>
+					<TD><FONT SIZE="1">&nbsp;<INPUT TYPE="CHECKBOX" NAME="gA">&nbsp;</FONT></TD>
+					<TD  NOWRAP><FONT SIZE="1">Graphic AltaVista</FONT></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+		<TD>
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+				<TR>
+					<TD><FONT SIZE="2">&nbsp;<INPUT TYPE="CHECKBOX" NAME="surls">&nbsp;</FONT></TD>
+					<TD  NOWRAP><FONT SIZE="2">Confirm<BR>
+						URLs</FONT></TD>
+					<TD><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+		<TD>
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+				<TR>
+					<TD><FONT SIZE="2">&nbsp;<INPUT TYPE="CHECKBOX" NAME="refoc">&nbsp;</FONT></TD>
+					<TD  NOWRAP><FONT SIZE="2">Return</FONT></TD>
+					<TD><FONT SIZE="2">&nbsp;&nbsp;</FONT></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN="4">
+			<CENTER>
+			<P>
+			<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+				<TR>
+					<TD>&nbsp;</TD>
+					<TD  NOWRAP>
+						<P ALIGN="RIGHT"><FONT SIZE="2" COLOR="#005757">DejaNews:</FONT><FONT SIZE="2">&nbsp;&nbsp;&nbsp;Archive:&nbsp;</FONT>
+					</TD>
+					<TD  NOWRAP>
+						<SELECT NAME="dBS">
+						<OPTION value="1" SELECTED>Complete</OPTION>
+						<OPTION value="2">Standard</OPTION>
+						<OPTION value="3">Adult</OPTION>
+						<OPTION value="4">Jobs</OPTION>
+						<OPTION value="5">For sale</OPTION>
+						</SELECT>
+					</TD>
+					<TD>
+						<CENTER>
+						<P>
+						<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+							<TR>
+								<TD>&nbsp;&nbsp;&nbsp;</TD>
+								<TD><INPUT TYPE="CHECKBOX" NAME="dOP"  CHECKED></TD>
+								<TD><FONT SIZE="1">&nbsp;Classic&nbsp;&nbsp;</FONT></TD>
+								<TD>&nbsp;&nbsp;</TD>
+							</TR>
+						</TABLE>
+
+</CENTER>
+					</TD>
+					<TD>
+						<DIV ALIGN="RIGHT">
+							<P><FONT SIZE="2">Sort:&nbsp;</FONT>
+						</DIV>
+					</TD>
+					<TD  NOWRAP>
+						<SELECT NAME="dR">
+						<OPTION value="date">Date</OPTION>
+						<OPTION value="score" SELECTED>Confidence</OPTION>
+						<OPTION value="subject">Subject</OPTION>
+						<OPTION value="newsgroup">Forum</OPTION>
+						<OPTION value="author">Author</OPTION>
+						</SELECT>
+					</TD>
+					<TD><FONT SIZE="2">&nbsp;</FONT></TD>
+				</TR>
+			</TABLE>
+
+</CENTER>
+		</TD>
+	</TR>
+</TABLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (0<IEW) {
+Is();
+if (ie4up || 2==IEW) {
+var IEW3='<INPUT TYPE="TEXT" NAME="', IEW4='" SIZE="4" MAXLENGTH="4" onBlur="FIE()">',
+IEW1=IEW3+'iH'+IEW4; IEW3=IEW3+'iW'+IEW4;
+document.write('<TABLE BORDER="1" CELLPADDING="0" CELLSPACING="1" BGCOLOR="white"><TR><TD>');
+document.write('<FONT SIZE="2">&nbsp;&nbsp;'+(ie4up ? 'IE w' : 'W')+
+'indow size:&nbsp; '+(bv4 ? '(availHeight+c - '+IEW1+') x (availWidth - '+IEW3+')'
+: IEW1+' x '+IEW3) + '&nbsp;&nbsp;</FONT>');
+document.write('</TD></TR></TABLE>');
+} else
+document.write('<INPUT TYPE="HIDDEN" NAME="iH" VALUE=""><INPUT TYPE="HIDDEN" NAME="iW" VALUE="">');
+};
+// -->
+</SCRIPT>
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="1">
+	<TR>
+		<TD BGCOLOR="white">
+			<P ALIGN="CENTER"><FONT SIZE="2">&nbsp;</FONT><A HREF="http://www.ijs.co.nz/submit/submit.htm"><I><FONT SIZE="2">Multi.Add.URL</FONT></I></A><FONT
+			SIZE="2">&nbsp; |&nbsp; </FONT><A HREF="javascript:al(document.cookie+'\n(Cookie length='+document.cookie.length+')')"><FONT
+			SIZE="1">cookie</FONT></A><FONT SIZE="2">&nbsp; |&nbsp; </FONT><A HREF="http://astalavista.box.sk/"><FONT SIZE="2">A</FONT></A><FONT
+			SIZE="2"> </FONT><A HREF="http://search.ioc3.de:1010/SoftCrawler/basic.htm?LANG=us"><FONT SIZE="2">I3</FONT></A><FONT
+			SIZE="2"> </FONT><A HREF="http://ftpsearch.lycos.com/?form=advanced"><FONT SIZE="2">FTP</FONT></A><FONT SIZE="2">
+			</FONT><A HREF="http://www.phys.canterbury.ac.nz/archiveNZ/basic.html"><I><FONT SIZE="2">NZ'</FONT></I></A><FONT
+			SIZE="2">&nbsp; |&nbsp; </FONT><A HREF="http://www.euroseek.net/page?ifl=uk"><FONT SIZE="2">EuS</FONT></A><FONT
+			SIZE="2">.</FONT><A HREF="http://www.euroseek.net/uk/addurl.html"><FONT SIZE="2">a</FONT></A><FONT SIZE="2">&nbsp;
+			</FONT><A HREF="http://www.euroferret.com/"><FONT SIZE="2">EuF</FONT></A><FONT SIZE="2">&nbsp; |&nbsp; </FONT><A
+			HREF="http://search.msn.com/advanced.asp?MT=&RS=CHECKED&CO=50&TP=Should"><FONT SIZE="2">MSN</FONT></A><FONT SIZE="2">&nbsp;
+			|&nbsp; </FONT><A HREF="http://dailynews.yahoo.com/headlines/"><FONT SIZE="2">yahoo</FONT></A><FONT SIZE="2"> </FONT><A
+			HREF="http://news.bbc.co.uk/default.htm"><FONT SIZE="2">bbc</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.cnn.com/basic.html"><FONT
+			SIZE="2">cnn</FONT></A><FONT SIZE="2">&nbsp;<BR>
+			[ </FONT><FONT SIZE="1">Snooz </FONT><A HREF="snooz.htm"><FONT SIZE="1" FACE="symbol">b</FONT><FONT SIZE="1">42.50</FONT></A><FONT
+			SIZE="1"> </FONT><FONT SIZE="1" COLOR="gray">free</FONT><FONT SIZE="1"> | </FONT><A HREF="http://www.ijs.co.nz/info/snooz.htm"><FONT
+			SIZE="1">nz</FONT></A><FONT SIZE="1" COLOR="gray"> </FONT><A HREF="http://www.altern.org/research/info/snooz.htm"><FONT
+			SIZE="1">fr</FONT></A><FONT SIZE="1"> | </FONT><A HREF="javascript:al(ShowFixes())"><FONT SIZE="1">fixes</FONT></A><FONT
+			SIZE="2"> | </FONT><A HREF="http://proxys4all.cgi.net/basic.html" target="_blank"><FONT SIZE="1">pp</FONT></A><FONT
+			SIZE="1"> </FONT><A HREF="https://secure.magusnet.com/cgibin/printenv.cgi" target="_blank"><FONT SIZE="1">s</FONT></A><FONT
+			SIZE="1"> </FONT><A HREF="http://www.junkbuster.com/cgi-bin/show-http-headers" target="_blank"><FONT SIZE="1">jb</FONT></A><FONT
+			SIZE="1"> </FONT><A HREF="http://echo.znet.de:8888/" target="_blank"><FONT SIZE="1">he</FONT></A><FONT SIZE="2">
+			| </FONT><A HREF="https://www.ziplip.com/sp/send.htm" target="_blank"><FONT SIZE="1">ZipLip</FONT></A><FONT SIZE="2">
+			| </FONT><A HREF="http://cn.net.au/tools.htm#footnote"><FONT SIZE="2">Prt</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.clearinghouse.net/basic.html"><FONT
+			SIZE="1">A</FONT></A><FONT SIZE="1"> </FONT><A HREF="http://ai.iit.nrc.ca/II_public/WebBird/tryIt.html"><FONT SIZE="1">WB</FONT></A><FONT
+			SIZE="2"> | </FONT><A HREF="http://rivendel.com/~ric/resources/inter.html"><I><FONT SIZE="2">La</FONT></I></A><I><FONT
+			SIZE="2"> </FONT></I><A HREF="http://babelfish.altavista.com/cgi-bin/translate?"><FONT SIZE="2">Ba</FONT></A><I><FONT
+			SIZE="2"> </FONT><A HREF="http://translator.go.com/"><FONT SIZE="2">Go</FONT></A></I><FONT SIZE="2"> ]<BR>
+			</FONT><FONT SIZE="1">Maori </FONT><A HREF="snooz.htm%3Fs0=&amp;s1=enei+tu+reo+maori+tou+nei+ko+ana+ora+mai&amp;b0=(&amp;b1=)+&amp;+(enei+|+tu+|+reo+|+maori+|+tou+|+nei+|+ko+|+ana+|+ora+|+mai).html"><FONT
+			SIZE="1">MS</FONT></A><FONT SIZE="2"> </FONT><A HREF="http://www.ijs.co.nz/info/sn_maori.htm"><FONT SIZE="1">srch</FONT></A><FONT
+			SIZE="1">&nbsp;&nbsp;|&nbsp;&nbsp;</FONT><A HREF="http://www.ijs.co.nz/snoozinf.htm"><FONT SIZE="1">Metas</FONT></A><FONT
+			SIZE="1">&nbsp;&nbsp;|&nbsp;&nbsp;</FONT><A HREF="mailto:research@ijs.co.nz?subject=Snooz:"><FONT SIZE="1">feedback/bugs</FONT></A><FONT
+			SIZE="1">&nbsp;&nbsp;|&nbsp;&nbsp;</FONT><A HREF="javascript:history.back()"><I><FONT SIZE="1">Back</FONT></I></A><FONT
+			SIZE="1">&nbsp;&nbsp;|&nbsp;&nbsp;</FONT><A HREF="http://www.searchnz.co.nz/cgi-bin/domainsearch"><FONT SIZE="2">D</FONT></A><FONT
+			SIZE="2">&nbsp; </FONT><A HREF="http://webpages.netlink.co.nz/~mark/netsites.html"><FONT SIZE="2">N</FONT></A><FONT
+			SIZE="2">&nbsp;&nbsp;</FONT><A HREF="http://www.piperpat.co.nz/nz/"><FONT SIZE="2">Piper</FONT></A><FONT SIZE="1"
+			COLOR="maroon"><BR>
+			</FONT><A HREF="ftp://ftp.cdrom.com/.3/sac/utildiag/cjmonit.zip"><FONT SIZE="1">CJ</FONT></A><FONT SIZE="1" COLOR="gray">
+			memory monitor&nbsp;&nbsp;|&nbsp;&nbsp;Download page: save to disk: </FONT><A HREF="http://www.ijs.co.nz/info/snooz.htm"><FONT
+			SIZE="1">htm</FONT></A><FONT SIZE="1" COLOR="gray">&nbsp; </FONT><A HREF="https://searchlores.nickifaulk.com/bg1.gif"><FONT SIZE="1">bkgnd</FONT></A><FONT
+			SIZE="1" COLOR="gray">&nbsp; </FONT><A HREF="https://searchlores.nickifaulk.com/snblank2.htm"><FONT SIZE="1">blank</FONT></A>
+		</TD>
+	</TR>
+</TABLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if (0<=location.href.indexOf("!res")) {
+document.write('<A HREF="../tv-1234.htm"><FONT SIZE="1">NZ-TV</FONT></A>'+
+'<FONT SIZE="1">&nbsp; </FONT><A HREF="../cid/cid.htm"><FONT SIZE="1">CnIDG</FONT></A>'+
+'<FONT SIZE="1">&nbsp; </FONT><A HREF="sn_maori.htm">'+
+'<FONT SIZE="1">SnMaori</FONT></A><FONT SIZE="1">&nbsp; <BR></FONT>'); };
+if ("http:"==location.protocol) {
+document.write('<FONT SIZE="2" COLOR="#808080">Hits since 9 Mar 1998: <IMG SRC="../images/'+
+'../images/nocounter.gif?snooz.ctr?dd=D&ft=2" WIDTH="58" HEIGHT="17" '+
+'ALIGN="TOP" ALT="Access Counter" BORDER="0"></FONT><BR>'); };
+
+
+allOK=null; Main('onLoad');
+// --></SCRIPT>
+</CENTER>
+<P>
+</FORM>
+
+<!-- internet searching strategies and hints content, end -->
+</font><hr width=66%><center> <a href="basic.htm"><IMG SRC="images/basipet.jpg" ALT="to basic" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue>]</font>, all rights reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

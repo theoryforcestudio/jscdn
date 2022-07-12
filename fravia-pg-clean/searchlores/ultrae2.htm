@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>ultrae2</title>
+</head>
+
+<body BGCOLOR="#C0C0C0" TEXT="#001010" VLINK="#405040">
+<a NAME="anchortop"></a>
+<!-- HTML code by Fravia, Yeah, go ahead, steal my code, sucker -->
+
+<center><font size=+3>An interesting tool: BRW(32-bit reverse engineering)</font><br><br>
+   by Fravia+, MSRE<br>(May 1997) Re-edited december 2000<br><br>
+<IMG SRC="images/hcu1.gif" ALT="HCU" ALIGN="BOTTOM" 
+WIDTH="114" HEIGHT="43" BORDER="0" VSPACE="0" HSPACE="0"></h2>
+<hr>
+<IMG SRC="images/bulletr.gif"  ALIGN="BOTTOM" BORDER="0" VSPACE="0" 
+HSPACE="0" WIDTH="13" HEIGHT="13">
+<i>Courtesy of fravia's searchlores.org, December 2000<hr width=44%>
+I have re-published this old essay of mine since it is linked from my introduction 
+to Mammon_'s very interesting <font color=blue>[</font><a href="mammop5.htm">Customizing Netscape's buttons 
+and menus</a><font color=blue>]</font>, which is in turn linked by the more recent 
+<font color=blue>[</font><a href="opera_5.htm">Some "improving" thoughts 
+on Opera version 5</a><font color=blue>]</font> contributions... besides it can be still useful 
+nowadays.<br>But re-reading it I was rather disappointed by myself. Mann-o-mann, 
+you get the creeps if you think that everything 
+you put on the web will 
+survive centuries: re-reading 
+the snotty tone I used three years ago I felt quite ashamed (therefore I have 
+re-edited this doc&nbsp;:-)...<br>
+(you know, what really disturbs me, is that I fear I'll probably say the 
+same in a couple of years  about my current writings... bear with me, gentle reader&nbsp;:-)
+ </i>
+</center>
+<hr size="3">
+
+<b>What's all about</b><br>
+In this short essay I will show you how quickly you can individuate 
+(and eventually reverse) a protection scheme, or any other feature of a 
+Windows 32 bit program using BRW, Borland Resource Workshop, a mighty
+tool. 
+<br><br>
+<b>The target: <font color=blue>[</font><a href="zipped/uedit310.zip">ultraedit</a><font color=blue>]</font> uedit310.zip, 574641 bytes: Ultraedit version 3.10, by <a href="http://www.ultraedit.com">Ian Mead</a>: BEST texteditor for windoze, higly recommended, incredibly powerful, 
+this is an old, yet powerful enough version:  13/02/96</b> <br><br>
+As &quot;target&quot; I have chosen for this essay a relatively &quot;old&quot; version 
+of Ultraedit32, By Ian Mead: Version 3.10a, from 1996. Should be easy 
+to find through the archies. Ultraedit is a very good Text editor, 
+which has also hex mode editing, unix text mode conversion and other 
+useful utilities. I'm not pirating anything at all of course: it would be 
+extremely easy (and banal) to find NEWER <a href="http://www.google.com/search?num=30&meta=hl%3D%26lr%3D&q=%2Bultraedit+%2Bserial+%2Bdownload">registered versions</a> of Ultraedit on the 
+web for anyone that wants to steal software, besides I prefer other, much  
+older and (therefore?) more 
+powerful, programs for editing files, like psedit. <br>
+If you know how to search, I may add, you don't need to "crack" anything at all: 
+when you need something, you simply and quickly fetch 
+the last version of it from the web ("ftpmailed"...why download when you 
+can ftpmail?). It <u>never</u> tooks longer than 5-10 minutes to find and have ftpmailed 
+whatever program or game or image you may need  
+on this web of ours.<br><br>
+
+You may reverse the eventual protection, of course, and yet you'll
+ most probably use the 
+program for a number of days inferior to the "allowed" time (because usually 
+this timespan is more than enough to arrive to the date of release of 
+the next version :-)<br><br>
+
+<b>The protection scheme</b><br>
+This program has an annoying &quot;delayed&quot; nagscreen at the beginning, a 
+registration option of the usual name-code comparison algorithm and a 
+&quot;Cinderella&quot; type of protection, set at 45 days.
+<br><br>
+<b>How we could have reversed it</b><br>
+Obviously we could have easily and quickly eliminated the nagscreen 
+using +ORC's dead listing technique:<pre>
+
+:004010E4 833D0CE0450000 cmp dword ptr [0045E00C], 0 ;check if flagged
+:004010EB 7466           je 00401153		     ;0=not registered
+:004010ED 6A09           push 9 ;This copy of UltraEdit-32 is licensed to
+...
+...
+:00401153 6A08           push 8 ;This is an unregistered copy of UltraEdit
+...
+</pre>
+And we would also have quickly found the Cinderella protection as well, 
+using the same method:
+<pre>
+:00401E60 83F82D          cmp eax, 2D        ;0x2D = 45 :-)
+:00401E63 7EA5            jle 00401E0A	     ;not yet 45, continue
+:00401E65 E8E4F5FFFF      call 0040144E      ;check if registered
+:00401E6A 833D0CE0450000  cmp dword ptr [0045E00C], 0 ;check if flagged
+:00401E71 757F            jne 00401EF2	     ;it's a registered user!
+:00401E73 6830200000      push 00002030	     ;it's a luser, therefore
+:00401E78 682CE14600      push 0046E12C      ;45 Days... expired
+</pre>
+BTW, I checked the more recent 4.3 version of Ultraedit: the protection 
+scheme is the same crap (lazy programmers):<pre>
+cmp 47500C,0 ;holy flag
+jne 004023E3 ;nagscreen
+and
+cmp eax, 2D  ;0x2D = 45 :-)
+</pre>
+<b>The aim of this script</b><br>
+But the aim of this essay is not to reverse such a banale protection, but 
+to teach you how to use ANOTHER powerful reverse engineering tool, very 
+useful for windows programs disassembly: the &quot;magical&quot; BORLAND 
+RESOURCE WORKSHOP.
+<br><br>
+I believe that a short digression about this tool is very well worth it:
+The Whitewater Resource Toolkit, that came with Borland C++ 4, was a 
+phantastic tool for windows (16 bit) 3.1 disassembling already, as all real 
+reversers know. Alas, the development died! In 1994 appeared the last known 
+version of it, ported to 32 bit and in the mean time called &quot;Borland 
+Resources Workshop&quot; (Version 4,5 for Borland C++ 4,5, the one you 
+should fetch). 
+<br><br>
+<b>It's a sad world</b><br>
+Unfortunately this tool was TOO powerful and too good, so they of course 
+simply killed it. Whitewater was on this purpose, bought by Symantec 
+(Peter Norton) and the product was no more commercialized. Version 4,5 
+(GET IT!) is the last one I could find on the net, probably Borland 
+had, in 1994, still some rights on its 
+code and was able to publish it, alas for the last time. 
+<br><br>
+It's a weird world, isn't it? Awful stupid and useless programs are updated 
+every two months and this real (and very powerful) Juwel has been purposedly 
+killed! <br>
+That does not wonder me: as we very well know, they do not wont people to 
+UNDERSTAND how a program works, they want only stupid morons that use their 
+(bugged and poor) applications without questioning, understanding or 
+ameliorating them.
+<br><br>
+<b>Power at your fingers</b><br>
+Ok, fetch BRW.zip, it's a zipped 2,5 megabytes file, if you did not 
+buy it (like I did short after this essay: it appeared with THE COMPLETE 
+Borland C++ 4,5, on the CD-ROM of PCPlus n.38, a UK Computer magazine, 
+August 1997 edition) and now anyway it's vastly available on the web.
+<pre>
+This are BRW commands:
+**	New Project: Ultraedit exe
+**	Dialog 110: (you see it's 110, because it APPEARS in the right 
+                     window when you click 110, but)
+</pre>
+And this is the immediate answer from my beloved BRW:
+<font size=-1><pre>
+110 DIALOG 100, 70, 210, 163
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, &quot;MS Sans Serif&quot;
+{
+ CONTROL &quot;This is an unregistered copy of UltraEdit-32.  
+ Use of this program should be on a temporary basis (45 Days max) 
+ for evaluation purposes only.  If this program is to be used for purposes 
+ other than evaluation please register this program.&quot;, -1, &quot;STATIC&quot;, 
+ sSS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 34, 18, 151, 55
+ CONTROL &quot;Details for registration can be found in the READ.ME file 
+ and in the 'About' dialog box on the help menu.&quot;, 128, 
+ &quot;STATIC&quot;, SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 35, 76, 151, 35
+ CONTROL 2, -1, &quot;STATIC&quot;, SS_ICON | WS_CHILD | WS_VISIBLE, 5, 12, 18, 20
+ CONTROL &quot;You have&quot;, -1, &quot;STATIC&quot;, SS_LEFT | WS_CHILD | 
+ WS_VISIBLE | WS_GROUP, 36, 115, 40, 12
+ CONTROL &quot;&quot;, 130, &quot;EDIT&quot;, ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | 
+ WS_VISIBLE | WS_DISABLED | WS_BORDER, 78, 114, 18, 12
+ CONTROL &quot;days left for evaluation.&quot;, -1, &quot;STATIC&quot;, SS_LEFT | 
+ WS_CHILD | 
+ WS_VISIBLE | WS_GROUP, 103, 115, 89, 12
+ CONTROL &quot;Enter Authorization code&quot;, 1, &quot;BUTTON&quot;, BS_DEFPUSHBUTTON | 
+ WS_CHILD | 
+ WS_VISIBLE | WS_TABSTOP, 49, 137, 113, 14
+}</pre>
+</font>	  <font size="+1">
+<b>You wont believe it</b></font><br>
+Well what do you think you can do now? You found the nagscreen, so what? 
+You will not believe it: It's so easy that its scares me: just choose 
+BRW option &quot;DELETE&quot; (YES!) and simply DELETE dialog 110... 
+BRW recompiles the target on the fly and opla! There is no nagscreen 
+there any more! The target runs without annoying us!
+<br><br>
+Unbelivable? Try it... See? Now you begin to understand why BRW 
+development has been deemed &quot;not allowed&quot; :-)
+<br><br>
+<b>More options</b><br>
+You can apply of course the same trick to EVERY PROGRAM of this planet. 
+As a matter of fact BRW is great fun for modifying all your software 
+as you fancy, allowing you quite a palette of options, from puerile 
+to serious reverse engineering of applications you do not happen to 
+have the source code of... (BRW-recompiling is easy if you do not add 
+functionalities and code and just hold to the same length of bytes... 
+if you add code and patch yor targets you should use BRW AND a good 
+recompiler at the same time).
+<br><br>
+I leave to the brain and the mood of the reader to imagine what a good 
+combination between dead listing, eventual Winicing and BRWing windows 
+32 applications can offer us :-): <br>
+TOTAL MASTERY OF ANY APPLICATION; <br>
+INFINITE POSSIBILITIES OF RESTRUCTURING APPLICATIONS; 
+IMMEDIATE DISCOVERY OF ANY BACKDOOR, HIDDEN TREASURE, 
+ABORTED FUNCTIONS INSIDE ANY PROGRAM... <br>
+and many many other related goodies. <br>
+And since this awful stupid Windows95/97/NT Os will -illogically but 
+unfortunately- spread and spread more and more, all future programs 
+are -at least for a pretty long time being- at your feet as well as 
+at mine, my dear fellow reversers :-)
+<br><br>
+Work well,<br>
+Fravia+<br><br>
+
+Post scriptum:<br>
+I have been criticized ... a reader telling me that in fact <u>there are</u> 
+new versions of BRW...<br>
+<br>
+	&quot;Resource Workshop wasn't killed as you state.
+	 Borland still offers it, but it has stopped being a stand alone
+       product from them. Instead it is included in Borland c++...
+	 Your conclusions are false&quot;
+<br><br>
+And yet the best (stripped) version of it I could find or gather until now, 
+even writing to Borland, is still version 4,5. <br>
+If anyone has any newer version, please notify... but check first that it 
+really is a &quot;development&quot; of BRW, not just another copy of what 
+we already know. (The reader I spoke of above apologized... afterwards)
+<br><br>
+<hr>
+<!-- internet searching strategies and hints content, end -->
+
+<center><i>You are deep inside fravia's searchlores.org</i>
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+<!-- t+s spellcheck April 2000 -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>
+
+</html>
+
+

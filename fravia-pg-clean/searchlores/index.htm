@@ -1,0 +1,220 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>Fravia's web-searching lore: Main entrance: Finding Information and seeking Knowledge on the Internet</title>
+ <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<!-- web searching tools: pagename end -->
+<!-- meta crap begin -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta name="description" content="This totally advertisement-free site teaches basic and advanced Internet search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, tips, strategies & forgotten lore related to web-searching">
+  <meta name="keywords" content="Internet searching, searching the world wide web, search strategies, search engines anti-optimization, advanced web searching, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, power searching tips, www searching, Finding Information on the web, Internet searching, fravia+">
+  <meta name="author" content="fravia+">
+  <meta name="copyright" content="Copyright (c) 1952-2032 fravia+">
+  <!-- meta crap end -->
+  <!-- css & javascript crap begin -->
+  <style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #03C }
+A:hover { color: purple; background: #AFB }
+html*#noopera { color: red; }
+.menu {
+background: #c0c0c0;
+font-weight: normal;
+font-size: 0.9em;
+border-top:  2px solid;
+border-right: 2px solid;
+border-left:  1px solid;
+border-bottom: 1px solid;
+padding: 6px 2px 6px 2px;
+white-space: nowrap;
+}
+  </style>
+  <script language="JavaScript">
+function DaysInMonthYear(startmonth,startyear)
+{
+    if (startmonth>11) {
+        startmonth=0;
+        startyear++;
+    }
+    tempDate=new Date(startyear,startmonth,1);
+    tempDate.setTime(tempDate.getTime()-1);
+    return tempDate.getDate();
+}
+function UpdateDate(startmonth, startdate, startyear)
+{
+    today=new Date();
+    diffday=today.getDate()-startdate;
+    diffmonth=today.getMonth()-(startmonth-1);
+    diffyear=today.getYear()-startyear;
+    // solve Operas y2k bug
+    if (diffyear<-1800) diffyear+=1900;
+    if (diffyear>1800) diffyear-=1900;
+    if (diffday<0) {
+        diffday+=DaysInMonthYear(startmonth,startyear);
+        diffmonth--;
+    }
+    if (diffmonth<0) {
+        diffmonth+=12;
+        diffyear--;
+    }
+    if (diffyear<0) return "sometime not too far away in the future";
+/*
+Y, M, D
+- all three empty: today
+- only D: x days ago
+- only M: x months ago
+- only Y: x years ago
+- M+D: x months and y days ago
+- Y+D: x years and y days ago
+- Y+M: x years and y months ago
+- Y+M+D: x years, y months and y days ago
+Start at days, then continue with months and finalize with years.
+*/
+    result="";
+    AndUsed=false;
+    if (diffday>0) result=diffday+(diffday>1?" days":" day");
+    if (diffmonth>0) {
+        if (result>"") {
+            result=(AndUsed?", ":" and ")+result;
+            AndUsed=true;
+        }
+        result=diffmonth+(diffmonth>1?" months":" month")+result;
+    }
+    if (diffyear>0) {
+        if (result>"") {
+            result=(AndUsed?", ":" and ")+result;
+            AndUsed=true;
+        }
+        result=diffyear+(diffyear>1?" years":" year")+result;
+    }
+    result+=(result>"")?" ago":"today";
+    return result;
+}
+</script>
+    <!-- css & javascript crap end -->
+</head>
+<!-- fravia's www searching hints and tricks: begin of body: new advanced searching techniques & tips -->
+<body alink="#00ff00" bgcolor="#cccccc" link="#0000ff" text="#001010" vlink="#3366cc">
+<!-- menu begin -->
+<div class="menu"><nobr>&nbsp; 
+<a accesskey="e" target="_top" href="basic.htm" title="enter searchlores">enter this site</a> &nbsp; | &nbsp;
+<a accesskey="s" target="_top" href="http://www.searchlores.org/cgi-bin/search?query=">search this site</a> &nbsp; | &nbsp;
+<a accesskey="h" target="_top" href="info.htm#help">help this site</a> &nbsp; | &nbsp;
+<a accesskey="n" target="_top" href="news.htm">new stuff</a> &nbsp; | &nbsp;
+<a accesskey="y" target="_top" href="essays.htm">study</a> &nbsp; | &nbsp;
+<a accesskey="r" target="_top" href="library.htm">read</a> &nbsp; | &nbsp;
+<a accesskey="m" target="_top" href="main.htm" title="go to the main search engines">main s.e.</a> &nbsp; | &nbsp;
+<a accesskey="i" target="_top" href="mirrors.htm">mirrors</a> &nbsp; | &nbsp;
+<a accesskey="l" target="_top" href="links.htm" title="go to the www searching links">links</a>
+</div>
+<!-- menu end -->
+<!-- main table begin -->
+<table align="center" border="0" width="900">
+<tr>
+<!-- first cell width= 380 -->
+<td width="380">
+<center>
+<!-- advanced searching tools and techniques: how to find information on the web: fravia's logo -->
+<a href="basic.htm"><img src="images/fravia-5.jpg" alt="This is a logo and weights 19947 
+bytes, use Opera and turn images off" align="middle" border="0" height="378" hspace="0" vspace="0" width="354"></a>
+<br></center>
+</td>
+<!-- second cell 8;  total 380+8=388 -->
+<td width="8">&nbsp;</td>
+<!-- third cell 412;  total 380+8+412=900 -->
+<td align="left" width=512">
+<!-- begin of smaller table:    Internet Research: Searching the World Wide Web -->
+<table border="0"><td>&nbsp;&nbsp;<font size="+2"><a target="_top"
+ href="http://search.lores.eu/">search.lores.eu</a></font>
+&nbsp;(Europe)
+<br>&nbsp;&nbsp;<font size="+2"><a target="_top"
+ href="http://www.searchlores.org">www.searchlores.org</a></font>
+&nbsp;(Europe/Merica)
+<br>&nbsp;&nbsp;<font size="+2"><a target="_top"
+ href="http://www.fravia.net">www.fravia.net</a></font> &nbsp;(Europe/Oz/Asia)
+</td></tr></table>
+ <!-- end of smaller table:    Internet Research: Searching the World Wide Web -->
+<br>
+<font face="Arial" size="+4">Web &nbsp; &nbsp; &nbsp; 
+<a target="_top" href="rose.htm"><img src="images/windrose.png" alt="navigator" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+<br>
+Searchlores</font> <br>
+<i>Advanced  
+ Internet searching <a target="_top" href="longtermsearching.htm">strategies</a> 
+ &amp; <a target="_top" href="tips.htm">advice</a><br><a href="rose.htm">Resources</a> for 
+<a accesskey="e" href="basic.htm" title="Basic web searching">basic</a>, 
+<a accesskey="a" href="advanced.htm" title="Advanced Internet searching">advanced</a> &
+<a href="deepweb_searching.htm">deep web</a> seekers</a></i> 
+<br><br>
+<!-- BEGIN_UpdateDate, e.g. (6,19,2002) -- updating advanced web searching lore, update begin -->
+<script language="JavaScript">
+document.write("<center><font size=+2><I>Lore updated</I> ");
+document.write("<a href='news.htm'><font color=black>");
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- ||||||||||||||||||| UpdateDate ||||||||||||||||||||| -->
+document.write (UpdateDate(4,30,2009));
+<!-- ||||||||||||||||||| UpdateDate ||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+document.write("</font></font></center></i>");
+</script></a>
+<!-- END_UpdateDate -- updating new techniques for effectively researching and retrieving relevant information, update end -->      
+</i>
+<!--  begin of "www" table: Searching the Internet Effectively, Finding Information on the Internet & Internet Searching Tools -->
+<br>
+<table border="0"><tbody><tr><td>
+<center><font size = +1>
+<a target="_top" href="welcome.htm"><b>W</b>elcome</a> | 
+<a href="news.htm"><b>W</b>hat's new</a> |
+<a target="_top" href="warning.htm"><b>W</b>arning</a></font>  
+<br><br></center>
+<br></tD></tR></tbody></table>
+<!--  end of "www" table: Searching the Internet Effectively, Finding Information on the Internet & Internet Searching Tools -->
+</td></tr>
+<tr><td>
+<!-- div "most popular pages at searchlores" begin -->
+<div align="center">Most 
+"<a href="what_strings_did_users_use_to_find_searchlores.htm">Popular</a>" sections @ fravia's<hr width=55%>
+<a href='news.htm'>New stuff</a> 
+| <a href="rabbits.htm">Webbits</a> 
+| <a href="essays.htm">Essays</a> 
+| <a href="magicfi.htm">Guessing</a>   	
+| <a href="combing.htm">Combing</a><br>  
+<a href="main.htm">ss.ee: Main</a>  
+| <a href="quickforms.htm">ss.ee: Quickforms</a> <br> 
+</div></td>
+<td>&nbsp;</td>
+<!-- Table "opera's a fine browser for educated seekers versus non opera crap browsers for zombies - begin -->
+<td>
+<table width="75%" border="1"><tr>
+<td colspan="2" bgcolor="#c0c0c0">
+<center>
+<script>
+ if (navigator.userAgent.indexOf('Opera') != -1) {
+document.write("<center>You are using <a href='tuttiope.htm'>Opera</a>, nice choice!</center>");
+}
+else {
+document.write("<center>Alas (for you), you are <b>not</b> using the <a href='tuttiope.htm'>Opera</a> browser... enjoy my site nevertheless.</center>");
+}
+</script>
+You'll find here a considerable amount of sheer, raw searching knowledge ~ however, 
+if your attention span is too short, 
+please,   by all means, <a href="javascript:history.back();">bugger off</a><br>
+</center>
+</td></tr></table>
+<!-- Table "opera's a fine browser for educated seekers versus non opera crap browsers for zombies - end -->
+</td></tr>
+<tr><td>
+<font size=-4></fonT><center><a href="http://web.archive.org/web/*/http://searchlores.org"><img src="images/since1995_4.jpg" 
+alt="This is part of a logo and -surpise- weights 20792 
+bytes, more than the bigger one above: use Opera and turn images off" align="middle" border="0" height="105" hspace="0" vspace="0" width="365"></a></center></td>
+<td>&nbsp;</td><td valign=center>
+<div align="center">Seekers'  <a href="quickforms.htm">Quickforms</a>, 
+<a href="rabbits.htm">Webbits</a>   &  
+<a target="_top" href="rose.htm">Rose</a></div>
+</tD></tr></tbody></table>
+<!--  end of main table: Finding Information on the Internet & Internet Searching Tools -->
+</body>
+</html>

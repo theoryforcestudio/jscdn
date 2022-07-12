@@ -1,0 +1,498 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ wf_add.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/javascript">
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 2000 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Essays ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="advanced.htm">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Adding engines to WebFerret&nbsp;¸.·´¯)</font>
+  <br>
+  <font size=+2>The guts of a search engines parser<br>by Laurent</FONT>
+  <BR>
+  (very slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org">searchlores</a> in February 2001
+  <br>
+<hr width=44%></center><i>An incredible deed. Webferret's own updating protocols reversed. I have the pleasure of having 
+met Laurent -a mighty PHP wizard- InRealLife, and indeed he 'has the reversing force', 
+that's for sure. Read this text, which is but 
+a part of an even more important project  that 
+he is developing on his own with remarkable speed and competence: an automated bot 
+for searching (à-la-inference) various homepage providers. I note incidentally that 
+ people at Webferret should <u>thank</u> Laurent for the ready-made google script&nbsp;:-)
+<br>
+And when you have finished reading this essay, re-read it. And then 
+work on your own: you'll love the possibilities that this approach will open to you, and to
+ your own searches...<br><br>
+Your comments and suggestions (and further reversing and disassembling) would be welcome.</i><hr>
+<br><center>
+  <FONT SIZE=+2>(¯`·.¸&nbsp;Adding engines to WebFerret&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Laurent<BR></font></center>
+<H2>Introduction </H2>
+<P>
+While gathering informations related to an ongoing project, I started to study and slightly reverse WebFerret, which 
+seemed an interesting source of information and ideas for the above mentioned project. 
+Although that project wasn't 
+aimed at improving WebFerret, I thought that the discoveries I made could be worth 
+an essay on their own.
+<BR>
+The point that actually interest me is to figure out how WebFerret manages the query 
+building and the results parsing 
+of the differents search engines it support. Indeed, given that Webferret is a 
+software that runs locally on your 
+machine and given the fact that search engines often  do (or at least at may) change their pages 
+layout, there <U>must</U> be 
+a way for WebFerret to keep updated to the last specifications. 
+I can't imagine that I would have to download a new 
+version each time a slight change would affect just one single Search Engine. 
+<br>
+This made me think that the results page parsing 
+algorithm cannot just be 'hardcoded' in webferret.
+<p>
+<H2>Investigations</H2>
+<P>
+A quick check of WebFerret's options shows that it have built-in support 
+for proxies. That's a very interesting idea. 
+Let's launch our favorite local proxy software (I had proxyplus 
+at hand), tell WebFerret to connect via localhost:4480, 
+run a simple webferret search session and ... oh oh, what's that ? Here 
+is the proxyplus log file :
+<BR>
+
+<BLOCKQUOTE>
+<FONT size=-1>
+01/28/2001:18:05:57 127.0.0.1 - HTTP "GET 
+http://www.euroseek.net:80/query?iflang=uk&query=fravia&domain=world&lang=world&style=ferret HTTP/1.0" 200 254 254/256 
+MISS 212.209.54.40 D<br>
+01/28/2001:18:05:57 127.0.0.1 - HTTP "GET http://www.search.com:80/search?ferret=1&q=fravia HTTP/1.0" 200 279 279/177 MISS 216.200.247.146 D<br>
+01/28/2001:18:05:58 127.0.0.1 - HTTP "GET http://www.altavista.com:80/cgi-bin/query?pg=aq&stype=stext&Translate=on&q=fravia&r=fravia&stq=10 HTTP/1.0" 200 299 299/225 MISS 209.73.180.3 D<br>
+01/28/2001:18:05:58 127.0.0.1 - HTTP "GET http://findwhat.com:80/bin/findwhat.dll?getresults&mt=fravia&dc=40&aff_id=7114 HTTP/1.0" 200 128 128/206 MISS 216.216.246.30 D<br>
+01/28/2001:18:05:58 127.0.0.1 - HTTP "GET http://www.hotbot.com:80/?MT=fravia&SM=B&DV=0&LG=any&DC=50&DE=2&_v=2&OPs=MDRTP HTTP/1.0" 200 282 282/206 MISS 209.185.151.128 D<br>
+01/28/2001:18:05:58 127.0.0.1 - HTTP "GET http://search.excite.com:80/search.gw?s=fravia&c=web&start=0&showSummary=true HTTP/1.0" 200 297 297/205 MISS 199.172.148.11 D<br>
+01/28/2001:18:05:58 127.0.0.1 - HTTP "GET http://northernlight.com:80/nlquery.fcg?cb=0&qr=fravia&orl=2:1 HTTP/1.0" 200 544 544/231 MISS 216.34.102.230 D<br>
+01/28/2001:18:05:59 127.0.0.1 - HTTP "GET http://search.msn.com:80/results.asp?q=fravia HTTP/1.0" 200 184 184/173 MISS 207.46.185.99 D<br>
+01/28/2001:18:05:59 127.0.0.1 - HTTP "GET http://search.aol.com:80/dirsearch.adp?query=fravia&start=web HTTP/1.0" 200 208 208/189 MISS 205.188.180.25 D<br>
+01/28/2001:18:05:59 127.0.0.1 - HTTP "GET http://val.looksmart.com:80/r_search?comefrom=izu-val&look=x&isp=zu&key=fravia&search=0 HTTP/1.0" 200 244 244/215 MISS 207.138.42.25 D<br>
+01/28/2001:18:05:59 127.0.0.1 - HTTP "GET http://wwwp.goto.com:80/d/search/p/cnet/xml/?Keywords=fravia&maxCount=40 HTTP/1.0" 200 138 138/200 MISS 206.132.152.249 D<br>
+01/28/2001:18:06:00 127.0.0.1 - HTTP "GET http://search.icq.com:80/dirsearch.adp?query=fravia&wh=web&bm=0 HTTP/1.0" 200 208 208/191 MISS 205.188.180.249 D<br>
+<font color=red>01/28/2001:18:06:01 127.0.0.1 - HTTP "POST http://vorlon.ferretsoft.com:80/update HTTP/1.0" 200 291 127/291 MISS 206.103.246.239 D</font><br>
+<font color=red>01/28/2001:18:06:01 127.0.0.1 - HTTP "POST http://vorlon.ferretsoft.com:80/update HTTP/1.0" 200 291 2798/291 MISS 206.103.246.239 D</font><br>
+01/28/2001:18:06:02 127.0.0.1 - HTTP "GET http://findwhat.com:80/bin/findwhat.dll?getresults&mt=fravia&dc=40&aff_id=7114 HTTP/1.0" 200 281 281/206 MISS 216.216.246.30 D<br>
+01/28/2001:18:06:02 127.0.0.1 - HTTP "GET http://www.hotbot.com:80/?MT=fravia&SM=B&DV=0&LG=any&DC=50&DE=2&_v=2&OPs=MDRTP HTTP/1.0" 200 480 480/206 MISS 209.185.151.128 D<br>
+01/28/2001:18:06:03 127.0.0.1 - HTTP "GET http://northernlight.com:80/nlquery.fcg?cb=0&qr=fravia&orl=2:1 HTTP/1.0" 200 1026 1026/231 MISS 216.34.102.230 D<br>
+01/28/2001:18:06:03 127.0.0.1 - HTTP "GET http://www.search.com:80/search?ferret=1&q=fravia HTTP/1.0" 200 958 958/177 MISS 216.200.247.146 D<br>
+01/28/2001:18:06:03 127.0.0.1 - HTTP "GET http://val.looksmart.com:80/r_search?comefrom=izu-val&look=x&isp=zu&key=fravia&search=0 HTTP/1.0" 200 321 321/215 MISS 207.138.42.25 D<br>
+01/28/2001:18:06:04 127.0.0.1 - HTTP "GET http://wwwp.goto.com:80/d/search/p/cnet/xml/?Keywords=fravia&maxCount=40 HTTP/1.0" 200 293 293/200 MISS 206.132.152.249 D<br>
+01/28/2001:18:06:04 127.0.0.1 - HTTP "GET http://www.euroseek.net:80/query?iflang=uk&query=fravia&domain=world&lang=world&style=ferret HTTP/1.0" 200 3967 3967/256 MISS 212.209.54.40 D<br>
+01/28/2001:18:06:05 127.0.0.1 - HTTP "GET http://bcs.zdnet.com:80/ads/ferret-ad?RGROUP=504/BRAND=637/QT=%3Afravia HTTP/1.0" 200 388 388/331 MISS 205.181.112.84 D<br>
+01/28/2001:18:06:06 127.0.0.1 - HTTP "GET http://search.excite.com:80/search.gw?s=fravia&c=web&start=0&showSummary=true HTTP/1.0" 200 6729 6729/205 MISS 199.172.148.11 D<br>
+01/28/2001:18:06:06 127.0.0.1 - HTTP "GET http://www.webcrawler.com:80/cgi-bin/WebQuery?search=fravia&showSummary=true&src=wc_results HTTP/1.0" 200 351 351/327 MISS 198.3.99.101 D<br>
+01/28/2001:18:06:06 127.0.0.1 - HTTP "GET http://search.aol.com:80/dirsearch.adp?query=fravia&start=web HTTP/1.0" 200 4400 4400/189 MISS 205.188.180.25 D<br>
+01/28/2001:18:06:07 127.0.0.1 - HTTP "GET http://www.altavista.com:80/cgi-bin/query?pg=aq&kl=XX&r=fravia&search=Search&q=fravia&d0=&d1= HTTP/1.0" 200 5165 5165/288 MISS 209.73.180.3 D<br>
+01/28/2001:18:06:08 127.0.0.1 - HTTP "GET http://search.icq.com:80/dirsearch.adp?query=fravia&wh=web&bm=0 HTTP/1.0" 200 2888 2888/191 MISS 205.188.180.249 D<br>
+01/28/2001:18:06:08 127.0.0.1 - HTTP "GET http://search.msn.com:80/results.asp?q=fravia HTTP/1.0" 200 4733 4733/173 MISS 207.46.185.99 D<br>
+01/28/2001:18:06:09 127.0.0.1 - HTTP "GET http://www.euroseek.net:80/query?iflang=uk&query=fravia&domain=world&lang=world&style=ferret&of=10 HTTP/1.0" 200 254 254/262 MISS 212.209.54.40 D<br>
+</FONT>
+</BLOCKQUOTE>
+
+<BR>
+See those lines highlighted in red? A http POST request to http://vorlon.ferretsoft.com/update. Could it be so easy ? 
+let's point our
+browser to that page. Ahi! a "404 Not found" :-( It would have been too nice. Anyway, 
+the proxyplus logs tells that the 
+server reply was a 200 OK, so there must be something. The trick is that the '/update' 
+script will return a 404 <font color=blue>to try 
+to hide itself when it doesn't receive a valid request</font> (which is btw a good 'protection' idea, imho).
+<BR>So what? Give up? Certainly not! We won't be stopped by that, won't we? 
+I have somewhere in my little tools box 
+an http client/server code that should help me. Ok, let's shape that server 
+code to our today's purpose. Don't forget to 
+map vorlon.ferretsoft.com to 127.0.0.1 through our beloved HOSTS file and run webferret 
+again. BINGO!! here is the 
+actual POST request send by WebFerret: 
+<PRE>
+POST /update HTTP/1.0
+Content-type: application/x-www-form-urlencoded
+Content-length: 96
+Pragma: no-cache
+Accept: */*
+Host: vorlon.ferretsoft.com
+X-Forwarded-For: 127.0.0.1
+Via: 1.0 Proxy+ (v2.30 http://www.proxyplus.cz)
+
+SASF
+FerretSoft YourName YourCountry YourCompany
+</PRE>
+Here comes the <U>first discovery</U>: WebFerret implements <font color=blue>a 
+malicious 'phone home'</font> feature (cfr <a href="malware.htm">the "malwares" lab</a>). It sends back home your 
+<U>name</U>, <U>country</u> and <U>company</u>. I say malicious because this isn't needed at all !!
+<BR>Ok, you have been warned. But the interesting things are elsewhere.<br> 
+Between the 'SASF' and 'FerretSoft', some binary 
+data is also being sent. 
+Well, let's remember that and keep it for later. The complete request send is available <A 
+href="post_5001.txt.orig">here</A>
+<BR>Let's now shape our little client source code so it will send the exact same 
+request to the actual vorlon 
+server. Let's grab it's answer and ... BINGO!! look at this vorlon reply :
+
+<PRE>
+HTTP/1.0 200 OK       <FONT color="RED">         <-- 200 OK, hehe we could fake it!</FONT>
+Content-Length: 2672  <FONT color="RED">         <-- quite a lot on info here</FONT>
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Content-Type: image/gif  <FONT color="RED">      <-- uh? a gif? </FONT>
+Pragma: no-cache
+
+SASF     REGPATCH1.0000    <FONT color="RED">    <-- this + what's below clearly shows 
+                                       this is a registry patch file</FONT>
+[Web]
+
+"RegistryVersion"=number:120
+
+"InstalledEngines"=strings:\
+  "AltaVista",\
+  "AOLNetFind",\
+  "Anzwers",\
+  "CNET",\
+  "EuroSeek",\
+  "Excite",\
+  "FindWhat",\
+  "GOTO",\
+  "HotBot",\
+  "ICQ",\
+  "LookSmart",\
+  "LycosUSA",\
+  "MSN",\
+  "SearchUK",\
+  "WebCrawler"
+
+"ActiveEngines"=numbers:\
+  1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+
+"NorthName"=
+"NorthHome"=
+"NorthURL"=
+"NorthMethod"=
+"NorthQueryType"=
+"NorthQueryOps"=
+"NorthQueryCloseness"=
+"NorthQueryCommand"=
+"NorthGrammar"=
+"SearchDelay"=number:3000
+"ExciteQueryCommand"=string:\
+  "#0; &gt;xx; &lt;urlcloseness; sx~[&lt;null~;&gt;urlname~|3~]; $WebFerret; &gt;httpUser-Agent; $search=; &lt;+urlquerytext; $+&c=web&start=0&showSummary=true&perPage=50; &gt;urlquery"
+"ExciteGrammar"=strings:\
+  "R:&lt;li&gt;*.&lt;a href=*.('http://[eh; tb; &gt;url|*.]')*.\"&gt;[eh; tb; &gt;title|*.]&lt;/a&gt;*.size8&gt;[eh; tb; &gt;abstract|*.]&lt;/span&gt;"
+"FindWhatQueryCommand"=string:\
+  "&lt;urlcloseness; sx~[&lt;null~;&gt;urlname~|3~]; $WebFerret; &gt;httpUser-Agent; &lt;urlquerytext; ?,:%2C; &gt;urlquerytext; $getresults&mt=; &lt;+urlquerytext; $+&dc=40&aff_id=7114; &gt;urlquery"
+"GOTOQueryCommand"=string:\
+  "&lt;urlcloseness; sx~[&lt;null~;&gt;urlname~|3~]; $WebFerret; &gt;httpUser-Agent; &lt;urlquerytext; ?,:%2C; &gt;urlquerytext; $Keywords=; &lt;+urlquerytext; $+&maxCount=40; &gt;urlquery"
+"SearchUKName"=string:"SearchUK"
+"SearchUKHome"=string:"http://www.searchuk.com/"
+"SearchUKURL"=string:"http://uk.searchengine.com/cgi-bin/search"
+......
+......
+ </PRE>
+I didn't paste the whole answer cause it would make this essay 
+unreadable. For those interested (and you should better be if you'r gonna build your bots 
+on this&nbsp;:-)
+the whole reply is available <A href="answer_5001.txt.orig">here</A>. You better download that file and view it with a 
+good editor cause your browser probably won't render it correctly.
+<P>
+Ok, you certainly guessed it now: The whole bazar is stored in the windows 
+registry. A quick search for 'Excitegrammar' 
+in the registry confirm it.
+<P> So, what's left? Well, I spoke above about some binary data being sent 
+along with your private details to the vorlon server. 
+It becomes quickly apparent (especially when you compare that POST 
+request with one sent by an old version -<A 
+href="post_0200.txt.orig">3.0200</A>- of Webferret) that the version number, 
+revision and patch level are included, 
+respectively at offsets FE, FF/100 and 109 in those files. This allows the 
+<font color=blue>/update</font> script to send back only the 
+necessary updates to your current version of WebFerret. And this, as opposed to your Name, 
+Company and Country, isn't 
+malicious at all, quite the contrary.
+<P>
+<H2>Reversing</H2>
+<P>
+Well, this is exactaly what I was looking for. In the registry I can find all the informations WebFerret uses to 
+build an url query and to parse the results for each search engines it supports.
+<BR>At first sight, it seems they uses a mix of regular expressions with embedded scripts.
+<BR>For example, take this : &lt;a href=*.('http://[eh; tb; &gt;url|*.]')*.\"&gt; . It seems clear that what this do is 
+to
+match the result page against &lt;a href=*.('http://[*.]')*."&gt; and then to assign the content of [ ] to an <I>url</i> 
+variable (>url), after some unknow 'eh; tb;' 
+<P>I'll skip my experiments (they were quite boring, much more than what 
+you are actually reading, which is already 
+passably boring) and deliver you my findings on a silver plate: 
+<UL>
+<LI>eh : is a function that strips any html tags that may be included in the 
+matched string.
+<LI>tb : is a function that trim the matched string (remove leading&trailing spaces).
+</UL>
+Beside the scripts in themselves uses a sort of 'vsl' (very simple langage) syntax.
+$ represents the working value, + means "append", - means "prepend". &lt; means 
+to get the value of a variable while &gt; means 
+to set the value of a variable. So, the line : "$search=; &lt;+urlquerytext; 
+$+&c=web&start=0&showSummary=true&perPage=50; &gt;urlquery" is actually 
+the following script (with the correct
+explanations at the right) :
+<TABLE border=1>
+<TR><TD>$search=;</Td><TD>value &lt;= 'search='</TD></TR>
+<tr><td>&lt;+urlquerytext;</td><td>add the value of the variable urlquerytext to value
+<BR>If urlquerytext='fravia', value will be 'search=fravia'
+</td></tr>
+<tr><td> $+&c=web&start=0&showSummary=true&perPage=50;</TD><TD>add the given string to value
+<br>value will now be :  'search=fravia&c=web&start=0&showSummary=true&perPage=50'</TD></TR>
+<TR><TD>&gt;urlquery</TD><TD>Assign the current value to a variable named 'urlquery'</TD></TR>
+</TABLE>
+<P>
+Although I figured out the meaning of most of the functions/syntax, I'm convinced there 
+are much more juicy things to learn 
+<B>inside</B> WebFerret itself (like functions that are implemented but not yet
+used for any search engines). Alas! My 
+reversing capabilities doesn't go that far and i'm lost in the 
+dissasembly (especially when it comes to something 
+written in C++ with classes and so on, which  is the case for WebFerret). So, if 
+anyone of you already did that work or 
+is going to investigate this further, I would love to hear about it, 
+as this is actually what does interest me the most (I 
+suppose you already guessed what i'm trying to do :-)
+<P>
+<H2>Practical application</H2>
+<P>
+Ok, this is the <U>second discovery</u> and probably what some of you were looking for: 
+how to add more engines to 
+webferret. Well, should be quite easy if you followed me up to now: Just
+write a little registry patch file.
+<BR>As an example, we'll add google to the list of engines supported by WebFerret.
+<BR>Here is what should be added to the registry :
+<BR>
+<PRE>
+[HKEY_CURRENT_USER\Software\FerretSoft\NetFerret\CurrentVersion\Web]
+"InstalledEngines"=strings:\
+  "AltaVista",\
+  "AOLNetFind",\
+  "Anzwers",\
+  "CNET",\
+  "EuroSeek",\
+  "Excite",\
+  "FindWhat",\
+  "GOTO",\
+  "HotBot",\
+  "ICQ",\
+  "LookSmart",\
+  "LycosUSA",\
+  "MSN",\
+  "SearchUK",\
+  "WebCrawler",\
+  "Google"
+"ActiveEngines"=numbers:\
+  1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+"GoogleName"="Google"
+"GoogleURL"="http://www.google.com/search"
+"GoogleHome"="http://www.google.com/"
+"GoogleQueryType"="lip"
+"GoogleMethod"=dword:00000000
+"GoogleQueryCommand"="$WebFerret; &gt;httpUser-Agent; $q=;&lt;+urlquerytext; $+&lr=&safe=off&sa=N; &gt;urlquery"
+"GoogleQueryOps"=strings:" + "," OR "
+"GoogleGrammar"=strings:\
+ "R:&lt;p&gt;&lt;A HREF=[&gt;url|*.]&gt;[eh;tb;&gt;title|*.]&lt;/A&gt;&lt;font size=-1&gt;&lt;br&gt;[eh;tb;&gt;abstract|*.]&lt;font color=green&gt;",\
+ "S:&lt;a href=/search\?[tb; &gt;urlquery|*.]&gt;",\
+ "N:&lt;b&gt;Next&lt;/b&gt;"
+</PRE>
+First,we have to add our new engine to the list of installed one 
+(backdrawn: see below). Next we define some new Google
+specific terms: It's Name, URL, Home URL, Query type, request method, Query command, 
+Query operands and finally the 
+parsing grammar. I won't enter into details, most of those values are 
+self explanatory. However, some have still 
+unknow
+meanings to me. The QueryType, for example can take values like lip, lpp, sa, sap... 
+But I have no clues what this 
+means, so some experiments on this would be welcome. 
+The <font color=blue>Method</font> indicates 
+if WebFerret must use a POST (00000001) or GET 
+(00000000) method. 
+<BR>
+The problem here is that we can't merge that directly into the registry. 
+Some types, like the <I>strings</i> or 
+<i>numbers</i> need first
+to be converted. Either you do this by hand or you write a quick script 
+to handle this task for 
+you. <BR>Anyway, once the convertion is done, you should end up with something like:
+<PRE>
+REGEDIT4
+[HKEY_CURRENT_USER\Software\FerretSoft\NetFerret\CurrentVersion\Web]
+"InstalledEngines"=hex(7):\
+  41,6C,74,61,56,69,73,74,61,00,41,4F,4C,4E,65,74,46,69,6E,64,00,41,6E,7A,77,65,72,\
+  73,00,43,4E,45,54,00,45,75,72,6F,53,65,65,6B,00,45,78,63,69,74,65,00,46,69,6E,64,\
+  57,68,61,74,00,47,4F,54,4F,00,48,6F,74,42,6F,74,00,49,43,51,00,4C,6F,6F,6B,53,6D,\
+  61,72,74,00,4C,79,63,6F,73,55,53,41,00,4D,53,4E,00,53,65,61,72,63,68,55,4B,00,57,\
+  65,62,43,72,61,77,6C,65,72,00,47,6F,6F,67,6C,65,00,00
+"ActiveEngines"=hex:01,00,00,00,01,00,00,00,01,00,00,00,01,00,00,00,01,00,00,\
+  00,01,00,00,00,01,00,00,00,01,00,00,00,01,00,00,00,01,00,00,00,01,00,00,00,\
+  01,00,00,00,01,00,00,00,01,00,00,01,00,00,00,00  
+"GoogleName"="Google"
+"GoogleURL"="http://www.google.com/search"
+"GoogleHome"="http://www.google.com/"
+"GoogleQueryType"="lip"
+"GoogleQueryOps"=hex(7):20,2B,20,00,20,4F,52,20,00
+"GoogleQueryCommand"="$WebFerret; &gt;httpUser-Agent; $q=;&lt;+urlquerytext; $+&lr=&safe=off&sa=N; &gt;urlquery"
+"GoogleGrammar"=hex(7):\
+  52,3A,3C,70,3E,3C,41,20,48,52,45,46,3D,5B,3E,75,72,6C,7C,2A,2E,5D,3E,5B,65,68,3B,\
+  74,62,3B,3E,74,69,74,6C,65,7C,2A,2E,5D,3C,2F,41,3E,3C,66,6F,6E,74,20,73,69,7A,65,\
+  3D,2D,31,3E,3C,62,72,3E,5B,65,68,3B,74,62,3B,3E,61,62,73,74,72,61,63,74,7C,2A,2E,\
+  5D,3C,66,6F,6E,74,20,63,6F,6C,6F,72,3D,67,72,65,65,6E,3E,00,\
+  53,3A,3C,61,20,68,72,65,66,3D,2F,73,65,61,72,63,68,3F,5B,74,62,3B,20,3E,75,72,6C,\
+  71,75,65,72,79,7C,2A,2E,5D,3E,00,\
+  4E,3A,3C,62,3E,4E,65,78,74,3C,2F,62,3E,00,00
+"GoogleMethod"=dword:00000000
+</PRE>
+Save this registry patch to whatever you fancy and it's ready to be 
+merged into the registry. 
+For your convenience, this 
+file is available <A href="add_google.reg">here</A>
+<BR>
+Now some backdrawn. The problem is that the list of installed engines is put 
+into a single key value. That means that 
+whenever a new update will be retrieved from WebFerret home server, our modified 
+list will be overwritten and thus all 
+our new engines will be losts. One solution to this is to simply prevent 
+WebFerret to retrieve any update information by 
+simply adding it to your <B>hosts</b> file. This, however will bring some 
+troubles when some engine will require an 
+updated
+grammar or whatever else. I'll leave this problem to you. There are certainly different possible 
+solutions. You could for example, write 
+your own little proggie that will check if there is any new update available 
+from time to time or you can re-apply your 
+patched new search engines whenever you noticed an automated vorlon 
+update occured. As my primary goal wasn't to use WebFerret as an 
+actual tool but more as a source of inspiration, I didn't went any 
+further in this direction.
+<BR>Note also, that if you examine the registry you may find <font color=blue>some 
+other things</font>  
+that can help you fine-tune WebFerret to 
+your requirements&nbsp;:-)
+<P>
+<H2>Conclusion</H2>
+<P>First let me be clear: I'm not stating that you should use 
+webferret nor that adding a new engine to 
+WebFerret is something really worth doing <i>per se</i>. 
+I personnaly never used WebFerret before nor probably will I ever use it in the future. 
+The 
+purpose of this
+essay was simply to show you <u>first</u> that 
+even without any software reversing knowledge you can twickle software to do 
+what <font color=blue>you</font> want it to do. <u>Second</u>, I 
+tried to show you that there is <font color=blue>a lot to learn</font> 
+by studying some interesting 
+targets. If I didn't studied WebFerret i would probably still be trying to 
+figure out how to write a unniversal parsing 
+script. WebFerret gave me much inspiration on this topic.
+<BR>I can now apply what I have learned in this context 
+to what was my original primary target: writing a sort of unniversal parser. 
+I now know 
+that some regular expression + some 'very simple language' scripts could be very helpful. 
+If everything goes fine, I 
+could end up with something worth publishing again very soon. So stay tuned&nbsp;:-)
+<BR>As always, but here more than ever, feedbacks and critics, suggestions on this topic are really welcome. You can reach me 
+at <font color=blue>phplab@2113.ch</font>. 
+<BR>Thank you for reading this essay, hope it was worth it.
+<P>(c) Laurent 2001<hr></font>
+    <font size=+1><center>
+<table><tr><td><center>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  Back to essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  Back to bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+
+
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+

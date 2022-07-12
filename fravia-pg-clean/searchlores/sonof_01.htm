@@ -1,0 +1,178 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ sonof_01.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/javascript">
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 2000 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's <a href="advanced.htm">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+2>(¯`·.¸&nbsp;Feed the search engines with synonyms&nbsp;¸.·´¯)
+  </font><font size=+2><br>by sonofsamiam<BR></FONT>slightly edited<!-- by Laurent & Don Quijote--><br>published at <a
+href="http://www.searchlores.org">searchlores</a> in July 2000<br>
+<hr width=44%></center><i>A very interesting idea to broaden your search results by using synonyms for words you are
+unsure about</i><hr>
+<br>
+I have made a synonyming metasearch engine which can be found at <a
+href="http://www.spunge.org/~uriah/cgi-bin/synmeta.cgi">
+http://www.spunge.org/~uriah/cgi-bin/synmeta.cgi</a>;. It queries <a href="http://www.lexfn.com">Lexical FreeNet</a>
+to find synonyms of words and "also-known-as"'s for people-searching (<u>famous</u> people searching :)
+<p>
+The user end of any search engine is just digging through their database via a web interface, and there are many
+other web-searchable databases: <a
+href="http://www.salesleadsusa.com/cgi-bin/abicgi/abicgi.pl?BAS_session={bas_session}&BAS_vendor={bas_vendor}&BAS_type=ADP&BAS_page=1&BAS_action=search">411's</a>,
+<a href="http://www.cogsci.princeton.edu/~wn/">lexical databases</a> (like lexfn), and <a
+href="http://fossick.com/eText.htm">etexts,</a> for example.
+<br>
+A metasearch just adds another layer onto the onion, to act as an interpreter between us and the databases. (Or rather,
+between us and the web interfaces to the databases, an interpreter talking to an interpreter, so sometimes you don't
+get the joke). Perl or <a href="http://www.dansteinman.com/php/pengines/">PHP</a> gives more flexibility,
+but <a href="http://uni-bremen.de/~downsyn/down18e.html">frontends can be javascripted</a>, see <a
+href="http://guides.oernii.sk/webscripting/ch23.htm">web scripting secrets,</a>
+<a href="http://www.into.ch/kunden/ddvideo/BombasticSearchEngineFront-End.htm">Bombastic Search Engine Front-end,</a> or
+<A HREF="snooz.htm">snooz</A> and <a HREF="allinone.htm">all-in-one</a> searches on fravia's.
+<p>
+It's easy to make your own two-dimensional (linear, read: slow) metasearches. Anyone with even basic programming skills
+can use LWP::Simple & HTML::Parser to automate web retrieval. I think  REBOL is particularly well suited to these
+built-in html parser and document retriever. A <a href="http://www.infind.com">3d one</a> will take some experience
+with multi-theading/tasking (i don't have yet, other than playing with fork()s ;)). There are several other
+search-engine front-ends on the web, <a href="http://www.oingo.com">Oingo</a> tries to give natural language recognition
+to altavista and dmoz, as did electricmonk.com, which seems to be closed as of this writing.
+<p>
+Other possible directions to take metasearching (or front-ending?):
+<ul>
+<li>query news sites, find trends?</li>
+<li>pipe foreign search engines through <a href="http://babelfish.altavista.com">translators</a>, or is there too much
+distortion..</li>
+<li>use to avoid ads & messy html/http, of course</li>
+<li>can be used to add onto the algorithms the engines already have, maybe use bayesian or other history-based
+algorithms to determine likely relevance.</li>
+<li>a better <i>design</i> solution to graphing relevance could be used with the data from se's; visual searching,
+let's make these things <i>intuitive.</i></li>
+<li>and, of course, we are not limited to web-interface. I just prefer this usually, so I can run my scripts from
+Auntie Em's aol account.</li>
+</ul>
+<p>
+Hmm, let's try it real quick, using say, <tt>+%archetypal figure +Jung</tt>, 'coz I'm interested in that stuff right
+now :) Entering that query in the synonyms metasearcher will return the following url : <font size="-2"><a
+href="http://www.altavista.com/cgi-bin/query?sc=on&hl=on&kl=en&pg=q&text=yes&q=%2b%28archetypal+|+archetypical+|+prototypal+|+prototypic+|+prototypical%29+figure+%2bJung&search=Search">http://www.altavista.com/cgi-bin/query?sc=on&hl=on&kl=en&pg=q&
+text=yes&q=%2b%28archetypal+|+archetypical+|+prototypal+|+prototypic+|+prototypical%29+figure+%2bJung&search=Search</a></font>)
+<br>
+And, wow, that came out much better than I thought it would, heh, good example :)
+<p>
+Well, here is the relevant part of the cgi (the rest is just html stuff):
+<pre>
+use LWP::Simple; #no need for anything more in-depth
+
+@in = split(/&amp;/,$ENV{'QUERY_STRING'});
+foreach $i(@in){
+  $i =~ s/\+/ /g;
+  $i =~ s/%(..)/chr(hex($1))/ge;
+  @key_val = split(/=/,$i,2);
+  $in{$key_val[0]} = $key_val[1];
+}
+
+$in{'q'}=~s/[^\w()|+\-~"% ]//; #strip bad chars.
+open(L,"&lt;&lt;$logf");
+print L time()."\n$ENV{'REMOTE_ADDR'}\n$ENV{'HTTP_USER_AGENT'}\n$in{'q'}\n";
+close(L);
+
+#there _must_ be a better way to do this! am I just stupid or what?!
+$b=$in{'q'};
+while($b=~/^.*?"(.*?)"(.*)$/s){
+  $a=$1;
+  $b=$2;
+  $c=$a;
+  $c=~tr/ /_/s;
+  $in{'q'}=~s/$a/$c/s;
+}
+@tokens=split(/ /,$in{'q'});
+foreach $token(@tokens){$token=~tr/_/ /;}
+
+foreach $token(@tokens){
+  if($token=~/^([+\-~|]*\(?)%/){
+    $t="$1(";
+    $token=~s/[^\w ]//g;
+    @syns=($token);
+    $token=~s/ /+/g;
+    #grabbing and parsing out the synonyms
+    $p=get("http://www.raisch.com/cgi-bin/lexfn/lexfn-cuff.cgi?sWord=$token&amp;tWord=&amp;query=show&amp;maxReach=2&amp;ASYN=on&amp;ABAK=on")
+    or last;
+    $p=~/^.*&lt;\/form&lt;(.*)&lt;font/is;
+    $p=$1;
+    while($p=~/&lt;b&lt;&lt;a.*?&lt;(.*?)&lt;\/a&lt;(.*)$/is){
+      push @syns, $1;
+      $p=$2;
+    }
+    #quote spaced synonyms
+    foreach $s(@syns){
+      if($s=~/ /){$s='"'.$s.'"';}
+  }
+  $token=$t.join(' | ',@syns).')';
+}
+$query=join(' ',@tokens);
+$query=~s/\+/%2b/g;
+$query=~s/ /+/g;
+$url="http://www.altavista.com/cgi-bin/query?sc=on&amp;hl=on&amp;kl=$in{'kl'}&amp;pg=q&amp;text=yes&amp;q=$query&amp;search=Search";
+print "Location: $url\n";
+print "Content-type: text/html\n\n";
+</pre>
+
+Is this kind of se additions useful? or maybe more can be got from Lexical FreeNet?
+<BR>Please <A HREF="mailto:unlin_e at yahoo.com">send</A> any questions or comments or criticisms, it's most wanted :)
+
+sonofsamiam
+<p>
+<hr>
+ <bR></font>
+    <font size=+1><center>
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg"
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin -->
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+
+
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+

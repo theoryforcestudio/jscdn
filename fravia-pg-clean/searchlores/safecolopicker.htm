@@ -1,0 +1,32 @@
+<table border=0 cellpadding=2 cellspacing=2 width=100%> 
+<script type="text/javascript"> 
+<!-- 
+var r = 0; 
+var g = 0; 
+var b = 0; 
+
+var hexs = new Array(6); 
+
+hexs[0] = "00"; 
+hexs[1] = "33"; 
+hexs[2] = "66"; 
+hexs[3] = "99"; 
+hexs[4] = "CC"; 
+hexs[5] = "FF"; 
+
+for(r = 0; r < 6; r+=1) 
+{ 
+for(g = 0; g < 6; g+=1) 
+{ 
+document.write("<tr>"); 
+for(b = 0; b < 6; b+=1) 
+{ 
+hexstr = hexs[r] + hexs[g] + hexs[b]; 
+document.write("<td bgcolor='#"+hexstr+"'>"+hexstr+"</td>"); 
+} 
+document.write("</tr>"); 
+} 
+} 
+//--> 
+</script> 
+</table>

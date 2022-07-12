@@ -1,0 +1,1442 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>deepweb_searching.htm: The lore of searching: how to exploit the shallow deep_web, by fravia+</title>
+ <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and
+advanced search techniques for people interested in finding any
+kind of information on the web. Here are informations, documents,
+links, etc. related to web-searching">
+<meta name="keywords"		content="deep web content retrieval and filtering, 
+hidden Web search and crawling, search over semi-structural Web sources,
+Modelling and Describing Deep Web, Models of Deep Web Navigation,
+Description of Deep Web Sources Contents, Description of Deep Web Sources Querying Capabilities,
+Addressing Content and Data in Deep Web Sources, Semantic Annotation of Deep Web Sources, 
+Deep Web Content and Quality Studies, Domain-Specific Deep Web Sources Studies,
+Handling Client-Side Technologies (JavaScript/dHTML/AJAX) for Deep Web Access, 
+Extraction of Data from Deep Web, Deep Web Sources Discovery, Deep Web Harvesting approaches, 
+Anti-Detecting and Anti-Disabling Deep Web Harvesting">
+<meta name="author" content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+<link href="https://searchlores.nickifaulk.com/styles-site.css" rel=stylesheet type=text/css>
+<STYLE type="text/css">
+body {
+  margin:8px 8px 8px 8px;
+  background:#6C6457;  
+  }
+ A   { color: #993300; text-decoration: none; font-weight:normal; } 
+ A:link  { color: #993300; text-decoration: none; } 
+ A:visited { color: #993300; text-decoration: none; } 
+ A:active { color: #FFCC66;  } 
+ A:hover  { color: #FFCC66;  }
+ 
+ h1, h2, h3 {
+  margin: 0px;
+  padding: 0px;
+ }
+ .blog {
+    padding:15px;
+  background:#ccc;         
+  }
+ 
+ .bloggodocio {
+    padding:15px;
+  background:#FFF; 
+  color:#666;
+  font-size:normal;
+  font-weight:normal;
+    background:#FFF;
+    line-height:16px;        
+  }
+  .submit { border: none; padding: 3px; background-color: #C6E7C6; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; text-transform: uppercase; text-align: center; text-decoration:none; display: inline; height: 20px; width: 110px;}
+
+</STYLE>
+</HEAD>
+<body><DIV class=blog><A target="_blank"  name=top></A><TABLE border="0" width="98%" align="center">
+<TBODY><TR><TD width="37%"><FONT size=-1 align="left">&nbsp;  <A target="_blank"  
+      href="index.html">portal</A> &#8594; <a target="_blank" href="classroo.htm">classroom</a>  &#8594;  
+      deepweb_searching.htm</FONT>
+<TD>&nbsp;</TD>
+<TD width="37%" align=right><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</TD></TR><TR><TD><CENTER><FONT size=+4>The lore of<br>searching<br></FONT><br><br><br><br><br>This file dwells at<br> 
+<a href="http://www.searchlores.org/deepweb_searching.htm">http://www.searchlores.org/deepweb_searching.htm</a></CENTER></TD>
+    <TD><CENTER><IMG src="images/081_deep_b.jpg" height="448" width="446" align=center alt="A nice rosette"></img></CENTER></TD>
+    <TD><CENTER><FONT size=+4>@<br><a href="index.html">Fravia's</a></FONT><br>First published in January 2008<br>  
+Version 0.25, updated: <font color=blue>12/Feb</font>/2008<br><br><br><br>
+This section supersedes the older, 
+and now obsolete, "<a href="specdba.htm">Special Databases</a>" section</CENTER></TD></TR></TBODY></TABLE>
+       
+<!-- deep web searching strategies links begin -->
+
+<center><br>
+<font size=+3>How to access and exploit the shallow deep web</font><br>by fravia+
+
+<hr width=55%>
+<font size=+2>
+ <a href="deepweb_searching.htm#intro">Introduction</a>&nbsp;(de rerum profundae telae)  <br>
+  <a href="deepweb_searching.htm#invi">Is the "deep" web still so invisible?</a> &nbsp; &nbsp; &#8226;&#8226; 
+  &nbsp;  &nbsp; <a href="deepweb_searching.htm#bago">"Bad" and "good" databases</a> <br>
+ <a href="deepweb_searching.htm#shal">Quality on the "shallow" deep web</a>&nbsp; &nbsp; &#8226;&#8226; &nbsp;  &nbsp;  
+<a href="deepweb_searching.htm#quic">"Deep web searching" strategies and techniques</a>
+<br>
+  <a href="deepweb_searching.htm#start">Estote parati & anonymity matters</a>&nbsp; &nbsp; &#8226;&#8226; &nbsp;  &nbsp; 
+  <a href="deepweb_searching.htm#wstools">Wget, scapy and other wonder tools</a>
+ 
+</font>  <br><br><br>         
+<!-- deep web searching strategies links end -->
+
+<table border="1" width=88%><tr><td bgcolor="# FFF8DC"><center>
+<h1 style="font-size:150%"><i>Be wary of he who would deny you access to information, 
+for in his heart he dreams himself your master.</i></h1></center></td></tr></table>
+<a name="intro"></a><br><br>
+
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>De rerum profundae telae</fonT></font>&nbsp;</center></td></tr></table>
+</center>
+<br><font size=+1><i>"Deep web"<b>(<a href="deepweb_searching.htm#terminology">1</a>)</b>  searching seems 
+to be all the rage since a couple of years, mainly because of the 
+supposed "undetectability" of this part of Internet by the main search engines. 
+This was -and still often is- indeed true,  
+probably because of a  
+ vast quantity of "proprietary databases" that did not, and do not, want their content to be indexed.
+ These commercial ventures have always used a broad choice of  
+"on the fly" server tricks and streaming techniques in order to further restrict 
+the indexing capabilities of almost all <a href="bots.htm">bots</a>  and  search engines.
+
+ 
+<br><br>Not that the <a href="main.htm">main search engines</a>' "indexing capabilities" 
+were worth deserving much praise to start with: 
+in fact -and this is a real problem, for seekers<b>(<a href="deepweb_searching.htm#seeker">2</a>)</b>-   
+the most used search engines<b>(<a href="deepweb_searching.htm#threese">3</a>)</b> have unfortunately an "indexed web-content" that:  
+<font color=blue>a</font>) is quite americanocentric  
+skewed; <font color=blue>b</font>) offers often  obsolete results due to said s.e. own  algos priorities; 
+<font color=blue>c</font>) gets heavily and actively spammed by the 
+<a href="links.htm#SE0beasts">SEO_Beasts</a>; 
+ and moreover, <font color=blue>d</font>) leans anyway quite heavily 
+ towards all those useless "popularity" sites that the unwashed love and/or towards  
+ commercial sites whose purpose lies only in  
+ selling commercial trash to the unwashed themselves.
+ 
+ <br><br>
+ No-one knows how big the "deep web" might be, 
+ for the simple reason that noone knows how big the web "<i>lato senso</i>" is.<br>
+ The most commonly (and uncritically) cited  study<b>(<a href="deepweb_searching.htm#bergman">4</a>)</b> pretends a 550 to 1 (sic!) relation between 
+"unindexed deep web" and "indexed web" documents. This was probably an exaggeration from the beginning, 
+and is surely <b>not true</b> nowadays.
+ 
+ <br><br>This paper profess that the many "open access" indexable databases that have recently flourished on what was 
+ the "unindexed web", 
+ have already dented the supposed huge dimensions of the ancient "deep web", both if we intend this concept, 
+ as we probably should, 
+ as "the not always indexed, but potentially indexable, web of 
+ speciality databases with specialistic knowledge" and/or if we intend the deep web <i>strictu senso</i>
+ as "unindexed web", i.e. the web of "proprietary databases" plus the web "that cannot currently be indexed".
+ <br><br>This said,    
+a correct use of  ad hoc searching techniques -as we will see-  might help fellow seekers 
+to overcome such indexing limitations for the shrinking, but still alive and kicking,  
+"pay per view" proprietary databases.
+<bR><br>After all winnowing out commercial trash has always been a <i>sine qua non</i> for searchers browsing the web:  
+everyone for instance knows  how adding even the simplistic and 
+rather banal <font color=blue>-".com"</font> parameter ameliorates  any query's result&nbsp;:-)
+<br>
+<br>The problem of the deep web was very simple: many a database (and many a commercial venture) 
+choose the obsolete "proprietary" 
+business model and decided to 
+restrict knowledge flows in order to scrap commercial gains.  Even 
+some "universities" (if institutes that make such choices still deserve such name) 
+ have often rakishly betrayed their original knowledge spreading mission. 
+ <br><br>This paper's apparent oxymoron about the "<font color=blue>shallow deep web</font>" reflects the fact that this 
+ dire  situation is nowadays slowly ameliorating thank to the many worthy "open access" 
+ initiatives. The deep web of once is shallowing out, getting more and more indexed. The critical mass 
+ already reached 
+ by the open access databases <font color=blue>harbingers a well deserved doom for the "proprietary knowledge" 
+ model of the ancient deep web</font>.
+
+<br><br>While this text will nevertheless examine some ad hoc "deep web"  searching approaches,  it is 
+opportune to recall that   -anywhere on the web-  
+          some 
+          <a href="longtermsearching.htm">longterm web-searching 
+         techniques</a> might require some consideration as well, 
+          while for  quick  queries other, different kinds of  <a href="tips.htm"> shorterm tips 
+          and advice</a>, could also result useful. 
+         
+ <br><br>
+On the other hand, 
+ some of the ad hoc deep web searching techniques explained in the following could probably come handy 
+ for many <u>queries on the indexed part of the web</u> as well.
+ <br><br>
+ Note also that this text, for examples and feedback purposes, will concentrate mainly on  a specific subset of 
+ the deep web databases: academic <font color=blue>scientific journals</font>, since out there  a huge quantity
+ of specialised databases and repositories   list <font color=blue>everything that can be digitized</font>, 
+ from images to music, from books to films, from government files to statistics, 
+ from personal, private data, to dangerous exploits.
+<br>The databases of the deep web have been subdivided into 
+various groups<b>(<a href="deepweb_searching.htm#williams">5</a>)</b>: word-oriented, number-oriented, 
+images and video, audio, electronic services
+and software oriented. For our "academic" search examples, we will aim mainly to word-oriented
+databases, (libraries, journals and academic texts): after all they are thought to 
+represent <font color=blue>around 70% of all 
+databases</font>. 
+ <br><br>
+ This said, the real bulk of the "huge deep invisible web" 
+ consists mainly of raw data:  pictures of galaxies and stars, satellite 
+ images of the earth, dna structures, 
+ molecular chemical combinations and so
+ on. Such data might be indexed or not, but for searchers  clearly represents stuff 
+ of minor interest compared with the scholar treasure troves that some specialised 
+ "academic" databases might offer<b>(<a href="deepweb_searching.htm#lewandowski">6</a>)</b>.
+
+</i>
+ <br><br>
+<CENTER><IMG src="images/deepweb2d.jpg" height="519" width=817" align=center alt="open_access_databases_triumph"></img></CENTER>
+  <br><br>   
+<a name="invi"></a><br><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>Is the "deep" web still so invisible?</center></td></tr></table>
+</center>
+ 
+
+ <br>It's worth keeping in mind that the "deep", "invisible", "unindexed" web is 
+ nowadays <u>indeed getting more and more indexed</u>.<br> 
+ <i>Panta rhei</i>, as Heraclitus   
+ is supposed to have stated: 
+ "tout changes": 
+ indeed the  <a href="main.htm">main</a> 
+ search engines are now indexing parts of the "deep web" <i>strictu senso</i>: for instance non-HTML
+ pages  formats (pdf, word, excel, etc.) are now currently translated into HTML  and therefore do appear
+  inside the SERPs. The same holds now true for dynamic pages generated  
+  by applications like CGI or ASP database 
+  (id est: software &#224; la Cold 
+  Fusion and Active Server Pages), that can be indexed by search engines' 
+  crawlers as long as 
+  there exist a stable URL 
+  somewhere. Ditto for all those
+  script pages containing a "<font color=blue>?</font>" inside their URLs.<br>As an example, the <b>mod_oai</b>  
+ Apache module, that uses the <a href="http://en.wikipedia.org/wiki/OAI-PMH">Open Archives Initiative Protocol for 
+ Metadata Harvesting</a>,  allows search engines' crawlers (and also all assorted <a href="bots.htm">bots</a> that fellow 
+ searchers might 
+ decide to use) to  discover new, modified
+  and/or deleted web resources from many a server.   
+  <br><br>
+ Some useful indexing "light" is now therefore being thrown onto that dark and invisible deep web of once.
+<br>Web global search engines have nowadays evolved into direct -and successful- concurrents of library catalogues, even 
+if many librarians do not seem to have noticed. What's even more important: various large "old" library databases 
+have been fully translated  
+into HTML pages <font color=blue>in order to be indexed</font> by the <a href="main.htm">main</a> web search engines.
+ <br><br>
+ Note that, according to the <i>vox populi</i>  all 
+ the <a href="main.htm">main</a> search engines' indexes  
+ together (which do not overlap that much among them, btw)  just cover (at best) less than 1/5 
+ of the total probable content of the web at large,  and thus miss great part of the deep web's content. <br>
+ In fact most proprietary databases (and many openly accessible ones) still carry 
+  complex forms, or assorted java-script and flash scripts -and 
+ sometime even simple cookies- that 
+ can and do affect what content 
+ (if any content at all) can be gathered by the search engines' crawlers.<br> 
+ As seekers that use <a href="bots.htm">bots</a> well know,   
+    some nasty scripts can even trap the visiting  bots, and the  
+     search engines' 
+    spiders and 
+ crawlers, and send them  into infinite loops, or worse.<br><br>
+ These indexing difficulties surely  persists even today. 
+Yet, as this text will show, the deep web landscape is clearly undergoing deep changes, and the "deep", unindexed, 
+proprietary and closed  
+web is shallowing out in a very positive sense&nbsp;:-)
+ <br><br>
+<CENTER><IMG src="images/deepweb1n.jpg" height="519" width=817" align=center alt="open_access_databases_triumph_takes time"></img></CENTER>
+  <br><br>   
+<a name="bago"></a><br><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>"Bad" and "good" databases </center></td></tr></table>
+</center>
+<br><br>
+<center><font size=+2 color=blue>The bad databases</font></center><br>Scripts tricks are only a tiny 
+part of the indexing difficulties that search engines encounter on the deep web:
+ it is worth underlining that great part of the deep web is "invisible" only because 
+ of copyright obsession and excessive privatisation of common knowledge:  billions of law-related 
+ articles are for instance there, but
+ must be BOUGHT through <a href="http://www.lexisnexis.co.uk/">Lexis/Nexis</a>, 
+billions of other articles are indexed inside a huge quantity of privately licensed databases 
+ that "sell" the right to access such knowledge. 
+ <br>Among the most important "bad" databases:<ul><lI>  
+ <a href="http://www.eric.ed.gov/">ERIC</a></li><li>
+ <a href="http://www.jstor.org/journals/">JSTOR</a></li><li>
+ <a href="http://www.theiet.org/publishing/inspec/">INSPEC</a></li><li>
+ <a href="http://highwire.stanford.edu/cgi/searchresults?fulltext=deep+web&andorexactfulltext=and&author1=&pubdate_year=&volume=&firstpage=&src=hw&searchsubmit=redo&resourcetype=1&search=Search&fmonth=Jan&fyear=1812&tmonth=Jan&tyear=2008&fdatedef=1+January+1812&tdatedef=18+Jan+2008">highwire press</a>
+</li><li> 
+ <a href="http://ds.datastarweb.com/ds/products/datastar/sheets/gddb.htm">Gale directory</a><br>
+ (<a href="http://ds.datastarweb.com/ds/products/datastar/index.html">DataStar Datasheets</a>)<br>
+ (<a href="http://library.dialog.com/bluesheets/html/blf.html">Thomson DIALOG list</a>)
+ 
+ </li></ul>
+ 
+
+ Add to these the zillions of licensed article, magazines, references, archives, 
+ and other research resources reserved elsewhere to searchers  
+ "authorized" to use them and you'll have indeed a lot of "dark commercial matter" on the deep web. 
+ Note that the fact that the content of these databases is NOT freely available defies all economic logic: 
+ libraries, governments and  
+  corporations have to buy the rights to view such contents for their "authorized users" and 
+ visitors can mostly search, but not view such content. 
+ <br>This classical nasty and   
+ malignant "commercial tumor", that on the deep web was allowed to spread for years, is now -fortunately-  
+   in retreat, thank to the recent growth of the "<a href="http://www.sparceurope.org/Open%20Access/index.html">Open 
+  Access</a>" databases. 
+
+<br><br><center><font size=+2 color=blue>"Proprietary" information</font></center><br>
+Before starting any search it is  always worth spending
+some time looking for databases in the fields or topics of 
+study or research that are of interest to you. 
+<font color=blue>There are real gems</font> on the unindexed web, where -fortunately- not 
+all databases are locked and enslaved. Nowadays searchers will often be able to gather, next to the 
+list of "closed" interesting proprietary databases, <u>another</u> list of openly accessible useful 
+databases and resources.
+<bR></br>If you are interested in, say, 
+history, you are nowadays for instance simply "not allowed" 
+to ignore the existence of open repositories of databases  like 
+<a href="http://eudocs.lib.byu.edu/index.php/Main_Page">EuroDocs: Online Sources for European History
+Selected Transcriptions, Facsimiles and Translations</a>. I mean, as a medieval buff, 
+I wish myself I could have had something like 
+<a href="http://eudocs.lib.byu.edu/index.php/Medieval_Germany">this</a> 30 
+years ago, 
+during my Fr&#252;hmittelalterliche studies&nbsp;:-)
+<bR><br>
+Sadly, however, in this silly society of ours "proprietary" information 
+ has <u>not always</u> been made 
+freely available to humankind. 
+<br>
+<br>Thus on the deep web <i>strictu senso</i> users will often be prompted 
+to pay for knowledge that should obviously be (and of course will be in the future) freely available.
+<br> 
+
+Why such services should still be left to rot in the hand of 
+commercial 
+profiteers with almost prehistoric business models, instead of being developed, ameliorated and offered 
+for free to anyone by some association 
+of universities or by some international institution, defies 
+comprehension and any sound macroeconomic logic. 
+<br><br>As we will see, searchers might however use some creative (if at times slightly dubious) 
+<a href="deepweb_searching.htm#quic">approaches</a>  
+in order to access such proprietary databases "from behind", provided this is not forbidden by the legislation of their 
+respective countries of residence or of the countries of their proxies.
+<br>
+<br><br><center><font size=+2 color=blue>The good databases</font></center><br>
+Luckily, while the deep web <i>strictu senso</i> is still infested by proprietary databases, 
+ some nice counter-tendencies are already snowballing down the web-hills:  
+ there is in fact an emerging, and powerful, movement towards <font color=blue>open access to research
+information</font><b>(<a href="deepweb_searching.htm#97">7</a>)</b>. 
+
+
+<br>The following examples   
+ regard mostly repositories of journals  databases 
+ and newspapers' archives, but the same developments can be observed in all other specialistic fields  
+(for instance for music: <a href="http://www.jamendo.com/en/">http://www.jamendo.com/en/</a>).<br><ul><li>
+ <a target=_top href="http://arxiv.org/multi?group=grp_cs&%2Ffind=SearchThe Front">The Front</a> (computer science, Math, 
+Physics)<br>Has now (finally!) an "experimental" full test search, for instance <a href="http://search.arxiv.org:8081/?query=%22deep+web%22&in=grp_cs">deep web</a>.</li><li>
+ the <a href="http://www.doaj.org/">Directory of Open Access Journals</a> 
+ (for instance: <a href="http://www.doaj.org/doaj?func=searchArticles&q1=%22invisible+web%22&f1=all&b1=or&q2=%22deep+web%22&f2=all">"deep web" OR "invisible web"</a>).
+<br>  and the <a href="http://www.opendoar.org/">OpenDOAR</a> 
+ (Directory of Open Access Repositories)<br>For instance: <a href="http://www.opendoar.org/search.php?cx=016766439200934687091%3Aln-icm1qyko&q=%22invisible+web%22&sa=Search&cof=FORID%3A11&filter=0#978">invisible web</a>.</li><li>
+<a href="http://www.biomedcentral.com/browse/journals/">Biomed central</a> and
+<a href="http://www.plos.org/">Public library of science (Plos)</a> (biology, medicine and genetics).  
+Both are dedicated to <font color=blue>Open Access</font>. As they state: "<i>Everything we publish is freely 
+available online for you to read, download, copy, distribute, and use (with attribution) any way you wish</i>".
+</li></ul>
+Moreover, not all newspapers and magazines have locked their archives with subscription databases
+(usually, especially in the States, such archives can be accessed for money through   
+<a href="http://www.lexisnexis.com/us/lnacademic/home/home.do?">Lexis</a> or 
+<a href="https://global.factiva.com/factivalogin/login.asp">Factiva</a>).<br> 
+There are COMPLETE newspapers and magazine archives searchable for free (for instance 
+<a href="http://browse.guardian.co.uk/search?search_target=%2Fsearch&fr=cb-guardian&search=%22deep+web%22&N=&sort=relevance">the 
+Guardian's</a>).<br> 
+Curiously enough, it is not easy to find listings of such "open access archives".
+Therefore -as a proof of concept-  such a list was produced <i><a href="newsfeeds.htm#archi">in proprio</a></i>&nbsp;:-)
+<br><br>
+It is worth pointing out that   great parts of the deep web (intended both <i>lato and strictu senso</i>)  
+can be accessed
+for academic research purposes 
+through some well known (and quite useful)
+     ad hoc search engines, repositories, directories and databases: 
+<ul>
+<li><a href="http://scholar.google.com/">Google scholar</a> <br>For instance <a href="http://scholar.google.com/scholar?q=%22deep+web%22&hl=en&lr=&btnG=Search">"deep web"</a></li>
+
+<li><a href="http://www.scirus.com/">Scirus</a>, mainly "visible" web, but some dark matter as well.<br>For instance <a href="http://www.scirus.com/srsapp/search?q=%22invisible+web%22&ds=jnl&ds=nom&ds=web&g=s&t=all">invisible web</a></li>
+  <li><a href="http://lii.org">Librarians' Index</a><br>(very useful directory: for instance 
+  <a href="http://search.lii.org/index.jsp?tn=1title,description,publisher,creator,allTags,keywords,extra_words,searchableid&tv=%22invisible%20web%22&ss=1">invisible web</a>)</li>
+  <li><a href="http://www.academicinfo.us">AcademicInfo</a></li>
+  <li><a href="http://www.vascoda.de/">Vascoda</a>, german 
+  "internet portal for scientific information", created by the 
+  Bundesministerium f&#252;r Bildung und Forschung (BMBF) and the 
+  Deutschen Forschungsgemeinschaft (DFG).
+<br>For instance: <a href="http://www.vascoda.de/vascoda?SID=VASC%3A1159299295&LOCATION=Vascoda&SERVICE=SEARCH_SR&SUBSERVICE=ACTION&ACTION=SEARCHSPACE&TEMPLATE=TEMPLATE.RESULTLIST&START=0&COUNT=10&QUERY_alAL=%22deep+web%22&submit=Suchen">"deep web"
+</li>
+  <li><a href="http://infomine.ucr.edu/search.phtml">Infomine</a> 
+  (try for instance a search for "deep web" in <a href="http://infomine.ucr.edu/cgi-bin/search">the advanced infomine search</a> mask, that 
+  supports also the boolean NEAR: you might usefully chose from <font color=blue>near1</font> to <font color=blue>near20</font>)</li>
+  <li><a href="http://www.ipl.org/div/news/">The internet public library</a> (with its 
+  useful <a href="http://www.ipl.org/div/pf/">Pathfinders</a> option!)</li>
+  
+  <li><a href="http://search.yahoo.com/cc">Yahoo's creative commons</a> search<br>For instance <a href="http://search.yahoo.com/search;_ylt=A0geu6cRUJZHKXcAfuql87UF?ei=UTF-8&p=%22deep+web%22&cc=1&fr=sfp-cc">"deep web"</a></li>
+
+<li><a href="http://www.base-search.net/">Base</a>, "Bielefeld Academic Search Engine": Multi-disciplinary search engine 
+for scientifically relevant web resources, created and developed by Bielefeld University Library. Based on <a href="fast.htm">FAST</a>.
+<br>For instance: <a href="http://www.base-search.net/index.php?BASE_DigitalCollections=3ppqo95bpl239urkk44rjm2rs0&q=%22deep+web%22&lem=0&lem=1&thes=default&s=all&refid=dcbasen">"deep web"</a>
+<br><a href="http://base.ub.uni-bielefeld.de/help_search_english.html#chap02">Advanced base search</a>.
+</li>
+
+</ul>
+
+There are also some useful ad hoc "deep web" search engines, for instance 
+<ul><li>
+<a href="http://www.incywincy.com/search-engine/web/web?adv=1">incywincy</a>, which 
+incidentally has also 
+a quite useful (and interesting) 
+<a href="http://www.incywincy.com/default?catid=4814&cached=www.phonydiploma.com/">cache</a> (and offers also the 
+rather practical 
+possibility to search for <a href="http://www.incywincy.com/search-engine/web/web?q=invisible+web&rf=&dop=phrase&ff=2&ns=100&dd=1&nm=20&as=0&nms=100">forms</a>).
+</li><lI>
+You could use for exploring purposes also 
+engines like <a href="http://findarticles.com/">http://findarticles.com/</a>, which 
+indexes millions of magazine articles and offers free full-text  articles from hundreds of publications 
+through its <a href="http://findarticles.com/p/advanced?tb=art">advanced search engine</a>.<br>
+For instance: 
+<a href="http://findarticles.com/p/search?tb=art&qt=&ft=any&qn=&fn=any&qe=invisible+web&fe=any&qa=&oi=all&sm=1&sd=1&sy=1950&em=1&en=24&ey=2009&pc=50&so=&free=1&x=29&y=11">"invisible web"</a> and
+<a href="http://findarticles.com/p/search?tb=art&qt=&ft=any&qn=&fn=any&qe=deep+web&fe=any&qa=&oi=all&sm=1&sd=1&sy=1950&em=1&en=24&ey=2009&pc=50&so=&free=1&x=28&y=13">"deep web"</a>.
+</li><lI>But there is an incredible palette 
+of specialized search  engines, gosh: there's even a special "uncle sam" google for US "government and military" sites...  
+<a href="http://www.google.com/ig/usgov">http://www.google.com/ig/usgov</a>
+
+</li></ul>
+<bR>
+<br>
+Yet, despite such promising open access developments,  
+the still impressive dimensions of the "proprietary part" of the deep web 
+might push some seekers to use some <a href="deepweb_searching.htm#quic">unorthodox</a>  retrieval techniques whenever they  need 
+to harvest and/or zap the knowledge that has been buried 
+behind  commercial locks.<br>
+Fortunately (for us! <b>Unfortunately</b> for the proprietary content providers) <font color=blue>the 
+very structure of the web was made for sharing</font>, neither for hoarding nor for selling, so there's no real way 
+to block for long any "subscription database" against a decided seeker that knows the basic <a href="http://www.w3.org/MarkUp/">web</a>-<a href="http://www.w3.org/Protocols/">protocols</a> <u>AND</u> 
+has managed to fetch some sound "angles" for his queries. He'll be honing onto his target wherever it might have been hidden. 
+
+    
+<a name="shal"></a><br><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>Quality on the "shallow" deep web</center></td></tr></table>
+</center>
+
+<br>
+On the 
+web and elsewhere seekers possess an 
+almost natural -and quite sound- <font color=blue>visceral mistrust of hype</font>: 
+ no searcher in his right mind would for instance
+ readily give his private data 
+to "hyper-hyped" sniffing social networks &#224; la facebook.<br> 
+And the"deep web"  has for years represented just another example of an "hyper-hyped" web phenomenon. It is 
+pheraphs worth pointing out how a overweening excitement for all kind of hype  
+is <i>eo ipso</i> a useful <a href="evalessa.htm#nega">negative evaluation</a> 
+parameter.
+<br><bR>
+The resources of the  deep web are generally claimed to be 
+ of better quality and relevance than those offered by the indexed web, since in a ideal world 
+they should have been written or validated by expert scholars and authorities 
+in their particular area of expertise.<br>  
+Yet, as anyone that visits the proprietary deep web can notice,  
+many supposed "authoritative" and "knowledge rich" proprietary databases encompass, often enough,  
+capriciously incomplete collections, full of banal truths,  repetitive  and pleonastic 
+texts, obsolete and partisan positions  
+ and 
+unfounded, unvalidated and at times rather unscientific theories. More generally, thank 
+to the open access databases and repositories, the "academic" scientific content of the 
+ invisible web and its resources are nowadays not much "deeper" 
+ than what a researcher can find -for free- on the indexed (or indexable) web.
+<br><br>This resources's incompleteness  is not a fault of the deep web by itself, its just 
+ due to the fact that we are still in a <font color=blue>transition period</font>, where the forces 
+ of old still brake the free flow of knowledge and 
+only a relatively limited part of the content of 
+the deep web of once is already indexed and thus 
+ <font color=blue>really available for global open peer review</font> on the broadest scale, review 
+which represents  
+the only real possible, and necessary, quality guarantee. 
+
+<br>The situation will be 
+ brighter as soon as the full content of the deep web's proprietary databases will be finally 
+ opened and indexed <i>in toto</i>, maybe    
+by new  search engines that will be hopefully more competitive (and less spam-prone) 
+than the ones most used<b>(<a href="deepweb_searching.htm#threese">8</a>)</b> today.<br>
+Moreover, given the amazing rate of growth 
+of the open access 
+databases, the  
+ proprietary databases  <b>will have to</b> open more and more their 
+ content to the search engines' indexing spiders, or 
+risk  sinking into irrelevance.
+<br><br>The great epocal battle for knowledge will be won when  
+anyone, wherever he might be, and whatever economic resources he might have, will have the possibility of 
+ <font color=blue>accessing at once and for free ANY book or text</font> (or image, or music, or film, or poem) 
+ produced by 
+the human race during his whole history in any language.
+<br>This is a dream that the web could already now fullfill, and this is  
+the dream  unfolding right now before our eyes.
+
+
+<br><br>Another interesting point is that the old <b>quality  
+distinction</b> between "authorities" & "experts" on one side and "dedicated individuals" on the other is 
+nowadays slowly disappearing. We could even state -paradoxically and taking account of all due exceptions-  
+that those that study and publish 
+their take on a given matter for money and career purposes (most of those deep web 
+"authoritative experts" and almost all the young sycophants 
+from minor and/or unknown universities that hover around many proprietary 
+databases) will seldom be able to match the knowledge depth (and 
+width) offered by those that work  on  
+a given argument out of sheer love and passion. If, as it is true, more and more
+scholarly <font coor=blue>content is nowadays provided exclusively on the web</font>, 
+this is also -and in considerable part- due to the "scholarly level" contributions  
+of an army of "non academic" specialists. Electronic printing differs from traditional printing, duh.
+<br><br>Of course seekers will have to carefully <a href="evaluate.htm">evaluate</a> what they have found, whomever 
+might have written it: the old saying 
+<i>caveat emptor</i> (and/or <i>caveat fur</i> in some cases&nbsp;:-) should always rule our queries.<br>
+Yet he is in for a rude surprise whomever really believes that -say- a university assistant who has worked at best a couple 
+of years on a given matter and 
+who simply HAS to publish his trash in order to survive and prosper economically 
+could really offer more quality knowledge than a "dilettante" specialist 
+who has dedicated his whole life to his "thematic passion", out of sheer interest and love.
+<br>
+Alas, academical publications have always been infested by  
+wannabee experts whose 
+only interesting dowry is to be found in the extraordinary amount of     
+battological and homological repetitions you'll discover reading their writings.
+<br><br>
+The content of the invisible and unindexed deep web is often as poor as the content of the indexed "outside" web, 
+and maybe even more deceiving, given its  aura of supposed "deep"   
+trustworthiness. For this reason the  
+ nuggets and jewels indeed lurking inside many deep web's  databases 
+need to be dug out <i>cum grano salis</i>, i.e., again,
+ using the same sound <a href="evaluate.htm">evaluation</a> techniques 
+that searchers should always use, whenever and wherever they perform their queries.
+
+
+ <br><br>   
+<a name="quic"></a><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>"Deep web searching" strategies and techniques</center></td></tr></table>
+
+<br>
+
+<br><font color=blue>The use of some of the deep web searching strategies and techniques listed in the following 
+may result illegal in 
+your country, so apply them only if you are sure that you are allowed to, or change country.</font><hr width=55%>
+ </center>
+ 
+ <br><center><font color=blue size=+2>Before starting</font><br><hr width=55%></center>
+<br>
+ Let's state the obvious: deep web searching is a two-steps process: first you have to locate the 
+ target database(s), then you have to search within said database(s). However  
+ for many fellow searchers 
+ without sufficient resources, 
+ a further additional step, once found the target 
+ database on the "proprietary web", is how to enter it "from behind".<br> 
+ <br>Readers might learn elsewhere the fine art of breaking into servers, here it will 
+suffice to recall that on the web all pages and texts, be they static or dynamically created, 
+<font color=blue>must have an URL</font>. Such an URL may <u>appear</u> complex or encrypted, but it's still just an 
+URL.<br> 
+Again: most "bad" databases have a single sign-on system: once validated, a browser session cookie 
+with a four/six/eight hours lifetime will be stored inside the user's browser. 
+If the user then goes to another "bad database" protected resource, 
+the cookie will be just checked and the user is not required to type in his username and password again. Therefore 
+you can EITHER find the correct username/password combo, OR mimick a correct cookie,  
+which is something that seekers can easily sniff and, if needs be, recreate, 
+using the proper <a href="deepweb_searching.htm#wstools">tools</a>
+<br><br>
+It's as simple as the <a href="nomomen.htm">nomen est omen</a> old truth. It is also worth pointing out that 
+there's no real necessity to
+enter a database using its official entrance gates, 
+as this old searching <a href="c_first.htm">essay</a> (about the Louvre) demonstrated long ago.
+<br><br>Moreover, 
+when really necessary, a searcher might decide to use 
+some <a href="deepweb_searching.htm#quic">artillery</a>  in order to open closed web-doors.<br>
+Lighter techniques like  <a href="magicfi.htm">guessing</a> and <a href="luring.htm">luring</a> (social engineering) or 
+heavier approaches like <a href="password.htm">password breaking</a>, 
+<a href="http://www.milw0rm.com/">database exploiting</a>,
+and/or using free VPN  servers (<u>V</u>irtual <u>P</u>rivate <u>N</u>etworks, which have two protocols 
+ you can manipulate: both PPTP and IPSec) 
+ can 
+ help seekers to find an entrance whenever simpler approaches should fail&nbsp;:-)
+<br>
+<br>
+Since, as strange 
+as this might and should 
+appear,   <font color=blue>there is still no reliable collection of the largest and most important deep web
+ databases</font>, 
+ it is worth using for broad databases investigations  the 
+amazing  locating and harvesting  power offered by various ad hoc tools 
+like <a href="deepweb_searching.htm#wstools">wget or scapy</a>.<br><br>
+ A list of the existing dubious and legal approaches follows.
+ <br><br>
+<br><center><font color=blue size=+2>The most obvious (if slightly dubious) approach</font><br><hr width=55%></center>
+<br>
+The most obvious approach in order to
+gain access to the deep web proprietary databases, has always been to use
+ unprotected proxy servers<b>(<a href="deepweb_searching.htm#proxy">9</a>)</b> located on the campus networks of
+legit participating institutions.<br>
+
+
+Once  found but just one working "campus proxy", a searchers can download whatever to his heart content, 
+provided of course that such an activity 
+is not forbidden by the laws of his 
+country of residence, <font color=blue><u>or by the laws of the country -or countries-  
+whose proxy he uses and  chains to his "target   
+campus" proxy</u></font>.<br>
+ Taking some 
+ <a href="deepweb_searching.htm#start">anonymity precautions</a> would probably be a good idea for  those that decide to follow this approach.
+<br><br>
+<br><center><font color=blue size=+2>A slightly more dubious bunch of approaches</font><br><hr width=55%></center>
+<br>It might be politically incorrect to underline this  once more, but anyone might 
+try to access those deep web databases "from behind", without breaking any law, 
+if he happens to live in a country (or intends to use some proxy servers 
+from a country) which has no copyright laws at all, i.e. does not adhere to the (infamous) 
+Berne, UCC, TRIPS and WCT patent conventions we daily suffer in euramerica.
+<br>It is maybe useful recalling here that <font color=blue>the following countries do not 
+adhere to <u>any</u> patent convention</font>: 
+Eritrea (ER), Kiribati (KI),  Nauru (NR), Palau (PW), Somalia (SO), San Marino (SM), 
+Turkmenistan (TM), Tuvalu (TV!) this holds even more true, of course, for all servers situated in 
+various "difficult to control" places  
+(Gaza strife, <a href="http://en.wikipedia.org/wiki/Waziristan">Waziristan</a>, etc.).<br>
+
+<br>
+In such cases, and using such proxies, a  combination of 
+<a href="magicfi.htm">guessing</a>, <a href="password.htm">password breaking techniques</a>, 
+and eventually <a href="luring.htm">luring</a> (i.e. social engineering), <a href="stalking.htm">stalking</a>, 
+ <a href="trolls.htm">trolling</a>, <a href="combing.htm">combing</a> and
+klebing (i.e.: finding interesting places/databases/back_entrances through referrals)  
+ can be used and deliver results that might be useful in order to get at those 
+databases "from behind"  (provided you have taken the necessary <a href="deepweb_searching.htm#start">anonymity precautions</a>, 
+<i>la va sans dire</i>).
+
+<br><br><br>
+<center><font color=blue size=+2>Another, even more dubious, approach</font><br><hr width=55%></center>
+<br>It might also be <u>quite</u> politically incorrect to point   out that anyone might 
+decide to access most commercial databases using a <font color=blue>faked credit card</font>, provided this is 
+not explicitly forbidden in his country (or by the country of his proxy) and provided 
+ he has taken all the necessary <a href="deepweb_searching.htm#start">anonymity precautions</a>.
+ <br><br>
+This text won't go into credit cards faking and credit card numbers generators<b>(<a href="deepweb_searching.htm#creditcards">10</a>)</b> 
+(that nowadays 
+you can even easily find as on-line scripts). Suffice to say that given the poor security levels 
+ offered by those CVV numbers it's no wonder how credit cards themselves 
+denounce that 95% of the scam they suffer is exclusively due to internet transactions. 
+<br>Few people would feel sorry for them: it is just an anti-competitive oligarchy of an half dozen 
+issuers,  owned by 
+banks that would not hesitate a minute to sell your kids or your inner organs for money, if they would reckon 
+to get away with it. 
+<br><br>
+It must be said also that  in order to follow this approach one actually <font color=blue>would not  require neither a credit 
+card generator nor a fake credit card at all</font>: 
+a keen eye in any airport's duty free  
+queue will for instance quickly spot enough
+ <i>number</i>/<i>name</i>/<i>valid_until</i> combinations  
+to be able to download at ease all the databases of the 
+deep web until the cows come home.<br>
+Come to think of it,  a friendly waiter or seller 
+working in any good restaurant or shop "&#224; la mode"  
+could also result quite helpful when dealing with such credit cards matters.
+
+<br><br><br>
+<center><font color=blue size=+2>And now a completely, 100% legal, approach</font><br><hr width=55%></center>
+<br>We were just joking:  you don't really need to venture inside the "gray" legal areas listed above: often  
+<u>your own library</u> may give you free  
+access to your target (as long as libraries will be allowed to continue to exist in our patent-obsessed societies). 
+<br><br>For instance,  
+you can check <a href="http://www.jstor.org/about/participants_intl.html">here</a>  
+where to access in your own country, legally and for free, the whole content of a 
+<a href="http://www.jstor.org/journals/">JSTOR</a> "proprietary" database  
+of papers, journals and essays.  
+    <br><br>Especially younger searchers seem to have forgotten, or never understood, 
+    the mighty power offered by  a "physical" library <u>inter alia</u> 
+    in order to access all kind of web-content. 
+    <br>This is also valid <i>a fortiori</i> for the content of any good "<u>mediatheque</u>": why should a searcher  
+    waste his precious time downloading from the web compressed music, films 
+    and/or books 
+     when he can at once and for free get hold of, and copy, whatever 
+    full-fledged 
+    music/book/film he might fancy?   
+    <br><br>
+<center><font size=+2>An addition, by ~S~ Nemo</font><br>"Finding libraries"</center>
+<br>If your local library does not subscribe the databases you want, you can find another 
+library which subscribes to them, where you can go yourself, 
+or maybe you could ask someone who goes there, lives there, 
+or works there.<br> 
+Lets take for example the LexisNexis database. As the access is usually restricted by 
+IP (library's IP) and the library must link to a specific page in order for that authentication 
+to be done, lets find that specific link. In order to do this, we can use the following banal query: 
+<a href=http://search.yahoo.com/search;_ylt=A0geu92wg5tH7W0B2Mul87UF?p=inanchor%3A%22on+campus%22+lexisnexis&ei=UTF-8&iscqry=&fr=sfp>inanchor:"on campus" 
+lexisnexis</a>, where we search for pages linking (hopefully) to LexisNexis using the anchor 
+(the underlined clickable text linking to another site) "<font color=blue>on campus</font>" 
+(<a href=http://www.searchlores.org/magicfi.htm>humans are so predictable</a> eh&nbsp;:-)<br> 
+Now we know that the linked URLs are: www.lexisnexis.com/universe & www.lexisnexis.com/cis (<font color=blue>because 
+they do not have neither cache nor description text</font>).
+<br>Using 
+google (<a href=http://72.14.203.104/search?num=100&hl=en&q=inanchor%3A%22on+campus%22+lexisnexis&btnG=Search>inanchor:"on campus" lexisnexis</a>), 
+we find another URL: web.lexis-nexis.com/universe.<br> 
+Now is only a question of finding a library <font color=blue>near you</fonT> using Google: 
+<a href=http://72.14.203.104/search?num=100&hl=en&q=link%3Aweb.lexis-nexis.com%2Funiverse&btnG=Search>link:web.lexis-nexis.com/universe</a> 
+or <a href=http://72.14.203.104/search?num=100&hl=en&q=link%3Awww.lexisnexis.com%2Funiverse&btnG=Search>link:www.lexisnexis.com/universe</a> 
+or <a href=http://72.14.203.104/search?num=100&hl=en&q=link%3Awww.lexisnexis.com%2Fcis&btnG=Search>link:www.lexisnexis.com/cis</a>; or 
+using Yahoo: <a href=http://search.yahoo.com/search;_ylt=A0geu98fgptHjCoAvmRXNyoA?p=link%3Ahttp%3A%2F%2Fweb.lexis-nexis.com%2Funiverse+-ajsks&y=Search&fr=sfp&ei=UTF-8>link:http://web.lexis-nexis.com/universe -ajsks</a> 
+or <a href=http://search.yahoo.com/search;_ylt=A0geu5.VgptH0xcBmW9XNyoA?p=link%3Ahttp%3A%2F%2Fwww.lexisnexis.com%2Funiverse+-ajsks&y=Search&fr=sfp&ei=UTF-8>link:http://www.lexisnexis.com/universe 
+-ajsks</a> or <a href=http://search.yahoo.com/search;_ylt=A0geu6Mkh5tH7SsAabBXNyoA?p=link%3Ahttp%3A%2F%2Fwww.lexisnexis.com%2Fcis+-ajsks&y=Search&fr=sfp&ei=UTF-8>link:http://www.lexisnexis.com/cis -ajsks</a>. 
+<br>The 'ajsks' (or any other nonsense string) is used to stop Yahoo from redirecting to yahoo site search. 
+Yahoo is even better than google for this kind of queries, because you can do more than 
+link search (contrary to Google), you can for 
+instance  search just the libraries in France: 
+<a href=http://search.yahoo.com/search;_ylt=A0geu7K6iJtHIY0A5EpXNyoA?p=link%3Ahttp%3A%2F%2Fweb.lexis-nexis.com%2Funiverse+domain%3Afr&y=Search&fr=sfp&ei=UTF-8>link:http://web.lexis-nexis.com/universe domain:fr</a> 
+ (or,of course, in any other contry).
+
+<br>
+<br>
+  
+<br>
+<br><br><center><font color=blue size=+2>Playing with forms and hidden info</font><br><hr width=55%></center> 
+A significant part of the deep web is composed of <font color=blue>forms</font> that provide access 
+to their underlying <u>structured</u> databases, so all existing techniques for structured data mining 
+can be usefully investigated and at times applied in this context. 
+<br>
+Extracting data behind web-forms is a science <i>per se</i>, and there is a vaste 
+literature on such matters<b>(<a href="deepweb_searching.htm#extrac">11</a>)</b>. Many deep web forms might lead to more "specialized" 
+second tier forms, 
+and the obvious problem, for seekers, is to create (or find!) a client side script or bot capable to handle   
+deep web forms with minimal human interaction.<br>Note that many javascripts might alter the behaviour 
+of a form on the fly, which is a major problem for automation purposes.<br>
+Keep in mind, however, that web servers are far from behaving perfectly. 
+Sometimes they will not respond and at times they will not send 
+the content you expect. So if you are striving for reliability, you 
+always need to verify that the HTTP transaction worked
+<u>AND</u> that the HTML text returned is (more or less) what you were
+expecting.<br><br>
+Some special "deep web search engines" can cut some mustard as well, for instance the already 
+listed 
+<a href="http://www.incywincy.com/search-engine/web/web?adv=1">incywincy</a>, 
+which has an useful    
+ "<a href="http://www.incywincy.com/search-engine/web/web?ps=1&p=&q=simulator&dop=and&ns=100&nm=20&nms=10&as=0&dd=0&ff=2">search for 
+forms</a>" option.
+<br><br>
+To extract metadata a searcher could also use the <a href="http://www.gnu.org/software/libextractor/">GNU libextractor</a>, 
+that support 
+a lot of file formats. Another possibility is 
+<a href="http://wvware.sourceforge.net/">wvware</a> (that is currently useed by 
+Abiword as Msword importer), that can access those 
+infamous *.doc version control information data. So this is <u>the tool</u> for those interested in
+finding on the invisible web "invisible" information still hidden within the published documents,  
+(different spelling or dates, slight reformatting or rewording, but often enough 
+even <u>previous different versions of the same text</u> and 
+very interesting <u>corrections</u>).
+ <br>~S~ Nemo gave another intersting example! Have a look at  the <a href=http://www.searchlores.org/laws.htm#cini>tricks</a> 
+ explained for the former HotBot,that can be adapted and used through Yahoo.
+<br>   
+<br>
+<br><br><center><font color=blue size=+2>The final trick with the text snippets</font><br><hr width=55%></center>
+
+This is based on an amazing property of the web: whatever is published in digital form 
+is bound to be copied and reappear somewhere else, yep, even 
+despite his "patents"&nbsp;:-)<br> 
+Usually there's a direct correlation "celebrity" ==> "frequency" ==> ease of retrieval: 
+the more "famous" a text, the more easy it will be to find it. 
+E.g. the "Lord of the ring": <a href="http://search.yahoo.com/search?ei=UTF-8&p=%22Gollum+squealed+%2A+squirmed+%2A+clutched+at+Frodo+%2A+they+came+to+bind+his+eyes%22+-babe&y=Search&fr=moz2&dups=1">"Gollum 
+squealed * squirmed * clutched at Frodo * they came to bind his eyes" -babe</a>. Notice the <font color=blue>-babe</font> 
+anti-spam   
+filter, since on the web the whole 
+text of "famous" books  is used  
+for spamming purposes -interpolated with commercial garbage- by the beastly <a href="links.htm#SE0beasts">SEOs</a>.
+<br><br>It's all nice and dandy for any famous English text, what about other languages and less known texts?<br>
+A search for -say- the french version of a japanese Haiku  might take
+<a href="http://www.google.com/search?num=100&hl=en&as_qdr=all&q=asaborake++%22ariake+no+tsuki+to%22+&btnG=Search&lr=lang_fr">a 
+little longer</a>, 
+yet even this target will be 
+<a href="http://www.google.com/search?num=100&hl=en&as_qdr=all&q=asaborake++%22ariake+no+tsuki+to%22+lune&btnG=Search&lr=lang_frl">somewhere on the web</a>, 
+of course.
+<br><br>
+So how do we apply this "snippet" search-approach to the deep web "proprietary problems"? 
+<br>
+
+Well, first we seek our target through JSTOR, for instance: The Musical Quarterly, that as we can see, 
+<a href="http://www.jstor.org/journals/00274631.html">http://www.jstor.org/journals/00274631.html</a>, 
+has a JSTOR "fixed wall" archive limit to the year 2000.<br><br>
+Then we completely ignore JSTOR and we seek The Musical Quarterly by itself:
+<a href="http://mq.oxfordjournals.org/archive/">http://mq.oxfordjournals.org/archive/</a> and 
+then we search our target there.
+
+<br>Now we seek <u>an abstract or a snippet</u> of our target:
+<a href="http://mq.oxfordjournals.org/content/vol88/issue1/index.dtl">http://mq.oxfordjournals.org/content/vol88/issue1/index.dtl</a>
+<br>
+Now we can find the snippet "..." (<IMG SRC="images/bulletr.gif" HEIGHT=13 WIDTH=13 ALT= red>to be developed during workshop: if published  
+the useful link would disappear)
+<br><br>
+Incidentally, even a simple tool like <a href="deepweb_searching.htm#wstools">EtherApe</a>, 
+makes easy to see how a target 
+might encompass various IPs.<br>
+For instance in this case, accessing   
+the JSTOR portal, contact was made  with two different servers: 
+192.84.80.37 (Manchester university, UK) and  204.153.51.41 (Princeton University, States): this kind of info 
+comes 
+ handy when trying to find a campus proxy.
+<br><br>
+Here another simple,  image-related,  "guessing" example:<br>
+Visit the useful & relatively open "deep web" Art & images database at 
+<a href="http://www.paletaworld.org/">http://www.paletaworld.org/</a><br>
+Try its 
+<a href="http://www.paletaworld.org/adv_search.asp">advanced search form</a>. Let's for instance
+ try   
+Theme="War and battles" and country = "Greece" (leave "all countries" for the location of 
+the paintings)<br>
+Select -say- Konstantinos Volanakis' Warship, at the bottom of the result page.<br>
+And the 1833_1.jpg  image will pop up in a javascript 
+window without URL (javascript:Popup(1833).<br>
+Now you could either check its real address using a <a href="deepweb_searching.htm#wstools">tool</a> &#224; la wireshark, 
+or simply guess it: since the name of the image is
+1833_1.jpg we'll just need to find out the subfolder.
+You can bet it will be something like "images" or "pics" or "dbimages", 
+or "dbpics". And indeed, lo and behold: 
+<a href="http://www.paletaworld.org/dbimages/1833_1.jpg">http://www.paletaworld.org/dbimages/1833_1.jpg</a>.<br>
+(<IMG SRC="images/bulletr.gif" HEIGHT=13 WIDTH=13 ALT= red>to be developed during workshop with many other guessing examples)
+
+
+
+
+
+
+
+
+<br><br><br>
+<center><font color=blue size=+2>The best approach, however...</font><br><hr width=55%></center>
+<br>
+    When accessing scholastic journals the best approach, however, is to ignore as much as possible 
+    the proprietary commercial schemes concocted by the 
+    patents' afecionados and access instead    "good databases" (and repositories) like the ones 
+    listed <a href="deepweb_searching.htm#bago">above</a>.<br> 
+    As an example, the
+<a href="http://www.doaj.org/">Directory of Open Access Journals</a> (DOAJ) 
+    <u>alone</u>, a collection of full text, quality controlled scientific 
+    and scholarly journals that aims to cover <u>all subjects and languages</u> had   
+     -as of January 2008- 3073 journals in the directory,  with 996 journals searchable at article level 
+     and a total of 168592 full text open articles.
+
+    
+   
+  <br>  
+<a name="start"></a><br><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>Estote parati & anonymity matters</center></td></tr></table>
+
+<br><i>The following "general" advice regard all kind of activities on the web, and is not 
+limited to, though being very relevant for, deep web database perusing (especially when dealing with 
+proprietary "pay per view" databases).</i><br>
+<br><font color=blue size=+2>Estote parati</font><br><hr width=55%></center>
+<br><br><font size=+2 color= blue>The browser, your sword</font><br>
+Do yourself a --huge-- favour and use a really powerful and quick browser like <a href="tuttiope.htm">Opera</a>. 
+<br>Besides its many anti-advertisement and quick note-taking bonuses, its incredible speed is 
+simply invaluable for time-pressed seekers.<br>
+You can of course rig firefox, hammering inside it a quantity of adds-on 
+and extensions, in order to get it working 
+almost as well as Opera does out of the box, yet firefox will still 
+be much slower than Opera.<br>
+For your text data mining purposes, consider also using ultra-quick 
+(and powerful) 
+CLI-browsers &#224; la <a href="http://elinks.or.cz/">elinks</a> instead of the slower 
+GUI browsers: 
+you don't really need 
+all those useless images and awful ads when data mining gathering books and essays, do you?
+<br><br><font size=+2 color= blue>The operating system, your shield</font><br>
+You MUST choose a good operating system like <a href="linux.htm">GNU/Linux</a>:  for serious web-searching purposes 
+you cannot and should not use 
+toy operating systems like windows,  
+it would be  like walking 
+blindfolded on a web of mines: much too slow, no anonymity whatsoever and quite 
+prone to dangerous (and potentially serious) viral/rootkits problems.<br>
+Use the powerful and clean <a href="http://www.ubuntu.com/getubuntu/download">Ubuntu</a> (debian) distribution, 
+ or 
+try one of the various "wardriving oriented" GNU/Linux versions, e.g.: Wifislax or Backtrack, that you'll then 
+either just boot live onto your Ubuntu box (as an added anonymity layer, see <a href="deepweb_searching.htm#anonmatters">below</a>) or simply 
+install <i>in extenso</i>, instead of Ubuntu.
+<bR>
+<a name="anonmatters"></a><br><br><center>
+<font color=blue size=+2><a href="noanon.htm">Anonymity</a> matters</font><br><hr width=55%></center>
+The first and foremost important anonymity rule is to AVOID smearing happily your personal 
+data around: which means you shouldn't have your real data 
+AT ALL on your boxes. <a href="noanon.htm">Anonymity</a> is VERY important 
+on the web. As a general rule, you need to protect your data: if you foolishly allow private 
+companies to collect them, any bogus attorney with half an excuse 
+will easily get hold of them.<br>
+A good approach is to create from the beginning a false -but credible- complete 
+identity, so no "John Smith", no "Captain Spock" and no 
+"Superterminator": open the phone book instead, and chose a Name, a Surname and an address from three different 
+pages. Create "his" email on -say- yahoo or gmail, but 
+also on a more esoteric and less known <a href="freemail.htm">free email provider</a>, that  
+ you'll  
+use whenever some form-clown will ask for a "non-yahoo" email-address.
+<br><br>
+You'll also need 
+a relatively "anonymous" laptop for your wardriving purposes, hence, if possible, bought cash (no credit cards' track) 
+in another country/town, a laptop that you will henceforth  connect to the web ONLY for wardriving 
+purposes.
+<br><br>
+Your settings on your laptop (in fact, on all your boxes) should always result as "banal" (and hence as  anonymous) 
+as possible, either respecting your bogus identity: Laura@mypc if your chosen fake first name was "Laura", or just 
+combinations that might at least 
+rise some confusion: cron@provider; probingbot@shell, grandma@pension_laptop, etc. 
+<br><br>Once on line, always watch your steps and never never never smear your real data around.
+<br>
+When using your "dedicated" laptop you should only wardrive, browse and download: 
+NO private posting/uploading personal stuff/emailing friends/messageboard interactions/IRC chatting... 
+NEVER.
+
+<br><br><center>
+<font color=blue size=+2>Other assorted anonymity tips</font><br><hr width=55%></center>
+Learn thoroughly how to use the mighty <a href="http://www.kismetwireless.net/">kismet</a> 
+and all other useful wardriving and tracing tools.
+<br><br>
+Keep an updated list of the quickest wi-fi connections you'll have found through wardriving: location 
+and speed.<bR>
+Choose preferably 
+places with a bunch of <b>quick</b> connections that 
+you can reach in a relatively unobtrusive manner, for instance sitting quietly 
+inside some brasserie or cafe.
+<br>
+Always choose WEP "protected" access points if you can (WEP "protection" is a joke that any kid  can 
+crack in 5 minutes flat):   such 
+"WEP protected" access points tend (in general) to be much quicker than  any totally open and 
+unprotected access point.
+
+<br><br>
+Have a good list of quick proxies at hand. Some of the "unconventioned" nations  <a href="deepweb_searching.htm#quic">listed above</a> offer 
+interesting everlasting proxies, that seem rather 
+unbothered 
+by the euramerican copyrights and patents lobbing mobs.
+<br><br>Use regularly a  <a href="http://www.alobbs.com/macchanger/">MACchanger</a> for your laptop in order to  
+change systematically (but randomly) its wifi MAC signature.
+<br><br>
+You'r now all set for your relative anonymity, and you are ready to visit (and enter) any database, 
+ using 
+whatever means might work, even the "dubious" approaches described above, if you deem it  necessary.
+<br><br>
+Consider that even observing all possible precautionary measures, 
+if someone with enough resources and power really wants to snatch you, 
+he probably will: when entering the gray areas of the web, being a tag paranoid is probably a good idea.<br> 
+Just in case, change often your 
+access points and -of course- alter irregularly, but systematically,  
+your preferred wardriving locations and 
+your  
+timing & 
+browsing patterns.
+</i>
+<br><br>
+
+    
+<a name="wstools"></a><br><br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><font color=blue>Wget, scapy and other wonder tools</center></td></tr></table>
+</center>
+
+<br><center><font color=blue size=+1><i>
+Searchers should master all the following tools.<br>
+Unwashed should begin playing with each one of them for at least a couple of days, gasping in awe.
+</i></font>
+<br><br>
+<br>
+<a href="http://en.wikipedia.org/wiki/Wget">Wget</a><br></center>
+GNU/Wget is a very powerful free utility for non-interactive download of files from the Web. 
+It supports http, https, and ftp protocols, as well as retrieval through http proxies. Cosmic power 
+at your fingertips.
+
+<br><br><center>
+<a href="http://en.wikipedia.org/wiki/CURL">cURL</a><br></center>
+curl is a command line tool for transferring files with URL syntax, 
+supporting FTP, FTPS, HTTP, HTTPS, SCP, SFTP, TFTP, TELNET, DICT, LDAP, LDAPS and FILE. 
+curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload, 
+proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate, kerberos...), 
+file transfer resume, proxy tunneling and a busload of other useful tricks (custom headers, 
+replace/remove internally generated headers, 
+custom user-agent strings, custom referrer strings etc.).
+
+<br><br><center>
+<a href="http://pavuk.sourceforge.net/">Pavuk</a><br></center>
+Pavuk is a program used to mirror the contents of WWW documents or files. 
+It transfers documents from HTTP, FTP, Gopher and optionally 
+from HTTPS (HTTP over SSL) servers. Pavuk has an optional GUI based on the GTK2 widget set
+
+<br><br><center>
+<a href="http://etherape.sourceforge.net/">Etherape</a></center>
+<br>
+Network traffic is displayed graphically. The more "talkative" a node is, the bigger its representation.
+Most useful "quick checker" when you browse around.
+<ul><li>
+Node and link color shows the most used protocol.
+</li><lI>User may select what level of the protocol stack to concentrate on.
+</li><lI>You may either look at traffic within your network, end to end IP, or even port to port TCP.
+</li><lI>Data can be captured "off the wire" from a live network connection, or read from a tcpdump capture file.
+</li><lI>Live data can be read from ethernet, FDDI, PPP and SLIP interfaces.
+</li><lI>The following frame and packet types are currently supported: ETH_II, 802.2, 803.3, IP, IPv6, ARP, X25L3, REVARP, ATALK, AARP, IPX, VINES, TRAIN, LOOP, VLAN, ICMP, IGMP, GGP, IPIP, TCP, EGP, PUP, UDP, IDP, TP, IPV6, ROUTING, RSVP, GRE, ESP, AH, ICMPV6, EON, VINES, EIGRP, OSPF, ENCAP, PIM, IPCOMP, VRRP; and most TCP and UDP services, like TELNET, FTP, HTTP, POP3, NNTP, NETBIOS, IRC, DOMAIN, SNMP, etc.
+</li><lI>Data display can be refined using a network filter.
+</li><lI>Display averaging and node persistence times are fully configurable.
+</li><lI>Name resolution is done using standard libc functions, thus supporting DNS, hosts file, etc.
+</li><lI> Clicking on a node/link opens a detail dialog showing protocol breakdown and other traffic statistics.
+</li><lI>Protocol summary dialog shows global traffic statistics by protocol.
+</li></ul>
+
+<br><br><center>
+<a href="http://en.wikipedia.org/wiki/Wireshark">Wireshark</a><br></center>
+<p>
+Wireshark, the world's most powerful network protocol analyzer, a sort of <u>tcpdump</u> on steroids, 
+is a GNU licensed free software package that   
+outperforms tools costing thousands of euro and 
+ has an incredible bounty of mighty features (but learn how to use its filters, or you'll sink inside your 
+ captured data):
+</p>
+<ul>
+  <li>Deep inspection of hundreds of protocols,
+  <li>Live capture and offline analysis
+  <li>Captured network data can be browsed via a GUI, or via the TTY-mode
+    TShark utility
+  <li>Most powerful display filters
+  <li>Rich VoIP analysis
+  <li>Read/write many different capture file formats:
+    tcpdump (libpcap),
+    Catapult DCT2000,
+    Cisco Secure IDS iplog,
+    Microsoft Network Monitor,
+    Network General Sniffer&#174; (compressed and uncompressed), Sniffer&#174; Pro, and NetXray&#174;,
+    Network Instruments Observer,
+    Novell LANalyzer,
+    RADCOM WAN/LAN Analyzer,
+    Shomiti/Finisar Surveyor,
+    Tektronix K12xx,
+    Visual Networks Visual UpTime,
+    WildPackets EtherPeek/TokenPeek/AiroPeek,
+    and many others
+  <li>Capture files compressed with gzip can be decompressed on the fly
+  <li>Live data can be read from Ethernet, IEEE 802.11, PPP/HDLC, ATM,
+    Bluetooth, USB, Token Ring, Frame Relay, FDDI, and others (depending on your platfrom)
+  <li>Decryption support for many protocols, including
+    IPsec,
+    ISAKMP,
+    Kerberos,
+    SNMPv3,
+    SSL/TLS,
+    WEP,
+    and WPA/WPA2
+  <li>Coloring rules can be applied to the packet list for quick, intuitive
+    analysis
+  <li>Output can be exported to XML, PostScript, CSV, or plain text
+
+</ul>
+
+
+
+<br><br><center>
+<a href="http://www.secdev.org/projects/scapy/">Scapy</a><br></center>
+Scapy (created by my friend Philippe Biondi) is a mighty interactive packet manipulation program. Cosmic power, again, 
+for anyone that 
+will invest some time in mastering it.
+<br>This little marvel is able to forge or decode packets of 
+a wide number of protocols, send them on the wire, capture them, match requests and replies, and much more. 
+It can easily handle most classical tasks like scanning, tracerouting, probing, unit tests, attacks or network 
+discovery (it can replace hping, 85% of nmap, arpspoof, arp-sk, arping, tcpdump, tethereal, p0f, etc.). It also 
+performs very well at a lot of other specific tasks that most other tools can't handle, like sending invalid frames, 
+injecting your own 802.11 frames, combining techniques (VLAN hopping+ARP cache poisoning, VOIP decoding on WEP 
+encrypted channel, ...), etc&nbsp;:-)<br>
+
+<br><hr width=88%><center><font size=+2>
+Other tools</font><br>(Seekers' Suggestions)</center><hr width=44%>
+
+<center>
+<a href="http://www.bitwizard.nl/mtr/k">mtr</a><br></center>
+<p> 
+Finally there are some wondrous CLI tools that -amazingly enough- many searchers don't use: 
+For instance the mighty useful, dutch <a href="http://www.bitwizard.nl/mtr/">mtr</a> ("my traceroute": 
+allinone traceroute+ping... and more!): 
+<pre>me@mybox:~$ <font color=blue>sudo mtr www.searchlores.org</font> 
+</pre>
+Use the "<font color=blue>n</font>" key to switch between DNS-names and IPs.
+<br>
+[<font color=gray>+fravia</font>]
+<br><br>
+    
+<center>
+<a href="http://www.portswigger.net/suite/k">the burp suite</a><br></center>
+<p>  
+<a href="http://www.portswigger.net/suite/k">The burp suite</a> is a java application (so, cross platform) that functions like a one-shot proxomitron swiss army knife, 
+allowing you to edit any and all HTTP requests and responses as you see fit.<br>
+It also has a load of other features (some useful for searching, some for other things) 
+that are definitely worth getting acquainted with.
+<br>
+[<font color=gray>~S~ ritz</font>]   
+ <br><br>   
+<!-- internet searching strategies and hints content, end -->
+</font></font>
+</font></font>
+<hr width=66%><center> <a href="basic.htm"><IMG
+SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved, all wrongs reversed</center></center>
+<!-- how to search the web, by fravia+, signet end -->
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<hr width= 55%><center><font size=+2>
+<font color=blue>Notes</font></font></center><br>
+
+
+
+<a name="terminology"></a>
+<br><br>
+<b>1)</b> Terminology nightmares<br>
+<br>The "Deep web" is also known as "Unindexed web" or "Invisible web",  these terms being used nowadays 
+in the literature as equivalents.<br>
+The "non deep", "indexed web" is on the other hand also known as "Shallow Web", "Surface Web" or "Static Web".<br>
+We could not resist adding further confusion to this searchscape, stating
+in this paper that the so-called "deep web"  is in reality nowadays rather shallow (hence the  "shallow deep web" oxymoron), 
+if we calculate -as we should- depth as directly proportional to "unindexability".<br> 
+The "deep web" (of old) is in fact more and 
+more indexed (and indexable). This is due, among other things, to the mighty spreading of open access repositories and 
+databases that 
+follow a publishing model ("knowledge should be free for all, at last") 
+that  <font color=blue>harbingers a well deserved doom</font> for the "proprietary knowledge" 
+and "pay per view" 
+ models of the now obsolete web of old: <font color=blue>deep, invisible, proprietary and in definitive rather useless</font> 
+ <u>because</u> badly indexed or 
+ impossible to index.
+
+<br><br>
+<hr width= 55%>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+<a name="seeker"></a>
+<br><br></center>
+<b>2)</b> What is a seeker?<br><center><font size=+2></center>
+Ode to the seeker</font><br>
+<i>
+Like a skilled native, the able seeker has become part of the web. He knows the smell of his forest: the foul-smelling mud 
+of the popups, the slime of a rotting commercial javascript. He knows the sounds of the web: the gentle rustling 
+of the jpgs, the cries of the brightly colored mp3s that chase one another among the trees, singing as they go; 
+the dark snuffling of the m4as, the mechanical, monotone clanking of the huge, blind databases, the pathetic cry 
+of the common user: a plaintive cooing that slides from one useless page down to the next until 
+it dies away in a sad, little moan. 
+In fact, to all those who do not understand it, today's Internet looks more and more 
+like a closed, hostile and terribly boring commercial world.
+Yet if you stop and hear attentively, you may be able to hear the seekers, 
+deep into the shadows, singing a lusty chorus of praise to this wonderful world of theirs -- 
+a world that gives them everything they want.
+The web is the habitat of the seeker, and in return for his knowledge and skill it satisfies all his needs.
+<br><br>
+The seeker does not even need any more to hoard on his hard disks whatever he has found: all the various images, 
+musics, films, books and whatnot that he fetches from the web... he can just taste and leave there what he finds, 
+without even copying it, because he knows that nothing can disappear any more: once anything lands on the web, 
+it will always be there, available for the eternity to all those that possess its secret name...
+<br><br>
+The web-quicksand moves all the time, yet nothing can sink.
+<br><br>
+In order to fetch all kinds of delicious fruits, the seeker just needs to raise his sharp searchstrings.
+<br><br>
+In perfect harmony with the surrounding internet forest, he can fetch again and again, at will, 
+any target he fancies, wherever it may have been "hidden". The seeker moves unseen among sites 
+and backbones, using his anonymity skills, his powerful proxomitron shield and his mighty HOST file.
+If need be, he can quickly hide among the zombies, mimicking their behavior and thus disappearing into the mass.
+<br><br>
+Moving silently along the cornucopial forest of his web, picking his fruits and digging his jewels, 
+the seeker avoids easily the many vicious traps that have been set to catch all the furry, sad little 
+animals that happily use MSIE (and outlook), that use only one-word google "searches", and that browse 
+and chat around all the time without proxies, bouncing against trackers and web-bugs and smearing all 
+their personal data around.
+<br><br>
+Moreover the seeker is armed: his sharp browser will quickly cut to pieces any slimy javascript or 
+rotting advertisement that the commercial beasts may have put on his way. His bots' 
+jaws will tear apart any database defense, his powerful scripts will send perfectly balanced 
+searchstrings far into the web-forest.</i>
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+<a name="threese"></a>
+<br><br>
+<b>3)</b> & <b>8)</b> Most used search engines<br><font size=-1>Data extrapolated from <a href="http://www.nielsen-netratings.com/">nielsen</a>, 
+<a href="http://www.hitwise.com/">hitwise</a> and alia.</font><br>
+<br>The most <u>used</u> search engines
+are at the moment (January 2008) on planetary scale google (58%), yahoo (20%), 
+MSNSearch (7%) and ASK (3%), with slight variants 
+for the usage in the States (where MSNSearch covers 15% of all searches, while AOL has a 5% usage).
+<br>Note that these search engines are the <u>most used</u>, not the <u>best</u>  ones (just try out  
+<a href="http://www.exalead.com/search">exalead</a>&nbsp;:-)
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+<a name="bergman"></a>
+<br><br>
+<b>4)</b> Bergman<br>
+Bergman, M.K., "<i><a href="http://www.brightplanet.com/pdf/deepwebwhitepaper.pdf">The Deep Web: surfacing hidden 
+value</a></i>", Journal of Electronic
+Publishing, Vol. 7, No. 1, 2001. It's almost ironic to find this document inside brightplanet, which is 
+part of the awful and next to useless 
+"<a href="http://aip.completeplanet.com">completeplanet</a>" deep web search engine. 
+Of course the same document 
+is available <a href="http://www.google.com/search?client=opera&rls=en&q=%22The+Deep+Web:+surfacing+hidden+value%22&sourceid=opera&ie=utf-8&oe=utf-8">elsewhere</a> as well.
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+<a name="williams"></a>
+<br><br>
+<b>5)</b> Williams<br>
+Williams, Martha E.  
+ "<i>The State of Databases Today: 2005</i>".<br> 
+Jacqueline K. Mueckenheim (Ed.), <a href="http://library.dialog.com/bluesheets/html/bl0230.html">Gale Directory of Databases</a>, 
+Vol. 1: Online Databases 2005, part 1 (s. xv-xxv). Detroit, MI: Thomson Gale, 2005
+
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+<a name="lewandowski"></a>
+<br><br>
+<b>6)</b> Lewandowski<br>
+See "<i><a href="http://search.arxiv.org:8081/details.jsp?&r=pdf/cs/0702103">Exploring 
+ the academic invisible web</a></i>" 
+by Dirk Lewandowski and Philipp Mayr, 2007.<br>
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+<a name="97"></a>
+<br><br>
+<b>7)</b> &nbsp;Is 97% of the deep web publicly available?<br>
+Some researchers even arrived (many years ago) to  <a href="http://www.press.umich.edu/jep/07-01/bergman.html">astonishing 
+conclusions</a> in this respect: 
+"<i>One of the more counter-intuitive results is that 97.4% of deep Web sites are publicly available without restriction; 
+a further 1.6% are mixed (limited results publicly available with
+greater results requiring subscription and/or paid fees); only 1.1% of results are totally subscription or 
+fee limited</i> (Michael K. Bergman, "white paper" in <i>The Journal of Electronic Publishing</i>,  
+August 2001,   Volume 7, Issue 1)"<br>Beats me how anyone can dare to state on such deep matters  
+exact percentages like "97.4%", "1.6%" and/or  
+"1.1%" without deeply blushing.
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+<a name="proxy"></a>
+<br><br>
+<b>9)</b> Proxies<br>
+<br>We give for acquired that searchers and readers know already how to find,  choose, use and chain 
+together <a href="proxy.htm">proxies</a>  
+in order to bypass censorship attempts 
+and to probe interesting servers and databases. The main point is that 
+a proxy does not simply pass your http request along to your target: <font color=blue>it generates a new request 
+for the remote
+information</font>.<br> 
+The target database is hence probed by a proxy in -say- Tuvalu, subjected to Tuvalu's non-existing copyright laws, 
+while the searcher's own laptop <u>does not</u> access the target database, thus somehow respecting  
+the dogmatic decrees of the commercial powers that rule us.
+<br>
+Still, chaining (and rotating) proxies is a fundamental precaution when accessing and probing databases 
+ along the gray corridors 
+of the web. You can and should use ad hoc 
+software for this purpose, but you should also know how to chain 
+proxies <u>per hand</u>, simply adding a <font color =blue>-_-</font>, in the address field of 
+your browser, between their 
+respective URLs: <a href="http://www.worksurf.org/cgi-bin/nph-proxy.cgi/-_-/http://anonymouse.org/cgi-bin/anon-www.cgi/http://www.altavista.com">http://www.worksurf.org/cgi-bin/nph-proxy.cgi/-_-/http://anonymouse.org/cgi-bin/anon-www.cgi/http://www.altavista.com</a>,
+<br>(If you use numeric IP proxies, just chain them directly using a simple slash 
+<font color =blue>/</font>  between their URLs)</font>.
+
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+<a name="creditcards"></a>
+<br><br>
+<b>10)</b> Credit cards faking<br>
+<br>If you really want to delve into credit cards' security, 
+start from <a href="http://euro.ecom.cmu.edu/resources/elibrary/everycc.htm">Everything you ever wanted to know about CC's</a> 
+and from <a href="http://www.merriampark.com/anatomycc.htm">Anatomy of Credit Card Numbers</a>.
+
+<br><br>
+<hr width= 55%>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+
+<a name="extrac"></a>
+<br><br>
+<b>11)</b> Extracting forms<br>
+There is a huge literature. <br>
+See for instance "<i><a href="http://www.deg.byu.edu/papers/vldb02.pdf">Extracting Data Behind Web Forms</a></i>" 
+by Stephen W. Liddle, David W. Embley, Del T. Scott & Sai Ho Yau, 2002.<br>
+(Statistical predictions about the data that must be submitted to forms. Dealing 
+with forms that do not 
+require user authentication)
+<br>
+Also check "<i><a href="http://www.vldb2005.org/program/paper/tue/p97-zhang.pdf">Light-weight Domain-based Form Assistant:
+   Querying Web Databases On the Fly</a></i>" by Zhen Zhang, Bin He Kevin & Chen-Chuan Chang, 2005.<br>
+   (Creating a "form assistant" and discussing the problem of binding costraints & mandatory templates)
+<br><br>
+<hr width= 55%>
+<br><br>
+<pre>
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+<br><br>
+
+<!-- internet searching strategies and hints content, end -->
+</font></font>
+<center> <a href="basic.htm"><IMG
+SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved, reversed,
+reviled & revealed</center></center>
+<!-- how to search the web, by fravia+, signet end -->
+</CENTER>
+</body>
+</HTML>

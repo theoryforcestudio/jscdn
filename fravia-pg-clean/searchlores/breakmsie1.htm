@@ -1,0 +1,77 @@
+
+<html>
+
+<script language="JavaScript" type="text/javascript">
+<!-- Hiding
+
+var slides = new Array("acid_pink.gif","acid_dkblue.gif","acid_blue.gif",
+                       "acid_green.gif","acid_orange.gif","acid_purple.gif");
+var imgCount = slides.length;
+var curImage = 0;
+var ns = 1;
+
+function prep()
+{
+  // In Internet Explorer, a user-defined object like an image is addressable
+  // by its name only (as well as with the "document." prefix).  If you code
+  // in MSIE, leaving off the "document." will come back to haunt you when
+  // the code is run in Netscape.  To fix this, you can set up a special 
+  // variable used by Netscape only.  We'll talk about how to set "ns" to
+  // 1 if the browser is Netscape later on.
+  // Note that this code does not use "var" - that makes "slide" global in 
+  // scope.
+  if (ns) slide=document.slide;
+}
+
+function next()
+{
+  curImage++;
+  if (curImage == imgCount) { curImage = 0; }
+  slide.src = slides[curImage];
+  while (slide.complete != true);
+  return true;
+}
+
+function prev()
+{
+  curImage--;
+  if (curImage < 0) { curImage = imgCount-1; }
+  slide.src = slides[curImage];
+  while (slide.complete != true);
+  return true;
+}
+
+// Done Hiding -->
+</script>
+
+
+</head>
+
+<title>Eat this, IE!</title> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+</head> 
+
+<body onLoad="prep();">
+
+<p>This version has special code to handle just Netscape - it will break MSIE,
+so be careful.</p>
+
+<p align=center>
+<img src="https://searchlores.nickifaulk.com/acid_pink.gif" width=204 height=104 name=slide></a><br>
+<a href="javascript:void prev();">&lt;&lt; Previous</a> &nbsp; &nbsp;
+<a href="javascript:void next();">Next &gt;&gt;</a></p>
+
+</body>
+</html>
+
+<h1>Eat this, IE!</h1> 
+
+<p>This will work perfectly in Opera, but break in an unpatched MSIE!</p> 
+
+<p>Shhh... Hehe...</p> 
+
+</body> 
+
+</html>

@@ -1,0 +1,216 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>kso_kps0.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ Ksoze's "Running Perl Scripts" ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="tools.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Tools</th>
+</tR></table><br>
+<br>published @ searchlores.org in January 2001<br>
+You may enjoy visiting ksoze's page (@ <a href="http://www.deny.de/kz/perl.html">http://www.deny.de/kz/perl.html</a>) 
+<hr width=44%>
+Here is the <font color=blue>[</font><a href="https://searchlores.nickifaulk.com/kps.pl">perl script</a><font color=blue>]</font>, below the help file
+</center><hr>
+
+<font color=#005500 size=+3><b>ksoze perl shell v0.0</b> by Ksoze</font><br><br>
+</font></font>
+
+ksoze perl shell v0.0 help file<br>
+-------------------------------<br>
+kps is a simple interactive perl shell based on original Larry Wall's "perl -e eval &lt;STDIN> until $@"
+with some extra feature. It's not definitely meant to be a replacement for your standard shell
+but it could be quite useful if you want to play with perl "live". 
+<br><br>
+about security<br>
+--------------<br>
+kps is not meant to be secure. infact you can do any system call by ! command,
+"rm -rf /" and "format c:\" included.<br>
+unix/linux users : DONT RUN THIS SCRIPT SETUID OR SETGID ROOT 
+<br><br>
+install<br>
+-------<br>
+first , perl 5.004 should be ok.<br>
+windows:<br>
+unzip kps.pl to any directory.<br>
+create a file named kps.bat (in a directory included in your PATH environment var like main system dir, or
+you'll have to add the dir to your PATH e.g. by editing autoexec.bat) with 
+this line inside :<br>
+@perl c:\whatever\you\put\the\script\kps.pl<br>
+or @perl kps.pl (if you put the script in perl interpreter's dir)<br>
+now you can run the shell by typing at shell prompt (w9x/ME users read 'dos window') 
+: kps<br><br>
+
+unix/linux:<br>
+unzip kps.pl to any directory.<br>
+modify the first line of the script (shebang) according to location 
+where perl is on your system.<br>
+now you can run the shell by typing path/to/kps.pl or kps.pl 
+(if you put the script in a dir in your path)<br><br>
+
+the shell<br>
+---------<br>
+once you run the shell, you get a greeting and a prompt.<br>
+now you can type either perl code or one of kps builtin commands.<br>
+if kps doesnt recognize a builtin command, it will execute the line of perl code and will
+prompt again for input.<br>
+since kps uses perl "eval" to execute perl code, assignments, sub definitions, etc.. in a line of code will
+be "remembered" beyond the line execution (untill you quit the shell).<br><br>
+
+builtin commands (sorted by priority)<br>
+----------------<br>
+q --> quit the shell<br>
+h --> display a brief help<br>
+s --> enter shell setup<br>
+	here you can change a couple of shell settings:<br>
+	prompt --> the string used as kps prompt<br>
+	extra_cr --> append a "carriage return" after a line of perl code is executed.<br>
+	show_predef_symbols --> when listing perl symbols, kps will skip predefined symbols as @ARGV, %INC, STDOUT<br>
+	warnings --> enable/disable perl warnings<br>
+	setup accepts 2 command formats :<br>
+		q --> quit setup<br>
+		num&lt;space>new_value --> assign "new_value" to setting at index "num"<br>
+					e.g. you'll get a list like this :<br>
+					0)extra_cr = 0;<br>
+					1)prompt = 'Perl >'<br>
+					2)show_predef_symbols = 1<br>
+					3)warnings = 1<br>
+					if you want to change prompt to HelloBaby>>><br>
+					command is 1 HelloBaby>>> (that is set id 1 = prompt to HelloBaby>>>)<br>
+					if you want to skip predefined symbols<br>
+					command is 2 0 (always 0 = disabled, 1 = enabled)<br>
+					i think you can easily figure it out<br>
+	you can change settings at kps execution time, by passing them as parameters,<br>
+	windows users can change kps.bat file<br>
+	e.g. @perl c:\whatever\you\put\the\script\kps.pl -p "MyPrompt> " -w 0 -s 0 -e 1<br>
+	param name is first letter of the verbose name (e.g. prompt = -p)<br>
+	unix/linux users can create a .sh script to run kps.pl with params<br>
+m --> enable disable multi-line code<br>
+	i am going to give a self explaining example.<br>
+	you want to define a long subroutine :<br>
+	sub MySub {<br>
+		... long code here...<br>
+	}<br>
+	since kps evaluates one line of perl code at any time, you cant simply type in code the above way
+	(you'd get perl complaining about "sub MySub {" not being a legal statement)
+	also you dont want to fit that sub in one line, cos it's a lot of code.<br>
+	no problem, you can type<br>
+	m<br>
+	sub MySub {<br>
+		... long code here...<br>
+	}<br>
+	m<br>
+	all is ok. first m turns on multi-line mode, you can type whatever you want splitted on multiple lines,
+	cos code evaluation is suspended, when kps gets the second m, it evalutes the whole block of code.<br>
+	Notice : you cant use other builtin commands untill you turn off multi-line mode.<br>
+!commands --> commands are directly executed by the system shell<br>
+		win e.g. !dir (to get list of files in current dir)<br>
+		linux e.g. !ls (same as above)<br>
+		perl vars interpolation is allowed<br>
+		e.g. <br>
+		  $files = '*.gz';<br>
+		  |ls -l $files<br>
+		so backslash special chars when needed.<br>
+?($|@|#|&|f)varname -> report value(s) of "varname" symbol by given context;<br>
+		again self-explaining examples :<br>
+		$hello = 'baby';<br>
+		$hell = 'heaven';<br>
+		$hellodolly;<br>
+		@mycats = (tom,tim,tam);<br>
+		@mycat = ('/etc/password');<br>
+		%numbers = qw(one 1 two 2 three 3);<br>
+		open(MYFH,">tempfile.txt");<br>
+		sub do_nothing { } <br>
+		# now, you want to look up some value<br>
+		?$hell<br>
+		#kps prints $hello = baby $hell = heaven $hellodolly = undef<br>
+		?$hello<br>
+		#kps prints $hello = baby<br>
+		?$<br>
+		#kps prints every scalar var (and its value) that perl stores internallyv
+		?@mycat<br>
+		#kps prints @mycat = (tom,tim,tam); <br>
+	 	?@<br>
+	 	#kps prints the same as for ?@mycat plus other existing arrays (e.g. @ARGV if show_common_symbols = 1)<br>
+	 	?%num<br>
+	 	#kps prints %num = (<br>
+	 	#	one -> 1<br>
+	 	#	two -> 2<br>
+	 	#	three -> 3<br>
+	 	#) <br>
+	 	?fMYFH<br>
+	 	# kps prints MYFH is filehandle. f is for filehandles (perl has no such a thing, it's a kps convention)<br>
+	 	?&do<br>
+	 	# kps prints do_nothing is sub. & is for subs.<br>
+	 	?v
+	 	# kps prints everything in the perl symbols table (package main::)<br><br>
+	 	
+	 	Notice :<br>
+	 		? command skips packages symbols, special variables, kps own vars<br>
+	 		and perl predefined symbols (if required)<br>
+	 		? param is just a simple regex, dont use special chars cos they'll be backslahed<br>
+	 		? command accepts only one param (?$a $b --> BAD)<br>
+	 	<br>	
+if none of above matches, line is evaluated as perl code<br><br>
+
+limitations<br>
+-----------<br>
+-you should not use symbols beginning with kps_ (e.g. $kps_hello, %kps_hash)<br>
+cos you could eventually override script internal vars and fool kps<br>
+-variable must be declared as global, (e.g. my $a = 3; kps wont store/track $a)<br>
+<br>
+nice stuff<br>
+----------<br>
+win users : you can use up and down arrow keys to browse commands 
+history (just like linux users)<br><br>
+
+
+
+ksoze signin off<br>
+----------------<br>
+this script is free and cant be sold.<br>
+you can freely modify code and redistribute it, just consider you could give credits<br>
+thanx to Larry Wall for his work and psh by mr. Purdy (a much more complete perl shell)<br>
+enjoy perl, learn and give back.<br>
+<br>
+</font>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="basic.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 1952-2032: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

@@ -1,0 +1,28 @@
+<HTML><HEAD>
+<TITLE>IP Logging Techniques</TITLE></HEAD>
+<body bgcolor="#B8B8B8">
+
+
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1" WIDTH= "100%"  HEIGHT="22"><tr><td bgcolor="#C6E7C6"><center><font size=+2><font color=blue>IP Logging Through (ab)use of CGI</fonT>
+</fonT><BR>-Gordon</center></td></tr></table><BR>The first and most simple method of logging IPs from a messageboard you 
+do not own is to createa simple CGI that redirects to an image of your choice (a one pixel image
+ the color of the messageboardbackground would be good for maximum stealth), and embed the image using 
+the method appropriate for that particular board.<BR><BR>
+
+
+<font color="#550000">
+#!/usr/bin/perl				
+	Simple Tracker Script #1$time = <br>
+(localtime);open(TRACK, ">>tracked2.htm") or exit;	
+	print TRACK "\n";	print TRACK "$time\n";
+	print TRACK "IP        : $ENV{'REMOTE_ADDR'}\n";
+	print TRACK "Hostname  : $ENV{'REMOTE_HOST'}\n";
+	print TRACK "Browser   : $ENV{'HTTP_USER_AGENT'}\n";
+	print TRACK "Referer   : $ENV{'HTTP_REFERER'}\n";	close(TRACK);	
+	print "Location:eye.jpg\n\n";	
+#replace with your own image nameprint 
+"Content-type:image/jpeg\n\n";
+#and be sure to change content type to match		
+</font><BR><BR>
+
+This prints a nicely formatted html file containing the Time, Date, IP, Browser Type, and Referer ofanyone unfortunate enough to load it.  The referer should always be the address of the loading page,unless the user has disabled it, so it can be used to keep track of whose IP address you are lookingat.<BR><BR>This could also be very useful in stalking applications, as some people who would normally use an anonymous proxy may "let their guard down" when they don't <i>think</i> they're sending any information about themselves to anyone.  It is also useful in combination with silly mail readers such as M$'s and mostweb based systems that will attempt to load images off the web if they are sent an HTML formatted message. <BR><BR>I use VirtualAve.net for CGI, mainly because they were the first service I found.  They do not seem to have the standard PERL libraries installed, but they have sendmail, so if you're really bored/lazy, you can use that to send your target's information straight to an e-mail address of your choice, bypassing the need for a public webpage and possibly making it more convenient for you.  The script is mostly the same, but here is a copy anyway in case you don't want to go learn enough PERL to do it in 10 minutes at the local bookstore. :-)<BR><BR><U>Example CGI #2:</U><BR><FONT COLOR="#550000"><XMP>#!/usr/bin/perl							$sendmail = '/usr/sbin/sendmail';         # replace with sendmail location, this one works for virtualave$yourmail = 'lost_passwd@hotmail.com';    # replace with your e-mail... $frommail = 'IP Tracker <webmaster@microsoft.com>';$time = (localtime);						open(MAIL, "|$sendmail -oi -t") or exit;				print MAIL "To: $yourmail\n";print MAIL "From: $frommail\n";print MAIL "Subject: $time -- Hit logged.\n\n";print MAIL "IP        : $ENV{'REMOTE_ADDR'}\n";		print MAIL "Hostname  : $ENV{'REMOTE_HOST'}\n";		print MAIL "Browser   : $ENV{'HTTP_USER_AGENT'}\n";	print MAIL "Referer   : $ENV{'HTTP_REFERER'}\n";		close(MAIL) or exit;							print "Location:eye.jpg\n\n";		print "Content-type:image/jpeg\n\n";				</XMP></FONT><BR><BR>This script has been tested on VirtualAve, and works fine, although I'm sorry to lost_passwd that he accidentlygot a couple of test mails...  On another note, I would like to encourage everyone to go find a PERL tutorialand read it for a few minutes.  It is an incredibly simple language, but can do many things that are usefulas a reverser or a stalker.<BR><BR>But the whole topic of this essay really involves messageboarding and how we can use it to our advantage.This method is very good for finding things out about the "customers" of different boards, and since the vast majority of boards I have seen allow images to be included in messages, it is widely exploitable.</BODY></HTML>

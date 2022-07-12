@@ -1,0 +1,585 @@
+<html>
+
+<head>
+<title>How the Cyber Patrol password cracker works</title>
+</head>
+
+<h2>How the Cyber Patrol password cracker works</h2>
+
+<p>
+<i><a href = "mailto:bennett@peacefire.org">bennett@peacefire.org</a></i>
+<p>
+
+This file explains how the CPCrack decrypts the Cyber Patrol
+password under Windows,
+where the password is stored in an encrypted form in
+<b>win.ini</b>.  To understand this explanation, the
+only definitions that you'll need to know are the following:
+
+<ul>
+<li>bits and bytes
+<li>ASCII representation of characters
+<li>decimal, hexadecimal and binary notation
+<li>bitwise AND'ing, OR'ing and XOR'ing
+<li>bit-shifting and bit-rotating
+<li>plaintext, cyphertext, and encryption
+</ul>
+
+If you would like to find the definitions of these terms, we
+recommend the
+<a href = "http://www.instantweb.com/~foldoc/contents.html">Free
+On-Line Dictionary Of Computing</a>.  All of these terms are widely
+used in computing, and you can probably find at least one page
+that explains them more clearly than we could.  Other than that,
+all you need to understand this document is a fairly mathematical/logical
+mind.
+
+<p>
+
+<h3>Where CPCrack gets the encrypted password</h3>
+
+CPCrack uses the GetProfileString() function to obtain to find
+a line in the file <b>c:\windows\win.ini</b> that looks like this:
+
+<pre>
+[TCPIP Other]
+Server=45500058514051D4
+</pre>
+
+In this case, this value stores the encrypted password "APPLES".
+(Cyber Patrol passwords are case-insensitive, so you could enter
+"apples" or "ApPLeS" as your password and you would still gain access.
+Most high-security systems use case sensitive passwords, but this often
+cause problems when people can't log in because they're typing their
+password with the Caps Lock key on.  Cyber Patrol probably made their
+passwords case-insensitive to avoid this problem.)
+
+<p>
+
+This 16-character string represents an 8-byte value in hexadecimal,
+with each pair of characters representing one byte.  (Note that almost
+all of the characters are numbers, except for the "D" at the end.)
+
+<p>
+
+CPCrack first converts this 16-character string into the 8-byte
+value that it represents.  At that point, the actual decryption
+process begins.
+
+<h3>How Cyber Patrol encrypts its passwords</h3>
+
+Before writing CPCrack, we had to discover how Cyber Patrol itself
+stored its encrypted passwords.  We discovered this by changing the
+plaintext password one bit at a time, and observing which bits
+changed in the encrypted password.
+
+<p>
+
+Assume your password is represented by the sequence "abcdefgh".  This
+does not mean that the first letter of your password is 'a', the second
+letter is 'b', etc.  This means that, in our calculations, 'a' <i>stands
+for</i> the first letter of your password, 'b' stands for the second
+letter, and so on.  Remember that Cyber Patrol converts all passwords
+to upper case before storing them, so "apples" would be stored as
+"APPLES".
+
+<p>
+
+Also, if your password is less than 8 characters
+long, the remaining characters will be filled with NULL bytes, so in
+this case the complete password to be stored is "APPLES\0\0".  Each
+"\0" represents a NULL byte, which consists of 8 zero bits.  This is not to
+be confused with the ASCII representation of the 0 character itself,
+which is different from an actual NULL byte,
+so if your password is "APPLES", then trying to log in with the password
+"APPLES00" will not work.
+
+<p>
+
+To show how Cyber Patrol stores its encrypted password, we will use
+the following notation:
+
+<ul>
+
+<li>
+
+<b>a >> 3</b> means the byte value represented by 'a', rotated
+three bits to the right.  Similarly <b>a << 2</b> means 'a' rotated
+two bits to the left.  Note that this is bit rotation and not
+bit shifting, so bits that "fall off the right end" will be added back
+on the left-hand side, and no information is lost.  C programmers
+take note: this is <i>not</i> what ">>" means in C.  In C, "a >> 3"
+means shift 'a' 3 bits to the right -- <i>shift</i>, not rotate, so the
+extra bits <i>will</i> fall off the end and be lost.  The ">>" is used
+here because it's convenient; don't take home any of my bad habits.
+
+<br><br>
+
+<li>
+
+<table border = 0><td valign = top>
+
+<table border = 1>
+<td>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+
+</td>
+<td>
+
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+</td>
+</table>
+
+
+</td>
+<td valign = top>
+	This represents the process of XOR'ing XA and YB
+	to get the two-character string consisting of (X xor Y) followed
+	by (A xor B).  Whenever two values are written on top of each
+other, it is assumed that they are XOR'ed.
+
+</td>
+</table>
+
+</ul>
+
+So, if your plaintext Cyber Patrol password is 'abcdefgh', then
+Cyber Patrol stores the encrypted password as:
+
+<p>
+
+<table border = 1>
+<td valign = top align = center>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;0x04&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;c&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;d&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;c >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;f&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;d >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;e >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;f >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</table>
+
+<p>
+
+Now comes the real work: decrypting the password with only this
+information to go on.  We know what each byte in the 8-byte string
+above is, and from there we want to find the original password
+'abcdefgh'.
+
+<h3>How CPCrack decrypts the password</h3>
+
+The steps that CPCrack goes through are straightforward.  Each step
+involves taking one or more of the bytes already known to us, and
+bit-shifting it or XOR'ing it with a known value.  The only restriction
+is that, at each step, we can only use byte values that are already
+known to us, or bit-rotations of those byte values.
+For example, at the first step, we already know what
+the value of
+
+<p>
+
+<table border = 1>
+<td valign = top align = center>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</table>
+
+<p>
+
+is, because it's the first byte of the encrypted password:
+
+<p>
+
+<table border = 1>
+<td valign = top align = center>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;0x04&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</table>
+
+<p>
+
+xor'ed with 0x04 and then rotated one bit to the right.  But we
+don't know what 'a', 'g', 'g >> 2', etc. are individually.  To work
+towards getting the original value of 'abcdefgh' we use the fact
+that XOR'ing twice with the same thing cancels out -- i.e.
+<p>
+(X xor Y xor Y) = X.
+<p>
+
+Now, in each of the following steps, we use these color codes:
+
+<ul>
+<li><font color = #BB0000>red indicates a byte value that was
+already known, either because it was one of the eight bytes of
+the original encrypted password, or it was obtained
+from a calculation in a previous step</font>
+<li><font color = #007700>green indicates the byte value being
+calculated in the current step</font>
+</ul>
+
+Step 1 is explained all the way through.  The rest of the steps are given
+but are not explained in the same detail.
+
+<h3>Step 1</h3>
+
+<p>
+
+<table border = 1>
+<tr>
+<td valign = top align = center>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;0x04&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;c&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;d&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;c >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;f&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;d >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;e >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td valign = top>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;f >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center><font color = #BB0000>&nbsp;&nbsp;&nbsp;b << 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center><font color = #BB0000>&nbsp;&nbsp;&nbsp;g >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center><font color = #BB0000>&nbsp;&nbsp;&nbsp;h >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center><font color = #BB0000>&nbsp;&nbsp;&nbsp;0x04&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+<tr>
+<td>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center><font color = #007700>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center><font color = #007700>&nbsp;&nbsp;&nbsp;b << 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center><font color = #007700>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+</table>
+
+<p>
+
+Here, the value
+
+<p>
+
+<table border = 1>
+<td>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b << 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;g >> 2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;h >> 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;0x04&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</table>
+
+<p>
+
+was shown in red because we already knew this value; it
+was obtained by taking the second byte of the original encrypted
+password, shifting it one bit to the left, 
+and xor'ing it with 0x04.
+We xor this with the value in the cell above it.  'g >> 2' appears
+twice, so it cancels out, and 'h >> 1' appears twice, so it cancels
+out as well, and the two occurrences of 0x04 also cancel
+out, and we are left with
+
+<p>
+
+<table border = 1>
+<td>
+<table align = left border = 0 cellpadding = 3>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;a&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;b << 1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td align = center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</td>
+</table>
+
+<p>
+
+which we can then use in the next step.
+
+<a href = "cpcra1.htm">Steps 2 through 15</a> are outlined
+on a separate page.  At the end of Step 15, the values of all 8
+characters in the password 'abcdefgh' have been obtained.
+
+
+<p>
+
+<a href = "mailto:bennett@peacefire.org"><i>bennett@peacefire.org</i></a>
+
+</body>
+
+</html>
+

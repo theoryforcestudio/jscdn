@@ -1,0 +1,378 @@
+<html>  
+<head>   
+<title>Yahoo!/AllTheWeb's image search syntax</title>  
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">  
+<meta http-equiv=Content-Style-Type content=text/css>  
+<meta content="The most comprehensive (afaik:) reference on the web for  
+Yahoo/AllTheWeb's image search syntax." name=description>  
+<META content="Yahoo!, AllTheWeb, image search, advanced search  
+syntax, operators, meta words" name=keywords>  
+<META content=Nemo name=author>  
+<META content="Copyright(c) 2007 Nemo" name=copyright>  
+<style type=text/css> #obmessage a:link {COLOR: #02f}  
+     a:visited {COLOR: #808}  
+     a:hover {BACKGROUND: #afb; COLOR: purple}  
+     ul, ol, li, dl, dt, dd, blockquote {text-align: justify;}  
+</style>  
+</head>  
+<body text=#001010 vLink=#3366cc aLink=#00ff00 link=#0000ff bgColor=#cccccc>  
+<center>  
+<img src="images/left.gif" align=left alt="~">
+<img src="images/right.gif" align=right alt="~">
+<h1 align=center>Yahoo!/AllTheWeb's image search syntax</h1>  
+<p>  
+<i>No one lights a candle and hides it under a bushel, except Yahoo!</i>  
+</p> 
+<p>&nbsp;</p> 
+<img src="images/4star.gif" width=159 height=160 align=left alt="****">
+<table align=center border=0>  
+<tr>  
+<td bgColor=#993300>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>  
+<td bgColor=#993300>&nbsp;&nbsp;</td>  
+<td bgColor=#993300><a href="essays.htm" ><img height=68 alt="to essays" hspace=0 src="images/basipet.jpg" width=118 align=bottom border=0></a></td>  
+<td bgColor=#993300>&nbsp;&nbsp;</td>  
+</tr>  
+</table>  
+
+<p>  
+<b>First published @ <a href="http://www.searchlores.org/">Searchlores</a> in <font  
+color=blue>June 2007</font> | Version <font color=blue>0.01</font> | By  
+<font color=blue>Nemo</font></b>
+</p>  
+<table align=center>  
+<tr><td>  
+<hr>  
+<img height=13 alt=¤ src="images/bulletr.gif" width=13> <a  
+href="alltheweb.htm#introduction">Introduction</a> <img height=13 alt=¤  
+src="images/bulletr.gif" width=13> <a href="alltheweb.htm#syntax">AllTheWeb's syntax</a>  
+<img height=13 alt=¤ src="images/bulletr.gif" width=13> <a  
+href="alltheweb.htm#references">References</a>   
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>   
+<hr>  
+</td></tr>  
+</table>   
+</center>
+<a name=introduction></a><h2>Introduction</h2>
+<p align=justify>
+Is AllTheWeb dead? Not quite true, AllTheWeb image search (the engine powering Yahoo! image search) is alive and kicking and has undergone major redevelopment last year. Unfortunately Yahoo seems to be shy and once more seekers had to join the dots to guess the syntax, which is the most advanced on earth (followed quite closely by <a href=http://www.exalead.com/>exalead</a>, who offers regular expression searches). The purpose of this essay consists precisely in documenting Yahoo's image search syntax and providing examples showing its usefulness.
+</p>
+<p align=justify>
+To begin, how do we know the syntax? Well, Yahoo bought the three Google's competitors -<a href=http://searchengineshowdown.com/features/alltheweb/>AllTheWeb</a>, <a href=http://searchengineshowdown.com/features/av/>AltaVista</a> and <a href="inktomi.html">Inktomi</a>- in 2003/2004, so it is a <a href="magicfi.htm">good guess</a> that one of these is powering Yahoo image search. To know which one, all we have to do is testing the three search syntaxes:
+</p>
+<ul>
+<li><b>AllTheWeb</b>: <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4Z3nFlGalYARxyLuLkF?ei=UTF-8&fr=sfp&p=url.tld%3Aedu>url.tld:edu</a>, <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4CAnFlGcx0BNTqJzbkF?p=url.all%3Agif&ei=UTF-8&fr=sfp&x=wrt>url.all:gif</a> &amp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4UfnVlGdZYA2kuJzbkF?p=filesize%3A43&ei=UTF-8&fr=sfp&x=wrt>filesize:43</a>
+<li><b>AltaVista</b>: <a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGY9nVlGy10AKg.JzbkF?p=domain%3Aedu&ei=UTF-8&fr=sfp&x=wrt>domain:edu</a> (3,559,461 hits), <a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGXcnllG6VEBRiGJzbkF?p=edu&ei=UTF-8&fr=sfp&x=wrt>edu</a> (3,559,461 hits), <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMidaollGvlMA6xqJzbkF?p=%22philosopher%27s%22+NEAR+stone&ei=UTF-8&fr=sfp&x=wrt>"philosopher's" NEAR stone</a> (7 hits) &amp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMil.ollGuxMALlSJzbkF?p=%22philosopher%27s+stone%22&ei=UTF-8&fr=sfp&x=wrt>"philosopher's stone"</a> (12,617 hits)
+<li><b>Inktomi</b>: <a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGY9nVlGy10AKg.JzbkF?p=domain%3Aedu&ei=UTF-8&fr=sfp&x=wrt>domain:edu</a> (3,559,461 hits), <a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGXcnllG6VEBRiGJzbkF?p=edu&ei=UTF-8&fr=sfp&x=wrt>edu</a> (3,559,461 hits) &amp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMia2pllG3QUBQFiJzbkF?p=originurlextension%3Agif&ei=UTF-8&fr=sfp&x=wrt>originurlextension:gif</a>
+</ul>
+<p align=justify>
+As we can see, AllTheWeb search syntax, cf. <a href="alltheweb.htm#1">[1]</a> and <a href="alltheweb.htm#2">[2]</a>, is the supported one. On the other hand, Paul Bausch published on Yahoo! hacks the Yahoo video search syntax, which already have <a href=http://search.yahoo.com/search?ei=UTF-8&p=fromtld&fr=sfp&dups=1>leaked to the web</a>, cf. <a href="alltheweb.htm#3">[3]</a> and <a href="alltheweb.htm#4">[4]</a>. As Yahoo video search also supports the AllTheWeb search syntax, it is a good guess that image and video search should share the same query language, which is the case for most operators. Seeing the names of the operators, another one was guessed: <font color=green>fromurl:</font>.
+</p>
+<p align=justify>
+Now that you know how I have found the syntax, lets see how to use Yahoo image search to its full power.
+</p>
+<a name=syntax></a><h2>AllTheWeb's syntax</h2>
+<h3>Elementary seeking-jutsu</h3>
+<p align=justify>
+Lets start by the most basic seeking-jutsu -the image's color- which is useful for searching old images, when photos where black &amp; white. Compare: <a href=http://images.search.yahoo.com/search/images?p=Champs-Elys%C3%A9es&ei=UTF-8&fr=sfp&imgsz=&imgc=bw>Champs-Elysées</a> (black &amp; white) vs. <a href=http://images.search.yahoo.com/search/images?p=Champs-Elys%C3%A9es&ei=UTF-8&fr=sfp&imgsz=&imgc=color>Champs-Elysées</a> (color).
+Or for searching scans, as documents are usually black &amp; white. Compare: <a href=http://images.search.yahoo.com/search/images?p=Ode+to+Joy&ei=UTF-8&fr=sfp&imgc=bw>Ode to Joy</a> (black &amp; white) vs. <a href=http://images.search.yahoo.com/search/images?p=Ode+to+Joy&ei=UTF-8&fr=sfp&imgsz=&imgc=color>Ode to Joy</a> (color).
+</p>
+<p align=justify>
+Another easy one is image's format (JPG, GIF or PNG). Almost everyone knows that GIF and PNG are great for computer generated graphics, clip art and drawn graphics with few colors, or large blocks of color, whereas JPG is far better for photographs and illustrations with large numbers of colors, as these formats give better quality images for the same file size. As far as I know Yahoo image search do not have a file type operator, the best we can do is searching for keywords in the url and the operator is <font color=green>url.all:</font>. Compare for instance:
+</p>
+<ul>
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiX24VlGUKcAKx.JzbkF?p=London+subway+url.all%3Ajpg&ei=UTF-8&fr=sfp&x=wrt>London subway url.all:jpg</a> vs <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiJK4VlG5foA6liJzbkF?p=London+subway+url.all%3Agif&ei=UTF-8&fr=sfp&x=wrt>London subway url.all:gif</a>,
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4Sw2VlGFVkAIAaJzbkF?p=%22Bureau+of+Labor+Statistics%22+url.all%3Ajpg&ei=UTF-8&fr=sfp&x=wrt>"Bureau of Labor Statistics" url.all:jpg</a> vs <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby5712VlGaewAf1WJzbkF?p=%22Bureau+of+Labor+Statistics%22+url.all%3Agif&ei=UTF-8&fr=sfp&x=wrt>"Bureau of Labor Statistics" url.all:gif</a>,
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMie33FlGLYcAFViJzbkF?p=Krebs+url.all%3Ajpg&ei=UTF-8&fr=sfp&x=wrt>Krebs url.all:jpg</a> vs <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiTO3FlGD_AAsyKJzbkF?p=Krebs+url.all%3Agif&ei=UTF-8&fr=sfp&x=wrt>Krebs url.all:gif</a>.
+</ul>
+<a name=intermediate></a><h3>Intermediate seeking-jutsu</h3>
+<p align=justify>
+Like it or not, you must use words for searching images and, besides, images search engines <b>are totally blind</b>! For instance, if you are searching for <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4av5WJGTQ8A.0aJzbkF?p=oranges&ei=UTF-8&fr=sfp&x=wrt>oranges</a>, Yahoo! shows you oranges not because it is able to identify images' content, but because the word oranges appears, at least, in one of the following locations:
+</p>
+<ol>
+<li>image's file name,
+<li>image's alt attribute (an HTML snippet of text which is supposed to describe image's content to blind people using an audio or braille browser),
+<li>a small snippet of text in image's neighborhood,
+<li>image's and document's URL, perhaps document's title and anchors (link's visible text) of links pointing to the document containing the image.
+</ol>
+<p align=justify>
+To get a better grasp of what the hell I'm talking about, take a look the same query, <a href=http://www.altavista.com/image/results?itag=ody&q=oranges&mik=photo&mik=graphic&mip=all&mis=all&miwxh=all>oranges</a>, at AltaVista image search, which is powered by AllTheWeb image search. If you click on the link <a href=http://av.rds.yahoo.com/_ylt=A9ibyJ7K7mJGhJQAq2JvCqMX;_ylu=X3oDMTBvMmFkM29rBHBndANhdl9pbWdfcmVzdWx0BHNlYwNzcg--/SIG=18885pi3l/EXP=1180975178/**http%3a//www.altavista.com/image/detail%3fcatalog=image%26oid=cd7a23fdb8885d42%26backurl=%252Fimage%252Fresults%253Fitag%253Dody%2526mik%253Dphoto%2526mik%253Dgraphic%2526mip%253Dall%2526mis%253Dall%2526miwxh%253Dall%2526q%253Doranges%26q=oranges>More info</a> of the fourth image search result, you'll see the small snippet of text (Abstract:), taken from the original document, describing the image.
+</p>
+<p align=justify>
+Now that you grasp the <a href="nomomen.htm">importance of names</a>, lets see how AllTheWeb handle words.
+AllTheWeb uses an automatic Boolean AND between terms, but it also offers a way of searching for any of your search terms (OR operation). Compare <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4BGBFxGDiEB3SKJzbkF?p=illumination+parchment&ei=UTF-8&fr=sfp&x=wrt>illumination parchment</a> and <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6E8A1xGwksAADuJzbkF?p=%28illumination+parchment%29&ei=UTF-8&fr=sfp&x=wrt>(illumination parchment)</a>. The main uses of the OR operator are the expansion of you search query with synonyms, because different people use different words to describe the same thing, or to give a context to your query. For instance, if you were searching for illuminations on parchment, you could use the following expanded query: <a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGakMVxGvFsAZwmJzbkF?p=illumination+%28parchment+vellum%29&ei=UTF-8&fr=sfp&x=wrt>illumination (parchment vellum)</a>, where the expanded terms are substituted by the synonyms enclosed by parenthesis. To get synonyms, you can use the following online tools:
+</p>
+<ul>
+<li><a href="http://wordnet.princeton.edu/perl/webwn">WordNet</a>
+<li><a href="http://www.synomizer.com/">Synomizer</a>
+<li><a href="http://dico.isc.cnrs.fr/dico/en/search">English Synonym Dictionary</a>
+<li><a href="http://www.synonym.com/synonym/">Antonym Finder and Synonym Thesaurus -- Synonyms and definitions for English words!</a>
+</ul>
+<p align=justify>
+<b>Warning!</b> For reasons that will be explained later, as the respective syntax, images from the site flickr.com will be excluded preemptively joining <font color=green>-fromsite:flickr.com</font> to the following queries.
+</p>
+<p align=justify>
+Lets see another use of the OR operator -giving a context to your search query-. If you where searching for illustrations of  Captain <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiM3B3NGFVIApRSJzbkF?p=Nemo+-fromsite%3Aflickr.com&ei=UTF-8&fr=sfp&x=wrt>Nemo -fromsite:flickr.com</a> or <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiNkB3NGnVEAXTKJzbkF?p=Gandalf+-fromsite%3Aflickr.com&ei=UTF-8&fr=sfp&x=wrt>Gandalf -fromsite:flickr.com</a>, you would be disappointed with what you get, as search results are flooded with commercial trash and littered with a bunch of pictures of someone's favorite pet. The root of the problem is that search engines do not have a clue of what do you want. It's up to you, to give them the context of your query string. That is fairly easy to do, just go to the <a href="oracle.htm">Seekers' Oracle</a>, type two keywords who belong to the same context in the box, select web search, hit search and you'll get a list of keywords, sorted by frequency, who appear in Yahoo's web search results and are likely to be related with your search terms. The rationale is that is far easier to get related keywords by seeing them, than by brainstorming to get them. With this in mind, lets see how do we give a context to our two queries. For the first, using the keywords <a href="yahoo-nemo-verne.htm" name=yahoo-nemo-verne>nemo verne</a> we easily spot the following keywords belonging to our context &ndash;verne, jules, captain, leagues, sea, under, nautilus, mysterious, submarine, island, underwater, ocean, voyage &amp; crew&ndash; which allow us to build the following query: 
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMijRB3NGO74AEiGJzbkF?p=nemo+%28verne+jules+captain+leagues+sea+under+nautilus+mysterious+submarine+island+underwater+ocean+voyage+crew%29+-fromsite%3Aflickr.com&ei=UTF-8&fr=sfp&x=wrt>nemo (verne jules captain leagues sea under nautilus mysterious submarine island underwater ocean voyage crew) -fromsite:flickr.com</a>
+</blockquote>
+<p align=justify>
+Similarly for Gandalf, using the keywords <a href="yahoo-gandalf-tolkien.htm" name=yahoo-gandalf-tolkien>gandalf tolkien</a>, <a href="yahoo-gandalf-aragorn.htm" name=yahoo-gandalf-aragorn>gandalf aragorn</a> and <a href="yahoo-gandalf-frodo.htm" name=yahoo-gandalf-frodo>gandalf frodo</a> we manage to give a context to our query:
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiIwCHNG.CcAziiJzbkF?p=gandalf+%28tolkien+rings+lord+hobbit+wizard+ring+frodo+middle+earth+lotr+bilbo+fellowship+grey+white+aragorn+king+return+towers+balrog+saruman+hobbits+galadriel+legolas+sam+baggins+sauron+battle+elrond+gimli+gollum+magic+moria+council+theonering+gwaihir+elves+hobbiton+pippin+three+wise+battles+thorin+evil+shire+arwen+merry+boromir+gondor+theoden+tirith+faramir+eomer+minas+elf+rohan+secret+eowyn+son+heir+isengard+rivendell+denethor+army+arathorn+palantir+samwise+throne+pipe+wood+quest+journey+mordor+rivendell+friends+light+orcs+gamgee+destroy+sword+dead+death+precious+mithril%29+-fromsite%3Aflickr.com&ei=UTF-8&fr=sfp&x=wrt>gandalf (tolkien rings lord hobbit wizard ring frodo middle earth lotr bilbo fellowship grey white aragorn king return towers balrog saruman hobbits galadriel legolas sam baggins sauron battle elrond gimli gollum magic moria council theonering gwaihir elves hobbiton pippin three wise battles thorin evil shire arwen merry boromir gondor theoden tirith faramir eomer minas elf rohan secret eowyn son heir isengard rivendell denethor army arathorn palantir samwise throne pipe wood quest journey mordor rivendell friends light orcs gamgee destroy sword dead death precious mithril) -fromsite:flickr.com</a>
+</blockquote>
+<p align=justify>
+But only a quarter of the job is already done, as till now we only have eliminated the documents where only appear our main keyword, either by design (off topic pages or pages containing random lists of keywords made by incompetent spammers) or by chance (someone's pet name). Of course savvy SEOs also have done this kind of research and have stuffed and optimized their pages with keywords from this context... Notwithstanding they are betrayed by their own pages, which expose the keywords showing the ways they are using to monetize their "content"... The way of handling these offenders is getting those very keywords. For that, we once more use the <a href="oracle.htm">Seekers' Oracle</a>, but this time we use only one keyword to maximize the crap to content ratio on search results! As web and images are likely to be monetized in different ways, we choose the option images to spot the keywords clinging to our main keywords on images search results. For instance, using the keyword <a href="yahoo-nemo.htm" name=yahoo-nemo>nemo</a> we spot the following list of troublesome keywords: finding, disney, movies, movie, shop &amp; jamba. All we have to do is excluding the pages containing those very same keywords:</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4D_CHNGPjsBFhGJzbkF?p=nemo+%28verne+jules+captain+leagues+sea+under+nautilus+mysterious+submarine+island+underwater+ocean+voyage+crew%29++-fromsite%3Aflickr.com+-%22finding+nemo%22+-disney+-movies+-movie+-shop+-jamba&ei=UTF-8&fr=sfp&x=wrt>nemo (verne jules captain leagues sea under nautilus mysterious submarine island underwater ocean voyage crew) -fromsite:flickr.com -"finding nemo" -disney -movies -movie -shop -jamba</a>
+</blockquote>
+<p align=justify>
+Similarly, using the keyword <a href="yahoo-gandalf.htm" name=yahoo-gandalf>gandalf</a>, we spot the following list of troublesome keywords &ndash;movie, movieshots, products, product, shop, banner, movies, cinematrix, game &amp; games&ndash;, which allow us to build the following query: 
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGU9CXNGjisBvw6JzbkF?p=gandalf+%28tolkien+rings+lord+hobbit+wizard+ring+frodo+middle+earth+lotr+bilbo+fellowship+grey+white+aragorn+king+return+towers+balrog+saruman+hobbits+galadriel+legolas+sam+baggins+sauron+battle+elrond+gimli+gollum+magic+moria+council+theonering+gwaihir+elves+hobbiton+pippin+three+wise+battles+thorin+evil+shire+arwen+merry+boromir+gondor+theoden+tirith+faramir+eomer+minas+elf+rohan+secret+eowyn+son+heir+isengard+rivendell+denethor+army+arathorn+palantir+samwise+throne+pipe+wood+quest+journey+mordor+rivendell+friends+light+orcs+gamgee+destroy+sword+dead+eowyn+death+precious+mithril%29+-fromsite%3Aflickr.com+-movie+-movieshots+-products+-product+-shop+-banner+-movies+-cinematrix+-game+-games&ei=UTF-8&fr=sfp&x=wrt>gandalf (tolkien rings lord hobbit wizard ring frodo middle earth lotr bilbo fellowship grey white aragorn king return towers balrog saruman hobbits galadriel legolas sam baggins sauron battle elrond gimli gollum magic moria council theonering gwaihir elves hobbiton pippin three wise battles thorin evil shire arwen merry boromir gondor theoden tirith faramir eomer minas elf rohan secret eowyn son heir isengard rivendell denethor army arathorn palantir samwise throne pipe wood quest journey mordor rivendell friends light orcs gamgee destroy sword dead eowyn death precious mithril) -fromsite:flickr.com -movie -movieshots -products -product -shop -banner -movies -cinematrix -game -games</a>
+</blockquote>
+<p align=justify>
+Some quarries are better described by phrases. The <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6JaCGNGEpoAxCiLuLkF?ei=UTF-8&fr=&fr2=sfp&p=%22philosopher%27s+stone%22>"philosopher's stone"</a> is one of those examples (phrases are searched by enclosing them between <b>"</b>). To get more search results, lets search for the philosopher's stone in different languages. Thanks to Wikipedia, thats a trivial task. Take a look at the following page: <a href=http://en.wikipedia.org/wiki/Philosopher's_stone>Philosopher's stone</a>, where you can get the translation in a bunch of other languages, just following the links present on the table <b>In other languages</b> located on the left. So our quest for the philosopher's stone is expanded by the following query:
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6JkCGNGpZkAESSJzbkF?p=%28%22Philosopher%27s+stone%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D1%8A%D0%BA%22+%22Pedra+filosofal%22+%22De+vises+sten%22+%22Stein+der+Weisen%22+%22Piedra+filosofal%22+%22%C5%9Ctono+de+la+sa%C4%9Duloj%22+%22Pierre+philosophale%22+%22Pietra+filosofale%22+%22%D7%90%D7%91%D7%9F+%D7%94%D7%97%D7%9B%D7%9E%D7%99%D7%9D%22+%22Filosofinis+akmuo%22+%22B%C3%B6lcsek+k%C3%B6ve%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%22+%22Steen+der+wijzen%22+%22%E8%B3%A2%E8%80%85%E3%81%AE%E7%9F%B3%22+%22De+vises+stein%22+%22Dei+vises+stein%22+%22Kamie%C5%84+filozoficzny%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%22+%22Kame%C5%88+mudrcov%22+%22Viisasten+kivi%22+%22Bato+ng+pilosopo%22+%22%E8%B3%A2%E8%80%85%E4%B9%8B%E7%9F%B3%22%29++&ei=UTF-8&x=wrt>("Philosopher's stone" "Философски камък" "Pedra filosofal" "De vises sten" "Stein der Weisen" "Piedra filosofal" "Ŝtono de la saĝuloj" "Pierre philosophale" "Pietra filosofale" "אבן החכמים" "Filosofinis akmuo" "Bölcsek köve" "Философски камен" "Steen der wijzen" "賢者の石" "De vises stein" "Dei vises stein" "Kamień filozoficzny" "Философский камень" "Kameň mudrcov" "Viisasten kivi" "Bato ng pilosopo" "賢者之石")</a>
+</blockquote>
+<p align=justify>
+Using the <a href="oracle.htm">Seekers' Oracle</a> to investigate the phrase <a href="yahoo-philosopher's-stone.htm" name="yahoo-philosopher's-stone">philosopher's stone</a>, we get the following list of off topic keywords &ndash;harry, potter, dvd, youngactors, harrypotter, movie, shop, product, products, hogwarts, fawkes, games, game, trailer, amazon, cd &amp; shopping&ndash;, which we promptly use to refine our query:
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiniFGNGTTsBrlKJzbkF?p=%28%22Philosopher%27s+stone%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D1%8A%D0%BA%22+%22Pedra+filosofal%22+%22De+vises+sten%22+%22Stein+der+Weisen%22+%22Piedra+filosofal%22+%22%C5%9Ctono+de+la+sa%C4%9Duloj%22+%22Pierre+philosophale%22+%22Pietra+filosofale%22+%22%D7%90%D7%91%D7%9F+%D7%94%D7%97%D7%9B%D7%9E%D7%99%D7%9D%22+%22Filosofinis+akmuo%22+%22B%C3%B6lcsek+k%C3%B6ve%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%22+%22Steen+der+wijzen%22+%22%E8%B3%A2%E8%80%85%E3%81%AE%E7%9F%B3%22+%22De+vises+stein%22+%22Dei+vises+stein%22+%22Kamie%C5%84+filozoficzny%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%22+%22Kame%C5%88+mudrcov%22+%22Viisasten+kivi%22+%22Bato+ng+pilosopo%22+%22%E8%B3%A2%E8%80%85%E4%B9%8B%E7%9F%B3%22%29+-harry+-potter+-dvd+-youngactors+-harrypotter+-movie+-shop+-product+-products+-hogwarts+-fawkes+-games+-game+-trailer+-amazon+-cd+-shopping&ei=UTF-8&x=wrt>("Philosopher's stone" "Философски камък" "Pedra filosofal" "De vises sten" "Stein der Weisen" "Piedra filosofal" "Ŝtono de la saĝuloj" "Pierre philosophale" "Pietra filosofale" "אבן החכמים" "Filosofinis akmuo" "Bölcsek köve" "Философски камен" "Steen der wijzen" "賢者の石" "De vises stein" "Dei vises stein" "Kamień filozoficzny" "Философский камень" "Kameň mudrcov" "Viisasten kivi" "Bato ng pilosopo" "賢者之石") -harry -potter -dvd -youngactors -harrypotter -movie -shop -product -products -hogwarts -fawkes -games -game -trailer -amazon -cd -shopping</a>
+</blockquote>
+<p align=justify>
+Until now we only have half refined our three main queries: <b>nemo</b>, <b>gandalf</b> &amp; <b>philosopher's stone</b>. The other half requires advanced seeking-jutsu and those techniques will be taught in the corresponding section.
+</p>
+<p align=justify>
+AllTheWeb also offers powerful ways of refining our queries by document's / image's location. There are two prime cases where location is very useful. When you want to explore the content of a specific site:
+</p>
+<ul>
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGa9GWRGWCsAVx.LuLkF?ei=UTF-8&fr=&fr2=sfp&p=site%3Asearchlores.org>site:searchlores.org</a> &ndash;images hosted at searchlores.org site (operator used <font color=green>site:</font> aka <font color=green>url.host:</font>),
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGXIGmRG4EoAZxiJzbkF?p=fromsite%3Asearchlores.org&ei=UTF-8&x=wrt>fromsite:searchlores.org</a> &ndash;images from searchlores.org site plus external linked / <a href=http://en.wikipedia.org/wiki/Inline_linking>hotlinked</a> images (operator used <font color=green>fromsite:</font>),
+<li><a href=>fromsite:searchlores.org -site:searchlores.org</a> &ndash;external images linked / hotlinked by searchlores.org site,
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiErH2RGGX0BwQaJzbkF?p=site%3Asearchlores.org+url.all%3Aimages&ei=UTF-8&x=wrt>site:searchlores.org url.all:images</a> &ndash;images from searchlores.org site located at the directory images (the operator <font color=green>url.all:</font> is used to search keywords anywhere in <b>image's URL</b>),
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMik6H2RGEq0A6yCJzbkF?p=site%3Asearchlores.org+fromurl%3Arealicra&ei=UTF-8&x=wrt>site:searchlores.org fromurl:realicra</a> &ndash;internal and external images referenced by pages from searchlores.org site located in the directory realicra (the operator <font color=green>fromurl:</font> is used to search keywords anywhere in <b>document's URL</b>, not necessarily in image's URL),
+</ul>
+<p align=justify>
+or when you want to search some classes of sites / documents having better signal to noise ratios:
+</p>
+<ul>
+<li>Images on educational sites. If you are searching for images which might interest academicians, you can search for images referenced by educational sites. Examples: <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMibxcGRGU2UB.TiJzbkF?p=%28fromtld%3Aedu+url.host%3Aac+url.host%3Aedu%29+bestiary+-fromurl%3Awjh&ei=UTF-8&x=wrt>(fromtld:edu url.host:ac url.host:edu) bestiary -fromurl:wjh</a> or <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMicAcWRGvjYBtTSJzbkF?p=%28fromtld%3Aedu+url.host%3Aac+url.host%3Aedu%29+kells&ei=UTF-8&x=wrt>(fromtld:edu url.host:ac url.host:edu) kells</a>. The operator <font color=green>fromtld:</font> is used to search for images referenced on a page at a top-level domain, the operator <font color=green>tld:</font> aka <font color=green>url.tld:</font> is used to search for images located at top-level domain and the operator <font color=green>url.host</font> is used to search for keywords somewhere in the host name.
+<li>Public domain images. You can search public domain images, for instance, at the <a href=http://www.gutenberg.org/wiki/Main_Page>Project Gutenberg</a> site. Examples: <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4GfIGRGsDgBUlWJzbkF?p=site%3Agutenberg.org+tale&ei=UTF-8&x=wrt>site:gutenberg.org tale</a> or <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4VLP2RGFp8AcBGJzbkF?p=site%3Agutenberg.org+fontaine&ei=UTF-8&x=wrt>site:gutenberg.org fontaine</a>. Oh boy, I almost have forgotten the <a href=http://www.gutenberg.org/files/15946/15946-h/images/img12-full.jpg>wolf and the fox in the well</a> fable hehehe.
+<li>Free <a href="images.htm#imarepo">images repositories</a>, which are mainly used on fora and blogs which do not host images. These repositories are useful, if you want images which might interest those who post on fora or write blogs. Example: <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4afxmlGqlcA_S6JzbkF?p=%28site%3Aimageshack.us+site%3Aphotobucket.com%29+%28naruto+uzumaki%29&ei=UTF-8&fr=sfp&x=wrt>(site:imageshack.us site:photobucket.com) (naruto uzumaki)</a>.
+<li>Images <b>not</b> located at flickr.com, as that site has been recently flooded by normal users, which, as you can guess, usually only have normal tastes. Untill Yahoo! comes with a way of processing efficiently this very low grade ore and they know they have a problem, because images from flickr.com have been in and out of the index the last days, we'll take care of the situation resorting to use <font color=green>-fromsite:flickr.com</font>.
+<li>Open directories. Seekers love to search things on open directories, because they get less SEOed / filtered search results. Apache open directories are easy to find, because their URL often ends with strings like '?N=D', '?N=A', etc.. Examples: <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMiiIbWRGBOgAKhiJzbkF?p=vermeer+%28fromurl%3A%22n%3Da%22+fromurl%3A%22n%3Dd%22+fromurl%3A%22s%3Da%22+fromurl%3A%22s%3Dd%22+fromurl%3A%22d%3Da%22+fromurl%3A%22d%3Dd%22+fromurl%3A%22c%3Dd%22+fromurl%3A%22c%3Dm%22+fromurl%3A%22c%3Dn%22+fromurl%3A%22c%3Ds%22+fromurl%3A%22o%3Da%22+fromurl%3A%22o%3Dd%22%29&ei=UTF-8&x=wrt>vermeer (fromurl:"n=a" fromurl:"n=d" fromurl:"s=a" fromurl:"s=d" fromurl:"d=a" fromurl:"d=d" fromurl:"c=d" fromurl:"c=m" fromurl:"c=n" fromurl:"c=s" fromurl:"o=a" fromurl:"o=d")</a> or <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMidFb2RGDFQB1haJzbkF?p=escher+%28fromurl%3A%22n%3Da%22+fromurl%3A%22n%3Dd%22+fromurl%3A%22s%3Da%22+fromurl%3A%22s%3Dd%22+fromurl%3A%22d%3Da%22+fromurl%3A%22d%3Dd%22+fromurl%3A%22c%3Dd%22+fromurl%3A%22c%3Dm%22+fromurl%3A%22c%3Dn%22+fromurl%3A%22c%3Ds%22+fromurl%3A%22o%3Da%22+fromurl%3A%22o%3Dd%22%29&ei=UTF-8&x=wrt>escher (fromurl:"n=a" fromurl:"n=d" fromurl:"s=a" fromurl:"s=d" fromurl:"d=a" fromurl:"d=d" fromurl:"c=d" fromurl:"c=m" fromurl:"c=n" fromurl:"c=s" fromurl:"o=a" fromurl:"o=d")</a>.
+<li>Images located at fora / messageboards. If you are searching for good fora / messageboards, images offers a good way of seeing what they worth. Almost everyone who runs a forum / messageboard uses a prebuilt software from  a small set of common ones. As a consequence, almost every forum has one of the following keywords in the URL: viewforum, read, topic, viewpro, viewthread, threadid, showthread &amp; forum. So if you were searching for French stock market fora, you could use the following query: <a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMinSg2RGIgcBhEWJzbkF?p=%22cac+40%22+%28fromurl%3Aviewforum+fromurl%3Aread+fromurl%3Atopic+fromurl%3Aviewpro+fromurl%3Aviewthread+fromurl%3Athreadid+fromurl%3Ashowthread+fromurl%3Aforum%29&ei=UTF-8&x=wrt>"cac 40" (fromurl:viewforum fromurl:read fromurl:topic fromurl:viewpro fromurl:viewthread fromurl:threadid fromurl:showthread fromurl:forum)</a>.
+</ul>
+<h3>Advanced seeking-jutsu</h3>
+<p align=justify>
+AllTheWeb offers five powerful operators which allows you to focus on images' properties and not on the surrounding context:
+</p>
+<ul>
+<li><font color=green>aspect:</font> search for images with a specific <i>aspect ratio</i> (the image's width multiplied by 100, then divided by the height and rounded down, if necessary). The <i>aspect ratio</i> has an important feature, it does not change when the image is rescaled (unless the image becomes too small that we start to have rounding problems). Can be exact number or range (use <font color=green>&lt;</font>, <font color=green>&gt;</font>, and <font color=green>[ ; ]</font>).
+<li><font color=green>date:</font> search for images that have been last modified on a certain date. You need to use a Unix-style date, which is the number of seconds elapsed since January 1, 1970 (<i>Unix timestamp</i>). You can use the following tool to convert dates to a <i>Unix timestamp</i>. Can be exact number or range (use <font color=green>&lt;</font>, <font color=green>&gt;</font>, and <font color=green>[ ; ]</font>).
+<li><font color=green>filesize:</font> search for images with a specific size in bytes. Can be exact number or range (use <font color=green>&lt;</font>, <font color=green>&gt;</font>, and <font color=green>[ ; ]</font>).
+<li><font color=green>height:</font> search for images with a specific height in pixels. Can be exact number or range (use <font color=green>&lt;</font>, <font color=green>&gt;</font>, and <font color=green>[ ; ]</font>).
+<li><font color=green>width:</font> search for images with a specific width in pixels. Can be exact number or range (use <font color=green>&lt;</font>, <font color=green>&gt;</font>, and <font color=green>[ ; ]</font>).
+</ul>
+<script language="Javascript">
+<!--
+  function humanToTime()
+  {
+    var humDate = new Date(Date.UTC(document.h2u.inYear.value,
+          (stripLeadingZeroes(document.h2u.inMon.value)-1),
+          stripLeadingZeroes(document.h2u.inDay.value),
+          stripLeadingZeroes(document.h2u.inHr.value),
+          stripLeadingZeroes(document.h2u.inMin.value),
+          stripLeadingZeroes(document.h2u.inSec.value)));
+    document.h2u.result.value = (humDate.getTime()/1000.0);
+  }
+
+  function stripLeadingZeroes(input)
+  {
+    if((input.length > 1) && (input.substr(0,1) == "0"))
+      return input.substr(1);
+    else
+      return input;
+  }
+// -->
+</script>
+<form name="h2u">
+<center>
+<table border="1" bgcolor="#eee8aa"><tr><td>
+<table border="0" bgcolor="#fafad2">
+  <tr>
+  <td colspan="11" align="center"><p><font color="#000080"><font size="3"><b>Convert a Date/Time to a Unix timestamp</b><br></font>
+<font size="2">(number of seconds elapsed since midnight <a href=http://en.wikipedia.org/wiki/UTC>UTC</a> of January 1, 1970)</font></font></td>
+
+  </tr>
+  <tr>
+    <th>Month:</th>
+    <th>&nbsp;</th>
+    <th>Day:</th>
+    <th>&nbsp;</th>
+    <th>Year:</th>
+
+    <th>&nbsp;</th>
+    <th>Hr:</th>
+    <th>&nbsp;</th>
+    <th>Min:</th>
+    <th>&nbsp;</th>
+    <th>Sec:</th>
+  </tr>
+
+  <tr>
+    <td><input type="text" size="4" maxlength="2" name="inMon"></td>
+    <th>/</th>
+    <td><input type="text" size="4" maxlength="2" name="inDay"></td>
+    <th>/</th>
+    <td><input type="text" size="4" maxlength="4" name="inYear"></td>
+    <th>at</th>
+
+    <td><input type="text" size="4" maxlength="2" name="inHr"></td>
+    <th>:</th>
+    <td><input type="text" size="4" maxlength="2" name="inMin"></td>
+    <th>:</th>
+    <td><input type="text" size="4" maxlength="2" name="inSec"></td>
+  </tr>
+  <tr>
+    <td colspan="11" align="center"><input type="button" value="Convert" onClick="humanToTime();">&nbsp;<input type="reset" value="Reset"></td>
+
+  </tr>
+  <tr>
+    <td colspan="11" align="center"><input name="result" type="text" value="" size="30" READONLY></td>
+  </tr>
+  <noscript>
+  <tr>
+    <td colspan="11" align="center"><font color=red><b>Warning:</b></font> it won't work, because you have javascript disabled.</td>
+  </tr></noscript>
+</table>
+</td></tr></table>
+</center>
+</form>
+<p align=justify>
+To get a better grasp on how these operators work, lets start with the <font color=green>date:</font> operator. The <font color=green>date:</font> operator has two main uses: seeing how something or someone has evolved with time, fravia for instance, taking one year time slices (or any other time span you prefer), to do that we enclose the beginning and ending dates between square brackets
+</p>
+<table width=100% align=center border=0 cellspacing=0 cellpadding=0>
+<tr><td width=50% align=left>
+<ul>
+<li><b>1999</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4Z8AFdGXnkBRxiJzbkF?p=fravia+date%3A%5B915148800%3B946684800%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[915148800;946684800]</a>
+<li><b>2000</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4Z8AFdGXnkBRxiJzbkF?p=fravia+date%3A%5B946684800%3B978307200%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[946684800;978307200]</a>
+<li><b>2001</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4I0AVdGF24AXV6JzbkF?p=fravia+date%3A%5B978307200%3B1009843200%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[978307200;1009843200]</a>
+<li><b>2002</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4XIAVdGsC0AahKJzbkF?p=fravia+date%3A%5B1009843200%3B1041379200%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[1009843200;1041379200]</a>
+</ul>
+</td><td width=50% align=left>
+<ul>
+<li><b>2003</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6D6AVdG1wAAByGJzbkF?p=fravia+date%3A%5B1041379200%3B1072915200%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[1041379200;1072915200]</a>
+<li><b>2004</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby54zAldG7UUBnVKJzbkF?p=fravia+date%3A%5B1072915200%3B1104537600%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[1072915200;1104537600]</a>
+<li><b>2005</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4VtAldGtS0AwSqJzbkF?p=fravia+date%3A%5B1104537600%3B1136073600%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[1104537600;1136073600]</a>
+<li><b>2006</b> &nbsp; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4KaAldGlm8AlTGJzbkF?p=fravia+date%3A%5B1136073600%3B1167609600%5D&ei=UTF-8&fr=sfp&x=wrt>fravia date:[1136073600;1167609600]</a>
+</ul>
+</td></tr>
+</table>
+<p align=justify>
+or seeing how an important event changed someone / something, for instance the World Trade Center before (on the left) and after (on the right) September 11, 2001
+</p>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td width=50%>
+<ul>
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4IkA1dGW3EAQSWJzbkF?p=world+trade+center+date%3A%3C1000166400&ei=UTF-8&fr=sfp&x=wrt>world trade center date:<1000166400</a>
+</ul>
+</td><td width=50%>
+<ul>
+<li><a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6BoCFdGWA4ARBGJzbkF?p=world+trade+center+date%3A%3E1000166400&ei=UTF-8&fr=sfp&x=wrt>world trade center date:>1000166400</a>
+</ul>
+</td></tr>
+</table>
+<p align=justify>
+Before we give the final refinements to our queries (nemo, gandalf &amp; philosopher's stone), lets solve three of fravia's riddles, which are quite instructive in the way they illustrate how to use the other four operators.
+</p>
+<dl>
+<dt><b>Riddle I</b> (from <a href="whatis03.htm">An ochre colored "image searching" riddle</a>)
+<dd>Searching an image without knowing its name. Can you locate/understand/explain <a href="images/other03.jpg">this image</a>?
+</dl>
+<blockquote>Right clicking on the image, we know that image's width = 691 pixels, height = 460 pixels and file size = 42162 bytes. This data is usually sufficient to uniquely identify an image on the web and allows us to write the following query &ndash; <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby6FwuGZGrGcA8haJzbkF?p=width%3A691+height%3A460+filesize%3A42162&ei=UTF-8&vm=p&x=wrt>width:691 height:460 filesize:42162</a> &ndash;. There is only one search result and is located on this <a href=http://www.movieforums.com/community/printthread.php?t=3720>forum</a>. I guess this a copy from somewhere else and the image's name (probulemfrog.jpg) should be the original one. Searching <a href=http://images.google.com/images?hl=en&q=probulemfrog&btnG=Search+Images&gbv=1>probulemfrog</a> on Google, we finally locate the <a href=http://www.jimwoodring.com/gallerypages/frogs/probulem.html>original site</a>.</blockquote>
+<dl>
+<dt><b>Riddle II</b> (from <a href="hidddoor.htm">Hidden essays</a>)
+<dd><font color=blue>
+Well, ahem... on a real ~S~ site a small (sortof) "riddle" is imho necessary and welcome (<i>per angusta ad augusta</i>). 
+sincerely hope you'll have quite a difficult task&nbsp;:-) trying to fetch my own "dark" and "light" 
+essays...</font><p align=right style="margin-top:0;"><font color=gray>~S~ fravia+, September 2000</font></p>
+</dl>
+<blockquote>
+Right clicking on the images, we see that both have width = 301 pixels, height = 366 pixels and their names are mucha3.jpg and mucha4.jpg. Seeing this information, I guess that the "hidden" page has two mucha images and those images probably have the same width and height. Testing that hypothesis (<a href=http://images.search.yahoo.com/search/images;_ylt=A9iby56byGZG4VQAVzWJzbkF?p=width%3A301+height%3A366&ei=UTF-8&x=wrt>width:301 height:366</a>), we find on <a href=http://images.search.yahoo.com/search/images?ei=UTF-8&p=width%3A301+height%3A366&b=381>page 20</a> (ymmv) two other mucha images located <a href=http://www.searchlores.org/18961897/18961897.htm>here</a>. The caption of the second image on that page, <i>the width and height of the images?</i>, is quite interesting... Was this kind of search, what fravia had in mind?
+</blockquote>
+<dl>
+<dt><b>Riddle III</b> (from <a href=http://fravia.2113.ch/phplab/mbs.php3/mb001?num=-1&thread=1172704348#1172704348>not so easy little historical 'riddle'</a>)
+<dd>For those that like riddles (and web-searching for images). How comes there's a swastika (green, smack in the middle, see?) on <a href="images/russiaswas.jpg">this 1917 russian 1000 rubles banknote</a>? And: can you find the other side (the one with the building) on the web? 
+</dl>
+<blockquote>
+Right clicking on the image we see that its width = 818 and its height = 495 pixels. We also know that this image is a scan of a real note with unknown width and height, but the ratio width / height (aspect ratio) of an object remains unchanged by  magnifications or reductions, so the original banknote has an aspect ratio of approximately 165... giving some room to the way the images on the web might have been cropped, we guess the aspect ratio of those images should range from 155 to 175. Joining all the information, we construct the following query: <a href=http://images.search.yahoo.com/search/images;_ylt=A9iby4GEpGlGf6YARD6JzbkF?p=aspect%3A%5B155%3B175%5D+%281000+rubles+banknote%29+1917.&ei=UTF-8&x=wrt>aspect:[155;175] (1000 rubles banknote) 1917</a>.</blockquote><blockquote>This query can be expanded in other languages using the Wikipedia and following the links present on the table <b>In other languages</b> located on the left. For the word <a href=http://en.wikipedia.org/wiki/Rouble>ruble</a> we get its plural in other languages either by consulting the tables or images captions or banknotes' values followed by something. For the word <a href=http://en.wikipedia.org/wiki/Banknote>banknote</a>, we get the translations seeing the title. Taking this linguistic expansion, our query becomes:
+</blockquote><blockquote>
+<a href=http://images.search.yahoo.com/search/images?p=aspect%3A%5B155%3B175%5D+%281000+rubles+rubl%C5%AF+Rubel+rubla+rublos+roubles+ruskih+rubli+roebel+%D1%80%D1%83%D0%B1%D0%BB%D0%B5%D0%B9+%D1%80%D1%83%D0%B1%D0%B0%D1%99%D0%B0+rubalja+ruplaa+Rubler+%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D1%86%D1%96%D0%B2+%E5%8D%A2%E5%B8%83+%E0%B8%A3%E0%B8%B1%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2+Banknote+%22G%C3%AEn-phi%C3%B2%22+%D0%91%D0%B0%D0%BD%D0%BA%D0%BD%D0%BE%D1%82%D0%B0+Bankovka+Monbileto+%D8%A7%D8%B3%DA%A9%D9%86%D8%A7%D8%B3+Billet+Nota+%EC%A7%80%ED%8F%90+%D7%A9%D7%98%D7%A8+%D7%9B%D7%A1%D7%A3+Banconota+Popieriniai+pinigai+Bankbiljet+%E7%B4%99%E5%B9%A3+Pengeseddel+%D9%BE%DB%87%D9%84+Banknot+%D0%91%D0%B0%D0%BD%D0%BA%D0%BD%D0%BE%D1%82%D0%B0+Bankovka+Bankovec+Seteli+Sedel+%E0%B8%98%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%A3+%D0%91%D0%B0%D0%BD%D0%BA%D0%BD%D0%BE%D1%82%D0%B0+%E7%B4%99%E5%B9%A3%29+1917&ei=UTF-8&b=1>aspect:[155;175] (1000 rubles rublů Rubel rubla rublos roubles ruskih rubli roebel рублей рубаља rubalja ruplaa Rubler карбованців 卢布 รัสเซีย Banknote "Gîn-phiò" Банкнота Bankovka Monbileto اسکناس Billet Nota 지폐 שטר כסף Banconota Popieriniai pinigai Bankbiljet 紙幣 Pengeseddel پۇل Banknot Банкнота Bankovka Bankovec Seteli Sedel ธนบัตร Банкнота 紙幣) 1917</a>
+</blockquote>
+<blockquote>
+Among these pages, <a href=http://aes.iupui.edu/rwise/countries/russia_regular.html>this one</a> contains the other side of the banknote, cf. <a href=http://aes.iupui.edu/rwise/banknotes/russia/RussiaP37-1000Rubles-1917_b.jpg>other side 1</a> and <a href=http://aes.iupui.edu/rwise/banknotes/russia/RussiaP37-1000Rubles-1917-donatedjm_b.jpg>other side 2</a>.
+</blockquote>
+<p align=justify>
+Finally, lets see how these operators can be used to further reduce the noise in our search results: 
+</p>
+<ul>
+<li><font color=green>aspect:</font> this operator is very handy for three tasks:
+<ol>
+<li>getting ride of images which are too wide or too tall, because they are almost always buttons and banners (<font color=green>aspect:[30;300]</font>),
+<li>getting ride of photos (no more photos of someone's pet or some crap on sale :), thanks to the fact that there are two main standards for photos aspect ratios: 4 &times; 3 or 3 &times; 2 (<font color=green>-aspect:[66;67] -aspect:75 -aspect:133 -aspect:150</font>),
+<li>getting ride of images of movies, as those images have aspect ratio of 4 &times; 3 or 16 &times; 9 (wide screen) (<font color=green>-aspect:133 -aspect:177</font>),
+</ol>
+<li><font color=green>width:</font> this operator provides a handy way of trashing small images. It is up to you, what is too small (I become more picky the more search results I get :).
+<li><font color=green>filesize:</font> provides a handy way of getting ride of light images which often have poor quality. As a rule of thumb, I usually chop the 10% lighter ones.
+</ul>
+<p align=justify>
+It's now time to give the final refinements to our three queries (if you get <font color=red>We did not find results for...</font> hit the button reload, as we are pushing AllTheWeb to the limit! Trust me, AllTheWeb can handle it :)
+</p>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMigWC3NGD8EAwwWJzbkF?p=nemo+%28verne+jules+captain+leagues+sea+under+nautilus+mysterious+submarine+island+underwater+ocean+voyage+crew%29+-fromsite%3Aflickr.com+-%22finding+nemo%22+-disney+-movies+-movie+-shop+-jamba++aspect%3A%5B30%3B300%5D+-aspect%3A%5B66%3B67%5D+-aspect%3A75+-aspect%3A133+-aspect%3A150+-aspect%3A177+width%3A%3E250++filesize%3A%3E10000&ei=UTF-8&x=wrt>nemo (verne jules captain leagues sea under nautilus mysterious submarine island underwater ocean voyage crew) -fromsite:flickr.com -"finding nemo" -disney -movies -movie -shop -jamba  aspect:[30;300] -aspect:[66;67] -aspect:75 -aspect:133 -aspect:150 -aspect:177 width:>250  filesize:>10000</a>
+</blockquote>
+<blockquote> 
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9gnMidjCnNGEE8BvjCJzbkF?p=gandalf+%28tolkien+rings+lord+hobbit+wizard+ring+frodo+middle+earth+lotr+bilbo+fellowship+grey+white+aragorn+king+return+towers+balrog+saruman+hobbits+galadriel+legolas+sam+baggins+sauron+battle+elrond+gimli+gollum+magic+moria+council+theonering+gwaihir+elves+hobbiton+pippin+three+wise+battles+thorin+evil+shire+arwen+merry+boromir+gondor+theoden+tirith+faramir+eomer+minas+elf+rohan+secret+eowyn+son+heir+isengard+rivendell+denethor+army+arathorn+palantir+samwise+throne+pipe+wood+quest+journey+mordor+rivendell+friends+light+orcs+gamgee+destroy+sword+dead+eowyn+death+precious+mithril%29+-fromsite%3Aflickr.com+-movie+-movieshots+-products+-product+-shop+-banner+-movies+-cinematrix+-game+-games++aspect%3A%5B30%3B300%5D+-aspect%3A%5B66%3B67%5D+-aspect%3A75+-aspect%3A133+-aspect%3A150+-aspect%3A177+width%3A%3E500++filesize%3A%3E50000&ei=UTF-8&x=wrt>gandalf (tolkien rings lord hobbit wizard ring frodo middle earth lotr bilbo fellowship grey white aragorn king return towers balrog saruman hobbits galadriel legolas sam baggins sauron battle elrond gimli gollum magic moria council theonering gwaihir elves hobbiton pippin three wise battles thorin evil shire arwen merry boromir gondor theoden tirith faramir eomer minas elf rohan secret eowyn son heir isengard rivendell denethor army arathorn palantir samwise throne pipe wood quest journey mordor rivendell friends light orcs gamgee destroy sword dead eowyn death precious mithril) -fromsite:flickr.com -movie -movieshots -products -product -shop -banner -movies -cinematrix -game -games  aspect:[30;300] -aspect:[66;67] -aspect:75 -aspect:133 -aspect:150 -aspect:177 width:>500  filesize:>50000</a>
+</blockquote>
+<blockquote>
+<a href=http://images.search.yahoo.com/search/images;_ylt=A9ibyGX_qmlGHCcAZzyJzbkF?p=%28%22Philosopher%27s+stone%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D1%8A%D0%BA%22+%22Pedra+filosofal%22+%22De+vises+sten%22+%22Stein+der+Weisen%22+%22Piedra+filosofal%22+%22%C5%9Ctono+de+la+sa%C4%9Duloj%22+%22Pierre+philosophale%22+%22Pietra+filosofale%22+%22%D7%90%D7%91%D7%9F+%D7%94%D7%97%D7%9B%D7%9E%D7%99%D7%9D%22+%22Filosofinis+akmuo%22+%22B%C3%B6lcsek+k%C3%B6ve%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%22+%22Steen+der+wijzen%22+%22%E8%B3%A2%E8%80%85%E3%81%AE%E7%9F%B3%22+%22De+vises+stein%22+%22Dei+vises+stein%22+%22Kamie%C5%84+filozoficzny%22+%22%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D1%81%D0%BA%D0%B8%D0%B9+%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C%22+%22Kame%C5%88+mudrcov%22+%22Viisasten+kivi%22+%22Bato+ng+pilosopo%22+%22%E8%B3%A2%E8%80%85%E4%B9%8B%E7%9F%B3%22%29+-harry+-potter+-dvd+-youngactors+-harrypotter+-movie+-shop+-product+-products+-hogwarts+-fawkes+-games+-game+-trailer+-amazon+-cd+-shopping+++aspect%3A%5B30%3B300%5D+-aspect%3A%5B66%3B67%5D+-aspect%3A75+-aspect%3A133+-aspect%3A150+-aspect%3A177+width%3A%3E200+++filesize%3A%3E10000&ei=UTF-8&x=wrt>("Philosopher's stone" "Философски камък" "Pedra filosofal" "De vises sten" "Stein der Weisen" "Piedra filosofal" "Ŝtono de la saĝuloj" "Pierre philosophale" "Pietra filosofale" "אבן החכמים" "Filosofinis akmuo" "Bölcsek köve" "Философски камен" "Steen der wijzen" "賢者の石" "De vises stein" "Dei vises stein" "Kamień filozoficzny" "Философский камень" "Kameň mudrcov" "Viisasten kivi" "Bato ng pilosopo" "賢者之石") -harry -potter -dvd -youngactors -harrypotter -movie -shop -product -products -hogwarts -fawkes -games -game -trailer -amazon -cd -shopping   aspect:[30;300] -aspect:[66;67] -aspect:75 -aspect:133 -aspect:150 -aspect:177 width:>200   filesize:>10000</a>
+</blockquote>
+<a name=references></a><h2>References:</h2>
+<ol>
+<li><a name=1 href=http://www.ysearchblog.com/archives/000238.html>http://www.ysearchblog.com/archives/000238.html</a>
+<li><a name=2 href=http://web.archive.org/web/20030703134412/http://www.alltheweb.com/help/faqs/query_language.html>http://web.archive.org/web/20030703134412/http://www.alltheweb.com/help/faqs/query_language.html</a>
+<li><a name=3 href=http://www.searchengineshowdown.com/blog/2006/01/new_search_prefixes_for_yahoo.shtml>http://www.searchengineshowdown.com/blog/2006/01/new_search_prefixes_for_yahoo.shtml</a>
+<li><a name=4 href=http://www.digitalalchemy.tv/2006/09/yahoo-video-conduct-very-specific.html>http://www.digitalalchemy.tv/2006/09/yahoo-video-conduct-very-specific.html</a>
+
+</ol>
+<p align="justify">
+(c) Nemo 2007 &nbsp;&nbsp; <font color="#0022ff">nemo vitam meam regit@yahoo.com</font> &nbsp;&nbsp; replace white spaces by underscores.
+</p>
+
+<center>  
+<hr width="66%">  
+<a href="basic.htm"><img alt="Petit image" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a><br>
+<br>
+  
+<table>
+  
+  <tbody>
+    <tr>
+      <td bgcolor="#993300" height="2" width="300"></td>
+    </tr>
+  
+  </tbody>
+</table>
+  
+(c) III Millennium: <font color="blue">[</font><a href="http://www.searclores.org/info.htm">fravia+</a><font color="blue">]</font>, all rights reserved, reversed, reviled and  
+revealed  
+</center>
+</body>
+</html>

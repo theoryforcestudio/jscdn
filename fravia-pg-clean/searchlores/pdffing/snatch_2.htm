@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>snatch_2.htm</title></head>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010 VLINK=#405040>
+<center><Font size=+3>Cracking all nag-screen and time-trial protections
+<br>(Aerial32 as example)</Font>
+<br>(Resource-ID fishing)<br><br><h4>by Snatch<br>
+<br>
+(13 November 1997, slightly edited by fravia+)</h4>
+<hr>
+<img SRC="../images/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0" WIDTH="13" HEIGHT="13">Courtesy of fravia's  
+<a href="http://www.searchlores.org">searchlores.org</a><br><br><i>Well, a short exposition by Snatch, about Aerial,... see 
+<a href="jimbob.htm">JimBob's</a> essay about the interesting use 
+you can make of Aerial (an Acrobat Reader's Add-on) in order to snatch pdf-protected 
+files from pdf-format.<br>I would like to ask Snatch to 'deepen' a little the subject: of 
+course we cannot expect to find always a cmp, 0x1E when there is a 30-days trial, so 'a couple of lines'  more, on how exactly Snatch finds the 'correct' time-checking code-snippets inside his targets, would be appreciated (and this essay will be updated as soon as Snatch sends them :-)</i></center><hr size=2>
+<font size=+2><center>
+Cracking all nag-screen and time-trial protections (Aerial32 as example)</fonT>
+<prE>
+By Snatch</center>
+
+	Cracking nag-screens is a straightforward process.  
+
+You will need the following:
+Resource editor  (Symantec or Borland recommended)
+Disassembler     (IDA 3.7 recommended)
+Hex editor       (I have a simple one called hex for dos and it gets 
+                  the job done fine!)
+Aerial           (see JimBob's essay on the <a href="../pdffing.htm">PDF-Project</A> page).
+
+
+	That is it!
+	Now, let us get on to the crack.  
+Let us load up the resource editor and load the target, aerial32.api.  
+API files are the same as EXEs or DLLs with a different extension to 
+make them unique for Acrobat.  
+If you look through the dialog resources, you will find one that looks 
+a lot like your nag-screen, without some of the text.  
+Write down the ID of this dialog.  
+If you cannot find the dialog, the program you are cracking will 
+take extra effort to crack, because it may use LoadResource or a 
+DLL call to load the resource, not defining it in the resource directory.  
+Nevertheless, only a VERY advanced programmer could do this.
+Now lets load up the disassembler.  Your disassembler better have a 
+search option, so use it and search for the ID, in hex or decimal 
+depending on the disassembler options (normally hex).  
+For Aerial, the ID happens to be 206 or 0CEh.  
+If you search your disassembly for a 0CEh, you should find:
+
+1001EC8C push eax
+1001EC8D mov ecx, esi
+1001EC8F push 0CEh; lets change this to 0
+1001EC94 call sub_100646E0
+
+	This is obviously the correct location, because it is too 
+        coincidental for another 0CEh to occur like this.  
+        However, with a value like 0FFh, you may have to take some serious 
+        time to figure out the correct routine.  If you are not sure, keep 
+        searching, which I did and found nothing else that comes close.
+	There are usually two ways to go about patching this: if there is a 
+        jump, jump around this, or change the ID to zero.  
+        In this case, we must change the ID to zero, because there is not 
+        a jump.
+	There is a date check around this area, but do not get suspicious, 
+        it is not what ends the program, it simply gets the information for 
+        the dialog.  The real date check is at 1001F7B4.  
+        There is compare with 1E before it, 30 being the trial time.  
+        This is what I searched for, but if this is not the case, you should 
+        just look for the code that the dialog enters into for the date check 
+        for example, when they click OK.  This can be located by finding the 
+        loading of the resource.  Alternatively, you can look further on down 
+        in the code in that section, because this is usually where the check 
+        is, as it is in Aerial.  
+        Whenever there is a date check near the routine, still scan on down 
+        the routine for other possibilities.
+	Here is the misleading code of the date check that is printed on 
+        the screen, that you can find by tracing the call at 1001EC94 to 
+        the DialogParamA loading which contains the dialogs interface routine:
+
+1001EEAF push offset a79_95
+1001EEB4 mov ecx, [ebp+var_10]
+1001EEB7 push offset aAerial
+1001EEBC mov eax, [ebp+var_14]
+1001EEBF push 1Eh; time trial days left
+1001EEC1 mov edx, [ecx+6Ch]
+1001EEC4 push edx
+1001EEC5 push offset aAerial; window title
+1001EECA push offset aSEvaluationCop; message
+1001EECF push eax
+1001EED0 call _sprintf; thanks ida!
+
+	Here is the right code:
+
+1001F7AA mov [ebp+var_4], 0FFFFFFFFh
+1001F7B1 cmp esi, 1Eh; awful protection! compare with 30
+1001F7B4 jle short loc_1001F7C0; good guy with time left
+1001F7B6 call sub_1001F7D9; sorry trial over
+
+	You could have also found this code by just looking at the api calls, 
+        there is a call to getprivateprofilestring so it is using ini files.  
+        Also look for names like eval... in IDA.  There XREFs are interesting.
+	
+	Summary of patch:
+	File offset 1E090 - 00 (from CE) - do not load the nag dialog
+	File offset 1EBB4 - EB (from 7E) - force the jump
+	There you have it, cracking all (well at least almost all) nag-screen 
+        and time-trial applications.
+        And an useful tool to work on the PDF-project too.
+
+Snatch '97
+<font color=green>(c) Snatch 1997. All rights reversed</FonT>
+<HR ALIGN=CENTER WIDTH=100% SIZE=3><hr ALIGN="CENTER" WIDTH="100%" SIZE="3">
+
+<center><i>You are deep inside fravia's  <a href="http://www.searchlores.org">searchlores.org</a>,  
+choose your way out:</i></center>
+<br><center>
+<font color=blue>[</font><a href="../basic.htm">basic.htm</a><font color=blue>]</font>&nbsp;
+<font color=blue>[</font><a href="../advanced.htm">advanced.htm</a><font color=blue>]</font>&nbsp;
+<font color=blue>[</font><a href="../intro.htm">intro.htm</a><font color=blue>]</font>&nbsp;
+<font color=blue>[</font><a href="../annoyanc.htm">annoyanc.htm</a><font color=blue>]</font>&nbsp;
+ <font color=blue>[</font><a href="../pdffing.htm">pdffing.htm</a><font color=blue>]</font>&nbsp;
+
+</center>
+</body>
+</html> 

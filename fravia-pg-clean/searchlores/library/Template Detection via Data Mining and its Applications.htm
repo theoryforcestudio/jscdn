@@ -1,0 +1,1443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0048)http://www2002.org/CDROM/refereed/579/index.html -->
+<HTML><HEAD><TITLE>Template Detection via Data Mining and its Applications</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META http-equiv=Content-Script-Type content=text/javascript>
+<SCRIPT type=text/javascript>
+<!--
+ if (navigator.appName == "Microsoft Internet Explorer") {
+          document.write('<link rel="stylesheet" href="http://www2002.org/ie-html.css" type="text/css">');
+          }
+          else {
+          document.write('<link rel="stylesheet" href="http://www2002.org/nav-html.css" type="text/css">');
+          }
+          // -->
+          </SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<H1 align=center>Template Detection via Data Mining and its 
+Applications</H1><BR>
+<TABLE align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <H6 align=center>Ziv Bar-Yossef<SUP>1</SUP></H6></TD>
+    <TD>&nbsp; &nbsp; &nbsp; </TD>
+    <TD>
+      <H6 align=center>Sridhar Rajagopalan</H6></TD></TR>
+  <TR>
+    <TD>
+      <CENTER>Computer Science Division <BR>University of California at 
+      Berkeley<BR>387 Soda Hall<BR>Berkeley, CA 94720-1776, USA<BR><A 
+      href="mailto:zivi@cs.berkeley.edu">zivi@cs.berkeley.edu</A> </CENTER></TD>
+    <TD>&nbsp; &nbsp; &nbsp; </TD>
+    <TD>
+      <CENTER>IBM Almaden Research Center<BR>San Jose, CA 95120, USA<BR><A 
+      href="mailto:sridhar@almaden.ibm.com">sridhar@almaden.ibm.com</A> 
+    </CENTER></TD></TR></TBODY></TABLE><BR>1: This work was done while visiting IBM 
+Almaden Research Center. Supported by NSF Grant CCR-9820897. <BR><BR>
+<P><FONT size=-1>Copyright is held by the author/owner(s).<BR><I>WWW2002</I>, 
+May 7-11, 2002, Honolulu, Hawaii, USA.<BR>ACM 1-58113-449-5/02/0005.</FONT></P>
+<P><BR>
+<H3>Abstract</H3>
+<P>We formulate and propose the template detection problem, and suggest a 
+practical solution for it based on counting frequent item sets. We show that the 
+use of templates is pervasive on the web. We describe three principles, which 
+characterize the assumptions made by hypertext information retrieval (IR) and 
+data mining (DM) systems, and show that templates are a major source of 
+violation of these principles. As a consequence, basic ``pure'' implementations 
+of simple search algorithms coupled with template detection and elimination show 
+surprising increases in precision at all levels of recall. 
+<P><BR><B>Categories and Subject Descriptors: </B>H.3.3 [<B>Information 
+Systems</B>]: Information Search and Retrieval <BR><BR><B>General Terms: 
+</B>Algorithms <BR><BR><B>Keywords: </B>Information Retrieval, Hypertext, Web 
+Searching, Data Mining 
+<P>
+<P><BR>
+<H3><A name=tth_sEc1>1</A>&nbsp;&nbsp;Introduction</H3>
+<P>This paper deals with a novel application of the classical (see Agrawal and 
+Srikant&nbsp;[<A href="http://www2002.org/CDROM/refereed/579/index.html#AS94" 
+name=CITEAS94>1</A>]) <EM>frequent item set</EM> based data mining paradigm to 
+the area of search and mining of web data. We also address an interesting 
+software architecture issue, namely, what should be the boundary between 
+crawling (or data gathering) systems and ranking, mining or indexing 
+(generically, data analysis) systems. We take the point of view that the latter 
+data analysis tools should be both clean in concept and simple in 
+implementation, and should not, in particular, include logic for dealing with 
+many special cases. It should be the responsibility of the data gathering system 
+to provide clean data. This boundary is important—the effort involved in 
+cleaning the raw data can be effectively leveraged by a large number of data 
+analysis tools. 
+<P>In the following pages, we describe a set of three well understood 
+principles, the Hypertext IR Principles, which may be thought of as the basic 
+tenets of a <EM>contract</EM> between gathering subsystems and analytic ones. We 
+justify these principles based on three case studies drawn from the web search 
+and mining literature. We then apply these principles to define the <EM>template 
+detection</EM> problem and show that it is an instance of the frequent item set 
+counting problem which is well studied in the classical data mining world. 
+However, the size and scale of the problem preclude the use of existing 
+algorithmic methods (such as <EM>a priori</EM> or the <EM>elimination generation 
+method</EM>) and necessitates the invention of new ones. We discuss one solution 
+which is very effective in practice. We show that applying our method results in 
+significant improvements in precision across a wide range of recall values. We 
+feel that similar improvements should follow for most if not all other hypertext 
+based search and mining algorithms. 
+<P><B>The context:</B> &nbsp; What is the appropriate interface between data 
+gathering and data processing in the context of web search and mining systems? 
+(a) Modern hidden web and focused crawlers, as well as (b) Requirements imposed 
+by the <TT>robots.txt</TT> robots exclusion and politeness protocols have meant 
+the incorporation of sophisticated queuing and URL discovery methods into the 
+crawler. Increasingly, data cleaning tasks such as mirror and duplicate 
+detection have been transferred to gathering subsystems. 
+<P>The new shift marks a change in the software engineering of web search and 
+mining systems wherein increasingly ``global'' analysis is being expected of 
+gathering subsystems. On one hand, this increases the complexity of crawling 
+systems. On the other, it raises the possibility of multiple data mining 
+algorithms reaping the benefits of a common data cleaning step. We will discuss 
+this issue further in Section&nbsp;<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:software-engin">1.1</A>. 
+
+<P><B>Templates and data mining:</B> &nbsp; In this paper, we will focus on a 
+particularly interesting and recently emerging issue which impacts a number of 
+algorithmic methods. Many websites, especially those which are professionally 
+designed, consist of templatized pages. A templatized page is one among a number 
+of pages sharing a common administrative authority and a look and feel. The 
+shared look and feel is very valuable from a user's point of view since it 
+provides context for browsing. However, templatized pages skew ranking, IR and 
+DM algorithms and consequently, reduce precision. 
+<P>In almost all instances, pages sharing a template also share a large number 
+of common links. This is not surprising since one of the main functions of a 
+template is in aiding navigation. If we consider web pages as items, and the set 
+of web pages cited on any particular web page as an item set, then a frequent 
+item set corresponds to a template. Thus, finding templates can be viewed as an 
+instance of the frequent itemset counting paradigm. The size of the web, 
+however, precludes using <EM>a priori</EM>&nbsp;[<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#AS94" 
+name=CITEAS94>1</A>] to identify template instances. Alternative methods such as 
+the <EM>elimination generation method</EM>&nbsp;[<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#KRRT99" 
+name=CITEKRRT99>20</A>] also fail. 
+<P><BR>
+<H4><A name=tth_sEc1.1>1.1</A>&nbsp;&nbsp;Context</H4><A 
+name=sec:software-engin></A>
+<P><B>The basic principles:</B> &nbsp; Despite their differences in detail, 
+there are three important principles (or assumptions)—which we call the 
+<EM>Hypertext IR Principles</EM> henceforth—underlying most, if not all, 
+reference based (or hypertext) methods in information retrieval. We do not 
+intend that these are exclusive, but that these cover almost all the algorithmic 
+uses that links have been put to. 
+<OL type=1>
+  <LI><B>Relevant Linkage Principle</B>: Links point to relevant resources. The 
+  Relevant Linkage Principle is recognized implicitly in early work such as 
+  Garfield's <EM>impact factor</EM>&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#Gar72" 
+  name=CITEGar72>16</A>], and in subsequent work in bibliometrics. The tagline 
+  in Garfield's paper states: <EM>Journals can be ranked by frequency and impact 
+  of citations for science policy studies.</EM> In particular, Pinski and 
+  Narin's <EM>influence factor</EM> [<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#PN76" 
+  name=CITEPN76>24</A>] weights citations by the influence value of the citing 
+  page. An instance of this principle is that links <EM>confer authority</EM> 
+  [<A href="http://www2002.org/CDROM/refereed/579/index.html#K99" 
+  name=CITEK99>19</A>]: To quote&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#K99" 
+  name=CITEK99>19</A>], 
+  <BLOCKQUOTE><EM>The creation of a link on the WWW represents the following 
+    type of judgment: the creator of page <EM>p</EM> by linking to page 
+    <EM>q</EM> has to some measure conferred authority on <EM>q</EM>. 
+  </EM></BLOCKQUOTE>Brin and Page&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#BP98" 
+  name=CITEBP98>3</A>,<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#PBMW98" 
+  name=CITEPBMW98>23</A>] in defining the PageRank ranking metric say that links 
+  express a similar motive: 
+  <BLOCKQUOTE><EM>The intuition behind PageRank is that it uses information 
+    external to the pages themselves - their backlinks, which provides a kind of 
+    peer review. </EM></BLOCKQUOTE>
+  <LI><B>Topical Unity Principle</B>: Documents often co-cited are related, as 
+  are those with extensive bibliographic overlap. Small, in the context of 
+  academic literature &nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#S73" 
+  name=CITES73>26</A>], observed that documents which are cited together are 
+  relevant to each other. Thus, one can use co-citation as a way of spreading 
+  activation&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#PPR96" 
+  name=CITEPPR96>25</A>] from one document to another. The flip side of this 
+  observation is an earlier observation of Kessler&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#K63" 
+  name=CITEK63>18</A>]. Kessler uses bibliographic overlap as a measure of 
+  mutual relevance. While bibliographic overlap is easier to measure than 
+  co-citation strength, it is more brittle and given to manipulation by 
+  ``spamming,'' a practice which is becoming increasingly common on the web. 
+  Modern IR tools, such as HITS, Clever&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#ARC" 
+  name=CITEARC>10</A>,<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#CLEVER2" 
+  name=CITECLEVER2>8</A>], and SALSA&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#LM00" 
+  name=CITELM00>21</A>] make extensive use of both co-citation strength and 
+  bibliographic overlap as a measure of mutual relevance between documents. 
+  <LI><B>Lexical Affinity Principle</B>: Proximity of text and links within a 
+  page is a measure of the relevance of one to the other&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#MBK91" 
+  name=CITEMBK91>22</A>]. Vannevar Bush anticipated this&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#B45" 
+  name=CITEB45>5</A>]. His vision, the <EM>memex </EM>, resembled the human 
+  mind—making associations between the content of one document, and the location 
+  of another. This process of tying two things together involved the use of 
+  semantic keys chosen by the user, and was not simply an anonymous, 
+  uninterpretable relationship: 
+  <BLOCKQUOTE><EM>It affords an immediate step, however, to associative 
+    indexing, the basic idea of which is a provision whereby any item may be 
+    caused at will to select immediately and automatically another. This is the 
+    essential feature of the memex. The process of tying two items together is 
+    the important thing. </EM></BLOCKQUOTE>An extension of the Lexical Affinity 
+  Principle is detailed in Chakrabarti's work&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#C01" 
+  name=CITEC01>6</A>]. In this work, he proposes that distance between entities 
+  within a document should be measured by considering document structure and not 
+  simply some linearization of it. For instance, the distances between all pairs 
+  of elements within an itemized list should be uniform. </LI></OL>
+<P><B>Our contributions:</B> &nbsp; In this paper, we take the point of view 
+that the Hypertext IR Principles form a sound basis for defining the contract 
+between modern data gathering and data analysis systems. Thus, the function of a 
+good data gathering system should be to preprocess the document corpus so that 
+violations of the Hypertext IR Principles are minimized. This has two benefits. 
+First, it results in better software design, with a potentially large number of 
+different analysis and mining algorithms leveraging the effort expended in the 
+pre-processing phase. Second, the data analysis algorithms can be retained in 
+``pure form'' and would not need to expend a lot of effort dealing with special 
+cases. 
+<P>We illustrate this principle by considering the problem caused by templatized 
+pages. Our discussion in this context is three fold. First, we define templates 
+and argue that templates are a source of wholesale violation of the Hypertext IR 
+Principles. We then formulate and describe data mining algorithms to detect and 
+flag templates. We then show that applying a ``pure form'' ranking algorithm 
+(Clever, with no bells and whistles) to the template eliminated database results 
+in remarkable improvements in precision at all recall levels across the board. 
+We finally speculate that the same approach will work in a more general context. 
+
+<P><BR>
+<H4><A name=tth_sEc1.2>1.2</A>&nbsp;&nbsp;Noisy data and associated 
+problems</H4>
+<P>The web contains frequent violations of the Hypertext IR Principles. These 
+violations are not simply random. They happen in a systematic fashion for many 
+reasons, some of which we describe below. 
+<DL compact>
+  <DT><B>Relevant Linkage Principle</B> 
+  <DD>The web contains many <EM>navigational links</EM> (links that help 
+  navigating inside a web-site), <EM>download links</EM> (links to download 
+  pages for instance, those which point to the Netscape download page), links 
+  which point to business partners, links which are introduced to deliberately 
+  mislead link based searching algorithms, and paid <EM>advertisement 
+  links</EM>. Each such auxiliary link violates the Relevant Linkage Principle. 
+  <DT><B>Topical Unity Principle</B> 
+  <DD>A number of pages speak to a mixture of topics. A particularly frequent 
+  case in point is a bookmark page or a personal homepage. Resource pages (for 
+  instance, ``links for Electrical Engineers'') also tend to be topically 
+  diverse. In the context of search, whether a page is topically unified or 
+  diverse depends on the granularity of the query. For instance, the ``links for 
+  Electrical Engineers'' page can be topically unified if the query were 
+  ``Electrical Engineering'', but diverse if it were ``Frequency Division 
+  Multiplexing''. 
+  <DT><B>Lexical Affinity Principle</B>
+  <DD>HTML is a linearization of a document. The true structure of it, however, 
+  is most like a tree. For constructs such as a (two dimensional) table, trees 
+  are not effective descriptions of document structure either. Thus, lexical 
+  affinity should be judged based on the real structure of the document, not on 
+  the particular linearization of it as determined by the conventions used in 
+  HTML. As an instance, lists that are arranged in alphabetical order within a 
+  page abound on the web. It would be wrong to apply lexical affinity to such a 
+  linear list. </DD></DL>
+<P>Systematic violations of the Hypertext IR Principles result in a host of well 
+known problems. Most search and mining engines have a lot of special purpose 
+code to deal with each such problem. We describe some prominent classes of these 
+problems here. 
+<DL compact>
+  <DT><B>Generalization</B> 
+  <DD>Generalization occurs when a very general resource page, such as the Yahoo 
+  homepage page is ranked as a highly authoritative page regardless of the 
+  query. 
+  <DT><B>Topic Drift</B> 
+  <DD>Topic drift is the event wherein an authoritative page within a better 
+  connected and larger, but peripheral, community of web pages gets highly 
+  ranked. A colleague is a fan of the San Francisco 49ers football team, as well 
+  as an authority on finite model theory. These two interests are obvious from 
+  his homepage. Since the web has a significantly larger amount of information 
+  about the 49ers than it has about finite model theory, it is possible, even 
+  likely, that link based search for resources about finite model theory returns 
+  pages about the San Francisco 49ers. 
+  <DT><B>Bias</B> 
+  <DD>A page lexically cited close to an authoritative page on a subject often 
+  gets artificially high scores even though the proximity is accidental. For 
+  instance, on a search for ``Computing companies,'' ``Micrografix'' could be 
+  highly ranked because of its proximity to ``Microsoft'' in alphabetic 
+  listings. </DD></DL>
+<P><BR>
+<H4><A name=tth_sEc1.3>1.3</A>&nbsp;&nbsp;Pagelets</H4><A 
+name=sec:pagelet_defn></A>
+<P>Modern web pages (see, for instance, Figure&nbsp;<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:yahoo_pagelets">1</A>), 
+contain many elements for navigational and other auxiliary purposes. For 
+example: 
+<OL type=1>
+  <LI>Popular web sites (e.g., search engine sites) tend to contain, in addition 
+  to the main content, a lot of auxiliary information, such as advertisement 
+  banners, shopping links, navigational bars, privacy policy information, and 
+  even news headlines. 
+  <LI>Pages many times represent a collection of interests and ideas that are 
+  loosely knit together to form a single entity. For example, personal homepages 
+  may contain information relevant to the person's work as well as information 
+  relevant to her hobbies. Resource lists (e.g., bookmarks) sometimes include 
+  information about many topics, which are not necessarily related to each 
+  other. </LI></OL>
+<P><A name=tth_fIg1></A>
+<CENTER><IMG alt=yahoo_pagelets.gif 
+src="Template&#32;Detection&#32;via&#32;Data&#32;Mining&#32;and&#32;its&#32;Applications_files/yahoo_pagelets.gif"> 
+
+<CENTER>
+<H6 class=caption>Figure 1: The Yahoo! pagelets.</H6></CENTER><A 
+name=fig:yahoo_pagelets></A></CENTER>
+<P>This implies that much of the noise problem follows from violations of the 
+Relevant Linkage Principle and the Topical Unity Principle that are caused by 
+the construction of modern web pages. 
+<P>A pagelet (cf., [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#C01" 
+name=CITEC01>6</A>,<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CJT01" 
+name=CITECJT01>11</A>]) is a self-contained logical region within a page that 
+has a well defined topic or functionality. A page can be decomposed into one or 
+more pagelets, corresponding to the different topics and functionalities that 
+appear in the page. For example, the Yahoo! homepage, <TT>www.yahoo.com</TT> 
+(see Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:yahoo_pagelets">1</A>), 
+can be partitioned into the main directory pagelet at the center of the page, 
+the search window pagelet above it, the navigational bar pagelet at the top, the 
+news headlines pagelet on the side, and so forth. 
+<P>We propose that pagelets, as opposed to pages, are the more appropriate unit 
+for information retrieval. The main reason is that they are more structurally 
+cohesive, and better aligned with both the Topical Unity Principle and the 
+Relevant Linkage Principle. Several issues concerning the process of discovery 
+and use of pagelets are discussed in Section&nbsp;<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:pagelet_algorithm">3.1</A>. 
+
+<P><BR>
+<H4><A name=tth_sEc1.4>1.4</A>&nbsp;&nbsp;Templates</H4><A 
+name=sec:templates></A>
+<P>A frequent and systematic violation of the Hypertext IR Principles is due to 
+the proliferation in the use of <EM>templates</EM>. A template is a pre-prepared 
+master HTML shell page that is used as a basis for composing new web pages. The 
+content of the new pages is plugged into the template shell, resulting in a 
+collection of pages that share a common look and feel. 
+<P>Templates can appear in primitive form, such as the default HTML code 
+generated by HTML editors like Netscape Composer or FrontPage Express, or can be 
+more elaborate in the case of large web sites. These templates sometimes contain 
+extensive navigational bars that link to the central pages of the web site, 
+advertisement banners, links to the FAQ and Help pages, and links to the web 
+site's administrator page. See Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:yahoo_template">2</A> 
+for a representative example: the Yahoo! template. 
+<P>
+<CENTER>
+<P><A name=tth_fIg2></A>
+<CENTER><IMG alt=yahoo_templates.gif 
+src="Template&#32;Detection&#32;via&#32;Data&#32;Mining&#32;and&#32;its&#32;Applications_files/yahoo_templates.gif"> 
+</CENTER>
+<CENTER>
+<H6 class=caption>Figure 2: The Yahoo! template. As is evident from the figure, 
+the unique content in each page is a relatively small fraction of the entire 
+page. </H6></CENTER><A name=fig:yahoo_template></A></CENTER>
+<P>
+<P>The use of templates has grown with the recent developments in web site 
+engineering. Many large web sites today are maintained automatically by 
+programs, which generate pages using a small set of formats, based on fixed 
+templates. Templates can spread over several sister web sites (e.g., a template 
+common to <TT>amazon.com</TT> and <TT>drugstore.com</TT>), and contain links to 
+other web sites, such as endorsement links to business partner web sites 
+(<TT>www.eunet.net</TT>), advertisement links, and ``download'' links. Thus, 
+traditional techniques to combat templates, like intra-site link filtering, are 
+not effective for dealing with their new sophisticated form. 
+<P>Since all pages that conform to a common template share many links, it is 
+clear that these links cannot be relevant to the specific content on these 
+pages. Thus templates violate both the Relevant Linkage Principle and the 
+Topical Unity Principle. They may (and do) also cause violations of the Lexical 
+Affinity Principle, if they are interleaved with the actual content of the 
+pages. Therefore, improving hypertext data quality by recognizing and dealing 
+with templates seems essential to the success of the hypertext IR tools. 
+<P>A template has two characterizing properties: 
+<OL type=1>
+  <LI>There is a significant collection of pages that conform to this template. 
+  <LI>This common look-and-feel of these pages is controlled or influenced by a 
+  (single) central authority. </LI></OL>
+<P>The latter property is important in order to distinguish between templates, 
+in which a collection of pages intentionally share common parts, and the 
+following: 
+<OL type=1>
+  <LI>mirrors—complete wholesale duplications of pages or sites. 
+  <LI>independent pages that accidentally share similar parts, which might be 
+  important signatures of communities (see [<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#KRRT99" 
+  name=CITEKRRT99>20</A>]). </LI></OL>
+<P>Note that the requirement that a central authority influences all pages that 
+conform to a template does not necessarily imply that they all belong to a 
+single web site. The central authority can also be one that coordinates 
+templates between sister sites. 
+<P>In Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:template_algorithm">3.2</A> 
+we give a formal definition of templates, and show two efficient algorithms to 
+detect templates in a given dataset of pages. Having the ability to detect 
+templates, we can discard them from the dataset, and thus improve its quality 
+significantly. Our thesis is that pagelet-based information retrieval has to go 
+hand in hand with template removal, in order to achieve the desired improvement 
+in performance. In the applications we consider in Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:applications">4</A> 
+we pursue this direction, and show in Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:experiments">5</A> 
+that this results in better performance for pagelet-based Clever. 
+<P><BR>
+<H3><A name=tth_sEc2>2</A>&nbsp;&nbsp;Three case studies</H3>
+<P>In this section, we pick three modern canonical algorithms using link based 
+analysis and, in each case, describe their reliance on the Hypertext IR 
+Principles described earlier. 
+<P><BR>
+<H4><A name=tth_sEc2.1>2.1</A>&nbsp;&nbsp;Case 1: HITS and friends</H4><A 
+name=HitsCase></A>
+<P>HITS&nbsp;[<A href="http://www2002.org/CDROM/refereed/579/index.html#K99" 
+name=CITEK99>19</A>] is a ranking algorithm for hypertext corpora. The goal is 
+to choose, given a query <EM>t</EM>, from a base set of pages, <EM>G(t)</EM>, 
+all of which are assumed to be relevant to <EM>t</EM>, the most relevant pages. 
+This is done as follows. Start from an initial assignment <EM>h(p) = a(p) = 
+1</EM> for each page <EM>p</EM> in <EM>G(t)</EM> and iteratively perform the 
+following update steps: <BR clear=all>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE align=center>
+        <TBODY>
+        <TR>
+          <TD noWrap align=middle><EM>h(p) = </EM></TD>
+          <TD noWrap align=middle><FONT size=-1></FONT><!--sup
+--><FONT size=+3><FONT 
+            face=symbol><EM>å</EM><BR></FONT></FONT><FONT size=-1><EM>q</EM> 
+            <FONT face=symbol><EM>Î</EM></FONT><EM> 
+O(p)</EM></FONT>&nbsp;<BR></TD>
+          <TD noWrap align=middle><EM>a(q) 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            a(p) = </EM></TD>
+          <TD noWrap align=middle><FONT size=-1></FONT><!--sup
+--><FONT size=+3><FONT 
+            face=symbol><EM>å</EM><BR></FONT></FONT><FONT size=-1><EM>q</EM> 
+            <FONT face=symbol><EM>Î</EM></FONT><EM> 
+I(p)</EM></FONT>&nbsp;<BR></TD>
+          <TD noWrap 
+  align=middle><EM>h(q)</EM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<P>Here, <EM>I(p)</EM> and <EM>O(p)</EM> denote the pages which point to and are 
+pointed to respectively by <EM>p</EM>. When normalized after each update, 
+<EM>h(p)</EM> and <EM>a(p)</EM> converge to a fixed point, known as the hub and 
+authority score respectively. The higher these scores, the more relevant the 
+pages to the query term <EM>t</EM>. 
+<P>
+<OL type=1>
+  <LI><A name=hitsrlp></A>HITS implicitly depends the Relevant Linkage Principle 
+  in that it does not distinguish between links on the page. Kleinberg did note 
+  the bad effects caused by local (or nepotistic) links and excluded them 
+  altogether from <EM>I(p)</EM> and <EM>O(p)</EM>. 
+  <LI><A name=hitstup></A>HITS implicitly assumes that pages satisfy the Topical 
+  Unity Principle. Indeed, Kleinberg was aware of this as well, and pointed out 
+  that in cases where pages were topically diverse, both <EM>generalization</EM> 
+  and <EM>topic drift</EM> can and do occur. The second effect, known as the TKC 
+  effect, was more completely described and addressed in the work of &nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#LM00" 
+  name=CITELM00>21</A>] by dynamically partitioning pages in <EM>G(t)</EM> into 
+  topically cohesive units. 
+  <LI><A name=hitslap></A>HITS ignored the Lexical Affinity Principle both in 
+  its application to the text surrounding links and in its application to 
+  affinity between links occurring close to each other within a page. This issue 
+  was addressed in&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#BH98" 
+  name=CITEBH98>2</A>,<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#CDG98" 
+  name=CITECDG98>7</A>] where in each case links were weighted by the relevance 
+  of the text surrounding it to the query <EM>t</EM>. In addition, weight was 
+  propagated more aggressively between proximal links than through distant ones. 
+  While generally beneficial, results obtained using these methods were 
+  unsatisfactory when pages in <EM>G(t)</EM> violated the Lexical Affinity 
+  Principle. </LI></OL>
+<P><B>Discussion</B>&nbsp; The methods (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#hitstup">2</A>) suggested 
+in [<A href="http://www2002.org/CDROM/refereed/579/index.html#LM00" 
+name=CITELM00>21</A>] and (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#hitslap">3</A>) suggested 
+in [<A href="http://www2002.org/CDROM/refereed/579/index.html#BH98" 
+name=CITEBH98>2</A>,<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CDG98" 
+name=CITECDG98>7</A>] require significant query time processing, which <EM>per 
+se</EM>, would not be required if the data were preprocessed to satisfy the 
+Topical Unity Principle and the Lexical Affinity Principle respectively. 
+Moreover, if a more sophisticated method, such as that suggested by 
+Davison&nbsp;[<A href="http://www2002.org/CDROM/refereed/579/index.html#D00" 
+name=CITED00>14</A>] were used to clean the data beforehand, the (somewhat 
+unsatisfactory) hack (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#hitsrlp">1</A>) used 
+in&nbsp;[<A href="http://www2002.org/CDROM/refereed/579/index.html#K99" 
+name=CITEK99>19</A>] would not be required either. 
+<P><BR>
+<H4><A name=tth_sEc2.2>2.2</A>&nbsp;&nbsp;Case 2: Focused crawling</H4>
+<P>A focused crawler is a program that looks for pages that are relevant to some 
+node in a given taxonomy. The notion of focused crawling was introduced and 
+first discussed in&nbsp;[<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CBD99a" 
+name=CITECBD99a>12</A>,<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CBD99b" 
+name=CITECBD99b>13</A>]. The solution proposed (called FOCUS) consisted of three 
+components: a crawler, a classifier, and a distiller. The three components work 
+in concert as follows: The function of the crawler was to fetch pages from the 
+web according to a given priority. The classifier locates these fetched pages 
+within the taxonomy, and the distiller tags pages in each taxonomy node with a 
+relevance score, which is then used to prioritize those unfetched pages that are 
+pointed to by highly relevant nodes for fetching by the crawler. 
+<P>The distiller used by FOCUS was Clever, which is a variant of Kleinberg's 
+HITS Algorithm. The classifier used was HyperClass, described in&nbsp;[<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CDI98" 
+name=CITECDI98>9</A>]. 
+<OL type=1>
+  <LI><A name=focusclever></A>Since FOCUS uses Clever, the analysis in 
+  Section&nbsp;<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#HitsCase">2.1</A> 
+  applies to FOCUS as well. 
+  <LI><A name=focusrlp></A>The crawler assumes that all pages pointed to by 
+  highly relevant pages are good pages to fetch, which is essentially the same 
+  as assuming that the Relevant Linkage Principle and the Topical Unity 
+  Principle hold for these pages. 
+  <LI><A name=focushyperclass></A>HyperClass uses a Markov Random Field approach 
+  to classify pages into a given taxonomy. HyperClass (as described in&nbsp;[<A 
+  href="http://www2002.org/CDROM/refereed/579/index.html#CDI98" 
+  name=CITECDI98>9</A>]) assumes all the Hypertext IR Principles. </LI></OL>
+<P><B>Discussion</B>&nbsp; The measure of effectiveness of a focused crawler is 
+(1) its harvest rate—the fraction of pages that are downloaded by it which are 
+relevant to some node in the taxonomy and (2) the accuracy with which these 
+pages are located within the taxonomy. Following (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#focusclever">1</A>), a 
+good distiller would result in better prioritization of the pages to be fetched, 
+and thus directly improve harvest rate. Moreover, if the data would adhere more 
+closely to the Relevant Linkage Principle and the Topical Unity Principle 
+following (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#focusrlp">2</A>), 
+pointers to irrelevant material would not be followed, and would directly 
+improve harvest rate. Finally, any improvements to HyperClass (<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#focushyperclass">3</A>) 
+accruing from cleaner data would automatically improve the accuracy of the 
+focused crawler. 
+<P><BR>
+<H4><A name=tth_sEc2.3>2.3</A>&nbsp;&nbsp;Case 3: The co-citation algorithm</H4>
+<P>The co-citation algorithm is a simple algorithm due to Dean and Henzinger 
+&nbsp;[<A href="http://www2002.org/CDROM/refereed/579/index.html#DH99" 
+name=CITEDH99>15</A>]. Given a page <EM>p</EM>, the algorithm finds all pages 
+which are ``similar'' in content by looking for other pages that are most often 
+co-cited with <EM>p</EM>. 
+<P>At its heart the co-citation algorithm is an immediate consequence of 
+assuming the Topical Unity Principle and the Relevant Linkage Principle. 
+<P><B>Discussion</B>&nbsp; Violations of the Topical Unity Principle and the 
+Relevant Linkage Principle, for instance, because a popular site pointed to for 
+irrelevant reasons, skew the results of the co-citation algorithm. 
+<P><BR>
+<H3><A name=tth_sEc3>3</A>&nbsp;&nbsp;Algorithms for Page Partitioning and 
+Template Detection</H3><A name=sec:algorithms></A>
+<P>In this section we describe our algorithms for partitioning a given web page 
+into pagelets and for detecting templates in a given collection of pages. 
+<P><BR>
+<H4><A name=tth_sEc3.1>3.1</A>&nbsp;&nbsp;Page Partitioning Algorithm</H4><A 
+name=sec:pagelet_algorithm></A>
+<P>Before we describe our algorithm for partitioning a web page into pagelets, 
+we would like to define what pagelets are. The following is a <EM>semantic</EM> 
+definition of pagelets: 
+<P><B>Definition 1</B> [Pagelet - semantic definition] <A 
+name=def:pagelet_sem></A><EM>A pagelet is a region of a web page that (1) has a 
+single well-defined topic or functionality; and (2) is not nested within another 
+region that has exactly the same topic or functionality. </EM>
+<P>That is, we have two contradicting requirements from a pagelet: (1) that it 
+will be ``small'' enough as to have just one topic or functionality; and (2) 
+that it will be ``big'' enough such that no other region that contains it also 
+has the same topic (the nesting region may have a more general topic). Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:yahoo_pagelets">1</A> 
+demonstrates Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_sem">1</A> by 
+the pagelet partitioning of the Yahoo! homepage. 
+<P>In order to partition a page into pagelets, we need a <EM>syntactic</EM> 
+definition of pagelets, which will materialize the intuitive requirements of the 
+semantic definition into an actual algorithm. This problem was considered before 
+by Chakrabarti [<A href="http://www2002.org/CDROM/refereed/579/index.html#C01" 
+name=CITEC01>6</A>] and Chakrabarti <EM>et al.</EM> [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#CJT01" 
+name=CITECJT01>11</A>]; they suggested a sophisticated algorithm to partition 
+``hubs'' in the context of the HITS/Clever algorithm into pagelets. Their 
+algorithm, however, is intertwined with the application (Clever) and in 
+particular it is <EM>context-dependent</EM>: the partitioning depends on the 
+given query. Furthermore, the algorithm itself is non-trivial, and therefore it 
+seems infeasible to run it on millions of pages at the data gathering phase. 
+<P>Since our principal goal is to design efficient hypertext cleaning algorithms 
+that run in data gathering time, we adopt a simple heuristic to syntactically 
+define pagelets. This definition has the advantages of being context-free, 
+admitting an efficient implementation, and approximating the semantic definition 
+quite faithfully. Our heuristic uses the cues provided by HTML mark-up tags such 
+as tables, paragraphs, headings, lists, etc. 
+<P>The simplest approach to use HTML, and more generally XML, in page 
+partitioning is to define the HTML elements (the ``tags'') as the pagelets. 
+However, this approach suffers from several caveats: (1) the HTML structure is a 
+tree and we would like a flattened partitioning of the page; and (2) the 
+granularity of this partitioning is too fine, and does not meet the second 
+requirement of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_sem">1</A>. 
+We refine the approach in the following way: 
+<P><B>Definition 2</B> [Pagelet - syntactic definition] <A 
+name=def:pagelet_syn></A><EM>An HTML element in the parse tree of a page 
+<EM>p</EM> is a pagelet if (1) none of its children contains at least <EM>k</EM> 
+hyperlinks; and (2) none of its ancestor elements is a pagelet.</EM> 
+<P>The first requirement in Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_syn">2</A> 
+corresponds to the first requirement of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_sem">1</A>. 
+When an HTML element contains at least <EM>k</EM> links (<EM>k</EM> is a 
+parameter of our choice; in our implementation we use <EM>k</EM> = 3), then it 
+is likely to represent some independent idea/topic; otherwise, it is more likely 
+to be topically integrated in its parent. The second requirement in Definition 
+<A href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_syn">2</A> 
+achieves two goals: first, it implies a flattened partitioning of the page, and 
+second, it ensures the second requirement of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_sem">1</A>. 
+Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:pagelet_syn">2</A> 
+implies the page partitioning algorithm depicted in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:pagelet_alg">3</A>. 
+<P>
+<P><A name=tth_fIg3></A>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD><BR><PRE> Partition(p) { 
+
+ T<SUB>p</SUB> := HTML parse tree of p
+
+ Queue := root of T<SUB>p</SUB>
+
+ while (Queue is not empty) {
+      v := top element in Queue 
+
+      if (v has a child with at least k links) 
+          push all the children of v to Queue 
+      else 
+          declare v as a pagelet 
+ }
+</PRE></TD></TR></TBODY></TABLE>
+<CENTER>
+<H6 class=caption>Figure 3: Page partitioning algorithm.</H6></CENTER><A 
+name=fig:pagelet_alg></A></CENTER>
+<P><BR>
+<H4><A name=tth_sEc3.2>3.2</A>&nbsp;&nbsp;Template Detection Algorithms</H4><A 
+name=sec:template_algorithm></A>
+<P>We now present two algorithms for detecting templates in a given collection 
+of pages. Both algorithms are scalable and designed to process large amounts of 
+pages efficiently. The first algorithm, called the <EM>local template detection 
+algorithm</EM>, is more accurate for small sets of pages, while the second 
+algorithm, called the <EM>global template detection algorithm</EM>, better suits 
+large sets of pages. 
+<P>Before we describe the algorithms, we define templates formally. 
+<P><B>Definition 3</B> [Template - semantic definition] <A 
+name=def:template_sem></A><EM>A template is a collection of pages that (1) share 
+the same look and feel and (2) are controlled by a single authority.</EM> 
+<P>Templates are usually created by a master HTML page that is shared by all the 
+pages that belong to the site(s) of the authority that controls the template. 
+The specific content of each page is inserted into ``place holders'' in this 
+master HTML page. The outcome of this process is that all the templatized pages 
+share common pagelets, such as navigational bars, ad banners, and logo images. 
+The Yahoo! template, depicted in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:yahoo_template">2</A>, 
+provides a good example of this notion. 
+<P>The second requirement in Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_sem">3</A> 
+is crucial in order to distinguish between templates and (a) whole-sale 
+duplications of pages and (b) accidental similarities between independent pages. 
+
+<P>In order to materialize the semantic definition of templates, we use the 
+following syntactic definition. In the definition, we use the notation 
+<EM>O(p)</EM> to denote the page owning a pagelet <EM>p</EM>, and <EM>C(p)</EM> 
+to denote the content (HTML content) of the pagelet <EM>p</EM>. 
+<P><B>Definition 4</B> [Template - syntactic definition] <A 
+name=def:template_syn></A><EM>A template is a collection of pagelets 
+<EM>p<SUB>1</SUB>,<FONT face=symbol>¼</FONT>,p<SUB>k</SUB></EM> that satisfies 
+the following two requirements:</EM> 
+<OL type=1>
+  <LI><EM>C(p<SUB>i</SUB>) = C(p<SUB>j</SUB>) for all 1 <FONT 
+  face=symbol>£</FONT> i <FONT face=symbol>¹</FONT> j <FONT face=symbol>£</FONT> 
+  k. </EM>
+  <LI><EM>O(p<SUB>1</SUB>),<FONT face=symbol>¼</FONT>,O(p<SUB>k</SUB>) form an 
+  undirected connected component. </EM></LI></OL>
+<P>Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A> 
+associates a template with the collection of pagelets that are shared by the 
+templatized pages. The first requirement in Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A> 
+ensures that the template pagelets are indeed part of the common ``look and 
+feel'' of the templatized pages. The second requirement in Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A> 
+ensures the second requirement of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_sem">3</A>. 
+We use here the heuristic that templatized pages that are controlled by a single 
+authority are usually reachable one from the other by an undirected path of 
+other templatized pages (possibly through the root of the site). On the other 
+hand, mirror sites and pages that share accidental similarities are not likely 
+to link to each other. 
+<P>In practice, we relax the first requirement of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A>, 
+and require that pagelets in the same template are only ``approximately'' 
+identical. That is, if every two pagelets in a collection 
+<EM>p<SUB>1</SUB>,<FONT face=symbol>¼</FONT>,p<SUB>k</SUB></EM> are 
+almost-identical and their owner pages form a connected component, we consider 
+them to be a template. The reason for this relaxation is that in reality many 
+templatized pages are slight perturbations of each other, due, e.g., to version 
+inconsistencies. We use the shingling technique of Broder <EM>et al.</EM> [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#BGM97" 
+name=CITEBGM97>4</A>] to determine almost-similarities. A <EM>shingle</EM> is a 
+text fingerprint that is invariant under small perturbations. We associate with 
+each template <FONT face=helvetica><I>T</I></FONT> a <EM>shingle</EM> 
+<EM>s(<FONT face=helvetica><I>T</I></FONT>)</EM>, and require each pagelet 
+<EM>p</EM><FONT face=symbol>Î</FONT> <FONT face=helvetica><I>T</I></FONT> to 
+satisfy <EM>s(p) = s(</EM><FONT face=helvetica><I>T</I></FONT><EM>)</EM>. 
+<P>We further denote by <EM>O(</EM><FONT 
+face=helvetica><I>T</I></FONT><EM>)</EM> the collection of pages owning the 
+pagelets in <FONT face=helvetica><I>T</I></FONT>. 
+<P>The algorithmic question our template detection algorithms are required to 
+solve is as follows: given a collection of hyperlinked documents <EM>G = <FONT 
+face=symbol>á</FONT>V<SUB>G</SUB>,E<SUB>G</SUB> <FONT face=symbol>ñ</FONT></EM> 
+drawn from a universe <EM>W = <FONT face=symbol>á</FONT>V<SUB>W</SUB>, 
+E<SUB>W</SUB> <FONT face=symbol>ñ</FONT></EM> (i.e., <EM>G</EM> is a sub-graph 
+of <EM>W</EM>), enumerate all the templates <FONT face=helvetica><I>T</I></FONT> 
+in <EM>W</EM> for which <EM>O(<FONT face=helvetica><I>T</I></FONT>)</EM> 
+intersects <EM>V<SUB>G</SUB></EM>. The algorithms assume the pages, links, and 
+pagelets in <EM>G</EM> are stored as local database tables. We will show that 
+their running time and space requirements are small—at most quasi-linear in the 
+size of <EM>G</EM>. 
+<P>The algorithms we present assume that <EM>G</EM> is stored as the following 
+database relations: 
+<UL>
+  <LI><TT>PAGES(page_key,page_shingle)</TT> - the pages in <EM>G</EM> together 
+  with their shingle values. 
+  <LI><TT>LINKS(src_page_key,dest_page_key)</TT> - the hyperlinks between the 
+  pages in the dataset. 
+  <LI><TT>PAGELETS(page_key,pagelet_serial,pagelet_shingle)</TT> - the list of 
+  pagelets in each page together with their shingle values. </LI></UL>
+<P>Building these tables can be done by streaming through the pages in the 
+dataset, and parsing their HTML text to extract their links and pagelets. Thus, 
+it requires a constant time per page. 
+<P>The first algorithm we consider is more suitable for document sets that 
+consist only of a small fraction of the documents from the larger universe. In 
+such sets it is very probable for a template <FONT 
+face=helvetica><I>T</I></FONT> that only a small fraction of the pages in 
+<EM>O(<FONT face=helvetica><I>T</I></FONT>)</EM> are contained in 
+<EM>V<SUB>G</SUB></EM>. This implies that, although <EM>O(<FONT 
+face=helvetica><I>T</I></FONT>)</EM> forms an undirected connected component in 
+<EM>W</EM>, <EM>O(<FONT face=helvetica><I>T</I></FONT>) <FONT 
+face=symbol>Ç</FONT>V<SUB>G</SUB></EM> may not be connected in <EM>G</EM>. In 
+this case, therefore, it makes more sense to validate only the first requirement 
+of Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A>. 
+Note that for small sets of pages, we do not have to worry about accidental page 
+similarities, because they are unlikely to occur. Whole-sale duplication of 
+pages can be detected at a pre-processing step using the Broder <EM>et al.</EM> 
+algorithm. The algorithm is described in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:template_alg1">4</A>. 
+
+<P>
+<P><A name=tth_fIg4></A>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD><BR>&nbsp; (1) &nbsp; Eliminate duplicate pages in <EM>G</EM> 
+      <BR><BR>&nbsp; (2) &nbsp; Sort and group the pagelets in <EM>G</EM> 
+      according to their <BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; shingle. Each 
+      such group represents a template. <BR><BR>&nbsp; (3) &nbsp; Enumerate the 
+      groups, and output the pagelets <BR>&nbsp; &nbsp; &nbsp; &nbsp; 
+      &nbsp;belonging to each group. <BR><BR></TD></TR></TBODY></TABLE>
+<P>
+<CENTER>
+<H6 class=caption>Figure 4: Local template detection algorithm.</H6></CENTER><A 
+name=fig:template_alg1></A></CENTER>
+<P>To analyze the algorithm's complexity, we denote by <EM>N</EM> the number of 
+pages in <EM>G</EM>, by <EM>M</EM> the number of links, and by <EM>K</EM> the 
+number of pagelets in <EM>G</EM>. <EM>N</EM>,<EM>M</EM>, and <EM>K</EM> are the 
+sizes of the tables <TT>PAGES, LINKS</TT>, and <TT>PAGELETS</TT> respectively. 
+<P>The algorithm is very efficient: the first step can be carried out in <EM>O(N 
+log N)</EM> time by computing the shingles of each pages, and sorting the pages 
+according to the shingle value. Similarly, the second step requires <EM>O(K log 
+K)</EM> steps, and the third step is just an <EM>O(K)</EM> linear scan of the 
+pagelets. The space requirements (on top of the database tables) are logarithmic 
+in <EM>K</EM> and <EM>N</EM>. Note that the operations performed in this 
+algorithm (sorting and enumerating) are very standard in databases, and 
+therefore are highly optimized in practice. 
+<P>Our second algorithm, depicted in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:template_alg2">5</A>, 
+is more involved, and detects only templates that satisfy both requirements of 
+Definition <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#def:template_syn">4</A>. 
+This algorithm is well suited for large subsets of the universe, since in such 
+subsets <EM>O(<FONT face=helvetica><I>T</I></FONT>) <FONT 
+face=symbol>Ç</FONT>V<SUB>G</SUB></EM> is likely to be connected in <EM>G</EM>. 
+<P>
+<P><A name=tth_fIg5></A>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD><BR>&nbsp;(1) &nbsp;Select all the pagelet shingles in 
+      <TT>PAGELETS</TT> that have at least two occurrences. <BR>&nbsp; &nbsp; 
+      &nbsp; &nbsp;Call the resulting table <TT>TEMPLATE_SHINGLES</TT>. These 
+      are the shingles of the <BR>&nbsp; &nbsp; &nbsp; &nbsp;re-occurring 
+      pagelets. <BR><BR>&nbsp;(2) &nbsp;Extract from <TT>PAGELETS</TT> only the 
+      pagelets whose shingle occurs in <BR>&nbsp; &nbsp; &nbsp; 
+      &nbsp;<TT>TEMPLATE_SHINGLES</TT>. Call the resulting table 
+      <TT>TEMPLATE_CANDIDATES</TT>. <BR>&nbsp; &nbsp; &nbsp; &nbsp;These are all 
+      the pagelets that have multiple occurrences in <EM>G</EM>. 
+      <BR><BR>&nbsp;(3) &nbsp; For every shingle <EM>s</EM> that occurs in 
+      <TT>TEMPLATE_SHINGLES</TT> define <EM>G<SUB>s</SUB></EM> to be the 
+      <BR>&nbsp; &nbsp; &nbsp; &nbsp; shingle's group: all the pages that 
+      contain pagelets whose shingle is <EM>s</EM>. By <BR>&nbsp; &nbsp; &nbsp; 
+      &nbsp; joining <TT>TEMPLATE_CANDIDATES</TT> and <TT>LINKS</TT> find for 
+      every <EM>s</EM> all the links <BR>&nbsp; &nbsp; &nbsp; &nbsp; between 
+      pages in <EM>G<SUB>s</SUB></EM>. Call the resulting relation 
+      <TT>TEMPLATE_LINKS</TT>. <BR><BR>&nbsp; (4) &nbsp; Enumerate the shingles 
+      <EM>s</EM> in <TT>TEMPLATE_SHINGLES</TT>. For each one, load <BR>&nbsp; 
+      &nbsp; &nbsp; &nbsp; &nbsp; into main memory all the links between pages 
+      in <EM>G<SUB>s</SUB></EM>. <BR><BR>&nbsp; (5) &nbsp; Use a BFS algorithm 
+      to find all the undirected connected components in <EM>G<SUB>s</SUB></EM>. 
+      <BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Each such component is either a 
+      template or a singleton. Output the <BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      component if it is not a singleton. <BR><BR></TD></TR></TBODY></TABLE></CENTER>
+<P>
+<CENTER>
+<H6 class=caption>Figure 5: Global template detection algorithm.</H6></CENTER><A 
+name=fig:template_alg2></A>
+<P>The algorithm works in two phases: in the first phase it extracts all the 
+groups of syntactically similar pagelets (steps (1)-(2)) and in the second phase 
+it partitions each such group into templates (steps (3)-(5)). 
+<P>The main point here is that if <FONT face=helvetica><I>T</I></FONT> is a 
+template that intersects <EM>V<SUB>G</SUB></EM>, then <EM>s(<FONT 
+face=helvetica><I>T</I></FONT>)</EM> will be one of the shingles in the relation 
+<TT>TEMPLATE_SHINGLES</TT>. The group of the shingle <EM>s(<FONT 
+face=helvetica><I>T</I></FONT>)</EM> should contain all the pagelets in <FONT 
+face=helvetica><I>T</I></FONT>, but may contain pagelets from other pages, whose 
+shingle happens to coincide with <EM>s(<FONT 
+face=helvetica><I>T</I></FONT>)</EM>. We extract the pagelets of <FONT 
+face=helvetica><I>T</I></FONT> from the shingle's group using the connected 
+components algorithm: the owners of the pagelets in <FONT 
+face=helvetica><I>T</I></FONT> should form an undirected connected component. 
+<P>This algorithm is also efficient: step (1) requires sorting 
+<TT>PAGELETS</TT>, which takes <EM>O(K logK)</EM> steps and <EM>O(logK)</EM> 
+space. Step (2) is just a linear scan of <TT>PAGELETS</TT>. Note that after this 
+step the size of <TT>PAGELETS</TT> may decrease significantly, because we 
+eliminate all the pagelets that occur only once in the dataset. 
+<P>In step (3) we perform a triple join of <TT>TEMPLATE_CANDIDATES T1</TT>, 
+<TT>TEMPLATE_CANDIDATES T2</TT>, and <TT>LINKS</TT> with constraints 
+<OL type=1>
+  <LI><TT>T1.page_key = LINKS.src_page_key</TT> 
+  <LI><TT>T2.page_key = LINKS.dest_page_key</TT> 
+  <LI><TT>T1.pagelet_shingle = T2.pagelet_shingle</TT> </LI></OL>Computing the 
+join takes <EM>O(d<SUP>2</SUP> M log(d<SUP>2</SUP> M))</EM> time and space, 
+where <EM>d</EM> is the maximal number of template pagelets in a page. Note that 
+<EM>d</EM> is a fixed small number. The size of the outcome of step (3), 
+<TT>TEMPLATE_LINKS</TT>, is at most <EM>O(d<SUP>2</SUP> M)</EM>. 
+<P>In step (4) we assume that for every <EM>s</EM>, <EM>G<SUB>s</SUB></EM> is 
+small enough to store in main memory. This is a reasonable assumption, since 
+usually the size of a template is no more than a few thousands of pages. Thus 
+even if <EM>G<SUB>s</SUB></EM> consists of several templates, we can store the 
+few (tens) of thousands of records in main memory. This allows us to run a BFS 
+algorithm on <EM>G<SUB>s</SUB></EM>, which would have been prohibitive if 
+<EM>G<SUB>s</SUB></EM> was stored on disk. Thus, steps (4)-(5) take at most 
+<EM>O(d<SUP>2</SUP>M)</EM> steps and logarithmic space. 
+<P>All in all, the algorithm takes <EM>O(K logK + d<SUP>2</SUP>M)</EM> steps and 
+<EM>O(d<SUP>2</SUP>M)</EM> space. 
+<P><BR>
+<H3><A name=tth_sEc4>4</A>&nbsp;&nbsp;Three case studies revisited</H3><A 
+name=sec:applications></A>
+<P>We now revisit the three case studies from the point of view of incorporating 
+knowledge of pagelets and templates into them. We do this primarily to establish 
+that the modifications required of the original algorithms are simple, minimal 
+and natural. 
+<P><B>Case 1: HITS and Clever</B> &nbsp; Instead of using a graph consisting of 
+all links (or all non-nepotistic links), we construct a graph over two sets of 
+vertices. There is a vertex corresponding to each non-template pagelet in the 
+base set, and another corresponding to each page in the base set. Edges are 
+directed from vertices corresponding to pagelets to vertices corresponding to 
+pages in the natural way, i.e., if and only if the pagelet contains a link to 
+the page. Edges out of template pagelets are omitted entirely. The HITS/Clever 
+algorithms can now be run as is. Hubs will always be pagelets, and authorities 
+pages. 
+<P><B>Case 2: Focused Crawling</B> &nbsp; The focused crawler can use template 
+and pagelet information in two ways. 
+<OL type=1>
+  <LI>The distiller is modified exactly as described in the case of the HITS 
+  algorithm above. 
+  <LI>The second change concerns the crawler. Pages which are pointed to out of 
+  template pagelets can be assigned a reduced priority for crawling. </LI></OL>
+<P><B>Case 3: The co-citation algorithm</B> &nbsp; The co-citation algorithm can 
+exploit pagelet and template information in two ways. 
+<OL type=1>
+  <LI>Co-citation is counted only if it occurs within the same pagelet, not 
+  simply on the same page. Alternately, co-citation within a pagelet can be 
+  weighted more heavily than that within the same page. 
+  <LI>Citations from template pagelets are entirely ignored. </LI></OL>
+<P><BR>
+<H3><A name=tth_sEc5>5</A>&nbsp;&nbsp;Experimental Results</H3><A 
+name=sec:experiments></A>
+<P>In this section we demonstrate the benefit of template detection in improving 
+precision of search engine results, by presenting experimental results of 
+running the template/pagelet based implementation of Clever from Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:applications">4</A>. 
+<P>In the experiments we compare six versions of Clever. Two of the versions use 
+the classical ``page-based'' Clever, and the other four use the 
+``pagelet-based'' Clever of Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:applications">4</A>. 
+The versions differ in the cleaning steps performed on the base set of 
+pages/pagelets before starting to run the reinforcement hubs and authorities 
+algorithm on this base set. We consider two cleaning steps: (1) FNM—filtering 
+pages/pagelets that do not match the query term (i.e., the query term does not 
+occur in their text), and (2) FT—filtering template-pagelets. FNM is applicable 
+to both the page-based Clever and the pagelet-based Clever. FT is applicable 
+only to pagelet-based Clever. Note the inherent difference between these two 
+cleaning steps: FNM is query-dependent and can be performed only in query time, 
+while FT is query-independent and can thus be carried out as a pre-processing 
+step. The six Clever configurations are the following: 
+<OL type=1>
+  <LI><EM>Page vanilla</EM> 
+  <LI><EM>Page FNM</EM> 
+  <LI><EM>Pagelet vanilla</EM> 
+  <LI><EM>Pagelet FNM</EM> 
+  <LI><EM>Pagelet FT</EM> 
+  <LI><EM>Pagelet FT FNM</EM> </LI></OL>
+<P>For detecting the template pagelets, we use the local template detection 
+algorithm of Section <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#sec:template_algorithm">3.2</A>, 
+since the algorithm is given a fairly constrained collection of pages (the base 
+set of pages). 
+<P>Our main measure of concern for comparing these Clever versions is 
+<EM>precision</EM>—the fraction of search results returned that are indeed 
+directly relevant to the query. Since the main aim of template elimination is to 
+clean the hypertext data from ``noise'', the measure of precision seems the most 
+appropriate for testing the effectiveness of template elimination. 
+<P>In order to determine relevance of search results to the query term, we had 
+to employ human judgment. We scanned each of the results manually, and 
+classified them as ``relevant'' or ``non-relevant''. A page was deemed relevant 
+if it was a reasonable <EM>authority </EM>about the query term; pages that were 
+indirectly related to the query term were classified as non-relevant. 
+<P>We used the extended ARC suite of queries [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#ARC" name=CITEARC>10</A>] 
+to test the six Clever versions. The suite consists of the following 37 queries: 
+``affirmative action'', ``alcoholism'', ``amusement parks'', ``architecture'', 
+``bicycling'', ``blues'', ``cheese'', ``citrus groves'', ``classical guitar'', 
+``computer vision'', ``cruises'', ``Death Valley'', ``field hockey'' 
+``gardening'', ``graphic design'', ``Gulf war'', ``HIV'', ``Java'', ``Lipari'', 
+``lyme disease'', ``mutual funds'', ``National parks'', ``parallel 
+architecture'', ``Penelope Fitzgerald'', ``recycling cans'', ``rock climbing'', 
+``San Francisco'', ``Shakespeare'', ``stamp collecting'', ``sushi'', ``table 
+tennis'', ``telecommuting'', ``Thailand tourism'', ``vintage cars'', 
+``volcano'', ``zen buddhism'', and ``Zener''. 
+<P>In the experiments we ran each of the six Clever versions on the ARC set of 
+queries, and recorded the top 50 authorities found. We then manually tagged each 
+of the results as ``relevant'' or ``non-relevant''. We determined for each run 
+the ``precision@N'' for N = 10,20,30,40,50; that is, the fraction of the top N 
+results that were tagged as ``relevant''. 
+<P>The chart in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:avg_prec">6</A> 
+presents the average precision@N (N = 10,20,30,40,50) over the 37 ARC queries 
+for each of the six Clever versions. The results clearly indicate that template 
+elimination coupled with filtering non-matching pages/pagelets yields the most 
+accurate results. For example, it improves the precision of page vanilla and 
+page FNM at the top 10 from 81% and 85%, respectively, to 91%. The improvement 
+at the top 50 is even more dramatic: from 58% and 67%, respectively, to 74%. 
+<P>
+<P><A name=tth_fIg6></A>
+<CENTER><IMG alt=avg_prec.gif 
+src="Template&#32;Detection&#32;via&#32;Data&#32;Mining&#32;and&#32;its&#32;Applications_files/avg_prec.gif"> 
+</CENTER>
+<CENTER>
+<H6 class=caption>Figure 6: Average precision@N (N = 10,20,30,40,50) over the 37 
+ARC queries for each of the six Clever versions. The results clearly indicate 
+that template elimination coupled with filtering non-matching pages/pagelets 
+yields the most accurate results. For example, it improves the precision of page 
+vanilla and page FNM at the top 10 from 81% and 85%, respectively, to 91%. The 
+improvement at the top 50 is even more dramatic: from 58% and 67%, respectively, 
+to 74%. </H6></CENTER><A name=fig:avg_prec></A>
+<P>Reviewing the results manually reveals the reason for the improvements: 
+page-based Clever, especially when running on broad topic queries for which 
+there are many authoritative pages that reside within large commercial (and 
+often templatized) web-sites, tends to drift towards the densely connected 
+artificial communities created by templates (a phenomenon called in [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#LM00" 
+name=CITELM00>21</A>] the ``TKC Effect''). The filtering of non-matching pages 
+does not always circumvent this problem, because sometimes the query term itself 
+occurs in the template, and thus all the templatized pages contain the query 
+too, whether or not they are indeed relevant to the query. 
+<P>An anecdotal example of this phenomenon is illustrated by the results of Page 
+FNM Clever on the query ``Java''. Table <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#table:java">1</A> lists 
+those of the results that were classified as ``non-relevant''. Note that six out 
+of the 18 non-relevant results belonged to the ``ITtoolbox'' domain. The 
+ITtoolbox domain has many child sites that discuss various information 
+technology tools; one of them is <TT>java.ittoolbox.com</TT>, which was indeed 
+returned as result no. 22. However, each of the ITtoolbox sites (including the 
+Java one) share a template, which contains a navigational bar with links to all 
+the sister ITtoolbox sites. The high linkage between the ITtoolbox sites caused 
+Clever to experience a TKC Effect. Note that the filtering of non-matching pages 
+did not filter all the sister ITtoolbox sites from the base set, because all of 
+them contain the term ``Java'' (in the template navigational bar). The Pagelet 
+FT FNM Clever, on the other hand, detected the ITtoolbox template, eliminated it 
+from the base set, and therefore returned only <TT>java.ittoolbox.com</TT> as 
+one of the results. In total, Pagelet FT FNM Clever had a precision of 74% at 
+the top 50 for the query ``Java'', compared to only 64% of Page FNM Clever. 
+<P>
+<P>
+<CENTER><A name=tth_tAb1></A>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD># </TD>
+    <TD>Title </TD>
+    <TD>URL </TD></TR>
+  <TR>
+    <TD>27. </TD>
+    <TD>Sun Microsystems </TD>
+    <TD><TT>www.sun.com</TT> </TD></TR>
+  <TR>
+    <TD>29. </TD>
+    <TD>HTML Goodies Home Page </TD>
+    <TD><TT>www.htmlgoodies.com</TT> </TD></TR>
+  <TR>
+    <TD>30. </TD>
+    <TD>Linux Enterprise Ausgabe 11 2001 November </TD>
+    <TD><TT>www.linuxenterprise.de/ </TT></TD></TR>
+  <TR>
+    <TD>31. </TD>
+    <TD>DevX Marketplace </TD>
+    <TD><TT>marketplace.devx.com</TT> </TD></TR>
+  <TR>
+    <TD>32. </TD>
+    <TD>Der Entwickler Ausgabe 6 2001 November Dezember </TD>
+    <TD><TT>www.derentwickler.de/ </TT></TD></TR>
+  <TR>
+    <TD>33. </TD>
+    <TD><B>ITtoolbox Knowledge Management</B> </TD>
+    <TD><TT>knowledgemanagement.ittoolbox.com</TT> </TD></TR>
+  <TR>
+    <TD>34. </TD>
+    <TD>EarthWeb com The IT Industry Portal </TD>
+    <TD><TT>www.developer.com</TT> </TD></TR>
+  <TR>
+    <TD>35. </TD>
+    <TD>entwickler com </TD>
+    <TD><TT>www.entwickler.com</TT> </TD></TR>
+  <TR>
+    <TD>36. </TD>
+    <TD><B>ITtoolbox EAI</B> </TD>
+    <TD><TT>eai.ittoolbox.com</TT> </TD></TR>
+  <TR>
+    <TD>38. </TD>
+    <TD></TD>
+    <TD><TT>www.xml-magazin.de/</TT> </TD></TR>
+  <TR>
+    <TD>39. </TD>
+    <TD>DevX </TD>
+    <TD><TT>www.devx.com</TT> </TD></TR>
+  <TR>
+    <TD>41. </TD>
+    <TD>The Hot Meter </TD>
+    <TD><TT>www.thehotmeter.com</TT> </TD></TR>
+  <TR>
+    <TD>43. </TD>
+    <TD>HTML Clinic </TD>
+    <TD><TT>www.htmlclinic.com</TT> </TD></TR>
+  <TR>
+    <TD>45. </TD>
+    <TD><B>ITtoolbox Networking</B> </TD>
+    <TD><TT>networking.ittoolbox.com</TT> </TD></TR>
+  <TR>
+    <TD>46. </TD>
+    <TD>FontFILE fonts... </TD>
+    <TD><TT>www.fontfile.com</TT> </TD></TR>
+  <TR>
+    <TD>47. </TD>
+    <TD><B>ITtoolbox Data Warehousing</B> </TD>
+    <TD><TT>datawarehouse.ittoolbox.com</TT> </TD></TR>
+  <TR>
+    <TD>49. </TD>
+    <TD><B>ITtoolbox Portal for Oracle</B> </TD>
+    <TD><TT>oracle.ittoolbox.com</TT> </TD></TR>
+  <TR>
+    <TD>50. </TD>
+    <TD><B>ITtoolbox Home</B> </TD>
+    <TD><TT>www.ittoolbox.com</TT> </TD></TR></TBODY></TABLE></CENTER>
+<P>
+<CENTER>
+<H6 class=caption>Table 1: Non-authoritative results output by Page FNM Clever 
+for ``Java''. Note that the results include six non-relevant pages from the 
+Information Technology site ITtoolbox. All of them belong to a template of the 
+site.</H6></CENTER><A name=table:java></A>
+<P>The chart of Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:avg_prec">6</A> also 
+indicates, however, that template elimination alone is not sufficient. In fact, 
+the pagelet-based Clever with template elimination but without filtering of 
+non-matching pagelets is doing worse than the classical page-based Clever. 
+Pagelet-based Clever with no cleaning steps is doing the worst of all. These 
+results are not surprising and they were noted before in [<A 
+href="http://www2002.org/CDROM/refereed/579/index.html#C01" name=CITEC01>6</A>]. 
+Templates are just one source of noise in hyperlinked environments; frequently, 
+many non-template pagelets in the base set are not relevant to the query. When 
+such pagelets are not filtered from the base set, they magnify the ratio of 
+noise to data significantly (because now each non-relevant page contributes many 
+non-relevant pagelets to the base set), thereby causing the Clever algorithm to 
+diverge. However, when most of the non-relevant pagelets are filtered from the 
+base set, pagelet-based Clever is superior to page-based Clever, as demonstrated 
+by the fact that the precision of the Pagelet FNM Clever (i.e., no template 
+elimination) was better than that of Page FNM Clever. 
+<P>The chart in Figure <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#fig:avg_overlap">7</A> 
+shows the average relative overlap of the Clever results with the top 50 results 
+of Google [<A href="http://www2002.org/CDROM/refereed/579/index.html#GOOGLE" 
+name=CITEGOOGLE>17</A>], over the 37 ARC set queries. Here, we use Google as a 
+benchmark, and seek at maximizing the overlap with its results. A large overlap 
+indicates both high precision and high recall. The results presented in this 
+chart are consistent with the precision results presented before: template 
+elimination coupled with filtering non-matching pagelets yields the most 
+accurate and qualitative results, but avoiding the filtering of non-matching 
+pagelets is worse than using the page-based Clever. 
+<P>
+<CENTER>
+<P><A name=tth_fIg7></A>
+<CENTER><IMG alt=avg_overlap.gif 
+src="Template&#32;Detection&#32;via&#32;Data&#32;Mining&#32;and&#32;its&#32;Applications_files/avg_overlap.gif"> 
+</CENTER>
+<CENTER>
+<H6 class=caption>Figure 7: Average relative overlap of the results of each of 
+the six Clever versions with the top 50 results of Google, over the 37 ARC set 
+queries. Here, we use Google as a benchmark, and seek at maximize the overlap 
+with its results. A large overlap indicates both high precision and high recall. 
+The results indicate again that template elimination coupled with filtering 
+non-matching pagelets yields the most accurate and qualitative results, but 
+avoiding the filtering of non-matching pagelets is worse than using the 
+page-based Clever.</H6></CENTER><A name=fig:avg_overlap></A>
+<P></CENTER>
+<P><B>Template Frequency</B>&nbsp; In order to measure how common templates are, 
+we checked what fraction of pages in the base set of each query contained 
+template pagelets. The results presented in Table <A 
+href="http://www2002.org/CDROM/refereed/579/index.html#table:template_percentage">2</A> 
+demonstrate how common and fundamental this phenomenon has become. An 
+interesting aspect of these results is that they give an indication for each 
+given query how pervasive and commercialized its presence on the web is. 
+<P>
+<CENTER>
+<P><A name=tth_tAb2></A>
+<CENTER>
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TD>Query </TD>
+    <TD align=middle>Fraction of Template Pages</TD></TR>
+  <TR>
+    <TD>affirmative action </TD>
+    <TD align=middle>45% </TD></TR>
+  <TR>
+    <TD>alcoholism </TD>
+    <TD align=middle>42% </TD></TR>
+  <TR>
+    <TD>amusement parks </TD>
+    <TD align=middle>43% </TD></TR>
+  <TR>
+    <TD>architecture </TD>
+    <TD align=middle><B>68%</B> </TD></TR>
+  <TR>
+    <TD>bicycling </TD>
+    <TD align=middle>49% </TD></TR>
+  <TR>
+    <TD>blues </TD>
+    <TD align=middle>25% </TD></TR>
+  <TR>
+    <TD>cheese </TD>
+    <TD align=middle>39% </TD></TR>
+  <TR>
+    <TD>citrus groves </TD>
+    <TD align=middle>32% </TD></TR>
+  <TR>
+    <TD>classical guitar </TD>
+    <TD align=middle>38% </TD></TR>
+  <TR>
+    <TD>computer vision </TD>
+    <TD align=middle>32% </TD></TR>
+  <TR>
+    <TD>cruises </TD>
+    <TD align=middle>46% </TD></TR>
+  <TR>
+    <TD>Death Valley </TD>
+    <TD align=middle>51% </TD></TR>
+  <TR>
+    <TD>field hockey </TD>
+    <TD align=middle>54% </TD></TR>
+  <TR>
+    <TD>gardening </TD>
+    <TD align=middle>56% </TD></TR>
+  <TR>
+    <TD>graphic design </TD>
+    <TD align=middle>28% </TD></TR>
+  <TR>
+    <TD>Gulf war </TD>
+    <TD align=middle>40% </TD></TR>
+  <TR>
+    <TD>HIV </TD>
+    <TD align=middle>43% </TD></TR>
+  <TR>
+    <TD>Java </TD>
+    <TD align=middle><B>62%</B> </TD></TR>
+  <TR>
+    <TD>Lipari </TD>
+    <TD align=middle>53% </TD></TR>
+  <TR>
+    <TD>lyme disease </TD>
+    <TD align=middle>32% </TD></TR>
+  <TR>
+    <TD>mutual funds </TD>
+    <TD align=middle><B>67%</B> </TD></TR>
+  <TR>
+    <TD>National parks </TD>
+    <TD align=middle>33% </TD></TR>
+  <TR>
+    <TD>parallel architecture </TD>
+    <TD align=middle>21% </TD></TR>
+  <TR>
+    <TD>Penelope Fitzgerald </TD>
+    <TD align=middle><B>68%</B> </TD></TR>
+  <TR>
+    <TD>recycling cans </TD>
+    <TD align=middle><B>64%</B> </TD></TR>
+  <TR>
+    <TD>rock climbing </TD>
+    <TD align=middle>40% </TD></TR>
+  <TR>
+    <TD>San Francisco </TD>
+    <TD align=middle><B>64%</B> </TD></TR>
+  <TR>
+    <TD>Shakespeare </TD>
+    <TD align=middle>39% </TD></TR>
+  <TR>
+    <TD>stamp collecting </TD>
+    <TD align=middle>41% </TD></TR>
+  <TR>
+    <TD>sushi </TD>
+    <TD align=middle>43% </TD></TR>
+  <TR>
+    <TD>table tennis </TD>
+    <TD align=middle>44% </TD></TR>
+  <TR>
+    <TD>telecommuting </TD>
+    <TD align=middle>39% </TD></TR>
+  <TR>
+    <TD>Thailand tourism </TD>
+    <TD align=middle>37% </TD></TR>
+  <TR>
+    <TD>vintage cars </TD>
+    <TD align=middle>22% </TD></TR>
+  <TR>
+    <TD>volcano </TD>
+    <TD align=middle>48% </TD></TR>
+  <TR>
+    <TD>zen buddhism </TD>
+    <TD align=middle>44% </TD></TR>
+  <TR>
+    <TD>Zener </TD>
+    <TD align=middle>13% </TD></TR>
+  <TR>
+    <TD>Average </TD>
+    <TD align=middle>43% </TD></TR></TBODY></TABLE>
+<P>
+<CENTER>
+<H6 class=caption>Table 2: Fraction of base set pages that contain template 
+pagelets. The results (an average of 43% of the pages contain templates) 
+indicate how pervasive the template phenomenon has become.</H6></CENTER><A 
+name=table:template_percentage></A></CENTER>
+<P><BR></CENTER>
+<H3><A name=tth_sEc6>6</A>&nbsp;&nbsp;Conclusions</H3>
+<P>In this paper we discussed the problem of detecting templates in large 
+hypertext corpora, such as the web. We identified three basic principles, the 
+Hypertext IR Principles, that underly most hypertext information retrieval and 
+data mining systems, and argued that templates violate all three of them. We 
+showed experimentally that templates are a pervasive phenomenon on the web, thus 
+posing a significant obstacle to IR and DM systems. We proposed a new approach 
+for dealing with violations of the Hypertext IR Principles, in which the 
+hypertext cleaning steps required to eliminate these violations are delegated 
+from the data analysis systems, where they were handled traditionally, to the 
+data gathering systems. We presented two algorithms for detecting templates: an 
+algorithm that fits small document sets and an algorithm that fits large 
+document sets. Both algorithms are highly efficient in terms of time and space, 
+and thus can be run by a data gathering system on large collections of hypertext 
+documents stored locally. We demonstrated the benefit of template elimination, 
+by showing experimentally that it improves the precision of the search engine 
+Clever at all levels of recall. 
+<P>There are a number of open questions to be addressed in future work: 
+<OL type=1>
+  <LI>Show that the techniques proposed in this paper, and other techniques 
+  based on the Hypertext IR Principles improve the results of other common IR 
+  tasks, such as clustering, classification and focused crawling. 
+  <LI>Find other general methods to perform data cleaning in hypertext corpora. 
+  <LI>Find more detailed linguistic or statistical <EM>query-independent</EM> 
+  methods for identifying and enumerating pagelets. We are currently using very 
+  naive heuristic methods. 
+  <LI>Find other uses of templates. A few examples may be: facilitating spoken 
+  interfaces for the web, and compressing web pages for PDA and cell phone 
+  browsers. 
+  <LI>Can templates be an indicator of authority or commercialization of web 
+  pages? </LI></OL>
+<P><BR>
+<H3><A name=tth_sEc7>7</A>&nbsp;&nbsp;Acknowledgments</H3>
+<P>We would like to thank Inbal Bar-Yossef for her invaluable assistance with 
+running the experiments and evaluating their results. We thank Ravi Kumar and 
+the anonymous referees for useful comments. 
+<P><BR>
+<H3>References</H3>
+<DL compact>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEAS94" 
+  name=AS94>[1]</A>
+  <DD>R.&nbsp;Agrawal and R.&nbsp;Srikant. Fast Algorithms for Mining 
+  Association Rules in Large Databases. In <EM>Proceedings of the Twentieth 
+  International Conference on Very Large Databases</EM>, pages 487-499, 
+  Santiago, Chile, 1994. 
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEBH98" 
+  name=BH98>[2]</A>
+  <DD>K.&nbsp;Bharat and M.&nbsp;Henzinger. Improved algorithms for topic 
+  distillation in a hyperlinked environment. In <EM>Proceedings of the 21st 
+  Annual International ACM SIGIR Conference on Research and Development in 
+  Information Retrieval</EM>, pages 104-111, 1998. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEBP98" 
+  name=BP98>[3]</A>
+  <DD>S.&nbsp;Brin and L.&nbsp;Page. The anatomy of a large-scale hypertextual 
+  web search engine. In <EM>Proceedings of the 7th International World Wide Web 
+  Conference (WWW7)</EM>, pages 107-117, 1998. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEBGM97" 
+  name=BGM97>[4]</A>
+  <DD>A.&nbsp;Z. Broder, S.&nbsp;C. Glassman, and M.&nbsp;S. Manasse. Syntactic 
+  clustering of the web. In <EM>Proceedings of the 6th International World Wide 
+  Web Conference (WWW6)</EM>, pages 1157-1166, 1997. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEB45" 
+  name=B45>[5]</A>
+  <DD>V.&nbsp;Bush. As we may think. <EM>The Atlantic Monthly</EM>, 
+  176(1):101-108, July 1945. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEC01" 
+  name=C01>[6]</A>
+  <DD>S.&nbsp;Chakrabarti. Integrating the document object model with hyperlinks 
+  for enhanced topic distillation and information extraction. In <EM>Proceedings 
+  of the 10th International World Wide Web Conference (WWW2001)</EM>, pages 
+  211-220, 2001. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECDG98" 
+  name=CDG98>[7]</A>
+  <DD>S.&nbsp;Chakrabarti, B.&nbsp;Dom, D.&nbsp;Gibson, J.&nbsp;Kleinberg, 
+  P.&nbsp;Raghavan, and S.&nbsp;Rajagopalan. Automatic resource list compilation 
+  by analyzing hyperlink structure and associated text. In <EM>Proceedings of 
+  the 7th International World Wide Web Conference (WWW7)</EM>, pages 65-74, 
+  1998. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECLEVER2" 
+  name=CLEVER2>[8]</A>
+  <DD>S.&nbsp;Chakrabarti, B.&nbsp;Dom, D.&nbsp;Gibson, R.&nbsp;Kumar, 
+  P.&nbsp;Raghavan, S.&nbsp;Rajagopalan, and A.&nbsp;Tomkins. Topic distillation 
+  and spectral filtering. <EM>Artificial Intelligence Review</EM>, 
+  13(5-6):409-435, 1999. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECDI98" 
+  name=CDI98>[9]</A>
+  <DD>S.&nbsp;Chakrabarti, B.&nbsp;Dom, and P.&nbsp;Indyk. Enhanced hypertext 
+  categorization using hyperlinks. In <EM>SIGMOD 1998, Proceedings ACM SIGMOD 
+  International Conference on Management of Data</EM>, pages 307-318, 1998. 
+  <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEARC" 
+  name=ARC>[10]</A>
+  <DD>S.&nbsp;Chakrabarti, B.&nbsp;Dom, P.&nbsp;Raghavan, S.&nbsp;Rajagopalan, 
+  D.&nbsp;Gibson, and J.&nbsp;Kleinberg. Automatic resource compilation by 
+  analyzing hyperlink structure and associated text. In <EM>Proceedings of the 
+  7th International World Wide Web Conference (WWW7)</EM>, pages 65-74, 1998. 
+  <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECJT01" 
+  name=CJT01>[11]</A>
+  <DD>S.&nbsp;Chakrabarti, M.&nbsp;Joshi, and V.&nbsp;Tawde. Enhanced topic 
+  distillation using text, markup tags, and hyperlinks. In <EM>Proceedings of 
+  the 24th Annual International ACM SIGIR Conference on Research and Development 
+  in Information Retrieval</EM>, 2001. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECBD99a" 
+  name=CBD99a>[12]</A>
+  <DD>S.&nbsp;Chakrabarti, M.&nbsp;van&nbsp;den Berg, and B.&nbsp;Dom. 
+  Distributed hypertext resource discovery through examples. In <EM>Proceedings 
+  of the 25th International Conference on Very Large Databases (VLDB)</EM>, 
+  pages 375-386, 1999. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITECBD99b" 
+  name=CBD99b>[13]</A>
+  <DD>S.&nbsp;Chakrabarti, M.&nbsp;van&nbsp;den Berg, and B.&nbsp;Dom. Focused 
+  crawling: A new approach to topic-specific web resource discovery. In 
+  <EM>Proceedings of the 8th International World Wide Web Conference 
+  (WWW8)</EM>, pages 1623-1640, 1999. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITED00" 
+  name=D00>[14]</A>
+  <DD>B.&nbsp;D. Davison. Recognizing nepotistic links on the web. In 
+  <EM>Proceedings of the AAAI-2000 Workshop on Artificial Intelligence for Web 
+  Search</EM>, pages 23-28, 2000. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEDH99" 
+  name=DH99>[15]</A>
+  <DD>J.&nbsp;Dean and M.&nbsp;Henzinger. Finding related pages in the world 
+  wide web. In <EM>Proceedings of the 8th International World Wide Web 
+  Conference (WWW8)</EM>, pages 1467-1479, 1999. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEGar72" 
+  name=Gar72>[16]</A>
+  <DD>E.&nbsp;Garfield. ``Citation Analysis as a Tool in Journal Evaluation''. 
+  <EM>Science</EM>, 178:471-479, 1972. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEGOOGLE" 
+  name=GOOGLE>[17]</A>
+  <DD>Google. Google. <TT>http://www.google.com</TT>. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEK63" 
+  name=K63>[18]</A>
+  <DD>M.&nbsp;Kessler. Bibliographic coupling between scientific papers. 
+  <EM>American Documentation</EM>, 14:10-25, 1963. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEK99" 
+  name=K99>[19]</A>
+  <DD>J.&nbsp;Kleinberg. Authoritative sources in a hyperlinked environment. 
+  <EM>Journal of the ACM</EM>, pages 604-632, 1999. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEKRRT99" 
+  name=KRRT99>[20]</A>
+  <DD>R.&nbsp;Kumar, P.&nbsp;Raghavan, S.&nbsp;Rajagopalan, and A.&nbsp;Tomkins. 
+  Trawling the Web for emerging cyber-communities. In <EM>Proceedings of the 8th 
+  International World Wide Web Conference (WWW8)</EM>, pages 1481-1493, 1999. 
+  <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITELM00" 
+  name=LM00>[21]</A>
+  <DD>R.&nbsp;Lempel and S.&nbsp;Moran. The stochastic approach for 
+  link-structure analysis (SALSA) and the TKC effect. <EM>Computer Networks 
+  (Amsterdam, Netherlands: 1999)</EM>, 33(1-6):387-401, June 2000. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEMBK91" 
+  name=MBK91>[22]</A>
+  <DD>Y.&nbsp;Maarek, D.&nbsp;Berry, and G.&nbsp;Kaiser. An information 
+  retrieval approach for automatically constructing software libraries. 
+  <EM>Transactions on Software Engineering</EM>, 17(8):800-813, 1991. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEPBMW98" 
+  name=PBMW98>[23]</A>
+  <DD>L.&nbsp;Page, S.&nbsp;Brin, R.&nbsp;Motwani, and T.&nbsp;Winograd. The 
+  PageRank citation ranking: Bringing order to the web. Technical report, 
+  Computer Science Department, Stanford University, 1998. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEPN76" 
+  name=PN76>[24]</A>
+  <DD>G.&nbsp;Pinski and F.&nbsp;Narin. Citation influence for journal 
+  aggregates of scientific publications: Theory, with application to the 
+  literature of physics. <EM>Inf. Proc. and Management</EM>, 12, 1976. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITEPPR96" 
+  name=PPR96>[25]</A>
+  <DD>P.&nbsp;Pirolli, J.&nbsp;E. Pitkow, and R.&nbsp;Rao. Silk from a sow's 
+  ear: Extracting usable structures from the Web. In <EM>Conference Proceedings 
+  on Human Factors and Computing (CHI)</EM>, pages 118-125, 1996. <BR><BR>
+  <DT><A href="http://www2002.org/CDROM/refereed/579/index.html#CITES73" 
+  name=S73>[26]</A>
+  <DD>H.&nbsp;Small. Co-citation in the scientific literature: A new measure of 
+  the relationship between two documents. <EM>Journal of the American Society 
+  for Information Science</EM>, 24:265-269, 1973. </DD></DL></BODY></HTML>

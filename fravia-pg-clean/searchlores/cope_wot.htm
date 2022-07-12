@@ -1,0 +1,1460 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ cope_wot.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr>
+  <td><center><font size=+3>~ Essays ~</font>
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm" target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm" target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+    
+     <td>&nbsp;&nbsp;&nbsp;</td>
+  
+  <td> <center><font size=+3>~ Malwares ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm" target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to malwa"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  malwares</th>
+  </tR></table></center></td>
+    
+  </tr></table>
+  
+  (Courtesy of fravia's <a href="advanced.htm" target="_blank">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Reversing to Enhance and Expand&nbsp;¸.·´¯)</font>
+  <br>
+  <FONT SIZE=+2>754 engines into the pot</font>
+  <br>
+  <br>
+  <font size=+2>by WayOutThere</FONT>
+  <BR>
+  (very slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org" target="_blank">searchlores</a> in 
+  April 2001
+  <br>
+  <hr width=44%><i>
+	This is a fascinating essay. It can be read like a good book, with suspence, 
+	thrill, and of course  
+	a good heroic protagonist to identify with: 'the opensourcer' 
+	(in this case ~S~ WayOutThere). As you will be able to see the Author is a 
+	capable reverser, and as you will be able to constate, being able to reverse software is nowadays a
+	 real <u>sine qua non</u> in order to survive unscathered on the web. But reading the 
+	following is 
+	at the same time VERY instructive from a methodological point of view. WayOutThere's approaches, the whole 'cut'
+	 of 
+	 his investgation, described in this essay 
+	 with great clarity, will help (quite a lot) 
+	all readers during their own future dealing with malwares, and today this means, I'm afraid,
+	almost ANY software that 
+	connects to the web: this is -alas- the dime world of 
+	today's web, full of evil malwares that 
+	feast  on the unawares' data like dark birds of prey. Luckily we have searcher that
+	 that find, and reverse, 
+	and teach. Learn & enjoy!<br><hr>
+  </i>
+</center>
+<H2>Preparation</H2>
+<P></P>
+<H3>Target</H3>
+<P>
+Copernic 2001 Pro (Version 5.0)<BR>
+Light Version from: http://wwww.copernic.com/<BR>
+[Use it to find its bigger brother ;)]<BR>
+</P>
+<H3>Tools</H3>
+<P>
+<PRE>
+W32Dasm 8.93 - Recommended
+HexWorkshop  - Essential Tool
+Filemon      - Essential Tool
+C Compiler   - Language for Tool Writing
+</PRE>
+</P>
+<H2>Introduction</H2>
+<P>
+I have been on a quest to find the query URL's and structure of queries as part
+of my quest for data for my local search bot. After my last essay was finished
+and the targets data has been extracted. With a fresh set of data in my hands, 
+I sat down and started writing a converter to put the data into a common file format.<BR>
+This was where this essay begins, I had decided on a basic subset of the data
+to use, but thought I should check it against other sources (in other bots),
+first on the pile was webferret, a search-bot about which 
+Laurent has written and essay that you will find 
+<a href="wf_add.htm" target="_blank">here</A>.<BR>
+As is my usual trend I did not let the software within wire distance of the
+internet, so did not get the updates and the dataset provided as standard is
+pretty poor - so threw it in the bin.<BR><BR>
+Laurent had mentioned to me that I might find copernic interesting. Umm<BR>
+<BR>
+Could this be a good target, I had heard of it, but had until recently steered
+clear of all these search-bot programs. This was because I know you do not get anything
+for nothing, and the thing that makes them money is knowing your searches, and
+being able to make you sit through advert after advert after advert...<BR>
+<BR>
+So off to the web, do a search for copernic and read some reviews. Seems like 
+another of these local search bots, where the main advantage is it knowing how 
+to talk to the search engines and co-ordinate the replies and present them to 
+the user in a nice simple way. This sounded interesting and it seemed to support 
+a large number of search engines but no specific numbers were given. I went to
+some lengths to avoid visiting any of the copernic sites, for reasons, which will
+become apparent later.<BR>
+<BR>
+So the target was picked, next step was to go find it on the web.<BR>
+</P>
+<H2>First Steps</H2>
+<p>
+So off to the web and Grabbed the Pro version, did not even go near their
+site, so if they are busy checking logs you will not find me ;)<BR>
+The Pro version came with a key - nice!<BR>
+Out came the clean PC. This machine was not connected to any network or the internet, 
+after all we did not want any uncontrolled data to go out ;). Filemon was started 
+and left running and then copernic was installed on the pc. After the installation 
+the program was not run, and the installation process finished. The filemon log 
+of installation was then saved for later reference. So now to clear the Filemon log 
+and leave it running, to log files accessed by program.<BR>
+<BR>
+Next step is to run the program and  set it to point to the local proxy. Right - first 
+thing it does it ask you some registration details, when all data has been entered and 
+proxy set up it
+tries to connect to get an update. [This is very optimistic of the company - that
+all people who install and run it first time will be connected to the internet]<BR>
+Right, so look at logs on proxy and there are a number of requests to "updates.copernic.com"<BR>
+<BR>
+Now lets try a search, for 'searchlores' . At this point I know it is not going to get 
+any results, as the proxy does not connect to the internet, just returns 404 for every 
+request, as though routing was broken. So did the search. Look at proxy logs and in 
+amongst the requests for search engine pages, there is one that stands out to 
+"regcards.copernic.com".<BR>
+<BR>
+Now follows an explanation of these requests, as they are quite interesting. They go 
+to the copernic.com domain so they must contain some user data or be used to track 
+users of this program in some way.
+<BR>
+</P>
+<H4>Update Requests</H4>
+<P>
+Firstly lets look at the update requests:HEAD http://updates.copernic.com/copernic2001upd/copernic2001plus.cui HTTP/1.1<BR>
+This is the request sent:
+<PRE>
+HEAD http://updates.copernic.com/copernic2001upd/copernic2001plus.cui HTTP/1.1
+Host: updates.copernic.com
+Accept: */*
+Connection: close
+User-Agent: Copernic
+Pragma: no-cache
+</PRE>
+Second it does a : GET http://updates.copernic.com/copernic2001upd/copernic2001plus.cui HTTP/1.1<BR>
+This is the request sent:
+<PRE>
+GET http://updates.copernic.com/copernic2001upd/copernic2001plus.cui HTTP/1.1
+Host: updates.copernic.com
+Accept: */*
+Connection: close
+User-Agent: Copernic
+Pragma: no-cache
+</PRE>
+Why do a HEAD, if when it fails you go on to do the GET anyway, why not simply do a GET,
+this seems very pointless ;)<BR>
+This is trying to download the '.cui' file, which is probably an update configuration file, 
+am not sure as I never let it go to their site.<BR>
+<BR>
+If these fail is then seems to do: GET http://www.copernic.com/cgi-bin/nph-osnvs2.pl HTTP/1.1<BR>
+This is the request sent:
+<PRE>
+GET http://www.copernic.com/cgi-bin/nph-osnvs2.pl?ns=##########################&iu=%7B********-****-****-****-************%7D&lo=http://updates.copernic.com/copernic2001upd/copernic2001plus.cui&cl=0 
+HTTP/1.1
+Host: www.copernic.com
+Accept: */*
+Connection: close
+User-Agent: Copernic
+Pragma: no-cache
+</PRE>
+The field marked with '*'s will be explained in the next request as it is a common parameter 
+which is passed in both requests. The field marked with '#'s also seems to be a 
+number of some form to be sent to their server.<BR>
+This seems to be a request which logs the user request and an identifying number and then 
+redirects to "updates.copernic.com" for the actual download.<BR>
+</P>
+<H4>Registration Request</H4>
+<P>
+Now lets look at the regcard information: POST http://regcards.copernic.com/cgi-bin/regcard HTTP/1.1<BR><BR>
+This is the request sent:
+<PRE>
+POST http://regcards.copernic.com/cgi-bin/regcard HTTP/1.1
+Host: regcards.copernic.com
+Accept: */*
+Connection: close
+User-Agent: Copernic
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 129
+%5Ejohndoe%40mort.somewhere%5EUnited%20States%5E12345%5E0%5E0%5EENGPRO%5E5001%5E%********-****-****-****-************%7D%5EFrom%20web%20site%5E%5E0%5EJohn%20Doe
+</PRE>
+Plain text of last line: ^johndoe@mort.somewhere^United States^12345^0^0^EENGPRO^5001^{********-****-****-****-************}^From the web site^^0^John Doe<BR>
+<BR>
+This breaks down as the following:<BR>
+<TABLE>
+<TR><TD>Value</TD>
+<TD>Description</TD></TR>
+<TR><TD>johndoe@mort.somewhere</TD>
+<TD>Email Address</TD></TR>
+<TR><TD>United States</TD>
+<TD>Country</TD></TR>
+<TR><TD>12345</TD>
+<TD>Zip Code</TD></TR>
+<TR><TD>0</TD>
+<TD>Unknown</TD></TR>
+<TR><TD>0</TD>
+<TD>Unknown</TD></TR>
+<TR><TD>ENGRPRO</TD>
+<TD>Version of Software</TD></TR>
+<TR><TD>5001</TD>
+<TD>Registration Card Version</TD></TR>
+<TR><TD>{********-****-****-****-************}</TD>
+<TD>GUID</TD></TR>
+<TR><TD>from web site</TD>
+<TD>Referrer for Product</TD></TR>
+<TR><TD></TD>
+<TD>Unknown</TD></TR>
+<TR><TD>0</TD>
+<TD>Unknown</TD></TR>
+<TR><TD>John Doe</TD>
+<TD>Username</TD></TR>
+</TABLE>
+<BR>
+The Email, Country, Zipcode and Username are taken from the registration information. The language ENGPRO 
+is their descriptor for English Professional version, it denotes version and also language that 
+the user is using it in.
+I checked the registry settings for the software and found some interesting entries. The number
+marked above as 'GUID' is stored in the registry as GUID in 'HKEY_CURRENT_USER\Software\Copernic Technologies\Copernic4Plus\System\GUID' - this value does not appear to be anywhere else in
+the registry under a different name, so do not think it is a copy of the machine GUID, but
+may be a mangled version, or it might be their GUID for the software version. I say this because 
+the users details are already transmitted, so why not their machine ID - it would make tracking 
+them easier. [ After all these are people who have a tab devoted to search tracking in the
+options ]<BR>
+Interestingly the last regcard version key in the registry gives '5000', which is less than
+the '5001' given in the request for the version, this may be why it is trying to send
+a regcard every time - it might carry on till a successful request which updates the registry
+to 5001. This is interesting that even though serial was correct and valid it phoned home.<BR>
+<BR>
+NOTE: It tends to do a regcard request every time I try and do a query, maybee this
+is because it has never got a successful response, but either way I did tick the boxes
+saying do not notify me of other things and not to check for updates.<BR>
+<BR>
+Umm, so it is trying to send our registration information, without even asking us
+- that is not very nice is it.
+and it is trying to download an update program file to update itself, without asking
+and given that I have just downloaded the latest version a bit irrelevant also.<BR>
+These of course did not get to their server, only as far as the local proxy.<BR>
+<BR>
+Back to the program, I was pleasantly surprised by the interface,
+and by the list of categories and engines listed. I thought this looks like a lot
+of data - NICE!!<BR><BR>
+
+The URL's present in the program are:
+<PRE>
+"http://regcards.copernic.com/cgi-bin/regcard"
+"http://updates.copernic.com/copernic2001upd/"
+"http://www.copernic.com/cgi-bin/nph-osnvs2.pl"
+"www.copernic.com"
+</PRE>
+The first ones can be nullified by writing "http://127.0.0.1/" at the start of 
+the strings. This then will prevent all accesses to their servers. This is a good 
+alternative to the hosts file, as the program seems to bypass the hosts if using 
+a proxy and just sends the requests straight to the proxy.<BR>
+</P>
+<H2>Investigations</H2>
+<P>
+So next step is to close the program, save the filemon log and have a look around my system.
+I had a browse through the install filemon log file and made a note of the location of files
+added to my system. The first thing that hit me was a load of '.csf' files which had
+the names of search engines, and a list of '.ssf' files which seemed to represent
+categories.<BR><BR>
+The next thing is to look at the run filemon log, it seems to read the .ssf and .csf files
+and then create a set of files, under the directory 'data' which seems to be a user profile
+with the users name as the folder name. Ummm, so some kind of translation or copying going
+on, but a lot fewer files get written than read.<BR>
+<BR>
+So to open up the main executable in our favourite hex viewer and have a quick browse, but 
+first to extract all the strings from the file. Had a browse through the strings and it 
+looks like it was coded in DELPHI. This was just a hunch and I remembered having a copy of 
+DFM-Explorer around , so tried it on the file and sure enough out came all the resources, 
+so it is for sure delphi. so the task is now to find a delphi decompiler. My thinking here 
+was that even though it might not be needed, if it is then it might make the program code 
+a bit easier to understand. Also better to check this option to start with rather than 
+later. As a teacher once told me "Always get all your tools ready before starting any task!"<BR>
+</P>
+<H2>The Catch</H2>
+<P>
+The catch is : this is a delphi application, warning bloatware imminent. I had thought that
+the executable was a bit on the large side for something so seemingly simple, and this explained
+it. No extra DLL's or files, so the delphi libs must be statically linked. I remember when 
+applications used to fit on a floppy, now the icon files will not ;(.<BR><BR>
+First step is to grab ye ole webbrowser and search for a delphi decompiler (I must admit shame
+and say I had never used one before). Right the one that pops up the most in the list when
+ranked is 'DeDe' by DaFixer!. Ok so lets grab it and let it rip.<BR>
+A few sips of my drink later and it has finished downloading, so lets run it and see what
+it comes up with. DeDe recognises the file and does its stuff, and yes it is delphi because
+I now have the forms and pascal code nicely disassembled on my HD. So a quick browse through
+them to get an idea of the structure. umm<BR>
+I noticed that DeDe also supports exporting all its references to a W32dasm project. Since
+one of the steps I was going to do was to disassemble the file, I ran Wdasm and generated 
+a project file, then pointed DeDe to it and let it do its stuff. Hopefully when it finishes
+it will leave a nice big file with the combined references, so that should make life easier 
+later on. Being able to see the references to the Pascal and Delphi bits should make the code 
+a bit easier to follow.<BR>
+<BR>
+While that was running (it takes some time) my next step was to search all the .pas files 
+for references to 'ssf' and 'csf' to find where it loaded the data files, I did not find 
+any references of these strings in any of the .pas files. Ok time to load up the W32Dasm 
+project and have a look in that file. OK PROBLEM! - the project is still being accessed
+during the combining of references, so that option is out for an hour or so, as it seems
+to take quite some time (35Mb File to process).<BR>
+<BR>
+So lets have a look around, there are some DLL's in the directory, so lets check them out:<BR>
+c4dll.dll is Database Engine Library (Sequiter CodeBase Components for Delphi)<BR>
+xcdunz32.dll is a Zip Library [Xceed Zip Compression Library]<BR>
+SSCE5253.dll is the Sentry Spelling-Checker Engine [Wintertree Software]<BR>
+<BR>
+Zip Library - is this just there for the installation or unpacking updates, or might it
+be used on the data files? Time to check, if the data files are zipped then they should
+be fairly easy to unpack. That would make life very easy ;)<BR>
+</P>
+<H2>Examination of files</H2>
+<P>
+So lets look at the files that were generated when the program was run, the files in 
+what looked like a profile directory. <BR>
+channel.ctb seems the most likely candidate, and matches (by some coincidence) roughly 
+the size of all the .ssf and .csf files. (1,158,690 bytes)
+All .ssf - category files (73,718 bytes). All .csf - engine files (1,131,657 bytes)<BR>
+This seems a strange coincidence, as opening up this file shows it does have the engine
+names and the category names (from filenames) but also contains a LOT of space characters, 
+so given this is in a directory called after the user, this should be the users preferences 
+for searches or something similar.<BR><BR>
+Back to the data files, as the only files looking good candidates are the '*.*sf' files 
+which fit the bill perfectly. So opened one up in notepad and it looks unreadable.<BR>
+So right, copied three .ssf and three .csf files of different sizes to a temporary 
+directory to start looking at them. Opened the first one in a hex viewer and noticed 
+that it is not plain text, ok so it was expected they would be packed or encrypted 
+in some way, they would not leave their whole product out in the open. But one thing 
+that did jump out was the pattern of the characters.<BR>
+Here is an excerpt from one of the files: (Boxes are unprintable characters)<BR>
+<PRE>
+Ssôsôßxøù?Ûyø[òSSsðS3ðSrQSSSSSSôSSsóù¹x;ÛùôSSss¾=
+¸˜›òÓSSð'3rrrQPSsðS3ðSrÐQsS3³órpôSSssÝx;[Øyzœyøùòs3|
+˜ÙxyôSSss\¸øù_y¹ùòXÛÛ[°°»»»yØÛy›x;Ûyx˜°ôSSss?û[[¸Ûœ
+ù»òßûùôSSss=yÛù¹¸zòßXù¿ù|˜ôSSssŸù;x¸˜ò3SSSôSSssxØù
+Ÿù;x¸˜òôSSss}ûÛ¸ÿ[ÙyÛùòßûùôSSss=Xy˜˜ùØ?ùÛòßXù¿ù|˜ôS
+Sss=Xy˜˜ùØ?ùÛ3òßXù¿ù|˜ôSSs"ôSSsó|˜xÛôSSss?¸û9ùÿØòXÛ
+Û[°°;ùy9Xs3x˜Ùxy9¸ø°9¹xðx˜°{ûùz°yÙ›;99¹xôSSssù;û
+ØÛ;_ù_y¹ùòsSôSSssÿ;ù}¹ù˜Ûòü¸xØØy°ÓSQP9¸ø[yÛxØù2Qü?|ýQ
+ÓSs2Q¿x˜Ù¸»;QrRpôSSssûØù;Py˜¹ùp?ÛyÛüy8ùòÒØ¸98{û
+¸Ûù'ôSSssûØù;Py˜¹ùpý˜Ùüy8ùòÒ™¸˜ÛQ™y9ùò0=XP3Óp0}
+xyØ0=XP3Óp0Q;xùò0=XP3Óp0ðs0=XP3Óp0'ôSSssûØù;P
+}ÙÙù;;p<ùzòßûùôSSssûØù;PßxÛØùp?ÛyÛüy8ùòÒxø¹Q;9
+</PRE>
+
+Notice the repeated 'SS','SSs' and 'SSss' sequences. Instinct at this point says 
+that this is not a packed file as these repeats would have been eliminated 
+by the compression process. There are other repeated sequences present in 
+the encoded text.<BR>
+<BR>
+This is the header common to the 1K category files: Auctions and Buyhardware<BR>
+<PRE>
+9D9D5373F41473F414DF78F8F93FDB79
+F85BF213535373F05333F073F3515353
+125353125353F414535373F31FF9B978
+3BDBF91BF41453537373BE3DB8989BF2
+11D3535313F0923372727251505373F0
+5333F073
+. . . . (more data)
+F414
+</PRE>
+This is also the same in Buysoftware which is a 2k file, apart from one byte<BR>
+<PRE>
+9D9D5373F41473F414DF78F8F93FDB79
+F85BF213535373F05333F073 72 [changed F3 to 72] 515353
+125353125353F414535373F31FF9B978
+3BDBF91BF41453537373BE3DB8989BF2
+11D3535313F0923372727251505373F0
+5333F073
+. . . . (more data)
+F414
+</PRE>
+This seems the only difference but is not the same in all 2k files...
+<PRE>
+in the copernic.csf file it is:
+9D9D5373F41473F414DF78F8F93FDB79
+F85BF213535373F05333F0 53 [changed 73 to 53] 72 [changed F3 to 72] 515353
+125353125353F414535373F31FF9B978
+3BDBF91BF41453537373BE3D
+. . . . (more data)
+F414
+</PRE>
+different after this..<BR>
+<BR>
+So this looks like they are all encoded with the same method, and this is some kind of 
+common header to the files.. Also all files seem to end with 'F414'<BR>
+<BR>
+This does not look like an xor'd pkzip.. as the header is wrong. IF this was a zip 
+file with a zip header, you would expect more bytes to be different, if this was a 
+zip file with the header removed then the data would not show the same repetitive
+patterns at such regular intervals. This lead me towards thinking they were just 
+encrypted in some way. This was backed up by the observation that they are all sizes 
+from 926 bytes to 3,000 bytes (in all steps) so they are not a fixed structure. 
+(but they do have a header and a footer which seems to be common, could just be some 
+text at start of file, or could designate something else - seems to me like it would 
+be a constant bit at the start of the decoded file, rather than being a packed header
+or else more of it would change.. so it looks like they are just mildly
+encrypted and are not packed? hopefully anyway. ;)<BR>
+<BR>
+The 'F414' sequence bothered me as soon as I saw it, the spacing throughout the file 
+and also the positioning of it, together with the fact that it appeared in the header 
+made me think that this could be '0d0a' or a newline in a text file. This fits with the 
+decoded file being plain text. So made a little tool which copied the file and just 
+changed those bytes over - the result was a file with what looked like reasonable line 
+lengths for a text configuration file. So I was on the right track, or so it seemed.<BR>
+Here is a snippet of the above file: (with line splits inserted)<BR>
+<PRE>
+Ss
+s
+ßxøù?Ûyø[òSSsðS3ðSrQSSSSSS
+SSsóù¹x;Ûù
+SSss¾=¸˜›òÓSSð'3rrrQPSsðS3ðSrÐQsS3³órp
+SSssÝx;[Øyzœyøùòs3|˜Ùxy
+SSss\¸øù_y¹ùòXÛÛ[°°»»»yØÛy›x;Ûyx˜°
+SSss?û[[¸Ûœù»òßûù
+SSss=yÛù¹¸zòßXù¿ù|˜
+SSssŸù;x¸˜ò3SSS
+SSssxØùŸù;x¸˜ò
+SSss}ûÛ¸ÿ[ÙyÛùòßûù
+SSss=Xy˜˜ùØ?ùÛòßXù¿ù|˜
+SSss=Xy˜˜ùØ?ùÛ3òßXù¿ù|˜
+SSssûØù;Py˜¹ùpý˜Ùüy8ùòÒ™¸˜ÛQ™y9ùò0=XP3Óp0}xyØ0=XP3Óp0Q;xùò0=XP3Óp0ðs0=XP3Óp0'
+SSssûØù;P}ÙÙù;;p<ùzòßûù
+SSssûØù;PßxÛØùp?ÛyÛüy8ùòÒxø¹Q;9ò0=XP3Óp0°xøy¹ù;°[y¹ù¹x™0=XP3Óp0QXùx¹XÛòs3Q»xÙÛXòs3'
+SSssûØù;PßxÛØùpý˜Ùüy8ùòÒ°y'
+</PRE>
+This seems to fit the structure of a configuration file, short line lengths. Later in the 
+file are longer lines, about the size of a query URL, so this seems right ;) There is also 
+a pattern to the characters at the start of the line, and notable is that the repeated 'SS' 
+combination appears at the end of strings - this means (hopefully) that it is not a 
+position dependent (or offset) substitution.<BR>
+<BR>
+After a bit of thinking I was convinced that these files are protected by a substitution 
+cipher, and more looking at the file content seemed to back this up as there are many 
+repeating patterns, as you would expect to see in a file with URL's inside it. So the 
+target was to find the translation function or table. I by this time had discounted a 
+packed format and had also discarded a binary file, it is a plain text file - this may 
+seem like a jump but if you had been sitting on my shoulder you would have seen it 
+the same way.<BR>
+So there are two methods they could use to achieve this, the first would be to use a 
+lookup table to do the translation and the second would be to use a function to do the 
+same thing. In order to confirm some options, another look at the running program was 
+required, when viewed it seemed they did include all lower and uppercase chars and also 
+European characters - this was important as it means they have to use all 8 bits of the 
+character and cannot throw any away in the function, whereas if they had not included 
+any European characters they might be able to throw a bit away somewhere in the function 
+and this could affect the findings dramatically. It was also obvious that they used 
+normal ASCII characters as the patterns would have been different if they had used 
+some form of unicode or multi-byte character set. This gives us more ammunition 
+for the coming hunt.<BR>
+<BR>
+One thing I must add at this point is that there are many known attacks on substitution 
+ciphers - these were discarded because they assume a language and work from character 
+occurence probability tables. They are very effective but were discarded for this 
+target as the contents of the configuration file was known not to match normal text 
+as it would be using (presumably) repeated keywords and values which would either be 
+meta tags and/or url's, this meant that they might give some results but would 
+probably not. So I discounted them to save time!<BR>
+</P>
+<H2>Getting Hands Dirty</H2>
+<P>
+DeDe has now finished, so we can start looking at the assembler for the file. First task
+is to hunt down the references to any .ssf or .csf files. When looking through the file you 
+will find a few references to this string. These were used as a starting point and breakpoints 
+were set on them.<BR>
+<BR>
+I shall take a wander here - bear with me! When I started looking at DeDe, I was intending 
+to work from the disassembled files and track through the code in order to find the 
+decryption routine which would restore the files to plaintext. Now my priorities had 
+changed somewhat, what I was now after was a portion of the plaintext file and hopefully 
+all of one of the files in memory so that it could be saved. The fact that the cipher 
+seemed to be a substitution one from the data shown above means that although to find 
+the decryption routine would be nice, to find a portion of the plaintext would be just 
+as nice in helping find the result. If they have used a table then hopefully once we 
+have a portion of the plaintext and what it maps to in the encrypted file, finding the 
+table in memory would be very easy. This seems a nicer and quicker approach that 
+reading through page after page of disassembled code trying to put it together. This 
+point is made more by the fact that the app is in delphi, so a simple instruction 
+could quite easily call many functions all over the place.<BR>
+<BR>
+So trying to stop the urge to go through the code and reassemble what happens, which 
+is very hard. I start the code running in W32Dasm with breakpoints set on every 
+instance of a string that ends in '.ssf' and '.csf'. It soon breaks on one of them.
+
+At this point I set auto-api stop, and show parameters for local and system calls 
+and set it running again. What I am hoping for is one of the calls to have a 
+pointer to the plaintext in the call to it.<BR>
+
+Here is the bit of code that loads 'Copernic.csf', which is thought to be the 
+master configuration file.<BR>
+<BR>
+<PRE>
+* Possible StringData Ref from Code Obj ->"Copernic.csf"
+                                  |
+:52A00A BAB8A75200       mov edx, 52A7B8
+
+:52A00F E8FCA0EDFF       call 404110
+:52A014 8B55E0           mov edx, dword ptr [ebp-20]
+:52A017 8B45FC           mov eax, dword ptr [ebp-04]
+:52A01A 8B4020           mov eax, dword ptr [eax+20]
+:52A01D 8B08             mov ecx, dword ptr [eax]
+:52A01F FF5158           call [ecx+58]
+:52A022 8B45FC           mov eax, dword ptr [ebp-04]
+:52A025 8B4020           mov eax, dword ptr [eax+20]
+                         // This following call seems to handle the
+                         // file and contains a call which exposes the
+                         // plaintext
+:52A028 E8970AFAFF       call 4CAAC4   //  HANDLEFILE
+:52A02D 85C0             test eax, eax
+:52A02F 7425             je 52A056
+:52A031 6A00             push 0
+:52A033 6A00             push 0
+:52A035 A1C4255B00       mov eax, dword ptr [5B25C4]
+:52A03A 8B00             mov eax, dword ptr [eax]
+:52A03C 8B4050           mov eax, dword ptr [eax+50]
+:52A03F BA02000000       mov edx, 2
+</PRE>
+The code below is the start of the HANDLEFILE routine:<BR>
+<PRE>
+* Referenced by a CALL at Addresses:
+|:4EB84D, :52A028, :599F7B, :59A81A   
+:4CAAC4 55                      push ebp                      
+.
+... next part is further down the function.
+.
+:4CAAFA 8D55E8           lea edx, dword ptr [ebp-18]   
+:4CAAFD 8B45FC           mov eax, dword ptr [ebp-04]   
+:4CAB00 8B08             mov ecx, dword ptr [eax]
+:4CAB02 FF511C           call [ecx+1C]                 
+
+:4CAB05 8B45E8           mov eax, dword ptr [ebp-18]   
+:4CAB08 BA01000000       mov edx, 1             
+                         //  This function has the plain text for the
+                         //  line from the file passed into and outof
+                         //  it, so the decoding must happen before this!!!
+:4CAB0D E892EDFFFF       call 4C98A4
+                         //  [ebp-10] points to the start of text, both into
+                         //  and out of this function
+
+</PRE>
+<BR>
+So we have found a function that is called with one of the parameters as the plaintext 
+for the file currently being handled. This is what we were after, so remove all other 
+breakpoints and set a new breakpoint on 0x004CAB0D and make sure we tick the display
+parameters to local calls in W32Dasm. Right now every time we hit this function filemon
+tells us which file we are reading and the parameter display gives us the location of 
+the string.<BR>
+<BR>
+After placing the breakpoint and grabbing a string of plaintext,<BR>
+The start of the plaintext is:  "FF01" - 0x46 0x46 0x30 0x31 0x0d 0x0a<BR>
+<BR>
+While looking at this, I noticed a bit of code further down the disassembly 
+listing, which jumped out at me as some possible plaintext.
+<BR>
+This is the code that seems to handle parsing the configuration files:<BR>
+<BR>
+<PRE>
+* Possible StringData Ref from Code Obj ->"DisplayName"
+:599FA0 BA14A65900         mov edx, 59A614
+:599FA5 8B45E4             mov eax, dword ptr [ebp-1C]
+
+:599FA8 E8AB4DF2FF         call 4BED58
+:599FAD 8D45C4             lea eax, dword ptr [ebp-3C]
+:599FB0 33D2               xor edx, edx
+
+:599FB2 E8B5B6E6FF              call 40566C
+:599FB7 8D4DC4                  lea ecx, dword ptr [ebp-3C]
+
+this code is repeated with the following string references:
+* Possible StringData Ref from Code Obj ->"Description"
+* Possible StringData Ref from Code Obj ->"HomePage"
+</PRE>
+So this bit of code is parsing a file of some kind looking for the identifiers 
+given in the string references, and so that means our file MUST contain some 
+of the above strings, as they do not seem to be used in any other files.<BR>
+</P>
+<H2>Decoding files</H2>
+<P>
+So now we have a portion of the plaintext written down (or in a file) 
+and this looks very good, and seems to confirm a lot of things. The string 
+pointed to is shown below, and when looking for the first time you should 
+also refer back to the previous text and see what bells ring ;)<BR>
+A portion of the plaintext:<BR>
+<PRE>
+FF01
+0015Register
+0011_Conv="4002->3999 (01-03-09, 10:37:59)"
+0011DisplayName="123India"
+0011HomePage="http://www.altavista.in/"
+</PRE>
+The order is slightly changed from the order in the file (only a couple of 
+entries swapped) but note the line lengths as these are a giveaway. So we now 
+know for sure that we are on the right track - GOOD! Now you can call me stupid 
+if you want, but '0011' looks a bit like 'SSss' and also the '001' would mean more 
+with the 'SSs' occurences as well.<BR>
+So this data was saved to a file, and a file was created with the lines mixed and 
+grouped in pairs of matching line length. Then a bit of code to read the lines in 
+and generate a mapping table from the characters in an encoded line to the 
+matching character in the decoded file. This table was then saved to a file as 
+a 256 byte list. Obviously this did not include all characters from the table as 
+the chances were that not all characters would be used in this one file, but 
+the thought was that as I stated above it would either give enough of a clue to 
+find the lookup table in memory, or a clue to the function. It was more 
+appealing than running through lines and lines of code. So the map table was 
+created and any holes were left with their original values, so that errors could
+be spotted and added. Then this substitution lookup was loaded into the decoder and 
+compiled ready for use. At this point I decided to view the encrypted values with 
+the decrypted values in the form of the table, luckily there was a good spread in 
+the table and luckily I had picked a file with European characters inside it so 
+there were some of those represented in the table.<BR>
+The original encoded file was then decoded using this partial table as a sortof 
+proof-of-concept for the code and the idea. Rightly so the file was decrypted 
+and shown in total plain text. So I had proved to myself that I was on the right 
+track and I had not even bothered to hunt the disassembly file for the decode 
+routine.<BR>
+The next step was to check for a lookup table in any of the files, so I took a 
+portion of the substitution table that contained proper plaintext values and did 
+a search of all the files in the root folder for copernic. NOTHING! - so it seems 
+they either do not have it in the files, they generate it or the data is encoded 
+by a function. This was good news, because the last two options both mean that 
+it is created by a function without a lookup table, which means there has to be 
+a simple logic to it, as there are only so many ways to scramble 256 entries 
+using code and without loosing any entries or values.<BR>
+Now at this point I should really have dived into the dead listing and tried to 
+find the routine, but I took a different approach. I instead turned my attention 
+to the output of my lookup table creator, and the results it had given me. I was 
+trying to look for a pattern within the mapping<BR>
+This is a partial dump of the lookup table and values, showing the relationship 
+between the encoded and decoded characters: (all values are HEX)<BR>
+<BR>
+<TABLE border="1">
+<TR><TD>Encoded</TD><TD>Decoded</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>10</TD><TD>2a</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>11</TD><TD>22</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>12</TD><TD>3a</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>13</TD><TD>32</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>14</TD><TD>0a</TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD>Encoded</TD><TD>Decoded</TD></TR>
+<TR><TD>18</TD><TD>6a</TD><TD></TD><TD>f8</TD><TD>6d</TD></TR>
+<TR><TD>19</TD><TD>62</TD><TD></TD><TD>f9</TD><TD>65</TD></TR>
+<TR><TD>1a</TD><TD>7a</TD><TD></TD><TD>fa</TD><TD>7d</TD></TR>
+<TR><TD>1b</TD><TD>72</TD><TD></TD><TD>fb</TD><TD>75</TD></TR>
+<TR><TD>1c</TD><TD>4a</TD><TD></TD><TD>fc</TD><TD>4d</TD></TR>
+<TR><TD>1d</TD><TD>42</TD><TD></TD><TD>fd</TD><TD>45</TD></TR>
+<TR><TD>1e</TD><TD>5a</TD><TD></TD><TD>fe</TD><TD>5d</TD></TR>
+<TR><TD>1f</TD><TD>52</TD><TD></TD><TD>ff</TD><TD>55</TD></TR>
+<TR><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD></TR>
+<TR><TD>38</TD><TD>6b</TD><TD></TD><TD>58</TD><TD>68</TD></TR>
+<TR><TD>39</TD><TD>63</TD><TD></TD><TD>59</TD><TD>60</TD></TR>
+<TR><TD>3a</TD><TD>7b</TD><TD></TD><TD>5a</TD><TD>78</TD></TR>
+<TR><TD>3b</TD><TD>73</TD><TD></TD><TD>5b</TD><TD>70</TD></TR>
+<TR><TD>3c</TD><TD>4b</TD><TD></TD><TD>5c</TD><TD>48</TD></TR>
+<TR><TD>3d</TD><TD>43</TD><TD></TD><TD>5d</TD><TD>40</TD></TR>
+</TABLE>
+<BR>
+It did not take long for one to jump out at me, did you pay attention to the 
+above table, did any bells go off? I left holes in the table on purpose so 
+you had to look at it. Have you seen the pattern, it is a nice one I must
+admit - if you just arrange the table with the characters showing instead 
+of the hex, a pattern does jump out, but not as much as when viewing the 
+hex bytes. Hopefully you should agree with me when I now say that the dead listing 
+approach suddenly lost a LOT of its appeal for this target.<BR>
+<BR>
+This is a regular pattern based substitution, done by a bit of code which 
+is not very complex or large. I have already gone down the road of abandoning 
+the dead listing, and it is now firmly in the bin. So to reverse this encoding 
+we simply need to analyse the pattern.<BR>
+It also appears as though the resulting value is made up from two separate 
+nibbles (4bits) and they are bolted together, this is shown by the way they 
+seem to change out of step with each other.
+Pseudo code:<BR>
+<PRE>
+Variables:
+IN_A = encoded_byte
+IN_H = encoded_byte_high_nibble
+IN_L = encoded_byte_low_nibble
+OUT_H = decoded_byte_high_nibble
+OUT_L = decoded_byte_low_nibble
+
+to set up the code do the following:
+IN_A = read_from_file();
+IN_H = IN_A & 0xf0;
+IN_L = IN_A & 0x0f;
+
+before exiting:
+OUT_A = OUT_H | OUT_L;
+</PRE>
+Taking the examples:
+0x38 -> 0x6B and 0x39 -> 0x63
+It seems like there are two values for the lower nibble, and these seem to 
+be offset by 8, so no matter what the lower value is the higher one is that 
+plus 8. (Look at the table above to confirm this) The use of this value seems 
+to be dependent on the lower bit of IN_A. So the final step is to take 
+the low bit of IN_A and if it is clear to add 0x08 to the output byte.<BR>
+You can also see that the lower nibble of decoded char (OUT_L) is related to 
+the upper nibble of encoded data (IN_H). And that the upper nibble of decoded 
+char (OUT_H) is related to lower nibble of encoded char (IN_L).<BR>
+Look at the 0x*8 and 0x*9 values they all map to 0x6*, just like 0x*A and 0x*B 
+values map to 0x7*, and like 0x*E and 0x*F map to 0x5*. Now look at 0xff, the 
+lower value for the lower nibble is '5' so 0xf* -> *5 and 0x*F -> 0x5*.<BR>
+If you do more checking it will reassure you, what is of interest is that these 
+mappings seem to be the same for both halves, which should make life a lot easier. 
+So now that we have isolated the components, lets create a mapping for the nibbles, 
+just taking the values from the previous table.<BR>
+<PRE>
+Original Nibble   Output Nibble
+    0x0,0x1           0x2
+    0x2,0x3           0x3
+    0x4,0x5           0x0
+    0x6,0x7           0x1
+    0x8,0x9           0x6
+    0xA,0xB           0x7
+    0xC,0xD           0x4
+    0xE,0xF           0x5
+</PRE>
+<BR>
+So Putting this together gives us:<BR>
+<PRE>
+Variables:
+IN_A = encoded_byte
+IN_H = encoded_byte_high_nibble
+IN_L = encoded_byte_low_nibble
+OUT_H = decoded_byte_high_nibble
+OUT_L = decoded_byte_low_nibble
+LOOKUP = [2,2,3,3,0,0,1,1,6,6,7,7,4,4,5,5]
+
+to set up the code do the following:
+IN_A = read_from_file()
+IN_H = (IN_A & 0xf0)>>4		// Get high nibble into low nibble
+IN_L = IN_A & 0x0f            // Isolate low nibble
+
+OUT_H = lookup[IN_L]<<4       // To get into high nibble 
+OUT_L = lookup[IN_H]          // this is low nibble
+OUT_A = OUT_H | OUT_L;        // merge the two
+
+if ((IN_A & 0x01) == 0)       // This does the offset on
+	OUT_A = OUT_A + 0x08    // the lower nibble
+</PRE>
+<BR>
+This can be simplified to the code below:
+<PRE>
+char lookup[]={2,2,3,3,0,0,1,1,6,6,7,7,4,4,5,5};
+int decode_character(int encoded)
+{
+  if (encoded & 0x01)
+    return( (lookup[encoded&0xf]<<4) + lookup[(encoded&0xf0)>>4] );
+  else
+    return( (lookup[encoded&0xf]<<4) + lookup[(encoded&0xf0)>>4] +8 );   
+}
+</PRE>
+<BR>
+I have not looked in the executable for this code or the bit that does the 
+same function as that does not matter. If you use the above function as 
+a decoder for each character in all the '*.ssf' and '*.csf' files within
+the programs directorys it will convert them to the plaintext (unencoded) 
+versions.<BR>
+So I had the files in plain text form and they were all text configuration 
+files as I had thought, so I counted (in the version I have) 754 search 
+engines or URL's - that is quite a lot of data, and also this product 
+has also got them grouped nicely, which will help with the problem of 
+how to organise them, its already done.<BR>
+<BR>
+So at this point I am pretty happy with how things have gone, I have a 
+routine which decodes their input files and have converted them all to
+plain text, so the data is now usable. And to think this has been 
+achieved with only minimal time in front of code, only the period when 
+scanning for the plain text. <BR>
+</P>
+<H2>Scripting Language</H2>
+<P>
+When examination of the decoded files was started, one of the first files 
+looked at was 'copernic.csf' as this sits in the approot and is named the 
+same as the application, this was a good choice for master configuration or 
+some kind of global parameters file.<BR>
+You should remember from earlier that most lines in the conf files seem to 
+have a 4 digit number (0011) of varying value at the start of the line. The 
+example given earlier did not show this as clearly as the following example 
+hopefully will. This is an instruction for the internal scripting language 
+to tell it how to handle the rest of the line.<BR>
+<BR>
+This is the decoded version of 'copernic.csf':<BR>
+<BR>
+<PRE>
+FF01
+1
+TimeStamp=2001-03-09 00:00:00
+0015Register
+0011ChannelSet="Ad"
+0011ChannelSet3="Ad"
+0011Version=2525
+0011FileVersion=0
+0011SoftwareVersions="eng;engplus;engpro;fra;fraplus;frapro"
+0016
+0015Init
+0011UseCookies=True
+1001
+0011SearchQuerySeparator="+"
+1003
+0011Key=SearchQuery
+0011RNDSEED=""
+0018Length(RNDSEED)<>12
+0011RNDSEED=String(Random(99999999)*Random(9999))
+0019
+0011T=Random(999999)
+0011PromoT=Numeric(Substring(RNDSEED,8,1))
+0011PromoTI=Numeric(Substring(RNDSEED,9,1))
+0011Random100=Numeric(Substring(RNDSEED,10,2))
+0011SourceFLYCAST=Replace("ENG|1|http://ad-adex3.flycast.com/server/_img/Copernic/software/$RANDOMNUMBER$|http://ad-adex3.flycast.com/server/click/Copernic/software/$RANDOMNUMBER$","$RANDOMNUMBER$",String(T))
+0011Source247ENG=Replace(Replace("ENG|1|http://connect.247media.ads.link4ads.com/serv/2/Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$?$KEY$|http://connect.247media.ads.link4ads.com/click/2/Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0011Source247FRA=Replace(Replace("FRA|1|http://connect.247media.ads.link4ads.com/serv/2/fr-Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$?$KEY$|http://connect.247media.ads.link4ads.com/click/2/fr-Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0011SourceUFS="UFS|1|http://banner.unifiedweb.com/cgi-bin/getimage.exe/copernic?GROUP=copernic|http://banner.unifiedweb.com/cgi-bin/redirect.exe/copernic"
+0011SourceVALUECLICK="VALUECLICK|1|http://kansas.valueclick.com/cycle?host=hs0136917&b=1&noscript=1|http://kansas.valueclick.com/redirect?host=hs0136917&b=1&v=0"
+0011SourceVALUECLICKOLD="VALUECLICK|1|http://kansas.valueclick.com/cycle?host=hs0194203&size=468x60&b=indexpage&noscript=1|http://kansas.valueclick.com/redirect?host=hs0194203&size=468x60&b=indexpage&v=0"
+0011SourceSERVERFRA4552=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/fra/recent/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/fra/recent/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0011SourceSERVERENG4552=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/eng/recent/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/eng/recent/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0011SourceSERVERFRA4551=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/fra/old/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/fra/old/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0011SourceSERVERENG4551=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/eng/old/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/eng/old/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+0012Find("ENGUFS",Edition)<>0
+0011SourceUrl=Entry(3,SourceUFS,"|")
+0011TargetUrl=Entry(4,SourceUFS,"|")
+0013
+0012(Find("PLUS",Edition)<>0)or(Find("PRO",Edition)<>0)
+0012BuildNumber>4551
+0011SourceUrl=Entry(3,SourceVALUECLICK,"|")
+0011TargetUrl=Entry(4,SourceVALUECLICK,"|")
+0013
+0011SourceUrl=Entry(3,SourceVALUECLICKOLD,"|")
+0011TargetUrl=Entry(4,SourceVALUECLICKOLD,"|")
+0014
+0013
+0012BuildNumber>4551
+0011SelfPromoPercent=0
+0013
+0012Substring(Edition,1,3)="FRA"
+0011SelfPromoPercent=0
+0013
+0011SelfPromoPercent=10
+0014
+0014
+0012Random100<SelfPromoPercent
+0011SourceUrl=Entry(3,SourceSERVERENG4551,"|")
+0011TargetUrl=Entry(4,SourceSERVERENG4551,"|")
+0013
+0012BuildNumber>4551
+0012Substring(Edition,1,3)="FRA"
+0011SourceUrl=Entry(3,SourceSERVERFRA4552,"|")
+0011TargetUrl=Entry(4,SourceSERVERFRA4552,"|")
+0013
+0011SourceUrl=Entry(3,SourceSERVERENG4552,"|")
+0011TargetUrl=Entry(4,SourceSERVERENG4552,"|")
+0014
+0013
+0012Random100>54
+0012Substring(Edition,1,3)="FRA"
+0011SourceUrl=Entry(3,Source247FRA,"|")
+0011TargetUrl=Entry(4,Source247FRA,"|")
+0013
+0011SourceUrl=Entry(3,Source247ENG,"|")
+0011TargetUrl=Entry(4,Source247ENG,"|")
+0014
+0013
+0011SourceUrl=Entry(3,SourceVALUECLICKOLD,"|")
+0011TargetUrl=Entry(4,SourceVALUECLICKOLD,"|")
+0014
+0014
+0014
+0014
+0014
+0011RotationInterval=120000
+0016
+11A2
+</PRE>
+
+<BR>
+This is a table giving the function for each command string:<BR>
+<BR>
+<TABLE>
+<TR><TD>String</TD><TD>COMMAND</TD><TD>Description</TD></TR>
+<TR><TD>0011</TD><TD>SET</TD><TD>SET variable=value</TD></TR>
+<TR><TD>0012</TD><TD>IF</TD><TD>IF expression THEN</TD></TR>
+<TR><TD>0013</TD><TD>ELSE</TD><TD>ELSE</TD></TR>
+<TR><TD>0014</TD><TD>ENDIF</TD><TD>ENDIF</TD></TR>
+<TR><TD>0015</TD><TD>FUNC</TD><TD>Function Definition Start</TD></TR>
+<TR><TD>0016</TD><TD>ENDFUNC</TD><TD>End Function Def</TD></TR>
+<TR><TD>0018</TD><TD>WHILE</TD><TD>WHILE expression DO</TD></TR>
+<TR><TD>0019</TD><TD>WEND</TD><TD>End While Loop</TD></TR>
+</TABLE>
+<BR>
+Also there are some functions:<BR>
+Replace(String A,String B,String B)<BR>
+This takes the string A, it then finds all occurrences of string B and replaces 
+them with the string in C. So Replace("ABCCCBA","CCC","YYY) would return "ABYYYBA"<BR>
+<BR>
+Substring(String A,Number B,Number C)<BR>
+This takes the string A and grabs C characters, starting at position B. So Substring("ENGPRO",1,3) 
+would return "ENG"<BR>
+<BR>
+Numeric(Number A)<BR>
+This returns the number represented in A as a string. So Numeric("100") would return 100<BR>
+<BR>
+Length(String A)<BR>
+This returns the length of the String passed in. So Length("ENG") would return 3<BR>
+<BR>
+Random(Number A)<BR>
+This returns a random number between upto the value of A. So Random(99999) could return 99999.<BR>
+<BR>
+String(Number A)<BR>
+This returns the string representation of the Number A. So String(100) would return "100"<BR>
+<BR>
+Find(String A,String B)<BR>
+This returns true if string A is found in string B. So Find("PRO","ENGPRO") would return true<BR>
+<BR>
+Entry(3,Source247FRA,"|")
+Entry(Number A, String B, String C)<BR>
+This returns an entry in a string which contains delimited values. A is the number 
+of the data segment to return. B is the string which holds the data. 
+C is the character used for the separator.<BR>
+Using the example Entry(NUM,"AAA|BBB|CCC|DDD","|")<BR>
+if NUM is set to 1 it would return "AAA", if NUM is 2 then "BBB", if NUM is 3 then "CCC".<BR>
+
+
+<BR><BR>
+Using the above command table, if we translate the script into normal code 
+language we get the script below:<BR>
+<BR>
+<PRE>
+FF01
+1
+TimeStamp=2001-03-09 00:00:00
+FUNC   Register
+  SET    ChannelSet="Ad"
+  SET    ChannelSet3="Ad"
+  SET    Version=2525
+  SET    FileVersion=0
+  SET    SoftwareVersions="eng;engplus;engpro;fra;fraplus;frapro"
+ENDFUNC
+FUNC   Init
+  SET    UseCookies=True
+  1001
+  SET    SearchQuerySeparator="+"
+  1003
+  SET    Key=SearchQuery
+  SET    RNDSEED=""
+  WHILE  Length(RNDSEED)&lt;&gt;12
+    SET    RNDSEED=String(Random(99999999)*Random(9999))
+  WEND
+  SET    T=Random(999999)
+  SET    PromoT=Numeric(Substring(RNDSEED,8,1))
+  SET    PromoTI=Numeric(Substring(RNDSEED,9,1))
+  SET    Random100=Numeric(Substring(RNDSEED,10,2))
+  SET    SourceFLYCAST=Replace("ENG|1|http://ad-adex3.flycast.com/server/_img/Copernic/software/$RANDOMNUMBER$|http://ad-adex3.flycast.com/server/click/Copernic/software/$RANDOMNUMBER$","$RANDOMNUMBER$",String(T))
+  SET    Source247ENG=Replace(Replace("ENG|1|http://connect.247media.ads.link4ads.com/serv/2/Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$?$KEY$|http://connect.247media.ads.link4ads.com/click/2/Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  SET    Source247FRA=Replace(Replace("FRA|1|http://connect.247media.ads.link4ads.com/serv/2/fr-Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$?$KEY$|http://connect.247media.ads.link4ads.com/click/2/fr-Copernic/ros/468x60/40543;uniq=$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  SET    SourceUFS="UFS|1|http://banner.unifiedweb.com/cgi-bin/getimage.exe/copernic?GROUP=copernic|http://banner.unifiedweb.com/cgi-bin/redirect.exe/copernic"
+  SET    SourceVALUECLICK="VALUECLICK|1|http://kansas.valueclick.com/cycle?host=hs0136917&b=1&noscript=1|http://kansas.valueclick.com/redirect?host=hs0136917&b=1&v=0"
+  SET    SourceVALUECLICKOLD="VALUECLICK|1|http://kansas.valueclick.com/cycle?host=hs0194203&size=468x60&b=indexpage&noscript=1|http://kansas.valueclick.com/redirect?host=hs0194203&size=468x60&b=indexpage&v=0"
+  SET    SourceSERVERFRA4552=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/fra/recent/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/fra/recent/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  SET    SourceSERVERENG4552=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/eng/recent/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/eng/recent/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  SET    SourceSERVERFRA4551=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/fra/old/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/fra/old/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  SET    SourceSERVERENG4551=Replace(Replace("BANNERSERVER|1|http://bannerpush.copernicserver.com/RealMedia/ads/adstream_nx.cgi/copernicclient/free/eng/old/$RANDOMNUMBER$?$KEY$|http://bannerpush.copernicserver.com/RealMedia/ads/click_nx.cgi/copernicclient/free/eng/old/$RANDOMNUMBER$","$KEY$",String(Key)),"$RANDOMNUMBER$",String(T))
+  IF     Find("ENGUFS",Edition)&lt;&gt;0        // if ENGUFS version
+    SET    SourceUrl=Entry(3,SourceUFS,"|")
+    SET    TargetUrl=Entry(4,SourceUFS,"|")
+  ELSE
+    IF     (Find("PLUS",Edition)<>0)or(Find("PRO",Edition)<>0)
+                                                // PRO or PLUS
+      IF     BuildNumber&gt;4551                // BUILD &gt; 4551
+        SET    SourceUrl=Entry(3,SourceVALUECLICK,"|")
+        SET    TargetUrl=Entry(4,SourceVALUECLICK,"|")
+      ELSE                                      // BUILD &lt;= 4551
+        SET    SourceUrl=Entry(3,SourceVALUECLICKOLD,"|")
+        SET    TargetUrl=Entry(4,SourceVALUECLICKOLD,"|")
+      ENDIF
+    ELSE
+      IF     BuildNumber&gt;4551                // BUILD &gt; 4551
+        SET    SelfPromoPercent=0               // clear addshow variable
+      ELSE
+        IF     Substring(Edition,1,3)="FRA"     // FRENCH
+          SET    SelfPromoPercent=0             // clear addshow variable
+        ELSE                                    // ENGLISH
+          SET    SelfPromoPercent=10            // set addshow to 10%
+        ENDIF
+      ENDIF
+      IF     Random100&lt;SelfPromoPercent      // if random &lt; addshow
+        SET    SourceUrl=Entry(3,SourceSERVERENG4551,"|")
+        SET    TargetUrl=Entry(4,SourceSERVERENG4551,"|")
+      ELSE                                      // if random &gt;= addshow
+        IF     BuildNumber&gt;4551              // BUILD &gt; 4551
+          IF     Substring(Edition,1,3)="FRA"   // FRENCH
+            SET    SourceUrl=Entry(3,SourceSERVERFRA4552,"|")
+            SET    TargetUrl=Entry(4,SourceSERVERFRA4552,"|")
+          ELSE                                  // ENGLISH
+            SET    SourceUrl=Entry(3,SourceSERVERENG4552,"|")
+            SET    TargetUrl=Entry(4,SourceSERVERENG4552,"|")
+          ENDIF
+        ELSE                                    // BUILD &lt;= 4551
+          IF     Random100&gt;54                // if random &gt; 54
+            IF     Substring(Edition,1,3)="FRA"	// FRENCH
+              SET    SourceUrl=Entry(3,Source247FRA,"|")
+              SET    TargetUrl=Entry(4,Source247FRA,"|")
+            ELSE                                // ENGLISH
+              SET    SourceUrl=Entry(3,Source247ENG,"|")
+              SET    TargetUrl=Entry(4,Source247ENG,"|")
+            ENDIF
+          ELSE                                  // random &lt;= 54
+            SET    SourceUrl=Entry(3,SourceVALUECLICKOLD,"|")
+            SET    TargetUrl=Entry(4,SourceVALUECLICKOLD,"|")
+          ENDIF
+        ENDIF
+      ENDIF
+    ENDIF
+  ENDIF
+  SET    RotationInterval=120000
+ENDFUNC
+11A2
+</PRE>
+So this is a script which seems to control all the adverts, so surely a bit of 
+creative writing is called for. As we already have a decoder we can simply 
+reverse the process to encode the file after we have created the new one.<BR>
+<BR>
+We can also figure out a couple of other things, the first is that the following 
+segment is the header for each file, this does not seem to contain any of the 
+found script commands, or even the characters for them. This segment seems to be 
+present at start of all the files:<BR>
+<PRE>
+FF01
+1
+TimeStamp=2001-03-09 00:00:00
+</PRE>
+The second is this entry at the end of the file, which seems to be a footer of 
+some kind -  when first looked at it appears that is possibly some form of CRC.<BR>
+<BR>
+<PRE>
+11A2
+</PRE>
+How about if you are told that the length of this file in HEX is 0x11C4. 
+Another example is a file with 03AC and a file length of 0x3CE.<BR>
+So if we do 0x11c4 - 0x11a2 we get 0x22 , and 0x3CE - 0x3AC = 0x22, this means 
+that this entry is the length of the file minus 0x22 (34 dec). So if we are to 
+alter the config file (with the hope of replacing it) then we should put the 
+correct value into this entry as well as encoding the file.<BR>
+<BR>
+It should be noted that in experiments the file was not parsed and loaded unless 
+this filelength value was correct, so copernic probably uses it to parse the 
+input file, to strip the header and so it must give the data length within 
+the file. This value should be set to the correct value!<BR>
+<H3>Search Query Spying</H3>
+It should be noted that all adverts that are grabbed from the two servers 
+"bannerpush.copernicserver.com" and "connect.247media.ads.link4ads.com" contain 
+the user query variable from the script in the request. 
+This means that if your parameters cause adverts to be grabbed from either of these 
+two locations then they are getting details on what you are searching for.<BR>
+Your can verify this for yourself by looking at the above script and finding 
+the entries for these two servers.
+
+<H3>Advert Removal</H3>
+Even though the 'PRO' version has a tick box to turn off adverts, the 
+assumption was made that the free version probably displays loads of 
+adverts. Also why would anyone with the pro version have the tick 
+box turned on - that really puzzles me, apart from if they use the 
+same dialog and just have it set so it is ticked and disabled in the 
+free version so the user cannot change it - I will not verify this. But 
+this gave me an idea, if all versions use the config files then we can 
+make a new one for the free version, thus removing that part of the 
+whole advert problem.<BR>
+<BR>
+So the task was to create a new version of 'copernic.csf' which has the 
+references to the advert servers removed, because I was not sure of the 
+effect of returning empty strings, I chose to instead point the requests 
+to the local machine. This should at least save remote requests and also 
+save the user the bandwidth in getting the advert images.<BR>
+<BR>
+This is my version of the script:
+<PRE>
+FF01
+1
+TimeStamp=2001-03-09 00:00:00
+0015Register
+0011ChannelSet="Ad"
+0011ChannelSet3="Ad"
+0011Version=2525
+0011FileVersion=0
+0011SoftwareVersions="eng;engplus;engpro;fra;fraplus;frapro"
+0016
+0015Init
+0011UseCookies=True
+1001
+0011SearchQuerySeparator="+"
+1003
+0011SelfPromoPercent=0
+0011SourceUrl="http://127.0.0.1/"
+0011TargetUrl="http://127.0.0.1/"
+0011RotationInterval=120000
+0016
+11A2
+</PRE>
+<BR>
+We should not forget to change the size value at the end, so set it to the 
+length of the file minus 0x22, and write the encoded file to 'copernic.csf'.<BR>
+<BR>
+Also 'updates.copernic.com', 'regcards.copernic.com' and 'www.copernic.com' 
+should be added to your hosts file as local host, or to the banned list 
+for your local proxy ;) This is to stop any updates or personal data transfer 
+from happening. This should stop the software from any phone home tactics and 
+hopefully should remove all adverts without having to touch any of the code. 
+After all we are simply using the programs scripts against itself.<BR>
+<BR>
+I have not tested this but it should work, and I see no reason why it would 
+not have the desired effect!<BR>
+</P>
+<H3>Adding a Group</H3>
+<p>
+Looking at the decoded .ssf and .csf files you will see that they share the 
+same scripting language with a few additions. So the thought was, as it 
+parses all the files in the set directories and not specific ones, could 
+a new file or files be added and so add engines and groups to the copernic 
+engine. This would mean that we are no longer tied to the ones they supply 
+it would also prove how it works.<BR>
+Using one of the groups file as an example, the following file was created:<BR>
+<PRE>
+FF01
+1
+TimeStamp=2001-03-15 00:00:00
+0015Register
+0011_Conv="4002->3999 (01-03-15, 10:58:42)"
+0011DisplayName="Custom"
+0011DisplayNames("FRA")="Custom French"
+0011DisplayNames("DEU")="Custom German"
+0011DisplayNames("ITA")="Custom Italian"
+0011DisplayNames("ESP")="Custom Spanish"
+0011DisplayNames("POR")="Custom Portugese"
+0011Description="Custom Search Group"
+0011Descriptions("FRA")="Custom Search Group"
+0011Descriptions("DEU")="Custom Search Group"
+0011Descriptions("ITA")="Custom Search Group"
+0011Descriptions("ESP")="Custom Search Group"
+0011Descriptions("POR")="Custom Search Group"
+0011ResultsPerChannel=10
+0011TotalResults=1000
+0011Version=3000
+0011FileVersion=1
+0011AutoUpdate=True
+0011SearchType="keywords"
+0016
+0015AfterDownload
+0016
+</PRE>
+This file was saved as 'Custom.ssf' , encoded using the encode routine 
+and placed in the 'Categories' directory. Now to run the application 
+and see if the group is now in the lists. The puzzling thing was that 
+the group did not appear in the drop down of groups, or the main tab 
+on the left giving all the groups, but if we do a search and then in 
+that screen browse the groups it is there at the bottom of the list. 
+This might be because we have no search engines assigned to this 
+group. When we find the group setting in the category dialog it shows 
+no engines under the group. This is a good sign.<BR>
+Note that the group appears only at the end of the list in the 
+categories dialog until you have either done a search using that group 
+or closed the program and reopened it, then it seems to be alpha sorted 
+into the list.<BR>
+</P>
+<H3>Adding a Search Engine</H3>
+<p>
+So to create a search engine file, I will use searchlores own Namazu 
+engine as an example, the following file was created:<BR>
+<PRE>
+FF01
+1
+TimeStamp=2001-03-09 00:00:00
+0015Register
+0011_Conv="4002->3999 (01-03-09, 10:52:49)"
+0011DisplayName="Namazu"
+0011HomePage="http://www.searchlores.org/"
+0011SupportNew=True
+0011Category="Custom"
+0011Version=3000
+0011FileVersion=2
+0011AutoUpdate=True
+0011ChannelSet="Custom"
+0011ChannelSet3="Custom"
+0011SupportOr=True
+0011SupportAnd=True
+0011SupportQuotes=True
+0016
+0015Init
+0011SourceUrl="http://www.searchlores.org/cgi-bin/search?query="
+0011ResultsPerPage=20
+100A("</TD>")
+1004("searchlores.org")
+0011Rules("Range").StartMarker="Search Results for"
+0011Rules("Range").EndMarker="</TABLE>"
+0011Rules("Address").Key=True
+0011Rules("Title").StartMarker=">"
+0011Rules("Title").EndMarker="</A>"
+0011Rules("Title").StartLine=0
+0011Rules("Title").NbLines=1
+0011Rules("Description").StartMarker="</A>"
+0011Rules("Description").EndMarker="</TD>"
+0011Rules("Description").StartLine=0
+0011Rules("Description").NbLines=1
+0011SearchQuerySeparator="+"
+1003
+0016
+0015BeforeDownload
+1001
+1002("query="+SearchQuery)
+1002("result=normal")
+1002("sort=score")
+1002("max=20")
+0016
+0015AfterDownload
+0016
+</PRE>
+This file was saved as 'Namazu.csf' , encoded using the encode routine 
+and placed in the 'Categories\Engines' directory. Now to run the application 
+and see if the group is now in the lists. <BR>
+Nope the group is not in the normal lists, but is still in the category 
+dialog, and also if you click on a group to do a search it is in the 
+dropdown box, and when viewing it you can see the Namazu engine within 
+the group. So that worked quite well, still have to figure out how to get 
+it in the quick groups dropdown and the left hand list in the main view.<BR>
+But I can select the group and also the search engine, and the request does 
+seem to go out (to local proxy). So the engine configuration and group 
+configuration will add in any files you place in the app directorys. This 
+is really nice and opens up a lot of possible routes.<BR>
+<BR>
+It should be noted that file above file for namazu is not quite complete as 
+the results parsing bit has been taken from another file and may not match 
+but the parameters passed in are correct. Examination of the engine configuration 
+files is recommended as their scripting language allows some very nice things 
+to be performed and is certainly powerful enough for the task required.<BR>
+<BR>
+After a bit of looking round the menus in copernic (I had not used it before) 
+I spotted in the Tools Menu, Options. In options there is a button labelled 
+'Category Bar' settings. Ok so lets click on it. So ok we have all the other 
+groups on the right hand side as being part of the category bar (the groups 
+shortcut menus) and Custom sitting alone on the right hand side (not included) 
+so this seems simple. Select the group and add it to the other list using 
+the supplied button, use up or down to put it where you want. Right now exit 
+from this dialog. LO and BEHOLD the groups list on the right hand side now 
+contains the group 'Custom' and if we look inside Custom there is 'Namazu'. 
+So adding groups and engines is now possible with copernic.<BR>
+<BR>
+</P>
+<H2>Conclusions</H2>
+<P>
+My aim was not to take the program apart too much, just to get to the data on 
+the search engines, without spending hours looking at assembler code. 
+But during this task I have found many things out about how 
+this program does other things - some are good and some are bad. There is a lot 
+of hardcoded bits, especially to do with language and syntax (lexicon) which 
+cannot be updated by updates as it is hardcoded, or at least that is how it 
+appears to be. I do not like at all the intrusive phone home features of this 
+product - at least this product uses the proxy you give it for these requests 
+and does not try to bypass it like some similar products.<BR>
+<BR>
+I was very disappointed with the encryption on the data files, mind you the 
+application was coded in delphi. But seriously you would have thought the 
+developers would have put a bit more in, after all if you are going to 
+put some encryption in, at least make it worthwhile. 
+The task was also made a bit easier by the fact that the filenames and directory 
+structure of the configuration files told you exactly what group or engine 
+each file related to and what to expect in each 
+file. It seems like the author wants you to get the data out of 
+the program, or at least not make our task too hard.<BR>
+<BR>
+On hindsight (always a good thing) once it had been decided that the 
+method of encryption was a substitution cipher, if the request URL's from the 
+proxy server, the strings from the executable and the details 
+in the groups files were collected it would have 
+been possible to do a known plaintext attack on the encoded files 
+and got enough data to recover the encoding method. This would have worked 
+equally as well as the path I chose to follow, but might have taken a bit 
+longer - but would have had the same result and without having to even touch 
+a disassembler or debugger. I 
+chose to grab the plaintext from the program, so a whole file of plaintext could 
+be grabbed in one go, and a translation table built easily but a partial plaintext 
+lookup generator program would have worked equally as well. <BR>
+<BR>
+The scripting language they have included interested me most ,it has some nice 
+ideas in it, even though it seems to have its roots in a BASIC type language. 
+Bot writers and OSLSE project fans should examine this and how 
+it works to learn many things. It can provide many pointers and ideas to 
+programmers of VSL's for Bots and other such programs, as it can be very 
+versatile and is simple in concept 
+but offers expandability and flexibility. It also seems a lot more flexible 
+than a simple macro type vsl, where you include commands into strings and 
+then parse them out, as in webferret. This is not meant to mean that one is 
+better or worse than the other, but that both are interesting and that it 
+would be easier to include the webferret idea into this than the other way
+around. From looking at it, it would be 
+very simple to parse and implement because of its defined structure and 
+the flexibility of being text based and not some form of microcode. This 
+also makes it very suitable for inclusion in a format such as XML, as an 
+embedded script.<BR>
+</p>
+<H2>Final Thoughts</H2>
+<P>
+Firstly I would like to point out that you should try and learn about how your 
+target works before trying to take it apart, reading the essay you should 
+hopefully have seen how the clues picked up early on helped later in the 
+process. While you are installing LOG what the program does. When you run the 
+program for the first and subsequent times LOG what the program does. These log 
+files will not cost you anything to make (apart from the time to start filemon 
+and regmon) and will save you doing it later. Then when a question comes up you 
+do not have to think - oh I must uninstall and reinstall to get a log of every 
+change - not all may be removed or put back on - it depends on the program. So 
+do it the first time. Pick your target and work it, right from the start.<BR>
+<BR>
+After the script code I realise that I was trying to over complicate matters 
+and produce some fancy parsing macro type thing for the parsing part of 
+my bot, seeing this has brought me back to a simple but very expandable 
+idea, which will be much easier to implement and expand as development 
+requires. Sometimes it takes seeing another point of view to bring some 
+clarity to your thoughts and put you back on the right track.<BR>
+If you are going to write a paper on a subject you normally would research 
+other works on the same subject first, surely the same should be done if 
+you are working on some software. This might save you from reinventing the 
+wheel as a square. I am not saying use their ideas exactly as they do, 
+but you should observe and learn from them, then create a solution which 
+brings all the parts most suited to your task together.<BR>
+<BR>
+I would also like to point out that people tend to download and use software 
+without really understanding what it does, or what data about them goes where. 
+You should take care of what software you use and should understand the 
+hidden datas that they send about you. A prime example is the entry in the 
+advert request in this product which gives them what you are searching for, 
+quite apart from the update and regcard information. Most products of this 
+type seem to conduct this form of activity and the users should be made 
+aware of this before using the products.<BR>
+The use of adverts in products is actually robbing, yes robbing the users 
+of their precious bandwidth, while they are showing adverts you are loosing 
+bandwidth and I believe that reducing the advert shown to a 1x1 image or 
+simply hiding the advert is not a solution as you are still using bandwidth 
+the only proper method of advert removal is to make sure the request never 
+gets out, or at least not as far as your internet connection.<BR>
+</p>
+<H3>Disclaimer</H3>
+<P>
+I must point out that during the writing of this essay, at no point was Copernic
+allowed to interact with the internet in any way shape or form. It has now 
+been removed from the PC it was installed on and will not be returning.<BR>
+A lot information was gained from log files, and some reversing of course! ;).
+</p>
+<P>
+<BR>
+Hope you enjoyed reading.
+<P>Copyright (c) 2001, WayOutThere<hr></font>
+    <font size=+1><center>
+</P>
+<PRE></PRE>
+
+<table border="0"><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm" target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to essays"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to essays</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td><center>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm" target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm" target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

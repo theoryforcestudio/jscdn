@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Winky and UnWinky</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="proxy, python and so on">
+<meta name="keywords" content="proxy, python and so on">
+<meta name="author" content="Winky">
+<meta name="copyright" content="Copyright(c) 2006 Winky">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+
+
+
+
+<script language=javascript type="text/javascript"> 
+<!-- 
+function ntos(n){ 
+n=n.toString(16); 
+if (n.length == 1) n="0"+n; 
+n="%"+n; 
+return unescape(n); 
+} 
+var digitArray = new Array('0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'); 
+function toHex(n){ 
+var result = '' 
+var start = true; 
+for (var i=32; i>0;){ 
+i-=4; 
+var digit = (n>>i) & 0xf; 
+if (!start || digit != 0){ 
+start = false; 
+result += digitArray[digit]; 
+} 
+} 
+return (result==''?'0':result); 
+} 
+function pad(str, len, pad){ 
+var result = str; 
+for (var i=str.length; i<len; i++){ 
+result = pad + result; 
+} 
+return result; 
+} 
+function encodeHex(str){ 
+var result = ""; 
+for (var i=0; i<str.length; i++){ 
+result += pad(toHex(str.charCodeAt(i)&0xff),2,'0'); 
+} 
+return "<winky>"+result+"</winky>"; 
+} 
+function decodeHex(str){ 
+str = str.replace(new RegExp('<winky>','gi'),''); 
+str = str.replace(new RegExp('</winky>','gi'),''); 
+str = str.replace(new RegExp("s/[^0-9a-zA-Z]//g")); 
+var result = ""; 
+var nextchar = ""; 
+for (var i=0; i<str.length; i++){ 
+nextchar += str.charAt(i); 
+if (nextchar.length == 2){ 
+result += ntos(eval('0x'+nextchar)); 
+nextchar = ""; 
+} 
+} 
+return result; 
+} 
+//--></script> 
+</head> 
+<body bgcolor="#CECECE" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+<p align="center">
+<font size="+3">~ a tool for <a href="winky_proxy.html">winky's useless but interesting tool</a> ~</font><br>
+
+<b>By <font color="blue">Moonman</font>
+<br><br>
+
+<form name=code onsubmit="return false()"> 
+<textarea name=text cols=80 rows=12>Enter text to encode or decode here.</textarea> 
+
+<br><br>
+
+
+<input value="Winky" type=button onclick="document.code.text.value=encodeHex(document.code.text.value);"> 
+	
+its Hex isnt it? 
+	
+<input value="UnWinky" type=button onclick="document.code.text.value=decodeHex(document.code.text.value);"> 
+	
+
+</form> 
+
+<br><br><br>
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"news.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>

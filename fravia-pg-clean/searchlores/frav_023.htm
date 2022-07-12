@@ -1,0 +1,595 @@
+<html>
+<head>
+<title>fra_023.htm Reversing webferret's advertisement banners :
+By
+fravia+</title>
+</head>
+<body bgcolor="#C0C0C0" text="#001010" vlink="#405040"
+alink="#00FF50"><center>
+<font size=+2>~&nbsp;<font color=blue>Reversing webferret's
+advertisement
+banners</font>&nbsp;~<br>
+by fravia+
+</font><br>~The dimensional reversing approach & the 'slack'
+trick~<br><br>
+<a href="remobann.htm"><IMG SRC="images/bilivasi.jpg"
+alt="remobann.gif"
+ALIGN=BOTTOM WIDTH=353 HEIGHT=124 BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>Courtesy
+ of <font color=blue>[</font><a
+href="http://www.searchlores.org">searchlores.org</a><font
+color=blue>]</font> ~ Part of the <a href="remobann.htm">remove
+banners</a> section
+of the <a href="antiadve.htm">anti-advertisement</a> lab.
+<hR>
+</center>
+
+<font size=+3>
+Reversing webferret's advertisement banners<br></font>
+<br>~The dimensional reversing approach & the 'slack' trick~<br>
+<font size=+2>by fravia+</font><br>Started in December 2000<br>
+<br><br>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Intro</font></center></td></tr></table></center>
+<br>
+<font size=+1>This is a 'multi-path' approach to removing
+webferret's (and -I hope- <u>any other</u> advertisement infested
+software)
+<font color=blue> ad-banners</font>, targeted for searchers and
+conoisseurs that didn't reverse  much software before and
+that
+want to learn some simple software reversing techniques ('cracking
+for newbies'
+continued, eheh)... note that I'm working on this on my (scarce)
+spare time, so there will be
+additions, and modifications, and new 'hooks', and corrections
+anytime I'll find them and reckon they could be of
+some value for my readers.<br>The holy purpose is as always to
+destroy advertisements and
+at the same time to empower people to modify the software they use
+to suit their own needs (transforming -sortof- the horrible
+windoze 'proprietary' and 'crook_prone' system into a
+gnu/linux-type freeware system).<br>This is version <font
+color=blue>dec26_2000</font> of this essay.
+<hr width=66% align=left>
+
+I wish to show all readers some very simple techniques to get rid
+of ANY
+advertismeent embedded in any software application whatsoever.
+Moreover I want
+to
+show you a technique
+so simple (the 'dimensional' approach) that even those among you
+that don't understand much
+about assembly and source code and software reversing techniques
+will be
+nevertheless able to get rid of embedded ads should they wish so.
+<br><br>For this reason this short essay will
+delve inside
+some codesnippets that appear to be very common inside all
+programs infested by
+advertisements.<br>
+I hope I'll be able to show you SEVERAL ways to tackle (and solve)
+the ad-problem.
+<br><br>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Tools</font></center></td></tr></table></center>
+<br>
+You'll need
+following tools:<ul>
+
+<li><font color=gray>first of all</font>: a good 
+disassembler...<br>
+either wdasm 8.9 (that you'll be able to <a
+href="nomomen.htm">find</a> all over
+the web) or <font color=blue>[</font><a
+href="zipped/idafree.zip">IDA!</a><font color=blue>]</font>
+idafree.zip, 12.522.567 bytes, Ilfak's masterpiece,
+ version 3.85B, by <a href="http://www.datarescue.com">Ilfak
+Guilfanov & Pierre
+ Vandervenne</a>
+that you'll find all over the web or download from my tools
+page.<br>Note that the commercial bastards and their political
+lackeys will soon forbid such powerful tools, so download them and
+learn how to use
+them while you are still in time...<br>You'll use the disassembler
+in order to disassemble your targets (duh)<hr width=44%
+align=left></li>
+
+<li><font color=gray>zwote</font>: a good  hexeditor...<br>
+for instance
+<font color=blue>[</font><a
+href="zipped/hexwo250.zip">hexworkshop</a><font
+color=blue>]</font> hexwo250.zip, 1101082 bytes:
+Hex workshop version 2.50, by <a
+href="http://www.bpsoft.com">BreakPoint
+Software</a>.<br>Note that NEWER VERSIONS abound on the web... but
+why should
+you use a newer version
+when you already have a good working and regged old one?
+<br>You'll use the hexeditor in order to modify the code of your
+targets (once you have understood what you should modify)<hr
+width=44% align=left></li>
+
+</li>
+<li><font color=gray>Drittens</font>: a good texteditor (may I
+suggest
+ultraedit?)
+<font color=blue>[</font><a
+href="zipped/uedit310.zip">ultraedit</a><font
+color=blue>]</font> uedit310.zip,
+574641 bytes: Ultraedit version 3.10, by <a
+href="http://www.ultraedit.com">Ian
+Mead</a>: incredibly powerful,
+this is an old, yet powerful enough version, you may be interested
+to read a
+very old essay
+of mine on the limits of its  <font color=blue>[</font><a
+href="ultrae2.htm">protection</a><font color=blue>]</font>.
+<br>Note that NEWER VERSIONS abound on the web... but why should
+you use a newer
+version
+when you already have a good working and regged old one?
+<br>You'll use the texteditor in order to search and comment the
+dead listing of your targets (and for a zillion other purposes)<hr
+width=44% align=left></li>
+</li>
+
+</ul>
+<br><br>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>@ work!</font></center></td></tr></table></center>
+<br>
+
+OK, let's start and let's reverse webferret... as an added
+advantage of this
+'reversing
+approach', the big industry that
+was developing such indelicate pushing of
+'advertisement eye-sore' through socalled 'free' software (I
+frankly don't know
+how many
+million dollars they were supposed to make with such dirty deeds)
+is now
+eventually doomed... at least I hope, eheh... Reverse engineers as
+medieval
+knights,
+helping unaware
+fellow humans in peril. I love the picture. Actually, come to
+think of it...
+more wizards than knights are we... maybe.<br><br>
+Download in order to start <a
+href="zipped/ferre302.zip">webferret</a>, a
+'free' software bot that you can (and should: it works very well)
+use to search
+the
+web. It is a very simple bot, yet at times useful even for
+experienced
+searchers.
+Anyone can download for 'free' this
+ software, but it has alas <u>an horrible bug</u>: a small window
+opens inside
+it
+and pushes awful advertising banners into
+your eyes until they get sore.<br>Moreover -and that's the
+<u>real</u> problem-
+all similar appz use their
+banners ALSO in order to track your habits:
+the clicking patterns of those among you that are really so stupid
+as to fall
+for  advert banners
+are of course registered, grepped, 'consolidated' and
+subsequently, of course,
+<u>sold</u> to third parties.
+<br><br>
+How would you proceed to 'ameliorate' this appz?<br>There are so
+many ways...
+a very simple one that I want to explain you here,
+is through the <u>DIMENSIONS</u> of the offensive banner.<br>
+Look at the window dimensions: 63 height * 473 pixels width. (You
+can use
+either softice's hwnd -x command or a good ruler like sruler, or
+simply
+the <a href="zipped/customiz.zip">customizer</a>
+itself).<br>
+The two decimal numbers 63 & 473 translate into 0x3F and Ox1D9 in
+hexadecimal.
+<br><br>Since these two parameters must be pushed somewhere inside
+the code, we
+proceed
+to disassemble our target (use either wdasm or <font
+color=blue>[</font><a
+href="zipped/idafree.zip">IDA!</a><font color=blue>]</font>)
+and then we examine the 'dead listing' of the disassembled
+code.<br>
+What are we looking for? First of all we "should" find somewhere
+inside
+the code BOTH dimensions pushed, a 'long' push is 68xxxx with
+inverted notation
+and a 'short' push is 6ax, therefore we'll look
+for:<br>
+a 68D9010000    = push 00000<font color=red><u>1D9</u></font><br>
+and <br>
+a 6A3F push 0000003F <br>
+of course, since these parameters are to be BOTH pushed in order
+to set the
+width and height of
+a given window, they
+should be very near to each other.<br>Let's begin and
+ fetch how often our width and height are pushed inside the code
+ueberhaupt...<br>
+Let's begin with the width <font color=red><u>1D9</u></font> (you
+should always
+begin with
+the most 'unprobable' value, in order to
+avoid wading through too many duplicates):<br>
+how strange...nowhere a 68D9010000 (push 00000<font
+color=red><u>1D9</u></font>)
+is to be found... <br>
+but there are nevertheless <u>seven</u> 6A3F push 0000003F... at
+the following
+locations...
+41E0DF, 46DA8A, 474320, 4865F0, 49375F, 493BE9
+<br><br>
+
+so what are we to do?<br>We are going to use the 'slack' zen
+method when
+reversing programs... if you
+don't find a given value try the values that 'come near' to it :-)
+<br><br>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>The 'slack'
+method</font></center></td></tr></table></center>
+<br>
+Let's try for 'slack' values... many years ago, while reversing
+sruler, I was
+discussing with my friend Frog's print the
+importance
+of pixel  dimensions (and colors) used in windows when sniffing
+dead listing for reversing purposes. We
+noticed that such dimensions (and colors) are
+ frequently used in a 'slack' way... often enough programmers seem
+to be
+unsure of what happens exactly
+whem the
+compiler will assemble their graphical indications and therefore
+'allow' some
+marge
+(mostly one pixel), often enough compilers seem to ignore the
+indications given
+by
+programmers and 'accomodate' the code&nbsp;:-)<br>
+For this reason, even if our target, the 'advertisement window'
+is  <font color=red><u>1D9</u></font> width per 3F height, we'll
+nevertheless search for pushes that are 1d8, <font
+color=red><u>1D9</u></font>
+and 1da (for width) and 3e, 3f and 40 (for height)... just in
+case...
+Here we go:<br><br><font color=blue>
+68D8010000    = push 000001D8 (472) .... three occurrences:
+46CD68, 46DA7D,
+47430C, <br>
+68D9010000    = push 00000<font color=red><u>1D9</u></font> (473)
+.... no
+occurrence whatsoever<br>
+68DA010000    = push 000001DA (474) .... no occurrence
+whatsoever<br>
+6A3E          = push 0000003E (62)  .... two occurrences: 4239DF &
+496121<br>
+6A3F 	      = push 000000<font color=red><u>3F</u></font> (63) 
+.... six:
+41E0DF, 46DA8A, 474320, 4865F0, 49375F, 493BE9<br>
+6A40          = push 00000040 (64)  .... two occurrences: 40108C &
+47435D, <br>
+</font>
+<br>
+Zen-cracking? No, no... this is an incredibly easy approach, isn't
+it?<br>
+We don't have any push 1d9, we don't have any push 1da... nosser!
+WE HAVE ONLY
+THREE LOCATIONS FOR WIDTH 472! Which therefore <u>must be</u> the
+allowed width
+for our -soon to be destroyed- advertisement
+window. There are no 473 and no 474 pixels inside this code
+(Ox<font
+color=red><u>1D9</u></font> and 0x1da), so let's just feel the
+code snippets
+around
+472 (1d8)... since we do not have nothing else even remotely
+approaching the
+width we are
+seeking... You dig it? No 1DA, no 1D9... therefore 1D8!<br>
+Whereas for the advertisement window 'exact height' is
+respected... (63 pixels,
+i.e. 0x3f)
+we have various possible locations inside our 'dead listed' code:
+1,6,7,8,9,9
+(i.e. 9 twice)
+for 6A3F
+plus, eventually 2 & 9 and 0 and 7 'slacking' 6A3F and hence
+allowing for both
+6A3E and 6A40<br>
+And <u>therefore</u> the only possible bingo combinations must of
+course regroup
+BOTH
+width and height
+and are hence the following two locations (I know you understand
+this, now):
+<ul><li>width @ 46DA7D and height @ 46DA8A
+</li><li>width @ 47430C and height @ 474320</li></ul>
+so we must concentrate on BOTH these 6 and 7 addresses, eh (uh?
+you follow me?,
+this is just
+deadlisting,
+we DO NOT NEED TO DEBUG ANYTHING... just a pencil and a brain...)
+let's have a look at both location areas right now,
+together...<br><hr>
+<font size=+2><b>THE 6 snippet (in the reality
+46DA...)</b></font><pre>
+:6CD5E E82546FFFF    call 61388
+:6CD63 59            pop ecx
+:6CD64 84C0          test al, al
+:6CD66 7463          je 6CDCB  ;a jump just before the ad-push... eheh
+:6CD68 68D8010000    push 1D8  ;ALTERNATIVE 1: this is one 
+			       ;less than ;<font color=red><u>1D9</u></font>=473, eh...
+			       ;let's try setting this
+			       ;value to zero...  i.e. 6800000000,
+			       ;push zero ads, ahah!
+:6CD6D E8B225FBFF    call 1F324
+:6CD72 59            pop ecx
+:6CD73 898520FFFFFF  mov dword ptr [ebp+FFFFFF20], eax
+:6CD79 6A3F          push 3F      ;this one is definitely 3F=63, eh
+:6CD7B E8F425FBFF    call 1F374  ;what are we calling here?
+:6CD80 59            pop ecx
+:6CD81 89851CFFFFFF  mov dword ptr [ebp+FFFFFF1C], eax
+:6CD87 8D93AC000000  lea edx, dword ptr [ebx+AC]
+:6CD8D 52            push edx
+:6CD8E 6A00          push 0
+:6CD90 8B8D1CFFFFFF  mov ecx, dword ptr [ebp+FFFFFF1C]
+:6CD96 51            push ecx
+:6CD97 8B8520FFFFFF  mov eax, dword ptr [ebp+FFFFFF20]
+:6CD9D 50            push eax
+:6CD9E 6A00          push 0
+:6CDA0 6A00          push 0
+:6CDA2 8B93BC020000  mov edx, dword ptr [ebx+2BC]
+:6CDA8 8B8AEC010000  mov ecx, dword ptr [edx+1EC]
+:6CDAE 51            push ecx
+:6CDAF 8D83F8040000  lea eax, dword ptr [ebx+4F8]
+:6CDB5 50            push eax
+:6CDB6 E81DD3FAFF    call 1A0D8
+:6CDBB 83C420        add esp, 20
+:6CDBE 8D93F8040000  lea edx, dword ptr [ebx+4F8]
+:6CDC4 52            push edx
+:6CDC5 E86ED4FAFF    call 1A238
+:6CDCA 59            pop ecx
+
+:6CDCB 53            push ebx
+:6CDCC E8578A0100    call 85828
+:6CDD1 59            pop ecx
+:6CDD2 53            push ebx
+:6CDD3 E8C8750000    call 743A0
+
+</pre><hr><font size=+2><b>THE 7 snippet (in the reality 4743...)</b></font>
+(samo samo)<pre>
+:74302 E881D0FEFF  call 61388
+:74307 59          pop ecx
+:74308 84C0        test al, al
+:7430A 742F        je 7433B   ; avoid annoying: set to jmp (EB2f)
+:7430C 68D8010000  push 1D8   ; push the width once more
+:74311 E80EB0FAFF  call 1F324
+:74316 8BD8        mov ebx, eax
+:74318 A178B14C00  mov eax, dword ptr [CB178]
+:7431D 03C0        add eax, eax
+:7431F 59          pop ecx
+:74320 6A3F        push 3F   ; push the height
+</pre><hr>
+
+<i>Quod erat demonstrandi</i>... an ugly advertisement
+extirpated... cracking it
+through its pixel dimensions... it is now extremely easy to nuke
+the ad-windows, but let's
+delve deeper inside the code... the knowledge we'll gain can turn
+useful on other, different
+targets...
+
+<br><br>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Many approaches</font></center></td></tr></table></center>
+<br>
+Let's see how many possible approaches we have.
+<br><ol><li>
+First of all, first snippet, reduce width to zero
+<pre>
+:6CD68 68D8010000    push 1D8
+:6CD6D E8B225FBFF    call 1F324
+</pre>
+let's seek for <BR>68<U>D801</U>0000E8B225FBFF inside the code and
+change two
+bytes to<BR>
+68<font color=blue>0000</FONT>0000E8B225FBFF<br>Yep, no more
+ads...<br>
+</li>
+<li>
+second, first snippet, reduce height to zero
+<pre>
+:6CD73 898520FFFFFF  mov dword ptr [ebp+FFFFFF20], eax
+:6CD79 6A3F          push 3F    
+</pre>
+let's seek for <BR>898520FFFFFF6A<u>3F</u> inside the code and
+change a single
+byte to<BR>
+898520FFFFFF6A<font color=blue>00</font><br>Yep, no more
+ads...<br>
+</li>
+
+<li>
+third,  first snippet, avoid alltogether
+<pre>
+:6CD64 84C0          test al, al
+:6CD66 7463          je 6CDCB
+:6CD68 68D8010000    push 1D8    
+</pre>
+let's seek for <BR>84C0<u>74</u>6368D8010000  inside the code and
+change a
+single byte to<BR>
+84C0<font color=blue>EB</font>6368D8010000 (jump always)<br>Yep,
+no more
+ads...<br>
+</li>
+<li>
+fourth,  first snippet, a small consideration
+<pre>
+:6CD5E E82546FFFF    <font color=blue>call 61388</font>
+:6CD63 59            pop ecx
+:6CD64 84C0          test al, al
+:6CD66 7463          je 6CDCB
+:6CD68 68D8010000    push 1D8   
+</pre>
+well... ahah! There's a call to 61388 short before the pushing of
+the width of
+the ad-window, if al=0 on return, then no ad-window<br>
+Let's have a look at this call, and let's call everything that
+will
+carry back an al=0 GOOD and everything that will bring back an
+al=1 EVIL:
+<pre>
+:61388 55      		push ebp
+:61389 8BEC    		mov ebp, esp
+:6138B 53      		push ebx
+:6138C 803DE4CB4D0000  	cmp byte ptr [004DCBE4], 00
+:61393 8B5D08  		mov ebx, dword ptr [ebp+08]
+:61396 7529    		jne 613C1     ; exit with al=[004DCBE5]
+:61398 83BBEC01000000  	cmp dword ptr [ebx+000001EC], 0
+:6139F 740B    		je 613AC      ; good
+:613A1 53      		push ebx
+:613A2 E8D9FFFFFF      	call 61380    ; this evil_routine will
+:613A7 59      		pop ecx       ; smash 1 into al
+:613A8 84C0    		test al, al
+:613AA 7504    		jne 613B0     ; go to set_evil
+
+:613AC 33C0    		xor eax, eax  ; set_GOOD
+:613AE EB05    		jmp 613B5     ; no evil
+
+:613B0 B801000000      	mov eax, 1    ; set_EVIL
+:the_exit_part
+:613B5 A2E5CB4D00      	mov byte ptr [004DCBE5], al
+:613BA C605E4CB4D0001  	mov byte ptr [004DCBE4], 01
+
+:613C1 A0E5CB4D00      	mov al, byte ptr [004DCBE5]
+:613C6 5B      		pop ebx
+:613C7 5D      		pop ebp
+:613C8 C3      		ret
+</pre>
+Well, there's a lot to understand here: the first thing that is
+evident is the
+importance of
+the two data_locations [004DCBE4] and [004DCBE5] that we'll call
+the
+'do_bother' and the
+'holder' flags. Basically if we have the do_bother
+flag set to 1 (false),
+we don't bother: we'll just fetch the holder value for our al
+register (whatever it has
+been set previously:
+either 0 or 1) and we'll return back with it.
+<br>
+On the other hand, if the do_bother value is true, i.e. zero, we
+proceed. What happens now? First if the flag at [ebx+1EC] is zero
+(i.e. true)
+then everything is fine, thankyou, and we don't need ads: we'll
+get without ado
+our set_good value and
+that's it.<br>
+On the other hand, if that [ebx+1EC] flag is not zero (i.e. false)
+we get
+no
+chance whatsoever: Alas! the evil_routine at 61380 will make
+absolutely sure that you
+get
+an al=1 (false) smashed into your al register.
+Note that this is all 'nonsense code', since if a real programmer
+had programmed this in
+assembly, he would have just had a jmp to 613B0, without no need
+whatsoever to use
+a special silly routine to load 1 (false) into al.<br>Of course we
+can take advantage of
+this nonsense compiler programming...
+what happen if we just nop (no_operation) the last jump '7504'
+meant to avoid the
+follwing 'set_good'
+snippet? Bingo! The codeflow will fall through to the good value!
+
+<pre>
+:613A7 59      		pop ecx
+:613A8 84C0    		test al, al
+:613AA 7504    		jne 613B0     ;go to evil
+
+:613AC 33C0    		xor eax, eax  ; set_GOOD
+:613AE EB05    		jmp 613B5     ; no evil
+</pre>
+let's seek for <BR>5984C0<u>7504</u>33C0EB05 inside the code and
+nop two
+bytes to<BR>
+5984C0<font color=blue>9090</font>33C0EB05<br>Yep, no more
+ads...<br>
+<br>
+</li>
+</ol>
+Great fun, isnt'it?
+
+<hr><center><i>
+This is still in fieri, of course, therefore if your info or
+advices differs, or
+if your findings
+are different, by all means send them over, I'll add and change...
+there's still so much to do: for instance webferret automatically
+connects and adverts when there are new updates (a typical <a
+href="malware.htm">malware<a> habit), moreover it is fairly easy
+to change the urls webferret should connect to per menu... try
+substituting the hexstring DF998-DFACA, original...
+(687474703A2F2F786C696E6B2E7A646E65742E636F6D2F6367692D62696E2F746
+57869732F786C696E6B2F707365617263682F7365617263682E68746D6C0068747
+4703A2F2F7777772E7A646E65742E636F6D2F00687474703A2F2F7777772E7A646
+E65742E636F6D2F7A646E6E2F00687474703A2F2F7777772E7A646E65742E636F6
+D2F646F776E6C6F6164732F00687474703A2F2F7777772E67616D6573706F742E6
+36F6D2F7A646E65742F696E6465782E68746D6C00687474703A2F2F7777772E7A6
+46E65742E636F6D2F726576696577732F00687474703A2F2F7777772E7A646E657
+42E636F6D2F73686F7070696E672F00687474703A2F2F7777772E7A646E65742E6
+36F6D2F74656368696E666F626173652F00687474703A2F2F7777772E7A6472657
+7617264732E636F6D2F)<br>with 'my own' hexstring<br>
+ (687474703A2F2F7777772E7365617263686C6F7265732E6F72672F6D61696E2E
+68746D00687474703A2F2F6672617669612E6F72672F6D61696E2E68746D006672
+617669612E6F72672F696E6465782E68746D6C00687474703A2F2F7777772E7365
+617263686C6F7265732E6F726700687474703A2F2F7777772E6672617669612E6F
+72672F746F6F6C732E68746D00687474703A2F2F6672617669612E6F72672F7265
+616C696372612F7265616C696372612E68746D0000687474703A2F2F6672617669
+612E6F72672F635F66697273742E68746D00687474703A2F2F6672617669612E6F
+72672F616476616E6365642E68746D00687474703A2F2F7365617263686C6F7265
+732E6F72672F667572746865722E68746D00687474703A2F2F7777772E73656172
+63686C6F72652E6F7267) for instance :-)</i></center>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="remobann.htm"><img
+SRC="images/antiadv.gif"
+ALT="antiadv" BORDER=0
+height=43 width=114 align=BOTTOM></a><br>Back to remobann<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+<IMG align=center valign=center width=500 height=4
+SRC="https://searchlores.nickifaulk.com/dot_peri.gif"><bR><IMG align=center valign=center width=5
+height=40 SRC="https://searchlores.nickifaulk.com/dot_peri.gif">
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<IMG align=center valign=center width=5 height=40
+SRC="https://searchlores.nickifaulk.com/dot_peri.gif"><br><!-- how to search the web, by fravia+,
+signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

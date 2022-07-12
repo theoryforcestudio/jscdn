@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>google_ajax.htm:  Live Translation mask</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content= "This site teaches basic and advanced search techniques for people interested in de-streaming any kind of information on the web. Here are informations, documents, links, etc. related to de-streaming">
+<meta name="keywords" content= "searching, de-streaming, combing, klebing, how to search, how to de-stream, de-streaming techniques, hints and tips for de-streaming, How do I catch a stream?, Advanced Internet de-streaming, How do I de-stream?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright" content="Copyright(c) 1952-2032 fravia+">
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("language", "1");
+
+	function lang_code(){
+	var l = document.getElementById("l");
+	
+	var lc = l.options[l.selectedIndex].value;
+	
+	return lc
+	}
+
+    function translate() {
+    
+	var mytext= document.getElementById("mytext").value;
+	//alert(mytext);
+	var lc = lang_code();
+          google.language.translate(mytext, "en", lc, function(result) {
+        if (!result.error) {
+          var container = document.getElementById("translation");
+          container.innerHTML = result.translation;
+        }
+      });
+    
+    }
+    //google.setOnLoadCallback(initialize);
+
+    </script>
+  </head>
+<body bgcolor="#CCCCCC" text="#001010" link="#214131" alink="#405040" vlink="#8850AA">
+<center>
+<table border="1" width=88%><TR><TD width="37%"><FONT size=-1 align="left">&nbsp;  <A target="_blank"  
+      href="index.html">portal</A> &#8594; <a target="_blank" href="machine_translation.htm">machine translation</a>  &#8594;  
+      google_ajax.htm</FONT>
+<TD><div align="center">&nbsp;You'r deep inside <a href="http://www.searchlores.org">searchlores</a>&nbsp;</div></TD>
+<TD width="37%" align=right><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</TD></TR></table>
+<br>
+
+<font size="+3" color="#0000FF">Google Ajax translation mask</font><br>
+<img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="8" hspace="0" vspace="0" width="348"><br>
+
+<i><font color="#0000FF">From English to (almost) whatever</font></i><br>
+Albanian&nbsp;&nbsp;Arabic&nbsp;&nbsp;Bulgarian&nbsp;&nbsp;
+Catalan&nbsp;&nbsp;Chinese (Simplified)&nbsp;&nbsp;Chinese (Traditional)&nbsp;&nbsp;Croatian-Serbian&nbsp;&nbsp;Czech&nbsp;&nbsp;
+Danish&nbsp;&nbsp;Dutch&nbsp;&nbsp;Estonian&nbsp;&nbsp;Filipino&nbsp;&nbsp;Finnish&nbsp;&nbsp;French&nbsp;&nbsp;Galician&nbsp;&nbsp;
+German&nbsp;&nbsp;Greek&nbsp;&nbsp;Hebrew&nbsp;&nbsp;Hindi&nbsp;&nbsp;Hungarian&nbsp;&nbsp;Indonesian&nbsp;&nbsp;Italian&nbsp;&nbsp;
+Japanese&nbsp;&nbsp;Korean&nbsp;&nbsp;Latvian&nbsp;&nbsp;Lithuanian&nbsp;&nbsp;Maltese&nbsp;&nbsp;Norwegian&nbsp;&nbsp;Polish&nbsp;&nbsp;
+Portuguese&nbsp;&nbsp;Romanian&nbsp;&nbsp;Russian&nbsp;&nbsp;Serbian-Croatian&nbsp;&nbsp;Slovak&nbsp;&nbsp;Slovenian&nbsp;
+&nbsp;Spanish&nbsp;&nbsp;
+Swedish&nbsp;&nbsp;Thai&nbsp;&nbsp;Turkish&nbsp;&nbsp;Ukrainian&nbsp;&nbsp;Vietnamese
+<br>
+(if you want to translate something <b>INTO</b> english, use the <a href="machine_translation.htm#gootra">google.translate</a> mask instead)
+<br><br>
+  <body onload="translate()">
+	<form id=myform>
+
+	Enter text:<br />
+	<textarea id=mytext cols=50 rows=3 onkeydown='translate()'>I sought a lot of strange things on the web</textarea>
+	<br>
+	<br>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<i>Convert your text to</i>: 
+	<select name="l" id="l" onchange="translate();">
+	<option selected value="en">Select a Language...</option>
+	<option  value="sq">Albanian</option>
+	<option  value="ar">Arabic</option>
+	<option  value="bg">Bulgarian</option>
+	<option  value="ca">Catalan</option>
+	<option  value="zh-CN">Chinese (Simplified)</option>
+	<option  value="zh-TW">Chinese (Traditional)</option>
+	<option  value="hr">Croatian (Serbian)</option>
+	<option  value="cs">Czech</option>
+	<option  value="da">Danish</option>
+	<option  value="nl">Dutch</option>
+	<!-- option  value="en">English</option -->	
+	<option  value="et">Estonian</option>
+	<option  value="tl">Filipino</option>
+	<option  value="fi">Finnish</option>
+	<option  value="fr">French</option>
+	<option  value="gl">Galician</option>
+	<option  value="de">German</option>
+	<option  value="el">Greek</option>
+	<option  value="iw">Hebrew</option>
+	<option  value="hi">Hindi</option>
+	<option  value="hu">Hungarian</option>
+	<option  value="id">Indonesian</option>
+	<option  value="it">Italian</option>
+	<option  value="ja">Japanese</option>
+	<option  value="ko">Korean</option>
+	<option  value="lv">Latvian</option>
+	<option  value="lt">Lithuanian</option>
+	<option  value="mt">Maltese</option>
+	<option  value="no">Norwegian</option>
+	<option  value="pl">Polish</option>
+	<option  value="pt">Portuguese</option>
+	<option  value="ro">Romanian</option>
+	<option  value="ru">Russian</option>
+	<option  value="sr">Serbian (Croatian)</option>
+	<option  value="sk">Slovak</option>
+	<option  value="sl">Slovenian</option>
+	<option  value="es">Spanish</option>
+	<option  value="sv">Swedish</option>
+	<option  value="th">Thai</option>
+	<option  value="tr">Turkish</option>
+	<option  value="uk">Ukrainian</option>
+	<option  value="vi">Vietnamese</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+<input type=button onclick='translate();' value='TRANSLATE' />
+ 
+   <br>
+    <br>
+    <div style="border:solid 1px black;width:410px;height:100px;color:black;background-color:#C6E7C6" id="translation"></div>
+
+
+<pre>
+
+
+
+
+
+
+
+</pre>
+<center>
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>(c) 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"http://searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, revealed and
+reviled
+<br><br><font size="-1">Page optimised for <a href="tuttiope.htm">Opera</a>. Other browsers? Couldn't care less.</font>
+</center>
+</center>
+</body>
+</html>

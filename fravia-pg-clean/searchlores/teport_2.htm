@@ -1,0 +1,141 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>teport_2.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ teport_2.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 2000 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to malware"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Teleport Pro 1.29, malware galore&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Faulpelz<BR></FONT>published at fravia's searchlores in
+  May 2000<br>
+  <hr width=44%>Slightly edited by fravia+<hr width=44%></center>
+  <hr>
+  See also Noos' <a href="noos_tel.htm">Delving deeper into Teleport Pro 1.29</a> (October 2000) and 
+  Faulpelz's <a href="teport_3.htm">Teleport Pro V1.29 (Build 1107)</a> (January 2001) which <u>replaces and completes</u> 
+  this essay.
+  <hr>
+    
+  <br><center>
+ <font size=+3>&quot;Teleport Pro 1.29, malware galore&quot;<bR>
+  </font>
+    <font size=+1>
+  <br>by Faulpelz<BR></center><P> 
+    </font><font size="3">
+
+Foreword:<br>
+This is not a 'real' essay, just something I discovered. Maybe this
+is the start of another new section on fravia's nice new site - I don't know.
+The importance of this essay does not lie in the detail I discovered,
+but in the typical problem you have nowadays, everytime you conntect to
+the internet: You'll never know what happens in the background...
+(and this applies to each Software/Process that is running on your windoze System)<br>
+So, it is nowdays even more important to use some 'tools of our trade'
+before we go online...<br>Never trust any tool/application, it may jolly well try to collect
+data about you and your interests! Funny enough that not only the States, but 
+even the Europian Union is
+now trying to criminalize everybody who uses/publishes the 'so called'
+cracking/reversing/hacking tools.<br>If you ask me I think this is very paradox...
+They should criminalize the commercial bastards who are trying to get every
+bit of your personal Data, not the wondrous tools which are usefull to defend yourself against 
+snoopers and spies!<br><br>
+The 'logic' they follow is a very dangerous one: 'If you don't give us your data you have something
+to hide and the one and only reason for this is that you are a criminal...' <P> Essay:
+Subject: Teleport Pro 1.29 ( <A HREF="http://www.tenmax.com"><FONT COLOR="BLUE">http://www.tenmax.com</FONT></A> <P> Whenever I install/test new software on my System I do some 'security'
+checks - especially if the software uses an internet connection
+(or to be more precise if it opens any sockets/ports...)
+I discovered that Teleport Pro 1.29 connects to www.tenmax.com
+while you are downloading/mirroring another site. Teleport Pro
+does not send any data to www.tenmax.com directly (as far as I
+know...) but it requests the file ROBOTS.TXT from www.tenmax.com
+and sends in the header of the request 'HOST: thesiteyouaredownloading'
+I would call this indirect sniffing, because this way they know who
+you are (at least they get your IP) and what site you are downloading/mirroring
+and I bet this is more information than you would ever give tenmax voluntary...
+They just have to analyse their logfile/s at http://www.tenmax.com and they have many
+interesting data about the Teleport Pro Users. (I don't think that I have to
+tell you what you can do with logfiles, if you know how to analyse them...)
+A quick solution to block the sniffing code is to simply add
+&quot;127.0.0.1 www.tenmax.com&quot; to your windows HOSTS file... (don't forget the www part!)<P> Currently I don't have the time to reverse Teleport Pro, but it MAY be
+usefull to check if there are other hidden 'features' in this tool or
+not, so if YOU have the time/knowledge to analyse the code of Teleport
+Pro then you should do so and send your findings to Fravia+.<br>I am quite
+sure he will publish them or add them to this small essay. Even if you
+find nothing else that is suspicious, you should let him know. I
+will take a closer look at Teleport Pro in the future, for now I
+just can say: Watch out! <P> PS: It should be interesting to check what happens if 
+you use a Proxy,
+    mirror a PW-protected Site, Firewall etc. There MAY be some routines
+    that are only activated after certain events etc., so until this tool
+    is not completly reversed nearly anything COULD happen to you if you use
+    Teleport - I don't know actually everything: this is an essay that sets a 
+starting point for further developments, other reversers are needed<br>
+I just wrote what I have discovered: 
+    everything else is just speculation... Anyway, as I said above this
+    applies not only to Teleport! Nearly every software or 'agent'
+    (e.g. Winamp) should nowadays be used with care - I am quite sure that in the
+    near future more and more Software will hide  routines 
+     trying to collect as much data about you as they can.
+<br>Malware reversing is MORE AND MORE IMPORTANT, please concentrate on that your 
+reversing efforts: only crackers can save the world from the commercial evil spammers! 
+<P> &quot;I believe in coincidence. Coincidences happen every day. But I don't trust
+ coincidences.&quot;  
+
+<br><font color=gray>- 'Faulpelz', May 2000</font><hr>
+ <bR></font>
+    <font size=+1><center> 
+    <a href= "malware.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+
+
+
+
+

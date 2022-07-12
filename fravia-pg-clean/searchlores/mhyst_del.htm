@@ -1,0 +1,369 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>deliverer.htm : Deliverer: Distributed Framework for Bots</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced web searching, serching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">  
+<link rel="home" title="thiefsystems" href="http://thiefsystems.org/"/>
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<table><tr><td><center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to Advanced<br></center></td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><center>
+
+<font color=navy size=+5>~ Deliverer: Distributed Framework for Bots ~</font><br> 
+by <font color=navy size=+2><u>Mhyst</u> </font> 
+</td></TR></table>
+
+
+<br>
+<br><hr width=44%><br>Originally published @ 
+<a href="http://www.searchlores.org">searchlores</a> in November 2004
+&nbsp;&nbsp;&nbsp;  Version 1.00, Updated in <font color=blue>November</font> 2004
+<br><br>
+<br>
+ <hr width=44%>
+
+<br><i>Mhyst offers here, to every reader, a quite powerful 'queuer' bot, a sort of 'sandwich' for java small snippet bots that you may want 
+to write yourself and that 
+<font color=blue>deliver</font> will schedule and send around. This is <u>not an essay for newbyes</u>.<br>Sourcecode is provided. I am confident that whomever will take the time to study (and implement) this will for sure 
+learn quite a lot of things about (java) bots. I hope that your feedback will flow, and that this first step will span 
+a lot of new small searching bots.</i>
+
+ <hr width=44%> </center>
+
+<br>
+
+
+<H1>Deliverer: Distributed Framework for Bots</H1>                <font size=+1>
+
+
+
+
+
+
+	<!--<h1><span class="logo">thiefsystems</span>xi<sup>2</sup> : <span>object / verb</span></h1>-->
+
+</center>
+	<h2>A first draft</h2>
+
+
+	<!--<h3>Still to do</h3>
+	<ol>
+		<li><p>Come up with some rules for displaying code within prose.</p></li>
+		<li><p>Add links to the appropriate manual pages when a function is first talked about.</p></li>
+		<li><p>Get someone with a less technical background to read over this and makes sure it's understandable.</p></li>
+		<li><p>Provide a zipped download of the full source so people don't have to cut and paste.</p></li>
+	</ol>-->
+
+	<h3>Introduction</h3>
+
+	<p>This document is more a Request For Comments than a essay itself.
+	   Suggestions and criticism are welcome.</p>
+
+	<p>This essay is for everybody, but in order to create bots following the
+	   paradigm explained here you need some knowledge on Java.</p>
+	
+	<p>Broadly speaking, a bot is a program coded on any programming language
+	   provided with some "intelligence" allowing him to perform some "human"
+	   tasks. For instance, visiting a webpage and registering a new account.
+	   Other example would be to query several search engines, to mix their
+	   outputs; possibly ordering it, removing duplicates and showing the
+	   results.</p>
+	
+	<p>Generally all the code runs on the same machine. Let's imagine that
+	   some or every part of the code could be executed on different
+	   machines among a netword (LAN, Internet, mixed). That can be true with
+	   Deliverer, a framework for distributed bots.</p>
+	<p></p>
+	
+	<h3>How it works</h3>
+	
+	<p>Deliverer is a Java application that we have to "install" on every
+	   machine we want to run our code. Our bot's modules must be written
+	   extending a Java class called Translator as follows:</p>
+	
+<pre>
+<code>
+public class BotModule01 extends julk.net.deliver.Translator
+{
+	public boolean translate (String user, String service,
+                                  String command, WorkResult owr)
+	{          
+	   /** Parameters
+	    *  -----------
+	    *  User: Contact address (email, IP, etc)
+	    *        of the person who sent the request.
+	    *  Service: Our module name.
+	    *  Command: Exact command requested (with
+	    *           service and parameters).
+	    *  Owr: Results from the previous module.
+	    *       We can retrieve it opening a file
+	    *       called "owr.getName()".
+	    */
+	    
+	   try {
+	      /** Here we'll write our code.
+	       *  We would process the file given
+	       *  in owr parameter, or not.
+	       *  We'll put the results of our code
+	       *  in a file called "botModule01Result.dat"
+	       *  or something like that.
+	       */
+	                                                         
+	      /** Now that we finished our work here,
+	       *  we have to declare our results, 
+	       *  so that can be passed to the next
+	       *  module as owr parameter.
+	       */
+			WorkResult wr = 
+			new WorkResult("botModule01Result.dat",false);
+			setWorkResult(wr);
+			return true;  //All went fine
+		} catch (Exception e) {
+			return false; //Some error occurred.
+		}
+	}
+}
+</code>
+</pre>	
+   
+   <p>We can create as much modules as we need or want by this procedure.
+      The following will be compiling our new modules and copying them to
+      the desired machines (among those with a running Deliverer).
+      Remember to include the new classes on Java CLASSPATH.</p>
+
+   <p>Once we have all the code ready, how Deliverer manages it?</p>
+
+   <p>Deliverer was developed thinking about paralel working, balancing
+      work ammount along the network, connecting processes transparently, etc.
+      There are, probably, many ways to get it, but I thought of a "queue"
+      model, and it's the way it works today. Each module is managed
+      by a queue. And we can have as much queues as modules, or more queues
+      than modules (better choice).</p>
+      
+   <p>Deliverer can manage three kind of queues: local queues connected with
+      a module, local cyclic queues connected with a module (in case of failure
+      that kind of queue provide a number of retries); and remote queues
+      which are connected to a remote node (such node consisting of a network
+      reachable machine running Deliverer, with the same queue model but maybe
+      diferent modules).<p>
+      
+   <p>If we follow this outline, we can feel a recursive principle. Deliverer
+      takes advantage of that. Another thing to consider is that each
+      node can have assigned a main Deliverer (as a back path). This main
+      Deliverer along with remote queues, provide wide routing in order to
+      locate nodes able to process certain kind of information.</p>
+    
+   <p>We can destinate one of several nodes of our Deliverer Network to serve
+      as entry/exit points for submiting jobs, while hiding the rest of the DN
+      (Deliverer network from here) and rely them to internal processing (which
+      is a good idea). Finally a DN will look like a tree.
+   
+   <h3>A little example</h3>
+<pre><code>      
+              Our Deliverer Network for this example
+      
+      +--------------------+
+      |  Outer Node        |
+      | ------------------ |
+      | Remote Queue >===============+
+      | Local Mailer Queue |         |    +-------------------+
+      | ------------------ |         |    |  Inner Node       |
+      | Mail Reading Bot   |         +===>| ----------------- |
+      +--------------------+              | Local Filer Queue |
+                                          +-------------------+
+</code></pre>                                                   
+    
+   <p>We'll see now how all works through a little example. So we need a
+      simpler bot... Ok, let's assume we want submit jobs to our DN via email, and 
+      all we need is to get a file from Inner Node. This file would
+      have to be located and emailed to the user. To do so, we don't need to code
+      anything because I did the work yet, and we have these classes: 
+      julk.net.deliver.FileTranslator, julk.net.deliver.SMTPTranslator, 
+      julk.net.mail.bots.SPBroken. FileTranslator can retrieve any file from
+      local hard disk; SMTPTranslator can send any result to user email address;
+      SPBroken is a runnable bot that read his own mailbox every some minutes, and
+      submit each line as a different job. </p>
+      
+   <p>The syntaxis to submit a job is pretty easy. Every statement consist in a group of pairs
+      "service_name#command", and all the pairs are separated with the character #. 
+      On each pair, the element "service_name" refers to a module, while "command"
+      will be passed to such module and would help to identify different functions
+      within that module, or even to pass parameters. In the case of FileTranslator 
+      (mapped as "filer"), there are two functions: list and get. The "list" function
+      will retrieve a directory list of a given path. The "get" function will retrieve
+      the file specified. When a job is submitted, Deliverer executes the pairs one by
+      one, sending the result of the last processed pair to the next, until there is no
+      more pairs. Generally the last pair is the responsible to send the answer to the
+      user who submitted the job. The program could be this:</p>
+
+<pre><code>
+filer#get c:\autoexec.bat#mailer#send
+</code></pre>
+
+   <p>Well, the user doesn't have to put #mailer#send, because it is set by SPBroken
+      bot, assuming that a user submiting jobs by email would want to receive the
+      results by email. Aside this, Deliverer will work attending to its configuration.
+      But here, by now, let's assume all is well configured with two nodes: An 
+      entry/exit node (main Deliverer), with only two queues; the first one is a
+      remote queue pointing to the second node, the second queue is attached to
+      SMTPTranslator class (mapped as mailer). The inner node has only a queue, 
+      the one attached to FileTranslator class (mapped as filer). So, when such job
+      is submitted to the main Deliverer, it asks (recursively) what queue is 
+      accepting filer jobs? The filer queue on the second node will answer "yes"
+      propagating it upwards (to the main Deliverer). Then "filer#get c:\autoexec.bat"
+      will be submited to the correct queue on the inner Deliverer. When that queue
+      will end his work, will move to the next part "mailer#send": what queue
+      is accepting mailer jobs? No one queue will answer, because there's only
+      one queue, and it isn't mapped to mailer. Then, the question would be relayed
+      to the main Deliverer, which will accept the job. Then, inner Deliverer will
+      send transparently the file to the main Deliverer and the job will be submited
+      in the second queue, mapped to mailer. Then all is done.</p>
+
+    
+      
+   <h3>Configuration Files</h3>
+
+   <p>There's no administration tools to configure our Deliverer network.
+      Because that, we'll have to configure all the nodes one by one. For
+      configuration purposes we have two ways: configuration files and
+      telnet the port 4000. We'll see here the fastest way, configuration
+      files. These files must be on the same directory that deliverer.zip.</p>
+
+   <p>First of all we have to map our class' modules to service names that,
+      later, we'll link to queues. The file name for this is "<font color=blue>mappedservices.cfg</font>".
+      It only contains lines with "service name/class name" as follows:</p>
+      
+<pre><code>
+FILER                         julk.net.deliver.FileTranslator
+MAILER                        julk.net.deliver.SMTPTranslator
+NET                           julk.net.deliver.TCPNetTranslator
+</code></pre>      
+
+   <p>Second, queues configuration. The file name is "<font color=blue>queues.cfg</font>". This file is a bit
+      more complex. Each line contains: "queue name/service name/queue type (C/l/R)
+      [/retries]":</p>
+      
+<pre><code>
+lmail                         mailer                        C    5
+lnet                          net                           l    
+lfiler                        filer_portatil                l    
+</code></pre>
+
+   <p>Third, schedule configuration. Deliverer has a little scheduler which allows
+      you to run some processes every some time. Deliverer uses this scheduler
+      to execute a queue tester every 15 minutes, so that if a node gets down, it can
+      be mounted autimatically later. Here we'll see how to setup
+      SPBroken. This scheduler has his own configuration file: "schprog.cfg".
+      Each line contains "class/start time/interval":</p>
+
+<pre><code>
+julk.net.mail.bots.SPBroken	now	600
+</code></pre>
+
+   <p>Fourth, SPBroken configuration. SPBroken bot needs an email account. Such
+      information is stored in "mail.cfg" file. Consider to create a new email 
+      account for this, because SPBroken will delete every mail after reading it.</p>
+      
+<pre><code>
+POP3server=your_pop3_server
+POP3port=110
+POP3user=your_user_name
+POP3pass=your_pass
+SMTPserver=your_smtp_server
+SMTPport=25
+EMAIL=your_email_address
+</code></pre>      
+      
+   <h3>Deliverer classes and source code</h3>   
+   
+   <p>Deliverer classes are in a zip file called "deliverer.zip". 
+      <a href="zipped/deliverer.zip">Download it</a> 
+      and copy to c:\deliverer\ (or other directory), and copy there your
+      configuration files.
+   <p>You can run Deliverer as follows:</p>
+<pre><code>
+java -cp c:\deliverer\deliverer.zip julk.net.deliver.Deliverer
+</code></pre>
+   
+   <p>You can <a href="zipped/deliverersrc.zip">download</a>
+      and analyze the source code also. Feel free to modify or even rewrite it 
+      (on java or the language of your choice). In that case, I will be interested
+      on your work. You can <a href="mailto:mhyst@iespana.es">contact</a> me in order
+      to clear clues or something else related to my code or Deliverer work.</p>
+     
+	<h3>Security considerations</h3>
+	
+	<p>Deliverer uses a comunication protocol. You can fairly study it by running Deliverer on
+  	   your machine and doing a telnet to localhost:4000. There is a "help" command that would
+ 	   be useful. Also, if you type "help(any command)" (without quotes), you'll get more
+	   information on that command syntax. Help is written in spanish... there's few
+	   text. I plan to translate all to english, but I'll need some time. Maybe you can guess
+	   many things reading just the syntax, and there are spanish/english dictionaries.
+	   Nevertheless, I'm here and you can send me an email. I'll gladly answer.</p>
+	
+	<p>Some protocol commands are very sensible to security issues, so you'll need a password
+	   to test it. Default password is "frodo". You can set your privileges to admin by
+	   sending the following command:</p>
+	
+<pre><code>
+setadmin(frodo)
+</code></pre>
+
+   <p>Even considering this admin/user privillege level, there are still many security 
+      problems. Everybody knowing that service could get your inner files. My main aim
+      now is to solve such security issues establishing a more robust security system.
+      But security here depends more on your written modules. Obviously, we'll have to
+      remove any "filer" service if we want to prevent someone getting our files.</p>
+      
+   <p>One advantage is that Deliverer is not a wellknown application. If we avoid using
+      "help" as a name for a protocol command, it would be difficult to get a clue on what's
+      offering that misterious 4000 port.</p>
+      
+      
+<p>Thank's fravia+ to publish it and thank you for reading it.</p>
+
+<div id="footer">
+	<p>Copyright &copy; 2004 by Mhyst. All rights reserved.</p>
+</div>
+
+</div>
+<center> 
+
+<br><hr>
+<br>Published @ <a href="http://www.searchlores.org">searchlores</a> in November 2004
+&nbsp;&nbsp;&nbsp;
+Back to <a href="advanced.htm">advanced searching</a>
+&nbsp;&nbsp;&nbsp;
+Back to <a href="bots.htm">Bots</a><br></center><hr>
+<br>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+ (c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>

@@ -1,0 +1,210 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>anonion.htm: Fravia's web-searching lore (&macr;`&middot;.&cedil;(&macr;`&middot;.&cedil;
+Anonymous web surfing &cedil;.&middot;&acute;&macr;)&cedil;.&middot;&acute;&macr;)</title>
+<!-- web searching lore: pagename end -->
+<!--<meta name="ROBOTS" content="NOINDEX">-->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords" content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright" content="Copyright(c) 1952 - 2032 fravia+">
+<style type="text/css">
+A:link { color: #02F }
+A:visited { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+</head>
+<body vlink="#3366cc" alink="#00ff00" link="#0000ff" text="#001010" bgcolor="#cccccc">
+<center><!-- fravia's searching lore: bigtitle, begin --><font size="+3">~ Anonymity with onions ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<table border="0" align="Center">
+	<tbody>
+		<tr>
+			<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+			<th bgcolor="#993300">&nbsp;&nbsp;</th>
+			<th bgcolor="#993300"><a href="noanon.htm"><img src="images/kiri1.jpg" alt="to basic" align="Baseline" width="184" height="312" border="0" vspace="0" hspace="0"></a></th>
+			<th bgcolor="#993300">&nbsp;&nbsp;</th>
+		</tr>
+
+	</tbody>
+</table>
+<br><!-- --------------------|||||-------------> Version <font color="blue">
+March</font> 2005 <!-- --------------------^^^^^-------------><br>
+</center>
+<!-- fravia's searching lore: bigtitle, begin --><br>
+
+<br>
+<hr><center><i>
+Paranoid? - yes, you are :) which doesn't mean you're wrong: someone may indeed be trying to monitor 
+the traffic that passes through the anonymous proxies that you're using. Why else would they set 
+up free proxies, duh? <br>Now, unless you're a ruthless criminal, your browsing is safe. 
+Just don't use anon proxies to do anything really stupid that could land you in a sea of trouble, 
+anon or no anon. Anon proxies should be used like <font color=blue>gloves</font> 
+(to touch sites/servers you don't trust) and/or <font color=blue>shades</font> (stay anonymous in the crowd), not like weapons.
+</i></center>
+<hr><br>
+<div align="Center">    
+<font size="+3">Anonymity with onions</font>
+<br>
+<font size="+1">how to use TOR for pretty good anonymous browsing
+
+<p>by vvf 
+</div>
+<p> Following a link posted by <a href="http://www.2113.ch/phplab/mbs.php3/mb001?num=1111681902&thread=1111681902">elody</a> on the Seeker's messageboard (<a href=http://fravia.2113.ch/phplab/mbs.php3/mb001>http://fravia.2113.ch/phplab/mbs.php3/mb001</a>) I came across a very interesting anonymity tool, interesting if a bit controversial, as will become clearer somewhere down the line in this brief essay. 
+
+<br>
+<br>
+
+<p><font color="blue">What is TOR?</font>
+<br>
+
+<p>In the own words of the Electonic Frontier Foundation: 
+<br>
+
+<p><i>Tor is a network of virtual tunnels that allows people and groups to improve their privacy and security on the Internet. It also enables software developers to create new communication tools with built-in privacy features. Tor provides the foundation for a range of applications that allow organizations and individuals to share information over public networks without compromising their privacy. 
+<br>
+
+<p>Individuals can use Tor to keep remote websites from tracking them and their family members. They can also use it to connect to resources such as news sites or instant messaging services that are blocked by their local Internet service providers (ISPs). 
+
+<br>
+
+<p>Groups such as the German "Diabetes People" organization recommend Tor for safeguarding their members' online privacy and security. Activist groups like the Electronic Frontier Foundation (EFF) are supporting Tor's development as a mechanism for maintaining civil liberties online. Corporations are investigating Tor as a safe way to conduct competitive analysis, and are considering using Tor to test new experimental projects without associating their names with these projects. A branch of the U.S. Navy uses Tor for open source intelligence gathering, and one of its teams used Tor while deployed in the Middle East. 
+
+<br>
+
+<p>The variety of people who use Tor is actually part of what makes it so secure. Tor hides you among the other users on the network, so the more populous and diverse the user base for Tor is, the more your anonymity will be protected.</i>
+
+<br>
+<br>
+
+<p><font color="blue">How Does it Work?</font>
+
+<br>
+
+<p>EFF info again:
+
+<br>
+
+<p><i>Tor is an implementation of version 2 of Onion Routing. In brief, Onion Routing is a connection-oriented anonymizing communication service. Users choose a source-routed path through a set of nodes, and negotiate a "virtual circuit" through the network, in which each node knows its predecessor and successor, but no others. Traffic flowing down the circuit is unwrapped by a symmetric key at each node, which reveals the downstream node. 
+
+<br>
+
+<p>Basically Tor provides a distributed network of servers ("onion routers"). Users bounce their tcp streams (web traffic, ftp, ssh, etc) around the routers, and recipients, observers, and even the routers themselves have difficulty tracking the source of the stream.</i>
+
+<br>
+
+<p>So far, there is nothing revolutionary in its design. What is worth noting is that TOR presents a few advantages compared to commercial tools: it is free, open source (well, kind of anyway), easy to install and easy to use. As I discovered while experimenting with it, it is also reasonably fast for what is basically a chain of encrypted proxies. Its main purpose is to provide anonymity and privacy on the web, and I will show you how you can use it together with Opera, the Proxomitron and SocksCap on Windoze, should you need to go places that you don't want your ISP or (almost :) anybody else to know, staying anonymous enough for most purposes. 
+
+<br>
+
+<p>Just as a reminder, anonymity in this context is when the web sites you're browsing don't know who you are and where you're coming from, while privacy is when even your own ISP doesn't know what sites you visit, what searches you make or what generally is of interest to you. 
+
+<br>
+
+<p>I installed and tested TOR on one of my boxes running XP SP2, Opera/Firefox and the Proxomitron. TOR also works on Mac and GNU/Linux, just so that you know. Now, as Windows is no Linux, you also need to download and install SocksCap for this whole thing to work properly, and then make sure you've got Proxomitron's SSL libraries at hand because you will need them too (SSL provides encryption, link given somewhere below).
+
+<br>
+
+<p><font color="blue">Here are the steps</font>, don't let them scare you, it's quite easy:
+
+<br>
+
+	<ol>
+		<li> Installing TOR. That one is straightforward, just grab the file from tor.eff.org (or <a href="zipped/tor-0.0.9.6-win32.zip">from searchlores</a>, win32 version 009.6) and install.
+<p>
+		<li> Download and install <a href="http://archive.socks.permeo.com/cgi-bin/download.pl">SocksCap</a>. (http://archive.socks.permeo.com/<font color=blue>8numberscode</font>/sc32r237.exe). It is free and has a limitation of about 6 months, which is largely enough for now.
+<p>
+		<li> You must use either Privoxy or the Proxomitron. The EFF site says that "Using privoxy is necessary because browsers leak your DNS requests when they use a SOCKS proxy directly, which is bad for your anonymity." As far as I know, the Proxomitron does the job too, if not better. 
+<p>
+		<li> Configure Opera (if not already done) to use Proxo for http and https requests by specifying your localhost (127.0.0.1) on port 8080 in both relevant fields (Opera preferences/network/proxy servers). Also configure it NOT to use Proxo on your local addresses (localhost, 127.0.0.1, any other addresses you might have in your private network, such as another computer or a router) and NOT to use Proxo on legit ssl sites that you might use for private matters, such as your online bank account or other such, in order to avoid ssl certificate mismatch issues. You can always configure Proxo not to use ssl later on. Opera itself does not support socks, however, this will not be important because browser requests will pass through Proxo and SocksCap.
+<p>
+		<li> Let us now configure Proxo, SocksCap and TOR. And since one picture is worth a thousand words, here is a short graphical description I fished <a href="http://www.wilderssecurity.com/showthread.php?t=55748">off the web</a>:
+	</ol>
+
+<br>
+<center><img src="images/torconf.jpg" alt="Proxo Howto" width="477" height="1794" border="0" vspace="0" hspace="0"></center>
+<br>
+
+
+<p>For ssl, which I advise you to try, the files you will need to unzip and place in Proxo's folder are <a href="http://www.proxomitron.info/files/download/OpenSSL_DLLs.zip">in here</a>:
+
+<br>
+
+<p>You are now ready to experiment! First, close the Proxomitron if it is running and double-click on the Proxo link created on your desktop. The Proxo is back, and now it will run through SocksCap. Run TOR; a black dos-like box will open and that will be all, no graphical interface (not needed anyway). Now open Opera and go to <a href="http://www.whatsmyip.org">whatsmyip</a>. That's not your usual IP, is it? ;-)
+
+<br>
+
+<p>You will notice that browser requests made within one minute will show the same IP, then the IP changes randomly, and so on. 
+
+<br>
+
+<p>You can do more testing <a href="http://www.junkbusters.com/cgi-bin/privacy">here</a>, <a href="http://www.network-tools.com/">here</a> and <a href="http://ipid.shat.net/">here</a>.
+
+<br>
+
+<p>Just hit reload after some time and enjoy the fun.
+
+<br>
+
+<p>I have spied on my browser with Ethereal, a packet sniffer, by launching a simple Google query in Opera ("qwerty") and checking if the sniffer finds either "qwerty" or "google" or Google's IP in the strings sent by my browser to the world at large. As you can imagine, I found all these and more when using the plain Opera + proxo combination. Had I used a web proxy it would have been the same: these strings are "in clear" between my browser and my ISP.
+
+<br>
+
+<p>When using TOR, all the sniffer can see is one or two "node" addresses and no other info, because it's all encrypted. These nodes are where TOR connects first, then the packets go encrypted through other nodes until they reach their final destination. 
+
+<br>
+
+<p>In this way, you can be anonymous (with respect to your target web sites) and at the same time enjoy privacy (with respect to your ISP).
+
+<br>
+
+<p>Then, if you played enough and feel like going back to non-anon mode, just shut down the 'sockscapped' Proxo and TOR and start your plain old Proxo from its usual location.
+
+<br>
+
+<p><font color="blue">Finally, the controversial bit</font>. You should know that, before going open source, this system was initially developed by the US NAVY (you may remember the now extinct "Onion Router"). Currently, TOR is used by the Navy and who knows what other agencies, if you remember the EFF quote I mentioned earlier: <i>a branch of the U.S. Navy uses Tor for open source intelligence gathering, and one of its teams used Tor while deployed in the Middle East recently</i>.
+
+<br>
+
+<p>Although its source is available, TOR is	Copyright (c) 2001-2004 Roger Dingledine, Copyright (c) 2004-2005 Roger Dingledine, Nick Mathewson. According to the online CV that he has published, Mr. Roger Dingledine has been employed, among others, by the NSA. You can read his detailed technical presentation of the TOR system at Defcon 12 Speakers (2004, Las Vegas) right here: <a href="http://www.defcon.org/images/defcon-12/dc-12-presentations/Dingledine/dc-12-dingledine.pdf">Dingledine</a>
+<br>
+<p> You have been warned :)
+
+<br>
+<br>
+
+<p>Nonetheless, I hope that you will find all this both useful and enjoyable. 
+
+<br>
+<br>
+
+<p> <font color="blue">Further info:</font>
+ <ul>
+  <li> <a href="http://yro.slashdot.org/yro/04/12/22/2031229.shtml?tid=95&tid=158&tid=153&tid=17">slashdot thread</a>
+  <li> the <a href="http://anon.inf.tu-dresden.de/develop/aktversions_en.html">dev version of JAP</a> now plugs to TOR.
+ </ul>
+
+<br> 
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><!-- how to search the web, by fravia+, signet begin -->
+<center>
+<br><font size=+1>
+<font color=blue>[</font><a href="advanced.htm">advanced</a><font color=blue>]</font>
+&nbsp;&nbsp;<font color=blue>[</font><a href="noanon.htm">noanon</a><font color=blue>]</font>
+&nbsp;&nbsp;<font color=blue>[</font><a href="proxy.htm">proxies</a><font color=blue>]</font><br>
+</fonT>
+<br>
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

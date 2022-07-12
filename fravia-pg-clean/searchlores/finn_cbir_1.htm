@@ -1,0 +1,310 @@
+<html>
+<head>
+<title>finn_cbir_1.htm: Content Based Image Recognition - a stab in PHP, part 1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<META NAME="Author" CONTENT="Finn61">
+<META NAME="Keywords" CONTENT="seeking, searching, multimedia, image, recognition, capturing, amassing, sharing, sixty one, 61">
+<META NAME="Description" CONTENT="Advanced techniques to scour the unknown net. Content based image searching.">
+<meta name="copyright" content="Copyright(c) 2006 Finn61">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+ <center>
+
+<font size="+3">Content Based Image Recognition - a stab in PHP (<font color=blue>1</font>)</font><br><b>By <font color="blue">Finn61</font></b><br>
+           <br>
+<table border="0" align="center"><tr>
+<td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+<td bgcolor="#993300"><a target=_top href="essays.htm"><img SRC="images/basipet.jpg" ALT="to essays" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+</tr>
+</table>  <br>
+
+<b>Published @ <a href="http://www.searchlores.org">Searchlores</a> in 
+<font color="blue">February 2006</font> | </b>
+<b>Version <font color="blue">0.01</font></b><br>
+<b>By <font color="blue">Finn61</font></b><br>
+
+   </center>
+<hr>
+
+
+<CENTER><H1>Content Based Image Recognition - a stab in PHP</H1> </CENTER>
+<CENTER><H2>~ This is part 1 ~  (Go to <a href="finn_cbir_2.htm">Part 2</a>)</H2></CENTER>
+<CENTER><P><B>By Finn61</B></P></CENTER>
+
+<P>It has been some time since I last contributed anything to 
+<a target=_top HREF="http://www.searchlores.org">Searchlores</A> but 
+during the snippets of time between moving jobs and homes and cities, I 
+have kept some projects on and off the burner. This one, although not complete,
+is at a stage where I thought it could be of interest/benefit to ~seekers out
+there.
+
+<P>I must say that I am not an expert in this field so this is pretty
+much tackled from a laymans perspective. During my research some of the 
+algos went completely over my head and there was a lot of lingo which
+I was not familiar with that made some of the texts hard reading.
+
+<P>But that's ok, because this essay is about relating my findings and displaying
+some of the simple tools I have made to help us play around in this field. 
+I want this essay to be accessible to the non-expert and I encourage them to 
+take this info and expand on it. 
+
+<P>I think this is an area which has yet to be exploited by web
+searchers and as we get more bandwidth and processing power at our disposal
+these same concepts and tools will be modified to work with media 
+other than only images.
+
+<P><B>A Quick Overview</B>
+
+<P>There are a few competing terms that describe content based image recognition
+(CBIR) so you may have heard it by a different name, such as content based image
+retrieval or any number of variations on this theme.
+
+<P>The general goal is to be
+able to compare target images and find a match based on the 
+graphical content of a query image. 
+
+<P>No surprises with the name; we are trying to <I>recognise the content of an
+image</I>, usually <I>based on the content of a query image</I>.
+
+<P>Colour and texture histograms are popular ways to compare images. Texture is a
+measure of how a pixel's colour varies from surrounding pixels. Images that have
+smooth, gradient like, colour changes would have a low texture, while busy images
+with lots of varying colours and sharp edges would have a high texture.
+Pixel values would be examined and histogram data for each image saved and  
+then used in the actual comparison.
+
+<P>Other methods divide images into sections saving information on the average 
+colours for each section. In more advanced experiments these techniques have all been
+combined together with additional analysis such as shape recognition and edge detection
+in attempts to refine and increase the accuracy of the search results.
+
+<P>There are many sub categories to this field that specialise in processes 
+like region splitting, analyising, cataloging, detecting shapes, textures and
+colours. I am only scratching the surface. This is the quick and dirty 
+experimenters guide.
+
+<P><B>So What's it Good For?</B>
+
+<P>It may not be immediately apparent what the uses for this kind of system are
+until you read a smattering of the papers and see the direction most projects are 
+heading in.
+
+<P>Applications that retrieve images from huge databases where your query would 
+consist of not
+text, but other images. For example, if you wanted pictures of owls, your db
+query might be a picture of an owl. You might have some controls so you can
+tweak the sensitivity of your results to get all pictures of birds, for a general 
+query, or brown owls resting on a tree branch (if that's what your source image is),
+for a more specific one.
+Large online image databases are looking at these alternative searching methods 
+because we all know how ambiguous it is to describe an image with words.
+
+<P>Check out <a target=_top HREF="http://www.cis.hut.fi/picsom/">PicSOM</A> for an example
+of content based searching using Self Organizing Maps (a type of neural network).
+
+<P>This field also covers a lot of work in the video area too. As you can imagine,
+things like face recognition in crowds, censuring adult material, robots with
+visual memories and visual recognition, object detection etc, are all hot 
+technolgies in these terrornoia days we live in.
+
+<P>I skipped most of these and concentrated on still images. Images are widely
+available on the web so they make a good choice for experimenting and they can
+be small and easier to manipulate. As I mentioned, I think a lot of the same 
+techniques used for image searching can be transferred over to other media 
+such as audio or video.
+
+<P><B>How Can Seekers Wield This Tech</B>
+
+<P>My interest is using alternative methods to find material on the web. Break the
+chains and start looking for new tools. 
+
+<P>It can be tricky to find images using the traditional text methods. Plus it is
+a manual, laborious process. If we could automate it, then we could set it running and wait
+for an alert when, eventually(hopefully), it finds our target.
+
+<P>If you don't posess the image then you don't have a choice but to learn some
+techniques to describe it and go the semantic route. But sometimes you might 
+have the image already. 
+
+<P>You may lift an appealing picture from somewhere and 
+you want to find out who the artist is. You want the image in a different res, 
+or quality, or format. Maybe you only have part of the image or someone has 
+defaced it with a watermark or other crass text. Perhaps you just want to beat 
+some searching riddles!
+
+<P>There are many examples where this could be useful. The key point is that 
+you are not looking for the same file (if you were you could simply do a binary
+comparison) but you are looking for the same image. The same visual content but not
+necessarily the same file, quality or resolution.
+
+<P><B>Back To Earth - The Reality</B>
+
+<P>As tantalising as the possiblities of all this sound it doesn't take long
+to realise that most of this stuff is very computationally intensive.
+
+<P>The big image databases do not do this sort of recognition in real time; not
+many(if any) CBIR projects attempt real time at all. They usually build an index
+of metadata, extracted after analysing all the images. Searches would 
+then be performed on this index. Hence only the source image ever needs to be 
+analysed in real time, speeding up the process immensely.
+
+<P>Unfortunately we don't have that luxuary. Our image analysis and comparison
+needs to be performed at search time, on the web. This means we need to be happy with a
+'set and forget' system. Setup the search criteria, start it running, and then
+go fishing for the weekend. 
+
+<P>Obviously the key bottlenecks here are processor and internet bandwidth. With this
+in mind I have not implemented all of the methods employed in CBIR. Speed is
+more of a priority in this project than accuracy. If we get a rough idea of potential
+matches then we can use EYEBALL.EXE to scan through the results.
+
+<P><B>Why PHP?</B>
+
+<P>Everyone probably has a different idea why PHP is the <I>wrong</I> language for this.
+For me though, it is a natural choice for the web and it is a language I have
+been playing with recently.
+
+<P>That said, I'm not a PHP guru, so once again, I urge you to take and improve
+upon any of the code I have included. I'm sure there are some efficiencies that could be
+made just be writing some of my code better!
+
+<P>Of course because we are dealing with images here, the <a target=_top HREF="http://www.boutell.com/gd/">
+GD library</A> is essential in your PHP implementation.
+
+<P><B>I'd Rather Research This Myself Thanks</B>
+
+<P>As this is a laymans guide (being a novice in this myself) you might want
+to delve deeper yourself. There is quite a lot of material available on the web
+about this. I will include references to some documents at the end of this essay
+(if you make it that far!). As you may guess the .edu's and .org's are good 
+places to begin looking for this stuff. 
+
+<P>Even the .edu's aren't giving all this research away. You will find some doors
+closed, although I was amazed at how easy it is to find info that people would
+like you to pay for, freely lying around, sometimes mistakenly, in other places. 
+If you get a closed/pay database that allows you to preview pages of papers, then
+you know what to do to find the rest. ;)
+
+<P><B>First An Image Trick To Warm Us Up</B>
+
+<P>This trick is really an old trick that I expanded a little with some PHP to 
+freshen it up.
+
+<P>It is the fishing trick using an image inserted onto a message board (or 
+other suitable web location). 
+
+<P>For those who may have forgotten, it goes like this: you are seeking
+information about a specific subject that is hard to find. 
+
+<P>You identify a web message board or similar and post a message relevant to your 
+target subject. You make it enticing, a honeypot, to attract those who have what you
+are seeking. In the message you post is an image tag linking to an external 
+image which you host on your webserver. You then check your web logs and collect 
+the ip addresses of everyone who requests that image, knowing that they all must
+have read your message. You have logged them all.
+
+<P>You then have a nice list of ip's you can check for http servers, ftp or 
+whatever. It may just lead you to your target. They have high relevence to 
+your goal.
+
+<P>That's the old trick. Because I have been messing around with PHP image 
+functions I decided to put some more twists on it.
+
+<P>Here's an image:
+
+<P>
+<IMG SRC="http://finn61.sytes.net/log_em.php" BORDER="0" ALT="Mostly Harmless">
+
+<P>It looks pretty harmless, just like any other image on a web page.
+
+<P>Here's the HTML that displays the image:
+
+<font color="#0000BB">
+<P>&lt;IMG SRC="http://finn61.sytes.net/log_em.php" BORDER="0" ALT="Mostly Harmless"&gt;
+</font>
+
+<P>The IMG tag is standard but notice the SRC is pointing to a PHP script. Not an
+image at all! This is where the fun starts, because once we have got them
+to run the script we can do all sorts of stuff with the data they have 
+provided (referrer, IP address, browser etc).
+
+<P>Here's the log_em.php script with comments:
+
+<P>
+<code><font color="#000000">
+<font color="#0000BB">&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;$time </font><font color="#007700">= </font><font color="#0000BB">date</font><font color="#007700">(</font><font color="#DD0000">"d/m/y, H:i"</font><font color="#007700">); </font><font color="#FF8000">//Build the time and date<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$ip </font><font color="#007700">= </font><font color="#0000BB">$_SERVER</font><font color="#007700">[</font><font color="#DD0000">'REMOTE_ADDR'</font><font color="#007700">];&nbsp;&nbsp;</font><font color="#FF8000">//Save the ip address<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$referer </font><font color="#007700">= </font><font color="#0000BB">$_SERVER</font><font color="#007700">[</font><font color="#DD0000">'HTTP_REFERER'</font><font color="#007700">];&nbsp;&nbsp;</font><font color="#FF8000">//Save the referer<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$browser </font><font color="#007700">= </font><font color="#0000BB">$_SERVER</font><font color="#007700">[</font><font color="#DD0000">'HTTP_USER_AGENT'</font><font color="#007700">];&nbsp;&nbsp;</font><font color="#FF8000">//Save the browser info<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;//Open a file pointer to our log in append mode<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$fp </font><font color="#007700">= </font><font color="#0000BB">fopen</font><font color="#007700">(</font><font color="#DD0000">"log_em.txt"</font><font color="#007700">, </font><font color="#DD0000">"a"</font><font color="#007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">//Write the variables out and close<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">fwrite</font><font color="#007700">(</font><font color="#0000BB">$fp</font><font color="#007700">, </font><font color="#DD0000">"$time IP: $ip Referer: $referer Browser: $browser \n"</font><font color="#007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">fclose</font><font color="#007700">(</font><font color="#0000BB">$fp</font><font color="#007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#FF8000">//Now we send the image<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">header</font><font color="#007700">(</font><font color="#DD0000">"Content-type: image/jpeg"</font><font color="#007700">); </font><font color="#FF8000">//Setup the header for a jpeg<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$newimg </font><font color="#007700">= </font><font color="#0000BB">ImageCreateFromJpeg</font><font color="#007700">(</font><font color="#DD0000">'tux.jpg'</font><font color="#007700">); </font><font color="#FF8000">//Create an image from a file<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;//Let's just write some text on the image first<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">$grey </font><font color="#007700">= </font><font color="#0000BB">imagecolorallocate</font><font color="#007700">(</font><font color="#0000BB">$newimg</font><font color="#007700">, </font><font color="#0000BB">220</font><font color="#007700">, </font><font color="#0000BB">210</font><font color="#007700">, </font><font color="#0000BB">220</font><font color="#007700">); </font><font color="#FF8000">//Make a colour for our text<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">imagestringup</font><font color="#007700">(</font><font color="#0000BB">$newimg</font><font color="#007700">, </font><font color="#0000BB">5</font><font color="#007700">, </font><font color="#0000BB">3</font><font color="#007700">, </font><font color="#0000BB">145</font><font color="#007700">, </font><font color="#0000BB">$ip</font><font color="#007700">, </font><font color="#0000BB">$grey</font><font color="#007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">imagejpeg</font><font color="#007700">(</font><font color="#0000BB">$newimg</font><font color="#007700">); </font><font color="#FF8000">//Send the new image to the browser<br />&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#0000BB">imagedestroy</font><font color="#007700">(</font><font color="#0000BB">$newimg</font><font color="#007700">); </font><font color="#FF8000">//No need to keep the image we created<br /></font><font color="#0000BB">?&gt;<br /></font>
+</font>
+</code>
+
+<P>The first thing we do is write everything they give us to a log file, for
+prosterity of course. 
+
+<P>This gives us what we could have got from the web logs in the old trick, but
+I think it's nicer writing it to our file rather than wading through web logs.
+Also, we may not have access to the web server logs so it gives us an 
+alternative and we can check it right away to see all the people who didn't 
+disable this 'info spew' from their browser:
+
+<P><a target=_top HREF="http://finn61.sytes.net/log_em.txt">http://finn61.sytes.net/log_em.txt</A>
+
+<P>You did remember to turn yours off didn't you?
+
+<P>The other thing we could do is decide to display different images based
+on the info we recieved. Perhaps based on your friends static IP address you 
+may present him with a completely different (and private) image from your site.
+PHP is quite good at image creation and manipulation so we could even write text
+over the image if we need to leave a personal message for someone.
+
+<P> In fact we have. Look closely at our image above and you will see it has your IP
+address embedded in it. You can right click and save this image. It's now customised
+just for you.
+
+<P>What might seem to everybody else like an innocent avatar in your signature, could 
+display different text every week only to certain <I>friendly</I> ip's.
+
+<P>Anyway, you get the picture (ya bad pun intended). The important part is that after
+you do what ever you need to do with your script you send the JPG stream back to
+the browser. It will be expecting an image, because of the IMG tag, so an image
+you must send it.
+
+<P>Well this has dragged on, so I will end this part of the essay. We have covered
+what CBIR is, some things others are trying to do with it, what ~seekers can
+hope to do with it and we have played with some PHP image functions and a little 
+trick to get us started.
+
+<P>In the next part I will begin straight away with the meat and we will look at some 
+basic ways to get started with PHP and image searching.
+
+<P><A HREF="finn_cbir_2.htm">Move on to PART 2</A>
+
+<CENTER><P>* ~* ~**</P></CENTER>
+<br><br>
+(c) Finn61,  2006 &nbsp;&nbsp;
+
+
+
+</font><br><center>
+<hr width="66%">
+<a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>

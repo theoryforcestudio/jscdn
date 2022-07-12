@@ -1,0 +1,89 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>mordjava.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ The complete idiot's guide to breaking simple java applet protections ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+2>Database accessing : Reversing Simple Java Protections <br>
+A generic approach</font></center></td></tr></table>
+<br>Published at <a href="http://www.searchlores.org">www.searchlores.org</a> in April 2002
+<hr width=44%>
+<i>Fundamental lore for seekers, that should not and never be stopped by <b>any</b> 
+webgate
+</i>
+<hr></center><font size=+1>
+<br>
+<br>The complete idiot's (that should be me :) guide to breaking simple java applet protections 
+<br><br>
+<br><b>1.</b>    You'll need a java compiller for this.  Get it here http://java.sun.com/products/jdk/1.1/
+<br> 
+<br><b>2.</b>    Go to the login page, save the applet, the html, and any additional files that the applet requires (for riadalock that should be lock.txt, other protections may be better at hiding those files, but you should be able to find them in your browser chache anyway). 
+<br>
+<br><b>3.</b>    Decompile the applet, rename *.jad to *.java. rename applet to something else so it doesnt get overwritten when you recompile the classes. 
+<br>
+<br><b>4.</b>    Load the source into your favourite editor and look around. 
+<br>A good place to start is the init() method, where the calls to the various initialization functions will be, including the loadAndDecryptPasswords() method. 
+<br>The protections we have seen up to now follow a similar model : they load some parameters from the html (via getParameter()), where there are either the encrypted user/pass combos, or an external file, where these are located. 
+<br>So, fish those getParameter() calls - around one of them should be the decryptPass() call. For example in RiadaLock.class we have :
+<pre><font size = -1>
+private String z0(String s, String s1, Properties properties, boolean flag) 
+{ 
+	String s2; 
+	if(properties != null) 
+		s2 = properties.getProperty(s); 
+	else 
+		s2 = getParameter(s); 
+	if(s2 != null) 
+		if(flag) 
+		{ 
+			z0("kcoLadaiR", false); 
+			s1 = z0(s2); //aha! 
+		} else 
+		{ 
+			s1 = s2; //if the flag is set - do not decode 
+		} 
+	return s1; //return the decoded string 
+}</font></pre>
+<br>Thus we have found the spot where the string is decoded. Now comes the really idiotic part :) 
+<br>Right before the "return s1;" line insert this: 
+<ul>System.out.print(s1+"\n");</ul>
+<br><b>5.</b>     Recompile the file (must be .java). For example: 
+<ul>c:\jdk1.1\bin\javac RiadaLock.java (the case must match!) </ul>
+<br><b>6.</b>     Run the applet viewer 
+<ul>c:\jdk1.1\bin\appletviewer login.html (so the applet gets proper params) </ul>
+<br>A nice window with the applet's content appears, while the console window is dumped with 
+<br>all decrypted data you needed. You may like to run appletviewer like this 
+<ul>c:\jdk1.1\bin\appletviewer login.html > passwords.txt </ul>
+<br>
+<hr width=50%><br>
+<br>For riadalock there are other strings in the dump - obviously they use a generic function for all strings they need) 
+<br>
+<br>Please note that this will work for really SIMPLE protections - if for example they do it 
+<br>the right way, they would ENCRYPT the user/pass and check encrypted vs encrypted strings. 
+<br>They MUST decrypt the url to load though, so maybe one should be able to find the backdoor 
+<br>at least. 
+<br>
+<br>regards,
+<br>Mordred</font><hr><center>
+<br>Back to 
+<a href="http://www.searchlores.org">www.searchlores.org</a> &nbsp;&nbsp;
+Back to 
+<a href="password.htm">passwords lore</a>
+<hr>
+
+</body>
+</html>

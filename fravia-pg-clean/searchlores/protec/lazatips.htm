@@ -1,0 +1,878 @@
+<HTML>
+<HEAD>
+<TITLE>antiwa1.htm: Rob's (and others) <b>views on software protection</b>: 
+a game of lesser and lesser
+returns for time invested</TITLE>
+<STYLE type="text/css"> A:link { color: #02F } A:visited  { color: #808 } A:hover { color: purple; background: #AFB } </STYLE></head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<a href="protec.htm"><IMG SRC="../images/protec.gif"
+ALT="protec" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>
+<font color=gray>Back to protec</FonT>
+<br><bR>
+<center><i>Published at searchlores in May 2000<bR></fonT></fonT>
+
+<hr>Courtesy of fravia's searchlores ~ will be translated as soon as I find the time
+</center>
+<hr><bR>
+<CENTER><B><U><FONT COLOR="#3333FF"><FONT SIZE=+2>LaZaRuS Anti-Cracking
+Tips V2.0</FONT></FONT></U></B></CENTER>
+
+<P><BR>
+<OL>
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Intentionen">Was sind die
+Intentionen f&uuml;r dieses Werk</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Denken">Wie denkt ein Cracker
+?</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Bruck">&Uuml;berbr&uuml;cken</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Einfaches">Pr&auml;ventionen,
+die man schnell und einfach programmieren kann</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#dummy">Die imagin&auml;re
+Anwendung Win-Dummy als Beispiel f&uuml;r alle Fehler, die ein Programmierer
+machen kann</A></FONT></FONT></LI>
+
+<LI>
+<FONT SIZE=-1><A HREF="lazatips.htm#schwer">Dinge, die schwer zu programmieren/cracken
+sind, die ich nicht in meiner kleinen Geschichte hab unterbringen k&ouml;nnen,
+oder die ich mir gerade ausgedacht habe (Ob sie funktionieren ist eine
+andere Sache):</A></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#immer">Dinge, von deren Wirkung
+Sharewareprogrammierer so &uuml;berzeugt sind, das sie sie immer wieder
+benutzen, obwohl sie den Crack in keinem Fall erschweren</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#VB">Visual Basic Programme</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Beispiele">Beispiele</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#glossar">Glossar</A></FONT></FONT></LI>
+
+<LI>
+<FONT COLOR="#000000"><FONT SIZE=-1><A HREF="lazatips.htm#Greetz">Greetings</A></FONT></FONT></LI>
+</OL>
+
+<P><BR><A NAME="Intentionen"></A><B><U><FONT COLOR="#3333FF">Was sind die
+Intentionen f&uuml;r dieses Werk:</FONT></U></B>
+<BR>Ich bin selbst Shareware Programmierer und m&ouml;chte allen anderen
+Sharewareprogrammieren Tips geben, wie sie ihre Werke besser sch&uuml;tzen
+k&ouml;nnen. Ich habe wirklich sehr gute Sharewareprogramme gesehen, die
+jedoch so einfach zu cracken waren, da&szlig; die Programmierer den richtigen
+Registrierungscode gleich in die Anleitung schreiben k&ouml;nnten. Damit
+so etwas nicht erneut passiert, versuche ich hier ein m&ouml;glichst weites
+Feld von Tips abzudecken, um Sharewareprogramme besser zu sch&uuml;tzen.
+Einige Passagen stammen aus Anleitungen von Fravia+ Webseite, die ich mehr
+oder weniger frei &uuml;bersetze.
+<P><A NAME="Denken"></A><B><U><FONT COLOR="#3366FF">Wie denkt ein Cracker
+?</FONT></U></B>
+<BR>Um gute Schutzalgorhythmen zu schreiben, sollte man m&ouml;glichst
+viel &uuml;ber die Vorgehensweise von Crackern wissen.
+<BR>Es gibt zwei Arten von Crackern. Die ersten wollen m&ouml;glichst viele
+Programme cracken, die zweiten wollen Wissen &uuml;ber Funktionen, die
+Programme sch&uuml;tzen erlernen und mit anderen Gleichgesinnten austauschen.
+Ich gehe nur auf die zweiten ein.
+<BR>Wenn ein Cracker ein Programm cracken will, macht er das aus zwei Motivationen
+heraus: Entweder ist ein Programm besonders gut, oder das Programm ist
+(auf den ersten Blick) sehr gut und trickreich gesch&uuml;tzt. (Das stammt
+z.B. von Fravia+ Seite.)
+<BR>Wenn ein (idealer) Cracker die Arbeit beginnt, sollte er so anfangen:
+W&auml;hrend das Programm im Hintergrund in Assembler zerlegt wird, durchforstet
+man das Programm nach Anhaltspunkten. Dann startet man das Programm erneut
+und schaut auf welche Windows Registry oder Dateien das Programm zugreift.
+So jetzt beginnt man mit dem Suchen nach Anhaltspunkten im Assemblercode
+und beginnt die Datei zu patchen. Neustart des Programms. Wenn es jetzt
+registriert ist, dann war es nicht sonderlich gesch&uuml;tzt. Ansonsten
+l&auml;dt man das Programm in einen Debugger, geht in den Screen, in dem
+man den Reg-Code eingeben kann und setzt einen Breakpoint auf die Funktion,
+die die eingegebenen Werte in den Speicher l&auml;dt. Dort geht man dann
+jede Assembleranweisung einzeln durch, bis man auf den fertigen Code trifft.
+<P><A NAME="Bruck"></A><B><U><FONT COLOR="#3333FF">&Uuml;berbr&uuml;cken</FONT></U></B>
+<BR>Ich werde &ouml;fter von &Uuml;berbr&uuml;cken reden. Was meine ich
+damit eigentlich ?
+<P>Bei Abfragen der Systemzeit ob Pr&uuml;fzeit schon abgelaufen, niemals
+so was machen:
+<P>Systemzeit pr&uuml;fen
+<BR>Wenn abgelaufen, dann aussteigen
+<BR>Sonst weitermachen
+<P><TT>In Assembler sieht das (ungef&auml;hr) so aus:</TT>
+<BR><TT>GetSystemDate&nbsp;&nbsp;&nbsp; ; Systemzeit pr&uuml;fen</TT>
+<BR><TT>?????????????&nbsp;&nbsp;&nbsp; ; Installationsdatum aus Datei
+lesen</TT>
+<BR><TT>cmp eax, 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Mit 10 hex vergleichen</TT>
+<BR><TT>jl XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;
+Wenn kleiner, dann Springe nach Adresse XXXX</TT>
+<BR><TT>Steigeaus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; und raus</TT>
+<P>man muss in einem Hex-Editor nur noch ein Byte &auml;ndern (in "immer
+springen" ASM:jmp), um das Ende der Pr&uuml;fphase niemals zu erreichen.Besser
+zwischen Zeile 2 und 3 irgendwelchen M&uuml;ll mit vielen Spr&uuml;ngen
+einf&uuml;gen, um den Cracker zu verwirren.
+<BR>Anmerkung: Spr&uuml;nge in Assembler entstehen im seltensten Falle
+durch Spr&uuml;nge im Quellcode, sondern durch if-Abfragen.
+<P>Analog gilt dies f&uuml;r Seriennummern berechnen. Das sieht meistens
+so aus:
+<P><TT>CALL XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;ruft Berechnung
+der Seriennummer auf und vergleicht</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+diese mit der Eingegebenen. Wenn richtig, dann R&uuml;ckgabe-</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+wert 1, sonst 0</TT>
+<BR><TT>TEST EAX,EAX&nbsp;&nbsp;&nbsp;&nbsp; ;wenn 1</TT>
+<BR><TT>je XXXX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;dann
+springe zu "richtige Nummer-weiter im Programm"</TT>
+<BR><TT>RAUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+;sonst Raus</TT>
+<P>Auch ist hier nur eine &Auml;nderung von einem Byte n&ouml;tig. Sonst
+gilt: Hier ist klar, da&szlig; die Seriennummer in der mit CALL aufgerufenen
+Prozedur generiert wird. Also rein und auslesen. So sieht es in 80% aller
+SW-Programme aus und die Programmierer k&ouml;nnten die richtige Seriennummer
+in solchen F&auml;llen gleich in die Hilfedatei schreiben.
+<BR>Viel mehr M&uuml;he macht das Auslesen aus dem RAM auch nicht. Mein
+pers&ouml;nlicher Rekord f&uuml;r solch ein Abfrage war 48 SEKUNDEN und
+ich bin noch ein (fortgeschrittener) Anf&auml;nger. Man sollte zwischen
+dem CALL und dem TEST viele Dinge reinprogrammieren, die nichts mit der
+Generierung zu tun haben.
+<P><A NAME="Einfaches"></A><B><U><FONT COLOR="#3333FF">Pr&auml;ventionen,
+die man schnell und einfach programmieren kann:</FONT></U></B>
+<P>Man sollte wenigstens ein Minimum an Ahnung haben, wie das Programm,
+das man geschrieben hat auf "Low-Level" Ebene funktioniert. Wenn man bloss
+die Entwicklungsumgebungen und RAD Tools sieht, kann man es eigentlich
+gleich vergessen, Software effizient zu sch&uuml;tzen (ausser man ist wirklich
+clever und ein sehr guter Programmierer).
+<P>Als erstes m&ouml;chte ich sagen, da&szlig; jedes Programm das den Quellcode
+der Sharewareversion beinhaltet auch zu Cracken ist. Das kann ich sagen,
+da man vor Debugger und Disassembler nichts (wirklich gar nichts) verstecken
+kann. Wenn man lang genug sucht, wird man auch f&uuml;ndig. Man kann also
+das Cracken nicht verhindern, sondern nur so lange wie m&ouml;glich herausz&ouml;gern
+und hoffen, da&szlig; der Cracker das Interesse verliert. Die folgenden
+Tips sind meiner Meinung nach nicht unn&uuml;tzlich, um das zu erreichen.
+<P>Zuerst eine generelle Warnung. Benutzen sie niemals kommerzielle Programme,
+die ihr Programm sch&uuml;tzen sollen. Diese sind zumeist sauschlecht und
+sowieso alle schon gecrackt. Das gleiche gilt f&uuml;r EXE-Packer, die
+die EXE-Datei erst
+<BR>in den RAM laden und dort entschl&uuml;sseln. Damit ist es wie mit
+Fernsehwerbung. W&auml;hrend man entpackt holt man sich was zu essen. Deshalb
+st&ouml;rts nicht wirklich.
+<P>Fangen wir mit den kleineren, allgemeineren Dingen an, die man mit minimalem&nbsp;
+Programmieraufwand bewerkstelligen kann.
+<BR>Zuerst sollte man niemals Funktionen oder Prozeduren aus DLL-Dateien
+importieren, die schon am Namen erkennen lassen, was sie bewerkstelligen
+sollen. Bekannte Beispiele, wie man Prozeduren nicht nennen sollte sind
+z.B. die Firma Ulead, die ihren Prozeduren traditionell z.B. IsFullVersion
+nennt. Raten sie mal, was diese Prozedur testet ;-). (Auch IsValidSerial
+geh&ouml;rt zu meinen Favoriten)
+<P>Analog kann man das f&uuml;r die Namen der Eintr&auml;ge in der Windows-Registry
+oder INI-Dateien anwenden. Es gibt ein Tuningtool (Name wird hier nicht
+genannt), das liest aus der Windows-Registry einen Wert mit dem Namen IsRegistered
+aus.
+<BR>Wenn dieser Wert 0 ist, startet das Programm als Shareware, ist der
+Wert jedoch 1, dann besitzt man die Vollversion.
+<P>Ohne zu denken haben auch die Programmierer von Pixel 3D programmiert.
+Zu erst einmal Gl&uuml;ckwunsch. Zuerst dachte ich, da&szlig; sie alles
+richtig gemacht h&auml;tten, um mir das Leben schwer zu machen. Dann habe
+ich mir was neues ausgedacht (habe ich auch noch nie irgendwo gelesen).
+Ich l&ouml;schte einfach alle Eintragungen f&uuml;r Pixel 3D in der Windows-Registry
+und &uuml;berbr&uuml;ckte die daraufhin auftretenden Fehlermeldungen. Dann
+hatte ich die Vollversion. Will sagen: Wenn irgendwas passiert, das gar
+nicht sein d&uuml;rfte, mu&szlig; das Programm immer als Sharewareversion
+starten. Der ehrliche Kunde kann das Programm ja mit seinem Schl&uuml;ssel
+erneut registrieren. (Ein gutes Beispiel daf&uuml;r ist Microangelo).
+<P>Was ich f&uuml;r ziemlich schei&szlig;e halte, aber durchaus ein ad&auml;quates
+Mittel gegen Cracker ist, ist das L&ouml;schen von wichtigen Dateien, wenn
+irgendwas merkw&uuml;rdiges auftritt. Man sollte um eine Neuinstallation
+nicht herumkommen. &Auml;hnliches gilt f&uuml;r einen Systemneustart. Das
+sollte man allerdings nur tun, wenn man absolut &uuml;berzeugt ist, dass
+der entsprechende Programmteil
+<BR>100% funktioniert, da man sonst ehrliche Kunden ver&auml;rgern k&ouml;nnte.
+<P>Wenn sie eine Hilfedatei schreiben, sollten sie nichts erw&auml;hnen,
+was auch nur halbwegs einem Cracker helfen k&ouml;nnte. Nicht mal
+<BR>irgendeinen Hinweis auf den Code (10 Ziffern/Buchstaben...). Am schlimmsten
+war bisher bei einer Cheatsammlung (Das geht nur bei viel fr&uuml;heren
+Versionen, deshalb erw&auml;hne ich es hier). In der Hilfedatei stand,
+da&szlig; der Code in der Form 11111-2222-333 (oder so &auml;hnlich) eingegeben
+werden muss. Nicht nur das die Form gegeben war, der Programmierer hat
+auch noch einen anderen kapitalen Fehler begangen: Wenn man als Namen 0
+eingibt, lautet das Password 00000-0000-000. Es scheint, da&szlig; die
+Berechnung des Passwords nur auf Multipliktionen beruht und da ein Glied
+0 ist, wei&szlig; man was da passiert ist. Dies gilt &uuml;brigens auch
+noch f&uuml;r einige andere Programme. In der Hilfedatei sollte man wenn
+&uuml;berhaupt, dann falsche Informationen &uuml;ber das Passwort geben.
+<BR>Beispiel: Name des Programms weis ich nicht mehr. "Sie bekommen die
+Datei keyfile.dat zugesandt, um das Programm zu registrieren." Hab ich
+zuerst auch gedacht, wurde aber stutzig, als im ASM-Code kein solcher String
+zu finden war, wo der Programmierer doch auch sonst alle wichtigen Strings
+"hardgecodet" hat. Am Ende stellte sich heraus, das keyfile.dat ein Trick
+war, und der richtige keyfile anders hies.
+<BR>Ein anderes Beispiel ist ein CrackMe, das jemand aus unserer Gruppe
+(greets Shadow) programmiert hat. Wenn man die Strings durchsucht findet
+man shadow.key und xxx.123. Beide Strings sehen aus, wie potentielle Keyfiles,
+der richtige keyfile heisst aber ganz anders.
+<P>Vermeiden sie auch (wichtige) Strings "hardzucoden". Dies ist immer
+der erste Anhaltspunkt, wenn man ein Programm crackt. Viel besser ist es,
+wenn man Strings aus ASCII-Zeichen zusammensetzt. Bsp.: char(65)+char(66)...
+<BR>Besonders t&ouml;dlich sind deshalb MessageBoxes und Textfelder in
+Nag-Screens. Das Spiel kann man jedoch umdrehen und die wichtigen Strings
+verbergen und daf&uuml;r die gleichen Strings (wirklich richtige Strings)
+an anderer unwichtigen Stelle mit einer kleinen Abfrage, die nie erf&uuml;llt
+werden kann in das Programm einbauen, so das der Cracker von einem v&ouml;llig
+falschen
+<BR>Ansatzpunkt ausgeht. Auch lustig ist, wenn man (echte) Strings einbaut,
+die so auch vom Compiler eingebaut werden k&ouml;nnten (z.B. GetWindowText,
+ShowWindow, 7ABE1F90). Manche Disassembler schaffen es dann nicht mehr
+diese
+<BR>Strings als Strings vom Programmierer einzuordnen, sondern versuchen
+verzweifelt die Strings in den Programmablauf als Befehler einzubauen,
+was dazu f&uuml;hrt, da&szlig; der Disassembler abst&uuml;rzt. Die Stringstips
+gelten nicht f&uuml;r Visual Basic, d a&nbsp;&nbsp;&nbsp; V B&nbsp;&nbsp;
+d i e&nbsp;&nbsp;&nbsp; S t r i n g s&nbsp;&nbsp;&nbsp; s o&nbsp;&nbsp;&nbsp;
+a b s p e i c h e r t (n&auml;mlich mit ASCII 00 zwischen den Zeichen)
+und man sie dann nicht mehr findet (in herk&ouml;mmlichen Disassemblern.
+Es gibt auch welche f&uuml;r VB, den hab ich aber noch nicht)
+<P><A NAME="dummy"></A><B><U><FONT COLOR="#3333FF">Die imagin&auml;re Anwendung
+Win-Dummy</FONT></U></B>
+<P>Soweit zur allgemeinen Benennung. Der n&auml;chste Abschnitt befasst
+sich damit, wie man das Ausspionieren der richtigen Registrierungsnummer
+erschweren kann.Ich kreiere eine absolut imagin&auml;re Anwendung, die
+alle Fehler enth&auml;lt, die
+<BR>ein Programmierer machen kann. Nennen wir sie Win-Dummy. Sie verh&auml;lt
+sich so, wie man es von einem Sharewareprogramm gew&ouml;hnt ist: Nagscreen,
+Zeitlimit,Registrierungscode,Einschr&auml;nkungen...
+<P>Fangen wir mit dem an, was man sieht, wenn das Programm startet. Bei
+sehr vielen Sharewareprogrammen startet man das Programm ganz hoffnungsvoll
+und erblickt dann *PENG* einen Nag-Screen. Ums mal mit den Worten einer
+Jeans-
+<BR>Werbung auszudr&uuml;cken: "Bad idea, bad idea". Wenn man mal davon
+ausgeht, da&szlig; das Programm mit einer Seriennummer/Keyfile... zur Vollversion
+aufr&uuml;sten kann, dann muss irgendwo eine Abfrage f&uuml;r diesen Nag-Screen
+stehen, die man &uuml;berbr&uuml;cken kann. (Man identifiziert sie meistens
+mit Strings wie "Noch XX Tage Zeit". Viel schwerer zu cracken- aber auch
+speicherintensiver- sind BMP-Dateien, die man mit eigenen Routinen reinl&auml;dt.
+Verwendet man die vordefinierten API Befehle kann man es auch gleich lassen.
+Dieser Tip ist jedoch zu schwer zu realisieren f&uuml;r ein Sharewareprogramm.
+Das dabei der Cracker den Nagscreen nicht mehr ertragen muss, ist dabei
+noch das geringere &uuml;bel. Viel schlimmer ist die Tatsache, da&szlig;
+eine Abfrage geschehen muss, ob die Version registriert ist. Das muss man
+aus einer Datei auslesen (INI/CFG/DAT/Windows Registry...). Dort ist entweder
+<P>etwas wie IsRegistered=0 bzw. IsRegistered=1
+<BR>oder
+<BR>der Benutzername und die daraus resultierende Seriennummer
+<P>gespeichert:
+<P>Um das recht schnell rauszukriegen gibt es zwei Freeware-Tools, die
+eigentlich f&uuml;r Programmierer gedacht sind. Vielleicht fragen sie sich,
+worauf ich hinaus will. Ganz einfach, entweder ist der Nag-Screen ziemlich
+einfach zu &uuml;berbr&uuml;cken oder man zeigt dem potentiellen Cracker,
+wo bzw. wie der richtige Code berechnet wird.
+<P>Wenn man schon einen Nagscreen benutzt, dann meistens, um dem User anzuzeigen,
+wie lange man das Programm noch testen darf. Mal davon abgesehen, da&szlig;
+die Zeitabfrage einfach zu &uuml;berbr&uuml;cken ist, wenn man die vorgefertigten
+<BR>Funktionen wie GetSystemDate benutzt, sollte man diese Funktion nicht
+benutzen. Der User kann das Systemdatum ja nach Herzenslust verstellen.
+Um dies wenigstens einzuschr&auml;nken, sollte man das Datum des letzten
+Programmstarts verschl&uuml;sselt speichern und bei irgendwelchen Merkw&uuml;rdigkeiten
+(z.B.aktuelles Datum das Programm beenden.
+<BR>Eine viel effektivere Anti-Cracker-Methode, um das Datum auszulesen,
+ist eine der Dateien System.dat oder Bootlog.txt. Bei jedem Systemstart
+werden diese Dateien (normalerweise) aktualisiert und beinhalten so das
+neue Datum. Ausserdem kommt da niemals ein Cracker drauf, das auszuprobieren.
+(Hab auch noch keinen Programmierer gesehen, der das gemacht hat)
+<BR>Schlechtes Beispiel: Ich habe vor einigen Tagen eine Anwendung gecrackt,
+deren Testphase niemals abl&auml;uft, wenn man folgendes tut: Zeit 10 Jahre
+vor; Programm installieren; Zeit 10 Jahre zur&uuml;ck und schon hat man
+ca. 3600 Tage, um das Programm zu testen. Bis dahin sollte eine neue Version
+draussen sein ;-).
+<P>Wenn wir den Nagscreen endlich &uuml;berwunden haben, dann steht in
+vielen Programmen, die unregistriert sind (meistens im Fenstertitel) UNREGISTRIERT.
+Da bedankt sich jeder Cracker. Wieder ein Ausgangspunkt f&uuml;r einen
+Crack mehr.
+<BR>Wenn man so etwas schon macht, dann sollte man wenigstens nicht innerhalb
+der gleichen Prozedur noch den Fenstertitel ver&auml;ndern. So zeigt man
+n&auml;mlich die Prozedur an, die es zu &uuml;berbr&uuml;cken gilt. In
+manchen Programmen (ich glaube
+<BR>z.B. WinRar) gen&uuml;gt es das &Auml;ndern des Fenstertitels zu &uuml;berbr&uuml;cken
+und schon hat man eine registrierte Version. (Einwurf: Gerade f&auml;llt
+mir ein: Gibt es vielleicht Programme, die den Programmstatus am Fenstertitel
+festmachen ?
+<BR>Wenn ja, dann verdienen die Programmierer ihr Geld nicht !) Das selbe
+gilt f&uuml;r den Text, der in der Copyrightsbox steht (Registriert von...).
+<P>Wenn wir uns ein wenig in Win-Dummy umsehen, dann bemerken wir, das
+es extrem in seinen Funktionen limitiert ist. Das erkennt man teils daran,
+das manche Men&uuml;s und Buttons "grau" sind und nach Dr&uuml;cken auf
+andere Buttons eine
+<BR>Messagebox erscheint, die mir mitteilt, das diese Funktion nur in der
+Vollversion vorhanden ist.
+<P>Einwurf: Definieren sie alle Men&uuml;s dynamisch, w&auml;hrend das
+Programm startet.
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Bereits definierte Men&uuml;s kann man mit einem Ressource-Workshop leicht
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ver&auml;ndern (Men&uuml;punkte aktivieren...).
+<P>Das "ausgrauen" von Men&uuml;s ist prinzipiell schon mal schlecht. Irgendwo
+im Programm muss der Code stehen, der das macht. Dort steht der Win-API
+Befehl EnableMenuItem und der Name des Men&uuml;s, den man aus dem Programm
+her kennt. Schwerer zu finden ist ein Men&uuml;, dessen Namen man nicht
+kennt. (Aufpassen auf Hilfedatei) Das komplette nicht-anzeigen von Men&uuml;punkten
+ist deshalb um einiges sicherer. Was ich von MessageBoxes halte, sagte
+ich ja weiter oben bereits.
+<P>Jetzt wenden wir uns dem Ausspionieren des Registrierungscodes zu. Das
+erste Problem, das hierbei auftauchen sollte ist: Wo zur H&ouml;lle muss
+ich den Code eingeben ?
+<P>Am besten ist es, wenn man eine verstecktes Eingabefenster programmiert,
+da&szlig; nur auf Tastendruck erscheint. Diese Tastenkombination k&ouml;nnte
+etwas ausgefallenes wie [CTRL]+[ALT]+[ENTF] ;-) sein. Besser ist jedoch
+wenn man
+<BR>als Kombination [CTRL]+[D] w&auml;hlt (Ich gehe nicht weiter darauf
+ein, es hat aber was mit dem Debugger zu tun.).
+<P>Jetzt kommen zwei meiner Lieblingstricks, die ich bei meinen CrackMes
+gerne benutze. Zuerst sollte man die Eingabefelder falsch herum bennenen
+(Feld f&uuml;r Name heisst "Hier Code eingeben" und anders herum). Da muss
+man erst mal draufkommen. Dies setzt nat&uuml;rlich voraus, da&szlig; keine
+Einschr&auml;nkungen f&uuml;r das Textfeld vorhanden sind (max 10 Zeichen/nur
+Ziffern...).
+<BR>Mein zweiter Lieblingstrick ist, da&szlig; man zwei Eingabefelder f&uuml;r
+Namen und Code programmiert und darunter einen OK-Button setzt. Den Code
+checkt man bei jeder &Auml;nderung der Textfelder (dann darf nat&uuml;rlich
+keine MessageBox kommen, wenn der Code falsch ist.). Wenn man den OK-Button
+dr&uuml;ckt, ist der Code IMMER falsch und es erscheint IMMER die "Falscher
+Code-Box"&nbsp; (nat&uuml;rlich ASCII(65)+ASCII(66)...).
+<P>Aber warum ist man auf Eingabefelder beschr&auml;nkt ? Etwas komplett
+neues und definitiv extrem schwer zu crackendes Verfahren zur Kalkulation
+eines Codes ist nicht ein Eingabefeld zu erzeugen, in das man den Code
+eingibt, sondern eine 10x10-Matrix aus Checkboxes zu erschaffen, bei der
+jede Kombination markiert/unmarkiert genau einem Namen zuzuordnen ist.
+Auch andere Eingabefelder (ComboBox/ListBox...) sind dazu zu gebrauchen
+(Phantasie ist gefragt).
+<P>Zur Codeberechnung:
+<BR>Zuerst muss man Variablen deklarieren. Wenn das geschieht reserviert
+das Programm im Speicher je nach Typ der Variablen Platz und dahinter beginnt
+der Speicherplatz der n&auml;chsten Variablen. Also die Variablen f&uuml;r
+Name, Code und richtigen Code so weit wie nur m&ouml;glich von einander
+weg deklarieren. Als schlechtes Beispiel kann ich hier ein Programm von
+mir nennen. Ich war bei einem Freund (auch Cracker). Er startet den Debugger,
+dann mein Programm und f&auml;ngt an zu lachen. Dann zeigt er mir, da&szlig;
+Name, eingegebener und richtiger Code keine 100 Bytes voneinander entfernt
+im Speicher liegen.
+<P>Man sollte niemals die komplette Registrierungsnummer auf einmal berechnen.
+Besser ist es sie in zwei oder mehr Teile zu zerlegen und dann einzeln
+mit den entsprechenden Teilen des eingegebenen Codes zu vergleichen. Die
+Registrierungsnummer sollte man 1000 mal einlesen (hat auch was mit dem
+Debugger zu tun) und die Berechnung des Codes auch 20-30 mal durchlaufen
+lassen. Dabei gilt: Je komplexer die mathematischen Operationen sind, die
+man benutzt, um den Code zu berechnen, desto weniger wahrscheinlich ist
+es, da&szlig; der Cracker bemerkt, da&szlig; er sich in einer riesigen
+Schleife befindet. Man
+<BR>sollte eh jede Menge M&uuml;ll und unn&ouml;tige Mache-Nichts-Funktionen
+w&auml;hrend der Codeberechnung aufrufen, die den Cracker verwirren. Zumindestens
+ein Key-Generator wird dadurch absolut unwahrscheinlich. Ebenfalls sollte
+man die Schleifen m&ouml;glichst gross machen, damit der Cracker nicht
+merkt, das er sich in einer Schleife befindet und einfach einen Breakpoint
+dahintersetzt.
+<P>Lustig ist in diesem Zusammenhang auch die "Fake"-Serial Berechnung.
+Dazu bastelt man zur echten Prozedur nochmals eine hinzu, die eine falsche
+Nummer ausrechnet. Wenn der Cracker diese im RAM sieht und nicht mitdenkt,
+wird er
+<BR>denken, da&szlig; er die richtige Nummer gefunden hat und verzweifelt
+an der "Falscher Code"-Meldung.
+<P>(Ein bi&szlig;chen) Schwer zu cracken ist auch eine Codeberechnung,
+die nicht mit Werten rechnet, sondern mit Zeigern auf Speicheradressen.
+<P>Wenn man schon eine MessageBox mit "echten" Strings verwendet, dann
+sollte man den Code zweimal checken. Einmal mit Box und einmal ohne. ACHTUNG:
+Nicht zweimal die gleiche Prozedur aufrufen, sondern zwei verschiedene.
+<P>Ist die Falsche Code-Meldung erschienen, dann sollte das Programm zwei
+Sekunden keine Eingabe zulassen. Das verhindert das Rausfinden von Codes
+durch Brute Force Verfahren. Brute Force heist "brutale Gewalt" und bedeutet,
+man hat ein kleines Programm, das ganz schnell alle Zeichenkombinationen
+als Code ausprobiert. Es gibt solche Programme, die k&ouml;nnen mehrere
+tausend Codes pro Sekunden pr&uuml;fen, aber nur wenn das Zielprogramm
+mitspielt.
+<P>Dummheit ist nat&uuml;rlich, wenn man die richtige Seriennummer in die
+KEY/DAT/INI/CFG... Datei schreibt, statt der eingegebenen. Dann muss man
+nur einmal die Abfrage &uuml;berbr&uuml;cken und schon hat man die richtige
+Seriennummer f&uuml;r jeden beliebigen Namen (siehe Goldwave 3.24 in V4.02
+hat der Programmierer es jedoch bemerkt ;-)). Auch nicht gerade von Intelligenz
+zeugt die Routine von Hex Workshop 2.54. Wenn man da einmal die Routine
+&uuml;berbr&uuml;ckt, erzeugt HW einen g&uuml;ltigen Keyfile. (Habe den
+Programmierern geschrieben, aber nie eine Antwort erhalten :(&nbsp;&nbsp;
+).
+<P>Wenn der Code berechnet ist, sollte man alle Variablen, die der Codeberechnung
+dienen auf 0 (Integer) und (leer) (String) setzen, damit das durchsuchen
+des RAM verhindert wird.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="schwer"></A><B><U><FONT COLOR="#3333FF">Dinge, die schwer zu
+programmieren/cracken sind, die ich nicht in meiner kleinen Geschichte
+hab unterbringen k&ouml;nnen, oder die ich mir gerade ausgedacht habe (Ob
+sie funktionieren ist eine andere Sache):</FONT></U></B></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>Die folgenden Dinge sind zum Teil schwer zu programmieren oder schwer
+zu cracken. Manche sind jedoch zu &uuml;berladen f&uuml;r ein Sharewareprogramm
+und eignen sich mehr f&uuml;r den Einsatz in kommerziellen Programmen.
+<P>1. Wenn man einen Pr&uuml;fsummencheck durchf&uuml;hrt und eine Fehlermeldung
+ausgibt, ist der meistens einfacher zu cracken, als das eigentliche Programm.
+Viel lustiger ist es, eine EXE und eine DLL Datei zu programmieren, die
+sich gegenseitig &uuml;berpr&uuml;fen und ohne Fehlermeldung aussteigen,
+wenn etwas nicht stimmt.
+<P>2. W&auml;re es m&ouml;glich, den Namen der Datei, in der die Informationen
+gespeichert sind aus der richtigen Registrierungsnummer zu erstellen und
+dann aus der Windows-Registry darauf zu verweisen ? Das h&auml;tte den
+Vorteil, das zu Beginn niemand w&uuml;sste, wie der Name der Datei ist
+(nicht mal das Programm selbst).
+<P>3. Was ich in meinem n&auml;chsten CrackMe mache: Das Eingabefeld hat
+die gleiche Farbe, wie das Hintergrundfenster und besitzt keinen Rahmen.
+Dann kann man es nicht mehr erkennen. Das eingegebene Passwort wird &uuml;berpr&uuml;ft,
+sobald sich im Eingabefeld etwas &auml;ndert.
+<P>4. Irgendwo im Programm Strings einbauen, die identisch mit den "Falscher
+Code"/"Danke" Strings sind, aber eigentlich nichts damit zu tun haben.
+<P>5. M&ouml;glichst einen Punkt am Ende des Passworts verwenden, da diese
+im Debugger schwer zu erkennen sind. Man sieht norwalerweise das Passwort
+so:
+<P><TT>OFFSET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HEX-CODE DES PASSWORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PWD IN ASCII</TT>
+<BR><TT>XXXX:XXXX&nbsp;&nbsp; 00 00 00 00 00 00 00 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+........</TT>
+<BR><TT>XXXX:XXXX&nbsp;&nbsp; 65 66 67 68 69 70 71 2D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ABCDEFG.</TT>
+<BR><TT>XXXX:XXXX&nbsp;&nbsp; 00 00 00 00 00 00 00 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+........</TT>
+<P>Wer im Freudentaumel nur einen fl&uuml;chtigen Blick darauf wirft, denkt,
+das der Punkt hinter G nicht mehr zum Password geh&ouml;rt, sondern nur
+als Platzhalter f&uuml;r ASCII 00 gilt, wie die anderen Punkte.
+<P>6. Wenn man schon "-" benutzt, um das Password zu unterteilen, dann
+sollte man explizit nach den Strichen fragen, und nicht das gesamte Passwort
+mit Strichen berechnen. Au&szlig;erdem ist eine regelm&auml;&szlig;ige
+Strichesetzung (XXX-XXX-XXX) einfacher zu cracken, als z.B.X-XXXXX-XXX.
+<P>7.Auch noch nirgendwo gelesen. Normalerweise sieht die Abfrage f&uuml;r
+einen Nag-Screen so aus: C++-Code
+<P>int a=0;
+<BR>a=PasswortVerifizieren();
+<BR>if (a==1) NagScreen();
+<P>wenn man aber schreibt:
+<BR>int a=0;
+<BR>int b=0;
+<BR>CheckPassword();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //R&uuml;ckgabewert
+b muss 1 sein, sonst wurde Prozedur &uuml;bergangen
+<BR>if (b==0) then PasswortCheckWurdeUebergangen();
+<BR>if (a==1) then ShowNag();
+<BR>(Alternativ ginge auch (sogar besser): if ((a==1)||(b==0))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// f&uuml;r alle nicht C++ler || bedeutet oder)
+<P>Prozedur :
+<BR>CheckPassword():
+<BR>{
+<BR>Code, um das Passwort zu verifizieren; wenn falsch a=1;
+<BR>b=1;
+<BR>}
+<P>Jetzt kann man nicht mehr hergehen, und den gesamten Call &uuml;bergehen.
+Nat&uuml;rlich ist es weiterhin m&ouml;glich, die Bedingung der PassWortWurdeUebergangen
+Routine zu &auml;ndern, aber wer sagt denn, dass man nur mit einer Kontrollvariablen
+und ohne Prozedurverschachtelungen programmiert. (Bischen Phantasie bitte)
+<P>8. Ein Cracker geht immer vom idealen Programmierer aus: Nur Prozeduren,
+lokale Variablen... Zumindest beim Passwortcheck und anderen solchen Dingen
+sollte man vollkommen ohne Prozeduren, sondern mit Copy/Paste im Quellcode
+arbeiten. Das bedeutet, wenn man das Passwort schon zweimal &uuml;berpr&uuml;ft,
+dann ohne Prozedur. Beispiel: Wenn man eine Prozedur 1000 mal aufruft,
+gen&uuml;gt meistens schon eine &Auml;nderung von max. 8 Bytes, um den
+Aufruf zu &uuml;bergehen. Wird der gleiche Code aber 1000 mal hintereinander
+aufgerufen, muss man (wenn man Pech hat) 1000*8 Bytes &auml;ndern und das
+macht keiner.
+<P>9. Wenn man Delphi oder C++ Builder programmiert und die vorgefertigten
+Komponenten benutzt (z.B.Label) kann man ruhig Dinge wie "Unregistriert"
+als Anfangstext verwenden, da diese Strings verschl&uuml;sselt in die EXE-Datei
+kompiliert werden.
+<P>10. Die Informationen, ob das Programm registriert ist, sollte man in
+die Haupt EXE-Datei schreiben. Weis nicht, wie das geht, weis nur, da&szlig;
+es geht. Siehe: Visual Help Pro.
+<P>11. Wenn die Registriernummer auch noch von der Hardwarekonfiguration
+(Intel/AMD oder anderer CPU Hersteller?/ 16/32.. MB RAM?/ Festplatte C:
+gr&ouml;&szlig;er 4 GB?) abh&auml;ngt, ist alles aus. So kann man das Verbreiten
+von Codes &uuml;ber das Internet verhindern. Nachteil: Kunden m&uuml;ssen
+bei &Auml;nderung der Konfiguration neue Codes beantragen. Nicht so toll
+finde ich auch die Methode, die die Programmierer von Visual Help Pro gew&auml;hlt
+haben. Da h&auml;ngt der Registrierungscode vom Monat der Registrierung
+ab.
+<P>12. Man sollte pr&uuml;fen, ob der Name Sonderzeichen enth&auml;lt,
+da kein normaler Name so lauten kann: LaZaRuS [hf] - ED!SON - +wAj. - _mammon
+- ][ce usw. Bei - muss man vorsichtig sein, da es sich um einen Doppelnamen
+handeln k&ouml;nnte: Karl-Heinz.
+<P>13. Absolute Sicherheit kann es nur geben, wenn in der Sharewareversion
+Programmteil fehlen (DLL-Dateien), die die wichtigen Funktionen enthalten.
+Beispiel: Audio Grabber 1.40. Die EXE-Datei ist bei SW und Vollversion
+die gleiche. Nur fehlt in der SW-Version die DLL AudioFull.dll (oder so
+&auml;hnlich). In der SW Version ist nur die Datei AudioFree.dll (oder
+so &auml;hnlich) enthalten. Diese SW findet man dann aber auf Warez-Seiten.
+<P>14. Man k&ouml;nnte checken, ob Fenster ge&ouml;ffnet sind, in denen
+folgende Strings vorkommen "W32Dasm", "IDA", "Smart Check", "WinSight".
+Wenn es solche gibt, dann sieht nach Crack Versuch aus."
+<P>15. Es gibt spezielle Codefolgen, die bringen gnadenlos jeden Disassembler
+zum Absturz. Die kenne ich jedoch nicht, also m&uuml;ssen sie selbst nachforschen,
+wenn sie dies in ihre Programme implementieren wollen.
+<P>16. Man kann feststellen, ob ein Debugger geladen ist. Geht &uuml;ber
+einen Interrupt (13?). Dar&uuml;ber weis ich jedoch auch nichts genaues.
+Oliver Buschjost (http://software.webset.de/buschjost) benutzt in seinem
+Programm MP3 TO EXE 2.0 solch einen Debugger Check (von Marquee) der einen
+mit den Worten "You wouldn't see this if there wasn't a debugger running
+in the background" oder so &auml;hnlich begr&uuml;sst.
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>
+<BR>
+<BR>
+<CENTER>
+<P><A NAME="immer"></A><B><U><FONT COLOR="#3333FF">Dinge, von deren Wirkung
+Sharewareprogrammierer so &uuml;berzeugt sind, das sie sie immer wieder
+benutzen, obwohl sie den Crack in keinem Fall erschweren</FONT></U></B></CENTER>
+
+<BR>&nbsp;
+<P><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<P>Hier sind Dinge, die ich immer wieder in Sharewareprogrammen sehe. Die
+Programmierer glauben wohl, das sie unserer "Gilde" die Arbeit damit erschweren.
+Das stimmt aber in keinem Fall. Statt die folgenden Massnahmen zu implementieren
+sollte man mehr Zeit auf die oben genannten verwenden.
+<P>1. Manche Leute glauben, das es schwer ist Seriennummern rauszukriegen,
+wenn man keine MessageBox "Wrong Serial" bringt. Sie zeigen stattdessen
+nur eine, wenn das Programm korrekt registriert wurde. Das ist jedoch genausoviel
+wert. Irgendwo muss ja etwas stehen wie:
+<P><TT>CALL XXXXXX&nbsp;&nbsp;&nbsp; ;; Berechne RegCode und vergleiche
+mit eingegebenem</TT>
+<BR><TT>TEST EAX, EAX&nbsp; ;; RegCode korrekt ?</TT>
+<BR><TT>JE 1234&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;; Wenn ja, dann
+springe</TT>
+<BR><TT>...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+;; Sonst weiter im Programm</TT>
+<P><TT>1234: ????&nbsp;&nbsp;&nbsp;&nbsp; ;; Zeige hier MessageBox "Thank
+you" an</TT>
+<P>Wenn ich also keine "Falscher Code" Box finde, dann suche ich nach "Thank..."
+(englische Programme) oder "Danke.." (deutsche Programme). F&uuml;r was
+sollten die Phrasen sonst stehen ?
+<P>2. Es gibt Programmierer, die glauben ein ellenlanger (30+ Zeichen)
+RegCode w&auml;re schwerer zu knacken, als ein kurzer (-15). Diese denken
+jedoch nur an Brute Force Verfahren und nicht an die "wahre Kunst". Wenn
+die Routine so aussieht.
+<P><TT>CALL XXXXXX&nbsp;&nbsp;&nbsp; ;; Berechne RegCode und vergleiche
+mit eingegebenem</TT>
+<BR><TT>TEST EAX, EAX&nbsp; ;; RegCode korrekt ?</TT>
+<BR><TT>JE 1234&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;; Wenn ja, dann
+springe</TT>
+<P>und man den Code in irgendeinem Register (oder nahe der Position des
+eingegebenen Namens) auslesen kann, k&ouml;nnten sie auch einen RegCode
+aus 100 Zeichen bestehen lassen.
+<P>3. Das gleiche gilt f&uuml;r das Verwenden von "-". Es n&uuml;tzt gar
+nichts, wenn man den RegCode irgendwo im RAM auslesen kann. Besser ist
+sowas:
+<BR>if (3. Zeichen des Codes "-") then
+<BR>if (6. Zeichen des Codes "-") then
+<BR>if (9. Zeichen des Codes "-") then
+<BR>Beginne Code Berechnung
+<BR>&nbsp;
+<P><A NAME="VB"></A><B><U><FONT COLOR="#3333FF">Visual Basic Programme</FONT></U></B>
+<BR>Zuerst dachte man VB Programme sind schwerer zu cracken, als "richtige"
+Programme. Ich schreibe "richtige" Programme, weil VB keine echten EXE
+Dateien erzeugt. Stattdessen ist VB eine Interpretersprache, die Befehle
+an die Runtime Module VBRUNXXX.DLL schickt, die die DLL dann ausf&uuml;hrt.
+Da es mittlerweile aber sehr gute Decompiler f&uuml;r Visual Basic EXEs
+gibt, ist auch VB Cracken kein Problem mehr.Wenn ich im Vorg&auml;nger
+dieses Dokuments noch schrieb, das die Tips nicht f&uuml;r VB Programme
+gelten, so muss ich heute sagen, dass die Tips auch voll f&uuml;r VB gelten.
+<BR>Ein weiterer Ansatz VB zu cracken hat Razzia in einem Tutorial beschrieben.
+Mit einer leicht modifizierten VBRUNXXX.DLL erscheint nach einer falschen
+RegCode Eingabe nicht die "Falscher Code" MessageBox, sondern eine MessageBox
+mit der korrekten Serial. (Ich lache immer noch jedes mal, wenn ich das
+sehe).
+<BR>btw: Das funktioniert auch, wenn der Programmierer keine MessageBox
+erscheinen l&auml;sst, da nicht die "Falscher Code" Box "missbraucht" wird,
+sondern eine (so gut wie ungenutzte) Routine, die irgendwo in der VBRUNXXX.DLL
+schlummert.
+<BR>&nbsp;
+<P><A NAME="Beispiele"></A><B><U><FONT COLOR="#3333FF">Beispiele:</FONT></U></B>
+<P><U><FONT COLOR="#3333FF">Soft-Ice (den verbreitetsten Debugger) feststellen:</FONT></U>
+<BR>Diesen Beispiel-Code f&uuml;r C++ habe ich k&uuml;rzlich gefunden:
+<P><FONT COLOR="#FF0000">//////////////////////////////////////////////////////////////////////</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// MeltICE - SoftICE '95 version 3 detection
+- Made by David Eriksson</FONT>
+<BR><FONT COLOR="#FF0000">// ==================================================================</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// Disclaimer</FONT>
+<BR><FONT COLOR="#FF0000">// ~~~~~~~~~~</FONT>
+<BR><FONT COLOR="#FF0000">// I take no responsibility for the authenticity
+of this information,</FONT>
+<BR><FONT COLOR="#FF0000">// or the results of the use or misuse of the
+source code.</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// SoftICE is a trademark of NuMega Technologies,
+Inc.</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">#include &lt;stdio.h></FONT>
+<BR><FONT COLOR="#FF0000">#define WIN32_LEAN_AND_MEAN</FONT>
+<BR><FONT COLOR="#FF0000">#include &lt;windows.h></FONT>
+<P><FONT COLOR="#FF0000">//////////////////////////////////////////////////////////////////////</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// See if SoftICE version 3.x for Windows 95
+is loaded</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<P><FONT COLOR="#FF0000">BOOL IsSoftIce95Loaded()</FONT>
+<BR><FONT COLOR="#FF0000">{</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;HANDLE hFile;</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;// "\\.\SICE" without escape stuff</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;hFile = CreateFile( "\\\\.\\SICE",</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GENERIC_READ |
+GENERIC_WRITE,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_SHARE_READ
+| FILE_SHARE_WRITE,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OPEN_EXISTING,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_ATTRIBUTE_NORMAL,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL);</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;if( hFile != INVALID_HANDLE_VALUE )</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;{</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; CloseHandle(hFile);</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; return TRUE;</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;}</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;return FALSE;</FONT>
+<BR><FONT COLOR="#FF0000">}</FONT>
+<P><FONT COLOR="#FF0000">//////////////////////////////////////////////////////////////////////</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// See if SoftICE version 3.x for Windows NT
+is loaded</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">BOOL IsSoftIceNTLoaded()</FONT>
+<BR><FONT COLOR="#FF0000">{</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;HANDLE hFile;</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;// "\\.\NTICE" without escape stuff</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;hFile = CreateFile( "\\\\.\\NTICE",</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GENERIC_READ |
+GENERIC_WRITE,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_SHARE_READ
+| FILE_SHARE_WRITE,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OPEN_EXISTING,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FILE_ATTRIBUTE_NORMAL,</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL);</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;if( hFile != INVALID_HANDLE_VALUE )</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;{</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; CloseHandle(hFile);</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; return TRUE;</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;}</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;return FALSE;</FONT>
+<BR><FONT COLOR="#FF0000">}</FONT>
+<P><FONT COLOR="#FF0000">//////////////////////////////////////////////////////////////////////</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">// Example code for calling these functions</FONT>
+<BR><FONT COLOR="#FF0000">//</FONT>
+<BR><FONT COLOR="#FF0000">int main(void)</FONT>
+<BR><FONT COLOR="#FF0000">{</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;if( IsSoftIce95Loaded() )</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; printf("SoftICE for Windows 95 is active!\n");</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;else if( IsSoftIceNTLoaded() )</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; printf("SoftICE for Windows NT is active!\n");</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp;else</FONT>
+<BR><FONT COLOR="#FF0000">&nbsp; printf("Can't find SoftICE with this method!\n");</FONT>
+<P><FONT COLOR="#FF0000">&nbsp;return 0;</FONT>
+<BR><FONT COLOR="#FF0000">}</FONT>
+<P><FONT COLOR="#FF0000">Final words</FONT>
+<BR><FONT COLOR="#FF0000">~~~~~~~~~~~</FONT>
+<BR><FONT COLOR="#FF0000">Hopefully this will make shareware developers
+a little bit easier</FONT>
+<BR><FONT COLOR="#FF0000">about the safety of their software. I would appreciate
+if I got</FONT>
+<BR><FONT COLOR="#FF0000">credit whenever you use the information provided
+here - and maybe a</FONT>
+<BR><FONT COLOR="#FF0000">copy of your software...</FONT>
+<BR><FONT COLOR="#FF0000">(You don't</FONT>
+<P><FONT COLOR="#FF0000">Good luck with your development!</FONT>
+<P><FONT COLOR="#FF0000">- David Eriksson (david@2goodsoft.com), August
+12, 1997</FONT>
+<BR>&nbsp;
+<P>Ok, ich w&uuml;rde vorschlagen keine Fehlermeldung auszugeben, wenn
+SICE festgestellt werden kann. Die folgende Methode ist viel effektiver,
+wenn es darum geht Registrierungscodes zu sch&uuml;tzen (aber nutzlos,
+wenn es um Date-Checks oder Nag-Screens geht). Man sollte eine Variable
+(int fake) deklarieren, der man den Wert 1 zuweist, wenn SICE nicht gefunden
+werden kann. Wird SICE jedoch gefunden, weist man ihr den Wert 2 zu. Dann
+f&uuml;gt man irgendwo in der Routine, in der der korrekte Registrierungscode
+berechnet wird die Zeile
+<P>regcode = regcode * fake;
+<P>ein. Dann wird eine Registrierungsnummer berechnet, die nur gilt, wenn
+SICE geladen ist, und der Cracker wird sich doch sehr wundern, warum das
+Programm nicht registriert ist, wenn er das n&auml;chste Mal das Programm
+startet, ohne dass SICE geladen ist. Wenn er das Programm nach dem "erfolgreichen"
+Cracken wieder deinstalliert, ohne den Code erneut zu testen und diesen
+stattdessen sofort auf seine Internet Page l&auml;dt ensteht &uuml;berhaupt
+kein Schaden f&uuml;r den Shareware Autor, da die Registrierungsnummer
+f&uuml;r den "normalen" Anwender keine G&uuml;ltigkeit hat.
+<P><U><FONT COLOR="#3333FF">Mein "uncrackbares" CrackMe:</FONT></U>
+<P>Hier ist das Prinzip eines CrackMes, das ich programmiert habe. Es ist
+h&ouml;llisch schwer zu cracken, f&uuml;r einen ehrlichen Anwender dennoch
+leicht zu registrieren. Da das Programm zu umfangreich ist, erl&auml;utere
+ich nur die Funktionsweise.
+<BR>&nbsp;
+<OL>
+<LI>
+Nat&uuml;rlich verwendet es den Melt Ice Trick von oben</LI>
+
+<LI>
+Alle Strings sind weichgecoded z.B.: String smiley=String(char(58))+String(char(41));
+f&uuml;r :)</LI>
+
+<LI>
+Wenn eine Datei namens Hell.key (einziger Hardgecodeder String) gefunden
+wird, dann kommt eine Fehlermeldung "Corrupted Keyfile". Dies soll den
+Cracker auf die absolut funktionslose Datei Hell.key aufmerksam machen.</LI>
+
+<LI>
+In der Registerbox ist das Eingabefeld schreibgesch&uuml;tzt, bis man [CTRL]+[D]
+dr&uuml;ckt, ausserdem sieht es aus, wie ein ganz normales Textfeld (man
+kann es nicht vom Hintergrundfenster unterscheiden)</LI>
+
+<LI>
+Es gibt noch zwei Eingabefelder, die sich jedoch &uuml;berlappen, so das
+man sie f&uuml;r eines h&auml;lt. Das erste macht ca. 90% der Gesamtbreite
+aus, das zweite 10%. In jedes Textfeld muss eine Seriennummer eingetragen
+werden.</LI>
+
+<LI>
+Der Name wird auf folgende Zeichen untersucht: 0..9 / [ ] _ + ^ $&nbsp;
+| @</LI>
+
+<LI>
+An belanglosen Stellen habe ich Strings hardgecoded, die genau so lauten
+wie die Fehlermeldung, aber mit dieser nichts zu tun haben</LI>
+
+<LI>
+Das Programm testet, ob aktive Fenster mit deren Titel "W32Dasm" oder "Interactive
+Disassembler" enth&auml;lt .Wenn ja, dann fake = 2</LI>
+
+<LI>
+Die erste Seriennummer muss "..." am Ende haben, die zweite "."</LI>
+
+<LI>
+Um das Programm zu registrieren muss eine Datei mit dem Namen der ersten
+Seriennummer ohne "...", daf&uuml;r aber mit ".key" vorhanden sein. Dort
+werden die Informationen gespeichert. Auf diese Datei verweist ein Eintrag
+in einer INI-Datei, der bei korrekter Registrierung angelegt wird.</LI>
+
+<LI>
+Schw&auml;che 1: Kein Test, ob Datei ver&auml;ndert worden ist</LI>
+
+<LI>
+Schw&auml;che 2: benutzte Windows-Funktionen wie MessageBox oder GetPrivateProfileString
+(INI-Dateien)</LI>
+
+<LI>
+Schw&auml;che 3: Man kann das Programm &uuml;ber den OK-Button registrieren:
+Besser w&auml;re immer dann zu pr&uuml;fen, wenn sich etwas in den Eingabefeldern
+ver&auml;ndert</LI>
+</OL>
+Was soll ich sagen: Bisher hat's noch keiner geschafft&nbsp; :-)
+<P><A NAME="glossar"></A><B><U><FONT COLOR="#3333FF">Glossar:</FONT></U></B>
+<BR><TT>Breakpoint&nbsp;&nbsp; - Ein Breakpoint ist ein "Lesezeichen" im
+Debugger, mit dem man</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ein Programm debuggt. Wenn solch ein Lesezeichen erreicht ist, dann</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&ouml;ffnet sich der sonst im Hintergrund laufende Debugger selbstst&auml;ndig</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+und man kann &Auml;nderungen im Programm (im RAM) vornehmen. BP lassen</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sich auf Speicheradressen, Windows API-Funktionen, Hardwareschnitt-</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+stellenaktivit&auml;t (f&uuml;r Hardware-Dongles)... setzen.</TT>
+<BR><TT>CrackMe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ein CrackMe ist ein Beispielprogramm,
+das von Crackern geschrieben</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ist, um andere Cracker zu besch&auml;figen und vor eine Aufgabe zu stellen,</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+die von Sharewareprogrammen nicht mehr gefordert werden, oder sich</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+in einem speziellen Gebiet weiterbilden wollen.</TT>
+<BR><TT>Debugger&nbsp;&nbsp;&nbsp;&nbsp; - Ein Debugger ist ein Programm,
+mit dem man ein Programm in seinem</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ablauf beeinflussen kann. Man kann dort Assembleranweisungen &auml;ndern</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oder den Ram nach Werten durchsuchen. Eigentlich kann man mit einem Debugger</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alles im RAM tun, was man will, nur endet das manchmal mit einem Reset.</TT>
+<BR><TT>Disassembler - Ein Programm, das ausf&uuml;hrbare Dateien in Assemblerinstruktionen
+zer-</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+legt.</TT>
+<BR><TT>Hardcoden&nbsp;&nbsp;&nbsp; - Das Definieren eines Strings auf
+folgende Weise String hallo="Hallo".</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Gegenteil weichcoden: String hallo=char(72)+char(97)+char(108)+char(108)</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++char(111) (Das muss man halt f&uuml;r die verschiedenen Sprachen anpassen)</TT>
+<BR><TT>KeyGenerator - Kleines Programm, mit dem auf Namen basierende Registrierungscodes
+f&uuml;r</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Sharewareprogramme erstellen kann. (Hab im Urlaub meinen ersten programmiert:</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10 Stunden/25 Seiten kommentierter Assembler Code nur um am Ende festzustellen,</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+das mein genereller Ansatz f&uuml;r einen KeyGenerator falsch war (h&auml;tte
+ich nur</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+vorher was dar&uuml;ber gelesen). Es h&auml;tten auch 1 Stunde und 15 Zeilen</TT>
+<BR><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+kommentierter Code gereicht:(. Ich habs aber trotzdem geschafft :)</TT>
+<P><A NAME="Greetz"></A><B><U><FONT COLOR="#3333FF">Greetings:</FONT></U></B>
+<BR>Thanx/Greetz and Gratitude to Fravia+, tKC, ED!SON, Sandman, DaVinci,
+Eternal Bliss, +wAj, Shadow, Jordan - The Black Wizard, Razzia
+<P><FONT SIZE=-1>The hole document was coded by LaZaRuS [hf]</FONT>
+<BR><FONT SIZE=-1>last changed 13.03.1999</FONT>
+<P><FONT SIZE=-1>Anmerkungen/Korrekturen/(konstruktive) Kritik/Anf&uuml;gungen
+an lazarus666@gnwmail.com</FONT>
+<BR><FONT SIZE=-1>Bitte mailt mir. Keine Antwort ist schlimmer, als eine
+schlechte. (Ausser ihr wollt mich beleidigen, dann spart euch die Mail)</FONT>
+<BR><FONT SIZE=-1>Wenn irgendein Cracker/Reverser das liest und glaubt
+manche Dinge besser zu wissen, bitte ich auch um eine Mail.</FONT>
+<BR><FONT SIZE=-1>Wenn irgendjemand glaubt ich sollte seine Programme (kein
+VB oder DOS) mal testen und spezielle Tips geben, dann mailt mir aber vorsicht
+ich werde mich nat&uuml;rlich bei dem entsprechenden Programmierer mit
+Angabe der ersten Mailadresse r&uuml;ckversichern. Bitte mailt mir auch,
+was ich cracken soll, da ich keine Lust habe nach Einschr&auml;nkungen
+zu suchen, die nach 37 Programmstarts im 60. Untermen&uuml; entstehen.</FONT>
+<BR>&nbsp;
+<P><FONT SIZE=-1>Bitte dieses Dokument so weit wie m&ouml;glich verbreiten.
+Es ist ausdr&uuml;cklich gestattet es &uuml;berall zu ver&ouml;ffentlichen.
+(Bitte unver&auml;ndert) Wenn ich es in 6 Monaten irgendwo auf einer WebPage
+sehe, dann glaube ich, das die Arbeit dieses Dokument zu schreiben sich
+ausgezahlt hat.</FONT>
+<!-- Begin mover -->
+<hr width=66%><center><a href="protec.htm"><IMG SRC="../images/protec.gif"
+ALT="protec" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue><font color=blue>[</fonT></font><a
+href="https://searchlores.nickifaulk.com/protec/info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

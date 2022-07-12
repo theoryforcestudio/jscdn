@@ -1,0 +1,901 @@
+<html>
+<title>The Proxomitron Filter Language</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<body background="https://searchlores.nickifaulk.com/back.jpg" text="#000044" link="#0000FF" vlink="#000044">
+
+<table width="100%"><tr><td align=left>
+<h2>The Proxomitron</h2>
+<h3>Filter Language &nbsp; originally at <a href="http://www.sankey.ws">http://www.sankey.ws</a></h3>
+<h4>Scott R. Lemmon
+<br>and
+<br>
+<a href="http://www.sankey.ws/contact.html">John Sankey</a></h4>
+<a href="http://www.sankey.ws/proxomitron.html"><b>Introduction</b></a>
+<br><a href="http://www.sankey.ws/proxtech.html"><b>Tech Talk</b></a>
+<br><b>Filter Language</b>
+<br>&nbsp; <a href="proxlang.html#tml">The Text Matching Language</a>
+<br>&nbsp; <a href="proxlang.html#tips">Tips and Tricks</a>
+<br>&nbsp; <a href="proxlang.html#faq">How do I ...? The Proxomitron FAQ</a>
+<br>&nbsp; <a href="proxlang.html#limits">Limitations</a>
+<br><a href="proxfilt.html"><b>Filter Examples</b></a>
+<td align=center nowrap>
+<img src="https://searchlores.nickifaulk.com/prox0.gif" width=155 height=155>
+<br><b>The Proxomitron</b>
+<br>Keeping an eye on the Web.
+<br>For You.
+</table>
+
+<h3><a name="tml"></a>The Text Matching Language</h3>
+<p>
+The text matching language is the key to understanding how The Proxomitron's filters
+work. It allows you to match complex combinations of HTML tags and store parts of
+the matched text into variables which can later be used in the replacement text.
+<p>
+The rules have been specifically designed to make working with HTML easier.
+For instance, since case is seldom important in HTML, all matching is case insensitive
+- saving you the trouble of testing for both upper and lower case.
+
+<h3>The Proxomitron's meta characters</h3>
+<p>
+Here is a quick list of The Proxomitron's meta commands and what they do:
+<pre>
+<b>Matching meta characters</b>
+*         Match a string of any characters.
+?         match any single character.
+[abc]     Match any single character listed in the brackets.
+[^a-z]    Match any single character not listed in the brackets.
+[#n-n]    Prox3 Numeric range match.
+[#x:y]    Prox4 Numeric range match.  Supports negative numbers.
+" "       Always matches but also consumes any whitespace.
+\s        Match string of whitespace only.
+\w        Match any number of non-space characters except ">".
+\t        Matches a single tab character.
+\r        Matches a single carriage return character.
+\n        Matches a single newline character.
+\0-9      put match into a variable - works like "*" unless following stuff in parentheses: "( ... )\1"
+\#        put match into the replacement stack. Each time it is used, the matched item is added to the stack.
+&amp;         AND function.
+|         OR function.
+^         NOT function.
+(...)     Group a sub-expression.  Negate with "(^ ... )"
++         Repeat previous match until there are no more left.
+++        Same as '+' except matches to up to the point where what follows is true.
++{5}      The + or ++ pattern run will match only 5 repetitions.
++{2,7}    The + or ++ pattern run will match 2 to 7 repetitions.
++{3,*}    The + or ++ pattern run will match 3 or more repetitions.
+\         Escape any meta character's special meaning.
+=         Magic equal - absorbs leading/trailing spaces.
+"         Magic quote - matches double or single quote.
+'         Smart ending quote - use to deal with nested quotes.
+$LST      include a list in any matching expression
+$SET      set a positional variable to a specific value.
+$CON      test current connection number
+$IHDR     test input headers
+$OHDR     test output headers
+$URL      test the URL inside the matching portion of a filter.
+$CTYP     limit a filter to certain types of pages
+$FILTER   force filtering or not
+$USEPROXY override remote proxy selection
+$SETPROXY force a particular proxy.
+$UESC     JavaScript unescape()
+
+<b>Replacement Text Escapes</b>
+\0-9      Insert a variable into the replacement text.
+\#        Inserts one item from the replacement stack each time it is used - first in first out
+\@        Insert all the items in the replacement stack.
+\\        Insert a single backslash.
+\a        Insert any anchor text from the current URL (anything following a "#").
+\d        Insert The Proxomitron base directory in "file://" URL format.
+\h        Insert the host portion of the current URL.
+\k        Kills the current connection.
+\p        Insert the path portion of the current URL.
+\q        Insert any query string from the current URL (anything following a "?").
+\u        Insert the full URL of the current web page.
+&lt;start&gt;   Insert this at the beginning of a page
+&lt;end&gt;     Insert this at the end of a page
+$RDIR     redirect URL (transparent)
+$JUMP     redirect URL (non-transparent)
+</pre>
+<p>
+<b>What they do, in detail:</b>
+
+<table>
+<tr valign=top><td>*<td>matches any string of characters, including no characters at all.
+For example, "foo*bar" would match "foobar", "fooma babar", or even "foo goat bat bison bar".
+Basically the asterisk means, "search forward matching anything until you find what follows
+the asterisk"
+
+<tr valign=top><td>?<td>matches any single character no matter what it is.
+"?oat" would match "boat" or "goat" but not "oat". ?* matches 1 or more characters, but not nothing
+at all.
+
+<tr valign=top><td>^<td>negation (NOT). Used to reverse the action of any of the following tests.
+Note that a negated expression consumes no characters if it doesn't match any.
+
+<tr valign=top><td>[...]&nbsp;<td>matches any single character listed within the
+[ and ] e.g. [abc] matches "a", "b" or "c". Ranges are checked by using a dash:
+[A-Z] will match any letter "A" through "Z" while [0-9] will match any single digit.
+If the <b>first</b> character is a "^" (NOT) it will match any character not within the
+brackets - [^0-9] will match any character that's not a digit.
+Note the difference between an escaped character (\t \r \n) and a Proxomitron
+metacharacter (\w \s etc.). Metacharacters have no meaning within [ ], only escaped characters
+do. Except for [trn], the escape of any character is the same character e.g. \s is the same
+as s within [ ]. If ^ is not the first character, and - is the last character,
+they do not need to be escaped (although it won't do any harm if you do escape them). \ and
+] must always be escaped, of course, if they are to be matched.
+
+<tr valign=top><td nowrap>[#n-n]<td>numeric match. This is used to check for numeric value
+ranges in HTML tags. For example, to check for a number between 100 and 150 use
+"[#100-150]". If the second number is a '*' it acts as if it's infinitely large, "[#40-*]"
+would match any number greater than 40. To check for a number less than 40 simply
+use "[#0-40]". To check for an exact number the second number can be left out
+(as in "[#100]"). The numeric match will match regardless of leading zeros or
+quotes surrounding a number - tag="0100". Note that currently, this rule only works
+with positive numbers, but you can use the dash to test for negative values: "-[#2-7]" for
+instance, could be used to match -2 through -7.
+
+<tr valign=top><td nowrap>&nbsp; (space)<td>matches a series of spaces (in HTML, tabs and line breaks
+are spaces), including none at all. Use it where there may or may not be a space between items.
+For example "tag value" matches "tag value" or "tag&nbsp;&nbsp;value" or "tagvalue".
+
+<tr valign=top><td>\s<td>like the space, but there must be at least one for it to match.
+For example "tag\s" would match "tag " or "tag&nbsp;&nbsp;" but not "tag"
+
+<tr valign=top><td>\w<td>matches any number of non-space characters ('word').
+It stops when it hits a space or a "&gt;" (which marks the end
+of a HTML tag). Useful for matching tag values and URLs.
+
+<tr valign=top><td>\t<td>matches a tab character and nothing else. Be careful with this and
+the following two - they depend upon the system that created the HTML so will be site
+dependent in their results.
+
+<tr valign=top><td>\r<td>matches a carriage return character and nothing else
+
+<tr valign=top><td>\n<td>matches a newline character and nothing else
+
+<tr valign=top><td>\0-9<td>backslash followed by one digit 0-9: save the match into a variable.
+It matches just like the "*" character, but stores whatever is matched into one of ten variables.
+These variables can then be used in the replacement text to include parts of the original HTML.
+
+<a name="bktvar"></a><tr valign=top><td nowrap>( )\0-9<td>more complex matches
+can be captured by placing the \0-9 directly
+after a set of parenthesis <b>with no spaces between</b>, as in "(foo*bar)\1" Then, anything
+matched within those parenthesis will be placed into the variable. Never forget:
+"(foo*bar)\1" and "(foo*bar)&nbsp;\1" are completely different things.
+
+<tr valign=top><td>\#<td>put the matched text into the replacement stack. Each time it is used,
+the matched item is added to the end of the stack. Allows recursive substitutions. The maximum
+size is 20 items.
+
+<tr valign=top><td>|<td>the "OR" function. For example "foo|bar" would match either "foo" or "bar".
+
+<tr valign=top><td>&amp;<td>the "AND" function. For example "*foo&amp;*bar" would
+match "foo bar" or "bar foo" but not "foo foo". <b>Note the use of the asterisk</b> - something
+like this is always needed with the AND function since a word could never be both
+"foo" and "bar" at the same place and time. AND is useful for situations where
+tag values may come in any order...
+<br><code>&lt;img src="picture" height=60 width=200&gt;</code>
+<br>and
+<br><code>&lt;img width=200 height=60 src="picture"&gt;</code>
+<br>are both matched by...
+<br><code>&lt;img (*src="picture" &amp; *height=60 &amp; *width=200)*&gt;</code>
+
+<tr valign=top><td>(...)<td>parenthesis permit matching sub-expressions within
+phrases. For example "foo(bar|bear|goat)" would match "foobar", "foobear" or "foogoat".
+Parenthesis can be nested, as in "foo(bar|(black|brown|puce) bear|goat)" which would
+match "foobar" "fooblackbear" "foobrownbear" etc.. Also, as with "[...]", if the first
+character following a "(" is "^" the expression will match only if the expression
+within does not match. For example, "(^foo|bar)" would match anything that's
+not "foo" or "bar".
+
+<tr valign=top><td>+<td>a run of repeating characters. For instance, "a+" would match ""
+(i.e. no a's at all), "a" or "aaaaaa". You can use it after other meta characters or square
+bracket terms for more
+complex runs. For example, [abc]+ would match a run of any characters "a","b",or "c" like
+"ababccba". ([a-z]&amp;[^n])+ would match a run of letters "a" through "z" but not "n".
+(foo)+  would match "foo", "foofoo", "foofoofoo", etc. Note that "a+ab" will never match anything
+because a+ will "use up" all the "a's" leaving nothing for "ab".
+
+<tr valign=top><td>++<td>same as '+' except it matches only up to the point where what follows
+the ++ is true. So, "a++ab" will match "aaab" because a++ will stop at "ab". This is especially
+useful for negations: [^/]++microsoft.com will look for microsoft.com but stop at the first /.
+So, it will match a URL like "qwerty.microsoft.com..." but not
+"www.somewhere.com/microsoft.com/info.html"
+
+<tr valign=top><td>+{}<td>+{5} means that the + or ++ pattern run will match precisely
+5 repetitions and nothing else.
+Use +{2,7} to match 2 to 7 repetitions; +{3,*} to match 3 or more repetitions.
+
+<tr valign=top><td>\<td>the backslash is used to "escape" any character that has special
+meaning and treat it as a normal character. For example, to match a parenthesis
+in the HTML text use "\(", to match a backslash itself use "\\".
+
+<tr valign=top><td>=<td>the equal character matches not only
+the "=" itself, but also any whitespace before or after - making tests for tag values
+easier. For example foo="bar" also matches foo= "bar" or foo = "bar"
+
+<tr valign=top><td>"<td>a double quote will match either double or single quotes
+(since either may be used in HTML). for example " * " would match "oh happy mongoose"
+or 'oh happy mengeese'. If you want to test for double quotes explicitly, use the backslash - \" 
+
+<tr valign=top><td>'<td>The single quote is smarter than your average quote: It attempts to
+match the appropriate ending quote for any quote previously matched by the double quote
+even if there are other quotes in between! Why? In HTML it's common
+to use a mixture of single and double quotes when you need "quotes within quotes", as in
+<br><code>href=" javascript:window.open( ' bison.html ' ); "</code>
+<br>or
+<br><code> href=' javascript:window.open( " bison.html " ); '</code>
+<br>Both these are matched by href=( " * ' ) - use the double quote to match
+the initial quote and the single quote to match the ending quote.
+<br>There are some restrictions here: First both the starting and ending quotes must be
+in the same sub-expression - that
+means in the same set of nested parenthesis. For example, " some text ', ( " some text ' ),
+and " ( some text | other text) ' work, but neither " ( some text ' ) nor ( " | ) some text ( ' | )
+work. Another restriction is that start and end quotes can't be nested in the same sub-expression:
+" something " something else ' end of something ' won't work. However, you can nest them
+using a different sub-expression, like " something ( " something else ' ) end of something '.
+It's also worth noting that if no previous double quote was matched, the single quote just matches
+a normal single quote. Still it's safer to use \' to explicitly check for a single quote if you need to.
+</table>
+
+<p>
+<b>Matching functions</b>: these do more complicated things than metacharacters.
+<table>
+
+<tr valign=top><td>$LST(filename)<td>include a file in any matching expression.
+The contents of the file are tested line by line against the text to be matched until a
+match is found. If a match is found, the expression returns TRUE, otherwise FALSE.
+<tr valign=top><td>$SET(#)<td>set a positional variable to a specific value.
+By placing $SET commands within a matching expression, you can set various
+values if the matching expression reaches that point. This can be
+used for an if/then/else effect. So
+<br><code>match: name=(one $SET(0=Naoko) | $SET(0=Default))
+<br>replace: "\0 Matched"
+</code><br>
+will produce
+<br>"Naoko Matched" if name=one
+<br>else "Default matched"
+<br>Two details on how The Proxomitron handles variables are needed here. "$SET(\#=\1)"
+does not make \# equal to the value of \1, instead SET makes \# equal to the string
+literal "\1". The expansion of \1 isn't done until the match is complete and the filter
+moves on to the replacement section. Each variable just contains a pointer and length
+to a bit of text that's already stored somewhere (either in the input buffer, or in the
+case of SET in the filter itself). So, $SET(\1=\1\2) doesn't work to append to a variable.
+
+<tr valign=top><td>$CON:(x,y[,z])<td>Will be true only if the current connection number is
+'x' of 'y' (optionally for every 'z' connections). Use to rotate values based on connection.
+For example, if you want to pretend to be two different people rather than just one,
+the following for example will alternate between two values in \0 ...
+<br><code>($CON(1,2) $SET(0=personna 1)|$CON(2,2) $SET(0=personna 2))</code>
+<br>You might wish to do this with a cookie-faker or browser-identification filter.
+
+<tr valign=top><td>$IHDR(name:match)<br>$OHDR(name:match)<td>test the value of an HTTP header.
+The command will be true if the named header's value matches the 'matching' section.
+$OHDR tests outputed headers while $IHDR tests incoming headers. To only match a
+"Referer" header that contains 'microsoft.com', use
+<br><code>$OHDR(Referer:*.microsoft.com)
+</code><br>Using these you can have web filter only match if specific header values are
+also true, or to capture and use header values into a variables to use in a
+filter's replacement.  You can use also them in HTTP header filters to check
+combinations of headers for a match.
+
+<tr valign=top><td>$URL(matching)<td>test the URL inside the matching portion of a filter.  
+You can use the filter's URL match for this, but by using this command you can check for
+different URL based on the text matched. It's also useful to capture portions of a URL
+into variables.  The following would capture the URL's path...
+<br><code>$URL(www.somehost.com/\1)  
+</code><br>
+As elsewhere, the URL matching starts directly with the hostname so there's
+no need to match the "http://" portion.
+
+<tr valign=top><td>$CTYP(code)<td>Content Type check command. used to limit a filter to
+only affect certain types of pages (like JavaScript files only). The "code"
+must be one of the following known types...
+<br>htm  - Web pages
+<br>css  - Cascading style sheets
+<br>js   - JavaScript
+<br>vbs  - VB Script
+<br>oth  - Anything else
+<br>For more complex content-type checks you can use "$OHDR(Content-Type:some matching value)"
+
+<tr valign=top><td>$RDIR(url)<td>The RDIR (redirect) command is used to transparently redirect
+URLs to a different location. It's also possible to redirect to a local file by using the
+"http://file//filename" URL command syntax.   The new URL must be of a type The
+Proxomitron understands (http, or with SSLeay, https).
+
+<tr valign=top><td>$JUMP(url)<td>Similar to the RDIR command, the JUMP command is used to
+redirect a  URL to a different location. However, JUMP just tells your browser to go to
+the new location. With JUMP your browser is aware of the redirection and the URL you see
+will be updated to reflect the new location.  It works best for redirecting
+an entire page, while RDIR is better at invisibly redirecting individual
+page elements like images or java apps.  Use RDIR when you want the
+redirection to happen "behind the scenes" and use JUMP when you want to
+simply go to a different site from the one requested.
+Use both RDIR and JUMP commands in the replacement section of <b>header
+filters only</b>. It's important to note that for outgoing headers the redirect
+will happen before the original site is ever contacted, but when used with
+incoming headers, the initial site must be contacted first.  These commands
+have no effect in web filters since by this point the original page
+has already begun loading into your browser. In such cases you can
+often use JavaScript to change to a new location as in...
+
+<tr valign=top><td>$FILTER(bool)<td>force a particular request to be
+filtered or not filtered regardless of it's type.  Normally only specific types are
+filtered (like text/html, text/css, image/gif, etc). $FILTER can be used in
+the match or replace of any header filter and takes a "true" or "false" 
+value.  If true, the request will be run through the web filters regardless
+of it's type.  This only makes sense for content that's text based. 
+You can also use it to avoid "freezing" certain GIF images by using it in
+a header filter along with a URL match.
+Take for example...
+<br><code>Out = "True"
+<br>Key="URL: Don't freeze this gif"
+<br>URL="www.somewhere.com/animate_me.gif"
+<br>Replace="$FILTER(False)"</code>
+
+<tr valign=top><td>$USEPROXY(bool)<td>override the "Use remote proxy" check box
+<b>for a single filter</b>. It is used to ensure that a proxy is or isn't used with a
+given site or for a particular action. To have effect this command must be called in
+either the match or replace of an <b>outgoing</b> header filter. This is because the
+proxy setting must be established prior to connecting to the site.
+
+<tr valign=top><td nowrap>$SETPROXY(proxy:port)<td>force a request to use a particular
+proxy. It overrides both the "Use remote proxy" checkbox and the current proxy chosen
+in the proxy selector.
+The proxy must be one entered into the External Proxy Selector list -
+SETPROXY simply looks up and sets a proxy from that list. Like the previous command, this
+command must be called in either the match or replace of an outgoing header filter.
+(It's usually only necessary to type the first part of the proxy name - the first proxy
+matched in the list will be used. The partial match must be exact though - no wildcards.)
+
+<tr valign=top><td>$UESC(text)<td>similar to the JavaScript unescape().
+It will convert most URL escaped characters back to their ASCII
+form. It's useful for unescaping URLs that may be embedded in other URLs
+(an increasingly common trick used by many sites to track the links you
+click). Often characters like ":" and "/" will be escaped by their hex
+equivilents ("%3A" and "%2F") making the real URL hard to use.
+$UESC can be used in the replacement text of a filter, and can be given 
+any valid replacement text as input (such as \1 variables). It will
+convert most escaped characters back to their correct form, but spaces 
+and any non-displayable ASCII characters will remain escaped.
+</table>
+
+<h3>Special Replacement Text codes</h3>
+<p>
+These let you put special codes into replacement text:
+<table>
+<tr valign=top><td nowrap>\0 - \9<td>insert value stored into the corresponding variable
+from the matching expression
+<tr valign=top><td>\#<td>insert value stored in the stack - first in, first out
+<tr valign=top><td>\@<td>insert everything in the stack
+<tr valign=top><td>\\<td>insert a single backslash
+<tr valign=top><td>\a<td>includes any anchor text from the current URL (anything following a "#")
+<tr valign=top><td>\d<td>includes The Proxomitron's base directory in a "file://" URL format
+<tr valign=top><td>\h<td>includes the host portion of the current URL (before the first /)
+<tr valign=top><td>\k<td>kills the current connection - useful in HTTP headers to ban
+specific URLs and in web page filters to skip loading the rest of a page.
+<tr valign=top><td>\p<td>includes the path portion of the current URL (after the first /).
+<tr valign=top><td>\q<td>includes any query string from the current URL (anything following a "?").
+<tr valign=top><td>\u<td>includes the full URL of the current web page.
+</table>
+<p>
+Note that \a \h \p \q \u only work when you are online - connected to a web page. The algorithm for
+\h is still under development to try to handle relative URL's and the recent tendency to drop
+the www. prefix for HTML pages from most but not all domain name servers.
+
+<a name="url"></a><h3>Special URL codes</h3>
+<p>
+These commands are inserted before the hostname in the URL. Commands are separated
+from the URL with either ".." or "//" e.g. 
+<code>http://bypass..www.special.site/</code> bypasses The Proxomitron
+when accessing <code>http://www.special.site/</code>. All of these affect only the URL
+specified in your filter, not others. You can combine these commands e.g.
+<code>http://src..bypass..www.host.com/specificpage</code>
+<table>
+<tr valign=top><td>bypass&nbsp;<td>bypass The Proxomitron totally
+<tr valign=top><td>bin<td>bypass The Proxomitron just for header input
+<tr valign=top><td>bout<td>bypass The Proxomitron just for header output
+<tr valign=top><td>bweb<td>bypass The Proxomitron just for web filters
+<tr valign=top><td>file//<td>filter files on your own computer in the same way as remote files.
+Useful for checking.
+
+<tr valign=top><td>https<td>load a 'secure' https: web page without having the local page
+encrypted. Can be use to access secure pages from browsers that don't directly support https
+or to avoid the normal https warning messages browsers spit out. The actual remote connection
+is still encrypted, but The Proxomitron sends the decrypted and filtered page to your
+browser. (You need the <a href="https://searchlores.nickifaulk.com/proxtech.html#secure">SSL</a> DLL's for this to work.)
+
+<tr valign=top><td>load//<td>loads a Proxomitron config file. It can
+optionally be followed by a '?' and a URL to go to once the config has been loaded e.g.
+<code>http://load//microsoft.cfg?http://www.microsoft.com/</code> will load your special
+config file whenever you visit Microsoft.
+
+<tr valign=top><td>src<td>displays the real source of the web page (not just unaffected by
+The Proxomitron, but unaffected by JavaScript stunts too!)
+
+<tr valign=top><td>dbug<td> as src, but also includes The Proxomitron
+debug stuff. Similar to turning on the "HTML Debug Info" option in the log window, but only
+for one URL.
+</table>
+
+<a name="tips"></a><h2> Tips and Tricks</h2>
+<p>
+The matching rules are the most complex part of The Proxomitron. Understanding them can
+be confusing at first - especially if you've never used a pattern matching language before.
+However, don't despair, even very simple rules can accomplish quite a bit. Take it a step at
+a time and soon it'll become second nature. To get you started, here are a few tips covering
+some basic HTML matching tasks.
+<p>
+This section assumes you know a little about HTML - if not there are many excellent
+tutorials available on the net. If you don't intend to write your own rules, you can
+ignore this information entirely.
+
+<a name="format"></a><h3>Formatting your matching rules</h3>
+<p>
+Complex matching rules can often be hard to read. However, to make them more legible,
+both the matching expressions and replacement text can be split over multiple lines.
+These line breaks are ignored when deciding what your matching rule means. A techie warning
+though: spaces are <b>not</b> ignored. This is the reverse of HTML, where
+a line break is treated exactly the same as a space. So, if you want to tell The Proxomitron
+"ab" (as opposed to "a&nbsp;b"), and indent lines (as Scott does in his .cfg files),
+to be safe you should use the format
+<br>&nbsp;&nbsp;"a"
+<br>&nbsp;&nbsp;"b"
+<br>But, if you write
+<br>"a
+<br>b"
+<br>(no leading or trailing spaces), you don't need the extra double quotes.
+<p>
+To include a line break in the replacement text or match one in the matching clause
+use "\n". Spaces always match true (i.e. whether there is a space in the input page or not),
+so you can normally use them freely to separate elements of a matching expression.
+Just remember that they consume all spaces they find, and that "&lt;a&nbsp;pplet" is not the
+same as "&lt;applet"!
+
+<h3>Some general info</h3>
+<p>
+When designing a new rule it's more common for it to not match at all rather than
+to match too much. Always start simple - then add refinements as needed. That
+way, when a rule suddenly doesn't match when you expected it to, you'll have an
+idea which part is causing the trouble.
+<p>
+Use the log window to see when a filter matches, and use your browser's "view source"
+option to see the results of a match. These are two very helpful tools when designing rules.
+Even more helpful is the Match Testing Window which allows you to see exactly
+how a filter will change a bit of HTML text.
+<p>
+Spaces are <b>very</b> important in many cases. For example, if you want to test an
+anchor tag &lt;a&nbsp;*&lt;/a&gt;, the space after the 'a' is essential, otherwise it would
+match 'applet'! Always use \s (e.g. &lt;a\s*&lt;/a&gt;) after tag names so that no matter
+what other tag names turn up in the future, The Proxomitron will know that the name must be
+followed by at least one space to match.
+
+<h3>Cutting and pasting HTML</h3>
+<p>
+Often a good way to get started on a new filter is to cut and pase the HTML you're interested
+in directly into the matching clause. Remember: in order to permit formatting rules over
+multiple lines for clarity, the matching clause ignores line breaks. So, a line that looks like
+<br>&lt;br&gt;
+<br>&lt;p&gt;
+<br>seems just like "&lt;br&gt;&lt;p&gt;" to The Proxomitron - no space.
+This can cause trouble since, in HTML, the newline character behaves as a space.
+The solution is to place a space at the begining or end of each matching clause line;
+this will match all "whitespace" including any newlines.
+
+<h3>Disabling a tag and tag elements </h3>
+<p>
+Since browsers are supposed to ignore any tags and element they don't understand, an
+effective way to disable a tag or one of its elements is to rename it. This comes in
+especially useful when the same element may be used by several different tags. Take "onload"
+for example, this element auto-runs a JavaScript. Although normally in the
+"&lt;body ... &gt;" tag, it may occur elsewhere as well. To stop it you could use...
+<br><code>Matching: onload=
+<br>Replace: LoadOff=</code>
+<br>which would make a tag like
+<br><code>&lt;body background="bak.gif" onload="window.open(myadd);" &gt;</code>
+<br>become
+<br><code>&lt;body background="bak.gif" LoadOff="window.open(myadd);" &gt;</code>
+<p>
+Notice how simple this rule is! It's a bit risky, since there's a chance the phrase "onload="
+could occur outside a tag in the actual text of a web page. In practice however this seldom
+happens (including the equal sign helps guard against this a bit).
+
+<a name="startend"></a><h3>Changing start and end tags</h3>
+<p>
+Here's a simple trick for changing both a start and end tag with the same rule. This trick
+is used by the "Blink to Bold" rule among others. In this rule we want to convert
+"&lt;blink&gt;" to "&lt;b&gt;" and "&lt;/blink&gt;" to "&lt;/b&gt;" - Let's take a look how it's done:  
+<br><code>Matching: &lt;\1blink&gt;
+<br>Replace: &lt;\1b&gt;</code>
+<br>By using the "\1" meta character, the rule will match both the start tag
+"&lt;blink&gt;" and also the end tag: "&lt;/blink&gt;". Additionally, the "\1" captures
+the end tag's slash for use in the replacement text. A safer, but more complex, version
+of the rule might be...
+<br><code>Matching: &lt; ( / | )\1 blink&gt;
+<br>Replace: &lt;\1b&gt;</code>
+<br>
+Can you tell why? If not read <a href="proxlang.html#tfson">Testing for something or nothing</a>.
+
+<h3>Capturing a tag's contents</h3>
+<p>
+Often you'll want to change only one element of a tag while leaving the rest as they are.
+This is where the number variable "\#" matching is very useful. Take the following
+example of a rule to kill web page backgrounds.
+<br><code>Matching: &lt;body \1 background=\w \2 &gt;
+<br>Replace: &lt;body \1 \2&gt;</code>
+<br>When they don't directly follow parenthesis ( ... )'s the \# variables act just like
+an asterisk "*". Here, the "\1" captures anything before the background element,
+while the "\2" captures everything afterwards. In the replacement text, the background
+element is simply left out, but you could also include your own background here.
+
+
+<h3>Adding an new element to a tag</h3>
+<p>
+Here's quick trick to add an element to a tag. Although the "proper" method would be
+to replace an element if it already exists and add it only if it doesn't, this can sometimes
+be difficult. It's often simpler to just add the element regardless. We just need to make
+sure the browser will use our tag instead of any pre-existing one. For example, to add
+a border to all "&lt;img ... &gt;" tags, you could use
+<br><code>Matching: &lt;img \1 &gt;
+<br>Replace: &lt;img border=1 \1 border=1&gt;</code>
+<br>
+Why add border twice? Well, when Netscape finds a duplicate element it uses the
+first one and ignores the rest, but Internet Explorer uses the last one!
+By placing the element at the beginning and end of the tag, it works for both.
+Note that being browser
+independent isn't as important here as it is for designing web pages. You're likely to
+know what browser you intend to use, so it's ok to just arrange thing in the way your
+browser expects unless you plan to publish your code.
+
+<h3>Capturing specific tag attribute values</h3>
+<p>
+The values of a tag's attributes can often be tricky to match. Take "&lt;a href=... &gt;" for instance.
+"href" indicates a URL, but the URL value could be surrounded by single quotes,
+double quotes, or even no quotes at all. (There are some pretty wild approximations of
+proper HTML out there!) This is where the word match "\w" rule comes in
+handy. It will match everything, including any quotes it may find, until it hits a space
+or the end of the tag. For example, if you wanted to capture the URL into the \1 variable
+you could use
+<br><code>&lt;a * href=(\w)\1 * &gt;</code>
+<p>
+Remember that when a "\#" immediately follows parenthesis it captures whatever text
+those parenthesis matched. A more interesting example is
+<br><code>&lt;a * href=(\w(banner|advert|cgi)\w)\1 * &gt;</code>
+<br>which would only match URLs containing the words "banner", "advert", or "cgi".
+We now have the beginnings of a "banner blaster" type rule.
+
+<a name="tfson"></a><h3>Testing for something or nothing</h3>
+<p>
+Often you'll find you'll want an expression to match whether a particular value is there or not.
+To do that use the following rule
+<br><code>"( something | )"</code>
+<br>This will first test for the word "something" but if it isn't found the expression is still true.
+Why? Notice there's an OR symbol (vertical bar) with nothing between it and the closing
+parenthesis. This creates an empty expression and an empty expression is always true
+and consumes no characters. Read this as saying - match "something" OR nothing.
+<p>
+Note that if the expression had been written "(|something)", the word "something"
+would never be matched! Since ORs are processed from left to right, the empty expression
+would always match first before the word "something" got a chance.
+<p>
+Another example is
+<br><code> ( " | ) * ( " | )</code>
+<br> which tests for something that may or may not be surrounded by quotes.
+<p>
+Here's a more elaborate example which grabs the "border" value from an "&lt;img ... &gt;"
+tag if it exists and places it into the variable \1 
+<br><code>&lt;img ( * (border=\w)\1 | ) * &gt;</code>
+<br>Be careful of the placement of asterisks here, for example
+<br><code>"&lt;img*(border=\w|)\1*&gt;" </code>
+<br>might not do what you expect. Upon scanning the first character after "&lt;img ",
+if it turned out not to be "border" the sub-expression would still match! Then when
+"border" occurred later in the string, it would be matched by the second asterisk instead,
+since the initial test had already passed by.
+
+<h3>Using "AND" to capture multiple tag attributes</h3>
+<p>
+By using the ampersand "&amp;" you can capture certain tag attributes regardless of the order
+they're found in. For example. Say you wanted to re-write an "&lt;img ... &gt;" tag to
+contain an image of your own, but wanted to keep the original "width" and "height" values.
+You might use...
+<br><code>Matching: &lt;img ( (*(height=\w)\1*| ) &amp; (*(width=\w)\2*| ) ) &gt;
+<br>Replace: &lt;img src="file://d|/my_pictures/shonen.gif" \1 \2 &gt;</code>
+<br>The height is captured into variable \1 and the width into \2. Also by using the
+"something or nothing" syntax described above, the expression will still match even if
+the width or height value is missing from the tag. In which case the corresponding \#
+variables will simply be blank. 
+
+<h3>Using "smart" quotes</h3>
+<p>
+Most of the time "\w" works well for capturing a tag's attributes. However there are times
+when you need something more. Something like an "&lt;img ... &gt;" tag's "alt"
+element often contains spaces as in... alt="this is some text" or alt='also some text'.
+To capture this sort of thing use the double quotes
+<br><code>Matching: alt=( " * " )\1 </code>
+<p>
+An even more complex situation often arises with JavaScript. Here it is common to have
+"quotes within quotes" as in the following
+<br><code>onmouseover="javascript:window.open( ' mywindow.html ' ); "</code>
+<br>which could also be written
+<br><code>onmouseover= ' javascript:window.open( " mywindow.html " ); '</code>
+<p>
+This is where the single quote comes in, it looks for the correct closing quote for the previous
+starting quote. Take the following rule: it can be used to deal with just about any value it
+comes up against:
+<br><code>Matching: onmouseover=( " * ' | \w )\1</code>
+<br>
+This will get single quotes, double quotes, nested quotes, or even no quotes at all!
+ 
+<a name="fileurl"></a><h3>Using file URLs to include your own stuff</h3>
+<p>
+A "file URL" is a URL that points to a file on your hard drive rather than to some location
+on the Internet. Browsers use file URLs to view web pages stored off-line, but they are also
+a very handy way to insert your own pictures, web pages, even JavaScripts into pages you view. 
+<p>
+The Proxomitron makes it very easy to insert a file URL into a matching rule's replacement
+text. First position your cursor where you wish to insert the URL then right-click and select
+"Insert file URL" from the context menu. A file requester will open up allowing you to
+choose the file to insert. 
+<p>
+Here's an example of a "background replacer" rule that uses a file URL
+<br><code>Matching: &lt;body ( \1 background=\w | ) \2 &gt;
+<br>Replace: &lt;body \1 background="file://c:/pictures/background.gif" \2 &gt;</code>
+<br>
+Note the matching expression has a space between the ")" and the "\2".
+<a href="proxlang.html#bktvar">Don't forget this space!</a>
+This would result in the \2 containing what was matched in the "(...)"
+phrase instead of whatever follows the background attribute.
+
+<h3>Inserting JavaScript or other items in every web page you view.</h3>
+<p>
+Here's an trick for really taking control of a web page. JavaScript can be a very powerful tool
+- in the right hands... Now those hands can be your own!
+The matching clause can have two special values &lt;start&gt; and &lt;end&gt; - they
+simply insert the replacement text either at the beginning or end of a web page. They're
+easy to use and very efficient since no searching has to be done.
+<br><code>Matching: &lt;start&gt;
+<br>Replace: &lt;script&gt; onerror=null; &lt;/script&gt;</code>
+<br>This works great for JavaScripts (and overriding JavaScript functions - see below).
+There's no need to worry about allowing for multiple matches, and it doesn't matter how badly
+written the page is (there are pages that omit even the supposedly-required &lt;html&gt;
+and &lt;title&gt; tags; &lt;head&gt; and &lt;body&gt; are optional even in W3C standards.)
+<p>
+Small scripts like the one above can be included directly in the replacement text,
+but for larger scripts you may prefer to use a file URL such as
+<br><code>&lt;html&gt;\n&lt;script src= "file://c:/scripts/myscript.js" &gt;</code>
+
+<h3>Overriding JavaScript Functions with your own</h3>
+<p>
+In Netscape and Internet Explorer 4.0+ there's a very effective trick for warping JavaScripts.
+Any JavaScript function - even built-in ones - can be redefined to do whatever we want.
+Say we wanted to get rid of those "alert( ... )" and "confirm( ... )" boxes. We could do it
+by simply inserting the following script at the start of a web page
+(use the &lt;start&gt; technique above)
+<br><code>&lt;script&gt; 
+<br> function alert( ){ return(1); }
+<br> function confirm( ){ return(1); }
+<br>&lt;/start&gt;</code>
+<p>
+Now whenever any other script on the page attempts to call an alert or confirm box, our
+functions get called instead. By returning a "1" we even make the unsuspecting script
+think we answered "yes" to the confirm box's prompt! 
+<p>
+This is really a very powerful concept - although the functions in this example don't really
+do anything, more complex replacement functions could filter only certain alert boxes 
+or even do something else entirely. There's really no limit. 
+<p>
+Since it's so efficient, The Proxomitron's default rules make good use of this trick.
+One drawback, while it works with most all versions of Netscape, and IE 4.0 or higher,
+it won't work with Microsoft's JScript in IE 3.x The Proxomitron provides an alternate 
+rule set for IE 3.0 users which use the normal search and replace techniques to
+accomplish these things instead.
+
+<h3>Using recursive matching</h3>
+<p>
+Recursive matching is when a rule matches its own previous results. Normally this is something
+to avoid, especially if it leads to infinite recursion - where the rule matches endlessly against
+itself. However, used carefully, this can be a powerful technique.
+<p>
+Take this scenario - say
+you want to eliminate any pop-up windows the occurs between the
+"&lt;script ..." and "&lt;/script&gt;" tags. Since JavaScript uses the "open(...)"
+command to pop open a window, the resulting rule might look like this...
+<br><code>Matching: &lt;script \1 open \( * \) \2 &lt;/script&gt;
+<br>Replace: &lt;script \1 \2 &lt;/script&gt;</code>
+<br>(In actuality, you'd also want to use scope here, but we'll discuss that later. Also note
+the use of the "\" to escape the special meaning of the parenthesis). This might work if there
+was only one open command in the JavaScript, but if there was more than that only the
+first would be eliminated.
+<p>
+The solution? Well, two things. First, check "Allow for multiple matches" to let the rule match
+against its own results. Secondly, we need to change the replacement text to read
+<br><code>Replace: \n&lt;script \1 \2 &lt;/script&gt;</code>
+<br>Why? Well, in order to help guard against accidental infinite recursion,
+The Proxomitron's matching engine always advances one character forward after
+all rules have been checked. This means the next time through our rule would
+see only "script ..." instead of "&lt;script ...". To get around this we simply insert
+a "newline" character in front of the replacement text. Although in the final output
+this will create a blank line before the "&lt;script ..." tag, the browser will ignore it.
+However it lets the rule see "&lt;script ..." next time around.
+<p>
+A leading space could have also been used, in fact so could anything that doesn't affect the
+web browser's function. The idea is simply to push the entire result at least one character forward. 
+Once all the "open(...)" commands have been removed, the rule will no longer match,
+so there's no danger of infinite recursion.
+
+<h3>A word about Scope Bounds</h3>
+<p>
+For simplicity, the examples sofar have made no use of the web filter's scope bounds settings.
+Bounds can be used to control how far ahead The Proxomitron's matching engine scans a
+web page when searching for a match (see the web page filter editor for a more detailed explanation). 
+With bounds you normally give the rule fixed starting and ending points to search between.
+Reusing an example from above, take the following rule...
+<p><code>Matching: &lt;script \1 open \( * \) \2 &lt;/script&gt;
+<br>Replace: &lt;script \1 \2 &lt;/script&gt;</code>
+<p>
+Written using bounds, this would be
+<p><code>Bounds: &lt;script\s*&lt;/script&gt;
+<br>Limit: 4096
+<br>Matching: \1 open \( * \) \2
+<br>Replace: \1 \2</code>
+<p>Notice we just move the fixed beginning and ending text into the scope's bounds check.
+The byte limit is the maximum characters to search before giving up. Nothing to it really.
+Also we've used the \1 and \2 in the matching expression to capture the start and end of
+what the bounds matched - including &lt;script and &lt;/script&gt;. So we no longer need
+put them in the replacement text. 
+
+<p>
+There are more tips on <a href="proxfilt.html">The Proxomitron Filter Explanation Page</a>.
+If you have any ideas of your own please let me know. Also remember you can look at the rules
+that come with The Proxomitron! Use them as a starting point when
+writing new rules - often you'll find one that already comes close to what you want to do.
+
+<a name="faq"></a><h2>How do I ...? The Proxomitron FAQ</h2>
+
+<h3>I've run The Proxomitron, but my browser doesn't seem to use it ...</h3>
+<ol>
+<li>You need to set your browser's proxy option to use The Proxomitron - see
+<a href="https://searchlores.nickifaulk.com/proxomitron.html#install">installation</a>.
+<li>The first time you use The Proxomitron you may need to reload the page or clear your
+browser's cache before the changes will appear.
+<li>Your system may lack the file that defines localhost: it's in the windows system directory,
+called hosts (no extension) and contains the line
+<br><code>127.0.0.1 localhost</code>
+<li>If you use a 'free' service browser, it may be designed to prevent you from using
+<b>any</b> proxy. (That's because the service has to get their money from somewhere - if
+they don't get it from you they have to get it from ad pushers and data miners.)
+In some cases, you may be able to make the initial connection to the
+Internet using the 'free' browser, then continue using an unmodified browser from then
+on which will accept The Proxomitron.
+<li>If you are using a firewall, you will need to tell it The Proxomitron is OK.
+</ol> 
+
+<h3>My browser doesn't seem to work anymore - what gives?</h3>
+<p>
+Once you set your browser to use The Proxomitron, <b>both</b> programs must
+be running for things to work. See <a href="https://searchlores.nickifaulk.com/proxomitron.html#install">installation</a>.
+If you don't want to use The Proxomitron, set your browser back to not using a HTTP proxy.
+
+<h3>I'm getting JavaScript errors on web pages I view - why?</h3>
+<p>
+Are you using Internet Explorer version 3.x? It doesn't support some of the
+JavaScript tricks The Proxomitron uses to filter things like pop-up windows
+and alert boxes. Use the special Internet Explorer 3.0 rule set included with
+The Proxomitron distribution.
+<p>
+A filter can also on occasion cause an error by changing things in a way the original
+script never expected (like closing a window it thought should be open for instance).
+The Proxomitron's rules are designed to work transparently when they can,
+but it's not possible to account for every situation. One solution is to enable the
+"Suppress all JavaScript errors" filter - the browser will then ignore any errors if 
+they occur. Since it's not unusual for scripts to fail even without
+The Proxomitron's meddling, it's a good filter to always use.
+
+<h3>When using certain filters, some web pages don't seem to work anymore - why?</h3>
+<p>
+When filtering a web page there's always a chance something necessary to the
+page's function might be eliminated - this is especially true of JavaScript based filters.
+Although it's bad HTML design, some pages might actually need pop-up windows
+or dynamic HTML in order to work. The quick solution is just to bypass the web
+filters and hit reload on your browser. Or, ignore dumb sites like that.
+<p>
+For the more adventurous, open the log window. This will show which rules are
+used on a particular page, and can be useful in tracking down exactly which rule
+is causing the problem. Once you find it you can exclude the offending page by
+adding it to the rule's URL match, like  (^www.dont.filter.me.com)
+
+<h3>Help! Hotmail doesn't work any more!</h3>
+<p>
+Like most 'free' services, Hotmail gets the money to run their operation by selling data
+they collect about you to advertisers, spammers and the like. So, they block service to
+users they can't make money off. The simplest way to get Hotmail to work is to add
+"<code>[^/]++hotmail</code>" to The Proxomitron's
+<a href="https://searchlores.nickifaulk.com/proxtech.html#list">bypass list</a>.
+
+<h3>How do I see the original unfiltered web page?</h3>
+<p>
+Click The Proxomitron's bypass button then <b>force</b> a browser reload:
+In Netscape hold down SHIFT while you click reload. In IE 4.x  and Opera, press CTRL+F5.
+(With IE 3.x, use F5 and hope for the best.) 
+
+<h3>How come some rules don't appear to work on my browser?</h3>
+<p>
+What browser are you using? The Proxomitron can use any browser, but
+some items (especially JavaScript) vary from browser to browser. The default rule
+set was designed around Netscape and I.E. 4.x - there's also a special I.E. 3.x rule set.
+If you're using a different browser however, some rules might need tweaked
+to work properly - the good part is anyone can change them! If you do find an
+incompatibility please let me know.
+
+<h3>How come some sites slow to a crawl with The Proxomitron active?</h3>
+<p>
+When a remote site doesn't respond, browsers are set to try again after a timeout period.
+Most browsers default to a sensible retry value like 2 or 3, but some 'browser accellerator'
+packages increase this to a very large number so that all the pages referred to by the
+page you are viewing can be preloaded into your browser cache. Not surprisingly, some sites
+block these excess demands to limit the load on them. When connected direct, a browser sees
+these blocks as connect errors and makes no new connections. However it won't see them
+through a proxy because the browser-to-proxy connection is good, so the browser keeps telling
+The Proxomitron to retry the connection. The solution is
+to find where in your system (usually the registry) the connections value has been
+set too high and put it back to something sensible - definitely less than 10.
+
+<h3>How many filters can I use at the same time?</h3>
+<p>
+As many as you want! It's really only limited by your computers memory and speed.
+However, on slower systems such as 486's, using too many simultaneous filters could slow things down.
+If this is a problem: 
+<ul>
+<li>Web filters use the most CPU time - the GIF and header filters use very little.
+<li>Non-active filters consume almost no CPU time - enable just those you need.
+<li>Using URL limits with web filters can reduce load since all filters won't be active for all pages.
+<li>When creating complex filters, use a bounds expression and as small a byte limit as you can get away with.
+</ul>
+
+<a name="limits"></a><h2>Limitations</h2>
+<p>
+The Proxomitron can filter most web pages. However, there are
+some things it can't filter. These include
+<ul>
+<li>Protocols other than HTTP: The Proxomitron can't filter
+<a target=_top href="http://www.ftpplanet.com/ftpresources/basics.htm">FTP</a>,
+<a target=_top href="http://www.irchelp.org/">IRC</a>,
+gopher,
+<a target=_top href="http://www.geocities.com/rozmanov/ntlm/">NTML</a> ...
+Don't set your browser's proxy options for any other protocols to use The Proxomitron - they
+won't work. (If you're using an external proxy server you <b>may</b> be able set FTP and Gopher
+options in your browser to pass through The Proxomitron. This is because the remote proxy server
+handles all the ugly details involved with each particular protocol - useful for those who make
+use of the proxy switching feature.)
+<li>Content types other than html, javascript, and gif images - 
+The Proxomitron will send any other type of data unchanged. This ensures that 
+zip files and other binary data are never corrupted. Note that the HTTP headers
+for other data types can be affected - so be careful here.
+<li>"Chunk" encoded and other types of content encoding - The Proxomitron only filters
+un-encoded web pages. Pages with any type of content encoding are simply send as-is.
+Content encoding is currently not widely used, but don't worry - if it ever becomes common,
+newer versions of The Proxomitron could very well support it (so any sneaky web-masters out
+there - don't think it's a way around our filters ;-).
+<li>Things that aren't generated by your browser in the first place:
+<ul>
+<li>
+REMOTE_ADDR is found by looking up the IP address used by the TCP/IP connection
+itself.  This is required information, since it's how your computer is told
+apart from the millions of others on the net. Without a real IP address the web
+server could never send the page back to you.  Going through a remote proxy
+(one running on another host) will change this simply because the server sends
+the info back to the proxy which, in turn, sends it back to you.  In this case
+the IP address will be the remote proxy's host.
+<li>
+REMOTE_HOST comes from doing a "Reverse DNS lookup" on your IP address. Here
+the web server takes the IP address of the connections and asks the DNS system
+what hostname is attached to it.  Normally your ISP's DNS server will respond
+with the answer.  It can't be filtered, unless you run the DNS server with
+authority over that IP, since the info doesn't come from your PC to begin with.
+<li>
+HTTP_VIA and HTTP_X_FORWARDED_FOR are added by an external proxy server.
+</ul>
+</ul>
+
+<h3><a href="proxfilt.html">Filter Examples</a></h3>
+</html>

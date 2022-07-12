@@ -1,0 +1,682 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>anonykid.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ Proxy ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center>
+<hr size=1>
+{chainers} - {<A HREF="anonyki1.htm">table</A>} - {<A HREF="anonyki2.htm">list of chainers</A>} - {published at <A HREF="http://searchlores.org">searchlores</A> in January 2002}
+<hr size=1>
+</center>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Anonykid's "proxy chaining" forms</font></center></td></tr></table>
+</center>
+
+<center>
+<BR>
+§ <A HREF="anonykid.htm#power">powerchainer</A>
+&nbsp;&nbsp;&nbsp;
+§ <A HREF="anonykid.htm#multi">multichainer</A>
+&nbsp;&nbsp;&nbsp;
+§ <A HREF="anonykid.htm#automatic">automatic simplechainer</A>
+&nbsp;&nbsp;&nbsp;
+§ <A HREF="anonykid.htm#manual">manual simplechainer</A>
+<hr size=1>
+
+<BR>
+
+<i>
+Out of the void, at times, some valid contributions arrive.
+Anonykid did put together, as you will see, a series of quite interesting forms, that you 
+will be able to use for your proxy-navigation pleasure. As I point out elsewhere, there is 
+much to learn, in proxy utilisation, from the people that use programs like <a href="zipped/accessdiver43.zip">Accessdiver</a>, 
+<a href="zipped/ares.zip">Ares</a> and <a href="zipped/goldeneye.zip">Goldeneye</a> in order to crack password-protected servers. These 'aficionados' 
+have prepared huge lists of quick proxies, and these programs will allow you to 
+quickly test such proxies. Yet Anonykid is right: webbased anonymizers and proxy are VERY useful, 
+especially when you are stranded on a windoze only webcafe' in the middle of nowhere...
+</i>
+</center>
+
+<hr size=1>
+
+<BR>
+
+
+
+
+<script type="text/javascript">
+<!--
+function PowerAdd(theList) {
+	var numSelected = theList.selectedIndex ;
+	if (numSelected != 0) {
+		textValue = document.powerform.extra_proxy.value ;
+		textValue = textValue + theList.options[numSelected].value ;
+		document.powerform.extra_proxy.value = textValue ;
+		theList.selectedIndex = 0 ;
+		document.powerform.extra_proxy.focus() ;
+	}
+}
+
+function PowerClear() {
+	document.powerform.extra_proxy.value = "" ;
+	document.powerform.extra_proxy.focus() ;
+}
+
+
+function PowerChainer(form)
+{
+
+chainer0='';
+chainer1='https://proxy1.autistici.org//index.php?url=';
+chainer2='https://sproxy.lcs.mit.edu/';
+chainer3='http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=';
+chainer4='http://www.anonymouse.ws/cgi-bin/anon-www.cgi/';
+chainer5='http://anon.free.anonymizer.com/';
+chainer6='http://anonymizit.subdimension.com/cgi-bin/anonymizit/nph-proxy.cgi/';
+
+
+if (form.chainer1.selectedIndex == 0 )
+{proxy1=chainer0}
+if (form.chainer1.selectedIndex == 1 )
+{proxy1=chainer1}
+if (form.chainer1.selectedIndex == 2 )
+{proxy1=chainer2}
+if (form.chainer1.selectedIndex == 3 )
+{proxy1=chainer3}
+if (form.chainer1.selectedIndex == 4 )
+{proxy1=chainer4}
+if (form.chainer1.selectedIndex == 5 )
+{proxy1=chainer5}
+if (form.chainer1.selectedIndex == 6 )
+{proxy1=chainer6}
+
+
+if (form.chainer2.selectedIndex == 0 )
+{proxy2=chainer0}
+if (form.chainer2.selectedIndex == 1 )
+{proxy2=chainer1}
+if (form.chainer2.selectedIndex == 2 )
+{proxy2=chainer2}
+if (form.chainer2.selectedIndex == 3 )
+{proxy2=chainer3}
+if (form.chainer2.selectedIndex == 4 )
+{proxy2=chainer4}
+if (form.chainer2.selectedIndex == 5 )
+{proxy2=chainer5}
+if (form.chainer2.selectedIndex == 6 )
+{proxy2=chainer6}
+
+if (form.chainer3.selectedIndex == 0 )
+{proxy3=chainer0}
+if (form.chainer3.selectedIndex == 1 )
+{proxy3=chainer1}
+if (form.chainer3.selectedIndex == 2 )
+{proxy3=chainer2}
+if (form.chainer3.selectedIndex == 3 )
+{proxy3=chainer3}
+if (form.chainer3.selectedIndex == 4 )
+{proxy3=chainer4}
+if (form.chainer3.selectedIndex == 5 )
+{proxy3=chainer5}
+if (form.chainer3.selectedIndex == 6 )
+{proxy3=chainer6}
+
+if (form.chainer4.selectedIndex == 0 )
+{proxy4=chainer0}
+if (form.chainer4.selectedIndex == 1 )
+{proxy4=chainer1}
+if (form.chainer4.selectedIndex == 2 )
+{proxy4=chainer2}
+if (form.chainer4.selectedIndex == 3 )
+{proxy4=chainer3}
+if (form.chainer4.selectedIndex == 4 )
+{proxy4=chainer4}
+if (form.chainer4.selectedIndex == 5 )
+{proxy4=chainer5}
+if (form.chainer4.selectedIndex == 6 )
+{proxy4=chainer6}
+
+   var POWERURL = "";
+   POWERURL += proxy1;
+   POWERURL += proxy2;
+   POWERURL += proxy3;
+   POWERURL += proxy4;
+   POWERURL += form.extra_proxy.value;   
+   POWERURL += (form.powerurl.value).replace(/ +/g, "+");
+   top.location = POWERURL;
+   return false;
+}
+
+-->
+</script>
+
+
+<!-- POWERCHAINER -->
+<A NAME="power"></A>
+<font class=title>PowerChainer:</font>
+  <form name="powerform" onSubmit="return PowerChainer(this)">
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=0 WIDTH="100%" class=body>
+   <TR ALIGN="left" VALIGN="top">
+      <TD nowrap>
+
+Chainer #1:&nbsp;       
+<select name="chainer1" size=1>
+<option>*none*</option>
+<option>Autistici</option>
+<option>sproxy.lcs.mit.edu</option>
+<option>a4u.at</option>
+<option>Anonymouse</option>
+<option>Anonymizer</option>
+<option>Subdimension</option>
+</select>
+
+<BR>
+Chainer #2:&nbsp;
+<select name="chainer2" size=1>
+<option>*none*</option>
+<option>Autistici</option>
+<option>sproxy.lcs.mit.edu</option>
+<option>a4u.at</option>
+<option>Anonymouse</option>
+<option>Anonymizer</option>
+<option>Subdimension</option>
+</select>
+
+<BR>
+Chainer #3:&nbsp;
+<select name="chainer3" size=1>
+<option>*none*</option>
+<option>Autistici</option>
+<option>sproxy.lcs.mit.edu</option>
+<option>a4u.at</option>
+<option>Anonymouse</option>
+<option>Anonymizer</option>
+<option>Subdimension</option>
+</select>
+
+<BR>
+Chainer #4:&nbsp;
+<select name="chainer4" size=1>
+<option>*none*</option>
+<option>Autistici</option>
+<option>sproxy.lcs.mit.edu</option>
+<option>a4u.at</option>
+<option>Anonymouse</option>
+<option>Anonymizer</option>
+<option>Subdimension</option>
+</select>
+</TD>
+
+		<TD>
+
+
+<B>:: URL ::</B><BR>
+<input name="powerurl" type=text value="http://" size=60>
+<BR>
+<BR>
+<center><input type="submit" value="Surf Super Anonymously"></center>
+      
+      </TD>
+   </TR>
+   
+
+
+<TR align=left>
+<TD colspan=2>
+<BR>
+<I>Extra Chainer(s)</I>: <input name="extra_proxy" type=text  value="" size=60>
+<BR>
+List of Chainers:
+<select name="ExtraList">
+	<option value="">- - - select one extra proxy (or more) - - -
+	<option value="">
+	<option value="">= = Web Based = =
+	<option value="http://www.surflondon.co.uk/123anon/nph-proxy.cgi/00000/">123anon.com
+	<option value="http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=">a4u.at
+	<option value="http://anon.free.anonymizer.com/">anonymizer.com
+	<option value="http://www.anonymouse.ws/cgi-bin/anon-www.cgi/">anonymouse
+	<option value="https://proxy1.autistici.org//index.php?url=">autistici
+	<option value="http://jproxy.uol.com.ar/jproxy/">jproxy
+	<option value="https://proxy.magusnet.com/-_-">magusnet
+	<option value="https://www.megaproxy.com/go/:mp_framed?">megaproxy.com
+	<option value="http://www.pornolize.com/cgi-bin/pornolize2/pornolize2.cgi?lang=en&submit.x=38&submit.y=8&url=">pornolize.com
+	<option value="http://www.safeproxy.org/cgi-bin/nph-proxy.cgi/01010/">safeproxy
+	<option value="https://sproxy.lcs.mit.edu/">sproxy.lcs.mit.edu
+	<option value="http://anonymizit.subdimension.com/cgi-bin/anonymizit/nph-proxy.cgi/">subdimension.com
+	<option value="">
+	<option value="">= = Translators = =
+	<option value="http://world.altavista.com/urltrurl?lp=es_en&url=">altavista
+	<option value="http://fets3.freetranslation.com:5081/?Sequence=core&Language=Spanish%2FEnglish&Url=">freetranslation
+	<option value="http://translate.google.com/translate_c?hl=en&u=">google (low)
+	<option value="http://translate.google.com/translate_c?hl=en&u=http%3A%2F%2Ftranslate.google.com%2Ftranslate_c%3Fhl%3Den%26u%3D">google (medium)
+	<option value="http://www.tranexp.com:2000/Translate/index.shtml?from=spa&to=eng&type=url&url=">intertran
+	<option value="http://translation.lycos.com/?f=10713&lp=es_en&urltext=">lycos
+	<option value="http://w3.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (regular)
+	<option value="http://www.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (https)
+	<option value="http://www.worldlingo.com/wl/Translate?wl_lp=ES-EN&wl_fl=2&wl_url=">worldlingo
+	<option value="">
+	<option value="">= = Other Tricks= =
+	<option value="http://a12.g.akamai.net/7/12/282/02/">akamai
+	<option value="http://bobby.cast.org/bobby/bobbyServlet?URL=">bobby
+	<option value="http://spireproject.com/cgi-bin/footnote.pl?form=2&page=">footnote.pl
+	<option value="http://www.aigeek.com/txt2html/txt2html-url.cgi?url=">txt2html
+</select>
+
+
+<INPUT TYPE="button" VALUE="Add" onClick="javascript:PowerAdd(ExtraList);"> 
+<INPUT TYPE="button" VALUE="Clear" onClick="javascript:PowerClear();">
+
+
+</TD>
+</TR>
+</TABLE>
+</form>
+
+
+
+
+
+
+
+<BR>
+<hr size=2>
+<!-- MULTICHAINER -->
+<A NAME="multi"></A>
+<font class=title>MultiChainer:</font>
+<BR>*<I> If you don't want to use one or any of them, just clear them out</I>
+<script type="text/javascript">
+<!--
+var default1 = "https://proxy1.autistici.org//index.php?url=";
+var default2 = "https://sproxy.lcs.mit.edu/";
+var default3 = "http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=";
+var default4 = "http://www.anonymouse.ws/cgi-bin/anon-www.cgi/";
+
+
+function MultiClear1() {
+	document.multiform.proxy1.value = "" ;
+	document.multiform.proxy1.focus() ;
+}
+function MultiRestore1() {
+	document.multiform.proxy1.value = default1 ;
+	document.multiform.proxy1.focus() ;
+}
+
+function MultiClear2() {
+	document.multiform.proxy2.value = "" ;
+	document.multiform.proxy2.focus() ;
+}
+function MultiRestore2() {
+	document.multiform.proxy2.value = default2 ;
+	document.multiform.proxy2.focus() ;
+}
+
+function MultiClear3() {
+	document.multiform.proxy3.value = "" ;
+	document.multiform.proxy3.focus() ;
+}
+function MultiRestore3() {
+	document.multiform.proxy3.value = default3 ;
+	document.multiform.proxy3.focus() ;
+}
+
+function MultiClear4() {
+	document.multiform.proxy4.value = "" ;
+	document.multiform.proxy4.focus() ;
+}
+function MultiRestore4() {
+	document.multiform.proxy4.value = default4 ;
+	document.multiform.proxy4.focus() ;
+}
+
+function MultiClearUrl() {
+	document.multiform.multiurl.value = "http://" ;
+	document.multiform.multiurl.focus() ;
+}
+
+function MultiClearAll() {
+	document.multiform.proxy1.value = "" ;
+	document.multiform.proxy2.value = "" ;
+	document.multiform.proxy3.value = "" ;
+	document.multiform.proxy4.value = "" ;
+	document.multiform.multiurl.focus() ;
+}
+
+
+
+function MultiChainer(form)
+{
+   var MULTIURL = "";
+   MULTIURL += form.proxy1.value;
+   MULTIURL += form.proxy2.value;
+   MULTIURL += form.proxy3.value;
+   MULTIURL += form.proxy4.value;   
+   MULTIURL += (form.multiurl.value).replace(/ +/g, "+");
+   top.location = MULTIURL;
+   return false;
+}
+
+
+function MultiExtraAdd(theList) {
+	var numSelected = theList.selectedIndex ;
+	var numProxy = document.multiform.proxynumber.selectedIndex ;
+	var i = 0;
+	if (numSelected != 0) {
+		textValue = theList.options[numSelected].value ;
+		if (numProxy == 0) {
+			document.multiform.proxy1.value = textValue ;
+		}
+		if (numProxy == 1) {
+			document.multiform.proxy2.value = textValue ;
+		}
+		if (numProxy == 2) {
+			document.multiform.proxy3.value = textValue ;
+		}
+		if (numProxy == 3) {
+			document.multiform.proxy4.value = textValue ;
+		}
+		theList.selectedIndex = 0 ;		
+	}		
+}
+
+
+function MultiExtraAdd2Current(theList) {
+	var numSelected = theList.selectedIndex ;
+	var numProxy = document.multiform.proxynumber.selectedIndex ;
+	if (numSelected != 0) {
+		if (numProxy == 0) {
+			textValue = document.multiform.proxy1.value ;
+			textValue = textValue + theList.options[numSelected].value ;
+			document.multiform.proxy1.value = textValue ;
+		}
+		if (numProxy == 1) {
+			textValue = document.multiform.proxy2.value ;
+			textValue = textValue + theList.options[numSelected].value ;
+			document.multiform.proxy2.value = textValue ;
+		}
+		if (numProxy == 2) {
+			textValue = document.multiform.proxy3.value ;
+			textValue = textValue + theList.options[numSelected].value ;
+			document.multiform.proxy3.value = textValue ;
+		}
+		if (numProxy == 3) {
+			textValue = document.multiform.proxy4.value ;
+			textValue = textValue + theList.options[numSelected].value ;
+			document.multiform.proxy4.value = textValue ;
+		}
+	theList.selectedIndex = 0 ;
+	}		
+}
+
+
+function MultiExtraClear() {
+var numProxy = document.multiform.proxynumber.selectedIndex ;
+	if (numProxy == 0) {
+		document.multiform.proxy1.value = "" ;
+		document.multiform.proxy1.focus() ;
+	}
+	if (numProxy == 1) {
+		document.multiform.proxy2.value = "" ;
+		document.multiform.proxy2.focus() ;
+	}
+	if (numProxy == 2) {
+		document.multiform.proxy3.value = "" ;
+		document.multiform.proxy3.focus() ;
+	}
+	if (numProxy == 3) {
+		document.multiform.proxy4.value = "" ;
+		document.multiform.proxy4.focus() ;
+	}
+
+}
+
+
+-->
+</script>
+
+ 
+<form onSubmit="return MultiChainer(this)" name=multiform>
+<BR>1: <input type="text" name="proxy1" value="https://proxy1.autistici.org//index.php?url=" size=60> <INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiClear1();"> <INPUT TYPE="button" VALUE="Restore" onClick="javascript:MultiRestore1();"> 
+<BR>2: <input type="text" name="proxy2" value="https://sproxy.lcs.mit.edu/" size=60> <INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiClear2();"> <INPUT TYPE="button" VALUE="Restore" onClick="javascript:MultiRestore2();"> 
+<BR>3: <input type="text" name="proxy3" value="http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=" size=60> <INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiClear3();"> <INPUT TYPE="button" VALUE="Restore" onClick="javascript:MultiRestore3();"> 
+<BR>4: <input type="text" name="proxy4" value="http://www.anonymouse.ws/cgi-bin/anon-www.cgi/" size=60> <INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiClear4();"> <INPUT TYPE="button" VALUE="Restore" onClick="javascript:MultiRestore4();"> 
+<BR>&nbsp;&nbsp;&nbsp; <input name="multiurl" value="http://" size=60> <INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiClearUrl();"> <B>:: URL ::</B>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="Anonymize">
+&nbsp;&nbsp;<INPUT TYPE="button" VALUE="Clear ALL" onClick="javascript:MultiClearAll();"> 
+
+
+<BR><BR>
+
+<TABLE BORDER=0 CELLSPACING=5 CELLPADDING=0 WIDTH="*" style="background:#EBE7E7; border:1px #898989 solid;" class=body>
+   <TR ALIGN="left" VALIGN="middle">
+      <TD>
+<font class=server><I>Extra options:</I></font>
+<BR>
+<select name="proxynumber">
+	<option value="1" selected>#1
+	<option value="2">#2
+	<option value="3">#3
+	<option value="4">#4
+</select>
+
+
+<select name="multiextra">
+	<option value="">- - - Select a Sever Name- - -
+	<option value="http://www.surflondon.co.uk/123anon/nph-proxy.cgi/00000/">123anon.com
+	<option value="http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=">a4u.at
+	<option value="http://a12.g.akamai.net/7/12/282/02/">akamai
+	<option value="http://world.altavista.com/urltrurl?lp=es_en&url=">altavista
+	<option value="http://anon.free.anonymizer.com/">anonymizer.com
+	<option value="http://www.anonymouse.ws/cgi-bin/anon-www.cgi/">anonymouse
+	<option value="https://proxy1.autistici.org//index.php?url=">autistici
+	<option value="http://bobby.cast.org/bobby/bobbyServlet?URL=">bobby
+	<option value="http://spireproject.com/cgi-bin/footnote.pl?form=2&page=">footnote.pl
+	<option value="http://fets3.freetranslation.com:5081/?Sequence=core&Language=Spanish%2FEnglish&Url=">freetranslation
+	<option value="http://translate.google.com/translate_c?hl=en&u=">google (low)
+	<option value="http://translate.google.com/translate_c?hl=en&u=http%3A%2F%2Ftranslate.google.com%2Ftranslate_c%3Fhl%3Den%26u%3D">google (medium)
+	<option value="http://www.tranexp.com:2000/Translate/index.shtml?from=spa&to=eng&type=url&url=">intertran
+	<option value="http://jproxy.uol.com.ar/jproxy/">jproxy
+	<option value="http://translation.lycos.com/?f=10713&lp=es_en&urltext=">lycos
+	<option value="https://proxy.magusnet.com/-_-">magusnet
+	<option value="https://www.megaproxy.com/go/:mp_framed?">megaproxy.com
+	<option value="http://www.pornolize.com/cgi-bin/pornolize2/pornolize2.cgi?lang=en&submit.x=38&submit.y=8&url=">pornolize.com
+	<option value="http://www.safeproxy.org/cgi-bin/nph-proxy.cgi/01010/">safeproxy
+	<option value="https://sproxy.lcs.mit.edu/">sproxy.lcs.mit.edu
+	<option value="http://anonymizit.subdimension.com/cgi-bin/anonymizit/nph-proxy.cgi/">subdimension.com
+	<option value="http://w3.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (regular)
+	<option value="http://www.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (https)
+	<option value="http://www.aigeek.com/txt2html/txt2html-url.cgi?url=">txt2html
+	<option value="http://www.worldlingo.com/wl/Translate?wl_lp=ES-EN&wl_fl=2&wl_url=">worldlingo
+</select>
+
+<INPUT TYPE="button" VALUE="Change" onClick="javascript:MultiExtraAdd(multiextra);"> 
+<INPUT TYPE="button" VALUE="Add to Current" onClick="javascript:MultiExtraAdd2Current(multiextra);"> 
+<INPUT TYPE="button" VALUE="Clear" onClick="javascript:MultiExtraClear();"> 
+
+      </TD>
+<TD width=1%>&nbsp;</TD>
+
+   </TR>
+</TABLE>    
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<BR>
+<hr size=2>
+<!-- AUTOMATIC SIMPLECHAINER -->
+<A NAME="automatic"></A>
+
+<FONT CLASS="title">Automatic SimpleChainer:</font>
+<BR>
+<script type="text/javascript">
+<!--
+function SimpleAdd(theSimpleList) {
+	var numSelected = theSimpleList.selectedIndex ;
+	if (numSelected != 0) {
+	textValue = theSimpleList.options[numSelected].value ;
+	document.powerform.extra_proxy.value = textValue ;
+	}
+}
+
+
+function SimpleChainer(form)
+{
+	if (form.servers.selectedIndex == 0 ){
+		alert("Select a Server Name")
+		form.servers.focus();
+		return false;
+	}
+
+var SIMPLEURL = "";
+   SIMPLEURL += textValue;
+   SIMPLEURL += (form.simpleurl.value).replace(/ +/g, "+");
+   top.location = SIMPLEURL;
+   return false;
+}
+-->
+</script>
+
+<form onsubmit="return SimpleChainer(this)" name=simpleform>
+	<input type=text name=simpleurl value=http:// size=60>
+<BR>
+	<select name="servers" onChange="SimpleAdd(servers)" style="width:250">
+	<option value="">- - - Select a Sever Name- - -
+	<option value="http://www.surflondon.co.uk/123anon/nph-proxy.cgi/00000/">123anon.com
+	<option value="http://www.a4u.at/cgi-bin/nph-proxy51.cgi/111100A/782q70726s78792s7374617274?rc=1&rs=2&fa=1&br=1&if=1&URL=">a4u.at
+	<option value="http://a12.g.akamai.net/7/12/282/02/">akamai
+	<option value="http://world.altavista.com/urltrurl?lp=es_en&url=">altavista
+	<option value="http://anon.free.anonymizer.com/">anonymizer.com
+	<option value="http://www.anonymouse.ws/cgi-bin/anon-www.cgi/">anonymouse
+	<option value="https://proxy1.autistici.org//index.php?url=">autistici
+	<option value="http://bobby.cast.org/bobby/bobbyServlet?URL=">bobby
+	<option value="http://spireproject.com/cgi-bin/footnote.pl?form=2&page=">footnote.pl
+	<option value="http://fets3.freetranslation.com:5081/?Sequence=core&Language=Spanish%2FEnglish&Url=">freetranslation
+	<option value="http://translate.google.com/translate_c?hl=en&u=">google (low)
+	<option value="http://translate.google.com/translate_c?hl=en&u=http%3A%2F%2Ftranslate.google.com%2Ftranslate_c%3Fhl%3Den%26u%3D">google (medium)
+	<option value="http://www.tranexp.com:2000/Translate/index.shtml?from=spa&to=eng&type=url&url=">intertran
+	<option value="http://jproxy.uol.com.ar/jproxy/">jproxy
+	<option value="http://translation.lycos.com/?f=10713&lp=es_en&urltext=">lycos
+	<option value="https://proxy.magusnet.com/-_-">magusnet
+	<option value="https://www.megaproxy.com/go/:mp_framed?">megaproxy.com
+	<option value="http://www.pornolize.com/cgi-bin/pornolize2/pornolize2.cgi?lang=en&submit.x=38&submit.y=8&url=">pornolize.com
+	<option value="http://www.safeproxy.org/cgi-bin/nph-proxy.cgi/01010/">safeproxy
+	<option value="https://sproxy.lcs.mit.edu/">sproxy.lcs.mit.edu
+	<option value="http://anonymizit.subdimension.com/cgi-bin/anonymizit/nph-proxy.cgi/">subdimension.com
+	<option value="http://w3.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (regular)
+	<option value="http://www.systranlinks.com/systran/cgi?f=2&lp=es_en&url=">systran (https)
+	<option value="http://www.aigeek.com/txt2html/txt2html-url.cgi?url=">txt2html
+	<option value="http://www.worldlingo.com/wl/Translate?wl_lp=ES-EN&wl_fl=2&wl_url=">worldlingo
+	</select>
+<input type=submit value=Anonymize>
+</form>
+
+
+
+
+<script type="text/javascript">
+<!--
+function SimpleChainer2(form) {
+
+	if (form.extra_proxy2.value == "") {
+		alert("You cannot live it blank\nPlease fill in the Proxy Section")
+		form.extra_proxy2.focus();
+		return false}
+
+	if (form.extra_proxy2.value == "http://") {
+		alert("You are forgetting to type a Proxy Server\nDo you want to loose your ANONYMITY, or what?!")
+		form.extra_proxy2.focus();
+		return false}
+
+	if (form.extra_proxy2.value.length < "7") {
+		alert("The Proxy Server is not valid.\nPls try again.")
+		form.extra_proxy2.focus();
+		return false}
+
+
+
+var SIMPLEURL2 = "";
+   SIMPLEURL2 += form.extra_proxy2.value;   
+   SIMPLEURL2 += (form.simpleurl2.value).replace(/ +/g, "+");
+   top.location = SIMPLEURL2;
+   return false;
+}
+-->
+</script>
+
+
+
+
+
+<BR>
+<hr size=2>
+<!-- MANUAL SIMPLECHAINER -->
+<A NAME="manual"></A>
+<font class=title>Manual SimpleChainer:</font>
+<BR><I>(Sort of bogus :^D</I>
+<form name="simpleform2" onSubmit="return SimpleChainer2(this)">
+<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=0 WIDTH=*  class=body>
+<TR ALIGN="left" VALIGN="middle">
+<TD><font class=server>URL::</font></TD>
+<TD><input name="simpleurl2" type=text value="http://" size=60></TD>
+<TD><input type="submit" value="Anonymize"></TD>
+</TR>
+   
+<TR ALIGN="left" VALIGN="middle">
+<TD></TD>
+<TD><input name="extra_proxy2" type=text value="http://" size=60></TD>
+<TD><font class=server>::ProxyServer</font></TD>
+</TR>
+</TABLE>
+</form>
+
+<hr size=2>
+
+<BR>
+<p align=right>
+<B><I><font color=#F6F6DC">by -anonykid</font></I></B>
+</p><br> 
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><!-- how to search the web, by fravia+, signet begin -->
+<center>
+<br><font size=+1>
+<font color=blue>[</font><a href="advanced.htm">advanced</a><font color=blue>]</font>
+&nbsp;&nbsp;<font color=blue>[</font><a href="noanon.htm">noanon</a><font color=blue>]</font>
+&nbsp;&nbsp;<font color=blue>[</font><a href="proxy.htm">proxies</a><font color=blue>]</font><br>
+</fonT>
+<br>
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

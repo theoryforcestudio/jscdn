@@ -1,0 +1,253 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>awebbitsearchform.htm: a webbit search form</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+  <script language="JavaScript">
+function MsgBox (textstring) {
+  alert (textstring);
+}
+
+function LoadURL (textstring) {
+  window.location.href="http://" + textstring;
+}
+
+function PerformSiteSearch (terms, site) {
+  // window.location.href="http://www.google.com/search?q=" + terms + "+site%3A" + site
+  var theURL = "http://www.google.com/search?q=" + terms + "+site%3A" + site;
+  window.open(theURL);
+}
+
+function UpdateSearchSite(){
+  document.searchForm.searchsite.value = document.searchForm.freqsearchsites.value;
+}
+
+function Performquery(searchterms, extensions){
+	// this is the engine of the whole form
+  	// note that plus sign adds a space in the URL ("+%2B" = " +")
+  	// "%2B" = "plus"
+  	// "%28" = "open phar"
+  	// "%29" = "close phar"
+  	// "%7C+ = "vertical bar OR"
+  	// "%22" = virgolette
+  	// "%3A" = "duepunti"
+  var theURL = "http://www.google.com/search?q=";
+  //add: -inurl:(htm|html|php)
+  theURL = theURL + "-inurl%3A%28htm%7Chtml%7Cphp%29";
+  //add: intitle:
+  theURL = theURL + "+intitle%3A";
+  //add: "index of"
+  theURL = theURL + "%22index+of%22";
+  //add: +"last modified"
+  theURL = theURL + "+%2B%22last+modified%22";
+  //add: [space]+"parent directory"
+  theURL = theURL + "+%2B%22parent+directory%22";
+  //add: [space]+description
+  theURL = theURL + "+%2Bdescription";
+  //add: [space]+size
+  theURL = theURL + "+%2Bsize";
+  //add: [space]+([EXTENSIONS])
+  theURL = theURL + "+%2B%28" + extensions + "%29";
+  //add: [space]"[SEARCH TERMS]"
+  theURL = theURL + "+%22" + searchterms + "%22";
+  window.open(theURL);
+  //http://www.google.com/search?q=-inurl%3A%28htm%7Chtml%7Cphp%29+intitle%3A%22index+of%22+%2B%22last+modified%22+%2B%22parent+directory%22+%2Bdescription+%2Bsize+%2B%28[EXTENSIONS]%29+%22[TERMS]%22
+}
+
+function UpdateFileExtensions(){
+  document.webbitform.file_extension.value = document.webbitform.freqfileextensions.value;
+}
+
+function submit_query(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+// 13 = ENTER
+   {
+   Performquery(myfield.form.search_term.value, myfield.form.file_extension.value);
+   //myfield.form.submit();
+   return false;
+   }
+else
+   return true;
+}
+
+function submitsiteenter(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+   {
+   PerformSiteSearch(myfield.form.searchterms.value, myfield.form.searchsite.value);
+   //myfield.form.submit();
+   return false;
+   }
+else
+   return true;
+}
+</script>
+
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<TABLE border="0" width="96%">
+  <TBODY>
+  <TR>
+    <TD colspan=2 align=left><FONT size=-1 align="left"><font color="blue">[</font><a target="_blank"  
+      href="index.html">portal.htm</a><font color=blue>]</font>   &#8594; <font color="blue">[</font><a target="_blank" href="rabbits.htm">rabbits.htm</a><font color=blue>]</font> 
+      &#8594;  awebbitsearchform.htm</FONT> </CENTER></td></tr></table>
+
+
+<div align="center"><h1><font color="#0000FF">A webbit search form</font></h1></div>
+<table border="0" width=77%><tr><td>
+<div align="center">
+<font size="+1">
+This simple yet useful google/<font color="blue">[</font><a href="rabbits.htm">webbit</a><font color=blue>]</font> form was offered to <font color="blue">[</font><a href="http://www.searchlores.org">searchlores</a><font color=blue>]</font> by Selim in March 2009
+
+<br><br>
+<font size="+1">Various terms combinations are possible. You could for instance launch a boolean OR  query 
+through a <b><font color="#0000FF">|</font></b> 
+for instance texts about 
+<font color="blue">[</font><a href="http://www.google.com/search?q=-inurl%3A%28htm%7Chtml%7Cphp%29+intitle%3A%22index+of%22+%2B%22last+modified%22+%2B%22parent+directory%22+%2Bdescription+%2Bsize+%2B%28pdf|txt|chm%29+%22judo%20|%20karate%20%22">judo | karate</a><font color=blue>]</font>  or 
+music from 
+<font color="blue">[</font><a href="http://www.google.com/search?q=-inurl%3A%28htm%7Chtml%7Cphp%29+intitle%3A%22index+of%22+%2B%22last+modified%22+%2B%22parent+directory%22+%2Bdescription+%2Bsize+%2B%28aac|mp3|m4a%29+%22donovan%20|%20cohen%22">donovan | cohen</a><font color=blue>]</font><bR>
+You can either use one of the extensions listed below, or input whatever extension format you are looking for<br>
+This form should bypass most (unfortunately not all) bogus sites that fake "index.of" directories 
+and pollute the search engines in order 
+to lure zombies into buying stuff that is already on the web for free
+<br>
+Seekers can of course abuse the javascript text included (see the source, Luke: CTRL+U if you are using <font color="blue">[</font><a href="tuttiope.htm">opera</a><font color=blue>]</font> as you should) in order to finetune this form or 
+to create more specific -or more powerful- forms</font>
+</div>
+</td></tr></table>
+<br>
+<form name="webbitform" id="webbitform" onSubmit="Performquery(form.search_term.value, form.file_extension.value);">
+<table border ="1">
+<tr>
+<td align="right">
+Search Term:
+</td>
+<td>
+<input name="search_term" type="Text" onKeyPress="return submit_query(this,event)">
+</td>
+</tr>
+<tr>
+<td align="right">
+File Extension:
+</td>
+<td>
+<input name="file_extension" type="Text" onKeyPress="return submit_query(this,event)">
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+<input name="submit" type="Button" value="&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Search &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;" onclick="Performquery(form.search_term.value, form.file_extension.value)">
+</td>
+</tr>
+<tr>
+<td align="right">
+File&nbsp;<br>Extensions&nbsp;<br>examples&nbsp;<br>&nbsp;(click & choose)&nbsp;
+</td>
+<td>
+<select name="freqfileextensions" size="17" onclick="UpdateFileExtensions()" onKeyPress="return submit_query(this,event)">
+<option value="aac">
+aac
+</option>
+<option value="mp3">
+mp3
+</option>
+<option value="m4a">
+m4a
+</option>
+<option value="aac|mp3|m4a">
+aac|mp3|m4a
+</option>
+<option value="cbr">
+cbr
+</option>
+<option value="exe">
+exe
+</option>
+<option value="jpg">
+jpg
+</option>
+<option value="png">
+png
+</option>
+<option value="jpg|png|jpge">
+jpg|png|jpg
+</option>
+<option value="pdf">
+pdf
+</option>
+<option value="txt">
+txt
+</option>
+<option value="pdf|txt|chm">
+pdf|txt|chm
+</option>
+<option value="wma">
+wma
+</option>
+<option value="zip">
+zip
+</option>
+<option value="rar">
+rar
+</option>
+<option value="7z">
+7z
+</option>
+<option value="zip|rar|7z">
+zip|rar|7z
+</option>
+</select>
+</td>
+</tr>
+
+</table>
+</form>
+</td>
+</tr>
+</table>
+
+
+</font></font><br><center>
+
+<font color="blue">[</font><a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><font color=blue>]</font>
+<br><br>
+</font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+&copy; III Millennium:<font color="blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=blue>]</font>, all rights reserved, reversed, reviled and revealed</font>
+
+<br><br><font size="-1">Page optimised for <font color="blue">[</font><a href="tuttiope.htm">Opera</a><font color=blue>]</font>. Other browsers? Couldn't care less.</font>
+</center></div>
+</body>
+</html>

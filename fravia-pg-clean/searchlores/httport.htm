@@ -1,0 +1,354 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>httport.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ httport.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 2000 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;HTTPort&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Dmitry Dvoinikov<BR></FONT>published at fravia's searchlores in
+  May 2000<br><br>Do not forget to check the GNU project at <font color=blue>[</font><a href="http://www.nocrew.org/software/httptunnel.html">http://www.nocrew.org/software/httptunnel.html</a><font color=blue>]</font> as well
+  <hr width=44%></center>
+<TT>
+<B>HTTPort</B><BR>
+<BR>
+TCP/IP through HTTP tunneling client<BR>
+<BR>
+Written by Dmitry Dvoinikov &lt; ddvoinikov(AT)geocities(POINT)com</A>&gt;<BR>
+<BR>
+Download: <A HREF="zipped/httport.zip">here</A> (fravia's)<BR>
+
+Read FAQ: <A HREF="hpofaq.htm">here</A>.<BR>
+<BR>
+<BR>
+<U>Table of contents:</U><BR>
+<BR>
+1.  What is HTTPort for ?<BR>
+2.  More details, advanced usage and surfing privacy<BR>
+3.  Brief manual<BR>
+4.  Limitations<BR>
+5.  System requirements<BR>
+6.  Copyright and distribution policy<BR>
+7.  ToDo and improvements<BR>
+8.  Contributors<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+1. <U>What is HTTPort for ?</U><BR>
+<BR>
+HTTPort allows you to access multiple Internet services,
+while being blocked from the Internet with a proxy.<BR>
+<BR>
+The typical case is as follows: your company policy allows
+you to use HTTP Internet web service only. That is, all you
+can do is to run your browser and surf around the web. <BR>
+<BR>
+This prevents anyone within proxy scope from using e-mail,
+ICQ, and all other software that uses Internet protocols
+different from HTTP. This may include entertainment (online
+games, chat, IRC, instant messengers etc.), business (realtime 
+stock rate monitors, JAVA news browsers etc.) and billions of
+other applications.<BR>
+<BR>
+Internet protocols are stacked. Every protocol works atop
+of some other. The basic and most widely used Internet protocol 
+is TCP/IP. This protocol is the blood of the Internet. Almost
+every other Internet protocol relies on TCP/IP services.<BR>
+<BR>
+The typical software operates as follows (very approximate):<BR>
+<BR>
+- open a TCP/IP connection to "remote.server.com"<BR>
+- send and receive data through an open connection<BR>
+- close connection<BR>
+<BR>
+HTTP proxy that blocks you from the Internet does not allow
+you to connect to an arbitrary host "remote.server.com", thus
+preventing the software from operating.<BR>
+<BR>
+Lucky, there is a way of opening a virtual connection through
+a proxy if your proxy supports HTTP protocol version 1.0 or
+higher. HTTPort uses this protocol feature.<BR>
+<BR>
+| Technical note: HTTPort looks similar to SocksCap client,<BR>
+| but it is different. SocksCap requires that your proxy support<BR>
+| SOCKS (port 1080), whereas HTTPort relies on HTTP CONNECT<BR>
+| operator on conventional port 80 (8080, 3128 etc.).<BR>
+| My proxy did not support SOCKS. :)<BR>
+<BR>
+Any software can use this technique, so the software described
+above could have worked as follows:<BR>
+<BR>
+- open a virtual TCP/IP connection to "remote.server.com"
+through a proxy<BR>
+- send and receive data through an open connection<BR>
+- close connection<BR>
+<BR>
+This works fine even if you are under proxy, but almost none 
+of the Internet software supports this feature. This is where
+HTTPort becomes useful.<BR>
+<BR>
+HTTPort allows you to emulate any remote service on your local
+machine. When HTTPort is running on your computer, the 
+software you use consider any remote server to be close at hand
+(at localhost to be specific). Instead of trying aimless 
+connection attempts to "remote.server.com", which is impossible 
+due to proxy, it connects to "localhost", or (synonym) "127.0.0.1".
+Both "localhost" and "127.0.0.1" are the predefined literal
+addresses that correspond to THIS computer.<BR>
+<BR>
+When the software connects to "127.0.0.1" your proxy doesn't
+even know about it. Actually, connection to "127.0.0.1" will
+succeed even if you disconnect the network cable from your
+computer.<BR>
+<BR>
+The further scenario is as follows:<BR>
+<BR>
+- when HTTPort intercepts the connection to localhost, it 
+opens the virtual connection to the "remote.server.com"
+as described above.<BR>
+- thus there appears a double link that connects the
+software that knows nothing about the proxy, HTTPort
+that knows everything about the proxy and the proxy
+that knows nothing about the software.<BR>
+- the behaviour of this double link is indistinguishable
+from the behavior of a regular TCP/IP link, from
+the software and the remote server point of view.<BR>
+- HTTPort transfers the data back and forth while knowing
+nothing about the nature of the data. This makes it 
+possible to use it with ANY kind of TCP/IP software.<BR>
+<BR>
+I will call this process "a mirroring". In the above case I
+will say that HTTPort mirrors "localhost:localport" to
+"remote.server.com:remoteport".<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+2. <U>More details, advanced usage and surfing privacy:</U><BR>
+<BR>
+Well, there is not much left to say. I found HTTPort to 
+be VERY useful in one more aspect:<BR>
+<BR>
+Let's assume a typical situation: <BR>
+<BR>
+When you are surfing the web, your company proxy logs
+all of the sites that you visit, making it possible for
+the network administrator to monitor your surfing activity.<BR>
+<BR>
+Do you like it ? Me - no. Where to surf is a personal 
+business and the company should better trust the employees
+instead of agressively controlling them.<BR>
+<BR>
+Now, let's take the HTTPort and set it up the following way:
+(the described connection configuration already exists
+in this package).<BR>
+<BR>
+- HTTPort should mirror "localhost:8080" to "webcache.dial.pipex.com:3128".
+Note, webcache.dial.pipex.com is a large FREE public proxy server.
+(I have contacted the PIPEX company and they confirmed that the 
+proxy is open to be freely used by anyone).
+Optionally you may mirror "localhost:8080" to any other web proxy 
+server you know and you like (different from your company proxy,
+of course).<BR>
+- Your browser should use "localhost:8080" as a web proxy. See your
+browser manual on how to achieve that.<BR>
+- Now surf to "whatever.you.like.com".<BR>
+- What happens when you surf ? Your company proxy sees that you are
+connecting to a large proxy server that is assumed to be safe and
+secure. But you proxy does not know where you are actually connecting to
+("whatever.you.like.com").
+In order to do so, it should analyze the traffic, which is very hard.<BR>
+- The PIPEX proxy sees that someone from "proxy.yourcompany.com" connects
+to "whatever.you.like.com" but it does not know who you are (NOTE, 
+that your company proxy may reveal some of your details to the 
+PIPEX proxy, and furthermore to the remote site).<BR>
+- The "whatever.you.like.com" remote site sees that someone from 
+"proxy.pipex.com" connects, but it does not know who you are (same NOTE
+as above).<BR>
+<BR>
+This scheme makes it very hard for your local company proxy admin to
+monitor your surfing activity. <BR>
+<BR>
+Are you using HTTPort, or not, you may visit<BR>
+<A HREF="http://privacy.net/analyze">http://privacy.net/analyze</A><BR>
+in order to see what information about yourself is revealed to any
+remote site you visit.<BR>
+<BR>
+Also I can think of many other useful possibilities:<BR>
+<BR>
+- using HTTPort as mini-proxy<BR>
+- HTTPort chaining<BR>
+- etc. etc.<BR>
+<BR>
+But I won't tell you all of the ideas, for I guess it would be
+interesting to you to discover it by yourself :)<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+3. <U>Brief manual:</U><BR>
+<BR>
+When you start up the HTTPort for the first time, it has
+no proxy defined. You should enter your company proxy parameters
+on the "System" page. Parameters include proxy host name
+(name or IP address) and port (typically - 80, 81, 8080, etc.).<BR>
+<BR>
+The mirroring parameters may be edited on the "Port mapping" 
+page. The default mappings included in this package include:<BR>
+<BR>
+- localhost:8080 is being mirrored to webcache.dial.pipex.com:3128
+So, set your browser to use localhost:8080 or 127.0.0.1:8080 as a proxy, 
+and surf safer.<BR>
+<BR>
+- localhost:25 is being mirrored to smtp.mail.yahoo.com:25<BR>
+- localhost:110 is being mirrored to pop.mail.yahoo.com:110<BR>
+<BR>
+The later two allow you to use your free Yahoo! mail account
+(if you have one). If you do not, simply modify the mapping -
+substitute "your.mail.server.com" instead of 
+"smtp.mail.yahoo.com" in both mappings.<BR>
+<BR>
+Now run your favorite mail client and modify its properties
+in order for it to use "localhost:25" and "localhost:110" for
+SMTP and POP3 servers respectively. This makes it possible 
+to send and receive e-mail from under a proxy !<BR>
+<BR>
+Moreover, if you have got more mail accounts, add two more
+mappings, mirror another two local ports to<BR>
+your.another.mail.server.com:25 and<BR>
+your.another.mail.server.com:10 and here you go.<BR>
+<BR>
+Click "Start", minimize HTTPort and enjoy :)<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+4. <U>Limitations:</U><BR>
+<BR>
+HTTPort works with any software that uses TCP/IP.<BR>
+<BR>
+HTTPort DOES NOT work with ICQ. This is due to the fact
+that ICQ uses UDP/IP protocol by side of TCP/IP. There
+is no way of mirroring UDP/IP protocol through an HTTP proxy.<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+5. <U>System requirements:</U><BR>
+<BR>
+- Windows 9x or Windows NT<BR>
+- Winsock 1.1<BR>
+- TCP/IP protocol installed and configured<BR>
+- HTTP 1.0 compliant proxy server that supports CONNECT operator.<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+6. <U>Copyright and distribution policy:</U><BR>
+<BR>
+HTTPort is written by Dmitry Dvoinikov &lt;<A HREF="mailto:ddvoinikov@geocities.com">ddvoinikov@geocities.com</A>&gt;<BR>
+<BR>
+(c) 1999, Dmitry Dvoinikov<BR>
+<BR>
+HTTPort is freeware. You may distribute it freely, only if
+no modifications are made to the original distribution 
+package. If you wish to use HTTPort with commercial package,
+you are free to do it, but you should make no profit on HTTPort
+as a part of the package. This means that HTTPort may not be sold
+in any way, either explicit or implicit.<BR>
+<BR>
+HTTPort is provided on "AS IS" basis. No guarantee of any kind.
+No warranty of any kind. No responsibility of any kind. I just 
+give away an application and you just use it if you wish. That's 
+all.<BR>
+<BR>
+Almost no support provided. I've tested HTTPort VERY throughly 
+and consider it to be stable. As always, there is exactly ONE bug,
+but I just don't know where is it :)<BR>
+<BR>
+HTTPort is compressed with freeware<BR>
+<B>PE-Pack</B> (c) 1998 by ANAKiN<BR>
+<BR>
+Installer is made with freeware<BR>
+<B>Freeman Installer</B> (c) 1993-1997 by TipTec Development.<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+7. <U>ToDo and improvements:</U><BR>
+<BR>
+Changed in version 1.1:<BR>
+<BR>
++ proxy authorization (basic)<BR>
++ connection statistics<BR>
++ updates notification<BR>
+<BR>
+<BR>What else ?<BR>
+<BR>
+Whatever you say :) Don't hesitate to write me your suggestions.<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+8. <U>Contributors:</U><BR>
+<BR>
+Tony Younes<BR>
+Simone Palla &lt;sfinge@usa.net&gt;<BR>
+Pieter van der Merwe &lt;PvdMerwe@RUBICO.COM&gt;<BR>
+<BR>
+<HR SIZE=1>
+<BR>
+Have a nice day <B>:)</B><BR>
+<BR>
+Best regards,<BR>
+Dmitry Dvoinikov<BR>
+<BR>
+15.12.1999
+</TT>
+<br><font color=gray>(c) Dmitry Dvoinikov, published at searchlores.org in May 2000</font><hr>
+ <bR></font>
+    <font size=+1><center> 
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

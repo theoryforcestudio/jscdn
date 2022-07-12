@@ -1,0 +1,587 @@
+<html>
+<head>
+<title>winky_proxy.htm: A Useless but intesting tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="proxy, python and so on">
+<meta name="keywords" content="proxy, python and so on">
+<meta name="author" content="Winky">
+<meta name="copyright" content="Copyright(c) 2006 Winky">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#CECECE" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+<p align="center">
+<font size="+3">~ A Useless but interesting tool ~</font><br>
+
+<b>By <font color="blue">Winky</font> (slightly edited by fravia+)</b><br>
+           <br>
+<a target=_top href="pro_essa.htm"><img SRC="images/O_118.jpg" ALT="to essays" 
+ALIGN=BOTTOM WIDTH="216" HEIGHT="274" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+
+<b>Published @ <a href="http://www.searchlores.org">http://www.searchlores.org</a> in late <font color="blue">February 2006</font> | </b>
+<b>Version <font color="blue">0.01</font></b><br>
+
+
+   </center>
+<hr>
+<font color=blue size=+2>
+<br>An introduction to the power of python (and of proxies), by Winky.<br>It is supposed to be a discussion, not an essay.</font><br>
+This discussion/essay is related to the python script: <a href="winky_proxy.py.html">winky_proxy.py</a>. <br>
+See also <a href="winky_proxy.html#letterwi">Winky's presentation:</a><br>
+See also <a href="winkyunwinky.htm">a tool for a useless but intesting tool</a>, by Moonman</center></p>
+
+<hr><br>
+
+
+<h2>A Useless but interesting tool ;)</h2>
+By Winky, February 2006<br><br>
+
+
+Anyway this tool is dedicated to faf :)<br>
+by Winky his&nbsp;<b>Wincky, my oververbosed "useless but
+intresting" friend.</b><br>
+
+And also to all the other guys on ebmb, even megalo :)&nbsp;<b><br>
+
+
+</b>If the shoe fits wear it :)
+<h2>Background</h2>
+
+
+Recently I was reading the "Twisted Book" about the <a href="http://twistedmatrix.com/">twisted python framework</a>.
+As most books it contains useless trivial information. This is not to
+knock the twisted framework. Anyway inside the book it showed you how
+to make a simple proxy with twisted. Unfortunately since twisted is a
+single threaded tool it is very difficult to customize. I had noticed
+on the various message board people where posting stuff that had been
+encrypted. As ussual because I am lazy I am too lazy to break the
+encryption.<br>
+
+
+<br>
+
+
+Anyway I came up with the idea it would be neat if you could make a
+tool that when you posted to the board you could surround the text you
+wanted encrypted with  &lt;winky&gt;secret
+text&lt;/winky&gt;</span>. But the even cooler part is
+that if you previewed the board or viewed the message in you webbrower
+you could read it.<br>
+
+
+<br>
+
+
+<h2>Planning</h2>
+
+
+Obviously we need a proxy of some sorts.<br>
+
+
+Proxy will scan posted content looking for  &lt;winky&gt;secret
+text&lt;/winky&gt;&nbsp;</span>and encypt the secret
+text leaving the tags in place.<br>
+
+
+On the reverse when when we view the webpage it will do the opposite.<br>
+
+
+<br>
+
+
+<h2>Method of Operation</h2>
+
+
+Origionally I &nbsp;was going to create the proxy with twisted. As
+i explained earlier because twisted is single threaded it is difficult
+to use so I abandoned the idea. I decided to look on the net for other
+proxies made in python. The simplest one I found was by&nbsp;<a href="http://mail.python.org/pipermail/python-list/2003-June/168957.html"><b>SUZUKI
+Hisao</b></a> . If possible always avoid writing code
+completely by yourself and base it on other peoples work. Do not
+reinvent the wheel. As you will also see later my design even though
+based on Mr Suzuki's differs in a few key points. I will explain why I
+chose this design. You will also see that my design has various
+limitations, which we will discuss.<br>
+
+
+<br>
+
+
+<h2>Ingredients</h2>
+
+
+ required<br>
+
+
+</span>
+<ul>
+
+
+  <li>python interpreter &nbsp;http://www.python.org/download/</li>
+
+
+  <li>a good text editor&nbsp;</li>
+
+
+</ul>
+
+
+ nice to have <br>
+
+
+</span>
+<ul>
+
+
+  <li>A good python editor/ide
+<a href="http://wiki.python.org/moin/PythonEditors">http://wiki.python.org/moin/PythonEditors</a> . Personally I use DrPython
+(buggy as hell but i am used to the bugs ;)). Probably if you are just
+starting out &nbsp;I would use <a href="http://wiki.python.org/moin/SPE">http://wiki.python.org/moin/SPE</a> . I
+have never used it but i have heard good things about it.</li>
+
+
+  <li>A good python shell. Personally I use PyCrust, but maybe
+you should try IPython. I think IPython is probably better but I am old
+and crockety and do not like change</li>
+
+
+  <li>A good python debugger I ussually use Winpdb
+http://www.digitalpeers.com/pythondebugger/ &nbsp;.If you are old
+school you can debug from the comand line ;).</li>
+
+
+</ul>
+
+
+<h2>Interlude (languages and tools)</h2>
+
+
+One of the most important things for a coder is tools. Your tools are
+your editor hexeditor debugger etc. It is important that the tools fit
+you. For instance I use reqularly 3-4 different types of editors, from
+DrPython,NotePad++,Boa Constructor. The reasoning why is each editor
+excels slightly in one area, and also i like them :).<br>
+
+
+What language to use. For many people computer language is like a
+religion. I have used here python. I like python, and I know its
+limitation and quirks. Every language has certain areas where it is
+better. PHP is good for webpages, but personally I like python better
+for web. Perl and Ruby are basically the same as python just a
+different way of doing the same thing. Scheme and Lisp are functional
+programming languages, and until recently I did not appreciate them.
+Look at new languages constantly, but on the other hand do not believe
+the hype they are a magic bullet.<br>
+
+
+<br>
+
+
+The great part about python/perl is that they have many 3rd party
+modules etc.<br>
+
+
+<br>
+
+
+<h2>The proxy</h2>
+
+
+Here is the proxy <a href="winky_proxy.py.html">winky_proxy.py</a> in python.<br>
+ What is a webproxy. A webproxy is
+basically a webserver and a webclient based in one. Your webbrowser
+connects to the webserver part, then the webserver part becomes a
+client to fetch your request which inturn passes back to you.<br>
+
+
+<br>
+
+
+If you do not know how a http protocol work look on the net.
+<a href="http://en.wikipedia.org/wiki/HTT">http://en.wikipedia.org/wiki/HTT</a><br>
+
+
+<br>
+
+
+Lets examine Mr&nbsp;<b>SUZUKI's proxy</b>
+<a href="http://mail.python.org/pipermail/python-list/2003-June/168957.html">http://mail.python.org/pipermail/python-list/2003-June/168957.html</a><br>
+
+
+<br>
+
+
+Python has built in many different types of &nbsp;Servers.<br>
+
+
+He has decided to override the class&nbsp;<span style="font-family: monospace;"></span>BaseHTTPServer.HTTPServer
+to make a threaded server.<br>
+
+
+<br>
+
+
+Each request will be fed into the class ProxyHandler <br>
+
+
+ def handle(self): </span>is
+overriden to allow you to specify which clients you will allow to
+connect to the server<br>
+
+
+<br>
+
+
+&lt;I&gt;HTTP defines eight methods indicating the desired
+action to be performed on the identified resource.&lt;/I&gt;<br>
+
+
+For the most part GET and POST are the ones that are of intrest others
+are rarely used.<br>
+
+
+GET and POST are very similar<br>
+
+
+<br>
+
+
+To get the server to process GET request he creates a method called <br>
+
+
+def do_GET(self):<br>
+
+
+&nbsp;&nbsp;&nbsp; .......<br>
+
+
+He then sets do_POST = do_GET to make it so his proxy handles both of
+these methods the same way.<br>
+
+
+<br>
+
+
+when the do_Get is called <br>
+
+
+self.path will equal the path<br>
+
+
+he then uses the function urlparse.urlparse(self.path,'http')<br>
+
+
+if self.path =
+http://www.google.ca/search?hl=en&amp;q=a+b+c+d&amp;btnG=Google+Search&amp;meta=<br>
+
+
+then <br>
+
+
+scm = "http"<br>
+
+
+netloc = "www.google.com"<span style="font-family: monospace;"><br>
+
+
+</span>params = "search"<br>
+
+
+query =
+&nbsp;"hl=en&amp;q=a+b+c+d&amp;btnG=Google+Search&amp;meta="<br>
+
+
+<br>
+
+
+He creates a socket connects to "www.google.com"<br>
+
+
+He then "manually" creates a GET or PUT request<span style="font-family: monospace;"><br>
+
+
+</span>GET /search HTTP/1.1<span style="font-family: monospace;"><br>
+
+
+</span>Host:&nbsp;www.google.com<br>
+
+
+and all the other stuff<br>
+
+
+and sends it to the socket.<br>
+
+
+<br>
+
+
+Then he listens of the socket, and when there is data on the socket
+reads it and then feeds it to the client connected to the proxy. The
+actual reading and writing to the socket occurs in<br>
+
+
+def _read_write(self, soc, max_idling=20)<br>
+
+
+(Also a good example on how to use select so socket do not block ;) )<br>
+
+
+Why he has this relatively complex system is so that &nbsp;as data
+arrives to proxy it is immediately read and sent to the client.<br>
+
+
+<br>
+
+
+<h2>Examination</h2>
+
+
+If you just need a proxy the above code will work. Unfortunately we
+need to modify the query string before it goes up, and more importantly
+modify the data before it goes back to the client. In the page content
+we need to search for the matching &lt;winky&gt;
+&lt;/winky&gt; tags.<br>
+
+
+<br>
+
+
+Another thing is that the searchlores mb DQ uses POST instead of GET
+which has to be dealt with slightly differently.<br>
+
+
+<br>
+
+
+Browsing throught the python documentation we notice there is a cool
+module urllib and urllib2 which fetches webpages. Instead of using a
+raw socket lets fetch the webpage with urllib2 (check out python docs
+for how to use, also a great way to make a spider).<br>
+
+
+<br>
+
+
+<h2>Implementation</h2>
+
+
+We will need a seperate do_GET and do_POST methods<br>
+
+
+In both of the methods the params are fetched and parsed.<br>
+
+
+In the do_POST the query_string has to be read from self.rfile
+(traditonally stdin).<br>
+
+
+<br>
+
+
+Then they call the common method def _GET_POST(self,pageUrl,data=None)
+which fetchs the webpage and then sends it back to the client.<br>
+
+
+<br>
+
+
+note that i remove the header <br>
+
+
+try :<br>
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; del
+page.headers.dict['transfer-encoding']<br>
+
+
+except KeyError :<br>
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; pass<br>
+
+
+when the page is fetched urllib2 will show what encoding is used ie
+chunked, gzip etc<br>
+
+
+since the entire page is now on the proxy, these headers do not apply
+and have to be removed.<br>
+
+
+<br>
+
+
+Also I used the built in methods to send to the client<br>
+
+
+self.send_error(400, "http error")<br>
+
+
+self.send_response(page.code,page.msg)<br>
+
+
+self.send_header(key,value)<br>
+
+
+self.end_headers()<br>
+
+
+self.wfile.write(page_body)<br>
+
+
+<br>
+
+
+Always -if possible- use builtin functions, these functions have been
+used by millions of coders. That means generally speaking they are bug
+free and will work better then home built versions. Also since all the
+modules are GPL if required you can go in the source and see what is
+happening.<br>
+
+
+<br>
+
+
+ The encoding decoding<br>
+
+
+</span>On the searchlores MBs the query param that contains the
+message posted is "content"<br>
+
+
+Basically in the on_Post method i do this<br>
+
+
+if query_dict.has_key("content") :<br>
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; query_dict["content"] =
+[encode_buffer(query_dict["content"][0])]<br>
+
+
+Also notice that I change the page.headers.dict['Content-Length'] = str(len(page_body))<br>
+
+This is because I am converting HEX to Ascii or vice versa which mean that the Content-Length of page will have changed<br>
+
+I think that Content-Lenght does not have to be 100% accurate with all browsers but i am not sure.
+When I encode i only match &lt;winky&gt;&lt;/winky&gt;
+tags<br>
+
+
+While when i decode I match<br>
+
+
+&lt;winky&gt;&lt;/winky&gt; and escape coded
+&lt;winky&gt;&lt;/winky&gt;<br>
+
+<br>
+
+The reason is so that the preview post will work, and text in the text form box will be in clear text.<br>
+
+<br>
+
+<h2>How to teach yourself.</h2>
+
+I purposely have not commented the code. Most code in the wild is not
+commented or very sparse commenting. When you read a book every line is
+not commented.<br>
+
+If stuck run the code through a debugger see what is happening.<br>
+
+<br>
+
+One of the powers of python is its "shell".<br>
+
+Any code object can be inspected at runtime.<br>
+
+example I want to know what methods are available for urllib2 module<br>
+
+http://www.python.org/doc/lib/urllib2-examples.html<br>
+
+<br>
+
+open a python shell and do this<br>
+
+<pre>
+ &gt;&gt;&gt; import urllib2</span><br> &gt;&gt;&gt; f = urllib2.urlopen('http://www.python.org/')</span><br> &gt;&gt;&gt; dir(f)</span><br> ['__doc__', '__init__', '__iter__', '__module__', '__repr__', 'close', 'code', 'fileno', 'fp', 'geturl', 'headers', 'info',</span><br> &nbsp;'msg', 'next', 'read', 'readline', 'readlines', 'url']</span><br><span style="font-style: italic;">WOW it shows you all the methods and vars ;)</span><br> &gt;&gt;&gt; f.headers.dict</span><br> {'content-length': '11885', 'accept-ranges': 'bytes', </span><br> 'server': 'Apache/2.0.54 (Debian GNU/Linux) DAV/2 SVN/1.1.4 mod_python/3.1.3 Python/2.3.5 mod_ssl/2.0.54 OpenSSL/0.9.7e',</span><br> &nbsp;'last-modified': 'Sun, 19 Feb 2006 15:12:41 GMT', 'connection': 'close', </span><br> 'etag': '"601f6-2e6d-3599cc40"', 'date': 'Sat, 25 Feb 2006 10:50:54 GMT', 'content-type': 'text/html'}</span><br>What the headers that are contained<br><br>Anyway you should get the idea :)<br><br></span><span style="font-style: italic;"></span></pre>
+
+<h2>Conclusion</h2>
+
+The winky proxy (name patent pending :P) is an intresting but useless tool :).<br>
+
+One of the limitations of the urllib2 the way I am using it is that the pages will not be sent to the client as the page loads.<br>
+
+Also the proxy does not work on gmail, I suspect all ajax pages maybe you need to implement CONNECT protocol.<br>
+Also if you are going to parse html/xhtml do not use your own homemade
+parser but one like a SAX or DOM parser. (go look in python docs).
+Another think is also not all the HTTP Protos are handled, and the errors are not handled very elegantly either
+<br>
+
+Anyway not too shabby for 160 lines of code;)
+br><hr width=44%>
+<font size=-1>
+(c) Winky 2006 &nbsp;&nbsp;
+ &nbsp;&nbsp;</font><center>
+<br><hr><br><a name="letterwi"></a><font color=blue size=+2>
+Winky's presentation</font></center>
+
+<pre>
+An example of it in action is
+<a href="http://fravia.2113.ch/phplab/mbs.php3/mb003?num=1140855607&thread=1140751397">http://fravia.2113.ch/phplab/mbs.php3/mb003?num=1140855607&thread=1140751397</a>
+
+What you see when proxy is in place
+
+Re: Re: Re: Re: Re: Re: go (25/02/06 09:20:07)
+
+      &lt;winky>lets all go to the ball park&lt;/winky>
+      &lt;winky>I am going to bash megalos head in with hammer ;)&lt;/winky>
+
+;)
+
+Otherwise you see
+
+Re: Re: Re: Re: Re: Re: go (25/02/06 09:20:07)
+
+      &lt;winky>6C65747320616C6C20676F20746F207468652062616C6C207061726B&lt;/winky>
+     
+      &lt;winky>4920616D20676F696E6720746F2062617368206D6567616C6F73206865616420696E20776974682068616D6D6572203B29&lt;/winky>
+
+;)
+
+
+I also think that it is pretty cool that it works for the preview function.
+
+Probably the discussion about the proxy should require a lot of editing & fixing up.
+But it is supposed to be a discussion, not an essay ;)
+
+Anyway ;)</pre>
+
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"essays.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>
+
+
+
+

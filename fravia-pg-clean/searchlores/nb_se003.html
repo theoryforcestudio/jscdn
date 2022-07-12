@@ -1,0 +1,280 @@
+<HTML>
+<HEAD>
+
+<NOSCRIPT>
+<!--<BODY>-->
+</NOSCRIPT>
+
+<TITLE>Searching the Web : Part Two : Getting files via mail</TITLE>
+<!-- nb_se003.html       -->
+
+
+<SCRIPT LANGUAGE="JavaScript"> 
+  <!-- 
+      function no_error_window() {
+	  return true
+	  } 
+	window.onerror=no_error_window  
+  //-->
+</SCRIPT> 
+
+ <META NAME="keywords" CONTENT=", Search, JavaScript, JavaScript">
+ <META NAME="description" CONTENT="searching, how to search, javascript tricks, passwords, encryption, javascript for the masses">
+ <META NAME="generator" CONTENT="Notepad">
+ <META NAME="author" CONTENT="the seeker"> 
+ <META NAME="copyright" CONTENT="copyright jan 2000 by The Seeker">
+ <META NAME="distribution" CONTENT="global">
+ <META NAME="resource-type" CONTENT="document">
+ <META NAME="language" CONTENT="en">
+ <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+ <META NAME="organisation" CONTENT="Dark_Tower">
+ <META NAME="timestamp" CONTENT="14/01/00">
+    
+</HEAD>
+
+<BODY TEXT="#001010" BGCOLOR="#C0C0C0" VLINK="#405040">
+<FONT FACE="Arial,Helvetica">
+
+<CENTER>
+<H2>HOW TO SEARCH THE WEB</H2>
+<H3>Part Two : Get your files via mail</H3>
+</CENTER>
+<HR WIDTH=50%>
+<CENTER>Use email to get files from ftp-directories
+<BR><FONT COLOR="green">compiled by The Seeker</FONT>
+<BR><FONT COLOR="red">always under heavy construction</FONT>
+<BR>last modified : 15 Jan 2000
+<BR><BR>will be updated without further announcement
+</CENTER>
+
+<HR WIDTH=50%>
+<BR>
+
+<BR>
+<UL>
+<LI>Most of these servers are operated as a public service, by volunteers. There is 
+no charge for the service. Please restrict your searches to essential information.
+</LI>
+<BR>
+<LI>Find here <A HREF="http://www.cix.co.uk/~net-services/mrcool/stats.htm">FTPMail, Agora, etc. statistics</A>
+</LI>
+<LI>For best results, use the server closest to you.
+</LI>
+<LI>Find here <A HREF="http://www.geocities.com/CapitolHill/1236/servers.html"> Boyd's list of defunct servers</A>
+</LI>
+<LI>A must-read, anyway <A HREF="http://www.geocities.com/CapitolHill/1236/"> G.E. Boyd's Everything by Email Web Page</A>
+</LI>
+<LI>Your first task should be to send an 'HELP'-message to your favourite server. 
+</LI>
+<LI>
+<STRONG>Note</STRONG>: This function was originally made available for Internet
+    users who have email but no ftp access. It has become an alternative to ftp. There
+	is a catch (there is no such thing as free lunch :-): it is not an efficient use
+	of bandwidth because the size of the uuencoded file is larger than the original
+	file, more data is carried across the network. Because of this, some postmasters
+	frown upon users who abuse this facility.
+</LI>
+</UL>
+<BR>
+<HR WIDTH=25%>
+
+<BR>
+<B><U>1. Some Basics</U></B>
+<BR><BR>
+<B>&nbsp;<U>a. Getting started</U></B>
+<p><em>ftpmail</em> is a widely available package, which allows
+the user to submit FTP requests by email. <br>
+The receiving service interprets the commands and invokes an FTP
+service in the normal way (usually, but not necessarily on the
+same machine). The normal output from the FTP service is emailed
+back to the user. <br>
+A number of additional commands are also available to control the
+<em>ftpmail</em> server itself. These allow the user to choose
+options relating to the encoding or compression of data files and
+the splitting of data files into manageable sized sections. <br>
+A full log of the server's activities is produced. Requests are
+queued and there is the capability to cancel jobs. </p>
+
+<HR WIDTH=15%>
+
+<BR>
+There is no standard usage so first email the server with the word
+'help' in the body of the message and instructions will be sent to you.
+Don't put a signature block on the end of your message.
+<P>
+Follow the instructions when making a request.
+<P>
+Files as received are normally split into segments which are <STRONG>uuencoded</STRONG>.
+You need a decoder to decode the files. To uudecode the whole file either:
+<P>
+<UL>
+<LI>rename the segments giving them files names with consecutive
+numbers (e.g. <CODE>f1.uue</CODE> <CODE>f2.uue</CODE> ...) and point <STRONG>uudecode</STRONG>
+to the first file in the sequence; or
+<P>
+<LI>concatenate the segments in their correct order, strip out the two
+introductory lines in all but the first segment, and uudecode the whole file.
+</UL>
+
+<HR WIDTH=15%>
+<BR>
+<B>&nbsp;<U>b. How does the ftp-by-email work </U></B>
+<BR>
+You send a regular mail to a ftpmail host (see below) and in the body
+of the message you put ftp'ish commands, eg:
+
+<LISTING>
+help
+</LISTING>
+
+	or
+
+<LISTING>
+connect x2ftp.oulu.fi
+chdir /pub/msdos/programming/gpe
+dir
+binary
+uuencoded
+get pcgpe10.zip
+quit
+</LISTING>
+
+And then the ftpmailer logs on to the ftp-site and performs the above  
+commands and mails the result back to you.
+
+<BR>
+<BR><HR WIDTH=15%><BR>
+<B>&nbsp;<U>c. Basic commands</U></B>
+
+<TABLE><TR>
+<TD>
+help                        
+<BR>open [site[user[password]   
+<BR>cd path                     
+<BR>ls [path]                  
+<BR>dir [path]                  
+<BR>get file                    
+<BR>size max[ K | M ]		
+<BR>			
+<BR>mode binary			
+<BR>mode ascii			
+<BR>quit				
+</TD>
+<TD><FONT COLOR="blue">
+ do this first and read the text
+ <BR>connect to site
+ <BR>change directory
+ <BR>directory listing
+ <BR>directory listing
+ <BR>get a file, can have path in name
+ <BR>size when file is split before sending,
+ <BR>&nbsp;&nbsp;the max size is Kilobytes or Megabytes
+ <BR>archives, binary files
+ <BR>nothing but ascii text
+ <BR>end of ftp-by-email message
+ </FONT>
+<TD>
+</TR></TABLE>
+
+<BR>
+<BR><HR WIDTH=15%><BR>
+<B>&nbsp;<U>d. UUencoding</U></B>
+<BR>
+Binary file transfers using ftpmail aren't difficult ... they just require a
+few additional steps. Because all e-mail has to be in ASCII form, ftpmail has to
+encode your Binary file in ASCII before it can e-mail the file to you. Once you
+get the file, you can then decode the file back into Binary :) 
+
+Fortunately, there are two ways that ftpmail can encode Binary files into ASCII.
+The first way it can do this is through something called "uuencode." As long as
+you have a uudecode program -- and uudecode programs are all over the place (chances
+are your site has uudecode stored on its system) -- the whole process is simple. 
+
+<BR><BR>
+<FONT COLOR="green">Some encoders : </FONT>
+<BR>1. WinZip 
+<BR>2. uudecode.com - 1821 bytes 
+<BR>3. WinCode -- look at SoftSeek 
+<BR>4. got some javascript-program <I>somewhere</I> at my HD - gonna publish it  
+
+<BR><BR>
+<HR WIDTH=25%>
+<BR>
+
+<B><U>2. The URLs</U></B>
+<BR><BR>
+Don't forget to check here <A HREF="http://www.geocities.com/CapitolHill/1236/servers.html"> Boyd's list of defunct servers</A>
+<BR><BR>
+The actual list :
+<BR>
+
+<BR><FONT COLOR="red"><PRE>O P E R A T I O N A L   F T P M A I L   S E R V E R S
+=========================================
+</PRE></FONT>
+<TABLE>
+<TR><TD>
+bitftp@plearn.edu.pl)
+<BR>         
+<BR>bitftp@pucc.princeton.edu       
+<BR>ftpmail@academ.com              
+<BR>ftpmail@btoy1.rochester.ny.us   
+<BR>ftpmail@cnd.caravan.ru         
+<BR>ftpmail@dna.affrc.go.jp        
+<BR>ftpmail@ftp.sunet.se           
+<BR>ftpmail@ftp.uni-stuttgart.de
+<BR>ftpmail@garbo.uwasa.fi         
+<BR>ftpmail@giswitch.sggw.waw.pl   
+<BR>ftpmail@gu.net    
+<BR>ftpmail@ml.imasy.or.jp   
+<BR>ftpmail@mail.iif.hu
+<BR>ftpmail@mercure.umh.ac.be  
+<BR>ftpmail@uar.net
+</TD>
+<TD>
+ <FONT COLOR="blue">
+   Poland - No UUCP gateways
+    <BR>NO ANSWER 7Dec99 -- DEFUNCT?
+    <BR>United States - OK UUCP gateways
+    <BR>United States
+    <BR>United States
+    <BR>Russia - SLOW
+    <BR>Japan
+    <BR>Sweden
+    <BR>Germany NO ANSWER since 01Sep99
+    <BR>Finland NO ANSWER 04, 07Jun99, 14Sep99
+    <BR>Poland
+    <BR>Ukraine
+    <BR>Japan
+    <BR>Hungary
+    <BR>Belgium
+    <BR>Ukraine
+	</FONT>
+  </TD>
+  </TR>
+  </TABLE>
+ 
+<BR>
+
+
+
+<BR><HR WIDTH=25%>
+<FONT COLOR="red"><H2><B>useful additions ? Please let me know !!</B></H2></FONT>
+
+<BR><HR width=50%>
+<BR><BR>
+
+<!--
+<BR><BR>
+<CENTER>
+ <FORM>
+   <INPUT TYPE="button" VALUE="RETURN" onClick="location.href='nb_snippets.html'">
+ </FORM>
+</CENTER>
+--> 
+
+<HR>
+<FONT SIZE=-1>Page started by <A HREF="mailto:the_seeker(at)gmx(dot)net">The Seeker</A>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Search Engines Anti-Optimization</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta content="This page guives you the means of quickly spoting the most unwanted keywords which spammers and SEOs have stuffed on their pages in order to make them cling to your keyword's search results." name="description">
+<meta content="JSON, javascript, yahoo apis, web search, stop words" name="keywords">
+<meta content="Nemo" name="author">
+<meta content="Copyright(c) 2007 Nemo" name="copyright"> 
+  <style type="text/css"> 
+     a:link {COLOR: #02f}  
+     a:visited {COLOR: #808}  
+     a:hover {BACKGROUND: #afb; COLOR: purple}  
+     ul, li, dl, dd, blockquote {text-align: justify;}
+     li {margin-bottom:1em;}
+     div li {margin-bottom:0;}
+     dl ul {margin-left:0;padding-left:0;}
+     dl li {margin-bottom:0;}
+  </style>
+</head>
+<body alink="#00ff00" bgcolor="#cccccc" link="#0000ff" text="#001010" vlink="#3366cc">
+<img src="images/left.gif" alt="~" align="left" height="46" width="95">
+<img src="images/right.gif" alt="~" align="right" height="46" width="95">
+<center>  
+<h1 align="center">Search Engines Anti-Optimization</h1>
+<p style="margin-bottom: 2em;">  
+<i>Get your own stop words!</i>  
+</p>
+</center>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>
+<table margin="0" padding="0" align="left" border="0" width="400">
+<tr><td>
+<img src="images/flammarion.jpg" alt="Seeing beyond the surface." align="left" height="338" hspace="0" width="400">
+</td><td>&nbsp;</td>
+</tr>
+</table>
+<center>
+<table align="center" border="0">
+<tr>
+<td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+<td bgcolor="#993300"><a href="essays.htm"><img alt="to essays" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a></td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+</tr>
+</table>
+<p>  
+<b>Published @ <a href="http://www.searchlores.org/">Searchlores</a> in <font color="blue">January 2003</font><br>
+Version <font color="blue">0.04</font> June 2007 | By  <font color="blue">Nemo</font></b>
+</p>
+</center>
+<p align="justify"><i>It's a
+tough world! Users simply HAVE TO defend themselves in a world where some commercial
+minions are allowed to write that  "<a href="http://www.businessweek.com/technology/content/jan2003/tc20030114_2858.htm">Twenty
+out of the 30 links Google
+is presenting on each page is not earning them money. That's an ad
+break of only 33%</a>"... as if google would continue to predominate among search engines
+selling more crap, poor idiot.</i>
+</p>
+</td>
+</tr>
+</table>
+<table align="center">
+<tr>
+<td>
+<hr>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#introduction">Introduction</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#quarry">Our quarry</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#statistics">Words statistics</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#stopwords">Stop words</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#examples">Examples</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<a href="nemo_SEO.htm#conclusion">Conclusion</a>
+<img alt="¤" src="images/bulletr.gif" height="13" width="13">
+<hr>
+</td>
+</tr>
+</table>
+<a name="introduction"></a>
+<h2 align="left">Introduction</h2>
+<p align="justify">Searchers usually have a fairly good idea of what
+they want to search, but words often have several meanings, or are used
+in several contexts, and spammers and SEOs take advantage of that to
+push their crap, by building pages tangentially related with your
+search terms, hoping that you would click on the ads crammed on those
+pages. Of course we can exclude the main keywords pertaining to the
+contexts we do not want, although that is easier said than done.
+</p>
+<p align="justify">
+The purpose of this essay is to give you the means of finding those excluding keywords 
+in a fairly 
+easy way, in order to get ride of the spammed results on your own, without any 
+need to trust the anti-spamming algos used by the search engines themselves.
+The idea is to <font color="blue">reverse the SEO-spammers approach</font> and build a list 
+of the most common terms appearing in the spammed search results, 
+with their relative frequency, so that you can spot at once the most spammed, and hence 
+the <b>most unwanted</b> 
+keywords for your query.
+</p>
+<p align="justify">
+You can do just that at the <a href="oracle.htm">Seekers' Oracle</a>,
+which builds a list of the most common terms appearing in the spammed
+search results, with their relative frequency, by using web or image
+[for each image, Yahoo offers a <a href="alltheweb.htm#intermediate">snippet of text around the image</a>]
+search APIs. For those interested in knowing how the tool was made, view my essay <a href="json.htm">JSON for the masses</a>; for the others, just use it.
+</p>
+<a name="quarry"></a>
+<h2>Our quarry</h2>
+<p align="justify">
+I guess that you are reading this essay because you want to learn <b>web search strategies</b>. To get better results it is better to expand our query adding some terms. You can do it by yourself or using <a href="oracle.htm">our tool</a> to get terms frequency tables:
+</p>
+<div>
+<ul>
+<li><a href="yahoo-web.htm" name=yahoo-web>web</a>: web, find, internet, tips, searching, documents, file, tip, files, document;
+<li><a href="yahoo-search.htm" name=yahoo-search>search</a>: internet, tips;
+<li><a href="yahoo-strategies.htm" name=yahoo-strategies>strategies</a>: search, strategy, web, internet, tips, techniques, files;
+</ul>
+</div>
+<p align="justify">
+or using online tools to get synonyms such as:
+</p>
+<div>
+<ul>
+<li><a href="http://wordnet.princeton.edu/perl/webwn">WordNet</a>
+<li><a href="http://www.synomizer.com/">Synomizer</a>
+<li><a href="http://dico.isc.cnrs.fr/dico/en/search">English Synonym Dictionary</a>
+<li><a href="http://www.synonym.com/synonym/">Antonym Finder and Synonym Thesaurus -- Synonyms and definitions for English words!</a>
+</ul>
+</div>
+<p align="justify">Given that, our query can be expanded to the following one:
+</p>
+<blockquote>
+<font color="#0022ff">(search OR searching OR seek OR seeking) AND
+(web OR internet OR document OR documents OR file OR files OR webpage
+OR webpages OR "web page" OR "web pages") AND (tips OR hints OR
+strategies)</font>
+</blockquote>
+
+<p align="justify">In the good ol' days, before <a href="http://searchengineshowdown.com/features/av/">AltaVista</a>'s
+demise, it was easy to refine this query, because we also have a fairly
+good idea of search terms proximity: --(search, searching, seek,
+seeking) and (web, internet, document, documents, file, files, webpage,
+webpages, web page, web pages) for grammatical reasons should be quite
+close one another, lets say at maximum 2, 3 words away; whereas the
+context terms (tips, hints, strategies) should gravitate in the
+neighborhood of the previous two sets, lets say at maximum 50 words
+away--. Thanks to AltaVista flawless support of boolean operators,
+distributive NEAR operator and variable size proximity search before
+AltaVista's demise, it were possible to use the following query </p>
+<blockquote>
+<font color="#0022ff">(search OR searching OR seek OR seeking) within
+3 (web OR internet OR document OR documents OR file OR files OR webpage
+OR webpages OR "web page" OR "web pages") within 50 (tips OR hints OR
+strategies)</font>
+</blockquote>
+<p align="justify">
+Nowadays <a href="http://www.exalead.com/">exalead</a> (variable size proximity search) and <a href="http://search.yahoo.com">Yahoo</a>
+(fixed(?) size proximity search) are the ones which are closer, but
+they still have flaws concerning distributive NEAR operator or variable
+size proximity search... so there's no way of using the <b>cloud search strategy</b>,
+which is quite unfortunate, because nowadays search results are
+polluted by big documents which, by chance or design, have our search
+terms. The best we can is excluding terms.
+</p>
+<a name="statistics"></a>
+<h2>Word statistics</h2>
+<p align="justify">
+We start our analysis by spotting the most troublesome terms for our expanded query using <a href="oracle.htm">our tool</a>
+and inserting each search term one by one in order to get the most
+unwanted terms clinging to our query with their respective frequency. I
+only show words appearing ten or more times:
+</p>
+<dl>
+<dt><a href="yahoo-search.htm"><b>search</b></a>:
+<dd>services 61, resources 52, business 43, real 41, jobs 40, contact
+38, estate 37, offers 34, products 34, marketing 33, job 32, service
+32, optimization 28, product 25, reviews 21, property 20, travel 20,
+health 19, sale 18, homes 17, buy 14, career 14, businesses 13, medical
+13, properties 13, bible 12, hosting 12, seo 11, solutions 11, storage
+11, store 11, catholic 10, deals 10, employment 10, legal 10, shopping
+10
+</dl>
+<dl>
+<dt><a href="yahoo-seek.htm" name=yahoo-seek><b>seek</b></a>:
+<dd>god 85, reviews 71, game 57, games 50, business 41, job 41, play
+40, product 34, jobs 33, products 33, services 31, review 30, shop 30,
+buy 29, bible 28, cheats 25, prices 25, classifieds 23, compare 22,
+health 22, shopping 22, solutions 22, treatment 21, christian 20,
+employment 20, counseling 18, marketing 18, price 18, store 18,
+shipping 17, stock 17, playstation 16, sports 16, contact 15, medical
+15, careers 14, toys 14, jesus 13, church 12, lord 12, career 11,
+christ 10, design 10, discount 10, 
+</dl>
+<dl>
+<dt><a href="yahoo-web.htm"><b>web</b></a>:
+<dd>hosting 477, design 468, services 221, development 204, offers
+118, business 81, marketing 69, solutions 61, service 59, products 53,
+developer 43, designers 42, designing 40, reviews 33, developers 32,
+offering 27, providing 27, seo 27, designer 23, reservations 23,
+businesses 22, optimization 21, hotel 20, health 18, designed 17,
+shopping 17, store 17, hosts 16, hotels 16, solution 16, advertising
+14, designs 14, leading 14, price 14, consulting 13, prices 13, travel
+13, airlines 12, games 12, shop 12, medical 10, reviewed 10.
+</dl>
+<dl>
+<dt><a href="yahoo-internet.htm" name=yahoo-internet><b>internet</b></a>:
+<dd>marketing 150, services 132, business 118, service 117, offers
+61, hotel 59, hosting 58, design 54, products 47, buy 43, product 43,
+solutions 43, shop 40, law 38, reviews 33, development 32, advertising
+28, store 27, prices 25, games 21, hotels 21, jobs 20, offering 20,
+discount 18, inn 18, order 18, leading 17, shopping 16, consulting 15,
+seo 15, legal 13, optimization 13, shipping 13, businesses 12, compare
+12, contact 12, promotion 12, deals 11, developer 11, price 11, travel
+11, cost 10, dating 10, health 10, sales 10, 
+</dl>
+<dl>
+<dt><a href="yahoo-document.htm" name=yahoo-document><b>document</b></a>:
+<dd>services 167, solutions 128, products 82, business 62, legal 56,
+product 50, service 45, travel 36, delivery 34, shop 32, solution 32,
+buy 27, design 27, law 27, review 22, job 15, sales 15, shopping 15,
+compare 14, hosting 14, development 13, items 12, purchase 12, jobs 12,
+marketing 11, reviews 11, stores 11, developer 10, order 10, 
+</dl>
+<dl>
+<dt><a href="yahoo-file.htm" name=yahoo-file><b>file</b></a>:
+<dd>product 67, products 67, furniture 64, shop 59, buy 44, services
+41, store 38, nail 33, service 28, prices 26, hosts 25, business 24,
+reviews 22, solutions 22, compare 20, legal 20, order 20, shopping 18,
+shipping 14, hosting 13, purchase 13, offer 11, design 10, games 10, 
+</dl>
+<dl>
+<dt><a href="yahoo-webpage.htm" name=yahoo-webpage><b>webpage</b></a>:
+<dd>products 93, services 45, health 38, product 38, offers 34,
+design 32, service 31, business 30, solutions 30, game 29, games 26,
+hotel 26, court 25, sports 24, store 24, dispute 23, development 21,
+reviews 18, designer 15, hosting 14, contact 13, mediation 13, resort
+13, leading 12, 
+</dl>
+<dl>
+<dt><a href="yahoo-tips.htm" name=yahoo-tips><b>tips</b></a>: 
+<dd>travel 83, products 62, buy 50, health 49, design 47, business
+46, shop 44, product 41, offers 40, services 36, marketing 33, buying
+31, reviews 31, contact 27, service 26, recipes 24, fitness 23,
+shipping 23, career 22, diet 22, prices 22, dating 21, gardening 20,
+medical 20, mortgage 20, purchase 19, sales 19, adsense 18, sports 18,
+store 18, compare 17, discount 17, loans 17, order 17, job 16, loan 16,
+shopping 14, furniture 12, game 12, refinance 12 ,solutions 12, equity
+11, estate 11, 
+</dl>
+<dl>
+<dt><a href="yahoo-hints.htm" name=yahoo-hints><b>hints</b></a>:
+<dd>cheats 304, games 173, game 162, recipes 50, reviews 50,
+playstation 49, xbox 48, health 46, cooking 43, baking 27, kitchen 27,
+product 24, products 22, design 20, nintendo 20, service 18, shop 18,
+solutions 18, gaming 17, contact 16, review 16, buy 15, prices 15,
+recipe 15, job 14, shopping 14, solution 13, sports 13, store 13,
+business 12, garden 11, optimization 11, services 11, order 10 
+</dl>
+<dl>
+<dt><a href="yahoo-strategies.htm"><b>strategies</b></a>:
+<dd>business 147, marketing 126, services 71, health 46, design 43,
+consulting 39, solutions 37, game 33, career 30, jobs 24, offers 24,
+products 24, job 23, games 21, service 19, contact 18, prices 17,
+developing 16, leading 16, estate 15, poker 15, product 15, real 15,
+sales 15, shopping 14, review 13,advertising 12, compare 12, shop 12,
+reviews 12, price 11, buy 10, careers 10,
+</dl>
+<p align="justify">
+Lets organize these stopwords by subject to get a better grasp of our enemies:
+</p>
+<dl>
+<dt><b>search</b>:
+<dd>
+<ul>
+<li>services 61, resources 52, business 43, contact 38, offers
+34, products 34, service 32, product 25, reviews 21, sale 18, buy 14,
+businesses 13, solutions 11, store 11, deals 10, shopping 10, 
+<li>real 41, estate 37, property 20, homes 17, properties 13,
+<li>jobs 40, job 32, career 14, employment 10,
+<li>marketing 33, optimization 28, seo 11,
+<li>travel 20, 
+<li>health 19, medical 13,
+<li>bible 12, catholic 10,
+<li>hosting 12, storage 11,
+<li>legal 10,
+</ul>
+</dl>
+<dl>
+<dt><b>seek</b>:
+<dd>
+<ul>
+<li>god 85, bible 28, christian 20, jesus 13, church 12, lord 12, christ 10,
+<li>reviews 71, business 41, product 34, products 33, services
+31, review 30, shop 30, buy 29, prices 25, classifieds 23, compare 22,
+shopping 22, solutions 22, price 18, store 18, shipping 17, stock 17,
+contact 15, discount 10,
+<li>game 57, games 50, play 40, cheats 25, playstation 16,
+<li>job 41, jobs 33, employment 20, careers 14, career 11,
+<li>health 22, treatment 21, medical 15,
+<li>counseling 18,
+<li>marketing 18, design 10, 
+<li>sports 16, 
+</ul>
+</dl>
+<dl>
+<dt><b>web</b>:
+<dd>
+<ul>
+<li>hosting 477, hosts 16,
+<li>design 468, development 204, marketing 69, developer 43,
+designers 42, designing 40, developers 32, seo 27, designer 23,
+optimization 21, designed 17, advertising 14, designs 14, consulting
+13,
+<li>services 221, offers 118, business 81, solutions 61, service
+59, products 53, reviews 33, offering 27, providing 27, businesses 22,
+shopping 17, store 17, solution 16, leading 14, price 14, prices 13,
+shop 12, reviewed 10.
+<li>reservations 23, hotel 20, hotels 16, travel 13, airlines 12,
+<li>health 18, medical 10,
+<li>games 12,
+</ul>
+</dl>
+<dl>
+<dt><b>internet</b>:
+<dd>
+<ul>
+<li>marketing 150, design 54, development 32, advertising 28, consulting 15, seo 15, optimization 13, promotion 12, developer 11,
+<li>services 132, business 118, service 117, offers 61, products
+47, buy 43, product 43, solutions 43, shop 40, reviews 33, store 27,
+prices 25, offering 20, discount 18, order 18, leading 17, shopping 16,
+shipping 13, businesses 12, compare 12, contact 12, deals 11, price 11,
+cost 10, sales 10, 
+<li>hotel 59, hotels 21, inn 18, travel 11,
+<li>hosting 58,
+<li>law 38, legal 13,
+<li>games 21,
+<li>jobs 20,
+<li>dating 10,
+<li>health 10,
+</ul>
+</dl>
+<dl>
+<dt><b>document</b>:
+<dd>
+<ul>
+<li>services 167, solutions 128, products 82, business 62,
+product 50, service 45, delivery 34, shop 32, solution 32, buy 27,
+review 22, sales 15, shopping 15, compare 14, reviews 11, order 10,
+<li>legal 56,
+<li>travel 36, 
+<li>design 27, marketing 11, developer 10,
+<li>hosting 14,
+<li>job 15, jobs 12,
+</ul>
+</dl>
+<dl>
+<dt><b>file</b>:
+<dd>
+<ul>
+<li>product 67, products 67, furniture 64, shop 59, buy 44,
+services 41, store 38, nail 33, service 28, prices 26, business 24,
+reviews 22, solutions 22, compare 20, order 20, shopping 18, shipping
+14, purchase 13, offer 11,
+<li>hosts 25, hosting 13,
+<li>legal 20,
+<li>design 10,
+<li>games 10,
+</ul> 
+</dl>
+<dl>
+<dt><b>webpage</b>:
+<dd>
+<ul>
+<li>products 93, services 45, product 38, offers 34, service 31,
+business 30, solutions 30, store 24, reviews 18, contact 13, leading
+12,
+<li>health 38,
+<li>design 32, development 21, designer 15,
+<li>game 29, games 26,
+<li>hotel 26, resort 13,
+<li>court 25, dispute 23, mediation 13,
+<li>sports 24,
+<li>hosting 14,
+</ul>
+</dl>
+<dl>
+<dt><b>tips</b>:
+<dd>
+<ul>
+<li>travel 83,
+<li>products 62, buy 50, business 46, shop 44, product 41, offers
+40, services 36, buying 31, reviews 31, contact 27, service 26,
+shipping 23, prices 22, purchase 19, sales 19, store 18, compare 17,
+discount 17, order 17, shopping 14, furniture 12, solutions 12,
+<li>health 49, fitness 23, diet 22, medical 20,
+<li>design 47, marketing 33, adsense 18,
+<li>career 22, job 16,
+<li>dating 21
+<li>gardening 20,
+<li>sports 18, 
+<li>game 12,
+</ul>
+</dl>
+<dl>
+<dt><b>hints</b>:
+<dd>
+<ul>
+<li>cheats 304, games 173, game 162, playstation 49, xbox 48, gaming 17, nintendo 20,
+<li>recipes 50, cooking 43, baking 27, kitchen 27, recipe 15,
+<li>reviews 50, product 24, products 22, service 18, shop 18,
+solutions 18, contact 16, review 16, buy 15, prices 15, shopping 14,
+solution 13, store 13, business 12, services 11, order 10,
+<li>health 46,
+<li>design 20, optimization 11,
+<li>job 14, 
+<li>sports 13,
+</ul> 
+</dl>
+<dl>
+<dt><b>strategies</b>:
+<dd>
+<ul>
+<li>business 147, services 71, solutions 37, offers 24, products
+24, service 19, contact 18, prices 17, leading 16, product 15, sales
+15, shopping 14, review 13, compare 12, reviews 12, shop 12, price 11,
+buy 10,
+<li>marketing 126, design 43, consulting 39, developing 16, advertising 12,
+<li>health 46,
+<li>game 33, games 21, poker 15,
+<li>career 30, jobs 24, job 23, careers 10,
+</ul>
+</dl>
+<p align="justify">It's interesting to compare the idiosyncrasies of
+each keyword... words are not made equal, even synonyms! Lets squeeze
+all this information and get the list of our own stopwords.
+</p>
+<a name="stopwords"></a>
+<h2>Stop words</h2>
+<p align="justify">
+With the exception of <a href="http://www.exalead.com/">exalead</a>,
+all other search engines only allow a more or less limited amount of
+keywords per query, so our list is sorted and split by main offenders /
+quarry specific offenders and for each category I have chosen the
+keywords which offered the biggest bang with the least amount of
+gunpowder and collateral damages.
+</p>
+<dl>
+<dt><b>Main offenders</b>
+<dd>
+<ul>
+<li><b>business</b>: business, service, services, buy, price, products, shop, shopping, product, store.
+<li><b>marketing</b>: design, advertising, marketing, seo.
+<li><b>jobs</b>: jobs, careers, career.
+<li><b>travel</b>: travel, hotel, hotels.
+<li><b>health</b>: health.
+<li><b>games</b>: game, games.
+</ul>
+</dl>
+<dl>
+<dt><b>Quarry specific offenders</b>
+<dd>
+<ul>
+<li>god, church, legal, law, hosting, sports, recipes, cooking, dating, gardening.
+</ul>
+</dl>
+<p align="justify">
+With it we can do a deep cleaning on our search results, as we are going to see in the following examples.
+</p>
+<a name="examples"></a>
+<h2>Examples</h2>
+<p align="justify">
+Lets see some search queries pertaining to web search:
+</p>
+<dl>
+<dt><b>Yahoo</b>
+<dd>
+<ul>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu6EMekRGbRQAlzNXNyoA?p=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;num=100">"searching
+techniques" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu7bTekRGyZMAIyFXNyoA?p=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;num=100">"search
+strategies" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu6kwe0RGKOUAyQBXNyoA?p=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;num=100">"information
+retrieval" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu7aTfERGkZQA8ndXNyoA?p=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;num=100">"graph
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu4tefURGvTIAMxZXNyoA?p=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;num=100">"link
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+</ul>
+</dl>
+<dl>
+<dt><b>Google</b>
+<dd>
+<ul>
+<li><a href="http://72.14.203.104/search?num=100&amp;hl=en&amp;q=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Search&amp;num=100">"searching
+techniques" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://72.14.203.104/search?num=100&amp;hl=en&amp;q=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Search&amp;num=100">"search
+strategies" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://72.14.203.104/search?num=100&amp;hl=en&amp;q=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Search&amp;num=100">"information
+retrieval" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://72.14.203.104/search?num=100&amp;hl=en&amp;q=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Search&amp;num=100">"graph
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+<li><a href="http://72.14.203.104/search?num=100&amp;hl=en&amp;q=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Search&amp;num=100">"link
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+</ul>
+</dl>
+<dl>
+<dt><b>Ask</b>
+<dd>
+<ul>
+<li><a href="http://www.ask.com/web?q=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=0&amp;o=0&amp;l=dir&amp;n=100">"searching
+techniques" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://www.ask.com/web?q=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=1&amp;o=0&amp;l=dir">"search
+strategies" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://www.ask.com/web?q=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=1&amp;o=0&amp;l=dir">"information
+retrieval" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a> 
+<li><a href="http://www.ask.com/web?q=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=1&amp;o=0&amp;l=dir">"graph
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+<li><a href="http://www.ask.com/web?q=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=1&amp;o=0&amp;l=dir">"link
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+</ul>
+</dl>
+<dl>
+<dt><b>Exalead</b>
+<dd>
+<ul>
+<li><a href="http://www.exalead.com/search/results?q=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">"searching
+techniques" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://www.exalead.com/search/results?q=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">"search
+strategies" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://www.exalead.com/search/results?q=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">"information
+retrieval" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -travel -hotel -hotels -game -games -god -church
+-legal -law -hosting -sports -recipes -cooking -dating -gardening</a>
+<li><a href="http://www.exalead.com/search/results?q=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">"graph
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+<li><a href="http://www.exalead.com/search/results?q=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-travel+-hotel+-hotels+-game+-games+-god+-church+-legal+-law+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">"link
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing -seo -jobs -careers -health -travel -hotel -hotels -game
+-games -god -church -legal -law -hosting -sports -recipes -cooking
+-dating -gardening</a>
+</ul>
+</dl>
+<dl>
+<dt><b>Live search</b>
+<dd>
+<ul>
+<li><a href="http://search.live.com/results.aspx?q=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo&amp;go.x=7&amp;go.y=12&amp;form=QBRE">"searching
+techniques" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo</a>
+<li><a href="http://search.live.com/results.aspx?q=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo&amp;go.x=9&amp;go.y=7&amp;form=QBRE">"search
+strategies" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo</a>
+<li><a href="http://search.live.com/results.aspx?q=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo&amp;go.x=10&amp;go.y=8&amp;form=QBRE">"information
+retrieval" -business -service -services -buy -price -products -shop
+-shopping -product -store -design -advertising -marketing -seo</a>
+<li><a href="http://search.live.com/results.aspx?q=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+++&amp;go.x=16&amp;go.y=7&amp;form=QBNO">"graph
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing</a>
+<li><a href="http://search.live.com/results.aspx?q=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing&amp;go.x=14&amp;go.y=9&amp;form=QBRE">"link
+structure" search web -business -service -services -buy -price
+-products -shop -shopping -product -store -design -advertising
+-marketing</a>
+</ul>
+</dl>
+<dl>
+<dt><b>Gigablast</b>
+<dd>
+<ul>
+<li><a href="http://www.gigablast.com/search?q=%22searching+techniques%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+&amp;n=100&amp;k4u=754158">"searching techniques" -business -service -services -buy -price -products -shop -shopping</a>
+<li><a href="http://www.gigablast.com/search?q=%22search+strategies%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+&amp;n=100&amp;k5v=467543&amp;n=100">"search strategies" -business -service -services -buy -price -products -shop -shopping</a>
+<li><a href="http://www.gigablast.com/search?q=%22information+retrieval%22+-business+-service+-services+-buy+-price+-products+-shop+-shopping+&amp;n=100&amp;k8y=430512&amp;n=100">"information retrieval" -business -service -services -buy -price -products -shop -shopping</a>
+<li><a href="http://www.gigablast.com/search?q=%22graph+structure%22+search+web+-business+-service+-services+-buy+-price+-products+&amp;n=100&amp;k3d=425588&amp;n=100">"graph structure" search web -business -service -services -buy -price -products</a>
+<li><a href="http://www.gigablast.com/search?q=%22link+structure%22+search+web+-business+-service+-services+-buy+-price+-products+&amp;n=100&amp;k3d=425588&amp;n=100">"link structure" search web -business -service -services -buy -price -products</a>
+</ul>
+</dl>
+<p align="justify">It remarkable how full of crap web is, as more than
+99% of search results is weeped out by excluding these troublesome
+keywords. It is worth mentioning that these offenders are quite
+ubiquitous and excluding them in other search queries often cuts quite
+some mustard. Lets see an example for a research I made a long time ago
+concerning <b>The History of French Louisiana</b>,
+where some keywords were not excluded, as they might have significant
+collateral damages (buy, price, travel, god, church, legal, law):
+</p>
+<dl>
+<dt><b>Yahoo</b>
+<dd>
+<ul>
+<li><a href="http://search.yahoo.com/search;_ylt=A0geu.6nIlJGnWIAgcNXNyoA?p=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-hotel+-hotels+-game+-games+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -hotel -hotels -game -games -hosting -sports -recipes
+-cooking -dating -gardening</a>
+</ul>
+<dt><b>Google</b>
+<dd>
+<ul>
+<li><a href="http://72.14.203.104/search?hl=en&amp;q=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-hotel+-hotels+-game+-games+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;btnG=Google+Search&amp;num=100">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -hotel -hotels -game -games -hosting -sports -recipes
+-cooking -dating -gardening</a>
+</ul>
+<dt><b>Exalead</b>
+<dd>
+<ul>
+<li><a href="http://www.exalead.com/search/results?q=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-hotel+-hotels+-game+-games+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;x=0&amp;y=0">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -hotel -hotels -game -games -hosting -sports -recipes
+-cooking -dating -gardening</a>
+</ul>
+<dt><b>Ask</b>
+<dd>
+<ul>
+<li><a href="http://www.ask.com/web?q=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers+-health++-hotel+-hotels+-game+-games+-hosting+-sports+-recipes+-cooking+-dating+-gardening&amp;qsrc=0&amp;o=0&amp;l=dir&amp;ax=6">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers -health -hotel -hotels -game -games -hosting -sports -recipes
+-cooking -dating -gardening</a>
+</ul>
+<dt><b>Live Search</b>
+<dd>
+<ul>
+<li><a href="http://search.live.com/results.aspx?q=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+-design+-advertising+-marketing+-seo+-jobs+-careers&amp;go.x=0&amp;go.y=0&amp;form=QBNO">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers</a>
+</ul>
+<dt><b>Gigablast</b>
+<dd>
+<ul>
+<li><a href="http://www.gigablast.com/search?q=history+%22french+louisiana%22+-business+-service+-services+-products+-shop+-shopping+-product+-store+++-design+-advertising+-marketing+-seo+-jobs+-careers&amp;n=100&amp;k0a=267740&amp;n=100">history
+"french louisiana" -business -service -services -products -shop
+-shopping -product -store -design -advertising -marketing -seo -jobs
+-careers</a>
+</ul>
+</dl>
+<p align="justify">Although we have not used our tool to get the query
+specific offenders (genealogy, for instance), the previous set is
+sufficiently powerful to wipe out more than 99% of commercial crap. </p>
+<a name="conclusion"></a>
+<h2>Conclusion</h2>
+<p align="justify">Ironically the SEO-webmaster's obsession to optimize
+their webpages, using every possible keywords associated to their
+content, simplifies our task: -avoiding them-.
+</p>
+<p align="justify">
+(c) Nemo 2003 2007 &nbsp;&nbsp; <font color="#0022ff">nemo vitam meam regit@yahoo.com</font> &nbsp;&nbsp; replace white spaces by underscores.
+</p>
+<center>  
+<hr width="66%">
+<br>
+<a href="basic.htm"><img alt="Petit image" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a>
+<br><br>
+<table>
+<tr><td bgcolor="#993300" height="2" width="300"></td></tr>
+</table>
+(c) III Millennium: <font color="blue">[</font><a href="http://www.searclores.org/info.htm">fravia+</a><font color="blue">]</font>, all rights reserved, reversed, reviled and  
+revealed  
+</center>
+</body>
+</html>

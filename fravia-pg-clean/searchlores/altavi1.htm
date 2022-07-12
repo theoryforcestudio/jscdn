@@ -1,0 +1,452 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>altavi1.htm: How to search the web, by fravia+
+altavi1.htm</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<a href="details.htm"><IMG
+SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>June 2000<br><hr width=44%>
+
+<font size=+4>~ Altavista ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+
+<font size=+2>Let's have a look at the STRUCTURE of Altavista.<br>
+Searchers should reverse their tools, eh... :-)</font><br>
+<!-- snippet for the curious ones
+<br><font color="#3333AA">The 
+following, taken in great part from AltaVista's 'Search Intranet
+Developer's Kit' 
+(version April 1999) has been modified by fravia+, the info below applies to the "real" altavista 
+search engine as well, and this makes it interesting</font> :-)
+--><font size=+1>
+<hr width=44%>(this is still <i>in fieri</i>, of course)<br><br><hr width=44%>
+<font color=blue>[</font><a href="altavi1.htm#bare">Basic recall</a><font color=blue>]</font>
+&nbsp;&nbsp;
+<font color=blue>[</font><a href="altavi1.htm#adin">Advanced insight</a><font color=blue>]</font>
+&nbsp;&nbsp;
+
+<font color=blue>[</font><a href="altavi1.htm#avqe">AV querystrings</a><font color=blue>]</font>
+&nbsp;&nbsp;
+
+<font color=blue>[</font><a href="altavi1.htm#formiz">Altavista forms</a><font color=blue>]</font>
+</font>
+<br><br>
+<a name="bare"></a>
+   
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font size=+3>Basic recall</font></center></td></tr></table><br>
+</center></center>
+<ul><li><font color=red>!!</font> ALWAYS use the advanced search with boolean operators and result ranking options. 
+</li><li> <font color=red>!!</font> Phrase searching - through heavy use of <font color=blue>""</font> - is the <i>sine qua non</i> when cutting through the web.
+</li><li> <font color=red>!!</font> In Altavista (and almost nowhere else) the 
+rule is: case sensitive name searching. Lower case retrieves either lower 
+or upper case. Upper case kills all other case occurrencies. Note that Altavista IS 
+accent and character sensitive.
+</li><li> <font color=red>!!</font> Boolean logic (AND, OR, AND NOT, NEAR) should be 
+used <font color=blue>only</font> in advanced search, <u>do not</u> use this in altavista's 
+simple search form (which is almost useless for serious searching), nor in 
+the advanced search 'sort' box. Always remember that the so-called simple search always 
+defaults to OR (you can use it nevertheless for a 'quick and dirty' seek).
+</li><li> <font color=red>!!</font> Subsearching inside sort box<br>Result 
+ranking trough sortbox... you MUST understand this! You should use  
+ the "Results Ranking Criteria" box <u>whenever possible</u> or you'll get a stupid  
+unsorted list. For instance, if you're looking for <U>all</U> "searching and seeking" related  
+pages but have a particular interest in filtering, type <font color=blue>filtering</font> 
+in the "Results 
+Ranking Criteria" space in order to bring <u>those</U> useful listings to the top. Incredibly useful 
+addition!
+</li><li> <font color=red>!!</font> Field limiting: title: ~ url: ~ link: ~ host: ~ domain: ~ anchor: ~ text: ~ image: ~
+ applet:<br>You will realize how 
+important this "field limiting" approach is only once you will have tried it, therefore 
+ just try it: <i>probieren 
+geht Über studieren</i>
+</li><li> <font color=red>!!</font> Truncation: <font color=blue>*</font> ~ 
+<font color=blue>**</font> ~ <font color=blue>?</font><br> Either you use truncation or you are truncated.
+</li></ul>
+
+Write it down and remember it: for Altavista's queries the best method is ALWAYS advanced search with boolean logic (and field limiting) and then 
+heavy use of the sort box.
+<br><br>
+
+<a name="adin"></a>
+    
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font size=+3>Advanced insight</font></center></td></tr></table><br>
+</center>
+
+For any search engine, <i>ergo</i> for Altavista as well, it is critically important to assign location values 
+properly during indexing. Inside Altavista, the assigning of
+locations is fully automatic in the simplest case... where a function called 
+<SPAN STYLE="color: black; background: yellow"><a href="addwo.htm">avs_addword</a></span> does all the work.<br> In this
+case the words of the document are laid out end to end and are numbered sequentially starting
+with the value returned by other functions (avs_newdoc or avs_startdoc). 
+The same is true for field boundaries
+and for values (indexed quantities like dates that can be range-searched).
+The following diagram shows how two very short documents would be stored inside altavista's 
+index
+database.<br><br><center>
+<table border=1>
+<tr><td></td><td colspan=6 bgcolor="#C6E7C6"><center>document 1</center></td><td colspan=7 bgcolor="#C6E7C6"><center>document 2</center></td></tr>
+<tr><td bgcolor="#C6E7C6">word</td><td>here</td><td>you</td><td>have</td><td>a</td><td>short</td><td>page</td><td>Thisnotwithstanding<br>thisnotwithstanding</td><td>here</td><td>you</td><td>have</td><td>another</td><td>short</td><td>page</td></tr>
+<tr><td bgcolor="#C6E7C6">location</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+
+</table></center><br>
+As the figure illustrates, each word is actually stored as a word-location pair. The index also
+contains information about the beginning and ending locations of each document. Document1
+starts at location 1, and Document2 starts at location 7.
+In Document2, the first word contains an uppercase letter, so the word is indexed twice: once
+with case preserved and once in all lowercase. Both versions of the word are at the same
+location, so that the word would be found appropriately regardless of whether a query is case
+sensitive or case-insensitive.<br><br>
+The words are added sequentially, every so many documents, 
+or when the last
+document of a linked bunch has been processed,  the actual update to the index is made, using
+avs_makestable.<br><br>
+The avs_newdoc procedure <SPAN STYLE="color: black; background: yellow">defines a block of 
+text as a document</span> and establishes an identifier
+with which the document can be found in the index. The avs_newdoc procedure also defines a
+filter, which does the bulk of the work of preparing the document to be indexed. It is at the filter
+stage where any necessary document type conversion takes place.
+The
+filter function is called using the following arguments:<pre>
+IN avshdl_t idx (index handle)
+IN void *pFname (information sufficient for the filter to access
+                 the document contents)
+IN unsigned long startloc (starting location for adding words)
+OUT unsigned long *pNumWords (number of words added to the index)</pre>
+Once the filter is finished processing a block of text, it can pass the text (in 
+the form of a line, a
+paragraph, or even the entire document), to the avs_addword procedure. The avs_addword
+procedure parses the text into words and adds those words to the index. It interprets as a word
+any sequence of letters or digits that is surrounded by spaces or other non-alphanumeric
+characters. When it adds a word to the index, the avs_addword procedure preserves the case of 
+the word as it appears in the document. If the word contains any uppercase letters, the software
+also indexes a lowercase version of the word, to support case-insensitive searching.
+<BR>That were it... re-read the snippet above and you will know more about search engines that 
+many self-proclamed experts do.<br>Of course there is MUCH more to learn, though: knowledge is a 
+never ending downhill run on your sledge, eh.<br>
+<HR><br>
+In fact many more "menial" tasks are performed, for instance the following ones: 
+Set a date for the document
+ ~ Specify a data string to be returned as a search result
+~  Set a date and time for the document.
+~ Identify certain words to be indexed as fields.
+~ Add a single word exactly as entered to a document index.
+~ Index the supplied date at the specified location.
+~ Index the supplied value at the specified location.
+~ Add a numeric value to a document index that can be used for custom ranking.<br><br>
+Ranking values are very important, when retrieving results. For example, suppose
+you want a value type called <SPAN STYLE="color: black; background: yellow">rlines</span> 
+to order search results by the the
+number of lines per document. You must supply the name (rlines), the lowest and
+highest possible values. The following code example defines the value type for
+extended ranking of search results, in this case, the number of lines per document.<pre>
+error=avs_define_valtype ( "rlines", 0, 10000, NULL, &rlinesvaltype);
+if (error != AVS_OK) {
+   printf ("avs_define_valtype returned %s\n", avs_errmsg(error));
+   return 1;
+                     }</pre>
+<b>Dates</b><br>
+When indexing documents, a date can be set for each one through the avs_setdocdate
+or the avs_setdocdatetime procedures. Once the dates are in the index, it is possible to 
+use dates or
+date ranges to limit searches. The date is returned in the search results.<br>
+Altavista is capable of storing dates from 01/01/0100 through 12/31/2148.<br>
+Searchers can limit a query with a date range added as an extra Boolean term. 
+The format of the
+date range is [dd/mm/yyyy-dd/mm/yyyy]. If a searcher omits the beginning date, the query will
+return everything in the index with a date before the end date. If a searcher omits the end date, your
+query result will contain all documents with dates after the beginning date. If a searcher 
+wants only the
+documents indexed on one date, he should use the same beginning and ending dates. 
+The <SPAN STYLE="color: black; background: yellow">end dates are
+part of the range</span>.<br><br>
+There are various types of possible searches:<ul><li>simple
+</li><li> advanced - using Boolean terms
+</li><li> advanced - using the ranking mechanism
+</li><li> advanced - using a combination of Boolean and ranking</li></ul>
+The search engine ranks the results of a search based on a weight value assigned to each word
+in the query, and a resulting overall relevance rating of each document that meets the search
+criteria.<br>
+A document earns a <SPAN STYLE="color: black; background: yellow">relevance rating</span> based on the number of words in the search query that it
+contains, and the weight value of each of those words. The document containing the most
+words with the highest weight value is considered most relevant. The closer the relevance
+rating is to a value of 1, the more likely it is that a document meets the search criteria.<br>
+The weight of a word is determined by the number of occurrences of that word in the entire
+index. A word that occurs less frequently in the index earns a higher weight, based on the
+assumption that it is more precise and specific than a word that occurs frequently.
+For example, the word "searching" might occur many times in an index, whereas the word
+"combing" would probably occur less frequently. "combing" would be given a higher weight
+than "searching" in a search query containing both words, because a document containing
+only the word "combing" would be more likely to match the searcher's interest than a document
+containing only the word "searching." A document containing both "combing" and
+"searching" would earn the highest relevancy ranking.<br><br>
+The position of the word in the document, and the frequency of occurrence of the word
+in a single document, have some bearing on the ranking of a document. The most significant
+factor in determining ranking is the combined weight of words in the search query. Also, the
+search engine considers only words without an operator preceding them when it does ranking.
+If operators precede all words in the search query, the results are returned in no particular order.
+<br><br><b>Basic searches</b><br>
+As you know, to perform a basic search, a seeker uses the operators plus (+) and minus (-) 
+to indicate words or phrases
+that are required or prohibited in the search results. For example, the following query
+expression requests documents that <SPAN STYLE="color: black; background: yellow">must</span> 
+contain the word hints and <SPAN STYLE="color: black; background: yellow">can</span> also contain the
+phrase how to search:<br><font color=blue>
+"how to search" +hints</font><br>
+<br><br>
+<b>Boolean</b><br>
+
+Boolean Query Syntax
+For Boolean searches, use the logic operators AND, OR, NOT, NEAR, and WITHIN. For
+example, the following query requests that either of the 
+words find or target appear in the same
+document with either of the words search or seek.<br>
+(find OR target) AND (search OR seek)<br>
+The following query requests that both the words search and seek appear in a
+document's <font color=blue>title:</font> field.<br>
+title:(search AND seek)<br><br>
+<b>Rules for Query Processing</b><br>
+Both the ranking and Boolean search procedures follow the same basic rules for processing
+queries:<ul><li>
+Like the indexer, the search engine interprets a word as any string of letters and digits
+that is delineated by non-alphanumeric characters. Consequently, AltaVista Search
+ignores punctuation except to interpret it as a separator for words.
+</li><li>A group of two or more words enclosed in double quotes indicates a phrase. Phrasing
+ensures that the search engine finds the words together, instead of looking for separate
+instances of each word individually.</li>
+<li>An asterisk (*), double asterisk (**), or question mark (?) following three or more
+characters indicates a wildcard; the search engine will find all words that match the
+specified pattern.</li>
+<li>Case sensitivity of a search is based on the case of each word in the query. A word in
+all lowercase letters results in a case-insensitive search, whereas if a word contains
+any uppercase letters, the software searches for an exact-case match.</lI>
+<li>Fetching procedures assign to each matching document a
+score based on how well that document matches the set of ranking terms provided in
+the search call. If no ranking terms were provided, the results are presented in the
+same order as they were added to the index.</li>
+<li>
+If the string you are looking for contains
+special characters (for example, the forward slash (/)), <SPAN STYLE="color: black; background: yellow">you can use curly braces</span> ({}) in the
+query string as in the following example: <font color=blue>{numega/sice}</font>. All characters between the matching curly
+braces are treated as part of a word except the asterisk (*) which still works as a wildcard.</li>
+<li><b>Asterisk (<font color=blue>*</font>)</b>: After 3 specified characters will search
+for matches in up to 5 trailing letters.
+</li><li><b>Question Mark (<font color=blue>?</font>)</b>: After 3 specified characters will match
+exactly one more character.</li>
+<li><b>Double Asterisk</b> (<font color=blue>**</font>)
+More flexible as it will search for
+matches for an unlimited number of
+trailing characters.</li>
+<li>You
+also have the ability use the wildcards interchangeably and more than once in the same search
+string, for example:<br>
+<font color=blue>sear*gl?r*</font><br>
+This could possibly find the word searchinglores :-)<br>
+You can also determine whether to limit to 50 the number of words found by the wildcard
+character search or allow all instances of the word stem in the index you are searching. In the
+avs_parameter block of your bots, set the unlimited_wild_words flag to 1 to avoid the 
+50 word limit.</li>
+<li>Note that the "unlimited wild word searching" has limits: 
+The normal behavior of the wild card search expansion is that each wild-carded term
+will match a maximum of 50 words. If there are more than 50 words that match, the 50
+most frequent words in the index will be used. THEREFORE BEYOND 50 POSSIBLE WILDCARD-COMBINATIONS
+YOU WONT GET ALL POSSIBLE WILDCARD MATCHES</li>
+
+</ul>
+
+Altavista provides support for Boolean searches, including AND, OR,
+NOT and NEAR (proximity) searches. This -as you know- allows for phrase searching and proximity
+searching to be performed on indexed documents.
+<br><br>
+Note that you can use the WITHIN ## (where ## is the number of words)
+command to control the number of words apart the words in your query string can be. For
+example, if you want to find the word Mary within 5 words of lamb, use the Boolean query
+string:<br>
+"fravia WITHIN 5 searchlores"
+This query will bring a result for fravia and searchlores when they are not more than 
+5 words apart
+instead of the default of 10 words apart.<br>
+Thus using NEAR in your search is the same as using
+WITHIN 10.
+<br><br>
+<b>How the Public AltaVista Search Site Sets the Virtual Memory Attributes</b><br>
+The AltaVista Search site on the web has the following setting for its 
+<SPAN STYLE="color: black; background: yellow">virtual 
+memory attributes</span>:
+<br>
+vm-mapentries = 1000<br>
+vm-maxvas = 1337438953472<br>
+ubc-maxpercent = 70<br>
+<br>
+The following are <SPAN STYLE="color: black; background: yellow">settings for processes</span>:<br>
+max-per-proc-address-space = 137438953472<br>
+max-per-proc-data-size = 17179869184<br>
+per-proc-address-space = 137438953472<br>
+per-proc-data-size = 17179869184<br>
+max-proc-per-user = 256<br>
+max-threads-per-user = 2048<br><br>
+Typically these machines are larger than average: 8-processor, 6-8 GB.<br>
+<br>
+Note that there are limits to the "Ranking word maximum frequency":
+ the <SPAN STYLE="color: black; background: yellow">ignore_thresh</span> parameter is expressed in one hundredths of a percent, for example,
+1000 = 10% Any word that occurs in the index more frequently than this percentage
+<u>is not counted</u> for ranking purposes (but the word is still counted for Boolean ranking purposes).
+<br>
+This is intended to be a performance optimization: if this value would be set as 
+smaller than the default
+(1000), ranked searches would run faster but the ranking would be less precise. 
+If the value would be set
+higher than the default, the ranked search would be  slower, but the ranking would be more precise.
+The range for this parameter is 1- 1000.
+
+<br><br>
+<a name="avqe"></a>
+   
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font size=+3>AV querystrings</font></center></td></tr></table><br>
+<br><i>shoot an altavista query and then look at the resulting URL you asked for</i></center>
+<ul><li>
+pg=aq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page is query (Altavista main search page)
+</li><li>
+what=web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not Usenet, duh
+</li><li>
+text=yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no graphic frills, thanks
+</li><li>
+stype=stext&nbsp;&nbsp;&nbsp;&nbsp;search type = s-text
+</li><li>
+kl=en&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language is english
+</li><li>
+sc=on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;site compression is on
+</li><li>
+q=AltaVista&nbsp;&nbsp;&nbsp;query is AltaVista
+</li><li>
+stq=20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start query at 20 (see results #21 to 29)
+</li></ul>
+<br>
+This is only an appetizer :-) Serious seekers may enjoy having a look at a special classroom:
+<br><font color=blue>[</font><a href="c_fourth.htm">c_fourth.htm</a><font color=blue>]</font>: 
+<i>Spelunking altavista's acronyms</i> by <u>Humphrey P.</u>, <u>Gregor Samsa</u> & <u>Iefaf</u>, June 2000, part of the 
+<font color=blue>[</font><a href="classroo.htm">classroo.htm</a><font color=blue>]</font> 
+section: A fundamental 'search engines reversing' classroom.
+
+
+<br><br>
+<a name="formiz"></a>
+   
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font size=+3>Altavista forms</font></center></td></tr></table><br>
+</center>
+<!-- Begin AltaVista Search form -->
+
+<font size=+2><b><a href="http://www.altavista.com/web/text?">ALTAVISTA ADVANCED SEARCH</a></font>
+<br>Very quick! <u>Text-only</u> version, of course!<br>
+
+<form action="http://www.altavista.com/cgi-bin/query" name=mfrm><input type=hidden name=hl value=on>
+<b>Boolean query:</b><input type=text name=q size=50 maxlength=800>&nbsp;<INPUT TYPE=submit name=search VALUE="Search"><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Sort by:</b><input type=text name=r size=50 maxlength=800><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Language:</b><SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language <OPTION VALUE=en>English<OPTION VALUE=zh>Chinese<OPTION VALUE=cs>Czech<OPTION VALUE=da>Danish<OPTION VALUE=nl>Dutch<OPTION VALUE=et>Estonian<OPTION VALUE=fi>Finnish<OPTION VALUE=fr>French<OPTION VALUE=de>German<OPTION VALUE=el>Greek<OPTION VALUE=he>Hebrew<OPTION VALUE=hu>Hungarian<OPTION VALUE=is>Icelandic<OPTION VALUE=it>Italian<OPTION VALUE=ja>Japanese<OPTION VALUE=ko>Korean<OPTION VALUE=lv>Latvian<OPTION VALUE=lt>Lithuanian<OPTION VALUE=no>Norwegian<OPTION VALUE=pl>Polish<OPTION VALUE=pt>Portuguese<OPTION VALUE=ro>Romanian<OPTION VALUE=ru>Russian<OPTION VALUE=es>Spanish<OPTION VALUE=sv>Swedish</SELECT>
+<INPUT TYPE=hidden NAME=pg VALUE=aq><INPUT TYPE=hidden NAME=enc VALUE="iso88591"><INPUT TYPE=hidden NAME=text VALUE=yes>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=checkbox name=sc value=on>
+<b>Show one result per Web site</b>
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>From:</b><input type=text name=d0 size=9 maxlength=32 value="">
+<b> &nbsp; &nbsp; To:</b>
+<input type=text name=d1 size=9 maxlength=32 value="">
+&nbsp; <b>(e.g. 31/12/99)</b></form>
+
+
+<p><a href="altavi1.htm#Altavis">Simple search</a> - 
+
+<a href="http://www.altavista.com/cgi-bin/query?pg=aq&what=web">Graphic Version</a>
+
+
+<hr>
+
+<a name="Altavis"></a>
+<font size=+2><b>
+<A HREF="http://www.altavista.com/cgi-bin/query?pg=aq&what=web&enc=iso88591&text=yes">ALTAVISTA SIMPLE SEARCH</a></b></fonT>
+<br>Very quick! <u>Text-only</u> version, of course!<br>
+<font size=+2>Simple search:</font> no boolean! defaults to OR, use <a href="altavi1.htm#aatf">advanced</a> instead!<br>
+</center><br>
+<FORM name=mfrm method=GET action="http://www.altavista.com/cgi-bin/query">
+<INPUT TYPE=hidden NAME=pg VALUE=q>
+<INPUT TYPE=hidden NAME=text VALUE=yes>
+<font face=arial size=-1><B>Ask AltaVista a question.</B>&nbsp;&nbsp;Or enter a few words in
+<SELECT NAME=kl><OPTION VALUE=XX SELECTED>any language 
+<OPTION VALUE=zh>Chinese
+<OPTION VALUE=cs>Czech
+<OPTION VALUE=da>Danish
+<OPTION VALUE=nl>Dutch
+<OPTION VALUE=en>English
+<OPTION VALUE=et>Estonian
+<OPTION VALUE=fi>Finnish
+<OPTION VALUE=fr>French
+<OPTION VALUE=de>German
+<OPTION VALUE=el>Greek
+<OPTION VALUE=he>Hebrew
+<OPTION VALUE=hu>Hungarian
+<OPTION VALUE=is>Icelandic
+<OPTION VALUE=it>Italian
+<OPTION VALUE=ja>Japanese
+<OPTION VALUE=ko>Korean
+<OPTION VALUE=lv>Latvian
+<OPTION VALUE=lt>Lithuanian
+<OPTION VALUE=no>Norwegian
+<OPTION VALUE=pl>Polish
+<OPTION VALUE=pt>Portuguese
+<OPTION VALUE=ro>Romanian
+<OPTION VALUE=ru>Russian
+<OPTION VALUE=es>Spanish
+<OPTION VALUE=sv>Swedish
+</SELECT></font><br><INPUT NAME=q size=50 maxlength=800 VALUE="">
+<br><INPUT TYPE=radio NAME=act VALUE=search CHECKED>search <INPUT TYPE=radio NAME=act VALUE=refine>refine <INPUT TYPE=submit VALUE=Submit><br>
+ <P><font face=arial size=-1>Search - <A HREF="http://www.altavista.com/web/text?">Advanced</a> - <A HREF="http://www.altavista.com/cgi-bin/query?pg=&what=news&text=yes">Usenet</a></font><BR></FORM>
+<br>
+</font>
+<!-- checking intralinks -->
+<!-- End AltaVista Search FORM (c)fravia+ -->
+
+<hr>
+<center><i>Still quite in fieri, I'm afraid...</i></center>
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="details.htm"><IMG
+SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

@@ -1,0 +1,398 @@
+<HTML>
+<HEAD>
+<TITLE>phost-re.htm: Prohosting Banners Revisited</TITLE>
+</HEAD>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010 VLINK=#405040>
+
+<P><A NAME="anchortop"></A></P>
+<center>
+<a href="remobann.htm"><IMG SRC="images/bilivasi.jpg" alt="remobann.gif" 
+ALIGN=BOTTOM WIDTH=353 HEIGHT=124 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>Courtesy of 
+fravia's <a href="http://www.searchlores.org">searchlores</a><br>
+<hr>
+<font size=+4><i>Prohosting Banners Revisited</i>
+<br>by Alex<br>June 2000 </fonT>
+<bR><hr width=44%>
+<i>Fundamental & advanced anti-advertisement essay. Must read for 
+ advertisement nukers. A wealth of hints. Some of the code snippet that Alex 
+includes can be easily developed 
+into adhoc anti-advertisement (or else&nbsp;:-) tools...<br>Notice also that the 
+prohosting clowns seem to actively monitor this site... let's see if they 
+will give up in despair (as I hope) 
+or try 
+to impose even more advertisement crap on their viewers... Note also that Alex goes to 
+great lengths to show you EXACTLY WHAT for an Inferno of dirty banners,  
+miserable sponsors and 
+ugly advertisement these dungs are preparing for all zombies on the web... 
+if we don't throttle them first.<br>Indeed anyone 
+reading this essay will - I hope - feel the necessity to enter  
+battle against these minions of the 
+dark commercial realms: being possibly illegal to hang such scum to some lamppost as 
+deserved, 
+let's see 
+what we can do to ruin them: through political pressure, through our code, or - also -  
+just spreading  our 
+knowledge and lore to those that don't know nutting of such  
+dirty tricks and concealed commercial needles...</i>
+</center>
+
+
+
+<hr>
+<center><h2>Prohosting Banners Revisited<p>
+A More Sophisticated Banner Scheme<br>Defeated by Combined SSI & CGI</h2>
+<hr width=50%></center>
+<h4>Introduction</h4>
+<p align=justify>
+Recently, I wrote a brief essay describing the defeat of a free web-space provider's advertising banner scheme 
+by means of server-side includes. Sad to relate, the admins at <a href="http://free.prohosting.com">
+Prohosting</a> have not been idle, and the use of ssi is no longer enough to eliminate 
+the banners. Readers unfamiliar with server-side includes should see my previous 
+<a href="phostban.htm">essay</a> for some basic introductory material. This essay describes the 
+'new improved' advertising method, and the first part of its defeat.
+<h4>The Heads of the Hydra</h4>
+<p align=justify>
+As was described in my previous essay, the use of ssi in the accessed file prevented the insertion 
+of the following banner code:<font size=-1 face=courier>
+
+&lt;//--&gt;&lt;//"--&gt;&lt;center&gt;&lt;a href=/redirect?http://www.prohosting.com&gt;<br>
+&lt;img src="/loadimage?/banner3.gif" alt=Prohosting.com border=0&gt;&lt;/a&gt;&lt;/center&gt;
+</font>
+<p align=justify>
+Not only was this quite easily defeated, but the code was reasonably small. This is 
+no longer the case; advertising banner code is now successfully inserted into an shtml document, 
+and it has increased considerably in size and unpleasantness. Plain html files still have the old 
+code inserted into them; the new scheme, which inserts more banners, appears to be targeted at 
+shtml files. The new code attempts three distinct 'assaults', of which only the last can 
+be defeated by turning off Java-Script:
+<p>
+<a name='part_1'><font color=red>1. valueclick banner (embedded in the page):</font><br>
+<font size=-1 face=courier>
+&lt;//--&gt;&lt;//"--&gt;&lt;table border=0 align=center&gt;<br>
+&lt;tr&gt;&lt;td&gt;<br>
+&lt;!-- VC active --&gt;<br>
+&lt;SCRIPT LANGUAGE="Java-Script"&gt;<br>
+&lt;!--<br>
+// ValueParameters<br>
+ValueHost = "hs0150918";<br>
+ValueID = "0";<br>
+ValueLoaded = false;<br>
+ValueVersion = "1.0";<br>
+//--&gt;<br>
+&lt;/SCRIPT&gt;<br>
+&lt;SCRIPT LANGUAGE="Java-Script" SRC="/loadimage?http://oz.valueclick.com/jsmaster"&gt;&lt;/SCRIPT&gt;<br>
+&lt;SCRIPT LANGUAGE="Java-Script"&gt;<br>
+&lt;!--<br>
+if (ValueLoaded) ValueShowAd();<br>
+//--&gt;<br>
+&lt;/SCRIPT&gt;<br> 
+&lt;NOSCRIPT&gt;<br>
+&lt;A HREF="/redirect?http://kansas.valueclick.com/redirect?host=hs0150918&b=0&v=0" TARGET="_top"&gt;&lt;IMG<br>
+BORDER="0" WIDTH="468" HEIGHT="60" ALT="$<br>
+/loadimage?http://kansas.valueclick.com/cycle?host=hs0150918&b=0&noscript=1"&gt;&lt;/A&gt;<br>
+&lt;/NOSCRIPT&gt;<br>
+&lt;!-- vc active --&gt;<br>
+&lt;/td&gt;&lt;/tr&gt;<br>
+</font>
+<p>
+<a name='part_2'><font color=red>2. prohosting imagemap (embedded in the page):</font><br>
+<font size=-1 face=courier>
+&lt;tr&gt;&lt;td&gt;<br>
+&lt;A HREF="/redirect?/banner.map" TARGET="_new"&gt;&lt;IMG ISMAP SRC="/loadimage?/banner.gif" BORDER=0&gt;&lt;/A&gt;<br>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<br>
+</font>
+<p>
+<a name='part_3'><font color=red>3. prohosting banner (in a popup window):</font><br>
+<font size=-1 face=courier>
+&lt;//--&gt;&lt;//"--&gt;&lt;SCRIPT LANGAUGE="Java-Script"&gt;<br>
+&lt;!--Ad Banner<br>
+function popupPage() {<br>
+ var windowopts = "location=no,scrollbars=no,menubars=no,toolbars=no,resizable=yes,left= 50,\<br>
+ top=50,width=490,height=130";<br>
+
+ popup0 = open('/banner.html',"MenuPopup",windowopts);<br>
+ popup0.focus();<br>
+}<br>
+
+popupPage();<br>
+
+//  Ad Banner--&gt;<br>
+&lt;/script&gt;<br>
+</font>
+
+<p align=justify>
+This code is injected immediately after the &lt;body&gt; tag (ie. the banners appear at 
+the top of the page) <i>even if the file containing the &lt;body&gt; tag is #include-d in the 
+accessed file</i> - as before, the files are not modified on disk, the banner-code insertion is done 
+'on the fly' when the shtml page is accessed. 
+<p align=justify>
+A quick glance at the code reveals the following:
+<blockquote>
+<p align=justify>
+<a href='phost-re.htm#part_1'>1.</a> If Java-Script is enabled in the victim's 
+browser, it tries (the statement <i>if (ValueLoaded)</i> suggests that possible failure has been 
+anticipated, although there is no fallback) to get an ad-display script from a host belonging to <i>valueclick.com</i> (a 
+notorious source of banners & well known denizen of JunkBuster blockfiles), and then execute the downloaded function 
+<i>ValueShowAd()</i> - not only do you have to download the inserted code, but your browser 
+must open a connection to another server altogether, and download more banner display code from it, 
+which in turn downloads a hideous graphic.
+<p align=justify>
+Here is the code contained in <i>http://oz.valueclick.com/jsmaster</i>:<br><br>
+<font size=-1 face=courier>
+// Copyright 1999-2000 ValueClick Inc. All rights reserved.<br>
+<br>
+ValueLoaded = true;<br>
+ValueFullVersion = ValueVersion + ".9";<br>
+<br>
+function ValueShowAd() {<br>
+  <br>
+  ValueOptions = '&v=' + ValueFullVersion;<br>
+  if (self.ValueCategory) ValueOptions += '&c=' + self.ValueCategory;<br>
+  if (self.ValueBorder)   ValueOptions += '&border=1';<br>
+  if (! self.ValueNoText) ValueOptions += '&text=1';<br>
+  if (self.ValueTargetCurrent) ValueOptions += '&target=self';<br>
+<br>
+  ValueRandom   = Math.round(Math.random()*1000) + 1;<br>
+  ValueHostInfo = "host=" + ValueHost + "&b=" + ValueID + "." + ValueRandom;<br>
+<br>
+  if (self.ValueServer == null) ValueServer = "oz";<br>
+<br>
+  ValueFullServer   = "http://" + ValueServer + ".valueclick.com/";<br>
+<br>
+  if ((self.ValueWidth == null) || (self.ValueHeight == null)) {<br>
+      ValueWidth  = 468;<br>
+      ValueHeight = 60;<br>
+  }<br>
+<br>
+  ValueSize = '&size=' + ValueWidth + 'x' + ValueHeight;<br>
+<br>
+  ValueBanner   = ValueFullServer + 'cycle?' + ValueHostInfo + ValueOptions + ValueSize;<br>
+  ValueRedirect = ValueFullServer + 'redirect?' + ValueHostInfo + ValueSize;<br>
+<br>
+  ValueDimensions();<br>
+<br>
+  if (navigator.userAgent.indexOf("MSIE") &gt;= 0) {<br>
+    // don't try to set the bgcolor etc in the IFRAME for MSIE 3 <br>
+	if (navigator.appVersion.indexOf('MSIE 3') &lt; 0) {<br>
+	  if (self.ValueBgColor)    ValueBanner += '&bgcolor='    + escape(self.ValueBgColor);<br>
+      if (self.ValueLinkColor)  ValueBanner += '&linkcolor='  + escape(self.ValueLinkColor);<br>
+      if (self.ValueAlinkColor) ValueBanner += '&alinkcolor=' + escape(self.ValueAlinkColor);<br>
+      if (self.ValueVlinkColor) ValueBanner += '&vlinkcolor=' + escape(self.ValueVlinkColor);<br>
+    }<br>
+<br>
+    document.write('&lt;IFRAME ID="VC" NAME="VC" WIDTH="' + IWidth + '" HEIGHT="' + IHeight + '" '); <br>
+    document.write('SCROLLING="no" FRAMEBORDER="0" FRAMESPACING="0" MARGINHEIGHT="0" ');<br>
+    document.write('MARGINWIDTH="0" BORDER="0" HSPACE="0" VSPACE="0" ');<br>
+    document.write('ALIGN="center" SRC="/loadimage?' + ValueBanner + '&t=html"&gt;');<br>
+    document.write('&lt;/IFRAME&gt;');<br>
+  } else {<br>
+    // should be all Netscapes that are reading this file<br>
+	if (self.ValueVersion &gt;= 1) {<br>
+      document.write('&lt;TABLE BORDER=0&gt;&lt;TR&gt;&lt;TD&gt;');<br>
+	  document.write('&lt;ILAYER ID="VC" VISIBILITY="hide" BGCOLOR="" WIDTH="' + IWidth);<br>
+      document.write('" HEIGHT="' + IHeight + '"&gt;&lt;/ILAYER&gt;');<br>
+	  document.write('&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;');<br>
+	} else {<br>
+	  document.write('&lt;SCRIPT SRC="/loadimage?' + ValueBanner + '&t=js"');<br>
+	  document.write(' LANGUAGE="Java-Script"&gt;&lt;/SCR' + 'IPT&gt;');<br>
+    }<br>
+  }<br>
+}<br>
+<br>
+function ValueDimensions() {<br>
+  if (self.ValueNoText) {<br>
+    if (self.ValueBorder) {<br>
+      IWidth  = ValueWidth + 4; <br> 
+      IHeight = ValueHeight + 4;<br>
+    } else {<br>
+      IWidth  = ValueWidth; <br> 
+      IHeight = ValueHeight;<br>
+    }      <br> 
+  } else {<br>
+    if (self.ValueBorder) {<br>
+      IWidth  = ValueWidth + 4;<br>
+      IHeight = ValueHeight + 24;<br>
+    } else {<br>
+      IWidth  = ValueWidth;<br>
+      IHeight = ValueHeight + 24;<br>
+    }<br>       
+  }<br>
+}<br>
+<br>
+</font>
+<p align=justify>
+As the &lt;NOSCRIPT&gt; block indicates, they have made sure that you don't miss out entirely even 
+with Java-Script turned off - you will still have the pleasure of downloading a 468x60 pixel image 
+(probably a pulsating gif) from the delightful <i>valueclick.com</i>.
+<p align=justify>
+<a href='phost-re.htm#part_2'>2.</a> Java-Script or no, Prohosting then embeds a rather nasty 
+imagemap in the page, immediately below <i>valueclick</i>'s monstrosity.
+<p align=justify>
+<a href='phost-re.htm#part_3'>3.</a> For those foolish enough to have Java-Script enabled, there is yet more... 
+The last code-block creates a pop-up window (that ensures that it creeps to the top of the window 
+z-order with the <i>window.focus()</i> method) displaying Prohosting's own <i>banner.html</i>. 
+<p align=justify>
+Incredibly, not satisfied with the <i>valueclick</i> banner & their own embedded at 
+the top of <i>every page</i>, Prohosting want to have a popup advertisement as well; a remarkable 
+change from their previous 'no banner' policy - verily, none hath the zeal of the recent convert.
+<p align=justify>
+To see these horrors, follow this <a href='https://searchlores.nickifaulk.com/redirect?http://lightning.prohosting.com/~amphi/shtml/dummy.html'>
+link</a> for the old html version, and <a href='https://searchlores.nickifaulk.com/redirect?http://lightning.prohosting.com/~amphi/shtml/dummy.html'>
+this</a> for the new shtml version (the two files are identical apart from the extension); to get 
+the full benefit Java-Script should be enabled. It is not clear whether the fact that shtml pages get 
+more banners is a 'punishment' for using ssi and thus putting more load on their server, or just a 
+sign that they are still working on their advertisement scheme. 
+<p align=justify>
+The last code block, that creates the popup banner window, appeared again <i>twice</i> after the 
+closing &lt;/html&gt; tag in the test file, indicating that their scheme perhaps still does not 
+deal very well with ssi; or, alternatively, that they have little confidence in their code, and 
+hope by inserting it multiple times to ensure that it will be executed. The professionalism of 
+Prohosting's 'programmers' is reassuringly indicated by the following directive:
+(in <a href='phost-re.htm#part_3'>part 3</a> above):
+<p align=justify><font size=-1 face=courier>
+&lt;SCRIPT <u>LANGAUGE</u>="Java-Script"&gt;
+</font><p align=justify>
+although, sadly, this typo is not enough to prevent Netscape from dutifully executing the code if 
+given the chance.
+<p align=justify>
+And <i>still</i> this is not all - a <a href='https://searchlores.nickifaulk.com/redirect?http://lightning.prohosting.com/~amphi/dl/hdasm.gz'>
+link</a> to a binary file (that in the normal way would make the browser 
+pop up a <i>File Save</i> dialog) now leads to a hideous page stuffed with banners and pleas to 
+visit 'our sponsors' (I know not who or whose they are; certainly not mine, although that is what 
+seems to be implied). On this page Prohosting have generously supplied a link, accompanied by a 
+futile little icon reminiscent of a once 'popular' 24-bit OS, enabling you to download the file. 
+However, if you block cookies (with something like JunkBuster, for example), you will not be able 
+to download the file, you will return to that same page again and again - you <i>must</i> allow 
+cookies to be set in order to download the file. Here is a cookie set after accessing the 
+'download' page:
+<br><br>
+<font size=-1 face=courier>
+.valueclick.com	TRUE	/	FALSE	1749719186	ksa	0OUyRitFVA3cAANJ5BO431b6b7a1
+</font>
+<p align=justify>
+It is evident that Prohosting have 'sold their soul' (and mine) to <i>valueclick</i>, and made it 
+impossible for me to offer anything for download on my site (unless this download page can be 
+circumvented) - I do not feel to act as <i>valueclick</i>'s agent by causing their data to be 
+written to the harddisks of my visitors.
+</blockquote>
+
+<h4>Solution</h4> 
+<p align=justify> 
+Happily, after this rather dismal exposition, it seems that it is still possible to defeat this 
+new, bloated and multi-partite advertisement scheme, or at least some of it.
+
+<p>
+There are several goals:
+<p align=justify>
+<ul>
+<li>To have ad & popup free pages while maintaining some ssi-based modularity<p>
+<li>To be able to display html output from cgi scripts without banners or popups<p>
+<li>To enable binary downloads without redirection to the 'download page' and its attendant cookie 
+debacle
+</ul>
+
+<p align=justify>
+The first case can be met with the addition of some complexity to the web pages (comments in green).
+The shtml page that does the job is as follows:
+
+<br><br>
+<font size=-1 face=courier>
+&lt;!--#exec cgi='../cgi-bin/disp_page.cgi'--&gt;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green>Execute page.cgi</font><br>
+&lt;!--#include file='foot.shtml'--&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green>Include foot.shtml - it's an shtml file</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green>because it contains an ssi directive to</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green>display the file modification date stamp</font><br>
+</font>
+<p align=justify>
+Every link that points to a 'normal' page (ie. not a cgi script or binary for download) points to this 
+file, <i>page.shtml</i>. So how does <i>page.html</i> produce different pages, depending on which 
+link is clicked? All link urls are of the form <i>page.shtml?../shtml/some_page.html</i>; the 
+text following the '?' is a variable known as a <i>query string</i> which is passed to 
+<i>page.shtml</i> as an environment variable, in this case the name of another html file. The file 
+<i>page.html</i> is itself in the <i>/shtml</i> directory, so it may be wondered why the path 
+<i>../shtml/</i> is prepended to <i>some_page.html</i> - it appears to be redundant, but in fact it is not.
+<p align=justify>
+Turning to the cgi script executed by <i>page.shtml</i>, <i>disp_page.cgi</i>:<br><br>
+<font size=-1 face=courier>
+#!/usr/bin/perl
+<br>print "Content-type:text/html", "\n\n";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># header data specifying the output MIME type</font><br>
+<br>
+<br>$main_file = $ENV{'QUERY_STRING'};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># the query string passed to page.shtml in the url</font>
+<br>
+<br>$html_document = '../shtml/head.html';&nbsp;&nbsp;<font color=green># the header html file, containing the all important </font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># &lt;body&gt; tag and global background and link colour info</font>
+<br>if (open (HTML, "<" . $html_document)) {
+<br>	while (&lt;HTML>) {
+<br>		print;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># opens the file head.html and prints it to</font>
+<br>	}	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># the output stream</font>
+<br>	close (HTML);
+<br>}
+<br>
+<br>
+<br>if (open (HTML, "<" . $main_file)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># open the file passed in to page.shtml</font>
+<br>	while (&lt;HTML>) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># in the url and print it to the output stream</font>
+<br>		print;
+<br>	}
+<br>	close (HTML);
+<br>}
+<br>
+<br>exit (0);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=green># exit without error ;-)</font>
+</font>
+
+<p align=justify>
+Now the purpose of the seemingly redundant path info in the query string is clear, given that 
+the cgi script is in <i>/cgi-bin</i> and the file to be 'printed' is in <i>/shtml</i>. A query 
+string passed to an shtml file is automatically passed to a cgi script #exec-ed by that shtml file 
+(the cgi script 'inherits' the environment of the calling shtml file); for example, if the url is 
+<i>page.shtml?../shtml/some_page.html,</i> the variable <i>$ENV{'QUERY_STRING'}</i> 
+in <i>disp_page.cgi</i> will contain <i>../shtml/some_page.html</i>. After the two files (the 
+header and the main body of the page) are printed, the cgi script exits, and control returns, 
+as it were, to the caller, <i>page.shtml</i>, and the file <i>foot.shtml</i> is #include-d, 
+completing the page.
+<p align=justify>
+It seems that these multiple levels of indirection (the &lt;body&gt; tag being in an html file 
+printed by a cgi script #exec-ed by an ssi directive) is enough to confuse the banner insertion 
+scheme, as none of the three blocks of code are inserted into the resulting file.
+<p align=justify>
+A problem still remains, however - the Prohosting popup banner Java-Script code is still inserted 
+(sometimes twice) after the closing &lt;/html&gt; tag. Turning off 
+Java-Script would effectively disable the banner, but for the sake of completeness it is nice to 
+kill it even when the browser has Java-Script enabled. This is simply achieved by the addition of a 
+&lt;noembed&gt; tag after the closing &lt;/html&gt;. The code is still inserted but the browser 
+ignores everything after the &lt;noembed&gt; tag, and the popup creation code is not executed.
+<h4>Conclusion</h4>
+<p align=justify>
+The first goal has been met - banner free shtml pages; the remaining two, the 
+'peaceful liberation' of cgi scripts producing html output, and binary downloads,  are a work 
+in progress.
+<p align=justify>
+I suspect that Prohosting may be using an 'off-the-shelf' banner scheme (server module, or whatever 
+it is), as I have a seen a download page that behaves in an identical fashion on a site 
+hosted by tripod.com; if so, it is possible that this scheme is in use by several 'free' hosts, 
+and can be defeated in the same way if those hosts permit the use of ssi & user cgi scripts.
+<p><center><hr width=50%></center>
+
+<p><font size=+2 color=blue><center>
+caiaphasp(at)yahoo(point)com
+</center></font><hr>
+</font>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="remobann.htm"><img SRC="images/antiadv.gif" ALT="antiadv" BORDER=0 
+height=43 width=114 align=BOTTOM></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+<bR>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<br><!-- how to search the web, by fravia+,
+signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>
+

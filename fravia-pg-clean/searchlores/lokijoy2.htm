@@ -1,0 +1,532 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title></title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+2>Database accessing : Reversing Simple Java Protections 
+<br>The Joylock Case (version 4.0)</font></center></td></tr></table>
+<br>Published at <a href="http://www.searchlores.org">www.searchlores.org</a> in April 2002
+<hr width=44%>
+<i>Fundamental lore for seekers, that should not and never be stopped by <b>any</b> 
+webgate
+</i>
+<hr>
+</center>
+<br>
+<br>
+<b>Context</b> :
+<br>
+<br>Joylock is a component of <a href="https://searchlores.nickifaulk.com/the&#32;http://www.coffeecup.com/java/password/sample.html">CoffeeCup Password Wizard</a>, wich is sold for 30$ :
+<p><i>CoffeeCup Password Wizard Version 4.0 is Here... 
+<br>Create unlimited password protected pages with unlimited usernames and passwords with CoffeeCup Password Wizard. You don't even have to know Flash, Java, or HTML ! Customize the look and feel to match your page. 
+<br>You can even point different users to different URLs ! Preview within the program or your favorite browser. It's all that easy ! All this and more make CoffeeCup Password Wizard the easiest way to password protect your pages ! 
+<ul><i>- Create Usernames and Passwords to protect your Web Site with Flash or Java ! 
+<br>- Easily works in multiple framesets 
+<br>- Add and Modify Users quickly and easily 
+<br>- Redirection for Incorrect Logins 
+<br>- Preview as you work 
+<br>- Customize Size and Colors to match your Web Pages 
+<br>- Easy to use - No Java experience needed 
+<br>- Only $30 to Register!</i></ul>
+</i></p>
+How many '!' are required to convince the luser ?..<br>
+<br>Anyway.. this is the new version of the joylock applet, the previous one was described in details <a href="lokijoy1.htm">here</a>.  
+<br>We'll see in this tutorial how to reverse this new version, which is _a bit_ more difficult. 
+<br>You can test and download the .class here : 
+<ul>http://www.coffeecup.com/java/password/sample.html 
+<br>http://www.coffeecup.com/java/password/joylock.class</ul><br>
+<hr width=50%><br>
+<br><b>Tools Used :</b>
+<br>
+<ul><li> A Java Decompiler - <a href="http://kpdus.tripod.com/jad.html">Jad</a> is free and worked perfectly
+<li>A note pad and a sourceviewer - I used <a href="http://www.ultraedit.com">Ultraedit</a> 
+<li>A brain</ul><br><br>
+<hr><br>
+<br>Search the applet tag in the html source. Extract the parameters that are submitted to the applet. 
+<br>This is the value of the 'GENERAL' parameter :
+<br>
+<br><center><font color="blue">1|11|004080|FFFFFF|wslzebajkcnrvogpquftxhidmy vttp://aaa.jnsseejrp.jny/ywxxce.vtyc| |Login Complete.|Enter the Username and Password.| | |</font></center>
+<br>Download the .class, and use Jad to decompile it in readable code. Now read :)
+<br>
+<br>The GENERAL parameter is parsed here : StringTokenizer stringtokenizer = new StringTokenizer(getParameter("GENERAL"), "|", false);
+<br>StringTokenizer just cut the value in slides, using "|" as delimitation, and store it in a list of 'browsable' tokens (slides)...
+<br>
+<pre><font size=-1>
+        numUsers = Integer.parseInt(stringtokenizer.nextToken());
+        if(Integer.parseInt(stringtokenizer.nextToken()) == 11)
+            registered = true;
+        else
+        if(getDocumentBase().toString().startsWith("file"))
+            registered = true;
+        if(registered)
+        {
+            bkColor = new Color(Integer.parseInt(stringtokenizer.nextToken(), 16));
+            textColor = new Color(Integer.parseInt(stringtokenizer.nextToken(), 16));
+            linkURL = stringtokenizer.nextToken();
+            if(&#33;linkURL.equalsIgnoreCase(" "))
+                decript(linkURL, 0, 0, 0, 0, 0, false);
+            linkFrame = stringtokenizer.nextToken();
+            loginText = stringtokenizer.nextToken();
+            preLoginMessage = stringtokenizer.nextToken();
+            reLinkURL = stringtokenizer.nextToken();
+            reLinkFrame = stringtokenizer.nextToken();
+        }</font></pre>
+
+This snippet helps us understanding what variable stands for. And what are the parameters readable from the source :
+<br>
+<br><font color="blue">PARAMETER</font>  : DESCRIPTION
+<br><font color="blue">1</font>  : Number of users
+<br><font color="blue">11</font> : Key to have for a registered version of the applet (*grin*)
+<br><font color="blue">004080</font> :  Background color
+<br><font color="blue">FFFFFF</font> : Text color
+<br><font color="blue">wslzebajkcnrvogpquftxhidmy vttp://aaa.jnsseejrp.jny/ywxxce.vtyc</font> = linkURL : Ciphered url (the 26 firsts letters are probably the cipher). Our target
+<br><font color="blue">unused here</font> : linkFrame 
+<br><font color="blue">Login Complet</font>e : Login message
+<br><font color="blue">Enter the Username and Password</font> : Pre-login Message
+<br><font color="blue">unused here</font> : reLinkURL
+<br><font color="blue">unused here</font> : reLinkFrame
+<br>
+<br>
+<br>Using the same approach for the following value of parameter '0' :
+<br>
+<br><center><font color="blue">6|4|36|0|cftzmapuxnrsjibgwykqvleodh lfegvwcwlc zccg://qqq.axbbwwahg.axe/enyyvw.zcev</font></center>
+<br>We read :
+<br>
+<br><font color="blue">PARAMETER</font>  : DESCRIPTION
+<br><font color="blue">0</FONT> : User's number
+<br><font color="blue">6</FONT> : Value of j
+<br><font color="blue">4</FONT> : Value of k
+<br><font color="blue">36</FONT>: Value of l
+<br><font color="blue">0</FONT> : Value of i1
+<br><font color="blue">cftzmapuxnrsjibgwykqvleodh lfegvwcwlc zccg://qqq.axbbwwahg.axe/enyyvw.zcev</FONT> : String s
+<br>
+<br><hr width=50%>
+<br>Next step is to trace the code as it'd run in front of us (a live approach), using our head as a live debugger to guess/read what will result in the decript() function if we use these parameters. 
+<br>Following the linkURL variable, our target, we note that it is called in the decript() function. Let's trace through it :
+<i>decript(String s, int i, int j, int k, int l, int i1, boolean flag)</i>
+<pre><font size=-1>
+decript(linkURL, 0, 0, 0, 0, 0, false);				<font color="red">&lt;--- s = wslzebajkcnrvogpquftxhidmy vttp://aaa.jnsseejrp.jny/ywxxce.vtyc,</font>
+    {						               <font color="red">i=0,j=0,k=0,l=0,i1=0,flag=FALSE</font>
+        String s1 = "";                                                             
+        String s2 = s.substring(0, 26);               		<font color="red">&lt;--- s2 = wslzebajkcnrvogpquftxhidmy </font>
+        String s3 = s.substring(26, s.length());			<font color="red">&lt;--- s3 = vttp://aaa.jnsseejrp.jny/ywxxce.vtyc</font>
+        String as[] = new String[52];                  				
+        for(int j1 = 0; j1 &lt; 52; j1++)
+            as[j1] = "";					<font color="red">&lt;--- clear as[]</font>
+
+        as[0] = as[0] + s2.charAt(alphabet.indexOf("a"));		<font color="red">&lt;--- Use s2 to get the value of as[0] : as[0] = w</font>
+        as[1] = as[1] + s2.charAt(alphabet.indexOf("b"));		<font color="red">&lt;--- as[1] = l</font>
+        as[2] = as[2] + s2.charAt(alphabet.indexOf("c"));		<font color="red">&lt;--- as[2] = z</font>
+        as[3] = as[3] + s2.charAt(alphabet.indexOf("d"));		<font color="red">&lt;--- as[3] = e</font>
+        as[4] = as[4] + s2.charAt(alphabet.indexOf("e"));				
+        as[5] = as[5] + s2.charAt(alphabet.indexOf("f"));		<font color="red">(...)</font>
+        as[6] = as[6] + s2.charAt(alphabet.indexOf("g"));
+        as[7] = as[7] + s2.charAt(alphabet.indexOf("h"));
+        as[8] = as[8] + s2.charAt(alphabet.indexOf("i"));
+        as[9] = as[9] + s2.charAt(alphabet.indexOf("j"));
+        as[10] = as[10] + s2.charAt(alphabet.indexOf("k"));
+        as[11] = as[11] + s2.charAt(alphabet.indexOf("l"));
+        as[12] = as[12] + s2.charAt(alphabet.indexOf("m"));
+        as[13] = as[13] + s2.charAt(alphabet.indexOf("n"));
+        as[14] = as[14] + s2.charAt(alphabet.indexOf("o"));
+        as[15] = as[15] + s2.charAt(alphabet.indexOf("p"));
+        as[16] = as[16] + s2.charAt(alphabet.indexOf("q"));
+        as[17] = as[17] + s2.charAt(alphabet.indexOf("r"));
+        as[18] = as[18] + s2.charAt(alphabet.indexOf("s"));
+        as[19] = as[19] + s2.charAt(alphabet.indexOf("t"));
+        as[20] = as[20] + s2.charAt(alphabet.indexOf("u"));
+        as[21] = as[21] + s2.charAt(alphabet.indexOf("v"));
+        as[22] = as[22] + s2.charAt(alphabet.indexOf("w"));
+        as[23] = as[23] + s2.charAt(alphabet.indexOf("x"));
+        as[24] = as[24] + s2.charAt(alphabet.indexOf("y"));
+        as[25] = as[25] + s2.charAt(alphabet.indexOf("z"));
+        as[26] = as[26] + s2.charAt(alphabet.indexOf("a"));		<font color="red">&lt;--- as[26] = w</font>
+        as[27] = as[27] + s2.charAt(alphabet.indexOf("b"));		<font color="red">&lt;--- as[27] = l</font>
+        as[28] = as[28] + s2.charAt(alphabet.indexOf("c"));		<font color="red">&lt;--- as[28] = z</font>
+        as[29] = as[29] + s2.charAt(alphabet.indexOf("d"));		<font color="red">&lt;--- as[29] = e</font>
+        as[30] = as[30] + s2.charAt(alphabet.indexOf("e"));		<font color="red">(...)</font>
+        as[31] = as[31] + s2.charAt(alphabet.indexOf("f"));
+        as[32] = as[32] + s2.charAt(alphabet.indexOf("g"));
+        as[33] = as[33] + s2.charAt(alphabet.indexOf("h"));
+        as[34] = as[34] + s2.charAt(alphabet.indexOf("i"));
+        as[35] = as[35] + s2.charAt(alphabet.indexOf("j"));
+        as[36] = as[36] + s2.charAt(alphabet.indexOf("k"));
+        as[37] = as[37] + s2.charAt(alphabet.indexOf("l"));
+        as[38] = as[38] + s2.charAt(alphabet.indexOf("m"));
+        as[39] = as[39] + s2.charAt(alphabet.indexOf("n"));
+        as[40] = as[40] + s2.charAt(alphabet.indexOf("o"));
+        as[41] = as[41] + s2.charAt(alphabet.indexOf("p"));
+        as[42] = as[42] + s2.charAt(alphabet.indexOf("q"));
+        as[43] = as[43] + s2.charAt(alphabet.indexOf("r"));
+        as[44] = as[44] + s2.charAt(alphabet.indexOf("s"));
+        as[45] = as[45] + s2.charAt(alphabet.indexOf("t"));
+        as[46] = as[46] + s2.charAt(alphabet.indexOf("u"));
+        as[47] = as[47] + s2.charAt(alphabet.indexOf("v"));
+        as[48] = as[48] + s2.charAt(alphabet.indexOf("w"));
+        as[49] = as[49] + s2.charAt(alphabet.indexOf("x"));
+        as[50] = as[50] + s2.charAt(alphabet.indexOf("y"));
+        as[51] = as[51] + s2.charAt(alphabet.indexOf("z"));
+        for(int k1 = 26; k1 &lt; 51; k1++)
+            as[k1] = as[k1].toUpperCase();			<font color="red">&lt;--- capitalize : as[26] = W, as[27] = L etc ...</font>
+
+    for(int l1 = 0; l1 &lt; s3.length(); l1++)                           <font color="red">&lt;--- for each character of : "vttp://aaa.jnsseejrp.jny/ywxxce.vtyc" check if :</font>
+            switch(s3.charAt(l1))
+            {
+            case 65: // 'A'					<font color="red">&lt;--- We have no caps in our linkURL, let's go directly to case 97</font>
+                s1 = s1 + as[26];
+                break;
+
+            case 66: // 'B'
+                s1 = s1 + as[27];
+                break;
+
+            case 67: // 'C'
+                s1 = s1 + as[28];
+                break;
+
+            case 68: // 'D'
+                s1 = s1 + as[29];
+                break;
+
+            case 69: // 'E'
+                s1 = s1 + as[30];
+                break;
+
+            case 70: // 'F'
+                s1 = s1 + as[31];
+                break;
+
+            case 71: // 'G'
+                s1 = s1 + as[32];
+                break;
+
+            case 72: // 'H'
+                s1 = s1 + as[33];
+                break;
+
+            case 73: // 'I'
+                s1 = s1 + as[34];
+                break;
+
+            case 74: // 'J'
+                s1 = s1 + as[35];
+                break;
+
+            case 75: // 'K'
+                s1 = s1 + as[36];
+                break;
+
+            case 76: // 'L'
+                s1 = s1 + as[37];
+                break;
+
+            case 77: // 'M'
+                s1 = s1 + as[38];
+                break;
+
+            case 78: // 'N'
+                s1 = s1 + as[39];
+                break;
+
+            case 79: // 'O'
+                s1 = s1 + as[40];
+                break;
+
+            case 80: // 'P'
+                s1 = s1 + as[41];
+                break;
+
+            case 81: // 'Q'
+                s1 = s1 + as[42];
+                break;
+
+            case 82: // 'R'
+                s1 = s1 + as[43];
+                break;
+
+            case 83: // 'S'
+                s1 = s1 + as[44];
+                break;
+
+            case 84: // 'T'
+                s1 = s1 + as[45];
+                break;
+
+            case 85: // 'U'
+                s1 = s1 + as[46];
+                break;
+
+            case 86: // 'V'
+                s1 = s1 + as[47];
+                break;
+
+            case 87: // 'W'
+                s1 = s1 + as[48];
+                break;
+
+            case 88: // 'X'
+                s1 = s1 + as[49];
+                break;
+
+            case 89: // 'Y'
+                s1 = s1 + as[50];
+                break;
+
+            case 90: // 'Z'
+                s1 = s1 + as[51];
+                break;
+
+            case 97: // 'a'					<font color="red">&lt;---  we have some 'a', and as[26] is W ...</font>
+                s1 = s1 + as[0];
+                break;
+
+            case 98: // 'b'
+                s1 = s1 + as[1];
+                break;
+
+            case 99: // 'c'
+                s1 = s1 + as[2];
+                break;
+
+            case 100: // 'd'
+                s1 = s1 + as[3];
+                break;
+
+            case 101: // 'e'
+                s1 = s1 + as[4];
+                break;
+
+            case 102: // 'f'
+                s1 = s1 + as[5];
+                break;
+
+            case 103: // 'g'
+                s1 = s1 + as[6];
+                break;
+
+            case 104: // 'h'
+                s1 = s1 + as[7];
+                break;
+
+            case 105: // 'i'
+                s1 = s1 + as[8];
+                break;
+
+            case 106: // 'j'
+                s1 = s1 + as[9];
+                break;
+
+            case 107: // 'k'
+                s1 = s1 + as[10];
+                break;
+
+            case 108: // 'l'
+                s1 = s1 + as[11];
+                break;
+
+            case 109: // 'm'
+                s1 = s1 + as[12];
+                break;
+
+            case 110: // 'n'
+                s1 = s1 + as[13];
+                break;
+
+            case 111: // 'o'
+                s1 = s1 + as[14];
+                break;
+
+            case 112: // 'p'
+                s1 = s1 + as[15];
+                break;
+
+            case 113: // 'q'
+                s1 = s1 + as[16];
+                break;
+
+            case 114: // 'r'
+                s1 = s1 + as[17];
+                break;
+
+            case 115: // 's'
+                s1 = s1 + as[18];
+                break;
+
+            case 116: // 't'
+                s1 = s1 + as[19];
+                break;
+
+            case 117: // 'u'
+                s1 = s1 + as[20];
+                break;
+
+            case 118: // 'v'					<font color="red">&lt;--- first character of s3 is v. we enter here. s1 (who was void until now) = as[21],</font>
+                s1 = s1 + as[21];				<font color="red">&lt;--- wich is the position 21 in "wslzebajkcnrvogpquftxhidmy". ie : h</font>
+                break;
+
+            case 119: // 'w'
+                s1 = s1 + as[22];
+                break;
+
+            case 120: // 'x'
+                s1 = s1 + as[23];
+                break;
+
+            case 121: // 'y'
+                s1 = s1 + as[24];
+                break;
+
+            case 122: // 'z'
+                s1 = s1 + as[25];
+                break;
+
+            case 91: // '['
+            case 92: // '\\'
+            case 93: // ']'
+            case 94: // '^'
+            case 95: // '_'
+            case 96: // '`'
+            default:
+                s1 = s1 + s3.charAt(l1);
+                break;					<font color="red">&lt;--- We're at the first passage in the loop .. i think it's really clear now. We can imagine what will be the next ones ...</font>
+            }
+    if(flag)						<font color="red">&lt;--- Flag is false, we jump to 'else'</font>
+    {
+            [SNIPPED]
+    } 
+    else
+    {
+    	linkURL = s1;					<font color="red">&lt;--- return from the decript() function, with linkURL = s1 (decyphered)</font>
+    	return;
+    }</font></pre>
+<br>
+<hr width=50%>
+<br>
+<br>By tracing the whole function, we can see that the first 26 characters of the linkURL parameter (s2 cut from s) is the deciphering key, to 'map' under "A..Z" and "a..z"
+<pre>
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   a b c d e f g h i j k l m n o p q r s t u v w x y z 
+| | | | | | | | | | | | | | | | | | | | | | | | | |   | | | | | | | | | | | | | | | | | | | | | | | | | | 
+V V V V V V V V V V V V V V V V V V V V V V V V V V   V V V V V V V V V V V V V V V V V V V V V V V V V V 
+W S L Z E B A J K C N R V O G P Q U F T X H I D M Y   w s l z e b a j k c n r v o g p q u f t x h i d m y</pre> 
+<br>							
+<br>This is our reversed cipher. A table of substitution.
+<br>
+<br>Applied to vttp://aaa.jnsseejrp.jny/ywxxce.vtyc, it gives : http://www.coffeecup.com/middle.html
+<br>wich doesn't work ... not our fault, the demo site is crappy ... i've tried to figure out where was that middle.html page, but in fact it seems that it just hasn't been created. I'd be amused to find it, use the cipher version of the table (just a reverse of the above), and send them a mail : "hey, your demo isn't working, you should use 'vttp://aaa.jnsseejrp.jny/hgmw/ywxxce.vtyc' in the second part of linkURL instead of vttp://aaa.jnsseejrp.jny/ywxxce.vtyc"
+<br><center>*evil grin*</center>
+<br>
+<br>Now that we have deciphered the url (wich is a backdoor in itself, like in the previous version), let's pass to the database of users.
+<br><br>For the parameter '0', i.e. the info of user's n°0, we enter the decript() that way :<br>
+<ul><i>decript(String s, int i, int j, int k, int l, int i1, boolean flag)</i><br>
+decript(cftzmapuxnrsjibgwykqvleodh lfegvwcwlczccg://qqq.axbbwwahg.axe/enyyvw.zcev, 0, 6, 4, 36, 0, false);</ul>
+<br>So, we have a reversed cipher that looks like that :
+<pre>
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   a b c d e f g h i j k l m n o p q r s t u v w x y z 
+| | | | | | | | | | | | | | | | | | | | | | | | | |   | | | | | | | | | | | | | | | | | | | | | | | | | | 
+V V V V V V V V V V V V V V V V V V V V V V V V V V   V V V V V V V V V V V V V V V V V V V V V V V V V V 
+C F T Z M A P U X N R S J I B G W Y K Q V L E O D H   c f t z m a p u x n r s j i b g w y k q v l e o d h</pre> 
+<br>
+<br>The major difference with the previous version of joylock is there. each ciphered parameter has a unique cipher that comes at the beginning of the string...
+<br>The one here gives us s1= sampletesthttp://www.coffeecup.com/middle.html
+<br>
+<br>Then, we enter the part wich was not activated when passing with the GENERAL parameters.
+<br>
+<pre><font size =-1>
+username[i] = s1.substring(0, j);			<font color="red">---&gt; j = 6 --&gt; cut the 6th first characters of s1, and put it in username. Username = sample</font>
+password[i] = s1.substring(j, j + k);			<font color="red">---&gt; k = 4 --&gt; cut the 4th next characters of s1, and put it in password. Password = test</font>
+urls[i] = s1.substring(j + k, j + k + l);       		<font color="red">---&gt; l = 36, lenght of the url --&gt; cut the url, and put it in urls. urls = http://www.coffeecup.com/middle.html</font>
+frames[i] = s1.substring(j + k + l, s1.length()); 	<font color="red">---&gt; unused
+</font></pre>
+<br>
+<hr><br>
+<br>To sum up, when you are in faced of the joylock v4.0 protection, grab the parameters in the html code and use this description :
+<br>
+<br>GENERAL: value="<font color="blue">NUMBER OF USER</font>|<font color="blue">KEY NUMBER</font>|<font color="blue">BACKGROUND COLOR</font>|<font color="blue">TEXT COLOR</font>|<font color="blue">26FIRSTCHARS:CIPHER KEY + CIPHERED LINK</font>|<font color="blue">IF THERE IS A FRAME(?)</font>|<font color="blue">LOGIN TEXT</font>|<font color="blue">PRE LOGIN MESSAGE</font>|<font color="blue">reLINK (?)</font>|<font color="blue">reFRAME (?)</font>|"
+<br>
+<br>USERNUMBER : value="<font color="blue">LENGHT OF USERNAME</font>|<font color="blue">LENGHT OF PASSWORD</font>|<font color="blue">LENGHT OF CIPHERED URL</font>|<font color="blue">LENGHT OF FRAME?</font>|<font color="blue">26FIRSTCHARS:CIPHERKEY+USERNAME+PASSWORD+CIPHERED URL</font>|"
+<br>
+<br>Map the CIPHERKEYS under 'ABCD...XYZabc...xyz', one time in caps, the other in lower case. This is the reversed cipher. A substitution table.
+<br>Now crack all the ciphered data :)
+<br>
+<br>
+<br> ~ loki ~ @ <i>RAGNAROCK</i>
+<br>
+<br>
+<br>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+2>Comments and additions</font></center></td></tr></table></center>
+<br>
+<br>
+<br>Another method to crack this protection is described by Mordred <a href="mordjava.htm">here</a>. He uses the riadlock applet as an exemple, but it could also be used there. 
+<br>
+<br>Interesting comments on the ~S~ board : <br>
+<br><br>
+<hr width=50%>
+<br>
+<br>
+<u>loki</u> (19/02/02 07:25:17) :
+<br>
+<br>Testing the method with : http://www.stentofon.no/login.htm 
+<br>
+<br>param name="GENERAL" value="3|11|000000|FFFFFF| | |Login Complete.|Enter the Username and Password.| | |" 
+<br>param name="0" value="10|6|34|5|pocjviszudnfyqbmtgewlkxarhYfkrpxgqsyoY8k9Bjbtkubxj/yfkrpxgqsy/yfkrpxgqsy.zqp_gsul" 
+<br>param name="1" value="9|6|32|5|pmxuwnkazfstdqhljorvgyeibcKlwflrjrfcS5v4Imrefprhm/klwflrjrf/klwflrjrf.olb_kwpj" 
+<br>param name="2" value="4|6|35|5|pedjwcigosrbtuhmyanfkxlzqvP100ak1z4vfjj/akicnfmj/aogwgaj/cifj/gscbv.omp_jbwt" 
+<br>
+<br>Ah ! this one is a new version type :) Let's try to see if the sum-up works. We should decript the strings and access to the protected data just by reading the source.
+<br>
+<br>GENERAL: value="NUMBER OF USER|KEY NUMBER|BACKGROUND COLOR|TEXT COLOR|26FIRSTCHARS:CIPHER KEY + CIPHERED LINK|IF THERE IS A FRAME(?)|LOGIN TEXT|PRE LOGIN MESSAGE|reLINK (?)|reFRAME (?)|" 
+<br>
+<br>3 users, 11 is the right key (registered applet), no url and cipher key precised, but we know that in this new version, each user has a related ciphered url. Let's pass to the 3 users : 
+<br>
+<br>USERNUMBER : value="LENGHT OF USERNAME|LENGHT OF PASSWORD|LENGHT OF CIPHERED URL|LENGHT OF FRAME?| 26FIRSTCHARS:CIPHERKEY+USERNAME+PASSWORD+CIPHERED URL|" 
+<br>
+<br>For user 0 
+<br>cipher key : pocjviszudnfyqbmtgewlkxarh 
+<br>ciphered username (lenght of 10) : Yfkrpxgqsy 
+<br>ciphered password (lenght of 6) : oY8k9B 
+<br>ciphered url (lenght of 34) : jbtkubxj/yfkrpxgqsy/yfkrpxgqsy.zqp 
+<br>ciphered frame (lenght of 5) : _gsul 
+<br>
+<br>that's it, we have the whole string. fweee ... 
+<br>
+<br>now, the table : 
+<br>
+<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 
+<br>POCJVISZUDNFYQBMTGEWLKXARH pocjviszudnfyqbmtgewlkxarh 
+<br>
+<br>that gives for user 0 : 
+<br>
+<br>username : Ringmaster 
+<br>password : bR8n9O (a true password ! but you know even good password, when crippled with a weak program ...) 
+<br>url : http://www.stentofon.no/download/ringmaster/ringmaster.htm 
+<br>
+<br>looks like an intranet ... ooops ! >)
+<br>
+<br>
+<hr width=50%>
+<br>
+</font><hr><center>
+<br>Back to 
+<a href="http://www.searchlores.org">www.searchlores.org</a> &nbsp;&nbsp;
+Back to 
+<a href="password.htm">passwords lore</a>
+<hr>
+
+</body>
+</html>

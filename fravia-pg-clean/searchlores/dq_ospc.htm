@@ -1,0 +1,627 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>dq_ospc.htm: An Open Source Proxy Checker</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="Effective Search for Documents, combing, klebing, How to Search the Internet Effectively, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching,  Choosing the best searching tool or Web search engine for your needs, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><table border="0"><tr>
+<td><a href="pro_essa.htm"><IMG SRC="images/rediscocla1.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="206" HEIGHT="165" BORDER=0 VSPACE=0
+HSPACE=0></a></td>
+  <td>&nbsp;&nbsp;</td>
+<td><center>
+<body bgcolor="silver" link="#0000FF" vlink="#3030FF">
+<h1>An Open Source Proxy Checker</h1>
+essay by Don Quijote, 24 Mar 2000<br>
+Published at <a href="http://www.searchlores.org">searchlores</a> in March 2000<br>
+<br>
+Inserted in the '<font color="#c00000">Rediscovering the classics</font>' series in January 2003.           
+<br><br></center></td></tr></table>
+
+<br>
+<hr>
+</center>
+<!-- This essay was fetched from http://dq.linuxave.net/ospc.htm: Mon, 27 Mar 2000 08:14:45 GMT
+-->
+Skip this intro and get me right to <a href="dq_ospc.htm#maincourse">the essay</a> ;-)
+<br>
+Actual working Open Source 
+Proxy Checker can be found at <a href="http://ospc.cjb.net/">http://ospc.cjb.net/</a>. 
+<br>
+More at <a href="http://fravia.2113.ch/phplab/anonymity.htm">http://fravia.2113.ch/phplab/anonymity.htm</a>
+ <br>
+More at <a href="http://www.searchlores.org/proxy.htm">http://www.searchlores.org/proxy.htm</a>
+
+
+
+<h3>Table of contents</h3>
+ <ol>
+  <li><a href="dq_ospc.htm#appetizer">Appetizer</a></li>
+  <ul>
+   <li><a href="dq_ospc.htm#objective">Objective of this essay</a></li>
+   <li><a href="dq_ospc.htm#why">Why yet another proxy checker?</a></li>
+   <li><a href="dq_ospc.htm#proxyfeat">What about the proxy checker features?</a></li>
+   <li><a href="dq_ospc.htm#php3feat">What about the PHP3 features?</a></li>
+   <li><a href="dq_ospc.htm#tools">Tools you're going to use</a></li>
+   <li><a href="dq_ospc.htm#history">History</a></li>
+   <li><a href="dq_ospc.htm#architecture">Architecture of this proxy checker</a></li>
+  </ul>
+  <li><a href="dq_ospc.htm#firstcourse">First Course</a></li>
+  <ul>
+  </ul>
+  <li><a href="dq_ospc.htm#maincourse">Main Course</a></li>
+  <ul>
+   <li><a href="dq_ospc.htm#peculiarities">Peculiaritis</a></li>
+   <li><a href="dq_ospc.htm#corecode">Core Code</a></li>
+   <li><a href="dq_ospc.htm#functional">Functional View</a></li>
+   <li><a href="dq_ospc.htm#future">Open Paths</a></li>
+  </ul>
+  <li><a href="dq_ospc.htm#dessert">Dessert</a></li>
+  <ul>
+   <li><a href="dq_ospc.htm#finalnotes">Final Notes</a></li>
+   <li><a href="dq_ospc.htm#netiquette">Good Netiquette</a></li>
+   <li><a href="dq_ospc.htm#biblio">Relevant Links</a></li>
+  </ul>
+ </ol>
+
+<p>
+
+<a name="appetizer">&nbsp;</a>
+<table align=center border=1 width=90% cellspacing=0 cellpadding=2>
+<tr><td align=center bgcolor=#D0D0E0><font size="+2"><b>
+Appetizer
+</b></font></td></tr></table>
+
+<h3><a name="objective">Objective of this essay</a></h3>
+
+To get you involved with PHP3. To give you yet another tool to implement whatever
+you want, as long as it's web related and doesn't spreng the inherent limits of PHP3.
+
+<h3><a name="why">Why yet another proxy checker?</a></h3>
+
+<ul><li>Perhaps to write a proxy checker myself, knowing that there are no hidden
+logging features, lurking from underneath to catch yet another new proxy.</li>
+<li>Another reason is to spread the word about the power that lies in PHP3, the
+scripting language used for this implementation. Of course, anybody can rewrite
+this stuff in Perl, that's just a matter of personal choice.</li>
+<li>And the third, and in my eyes most important reason, is to show how easy it
+is to learn and to implement an idea in PHP3.</li></ul>
+
+<h3><a name="proxyfeat">What about the proxy checker features?</a></h3>
+
+<ul><li>It does not use your environment, like, for example, your User Agent.</li>
+<li>It does not use your IP.</li>
+<li>It is easily configurable.</li>
+<li>You can easily check every single modification done by the proxy to your
+client environment.</li>
+<li>All IP addresses are resolved, providing easy feedback for anonymity
+purposes</li></ul>
+
+<h3><a name="php3feat">What about the PHP3 features?</a></h3>
+
+I still didn't finish The Book. Check back here where I will include a
+www.amazing.com link (yes! to earn some more money with yet another covert
+click-trough advertisement ;-)
+
+<h3><a name="tools">Tools you're going to use</a></h3>
+
+<table border=0><tr>
+<td align=center>PHP3</td><td>&nbsp;&nbsp;</td>
+<td>Get yourself a copy of the PHP3 sources, binaries and the manual from their website.</td>
+</tr><tr>
+<td align=center>Time</td><td></td>
+<td>Show me the language that can be mastered in only 30 minutes ;-) but don't worry.</td>
+</tr><tr>
+<td align=center>Web space</td><td></td>
+<td>Not stricly necessary, but just in case, check out Altern and XodoX.</td>
+</tr></table>
+
+<h3><a name="history">History</a></h3>
+
+There's a lot to write in these lines. But the best thing is to redirect
+the interested reader to the PHP3 site to read the full story about PHP/FI for
+themselves.
+<p>
+[...]<i>The name of this first package was Personal Home Page Tools, which later
+became Personal Home Page Construction Kit.</i>
+<p>
+<i>At the same time I started playing with databases and wrote a tool to
+easily embed SQL queries into web pages.  It was basically another CGI
+wrapper that parsed SQL queries and made it easy to create forms and
+tables based on these queries.  This tool was named FI (Form Interpreter).</i>
+<p>
+<i>PHP/FI version 2.0 is a complete rewrite of these two packages combined
+into a single program.  It has now evolved to the point where it is a
+simple programming language embedded inside HTML files.</i>
+<br>
+<i>The original acronym, <u>PHP</u>, has stuck.</i>[...]
+<p>
+Just as a sidenote: Version 2 was full of bugs with poor documentation.
+<br>
+With version 3, PHP has evolved into a serious alternative to other server
+side scripting languages.
+<br>
+The beta of version 4 looks even better!
+
+<h3><a name="architecture">Architecture of this proxy checker</a></h3>
+
+There will be two pages hosted on my current free web provider. The first one
+contains the HTML frontend and the full PHP3 code. The second one is just a
+test page that will be fetched through the proxy and verified by the PHP code
+of the first page.
+
+<h4>Frontend</h4>
+
+The page will show the typical title, short introduction, some references and finally,
+a form where the user enters the proxy address and port to check. The form is dispatched
+with a Submit button.
+<br>
+At the bottom of the page will be yet another typical closing note, together with the
+date of last modification and perhaps even a copyright notice.
+<br>
+Somewhere in between are some links to the pertaining RFCs, to the PHP3 source code,
+and to fravias searchlores site.
+
+<h4>Backend</h4>
+
+First task is to distinguish if this page is loaded for the first time or as a
+filled out form.
+<br>
+In the first case, nothing needs to be done, except, perhaps, showing the user
+which environment strings he passed through his browser to us.
+<br>
+The second case is much more interesting. Here we have as input the address of
+the proxy to check and the accompanying port info.
+
+<p>
+
+<a name="firstcourse">&nbsp;</a>
+<table align=center border=1 width=90% cellspacing=0 cellpadding=2>
+<tr><td align=center bgcolor=#D0D0E0><font size="+2"><b>
+First Course
+</b></font></td></tr></table>
+<br>
+
+Many 101 example code is already on the web, check the <a href="dq_ospc.htm#biblio">links
+section</a>. No need to code yet another Hello World proggie, but for the sake
+of it, and as a hommage for Kernigham & Ritchie, here we go...
+<p>
+Create this document and upload it to your PHP3 enabled server under the name
+hello.php3. Then try calling it from your browser and see what happens :-)
+<p>
+
+<pre>
+&lt;html&gt;
+&lt;body&gt;
+Preparing everything for the Hello World launch...
+&lt;br&gt;
+&lt;?php
+  printf("Hello World! Say hello to our %s visitor.&lt;br&gt;",$REMOTE_ADDR);
+?&gt;
+That's all!
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+That was easy, wasn't it? No need to deal with user rights, with special paths,
+nor anything else commonly associated with bringing Perl scripts to run.
+<br>
+Besides, that code inside the PHP tags just looks like common C code :-)
+
+<xbr>
+<p>
+
+<a name="maincourse">&nbsp;</a>
+<table align=center border=1 width=90% cellspacing=0 cellpadding=2>
+<tr><td align=center bgcolor=#D0D0E0><font size="+2"><b>
+Main Course
+</b></font></td></tr></table>
+<br>
+
+You did read every single line up to this point, didn't you?
+
+<h3><a name="peculiarities">Peculiarities</a></h3>
+(it's not an illness ;)
+<p>
+Let's assume for a moment that the reader knows how to read C code, 'cause
+that alleviates the task of explaining the more occult twists of PHP3.
+<br>
+Here follows a short list of differences to C and other peculiarities:
+
+<ol>
+<li>
+PHP is a server side scripting language. Please don't expect any <i>interactive</i>
+features as known from Java or JavaScript. Those cute tricks done with
+<tt>OnMouseOver</tt> event handlers are run on the clients machine. PHP scripts are
+always run on the server. Each and every interaction will always go through
+a page fetch, a page refresh or a form submission.
+<br>
+There are even some nasty tricks which can be implemented in PHP3, aided by
+some nice features found on Apache servers in the .htacces file. But that
+is stuff for another essay.
+</li>
+<li>
+PHP code goes embedded anywhere in the normal html flow, enclosed within
+<tt>&lt;?php</tt> and <tt>?&gt;</tt> tags.
+At the start, in the middle
+or at the end, it's just the same. The code is executed by the PHP module, and
+replaced by any output (<tt>print()</tt> and <tt>printf()</tt> functions)
+during that execution.
+</li>
+<li>
+Variables are easy to recognize, as all of them are prepended by $. There's no
+difference between strings, chars, ints or reals, even more, each variable can
+be cast into any mode, mostly dependand on the context. But don't worry,
+I did not use any typecasting in the sources.
+<br>
+A nice feature of PHP is that all environment strings are automagically
+available as variables. Same is valid for passed form fields.
+</li>
+<li>
+Associative arrays are a nice extension to any language. Let me try to explain
+this feature with the following example:
+<br>
+Instead of creating two arrays, one for christian names and one with matching
+lastnames, we just create a single array, using the lastnames as indices
+and filling in each slot with the corresponding christian name:
+<pre>
+/* 'outdated' style */
+$christname[0]='John';
+  $lastname[0]='Doe';
+$christname[1]='Don';
+  $lastname[1]='Quijote';
+
+/* 'slick' style */
+$name['Doe']='John';
+$name['Quijote']='Don';</pre>
+Yes, I know, don't tell me that this doesn't work when you have a huge tribe
+of Doe brothers or Quijotes.
+<br>
+Another way to initialize associative arrays is by using the <tt>array</tt>
+keyword. You may look it up in the <a href="http://www.php.net/quickref.php3">
+Quick Reference</a> section at the <a href="http://www.php.net/">PHP site</a>.
+<p>
+There are many ways to browse through these associative array. I use this code snippet:
+<pre>reset($name);
+while(list($last,$first)=each($name)) print("Hello $first $last\n");</pre>
+</li>
+<li>
+Surely you have observed that even strings are parsed and any variables found
+replaced by their values. Nice, isn't it?
+<br>
+This only applies to "double quoted" strings. You can embed newlines (\n)
+as well as most other ASCII codes as known from C.
+<br>
+Single quoted strings are not checked nor transformed, and probably render quicklier.
+</li>
+<li>
+Some words regarding variable scope. Variables are always local to the
+surrounding function. To access global variables, you need to create an explicit
+reference to them with a <tt>global $variable;</tt> line.
+<br>
+Another advantage (or disadvantage for the cunning old C devils) is the free
+use (and misuse) of variables: there are no possibilities to declare them before
+actual use. Reminds me of good old BASIC times.
+<br>
+There's also no <tt>int main()</tt> entrypoint. You just start coding with the
+actual code, no need for bureaucratic crap ;-)
+</li>
+</ol>
+Ok. Are you still following the text, or are you desperately looking for a
+quick <a href="dq_ospc.htm#dessert">way out</a> of this maze?
+<br>
+The list can go on and on for hours, days and weeks, but in the end, the PHP
+code still keeps looking just like C code. And that's something I appreciate :-)
+
+<h3><a name="corecode">Core Code</a></h3>
+Here is the stripped down source of the actual working engine of the
+<a href="http://ospc.cjb.net/">proxy checker</a>. Full sources don't belong
+here. They are available by following a link in the footer of that page.
+
+<pre>
+&lt;?php // Open Source Proxy Checker, severely stripped down
+  error_reporting(0);  // no error reporting
+<a name="firstpart">  if(isset($PATH_INFO)&&($PATH_INFO=='/feedback.txt')) { // asked to behave like a mirror?</a>
+    Header('Content-Type: text/plain');
+    $headers=getallheaders();
+    reset($headers);
+    while(list($header,$value)=each($headers)) print("$header === $value\n");
+<a name="secondpart">  } else { // testing the proxy</a>
+    $SockAdr='proxy.spaceproxy.com';
+    $SockPort=80;
+    $HL=array(
+      'User-Agent' =&gt; 'Mozilla/4.0 (Windows 98;US) Opera 3.62 [en]',
+      'Accept' =&gt; 'image/gif, image/x-xbitmap, image/jpeg, image/png, */*',
+      'Pragma' =&gt; 'no-cache',
+      'Connection' =&gt; 'keep-alive');
+    print('&lt;html&gt;&lt;body&gt;&lt;h1&gt;Stripped down version of OSPC&lt;/h1&gt;');
+    printf('Sending request to proxy %s, port %s&lt;br&gt;&lt;pre&gt;',$SockAdr,$SockPort);
+    print("  GET http://$HTTP_HOST$SCRIPT_NAME/feedback.txt HTTP/1.1\n");
+    print("  Host: $HTTP_HOST:80\n");
+    reset($HL);
+    while(list($header,$value)=each($HL)) print("  $header: $value\n");
+    printf("&lt;/pre&gt;Connecting to %s, port %s...&lt;br&gt;",$SockAdr,$SockPort);
+    flush(); // force flushing of "printf" buffers.
+    $fp=fsockopen($SockAdr,$SockPort);
+    if($fp) { // you are reading this code? Wow, I'm proud of you!
+      // start outputting our header
+      fputs($fp,"GET http://$HTTP_HOST$SCRIPT_NAME/feedback.txt HTTP/1.1\r\n");
+      fputs($fp,"Host: $HTTP_HOST:80\r\n");
+      reset($HL);
+      while(list($header,$value)=each($HL)) fputs($fp,"$header: $value\r\n");
+      fputs($fp,"\r\n"); // terminate header structure by appending a blank line
+      while(!feof($fp)) {
+        $line=fgets($fp,4096); // I suppose no line will be longer than this
+        if($line=="\r\n") break; // reached end of header
+      } // end while
+      if(!feof($fp)) {
+        print('&lt;br&gt;Receiving...&lt;pre&gt;');
+        while(!feof($fp)) {
+          $line=trim(fgets($fp,4096));
+          list($name,$value)=split(' === ',$line,2);
+          if((strlen($name)&gt;0)&&(strlen($value)&gt;0)) print("  $name: $value\n");
+        } // end while() (end of "file" reached)
+        print("&lt;/pre&gt;That's all!");
+      } // end if
+      fclose($fp);
+    } // end if: end processing with a valid socket handle ($fp)
+    print('&lt;/body&gt;&lt;/html&gt;');
+  } // end else: testing proxy
+?&gt;</pre>
+
+I know, the code is ugly as hell, but what else can you do when you want to
+put some power into less than 50 lines and not wanting to be a candidate
+for a code obfuscation contest!
+
+<h3><a name="functional">Functional View</a></h3>
+
+You probably already guessed that I'm not a native english speaker (nor
+writer), but that won't stop you, or?
+<p>
+Anyway, let's have a short glimpse at a typical run of previous script:
+<br>
+<br>
+<table width=70% align=center bgcolor=#E0E0E0><tr><td>
+<h3>Stripped down version of OSPC</h3>
+Sending request to proxy proxy.spaceproxy.com, port 80<br>
+<pre>  GET http://dq.linuxave.net/stripped.php3/feedback.txt HTTP/1.1
+  Host: dq.linuxave.net:80
+  User-Agent: Mozilla/4.0 (Windows 98;US) Opera 3.62 [en]
+  Accept: image/gif, image/x-xbitmap, image/jpeg, image/png, */*
+  Pragma: no-cache
+  Connection: keep-alive</pre>
+Connecting to proxy.spaceproxy.com, port 80...<br><br>
+Receiving
+<pre>  Accept: image/gif, image/x-xbitmap, image/jpeg, image/png, */*
+  Host: dq.linuxave.net
+  Pragma: no-cache
+  User-Agent: Mozilla/4.0 (Windows 98;US) Opera 3.62 [en]
+  Via: 1.1 - (DeleGate/6.1.0)</pre>
+That's all!
+</td>
+</tr>
+</table>
+
+<p>
+Let's take that <i>Core Code</i> apart, and analyse what's supposed to be going
+on under the PHP hood.
+<p>
+The indentation already gives some nice hints about the overall structure:
+The whole code is separated by an <tt>if</tt> statement in two sections.
+<p>
+The variable <tt>$PATH_INFO</tt> is defined when the URL to this page includes
+something more in the path, right after this scripts name.
+<br>
+If this code was stored on a server as <tt>http://somewhere.com/stripped.php3</tt>
+and we call up this URL:
+<br>
+<tt>http://somewhere.com/stripped.php3/test</tt>,
+<br>
+then <tt>$PATH_INFO</tt> will be <tt>/test</tt>.
+<p>
+The <a href="dq_ospc.htm#firstpart">first part</a> of this script just tells the client browser
+to expect plain text and not the default, avoiding an unfitting HTML rendering
+of a pure textual feedback page.
+<br>
+<tt>getallheaders()</tt> returns an array with all those bits of information
+sent from your browser through a proxy to arrive finally at a greedy logging
+bot on some web server. You better watch out what you're willing to send.
+IP disguise is not the only thing to do when you care at least a bit about anonymity.
+<br>
+The next two lines just traverse this array (<tt>$headers</tt>) and print out
+this information.
+<p>
+So much for that first and easy part. Let's have a look at the
+<a href="dq_ospc.htm#secondpart">second part</a>.
+<br>
+From the previous discussion, you should be able to figure out everything until
+that <tt>flush()</tt> line. Hint: Variable definitions, <tt>$HL</tt> being an array,
+some print statements starting to render the HTML page.
+<p>
+All print statements will at some time arrive at your clients browser, but first
+they have to be send by the server. This process is normally buffered to avoid
+sending too many small packets of info.
+<br>
+If, for some reason, you want to push the already buffered info to the client,
+you use the <tt>flush()</tt> function.
+<p>
+The most important part of this script is IMO the <tt>fsockopen()</tt> functionality:
+PHP tries to open a socket to a certain port (<tt>$SockPort</tt>) on a certain
+address (<tt>$SockAdr</tt>). You can also express that address in IPv4 format
+(4 groups of non-negative decimal numbers lower than 256, separated by dots).
+<br>
+I/O to this socket is done with <tt>fgets()</tt> and <tt>fputs()</tt>.
+<p>
+I'm not that good at casting my own code into english words, so bear with me ;-)
+<p>
+I'm sending out a HTTP order to fetch a certain page (<tt>http://$HTTP_HOST$SCRIPT_NAME/feedback.txt</tt>)
+on the host $HTTP_HOST, port 80. You <i>should</i> know that 80 is the port
+commonly associated with HTML traffic.
+<p>
+Q: All nice and fun. But what the heck are <tt>$HTTP_HOST</tt> and <tt>$SCRIPTNAME</tt> supposed to be??
+<p>
+A: They are part of the environment variables. Please write yourself a little
+PHP script to print out the contents of these variables among some more info:
+<pre>
+&lt;?php
+  phpinfo();
+?&gt;</pre>
+
+The HTTP request is finished by outputting a CR-LF pair on an empty line.
+Right after that, the engine dives into a <tt>while()</tt> loop, remaining
+there until being told that there's nothing more available on that socket
+(Done by testing the boolean value of <tt>!feof($fp)</tt>).
+<br>
+Inside of that loop we keep all lines belonging to the HTML header, discarding
+them on our way. The end of the header signal is a CR-LF all alone on a line.
+<p>
+Next block of code just fetches the remaining data on that socket (belonging
+to the HTML body) and prints them out.
+<p>
+That's all!!
+<p>
+Not quite. There are many cute little functions making up the spicy flavor of
+PHP and helping at every corner. You should look them up in that Quick Reference
+section on the PHP site. Or even better, start downloading sources, binaries
+and manuals and install PHP on your machine and begin experimenting
+right away, you won't regret it!
+<p>
+
+
+
+<h3><a name="future">Open Paths</a></h3>
+
+The actual <a href="http://ospc.cjb.net/">Open Source Proxy Checker</a> is just
+an experiment dealing a bit with
+<a href="ftp://ftp.ripe.net/rfc/rfc2068.txt">HTTP</a> and another bit with
+<a href="http://www.php.net/">PHP</a>.
+<br>
+There are much too many ways to enhance this application. Some time ago, when
+starting this stuff, I wanted the script to point out the differences between
+the outgoing and the incoming stream, pointing out the dangers involved in
+seeing some environment variables in cleartext, etc.
+<br>
+That did not happen.
+<p>
+Sources are available, lucky you, so you can take them and enhance the app,
+adding your own bells and whistles. Please be so kind and mail me any use or
+changes you do.
+
+<xbr>
+<xbr>
+<p>
+
+<a name="dessert">&nbsp;</a>
+<table align=center border=1 width=90% cellspacing=0 cellpadding=2>
+<tr><td align=center bgcolor=#D0D0E0><font size="+2"><b>
+Dessert
+</b></font></td></tr></table>
+
+<h3><a name="finalnotes">Final Notes</a></h3>
+
+For those still wondering about the relationship of this essay with
+<a href="http://www.searchlores.org/">www.searchlores.org</a>, let me tell
+you: PHP3 is a powerful language to build searching bots, spiders, redirectors,
+dynamic site mirroring, retrieval engines, link checkers, port scanners, mailer,
+secured or disguised web sites, brute force password crackers, and so on.
+<p>
+All these examples will run on a server, and not on your own machine, thus,
+not having the bandwidth limitation of your dial-up telephone line.
+<br>
+This narrow-bandwidth-line is only used to trigger the execution of the PHP3 script.
+<p>
+There's a very wide field of application for PHP3, most of what is known deals only with
+the commercial crap, i.e., web based shopping carts and related stuff.
+<p>
+PHP3 is also very helpful when implementing any client/server protocol. I wrote
+a client to retrieve files from a CVS server, implementing the whole
+client-server CVS handshaking in PHP3.
+<p>
+Hopefully there will be more essays dealing with these scripting languages.
+Besides PHP3 there's also Perl, Rebol and Python. Each of them has its own
+advantages/disadvantages, shallow or steeper learning curves, function or
+object oriented approach. In the end, it's just a matter of personal taste
+which language is your preferred one.
+<p>
+I can't resist the temptation of including some fly outs ;-)
+<ul><li>svd, you got me started on this stuff. Shall I be angry with you? Do you know
+how much time I'm <i>wasting</i> instead of earning money like all other ants?</li>
+<li>Laurent, an incredibly quick learner, pushing me with his questions into this.
+Thanks for your proofreading, the idea with the dishes and for teaching me
+how to use smileys ;-)</li>
+<li>Fravia, for your trust in friends and strangers. And for being patient!</li></ul>
+<p>
+You might provide me with some of your feedback through
+<a href="http://www.insidetheweb.com/messageboard/mbs.cgi/mb155985">Fravia's messageboard</a>
+(preferred way of sharing knowledge) or through my email (dq at altern dot org).
+
+<h3><a name="netiquette">Good Netiquette</a></h3>
+Are you expecting a long preaching sermon? Not this time! Just stop. Think for
+a minute if you really want to loose the possiblity of experimenting with
+your PHP3 code on those free web servers or if you want to screw up everything
+by running bandwidth intensive and/or dangerous scripts.
+<br>
+Keep a low profile and don't mess too much with your provider. I know it's
+possible, but don't do it ;-)
+<p>
+
+<h3><a name="biblio">Relevant Links</a></h3>
+Let me close this essay with the following hyperlinked bibliography, and
+remember to search for similar stuff through the many search engines.
+<p>
+<ul>
+<li>PHP, server side scripting language</li>
+  <ul>
+  <li><a href="http://www.php.net/">PHP Homepage</a></li>
+  <li><a href="http://www.php.net/version4/downloads.php">PHP 4.0 Version 4 Downloads (betas)</a></li>
+  <li><a href="http://www.php.net/download-php.php3">PHP Downloads: source and Windows binaries</a></li>
+  <li><a href="http://www.php.net/manual/">PHP Annotated Online Manual</a></li>
+  <li><a href="http://www.php.net/quickref.php3">PHP Manual Quick Reference</a></li>
+  <li><a href="http://www.php.net/docs.php3">Download manuals (tgz, zip, pdf, rtf, etc.)</a></li>
+  <li><a href="http://www.php.net/FAQ.php3">Frequently Asked Questions</a></li>
+  <li><a href="http://www.php.net/books.php3">Some more or less useful books</a></li>
+  </ul>
+<li>Sites with PHP code snippets and tutorials.</li>
+  <ul>
+  <li><a href="http://phpbuilder.com/">The Resource For PHP Developers</a></li>
+  <li><a href="http://www.devshed.com/Server_Side/PHP/">Developer Shed</a></li>
+  <li><a href="http://www.zend.com/">Where PHP meets eBusiness</a> :-(</li>
+  </ul>
+<li>'Free' web space providers</li>
+  <ul>
+  <li><a href="http://www.altern.org">Altern</a> french spoken</li>
+  <li><a href="http://www.xodox.de">XodoX</a> german spoken</li>
+  <li><a href="http://www.linuxave.net">LinuxAve</a> linux spoken</li>
+  <li><a href="http://www.alltheweb.com/">Best provider</a> please send me feedback on other PHP3 enabled free web space providers</li>
+  </ul>
+<li>Miscellanea</li>
+  <ul>
+  <li><a href="http://ospc.cjb.net/">Open Source Proxy Checker & Full Sources</a></li>
+  <li><a href="http://www.searchlores.org/">Web Searchlores</a></li>
+  <li><a href="http://www.insidetheweb.com/messageboard/mbs.cgi/mb155985">Fravia's messageboard</a></li>
+  <li><a href="http://tuxfinder.com/rfc/">Request For Comments</a></li>
+  <li><a href="ftp://ftp.ripe.net/rfc/rfc2068.txt">RFC 2068 - HTTP/1.1 -- Hypertext Transfer Protocol</a></li>
+  </ul>
+</ul>
+<br><center>~~~~~~ O ~~~~~~</center>
+<!--
+
+Dear Fravia, next essay I write (if ever) will fit within at most 3 Page-Downs, not this
+stomach-aching brontosaurii approach :-(
+
+-->
+</body>
+</html>

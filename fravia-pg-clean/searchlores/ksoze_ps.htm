@@ -1,0 +1,97 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>ksoze_ps.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ Ksoze's "Running Perl Scripts" ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="tools.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Tools</th>
+</tR></table><br>
+
+I have ported  these instructions written
+by  Ksoze (@ <a href="http://www.deny.de/kz/perl.html">http://www.deny.de/kz/perl.html</a>) 
+to searchlores.org in October 2000
+</center><hr>
+
+<font color=#005500 size=+3><b>Running Perl Scripts</b> by Ksoze</font><br><br>
+
+In order to run a perl script, you must have a working perl 
+interpreter for your OS.<br><br>
+
+<ul>
+<li>UNIX : Most Unix/Linux machines have a standard perl interpreter 
+located in /usr/bin/perl or /usr/local/bin/perl<br>
+	   (Refer to your Os web page if you cant find perl)
+<li>Windows(9x or NT) : You have to download and install ActivePerl 
+by <a href="http://www.activestate.com">www.activestate.com</a><br>
+	   (I suggest you stay away from calling/contacting M$ for 
+any known problem)
+</ul>
+<br>
+After you got a working interpreter, you can run perl scripts (default 
+extension .pl) by :<br><br>
+
+<ul>
+<li><i>UNIX</i> : <b>$ ./script_name.pl [parameters]</b><br>
+	You must be sure the first line of the script points to the perl 
+interpreter preceeded by a #!<br>
+	(ex. #!/usr/bin/perl)
+<li><i>Windows</i> : From a DOS PROMPT -> <b>c:\path\to\perl.exe script_name.pl 
+[parameters]</b><br>
+	Task : We want to run perl scripts in a faster way (linux like), 
+that is we want to associate .pl extension to
+	perl interpreter so we can start scripts this way : <br>
+	From a DOS PROMPT -> <b>script_name.pl [parameters]</b><br>
+	Solution :<br>
+	From DOS PROMPT -> ftype perl=c:\path\to\perl.exe -w "%1" %*<br>
+	Then -> assoc .pl=perl<br>
+	(assoc /? and ftype /? to get help on those commands)<br>
+	(the -w param tells interpreter it has to report any found problem)	
+</ul>
+<br>
+I am pretty sure perl stuff is also available for BeOs OS/2 
+Machintosh etc..<br><br>
+
+<i>Perl installation must be done ONCE, after you can benefit 
+the powerful of this great language forever.</i><br><br>
+</font>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="basic.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

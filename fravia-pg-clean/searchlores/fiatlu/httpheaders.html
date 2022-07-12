@@ -1,0 +1,315 @@
+<HTML>
+<HEAD>
+<TITLE>The secret life of a web browser revealed!</TITLE>
+</HEAD>
+
+<body bgcolor="#B8B8B8">
+
+<CENTER><H2>The secret life of your web browser revealed! 
+</H2></CENTER>
+
+
+Not everyone is aware that there's a hidden conversation going on between 
+your web browser and ALL the sites you visit. Known as HTTP header messages 
+they are all the info your browser freely gives out every time you connect
+ to ANY web site without even being asked. As you will see, some of this 
+info you might rather keep to yourself. Some soft like The Proxomitron will
+not only lets you view all those messages, but also lets you alter, add, or
+ delete them. If security is important to you, make it your business to 
+know what your browser is telling the world and have it say only what you 
+want!
+ The order of the varibles will vary from server to server. 
+Of course, Java, Java Script, Active X will gather a lot more info off your 
+PC incuding but not limited to IP number, Email addresses, they can look at 
+what files you have on your PC, run exes without your permittion, ets<BR>
+<BR>
+
+<center><TABLE BORDER=2 COLS=2 WIDTH="100%">
+
+<TR Align=center >
+<TD><u><center>HEADERS<BR><BR></TD>
+<TD><U><center>WHAT VARIBLES IT WILL SHOW<BR><BR></TD>
+</TR>
+<TR Align=center >
+
+
+<TD>GET, HEAD, PUT POST</TD>
+<TD> are the base request commands of the HTTP protocol. 
+ This first line would suffice to request the wanted information. 
+</TD>
+</TR>
+<TR Align=center >
+
+
+<TD> REQUEST_METHOD : </TD>
+<TD> GET </TD>
+</TR>
+<TR Align=center >
+
+<TD> SERVER_PROTOCOL: </TD>
+
+<TD> will show which version of HTTP you are using, usually 
+       HTTP1.0 or HTTP1.1</TD>
+</TR>
+<TR Align=center >
+
+
+<TD> HTTP_XROXY_CONNECTION : </TD>
+
+<TD> usually Keep-Alive 
+</TD>
+</TR>
+<TR Align=center >
+ 
+ 
+
+<TD>   HTTP_ACCEPT_CHARSET: </TD>
+
+<TD> iso-8859-1,*,utf-8 </TD>
+</TR>
+<TR Align=center >
+
+
+<TD> HTTP_REFERER_FROM:</TD>
+
+<TD> 
+     shows the page you came from, where you came from before
+ or the last page you visited before the current one, or if you came from a 
+ link. Typed URLs and bookmarks usually result in this variable being left blank. 
+
+     http:\/\/(www\.)?$mydomain\//);
+</TD>
+</TR>
+<TR Align=center >
+
+
+
+
+
+<TD>HTTP_USER_AGENT :</TD>
+
+<TD>  shows which browser type you are using, your browser version 
+ and also the O/S you use</TD>
+</TR>
+<TR Align=center >
+
+  
+<TD>HTTP_HOST:</TD>
+
+
+<TD>the remote server's name you are accesing</TD>
+</TR>
+<TR Align=center >
+
+
+
+<TD>SERVER_PORT: </TD>
+
+<TD> shows the web server's listening port. usually 80, 8080, 3128
+ (if you are on HTTP)</TD>
+</TR>
+<TR Align=center >
+ 
+<TD>SERVER_SOFTWARE:</TD>
+
+ <TD>the remote server's O/S  (Apache/1.2.4
+ for example)</TD>
+</TR>
+<TR Align=center >
+
+
+<TD>SCRIPT_NAME: </TD>
+<TD>what kind of scripts the remote server is running if any
+(/cgi-bin/show-http-headers)</TD>
+
+</TR>
+<TR Align=center >
+
+
+
+<TD> REMOTE_ADDRESS : or REMOTE_HOST :  </TD>
+
+<TD> will show your IP number, or if you are usign a proxy,
+ it's IP number  </TD>
+</TR>
+<TR Align=center >
+
+
+
+ 
+<TD> HTTP_REMOTE_HOST : </TD>
+
+<TD> will show your host name and address -country, ets </TD>
+</TR>
+<TR Align=center >
+
+ 
+
+<TD>IDENT-Lookup: Username:</TD>
+
+<TD> will show yor PC's name, your operating system: 
+       your charset:</TD>
+</TR>
+<TR Align=center >
+
+
+  
+<TD>REMOTE_PORT:   </TD>
+
+<TD>  shows the port the remote server uses   </TD>
+</TR>
+<TR Align=center >
+
+    
+
+<TD>SERVER_NAME: </TD>
+
+<TD> the DNS name of the server you are accessing  </TD>
+</TR>
+<TR Align=center >
+
+<TD>SERVER_ADMIN: </TD>
+
+<TD> usually the email address of the webmaster</TD>
+</TR>
+<TR Align=center >
+ 
+<TD> HTTP_COOKIE: </TD>
+
+<TD> If your browser finds a cookie in his cookie file matching 
+the domain of this server it will send it along with every request. This 
+server also tries to set up a cookie in your browser. If this is successfully
+ done, you can see this cookie in  your request when RELOADing this page.</TD>
+</TR>
+<TR Align=center >
+
+
+
+
+    
+
+<TD> HTTP_X_FORWARDED_FROM: or 
+HTTP_FORWARDED: </TD>
+<TD> if  you use a proxy, it will show here<BR>
+shows where you've been routed from.
+ proxy can forward real ip here, In order to remain anonymous the you DO 
+ NOT want your real IP showing, only the proxy's.(trully anon proxies will NOT show HTTP_FORWARDED or HTTP_X_FORWARDED_FOR
+ variables,  </TD>
+</TR>
+<TR Align=center >
+
+    
+
+
+
+  
+
+<TD>HTTP_FORWARDED :  </TD>
+
+<TD>  shows the path you use in connecting to a web server
+ this line shows exactly where you're coming from. reveals proxy used
+ VIA : reveals use of proxy </TD>
+</TR>
+<TR Align=center >
+
+
+ 
+
+
+<TD>  HTTP_VIA : </TD>
+
+<TD> if you are usign a proxy, the name will show up here  </TD>
+
+</TR>
+<TR Align=center >
+
+
+
+<TD> HTTP_ACCEPT:  </TD>
+
+<TD> will show what kind of images your browser will accept such as:
+ image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */* 
+ These are the MIME-types accepted by your browser, sometimes with a
+ quality factorappended. </TD>
+</TR>
+<TR Align=center >
+
+  
+
+<TD> CLIENT_IP : </TD>
+
+<TD> your IP can be revealed by proxy </TD>
+</TR>
+<TR Align=center >
+
+
+  
+
+<TD>  HTTP_FROM : </TD>
+
+<TD> sometimes IP proxied from is revealed here, so make sure you look at
+ that option when evaluating how secure a proxy is! </TD>
+</TR>
+<TR Align=center >
+
+
+       
+
+<TD>ACCEPT-LANGUAGE: or HTTP_ACCEPT_LANGUAGE: </TD>
+
+<TD> Here your browser may indicate which languages it prefers.
+ ISO-country-codes are used to accomplish this. So "en" is english, 
+"de" is  german, "ru" is russian, etc </TD>
+</TR>
+<TR Align=center >
+
+
+             
+  
+<TD> SCRIPT_NAME: </TD>
+
+<TD> if the server wil run any scripts like cgi, ets. </TD>
+</TR>
+<TR Align=center >
+
+</TABLE></center>
+<BR><BR>
+
+
+for more info, you might wanna read:<BR>
+
+<A HREF=http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html>
+www.w3.org/Protocols/HTTP/HTRQ_Headers.html</A>
+
+<A HREF=http://perlfect.com/articles/cgi_env.shtml>
+perlfect.com/articles/cgi_env.shtml</A><BR>
+
+or just examine the variables listed on an ENV test page like the ones at:<BR>
+
+<A HREF=http://www.interlacken.com/tricks/exec/trick02/egyprop.asp>
+http://www.interlacken.com/tricks/exec/trick02/egyprop.asp
+</A>
+
+<A HREF=http://cgi.tky.3web.ne.jp/~aniki/cgi-bin/env.cgi>
+http://cgi.tky.3web.ne.jp/~aniki/cgi-bin/env.cgi
+</A>
+
+<A HREF=http://proxys4all.cgi.net/env-checkers.html>
+http://proxys4all.cgi.net/env-checkers.html
+</A>
+
+All right, so what can you DO to protect your self then? It's simple-use a
+software like Proxomtron to alter your headers or have a FireWall soft
+For info on firewalls read the <A HREF="https://searchlores.nickifaulk.com/fiatlu/firewall.html">
+firewall FAQ</A> or the Surf Up review of available firewall 
+products that has screen shots. The most used firewalls
+right now are BlackIce, Signal 9 and to some extent AtGuard.   
+
+
+
+<BR><BR><BR>
+
+</HEAD>
+</HTML>
+
+

@@ -1,0 +1,488 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<TITLE>whazzat internet thingy, then? (¯`·.¸(¯`·.¸ whazzat.htm ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Basic Help ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="basihelp.htm"><IMG
+  SRC="images/medipeti.jpg" ALT="to Basic Help"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  Basic help</th>
+  </tR></table>(Courtesy of fravia's  <a href="http://www.searchlore.org">searchlore.org</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+<hr>
+<font size=+3>
+<br><b>(¯`·.¸(¯`·.¸&nbsp;A bird's eye view&nbsp;¸.·´¯)¸.·´¯)</b><br>
+by _dose</font> <br>
+<br> published @ <a href="https://searchlores.nickifaulk.com/www.searchlores.org">searchlores</a> 
+in <b>Mai 2002</b><br>
+<hr><i>
+      
+_dose is a Linux +HCU guru and security expert, but first of all a good friend, 
+that I have had the pleasure to meet many times around Europe. He is trying </i>(<i>a little&nbsp;</i>:-)<i> to 
+keep the technical jargon to a minimum. But 'technically jargoned' or not, 
+this reading -believe me- will be a salutary enrichment 
+for you. Sparkles of knowledge fizzle around this script... and may even motivate readers 
+to contribute on their own... one sunny day...
+
+
+      </i></center><hr><br>
+
+
+
+
+
+<center>
+<h1>A bird's eye view</h1>
+<code>
+an essay on the fabric of the Internet<br>
+by _dose, 05/2002<br>
+</code>
+<p>
+<i>"You can read it?"<br>
+"No, I was just clearing my throat."</i>
+</center>
+<h3>introduction</h3>
+This is an introduction to how the internet is built. You see, most people don't
+know how this things works in the first place, even if they work in technical
+areas. The only people that know are those that work in the higher end
+networking areas of ISPs. But I figure that some background never hurt anybody
+and since we all use this in one function or another I'd give a shot at briefly
+outlining the structure of the global internet. And who knows? At some point
+this information might actually be useful for you.
+<p>
+I'll keep the technical jargon to a minimum, or at least I'll try. A little.
+<h3>an opening</h3>
+The Internet is a massive world-wide interconnected network - not a network, an
+interconnected one. That where the name Internet comes from. This means that
+there are lots of networks out there that can talk to each other or use networks
+that they're connected to to communicate with networks they're not connected to.
+A single network can be built up of many things. Some networks exist only in one
+datacenter, others are built up of national, international or intercontinental
+links. The important thing here is that each network
+- whatever its size, is controlled and maintained by one administrative entity
+(usually a corporation). These networks are referred to as Autonomous Systems
+(AS). Each AS is assigned a unique 16-bit number called an Autonomous System
+Number (ASN).
+<p>
+Now for some administrative politics. There is a central organisation that deals
+with assigning 'numbers'. This is the Internet Assigned Numbers Authority
+(IANA). They control the delegation of ASNs, IP ranges and other numeric
+resources that require a central authority.  Historically they have directly
+assigned IP blocks and ASNs to corporations or organisations, this is no longer
+the case. As the Internet grew, seperate organisations were set up to deal with
+this process. These organisations are called 'regional registries'. Broadly speaking
+(very broadly,) there are three of these. They are organised geographically.
+They are ARIN (American Registry for Internet Numbers), APNIC (Asian-Pacific
+Network Information Center) and RIPE (Reseaux IP Europeen, which translates as
+European IP Networks). These organistations can be found at,</P>
+<ul>
+<li><A HREF="http://www.iana.org/">http://www.iana.org/</A> - Top level
+<li><A HREF="http://www.arin.net/">http://www.arin.net/</A> - North and
+South America, Carribean and sub-Sahara Africa
+<li><A HREF="http://www.ripe.net/">http://www.ripe.net/</A> - Europe,
+northern Africa, the Middle East and parts of northern Asia
+<li><A HREF="http://www.apnic.net/">http://www.apnic.net/</A> - Asia-Pacific
+region
+</ul>
+<p>
+When an organisation wants to build a network that actively participates in the
+global internet (as opposed to simply buying traffic from an ISP), it will
+request an ASN and IP allocation from the regional registry for their region. The most
+important part is receiving an ASN (I will elaborate on this later) and after
+that an IP allocation.
+<P>
+An IP allocation is one or more blocks of contiguous IP addresses that this
+organisation receives and is unique to this organisation. Actually, this is not
+entirely accurate. The IP allocation is tied to the ASN, but more on that later.
+An organisation can have more than one ASN, this is usually the result of
+mergers or acquisitions. The regional registries will not assign more than one ASN to one
+organisation, but once two organisations merge then the new entity holds both
+ASNs. Massive acquisitions have led to single organisations holding many ASNs,
+but usually they will consolidate all IP allocations associated with these ASNs
+to one single ASN and return the ASNs to the regional registries.  They will however hold
+on to the IP allocations, as IP space is very valuable.
+<P>
+This brings me to a side note. IP addresses being sold by an ISP.  Many ISPs
+charge money for assigning IP addresses to a customer company. This is
+acceptable as it is a one time administrative cost, but IP addresses are not the
+<B>property</B> of an ISP. IP addresses are granted to an ISP for connectivity
+purposes. Any ISP that requires a company to pay a recurring fee for handing out
+IP addresses is in violation of Registry policy. IP addresses are not property,
+and the only money you can be charged by an ISP for an IP allocation from the IP
+addresses they have been assigned is money that covers the administrative costs
+they have. An organisation may not, under any circumstances, make a profit on IP
+assignments. Many of them still do, because no-one feels like taking them to
+court over it. Just one of the many things that are wrong on the internet... But
+I thought I'd mention it. Smack the next sales person you encounter asking money
+for IP addresses with this little tidbit, wiil you?
+<p>
+So after reading all this, you might want a few interesting links.<br>
+Over here <a href="http://www.iana.org/assignments/ipv4-address-space">
+http://www.iana.org/assignments/ipv4-address-space</a>
+you can find a listing of all IP allocations by IANA. The notation used is CIDR,
+so 212/8 is a massive block (class A in the old style) covering all IP addresses
+from 212.0.0.0 to 212.255.255.255.
+<p>
+Here
+<a href="http://www.arin.net/statistics/2001stats.html">
+http://www.arin.net/statistics/2001stats.html</a>
+you can find the total number of IP requests processed and AS numbers assigned
+by ARIN in 2001.
+<p>
+<p>
+<h3>transport, and why it matters</h3>
+As we all know, IP is the transport mechanism of the Internet.  Network people
+always talk about 'layers'. In this they refer to the OSI model. OSI stands for
+Open Systems Interconnect. It is a model that was developed for universal
+network-oriented communication in the late 1980s and early 1990s. The Internet
+was built around a different model. Actually, there is not formal model that the
+Internet was designed around, that idea came later. But the model is called the
+DoD model - for Department of Defence. As we all know, the Internet evolved from
+the DARPA network experiments. DARPA stands for Defence Advanced Research
+Projects Agency. This is where IP and higher level protocols such as TCP, UDP
+and ICMP were developed. The war between the DoD model and OSI model was a long
+one, but OSI failed miserably in this. OSI has a 7 layer model detailing
+everything from the physical transmission media to the abstract application
+interfaces. The DoD model for networking won this battle simply because Internet
+communications became the de facto standard.  The OSI model is still referred
+to, but no-one in networking uses its concepts above layer 4 (where TCP and
+friends reside). Basically, layer 1 and 2 refer to the physical media and the
+ways in which signals are exchanged over these media (Ethernet is a layer 1 and
+2 standard). IP is a layer 3 protocol, called the 'network' protocol.  TCP is a
+layer 4 protocol (called the 'transport' layer). Higher layers of the OSI model
+are called 'session', 'application' and 'presentation'.
+<p>
+This whole model works very well. The basics are pumped into each networking
+newbie and are referred to at all levels. For LAN technologies running our
+beloved TCP/IP protocols, that is. There are a lot of other networking
+technologies out there, and once you start mixing datacom and telecom
+technologies the entire model falls to pieces.
+<P>
+So IP is a network layer, not a transport layer. But that's just semantics. IP
+is what's used to transport data across a network.  That's why I (and many
+others) call it a transport mechanism. At layer 3 we find the routers, pieces of
+network equipment that forward packets of data based on their IP addresses
+(which are logical, not physical).
+<P>
+You might be wondering now how IP packets go from one place to another. This is
+a very good question. On a local network you don't need IP, you can communicate
+with other machines just fine using layer 2. Basically you just send a signal
+onto the wire and, say, Ethernet will take care of the rest. But if you want to
+go outside you'll want your packets to be routed. Think of routing as sending a
+packet into a different domain. One that has no awareness of your physical
+networking media. You don't really think that the machines at <A
+HREF="http://www.google.com/">http://www.google.com</A> know if you're on a
+dial-up link, DSL or a LAN connection, do you?
+<p>
+If you want to 'go outside', your packets will reach a router. A router has
+multiple interfaces and a routing table. It receives your packet and looks at
+where that packet wants to go. It then looks into its routing table to decide
+which interface its going to forward that packet to. Most of the time your
+packet will have a destination address that it doesn't know about. So it'll send
+that packet to another router that is higher up in the hierarchy. If this packet
+has to go onto the Internet, it will be sent upwards and upwards in the network.
+Until it reaches the border of the network. Here it is passed to a router that
+is connected to the Internet.
+<p>
+<h3>it's not getting any better</h3>
+Now we reach the interesting part. You see, an ISP has to connect to the
+Internet. It has to have some way of pushing IP packets to other networks. So
+we're back at the beginning and the reason I'm writing this. Pushing packets
+inside your own network is tricky enough. How to do this when you want them to
+go outside? Well, there are several ways. Most ISPs have routers at Internet
+Exchanges (IX s), also known as Network Access Points (NAPs). These Exchange
+points usually have a common media (usually an array of interconnected switches)
+that each member is connected to. Any two ISPs connected to such an IX can agree
+to exchange traffic with each other. So if there are 50 ISPs on this IX they can
+exchange traffic with each other, if they all decide that they want to. When two
+parties agree to exchange traffic they become 'peers'. So now your ISP can
+exchange traffic with all other ISPs on the switch that they have agreements
+with. But this still limits the networks they can reach to those they are
+peering with. An ISP in France isn't likely to have a peering agreement with an
+ISP in Korea.<br>
+For a list of Internet Exchange points, try <a
+href="http://www.colosource.com/ix.asp">http://www.colosource.com/ix.asp</a>
+<p>
+So now we come to the Carriers. Carriers are networks that are vast and
+intercontinental. They exchange traffic with other Carriers.  Examples of
+Carriers are KPN/QWest, MCI/Worldcom, Level3, etc. An ISP will usually sign a
+contract with one or more Carriers. The Carriers will then agree to accept
+traffic for any network and send traffic from any network to the ISP network if
+it's destination is that ISPs network.
+<p>
+So why were these ASN numbers necessary again? Well, these networks all build up
+their routing tables based upon the ASNs. At this level, the routers are not
+talking IP, they are talking another protocol, called BGP (Border Gateway
+Protocol). Using BGP these routers tell each other their ASN numbers and the
+ASNs they can reach. 
+<p>
+The routers make decisions on where they send their packets based on AS policy.
+A Carrier will accept all traffic from an ISP router, but this costs money and
+if the router can send the packets directly to the network it wants to reach via
+the IX switch, it makes sense to use the switch because it is faster and
+cheaper. But if an ISP doesn't have a peering agreement with the network it
+wants to send data to then the router on the other side of the switch will not
+accept the traffic, so it has to be sent via the Carrier.</P>
+<p>
+So at the heart of the Internet, routers don't look at IP addresses,
+they look at ASN numbers and what the best path is to send traffic
+to. Say a border router wants to send data to IP x.x.x.x. It will
+look up this address in its routing table - a table that is the
+result of BGP policy.
+<p>
+<h3>building pictures</h3>
+All this talk about AS numbers and topology views will probably have you a bit
+confused.  I promised you I would go easy on the technical jargon, and I have.
+(well, OK, I haven't really).  But the concepts we're dealing with are a bit on
+the abstract side, so a certain amount of jargon is necessary. "<i>_dose!</i>" I
+hear you say, "<i>you are boring the crap out of me!</i>" And I hear you, and so
+I present a pretty picture to liven things up a bit.
+<p>
+Consider this example of an AS topology,
+<pre>
+      AS-1 -----------                        - AS-21
+       |              \---- (Carrier)--------/    |
+       |                  /   AS-17  \            |
+     [Exchange]          /            \          [Exchange]
+     [ Switch ]         /              \         [ Switch ]
+      |     |          /                \         |
+      |     |         /                  \        |
+    AS-2   AS-3 -----/                    ----- AS-42 ---- AS-33
+</pre>
+<p>
+AS-1 can reach the rest of the ASs via the following paths:<br>
+Over the exchange switch (via peering),
+<pre>
+AS-1 - AS-2
+AS-1 - AS-3
+</pre>
+and over Transit (via the carrier),
+<pre>
+AS-1 - AS-17
+AS-1 - AS-17 - AS-3
+AS-1 - AS-17 - AS-21
+AS-1 - AS-17 - AS-42
+AS-1 - AS-17 - AS-42 - AS-33
+</pre>
+Apart from the fact that I will never be a graphic designer, the interesting
+details we can glean from the AS paths and the map are,
+<ul>
+	<li>There is no path AS-1 - AS-3 - AS-17. AS-3 peers
+	with AS-1, but does not allow AS-1 to use its network for transit.
+	<li>Neither is there a path AS-1 - AS-17 - AS-21 - AS42.
+	<li>AS-1 has two possible paths to AS-3, one is directly via peering and
+	the other is via transit (AS-1 - AS-3 and AS-1 - AS-17 - AS-3,
+	respectively).
+	<li>AS-33 has no peering arrangements, and AS-42 provides transit for it.
+	<li>AS-2 can only reach AS-1 and AS-3, but not the world outside the
+	exchange switch.
+</ul>
+The terminology can be a bit misleading sometimes (especially with the more
+esoteric constructions), but all routers that exchange routing information via
+BGP are called neighbours. The difference between 'peer' and 'transit provider'
+is that peers are equals and usually only exchange traffic that is bound to each
+others networks. A transit provider asks money for accepting your traffic and
+forwarding it to other networks.
+<p>
+Now, if you'd prefer to view some actual graphics, you can find an AS map of the
+internet at 
+<a href="http://www.caida.org/analysis/topology/as_core_network/AS_Network.xml">
+http://www.caida.org/analysis/topology/as_core_network/AS_Network.xml</a>. You
+might want to read the description to make sense of it, though.
+
+<h3>complications</h3>
+The internet edges are tricky places to work. And often the work here goes
+wrong. Line failues, misconfigurations, updates going wrong and everyone's
+favorite, one small mistake triggering a landslide of failures affecting many
+networks.
+<p>
+Some say the Internet was designed to withstand a nuclear attack. This isn't
+true. The original ARPANet was designed to withstand the complete failure of one
+or two points, but the Internet as we know it today is a completely different
+animal. Many of the original protocols and concepts are still with us (much to
+the chagrin of security engineers), but the network has evolved into something
+different. Often I hear people saying "Well, if the US-EU links go down, we'll
+just route traffic via the Mid-East to Asia to the US West Coast, right?" Wrong.
+Take a look at this picture,
+<a href="http://www.telegeography.com/pubs/maps/internet/index.html">
+http://www.telegeography.com/pubs/maps/internet/index.html</a> - the wallpaper
+version at the bottom is a higher resolution. This picture shows us the
+<b>intercontinental capacity</b> of the IP datacom networks. Do you really think
+we could compensate for the US-EU loss by "routing that traffic somewhere else"?
+That said, it's not very likely that all the fibres across the Atlantic would
+fail at the same time. 
+<p>
+If it were to happen, though, it would disrupt business communications between
+the EU and the rest of the world. It would disrupt private communications as
+well, but these are of lesser impact. Small to medium businesses would hardly
+notice, as most email and websites relevant to their operations are inside the
+EU region. There is no particular element of regional operation that requires
+the Americas to be reachable via the network. It might even improve productivity
+in many workplaces, as Hotmail, Yahoo and assorted web comics would also be
+unavailable :)
+<p>
+<h3>trusting systems</h3>
+BGP neighbours basically tell each other which networks (ASs) they can reach and
+which IP ranges are associated with these networks. This way, each router can
+build their routing tables. However, there are generally few checks enforced on
+the routes a router will accept from its neighbours. Each neighbour has to be
+explicitly configured and after that is usually considered trusted.
+<p>
+In this way it is trivial for one router to announce IP ranges that don't belong
+to it, and other routers will happily propagate this information over the
+internet. Let's say that ISP-A accidentally announces an IP range belonging to
+ISP-B. ISP-A will then receive an amount of traffic that is destined for ISP-B.
+These things happen on occasion, and are generally fixed very fast. Operator
+mailing lists will carry this information and if ISP-A doesn't fix it's
+announcement, other ISPs will start to ignore its announcements. Effectively
+isolating ISP-A.
+<p>
+These annoucements are however quickly noticed because an ISP will actively
+monitor the announcements of its address space. It is a bit different with IP
+address space that has not been assigned yet. This address space is called
+<i>murky address space</i> because it does on occasion appear in the internets
+routing tables. This is usually attributed to advanced spammers with a lot of
+networking skills wishing to hide their tracks. They break into an ISPs routers
+and adjust its BGP configuration to also announce unassigned address space
+(which they use to send SPAM) after which they remove the announcements and
+effectively disappear. These, and other advanced attacks of SPAM, scams, etc are
+attributed to the dot-com fallout, which left a lot of very skilled people with
+no jobs.
+<h3>internet size and growth</h3>
+Many people try to measure the size of the Internet in the amount of people
+connected to it. This is of course, hopeless. But from a network engineering
+point of view there are other ways of measuring both the size and the growth of
+the net. The easiest to look up are the number of ASs, the amount of routes in
+the Internet routing tables, the IP space allocated by regional registries and the
+amount of traffic flowing through the main exchange points.
+<p>
+Currently, there are approximately 25,000 ASN assignments in use. The
+total number of unique networks will be significantly lower after the enormous
+amount of corporate mergers over the last few years. When two or more companies
+merge (or one is aquired by the other), the ASNs and IP allocation for both will
+still be held by the resulting company. It is considered proper behaviour to
+merge the ASNs and announce all IP allocation under 1 ASN and return superfluous
+IP ranges to the regional registry for re-allocation. However, this is a lot of work.
+And as obtaining IP addresses in the first place requires a lot of paperwork,
+most companies prefer to hold on to what they have.
+<p>
+A full Internet routing table holds approximately 120,000 unique routes today
+(mid 2002), up from 20,000 in 1994.
+A graph showing this growth can be found at
+<a href="http://www.mcvax.org/~jhma/routing/bgp-hist.html">
+http://www.mcvax.org/~jhma/routing/bgp-hist.html</a>. This impacts not just the
+size of the Internet, but also the hardware necessary to process all these
+routes. Keep in mind that these routing tables are dynamic and change from
+minute to minute. Also, <b>each packet</b> traversing such a router has to be
+matched against the routing table (with its 120,000 possibilities) to determine
+its destination. Not just the capacity and speed of the hardware has improved to
+meet this challenge, the software performing the actual routing has become
+highly specialised to handle this. Additionally an Internet router usually has
+multiple high-speed interfaces (each usually between 100 Mbit/s and 1
+Gigabit/s).
+<p>
+So how much traffic is there on the Internet? Also an impossible question to
+answer. A good starting point is however to view the traffic statistics of some
+major Internet Exchanges. One of the major European IXs is the AMS-IX (Amsterdam
+Internet Exchange), and its statistics can be viewed 
+<a href="http://www.ams-ix.net/hugegraph.html">
+http://www.ams-ix.net/hugegraph.html</a> here. Slightly over a year ago the
+aggregate traffic via peering alone here was 2 Gbit/s, now it is almost 6
+Gbit/s.  (As viewed in the monthly graph, in the daily graph we can see spikes
+over 8 Gbit/s). In this area, MFN - Metromedia Fibre Networks / Above.net have
+a large facility servicing IP traffic, with 9 public circuits carrying traffic
+to and from this location internationally. The traffic graphs for each of these
+circuits can be found here,
+<a href="http://www.mfn.com/network/ip_networkstatus.shtm#ams">
+http://www.mfn.com/network/ip_networkstatus.shtm#ams</a>. The circuits are SDH
+STM-4 and STM-16s, 622.08 Mbps and 2.488 Gbps respectively. 
+A high level overview of its network can be found here
+<a href="http://www.mfn.com/network/ip_networkmaps.shtm">
+http://www.mfn.com/network/ip_networkmaps.shtm</a>.
+And MFN/Above.net is far from being the only Carrier in the game.
+<h3>future</h3>
+The dot-com bubble may have burst, but the Internet hasn't gone down with it. In
+fact the net is still growing every day. Some providers go down, but there are
+plenty of others waiting to sell Internet access just around the corner. Of
+course this all costs money, but people want access. Much like the advancement
+of the telecommunications industry post World War II, the Internet is bound to
+keep on growing and probably take on a different, and more pervasive form in the
+future.
+<p>
+Already there are plans on the table for interplanetary Internet communications.
+We have the Consultative Committee for Space Data Systems, <a
+href="http://www.ccsds.org/">http://www.ccsds.org/</a>, to name one. And of
+course the Interplanetary Internet Project <a href="http://www.ipnsig.org/home.htm">
+http://www.ipnsig.org/home.htm</a>, in case you were afraid of ending up on Mars
+without pornography.
+<p>
+I bet you were expecting a description of IP version 6 here, right? Sorry, I'll
+write about that once it is more widely deployed.
+<h3>the end (you made it)</h3>
+I hope that you have learned something through reading this essay. That is,
+after all, the point of my writing it in the first place. Thanks go to
+fatboyjoe for editorial feedback (feel free to blame him for the parts you don't
+like :), grugq for being grugq, mammon_ for Bastard and fravia+ for his past and
+present works.
+<p>
+I can usually be reached via various message boards, try 
+<a href="http://fravia.2113.ch/phplab/mbs.php3/mb001/">~S~ Seeker's messageboard
+</a>. I usually drop in to read some posts there.  Otherwise you could try
+dropping me a line at dose at remove-this at linux dot nl dot com.  If that
+doesn't work - ask around.
+<p>
+cheers,
+<pre><code>
+     _dose
+     05/2002
+</code></pre>
+ 
+ <hr>
+    <font size=+1><center> 
+    <a href= "basihelp.htm"><IMG  SRC= "images/medipeti.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a>
+  <br><A HREF="http://www.baidu.com/gaoji/advanced.html" target="_blank">B</a><A HREF="http://www.kartoo.com/" target="_blank">k</a>:<A HREF="http://www.alltheweb.com/advanced" target="_blank">f</a><A HREF="http://search.lycos.com/adv.asp" target="_blank">l</A><a href="http://www.altavista.com/web/text?" target="_blank">a</a><a href=http://groups.google.com/advanced_group_search target="_blank">n</a><a href="http://www.google.com/advanced_search" target="_blank">g</a><A HREF="http://www.infospace.com/info.xcite/" target="_blank">e</a><a href="http://web.archive.org/collections/web/advanced.html" target="_blank">&nbsp;</a><a href="http://fravia.2113.ch/phplab/scroll.htm" target="_blank">o</a><A HREF="ftp.htm" target="_blank">f</a><A HREF="http://www.wisenut.com/" target="_blank">&nbsp;</a><A HREF="http://search.msn.com/advanced.asp" target="_blank">m</a><A HREF="http://search.yahoo.com/web/advanced" target="_blank">y</a><A HREF="http://s.teoma.com/AdvancedSearch?q=" target="_blank">t</a><A HREF="http://www.hotbot.com/adv.asp?prov=Inktomi&tab=web" target="_blank">h</a><a href="http://a9.com/-/search/advSearch">&nbsp;</a>
+
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

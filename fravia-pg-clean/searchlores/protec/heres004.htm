@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>heres004</title>
+<STYLE type="text/css"> A:link { color: #02F } A:visited  { color: #808 } A:hover { color: purple; background: #AFB } </STYLE></head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><h1>PIQ CONSIDERATIONS</h1>
+
+<H4><CENTER><I>by +Heres</I><BR>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/hcu1.gif" ALT="hcu1" ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0><br>
+(16 September 1997)</CENTER></H4>
+
+<CENTER><HR><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER=
+"0" VSPACE="0" HSPACE="0"> Courtesy of Fravia's <a href="https://searchlores.nickifaulk.com/protec/searchlores.org">searchlores org</a><BR>
+<HR> <I>Well, an interesting answer... we await other opinions on this: is the PIQ idea, for a tough protection, a GOOD idea, or rather an impossible path?</i></center><hr size=6>
+
+
+
++HCU's special Project X: How to protect better<br><a href="https://searchlores.nickifaulk.com/protec/protecti.htm"><IMG SRC="https://searchlores.nickifaulk.com/protec/tough.gif" ALT="tough" ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br>
+
+
+
+<hr>
+
+[You should use Courier New 10 in order to view and print correctly this essay]
+
+</center>
+
+<hr>
+
+<pre>
+
+Ok... I have read the essay by Camel Eater about the Prefetch Instruction Queue, but
+I have some doubts on his usage in protection schemes. Around three year ago I wrote
+a little program for the PIQ size determination... This is the source:
+
+; FILENAME: prefetch.asm
+; AUTHOR: +Heres (1994)
+; ==================================================
+; TASM /m2 prefetch
+; TLINK /t prefetch
+;
+                .MODEL TINY             ; .COM file
+                .CODE
+                ORG    100h
+CODICE          PROC   NEAR
+                mov    al,90h
+                mov    bl,11
+                lea    di,conto
+                mov    cl,22
+                rep    stosb
+;
+conto:          inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+                inc    bx
+;
+                lea    dx,testo1
+                mov    ah,09h
+                int    21h
+                cmp    bx,11
+                ja     more
+                inc    bx
+                lea    dx,testo2
+                jmp    write
+more:           cmp    bx,33
+                jb     normal
+                dec    bx
+                lea    dx,testo3
+write:          int    21h
+normal:         mov    ax,bx
+                mov    cl,10
+                div    cl
+                add    ax,3030h
+                mov    dx,ax
+                mov    ah,02h
+                int    21h
+                mov    dl,dh
+                mov    ah,02h
+                int    21h
+                lea    dx,testo4
+                mov    ah,09h
+                int    21h
+                int    20h
+testo1          db     'Your CPU seems to have $'
+testo2          db     'less than $'
+testo3          db     'more than $'
+testo4          db     ' bytes of PIQ.', 13, 10, '$'
+CODICE          ENDP
+                END    CODICE
+
+This program works only on processors before the Pentium family, because the Intel
+Pentium processor updates the PIQ if the corresponding memory is changed, and not
+only if a JMP, CALL, RET, etc. istruction is executed... But if you have a processor 
+of the 486 family, you can check the size of his PIQ, using this little program. On
+a Pentium processor the result is always "less than 12 bytes" because the PIQ is
+constantly updated...
+
+So I can not think that this protection tric is yet useful today.
+</pre>
+<b><em>+Heres</em></b>, September 14th 1997<hr>
+<font color=green> (c) +Heres 1997. All rights reversed</font><hr>
+<CENTER><I>You are deep inside fravia's 
+engineering, choose your way out:</i></center>
+
+
+<P><CENTER>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0"
+VSPACE="0" HSPACE="0"><A HREF="https://searchlores.nickifaulk.com/protec/protecti.htm">Back to Our protections </A><br>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0"
+VSPACE="0" HSPACE="0"><A HREF="index.html">homepage </A>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif"
+ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"> <A HREF="https://searchlores.nickifaulk.com/protec/links.htm">links
+</A><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALT="red" ALIGN="BOTTOM" WIDTH="13" HEIGHT="13"
+BORDER="0" VSPACE="0" HSPACE="0" NATURALSIZEFLAG="0"> <A HREF="https://searchlores.nickifaulk.com/protec/noanon.htm">anonymity
+</A><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A
+HREF="https://searchlores.nickifaulk.com/protec/orc.htm">+ORC </A><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0"
+VSPACE="0" HSPACE="0"><A HREF="https://searchlores.nickifaulk.com/protec/student.htm">students' essays </A><IMG SRC=
+"https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A HREF="https://searchlores.nickifaulk.com/protec/tools.htm">tools
+</A><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A
+HREF="https://searchlores.nickifaulk.com/protec/cocktail.htm">cocktails </A><BR>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A
+HREF="https://searchlores.nickifaulk.com/protec/academy.htm">academy database </A>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A
+HREF="https://searchlores.nickifaulk.com/protec/ideale.htm">antismut </A><IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER=
+"0" VSPACE="0" HSPACE="0"><A HREF="https://searchlores.nickifaulk.com/protec/searengi.htm">search_forms </A><IMG SRC=
+"https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A HREF="https://searchlores.nickifaulk.com/protec/info.htm">mail_fravia
+</A><BR>
+<IMG SRC="https://searchlores.nickifaulk.com/protec/bulletr.gif" ALIGN="BOTTOM" BORDER="0" VSPACE="0" HSPACE="0"><A
+HREF="https://searchlores.nickifaulk.com/protec/legal.htm">is reverse engineering legal? </A></FONT></CENTER></P>
+
+<P><CENTER><FONT SIZE=-1><HR></FONT></CENTER>
+</BODY>
+</HTML>

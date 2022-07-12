@@ -1,0 +1,124 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>Inside Proxomitron - Proxy Checking</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html;
+charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and
+advanced search techniques for people interested in finding any
+kind of information on the web. Here are informations, documents,
+links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how
+to search, search techniques, hints and tips for searching the
+web, How do I learn to search?, Advanced Internet searching, How
+do I search the web?, fravia+">
+<meta name="author"		content="Oncle Faf">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+   <font color=blue size=+3> Oncle Faf goes inside proxomitron </font>
+          <br><br>
+          published at      <a href="http://www.searchlores.org">www.searchlores.org</a> in June 2004
+
+<br><br><hr width=55%><br>
+<img src="images/of.gif">
+
+<p><b>Hey kids! I hope you all have a wonderfull time exploring the World Wild Web. </b></center>
+<hr>
+<p><font size="4">Today, we will learn how to install and verify a proxy with wonder-magic <a target=_top href="http://www.searchlores.org/zipped/ProxN44.zip">Proxomitron</a>.  </font>
+
+<p>
+Let us first understand what a proxy server is. According to <a target=_top href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a>, the free encyclopedia, a <b>proxy server</b> is a computer network service which allows clients to make indirect network connections to other network services. A client connects to the proxy server, then requests a connection, file, or other resource available on a different server. The proxy provides the resource, possibly by connecting to the specified server, or by serving it from a cache. In some cases, the proxy may alter the client's request or the server's response for various purposes.
+<br>
+A common proxy application is a <b>caching Web proxy</b>. This provides a nearby cache of Web pages and files available on remote Web servers, allowing local network clients to access them more quickly or reliably.
+<br>
+When it receives a request for a Web resource (specified by a URL), a caching proxy and looks for the resulting URL in its local cache. If found, it returns the document immediately. Otherwise it fetches it from the remote server, saves a copy in the cache and returns it to the requester. The cache will usually have an expiry algorithm which flushes documents according to their age, size, and access history. Web proxies can also filter the content of Web pages served. Some censorware applications -- which attempt to block offensive Web content -- are implemented as Web proxies. Network operators can also deploy proxies to intercept computer viruses and other hostile content served from remote Web pages.
+<br>
+Proxies can also operate at a lower level on the protocol stack. <b>Network address translation</b>, or NAT, is a method for proxying TCP connections and UDP datagram exchanges. NAT is also known as <i>IP <a target=_top href="http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&word=masquerading">masquerading</a></i>. Both Web and other network proxies have been abused by spammers and other network abusers. 
+<br>
+An <b>open proxy</b> is a proxy server which will accept client connections from any IP address and make connections to any Internet resource. Abuse of open proxies is currently implicated in a significant portion of email spam delivery.
+<br><p>
+<hr width=20% align="left">
+Next step is to find usable proxies on the web, an easy task, thanks to good friend Fravia+'s searching lessons. Hey kids, ol' Fravia+ actually gave us not one but several huge proxy lists on his site. Can you find them with <a target=_top href="http://www.searchlores.org/cgi-bin/search?query=3128">Namazu</a>? 
+<p> 
+<hr width=20% align="left">
+Now, let's install a proxy. For this example we will use this one:
+<br><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>65.161.73.34:80
+</font></strong><br>
+We first open Proxomitron, press the <input type=submit value="Proxy"> button to reach the External Proxy Selector, copy and paste the proxy, then press OK. It's done. 
+<p> 
+Now, press the <input type=submit value="Test"> button to verify it. 
+<br>The Message Log window records these transactions :
+<br>
+<table border cols=1  bgcolor="#000000" ><tr>
+<td><tt><font color="#49E1E9"><b>Testing 65.161.73.34:80</font></b>
+<br><tt><font color="#49E1E9"><b>Waiting for remote proxy's reply</font></b>
+<br><tt><font color="#49E1E9"><b>Proxy IP = 202.234.257.007</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>GET / HTTP/1.0</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>Pragma: no-cache</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>User-Agent: Mozilla/2.0 (Macintosh;
+I; PPC)</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>Connection: keep-alive</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>Via: 1.0 CMU-CE1</font></b>
+<br><tt><font color="#FFFFFF">&nbsp; ><b>X-Forwarded-For: 202.234.257.007</font></b>
+<br><tt><font color="#FFFF00">&nbsp; ><b>HTTP/1.0 200 Proxy test OK</b></font>
+</td></tr></table>
+<br>
+What kind of information do we have now? <br>
+The proxy is alive, it tests OK. While<br>
+<b>X-Forwarded-For: 202.234.257.007</b> (Those numbers are mine, yours will be different)<br>
+ and <br>
+<b>Proxy IP = 202.234.257.007</b><br>
+means that the proxy is <b>transparent</b> because it reveals my IP. <br><i>By the way, kids, do you know how to find  <u>your own</u> Internet Provider number? That's the unique number that identify you to every place you visit on the World Wild Web. Sometimes, you would not be too proud to tell where you've been out there. But your own computer does it each time you visit a website, kids, every single time.</i><br> 
+And finaly<br>
+<b>Pragma: no-cache</b> <br>
+reveals that this proxy is not caching the pages we visit with it.
+In conclusion, this proxy is <u>useless</u> because it is not anonymous and it does not speed up our connection.
+<p>
+But hey kids, at least we have learned how to install and verify a proxy with Proxomitron all by ourself, and <b>that</b> is great!
+<p>
+Last as a little warm up, your task is to find out which one of those proxies are still usefull.
+<pre>
+sparc1.villagenet.com:80
+bess-proxy.nksd.wednet.edu:80
+bap-www.framfab.de:81
+207.35.39.42:81
+headend.cablenet-va.com:81
+128.242.227.61:3128
+64-59-145-221.ivideon.com:3128
+correo.novatronic.com:3128
+202.224.79.122:8080
+mail.alessandroronzitti.net:8080
+constitution.mildenhall.af.mil:8080
+bess-proxy.eclipse.net:8901
+155.42.48.192:65506
+134.241.162.127:8000
+12.27.246.247:24759
+</pre>
+ 
+Next time we will see how to verify automatically a long proxy list.
+
+<hr>
+<table><tr>
+<td><a href="https://searchlores.nickifaulk.com/oncle-faf&#32;@&#32;altern&#32;.&#32;org"><img src="images/of2.gif"></a></td>
+<td align=top><center><i>"Only morons 'just do it' <br>without <a target=_top href="http://www.searchlores.org/zipped/ProxN44.zip">Proxomitron</a>."</i><br>
+</b></center></td>
+</tr></table><br><hr><center> 
+Back to <a href="index.html">Portal</a>
+&nbsp; &nbsp;
+Back to the <a href="pro_essa.htm">Essays about proxying</a>    
+&nbsp; &nbsp;
+Back to the <a href="noanon.htm">Anonymity section</a>
+</body>
+</html>

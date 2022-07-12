@@ -1,0 +1,637 @@
+<html>
+
+<head>
+
+   <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+   <meta NAME="GENERATOR" CONTENT="SpaceBison">
+
+   <meta NAME="Author" CONTENT="none of your business">
+
+   <meta NAME="KeyWords" CONTENT="hack, patch, tribute, fravia+, Scott R. Lemon, Shonen Knife, bison">
+
+   <title>Hidden function in Proxomitron</title>
+
+</head>
+
+<body TEXT="#001010" BGCOLOR="#C0C0C0" VLINK="#405040">
+
+ 
+
+<table BORDER="0" CELLPADDING="5" WiDTH="800">
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#898030">
+
+<center><a HREF="index.html" ><img SRC="images/bulletr.gif"  BORDER="0" ALIGN="BOTTOM" WIDTH="13" HEIGHT="13"></a></center>
+
+</td>
+
+<td BGCOLOR="#C0C0C0">
+
+<center>
+
+<table CELLPADDING="1" CELLSPACING="1" BORDER="1" HEIGHT="22" WIDTH="100%">
+
+<tr><td>
+
+<center><font SIZE="+2">Hidden function in Proxomitron</font><br>
+
+        <font SIZE="+1">In Memoriam Scott R. Lemon</font>
+
+</center>
+
+    </td>
+
+    <td>
+
+<center><a href="pro_essa.htm"><IMG
+SRC="images/proxpeti.jpg"
+ALT="Petit image" BORDER="0" HEIGHT="43" WIDTH="114" ALIGN="CENTER"></a>
+
+<br>
+
+<!-- <font color="gray">Cracking the<br> concrete of<br> dumbness</font> //-->
+
+</center>
+
+</td></tr></table>
+
+by
+
+<font SIZE="+3">None of your business</font>, <br>(slightly edited by <a href="info.htm">fravia+</a>)<br>
+<font COLOR="#890000">Re-edited at the beginning of November 2006</font><br>
+</center>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td BGCOLOR="#898030"><font COLOR="#898030"><font SIZE="-1">f</font></font></td>
+
+
+<td BGCOLOR="#898030">
+
+<center>Courtesy of Fravia's <a href="http://www.searchlores.org">searchlores</a></center>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#898030">
+
+<center><font COLOR="#e0e0e0"><font SIZE="-1"><b>f<b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0"><i>
+Knowledge is knowledge's reward! </i></td>
+
+</tr>
+
+
+
+<tr>
+
+<td BGCOLOR="#898030"><font COLOR="#898030"><font SIZE="-1">f</font></font></td>
+
+
+
+<td BGCOLOR="#898030">
+
+<center><b>There is a crack, a crack in everything</b></center>
+
+
+
+<center><b>That's how the light gets in</b></center>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#2C142B">
+
+<center><font COLOR="#e0e0e0"><font SIZE="-1"><b>Rating</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0"><font FACE="Courier New">(x)<b>Beginner</b> ( )<b>Intermediate</b>
+
+( )<b>Advanced</b> ( )<b>Expert</b> </font>
+
+<br><i>You should understand it with a half brain</i> </td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#890000">
+
+<center><font COLOR="#e0e0e0"><font SIZE="-1"><b>Title</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0"><font SIZE="+2">Finding and finding out a "hidden" function</font>
+
+<br><font SIZE="+2">in Proxomitron, by using basic knowledge </font>
+
+<br><font COLOR="#0B7FC1">Written by None of Your Business </font></td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#FF7F21">
+
+<center><font color="#e0e0e0"><font SIZE="-1"><b>Intro</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0">
+
+<h3>
+
+Impressum</h3>
+
+Well, the thing I am talking about needs a very basic knowledge,
+
+and the need to publish it makes me sad. I simply can't believe 
+
+that I am the only person from the billions of computer-users who 
+
+found this because I'm aware of my own abilities. If everybody is 
+
+more stupid or less interested than me it is a lot worse world than 
+
+I thought. And I had no high opinions in the first place. Also I'm 
+
+not sure if I have any right to publish it, while the author - Scott - 
+
+never did it. I'm watching the knowledge scene for nearly ten years 
+
+now, and I feel it even worse than a windmill fight. You think you are 
+
+spreading knowledge, but the tiny rays of light falling to the huge black 
+
+holes of ignorance. "I don't know an I don't care...". Most of you guys 
+
+don't even need this knowledge. It needs work to use it. Run before 
+
+the command line tools grabs you! Fucking lazy bunch! Go fetch a 20MB mass 
+
+downloader and be happy with it...<br>
+
+I'm well pissed off, so it is quite possibly a long impressum with a very 
+
+short "essay". But I owe F+ as much as to pass him the decision - if he still 
+
+want to use this little work in his (yes our) windmill fight, then so be it.<br>
+
+Also -if I may note -the things written here could properly be called 'hacks', some 
+
+parts maybe cracks, therefore I am maybe a hacker or a cracker (or maybe not). It
+
+ is all about <i>circumventing your own disabilities by finding ways to realize
+
+ your own wishes.</i>
+
+<p> I declare here that in the following derivative work, I kept myself to the spirit
+
+ of the original program, and the wishes of Scott R. Lemon - so <font color=blue>absolutely no 
+
+ bison was harmed in the process</fonT>.</p>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#B04A53">
+
+<center><font color="#e0e0e0"<font SIZE="-1"><b>Tools Required</b></font></font></center>
+
+</td>
+
+<td BGCOLOR="#C0C0C0"><b>Filemon</b>
+
+<br><b>Fileviewer/editor (optional, try Hiew or F3 in any OFM)</b>
+
+<br><b>Sed (well worth to learn)</b>
+
+<br><b>Brain (absolutely neccessary)</b>
+
+<br><b>Willpower (absolutely necessary)</b>
+
+<p>Of course, you may choose any other tools you like. </td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#B600B6">
+
+<center><font color="#e0e0e0"><font SIZE="-1"><b>Program History</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0">Proxomitron is THE ONLY SINGLE PROGRAM which could motivate a 
+
+decent person decide to keep a MS operetta system running. We need 4.4 or 4.5 for 
+
+this research.</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#888888">
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">T</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">H</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">E</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">&nbsp;</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">E</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">S</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">S</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">A</font></font></center>
+
+
+
+<center><font COLOR="#C0C0C0"><font SIZE="+3">Y</font></font></center>
+
+</td>
+
+
+
+<td VALIGN="TOP" BGCOLOR="#C0C0C0">
+
+
+<p>First step - Search</p>
+
+<p> It  always pays out,  even with a minimal preliminary knowledge, if you try to
+
+explore <u>anything</u> around you. In our case it mostly means files on computers. With 
+
+a crap like Microsoft's OS-es, you can only guess a file's content by looking
+
+ at its extension - that is what these OS themselves do (instead of checking the 
+
+header, for example, like any decently programmed thing would do). Rename any of your 
+
+mp3 to text, and look what happens (try the same -if you never did-, with some
+
+ <a href="linux.htm">Linux live-distro</a>, to see the difference). It's good to have a decent filemanager
+
+and also good - if not much deeper - that you regularly use its file-viewing functions.<br>
+
+ Try this function on the Proxomitron executable. Of course you are already familiar
+
+with Proxomitron's matching commands, because you have gone through the helpfile. Let's 
+
+see if in the binary  there is any  string  similar to the ones of those commands.<br> Look 
+<u>inside</u> the 
+
+file, and search -for example- for "<font color=blue>ALERT</fonT>". There is one hit, and BINGO! 
+<br>Around it you can see
+
+ALL the commands.</p>
+<p>Well, if you look around then you perhaps  figure that you actually got 
+
+<i>more</i> commands than the one known. There is a word you can't find in the docs - "<font color=blue>EXEC</font>". <u>According to its 
+
+context it must be another command</u> - an undocumented one!
+</p>
+<p>Second step - Research</p>
+<p>Let's figure out what this function would be doing. Pick some common 
+
+programming language (C, PHP, Python, Tcl...), and search its docs. You will soon find 
+
+out that in those contexts <font color=blue>exec()</font> is how you may call arbitrary programs to help out your 
+
+own. Like in PHP: if you wan't to create multiple/nested directory structure ("directory" - 
+
+read in newspeak for the young ones "folder"), you need to write your own lot of code.<br>
+
+PHP's default function only create one at a time (AFAIK not the newer ones). BUT with exec, 
+
+you can call the directory-creating function/program <u>of the host OS</u>, and you only need 
+
+to pass it its own parameters - PHP outsources the job.
+</p>
+
+<p>Quick Summary</p>
+
+<p> So - there is an undocumented function in Proxomitron, able to run arbitrary programs 
+
+by matching a filter! Well if this works, then obviously there is an ocean of new possibilities to 
+
+sail on. <font color=blue>Seekers Ahoy!</fonT> 
+</p>
+
+<p>Third Step - proof of concept: codes</p>
+<p>By trying out a little this-and-that, and running Filemon in the background, one finds 
+
+that "$EXEC" works only in the replacing part - so it is still difficult/worthless to exploit
+
+it (I guess). See the next code snippet - A Proxomitron filter:
+</p>
+<pre>
+Name = "EXEC direct"
+Active = FALSE
+Multi = TRUE
+URL = "*"
+Bounds = "&lt;html&gt;"
+Limit = 256
+Match = "&lt;html&gt;"
+Replace = "&lt;HTML&gt;$EXEC(scandisk.exe)" 
+</pre>
+<p>If you wan't to map the behaviour of this function, try EXEC onto a dummy. Like alice - see 
+
+Filemon's log:</p>
+<pre>
+( 00:37:46	Proxomit:FFFBEABF )
+FindOpen    C:\PROGRAM FILES\PROXOMITRON\ALICE.*  NOTFOUND
+FindOpen    C:\WINDOWS\SYSTEM\ALICE.*             NOTFOUND
+FindOpen    C:\WINDOWS\ALICE.*                    NOTFOUND
+FindOpen    C:\WINDOWS\ALICE.*                    NOTFOUND
+FindOpen    C:\WINDOWS\COMMAND\ALICE.*            NOTFOUND
+Attributes  C:\PROGRAM FILES\PROXOMITRON\ALICE    NOTFOUND
+Attributes  C:\WINDOWS\SYSTEM\ALICE               NOTFOUND
+Attributes  C:\WINDOWS\ALICE                      NOTFOUND
+Attributes  C:\WINDOWS\ALICE                      NOTFOUND	
+Attributes  C:\WINDOWS\COMMAND\ALICE              NOTFOUND
+
+</pre>
+
+(You'll see this differently in all different flavours of Windows. There <i>is</i> a lot
+
+ to learn from it, btw... but I'll let you work on your own a little :-) 
+<br>So without changing anything (like the path), IF we have
+
+ an executable somewhere on the places we see in Filemon - Proxomitron will be willing to
+
+ start it. Of course now all of you are aware and begin to guess 
+how many things something lik ethis can accomplish. Our
+
+ long-beloved command-line tools  can now be integrated to our powerful 
+<a href="tuttiope.htm">browsers</a>, through Proxomitron, 
+
+ extending their functions. 
+<br>You should start wget -or curl- to spider from a given webpage.
+
+ Or pass to mencoder a "streamed" media, in order to save it in any 
+different format to your HD. Perhaps
+
+ use this for remote administration, making your own html from pdfs 'on-the-fly'.<br>
+
+ IF you are willing, you could build an output formatting frame, and watch all the 
+
+ outputs/logs inside your browser - already html formatted (or if you lazy, you can just put it between
+
+ 'pre' tags).
+<br> Well all these nice exploits need some code, code that has to be written, so? 
+What are you looking for?
+<br>
+ Go, START WORKING ON IT!
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#00B645">
+
+<center><font color="#e0e0e0"><font SIZE="-1"><b>Ob duh</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0"><i>I wont even bother explaining you that you should
+
+USE YOUR OWN BRAIN to explore this kind of stuff if you intend to use it 
+
+(I mean your brain) in different manners than the allowed ones.<br> 
+
+Also don't forget some common sense - don't harm anybody with the help of this 
+
+hidden function... because if you do, then maybe on a silent still night I'm coming for you...<br>
+
+Farewell.</i> </td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#2AB6B6">
+
+<center><font color="#e0e0e0"><font SIZE="-1"><b>Final<br>Notes</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0">
+
+<h4>...</h4>
+<p>...</p>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#10A675">
+
+<center><font color="#e0e0e0"><font SIZE="-1"><b>Add-on</b></font></font></center>
+
+</td>
+
+
+
+<td BGCOLOR="#C0C0C0"><a name="anchoradda"><h3>Some technical additions</h3><br>
+
+<p>Proxomitron's exec function passes no parameters. So you can't <i>simply</i> pass an url
+
+ to wget or whatever - it takes the first word (hopefully wget), and runs the program
+
+ in itself.<br>
+Not that this could bother anybody with a half brain&nbsp;:-)<br> There are at least two
+
+ solutions to this problem. One of them is patching the binary, after some reversing. The
+
+ other is to use Proxomitron's ability to write to file(s), and make it generate a batchfile with 
+
+ all with the fancy parameters, then run that one. I picked the second, and made a kinda
+
+ <u>Proxomitron-Shell</u>. See it for yourself, but remember - programs wich needs further input
+
+ may be waiting you with an open console (without correct handling - read the batch-faq).<br>
+
+ The code is mostly proof-of-concept, I made it with a modified setup - the config-set
+
+ contains only my filter - it may get messed up if you use a big config file. Also the thing
+
+ uses frames - check your rules if you merge this filter to your own ones. It starts up with an 
+
+error - because there is no input in the form, but...   ...damn I don't care! Try it, look
+
+ at it, start working on it, or forget it. If nobody has missed this until now, then maybe nobody in fact 
+needs it.
+<br>
+ There is a half-made command-history - youdid read it. Now go and finish it!<br>
+<a href="zipped/Proxo_shell.zip">Proxomitron Shell</a>
+<br>  
+
+ Part of my solution is a sed version - sedmod, just fetch it from the net if needed. If you
+
+ decide to cripple this undocumented function, you should try
+<pre>
+ sedmod "s/EXEC/NULL/g" Proxom~1.exe>Patched.exe
+</pre>
+
+ With other versions of sed you can hex-patch also, and you can do it also with Proxomitron itself. If you
+
+ have dealt with the problem of making Proxomitron filtering a binary, by changing its 
+
+ MIME-type or by renaming it to html, the next filter will just do the thing:
+
+<pre>
+ Name = "Patching Proxomitron's undocumented EXEC to nothing"
+ Active = TRUE
+ URL = "*Program%20Files/Proxomitron/Proxomitron.htm"
+ Limit = 23
+ Match = "(([%00])\1EXEC)\2$ALERT(This filter's function is to cripple the undocumented\n
+ 'EXEC' funcion from Proxomitron 4.4 or 4.5.\n
+ It is assumed that you load your file with \p=*Program%20Files/Proxomitron/Proxomitron.htm")"
+ Replace = "\1\1\1\1\1"
+</pre>
+
+
+</p>
+<p>Well. all right - there is another proof-of-concept code built on this function. A vigenere
+
+ decipher. Just an example. It is ugly, but it works. Anybody can modify it in order 
+to use something harder, like PGP.
+<br>
+So If you want you can have a PGP-hardened messageboard. 
+
+<a href="zipped/Cryptomitron.zip">Vigenere decipher using Proxomitron</a>
+
+</p>
+<p>
+Appendix:<br>
+<a href="zipped/sedmod10.zip">Sedmod - you need it for both codes examples</a><br>
+<a href="zipped/vigenere.zip">Command line vigenere, you need it to use the second code example</a>
+</p>
+<br>(By Winston -- Feedback:  
+email:tune_proxomitronIGNOREUPPERCASE____AT____IGNOREUPPERCASEhotmail.com)
+<br>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td VALIGN="CENTER" BGCOLOR="#898030">
+
+<center><font COLOR="#e0e0e0"><font SIZE="-1"><b>way out</b></font></font></center>
+
+</td>
+
+<td BGCOLOR="#C0C0C0">
+
+<hr width=66%><center>
+
+<center><a href="pro_essa.htm">
+<IMG SRC="images/proxpeti.jpg" ALT="Petit image" BORDER="0" HEIGHT="43" WIDTH="114" ALIGN="CENTER">
+</a></center>
+
+
+
+<center><font COLOR="#808080">Back to Proxomitron</font> 
+
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300">
+</td></tr></table> (c) III Millennium: 
+<font color=blue>[</font><u>fravia+</u><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved
+
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+<hR>
+
+</td>
+
+</tr>
+
+</table>
+
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,712 @@
+<html>
+<head>
+<title>find_the_command.htm: How to find using find and how to locate using locate&nbsp;:-)</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<meta name="generator" content=
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content= "This site teaches basic and advanced search techniques for people interested in de-streaming any kind of information on the web. Here are informations, documents, links, etc. related to de-streaming">
+<meta name="keywords" content= "searching, de-streaming, combing, klebing, how to search, how to de-stream, de-streaming techniques, hints and tips for de-streaming, How do I catch a stream?, Advanced Internet de-streaming, How do I de-stream?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright" content="Copyright(c) 1952-2032 fravia+">
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#214131" alink=
+"#405040" vlink="#8850AA">
+<center>
+<div align="center">
+<table border="1" width=88%><TR><TD width="63%" colspan=2><FONT size=-1 align="left">&nbsp;  <A target="_blank"  
+      href="index.html">portal</A> &#8594; <a target="_blank" href="linux.htm">linux</a>  &#8594;  
+      find_the_command.htm</FONT>
+
+<TD width="37%" align=right><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</TD></TR></table>
+<p align="center"><strong><font size="+5"><u>Find, the command &nbsp; (Searching inside)
+</u></font></strong></p>
+</div>
+<table width="98%" align="center" border="0">
+<tr>
+<td width="66%" colspan=3>
+<center>
+<p align="center"><font size="+4">How to find using find</font></p>
+<p align="center"><font size=
+"+2"><em>...and how to locate, list and grep whatever you need whenever you need it</em></font><br>(by fravia+, 
+first published at <a href="http://www.searchlores.org">searchlores</a> in April 2007 - work in fieri)</p>
+</td></tR><tr><td>
+<table border="0">
+<tr>
+<td>
+<div align="center"><a href="find_the_command.htm#Intro"><font size=
+"+2">Introduction</font></a></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="find_the_command.htm#commands"><font color="#FF0000" size=
+"+2">The basic commands of an "inside searcher": locate, grep and find</font></a><hr width=55%></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center">LOCATE: <a href="find_the_command.htm#locate"><font size=
+"+2">Locating stuff</font></a><hr width=55%></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center">GREP: <a href="find_the_command.htm#grep"><font size=
+"+2">Grepping the grok out of it</font></a><br><a href="find_the_command.htm#grepfile"><font size=
+"+2">Searches for a String  with grep</font></a><hr width=55%> </div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center">FIND: <a href="find_the_command.htm#findingfiles"><font size=
+"+2">Finding files</font></a> <br><a href="find_the_command.htm#findifile"><font size=
+"+2">Finding Files by Searching with find</font></a>   
+ <bR> <a href="find_the_command.htm#findtime"><font size=
+"+2">Finding Files  using timestamps</font></a><hr width=55%><br></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="find_the_command.htm#related"><font size=
+"+2">FIND-Related searching tricks</font></a></div>
+</td>
+</tr>
+
+<tr>
+<td><br><br>
+<div align="center"><font size=
+"+2">Related Sections</font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="linux.htm"><font size=
+"+1">going to GNU/Linux</font></a>  &nbsp; &#8596; &nbsp; <a href="useful_findings.htm"><font size=
+"+1">useful findings</font></a> &nbsp; &#8596; &nbsp;
+<a href="linux_games.htm">Linux_games</a>
+
+
+</div>
+</td>
+</tr>
+</table>
+</center>
+</td>
+<td width="105">
+&nbsp;
+</td>
+<td width="282">
+<center>
+<p><a href="linux.htm"><img src="images/ubuntu_sticker.jpg" alt="Poser" width="334"
+height="500" border="0"></a></p>
+<p><font size="+1">Version <font color="blue">0.17</font>:
+<font color="blue">April</font>&nbsp;2008</font></p>
+</center>
+</td>
+</tr>
+</table>
+<br>
+<div align="center"><a name="Intro" id="Intro"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Introduction</font></center>
+</td>
+</tr>
+</table>
+<p align="center">How do we find, locate, search, grep, obtain, conquer, smash, violate, assaporate, individuate the stuff INSIDE OUR OWN HARDDRIVES? </p>
+<font size=+1>
+Well, we could use dedicated (and fairly good) programs like <a href="http://www.mythicsoft.com/agentransack/">Agent ransack</a> for windows or 
+<a href="http://en.wikipedia.org/wiki/Beagle_(software)">Beagle</a> for <a href="linux.htm">GNU/Linux</a>. However Beagle-type 
+applications (<a href="http://www.gnome.org/projects/tracker/">tracker</a> 
+comes to mind as a quicker alternative)   
+are all known to hog system resources: it is MUCH better and quicker to 
+use ad hoc commands. In fact Beagle is more or less just a nice graphical interface for
+<prE>find . -exec grep "pattern" {} \;</pre>
+
+ Graphical interfaces are nice and easy and dandy, but they tend to get awfully in the way whenever you have to perform any task 
+really quickly and effectively, as anyone that uses <a href="linux.htm">GNU/Linux</a> knows.<br> 
+In fact, in many cases command line searches are MUCH more powerful and time-sparing than their graphical mouse-enabled equivalents. 
+<br>This page tries to explain to all  
+searchers how to  quickly search inside their own hard disk(s) (and hopefully find) whatever they are looking for. A snippet of cosmic power for anyone 
+interested. Of course a thorough read of the realtive "man" files would give you even more knowledge and power (if correctly understood 
+and applied and experimented). But -alas- few are those that nowadays have still 
+the time and the inclination to learn (and experiment) using man files. 
+<br><br></font>
+<div align="center"><a name="commands" id="commands"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">The basic commands of an "inside searcher":  <a href="find_the_command.htm#locate">locate</a>, <a href="find_the_command.htm#grep">grep</a> and <a href="find_the_command.htm#findingfiles">find</a></font></center>
+</td>
+</tr>
+</table><font size=+1>
+<p align="left">
+The most important search related commands inside a GNU/Linux system  are the following ones:</p>
+<font size=+2>
+  <a href="find_the_command.htm#locate">locate</a>  &nbsp; <a href="find_the_command.htm#grep">grep</a> &nbsp; <a href="find_the_command.htm#findingfiles">find</a> 
+  <br></font><center>
+<br><table border="1" width=88%><tr><td>
+If you insist in using  
+<a href="bangla.htm">windows</a>, there   are still - fortunately -  (almost) equivalent commands. Such commands are anyway much better than 
+that lame and sniffing graphical "find" command you can access from the start button. <br>
+That evil "find" is just awful spyware which will send directly to Microsoft <u>tons of data</u> about whenever and whatever you are searching 
+onto your own harddisk. 
+<br>As a general graphical interface windows users have the free and good
+<a href="http://www.mythicsoft.com/agentransack/">Agent ransack</a>, that will cut most mustard, 
+yet for more specifical commands I would suggest 
+<a href="http://www.uku.fi/~jmhuttun/english/softwares.shtml">windows locate</a> and  
+<a href="http://gnuwin32.sourceforge.net/packages/grep.htm">windows grep</a>. As for a real useful 
+"<font color=blue>find</font>", there is indeed one: microsoft has stolen  
+a unix-clone "find" that you can use only from the command line (<font color=blue>start => run => cmd</font>) using the following syntax: 
+<pre>find [/v] [/c] [/n] [/i] "string" [[Drive:][Path]FileName[...]]</pre>
+where<br>
+
+/v : Displays all lines that do not contain the specified string<br> 
+
+/c : Counts the lines that contain the specified string and displays the total<br> 
+
+/n : Precedes each line with the file's line number<br> 
+
+/i : Specifies that the search is not case-sensitive.
+</td></tr></table></center>
+
+ 
+<br>
+We'll explain first locate and grep, and then delve into find. Note that in the following all GNU/linux commands with 
+a preceding 
+<font size="+2" color="#FF0000">#</font>
+<strong>must</strong> 
+be executed as root (or sudo in <a href="linux.htm">Ubuntu</a>), while those with a <font size="+2" color="#FF0000">$</font> do not 
+require root's privileges. Windows conditioned readers can still follow along with the equivalent commands listed above. 
+<br><br>
+OK: the real problem is that some of these useful commands have a command line syntax that comes straight from the Giurassic period. 
+This notwithstanding, it is still worth 
+learning such syntax by heart... as you'll quickly realize in the following&nbsp;:-P
+
+<br><br>
+<div align="center"><a name="locate" id="locate"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Locating stuff</font></center>
+</td>
+</tr>
+</table>
+</center>
+<p align="left">
+Locate is the easiest command <u>for finding <font color=blue>filenames</font></u>. It maintains its own database of files on your system, 
+so it's blazing fast. Some distros install with a cron job that rebuilds the 
+locate database regularly. However you do it, it must be updated 
+periodically:
+<prE># updatedb</pre>
+or
+<pre># locate -u</pre>
+(<font color=blue>-u</font> = Create slocate database starting at path /)<bR>
+<br>Once you create/update the central database, 
+ finding files with locate is then really easy:
+
+<pre>$ locate filename</pre>
+
+Here a case-insensitive search:
+
+<pre>$ locate -i filename</pre>
+
+Typically locate will return hundred zillions hits. Locate and grep 
+together are the solution:
+
+<pre>$ locate -i readme | grep -i image</pre>
+
+Or try this:
+<pre>locate *.mp3 | grep /path_to/Music_collection > ~/Music.txt</pre>
+
+The command <font color=blue>updatedb</font> should be used routinely before a search if you want locate to give you truer results
+<br>
+How do you use locate to find something containings two words?  
+<br>
+Here '<font color=blue>readme</font>' and '<font color=blue>use</font>', note that you don't need quotes
+<pre>locate -i readme | grep -i use</pre>
+but you CAN add them
+<pre>locate -i 'readme' | grep -i 'use'</pre>
+As you can see, all those "<font color=blue>mouse</font>" are still there.<bR><br>
+
+We are still searching for filenames and/or directory & subdirectory names.<bR>
+Now suppose you need to find <u>a file with a particular bit of text in it</u>. Here grep 
+is really cool for searching the huge dmesg, so let's switch to the next section and use grep.
+<br><br>
+<div align="center"><a name="grep" id="grep"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Grepping the grok out of it</font></center>
+</td>
+</tr>
+</table>
+<p align="left">
+<pre>$ dmesg | grep -i usb</pre>
+
+You'll get quite a lot of blah blah. Grep prints the whole line 
+each time it finds your search string. dmesg is a special case, as it is a 
+command, and not just a text file. For example, to search an ordinary text 
+file, such as xorg.conf, for references to 'nvidia', this is the normal 
+grep syntax:
+
+<pre># grep -iw nvidia /etc/X11/xorg.conf</pre>
+
+-iw is "ignore case + whole word search"
+<br>
+so the usual syntax is grep => options => search string => file to search.<bR>
+The -w flag means "whole word search". This is really handy, because 
+otherwise grep returns every single line that contains your search string even if it happens to be 
+INSIDE A DIFFERENT WORD. 
+<br>
+Here is the best grep trick of all: searching bales of files for a word or 
+string or regexp. Relocate yourself (cd) to the directory you want to search, then:
+
+<pre>$ grep -lir "swap" *</prE>
+
+
+-l means "print only the filenames containing your search term". In fact, incomprehensibly enough -l means "do not print the lines". 
+Note how  the man gives  
+an even more surreal definition: -l means "suppress normal output - instead print the name of each input file from which output would
+              normally have been printed"), -i as we have seen means "ignore case", and -r is for act
+recursively (inside the subdirs/subfolders).<br> * means of course "all files".<br>
+If you omit the -l flag, it prints the 
+filenames <u>and the lines</u> containing your search term. So retry it right now:
+<pre>$ grep -ir swap *</pre>
+
+<br>More examples:
+
+<prE>grep -R "search" .</pre>
+
+Note the point .<br>
+this greps recursively down the given directory (in this case . being the directory you are currently in) for "search"<br>
+
+The . can easily be replaced with any directory including /<br>
+Note that this is all case sensitive.
+<br>
+Another example, if you have warhammer codex somewhere on your box:
+<prE>$grep -rn *arhamme*  /</pre>
+
+also grep alone, without -rn or such:
+
+<pre># grep "should" /etc/*</pre>
+the above one as root, or with sudo, of course.
+<br><br>
+At times you need to search all your *.c and *.h files for a given expression
+<pre>grep return *.[ch]</pre>
+This will search all the .c and .h files for the name <font color=blue>return</fonT>. <br>
+What if we want to search all the files, and not only *.c and *.h files?<br>
+The grep command can do this, but searching binary files produces a lot of junk. 
+Binary characters can do mean things to terminals, so we need a way to convert them into something printable. 
+<br><bR>
+So, to search a complete set of files (including binary ones), use the command:
+
+<pre>grep return * | cat -v | cut -c 1-80</pre>
+
+<font color=blue>cat -v</font>: 
+Turns unprintable characters into something readable.
+<br>
+<font color=blue>cut -c 1-80</font>: 
+Binary files have long "lines". This command trims them to 80 characters long for viewing and printing.
+<br><br>
+The find command is useful for going through a directory tree and locating files. <br>
+The grep command searches files for a given text string. <br>
+You can combine the two to create a system for searching a directory tree for a variable.<br>
+However always remember that <font color=blue>grep -r</fonT> (recursive) is FASTER than <font color=blue>find/grep</fonT>.
+<bR><br>
+
+<hr><a name="grepfile"></a>
+On the web you can  find everywhere the following - quite useful and well written - interesting snippet about the command grep, I strongly 
+suspect it must have been pilfered from 
+"<a href="http://book.opensourceproject.org.cn/distrib/ubuntu/unleashed/opensource/0672329093/ch33lev1sec2.html">Ubuntu unleashed</a>" by Andrew and Paul Hudson.
+<br><br>
+<center><table border=1 width=88% CELLSPACING="1" CELLPADDING="4"><tr><tD bgcolor="#c8c8cc"><center>
+<font size=+2>Searches for a String in Input with grep<br></font></center><br>
+
+
+The grep command is an incredibly powerful search tool in the right hands. 
+Grep processes any text, whether in files, or just in standard input. <br>
+The basic usage of grep is this: 
+
+<pre>grep "some text" *</pre>
+
+That searches all files in the current directory (but not subdirectories) for the string some text and prints matching lines along with the name of the file. To enable recursive searching in subdirectories, use the -r parameter, like this: 
+
+<pre>grep -r "some text" *</pre>
+
+Each time a string is matched within a file, the filename and the match are printed. If a file contains multiple matches, each of the matches is printed. You can alter this behavior with the -l parameter (lowercase L), which forces grep to print the name of each file that contains at least one match, without printing the matching text. If a file contains more than one match, it is still printed only once. Alternatively, the -c parameter prints each filename that was searched and includes the number of matches at the end, even if there were no matches. 
+You have a lot of control when specifying the pattern to search for. You can, as we did previously, specify a simple string like some text, or you can invert that search by specifying the -v parameter. For example, this returns all the lines of the file myfile.txt that do not contain the word hello: 
+
+<pre>grep -v "hello" myfile.txt</pre>
+
+You can also use regular expressions for your search term. For example, you can search myfile.txt for all references to cat, sat, or mat with this command: 
+
+<pre>grep "[cms]at" myfile.txt</pre>
+
+Adding the -i parameter to that removes case sensitivity, matching Cat, CAT, MaT, and so on: 
+
+<pre>grep -i [cms]at myfile.txt</pre>
+
+The output can also be controlled to some extent with the -n and --color parameters. The first tells grep to print the line number for each match, which is where it appears in the source file. The --color parameter tells grep to color the search terms in the output, which helps them stand out when among all the other text on the line. You choose which color you want using the GREP_COLOR environment variable: export GREP_COLOR=36 gives you cyan, and export GREP_COLOR=32 gives you lime green. 
+This next example uses these two parameters to number and color all matches to the previous command: 
+
+<pre>grep -in --color [cms]at myfile.txt</pre>
+</td></tr></table></center>
+
+<br>
+
+
+
+<div align="center"><a name="findingfiles" id="findingfiles"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center>
+
+
+<font size="+3">Finding files</font></center>
+</td>
+</tr>
+</table>
+<br>
+Find is a <font color=blue>recursive command</fonT>. This means that it will automatically descend into each 
+directory that it runs into while searching.
+<br>
+
+A typical find command &#224; la beagle is
+<prE>find . -exec grep "printer" {} \;</pre>
+<br>
+If you need to find a filename, you might as well use <a href="find_the_command.htm#locate">locate</a>, but find can cut that mustard as well...<br><br>
+
+Let's find all ogg files on our box. This command: 
+<pre>$ find . -name \*.ogg -printf %f\\n</pre>
+lists the filenames of all .ogg files inside (and under) the current directory.<br>
+The '<font color=blue>double backslash n</fonT>' is important; '<font color=blue>\n</font>' indicates the start of a new line. <br>
+The single backslash <u>needs to be escaped by another one</u> so 
+the shell doesn't run amok on it.
+<br><br>
+Ditto for pdf files:<pre>find . -name \*.pdf -printf %f\\n
+</pre>
+<br><br>
+
+<font color=blue size=+2>finding filetypes & the important use of quotes</font>
+<br>
+
+Let's try to find all c files on our drives.
+
+<pre>find / -iname *.c</pre>
+
+no good, as you can see.
+We'll get the following:
+<br>
+<i>find: paths must precede expression
+Usage: find [path...] [expression]</i>
+<bR>
+ergo we better "redo" our command, but this time we'll put  our target <font color=blue>in quotes</font>:
+
+
+<pre>find / -iname '*.c'</pre>
+or
+<pre>find / -iname '*arhamme*'</pre> everywhere on your box
+or
+<pre>find . -iname '*arhamme*'</pre> only downward your given directory
+<br>
+In fact <font color=blue>everytime we  use wildcards, in order to prevent the shell from interpreting those very wildcards in ways we don't intend, 
+we MUST surround what we're searching for with quotation marks</font>.
+
+<br><br>
+If there are much too many files (technically, if the number of characters of output produced by 
+"find" exceeds a built-in limit), this will fail and you'll need to use the 
+"xargs" command to overcome that limitation.
+<prE>find -name '*.c' | xargs grep -n *nde*</pre>
+<br>
+but you can use <font color=blue>ls</font> for finding files of a given kind
+<prE>ls -ld $(find -iname "*.doc" -o -iname "*.pdf")</pre>
+<pre>ls -ld $(find -iname "*.pdf")</pre>
+
+
+
+check the differences
+
+<pre>find /home -iname '*.c' -exec grep -H 'nde' '{}' \;
+find /home -iname '*.c' -exec grep -H 'index' '{}' \;
+find /home -iname '*.c' -exec grep -H 'inde*' '{}' \;
+find /home -iname '*.c' -exec grep -H '*nde*' '{}' \;
+
+---- pdf ----------
+find /home -iname '*.pdf' -exec grep -H 'index' '{}' \;</pre>
+as you can see, this 
+find 'matches' but then gets crazy characters
+
+
+<br>
+
+
+Another interesting approach:
+<pre>find . -name 'the*' -type f -ls</pre>
+
+you can of course
+redirect errors to /dev/null (when not running as root/sudo)
+
+<pre>find / -iname 'Visual*' -type f 2>/dev/null
+find -name '*.c' | xargs grep -n should 2>/dev/null</pre>
+
+<hr><br><center><font size=+3>The wrong quotes problem</font></center>
+<font color=blue size=+2>Some "misteries"</font>
+<br>
+why does this work:
+<prE>find /etc  *.conf</pre>
+
+while this does not?
+<pre>find /etc  -iname &#96;*.conf&#96;</pre>
+because of the space? No! Because of the "weird" quotes/accents/apostrophes you didn't 
+see/notice/realize when copying text from a book or a pdf file.<bR>
+Quotes and apostrophes are NOT the same. Try the same search again with correct quotes:
+<pre>find /etc -iname '*.conf'</pre> See? 
+<font color="blue">YOU OFTEN (unwittingly) FETCH WRONG QUOTES/APOSTROPHES/ACCENTS FROM PASTED TEXT</font>.
+<br> 
+Again, in the following example, the wrong quotes: 
+<prE>find . -name &#96;*.conf&#96;</pre>
+
+won't work, while
+
+<pre>find . -name "*.conf"</pre>
+will find all the conf files you have got.
+
+<hr><br>
+
+<font color=blue size=+2>small files finding</font> 
+<bR>(very useful at times)
+
+<pre>find /home/babbaz/downloads/medical -size -5k -ls</pre>
+
+(Adapt to your directory structure)<br>
+<br>
+<font color=blue size=+2>huge files finding</font> 
+<bR>(very useful at times)
+
+<pre>find . -size +300000k -print</pre>
+
+Also handy, in order to just show top disk users:
+<pre>du -s * | sort -k1,1rn | head</pre>
+
+Also convenient, for debian packages sizes:
+<pre>dpkg-query -W -f='${Installed-Size;10}\t${Package}\n' | sort -k1,1n</pre>
+
+<font color=blue size=+2>pdf files finding</font>
+<prE>sudo find /home/ -iname '*.pdf'</pre>
+
+Woah: we all have much too many pdf files...<br>
+<hr>
+<br><a name="findifile"></a>
+On the web you can  find everywhere the following - quite useful and well written - interesting snippet about the command find, I strongly 
+suspect it must have been pilfered from "<a href="http://book.opensourceproject.org.cn/distrib/ubuntu/unleashed/opensource/0672329093/ch33lev1sec2.html">Ubuntu unleashed</a>" by Andrew and Paul Hudson.
+<br><br>
+<br><center><table border=1 width=88% CELLSPACING="1" CELLPADDING="4"><tr><tD bgcolor="#c8c8cc"><center>
+<font size=+2>Finding Files by Searching with find<br></font></center><br>
+The find command is one of the darkest and least understood areas of Linux, but it is also one of the most powerful. Admittedly, the find command does not help itself by using X-style parameters. The UNIX standard is -c, -s, and so on, whereas the GNU standard is --dosomething, --mooby, and so forth. X-style parameters merge the two by having words preceded by only one dash. 
+However, the biggest problem with find is that it has more options than most people can remember. <font color=blue>It truly is capable of doing most 
+things you could want</font>. <br>
+The most basic usage is this: 
+
+<pre>find -name "*.txt"</pre>
+
+That searches the current directory and all subdirectories for files that end in .txt. The previous search finds files ending in .txt but not .TXT, .Txt, or other case variations. To search without case sensitivity, use -iname instead of -name. You can optionally specify where the search should start before the -name parameter, like this: 
+
+<pre>find /home -name "*.txt"</pre>
+
+Another useful test is -size, which lets you specify how big the files should be to match. You can specify your size in kilobytes and optionally also use + or - to specify greater than or less than. For example: 
+
+<pre>find /home -name "*.txt" -size 100k 
+find /home -name "*.txt" -size +100k 
+find /home -name "*.txt" -size -100k </pre>
+
+The first brings up files of exactly 100KB, the second only files larger than 100KB, and the last only files under 100KB. 
+Moving on, the -user option enables you to specify the user who owns the files you are looking for. So, to search for all files in /home that end with .txt, are under 100KB, and are owned by user paul, you would use this: 
+
+<pre>find /home -name "*.txt" -size -100k -user paul</pre>
+
+You can flip any of the conditions by specifying -not before them. For example, you can add a -not before -user 
+paul to find matching files owned by everyone but paul: 
+
+<pre>find /home -name "*.txt" -size -100k -not -user paul</pre>
+
+You can add as many -not parameters as you need, even using -not -not to cancel each other out! (Yes, that is pointless.) 
+Keep in mind, though, that -not -size -100k is essentially equivalent to -size +100k, with the exception that the former 
+will match files of exactly 100KB whereas the latter will not. 
+You can use -perm to specify which permissions a file should have for it to be matched. 
+This is tricky, so read carefully. The permissions are specified in the same way as with the chmod 
+command: u for user, g for group, o for others, r for read, w for write, and x for execute. However, 
+before you give the permissions, you need to specify either a plus, a minus, or a blank space. 
+If you specify neither a plus nor a minus, the files must exactly match the mode you give. If you specify -, 
+the files must match all the modes you specify. If you specify +, the files must match any the modes you specify. Confused yet? 
+The confusion can be cleared up with some examples. 
+This next command finds all files that have permission o=r (readable for other users). 
+Notice that if you remove the -name parameter, it is equivalent to * because all filenames are matched. 
+
+<pre>find /home -perm -o=r</pre>
+
+Any files that have o=r set are returned from that query. 
+Those files also might have u=rw and other permissions, but as long as they have o=r, 
+they will match. This next query matches all files that have o=rw set: 
+
+<pre>find /home -perm -o=rw</pre>
+
+However, that query does not match files that are o=r or o=w. To be matched, 
+a file must be readable and writeable by other users. If you want to match readable or 
+writeable (or both), you need to use +, like this: 
+
+<pre>find /home -perm +o=rw</pre>
+
+Similarly, this next query matches files only that are readable by user, group, and others: 
+
+<pre>find /home -perm -ugo=r</pre>
+
+Whereas this query matches files as long as they are readable by the user, or by the group, or by others, or by any combination of the three: 
+
+<pre>find /home -perm +ugo=r</pre>
+
+If you use neither + or -, you are specifying the exact permissions to search for. 
+For example, the next query searches for files that are readable by user, group, and others but not writeable or executable by anyone: 
+
+<pre>find /home -perm ugo=r</pre>
+
+You can be as specific as you need to be with the permissions. 
+For example, this query finds all files that are readable for the user, group, and others and writeable by the user: 
+
+<pre>find /home -perm ugo=r,u=w</pre>
+
+To find files that are not readable by others, use the -not condition, like this: 
+
+<pre>find /home -not -perm +o=r</pre>
+
+Now, on to the most advanced aspect of the find command: the -exec parameter. 
+This enables you to execute an external program each time a match is made, passing in the name of the matched file wherever you want it. 
+This has very specific syntax: Your command and its parameters should follow immediately after -exec, terminated by \;. 
+You can insert the filename match at any point using {} (an opening and a closing brace side by side). 
+So, you can match all text files on the entire system (that is, searching recursively from / rather than from /home as 
+in our previous examples) over 10KB, owned by paul, that are not readable by other users, and then use chmod to enable reading, like this: 
+
+<pre>find / -name "*.txt" -size +10k -user paul -not -perm +o=r -exec chmod o+r {} \;</pre>
+
+When you type your own -exec parameters, be sure to include a space before \;. Otherwise, you might see an error such as missing argument to `-exec'. 
+Do you see now why some people think the find command is scary? 
+Many people learn just enough about find to be able to use it in a very basic way, but hopefully you will see how much it can do 
+if you give it chance. </td></tr></table></center>
+
+<br>
+
+
+
+
+<font color=blue size=+2>grepping inside found files</font>
+
+<pre>sudo find /home/ -iname '*.php' -exec grep -H 'search' '{}' \;</pre>
+
+"<i>Well, it basically looks for every file in the directory you gave it AND ALL SUBDIRECTORIES THEREOF, 
+and then executes "grep -H 'search' FILENAME" on each one. 
+-H = Print the filename for each match.
+So this will print out the name of each file that contains your string</i>"
+
+<b>...however, don't try it with pdf files</b>
+
+<prE>sudo find /home/ -iname '*.pdf' -exec grep -H 'search' '{}' \;</pre>
+
+
+
+<br><br>
+<div align="center"><a name="findtime" id="findtime"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center>
+<font size="+3">Finding Files  using timestamps</font></center>
+</td>
+</tr>
+</table>
+<br>
+
+
+You might want to find  recent  files, or maybe grep through the last 3 days of activity... 
+<bR><br>
+Find comes into its own here: it can limit the scope of the files found according to timestamps.
+<bR><br>
+Now, suppose you want to see what hidden files in your home directory did actually change in the last 3 days:
+<prE># find ~ -mtime -3 -name \.\*</pre> 
+TRY IT.
+<br>
+
+If you know or suspect that something has changed much more recently than that, say in the last 13 minutes, and want to know what -exactly- happened, use the 
+<font color=blue>mmin</font> argument: 
+<prE># find ~ -mmin 13 -name \.\*</pre>
+
+Be aware that doing a '<font color=blue>ls</font>' will affect the access time-stamps of the files shown by that action. 
+If you perform <font color=blue>ls</font> to see what's in a directory and try the above to see 
+what files were accessed in the last 13 minutes **all those files** will now be listed by find.
+<br><bR>
+To locate files that have been modified since some arbitrary date use a well known  trick: <font color=blue>create a date mark</font>
+<prE># touch -d "13 may 2007 17:54:19" date_mark
+# find . -newer date_mark </pre>
+
+To find files created before that date, use the <font color=blue>cnewer</fonT> and negation conditions:
+<prE># find . \! -cnewer date_marker</pre>
+
+To find a file which was modified <font color=blue>yesterday</fonT> (but less than 24 hours ago):
+<prE># find . -daystart -atime 1 -maxdepth</pre>
+
+The -daystart argument means the day starts at the actual beginning of the day. <font color=blue>Not</fonT> 24 hours ago. <bR>
+This argument has meaning for the <font color=blue>-amin, -atime, -cmin, ctime, -mmin</font> and <font color=blue>-mtime</font> options.
+
+<br><br>
+<div align="center"><a name="related" id="related"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">FIND-Related searching tricks</font></center>
+</td>
+</tr>
+</table>
+<p align="left">
+
+
+<font color=blue size=+2>list directories</font>
+<prE>for i in $( find -type d); do echo $i; done</pre>
+or
+<prE>for i in $( ls -d */); do echo $i; done</pre>
+
+
+
+<bR><br><br>
+<center>
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>&copy; 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"http://searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, revealed and
+reviled</center>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

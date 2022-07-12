@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>inphrase.htm: In Phrase Operators</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="proxy, python and so on">
+<meta name="keywords" content="proxy, python and so on">
+<meta name="author" content="Elwood">
+<meta name="copyright" content="Copyright(c) 2006 Everyone">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#c0c0c0" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC"><center>
+<table border="0"><tr><td><center>
+
+<a target=_top href="password.htm">
+<img SRC="images/Finn.jpg" ALT="to bots" 
+ALIGN=bottom BORDER=0 HSPACE=0></a></td><td>&nbsp; &nbsp; &nbsp; &nbsp;</td><td><center>
+<br><br><br>
+<font color=blue size=+2>In Phrase Operators<br></font><font size=+1>
+A investigation into &quot;In Phrase Operators&quot;, by Elwood</font><br>(slightly edited by fravia+)
+ &nbsp;
+<br><br><br><br><br>
+<b>Published @ <a href="http://www.searchlores.org">http://www.searchlores.org</a> in early <font color="blue">April 2006</font> </b><br><b> | 
+<b>Version <font color="blue">0.01</font> | </b><br>(part of <a target=_top href="password.htm">password lore</a>)<br>
+
+
+</td></tr></table>
+   <font size=+1>
+<hr><br><font color=blue size=+2>The background</font></center>
+
+<p><font face="Times New Roman">Searching is a strange beast indeed, constant 
+surprises arrive when you least expect them. </font></p>
+<p><center><font color=blue size=+4>In Phrase Operators</font><br>by Elwood, April 2006</p><hr width=44%></center>
+<p><font face="Times New Roman"><b>(Note</b>: The query examples displayed here are primary used with the 
+<a href="google.htm">Google</a> search engine, yet as we will see they will work in Yahoo and in many other 
+search engines as well.)</font></p>
+<p><font face="Times New Roman">What is an &quot;In Phrase Operator&quot; you'll ask? Well, in fact you 
+already know them. <br><br>
+They are the <font color=blue>numrange</font> and the Boolean <font color=blue>OR </font>
+operator. </font></p>
+<p><font face="Times New Roman">But did you know they possess a magical 
+searching property? Both  can be used <font color=blue>within</font> a phrase search.</font></p>
+<p><b><font color=blue size=+2>Numrange</font></b></p>
+<p><font face="Times New Roman">Long form numrange: 0..100&nbsp; or numrange: 0-100&nbsp;&nbsp; short form 
+0..100 </font> </p>
+<p><font face="Times New Roman">What do we know about the numrange operator?</font></p>
+<p><font face="Times New Roman">It can be used within a phrase, extremely powerful!&nbsp; 
+</font> </p>
+<p><font face="Times New Roman">It can be thought of as a numeric only wildcard with limits.</font></p>
+<p>
+<font face="Times New Roman">*******************************************************************************<br>
+Snippet by nemo &amp; Ms V. Isa<br>
+
+*******************************************************************************
+<br>64..500-kb &lt;-- for file size search<br>
+£-2..10 or $-2..10 &lt;-- for price search<br>
+red-head-000..999-jpg &lt;-- for pr0n search<br>
+&quot;0..31 * 1996..2004&quot; or &quot;0..31 1996..2004&quot; &lt;-- to search written dates (very 
+useful for news search)<br>
+20000000000000..29999999999999 &lt;-- library barcode! come here!!! hehehe<br>
+*******************************************************************************</font></p>
+<p><font face="Times New Roman">As you can see from the above the numrange operator 
+makes for some useful filters. But do you notice the second last entry?</font></p>
+<p>
+<font face="Times New Roman">&quot;0..31 * 1996..2004&quot; , we are using an operator 
+within a phrase.&nbsp;&nbsp; </font></p>
+<p><font face="Times New Roman">&quot;snd ** mp3 *-* 2004..2006 2..10 +m&quot;&nbsp; 
+another example.</font></p>
+<p><font face="Times New Roman">So, let us look at the numrange operator <font color=blue>as a numeric only wildcard with limits</font>.
+</font></p>
+<p><font face="Times New Roman">Numbers are sometimes used as passwords.</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp; For unknown user names types with numeric passwords</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;user * password 0..99999999999&quot; 
+or&nbsp; &quot;user * password 100000000..99999999&quot;&nbsp; (eight digit password)</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp; For numeric user names and numeric passwords</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;user 0..99999999999 password 0..99999999999&quot;</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp; For numeric user names&nbsp; with unknown password type</font></p>
+<p><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;user 0..99999999999 password *&quot;</font></p>
+<p><font face="Times New Roman">The fact that the numrange operator could be used within a phrase, leads
+me to another 
+question.</font></p>
+<p><font face="Times New Roman">Is it the only operator that can be used within a phrase? Apparently not.</font></p>
+
+<p><b><font color=blue size=+2>Boolean OR</font></b></p>
+<p><font face="Times New Roman">Boolean OR used within a phrase</font></p>
+<p><font face="Times New Roman">&quot;user OR username * password 0..99999999999&quot; 
+</font> </p>
+<p><font face="Times New Roman">Boolean OR with nesting used within a phrase</font></p>
+<p><font face="Times New Roman">&quot;(user OR username OR login ) * password 0..99999999999&quot; 
+</font> </p>
+<p><font face="Times New Roman">E-mail usernames</font></p>
+<p><font face="Times New Roman">&quot;**@**.(com OR edu OR net) (password OR pass) 0..9999999999&quot;
+</font> </p>
+<p><font face="Times New Roman">Know usernames</font></p>
+<p><font face="Times New Roman">&quot;(root OR admin OR administrator OR supervisor) (pass OR password) 
+0..999999999999&quot; </font> </p>
+<p><font face="Times New Roman">Default Passwords Lists</font></p>
+<p><font face="Times New Roman">&quot;user * password * OR 0..99999999999&quot; &quot;default password&quot; 
+</font> </p>
+<p><font face="Times New Roman">Other Examples</font></p>
+<p><font face="Times New Roman">Have you ever reached the Google 32 word limit?</font></p>
+<p><font face="Times New Roman">&quot;(advanced OR effective) internet (search OR searching)&quot;&nbsp;&nbsp; 
+using 5 terms 102,000 
+Results</font></p>
+<p><font face="Times New Roman">Should in theory be the same as&nbsp; </font> </p>
+<p><font face="Times New Roman">&quot;advanced internet searching&quot; OR &quot;effective internet searching&quot; OR &quot;advanced internet search&quot; OR &quot;effective internet search&quot; 
+using 12 terms 94,100 Results</font></p>
+<p><font face="Times New Roman">Which will you use?</font></p>
+<p><font face="Times New Roman">Another Date Filter...&nbsp; with the option to specify which&nbsp; years 
+and months you 
+are interested in.</font></p>
+<p><font face="Times New Roman">&quot;1..31 jan OR feb OR mar OR apr OR may OR jun OR jul OR aug OR sep OR oct OR 
+nov OR dec 2005..2006 &quot; and </font> </p>
+<p><font face="Times New Roman">&quot; jan OR feb OR mar OR apr OR may OR jun OR jul OR aug OR sep OR oct OR nov 
+OR dec 2005..2006 &quot; </font> </p>
+<p><font face="Times New Roman">Reverse it.</font></p>
+<p><font face="Times New Roman">&quot; 2005..2006 jan OR feb OR mar OR apr OR may OR jun OR jul OR aug OR sep OR 
+oct OR nov OR dec &quot;</font></p>
+<p><font face="Times New Roman">Ok so we can use OR operator in a phrase search will it work anywhere else?</font></p>
+<p><font face="Times New Roman">intitle:&quot;advanced OR effective internet searching&quot; (google)</font></p>
+<p><font face="Times New Roman">intitle:&quot;(advanced OR effective) internet searching&quot; (yahoo)</font></p>
+<p><font face="Times New Roman">&nbsp;inanchor:&quot;user OR username&nbsp; * pass 0..9999999999&quot;</font></p>
+<p><font face="Times New Roman">intext:&quot;user OR username * pass 0..9999999999&quot;</font></p>
+<p><font face="Times New Roman">inurl: Generates an Error &quot;Error... We're sorry...but your query looks 
+similar to automated requests from a computer virus or spyware application.&quot;</font></p>
+<p>&nbsp;</p>
+<p><font face="Times New Roman">Powerful stuff indeed, with some imagination I 
+am sure you can do better&nbsp;;-) 
+<br>The fact that this <i>proof of concept</i> works <font color=blue>both with Google and Yahoo</font> 
+suggests that more engines may also support these 
+truly wonderful new features. I am not sure about the real reason <font color=blue>why</font> this actually works. I think it may 
+have something to do with the order in which the query is parsed and 
+evaluated by these search engines. <br>Any explanations would be quite welcome.&nbsp;
+</font> </p>(c) Elwood, April 2006<pre>
+
+</pre>
+
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"essays.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>
+
+

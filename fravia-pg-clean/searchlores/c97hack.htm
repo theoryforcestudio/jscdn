@@ -1,0 +1,776 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>c97hack.htm: The Penetration of CyberSitter'97</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Connection lore ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="intro.htm"><IMG SRC="images/begiptit.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Connection<br>lore</th>
+</tR></table>Version <font color=blue>November</font> 2001
+<!-- internet searching techniques: imageheader end --><br>Courtesy of <a href="http://www.searchlores.org">www.searchlores.org</a><br>
+
+<hr><i>Crap happens... on 18 May 1998 <a href="http://www.fortunecity.se/kista/virus/9/">Saruman</a> wrote me...<br>
+"<font color=blue>If you have a couple of minutes over you can download this essay... if you 
+think the essay is good, I would be happy to spend an hour or two fixing it up for 
+posting at your site</font>".<br>
+This happened in 1998 in a 'difficult' moment (my sites were under attack).<br>
+Therefore I found only three years later the time to dig and sort 
+out some old correspondence... and immediately 
+publish this clever snippet of information...<br>
+My excuses and a big thank, Saruman!
+</center>  
+
+
+<h2 align="center">The Penetration of CyberSitter'97</h2>
+<h4 align="center">as told by members of DFR Research &amp; Engineering<br>
+</h4>
+
+<p align="left">&nbsp;</p>
+<p align="left"><big><big><em>Index</em></big></big><br>
+</p>
+
+<p align="left"><a href="c97hack.htm#Introduction">Introduction</a><br>
+Tools used<br>
+Target URL<br>
+Program history</p>
+
+<p><a href="c97hack.htm#Essay">Essay</a><br>
+<a href="c97hack.htm#Installation">Installation</a> - &quot;Evidence of sucking&quot;<br>
+<a href="c97hack.htm#TheCrack">The Crack</a> - &quot;So where's the challenge?&quot;<br>
+<a href="c97hack.htm#Reversal">Reversing the encryption</a> - &quot;Why security through obscurity
+/doesn't/ work&quot;</p>
+
+<p><a href="c97hack.htm#Finalnotes">Final notes</a></p>
+
+<p><a href="c97hack.htm#Appendix1">Appendix 1</a> - Commented disassembly of decryption-loop (from
+IDA)<br>
+<a href="c97hack.htm#Appendix2">Appendix 2</a> - HLL implementations of decryption-loop (ANSI-C and
+Borland Pascal)<br>
+<br>
+<br>
+<br>
+<strong><big><a name="Introduction"><em><big><big>Introduction</big></big></em></a></big></strong><br>
+</p>
+
+<p>Cybersitter is one of those disgusting censorwares, created and maintained by fractions
+within the christian right movement.<br>
+The software blocks access to sites deemed 'immoral' by the fraction behind it. Not only
+does CS (why do I find myself thinking of BS, bullshit?)&nbsp; block access to 'immoral'
+world-wide-web pages, but it also does it's best to filter 'immoral' words and phrases
+anywhere within a datastream (HTTP, IRC, FTP).</p>
+
+<p>The company behind this product, Solid Oak Software (SOS), is just as disgusting as
+Microsoft,&nbsp; if not more so. They have a documented history of emailbombing their
+critics, but not only that, they also favour taking legal actions, or more correctly -
+threatening with legal action, against /anyone/ criticizing their line of&nbsp; products
+(even if they happen to be journalists, doing their job).</p>
+
+<p>Why this essay then? (I'll try to keep it short, but I'm a written-word kind of guy).
+If&nbsp; people want to use blocking software at home, isn't that fine by you? Well, no.
+Not when the company behind the blocking software doesn't want to reveal just /what/ sites
+and /what/ keywords they are using. This is the reason for this essay - we will show you
+what Solid Oak Software doesn't want you to see, what they doesn't want you to /know/. </p>
+
+<p>For more information on this, visit <a href="http://www.peacefire.org/">http://www.peacefire.org</a>,
+an organization working to stop net censorship, or <a
+href="http://www.softdisk.com/comp/dan/cybersitter/">http://www.softdisk.com/comp/dan/cybersitter/</a>
+. Together they give you a pretty complete view of this this whole SOS/CS ordeal.<br>
+<br>
+Now, let's get this township rebellion on the road...<br>
+</p>
+
+<p><big>Tools used</big></p>
+
+<p>SoftICE<br>
+W32dasm<br>
+IDA<br>
+HIEW<br>
+ANSI-C Compiler<br>
+Borland Pascal<br>
+Turbo Assembler<br>
+</p>
+
+<p><big>Target URL</big></p>
+
+<p><a href="http://www.cybersitter.com">http://www.cybersitter.com</a>&nbsp; /cyb97t.exe<br>
+<br>
+</p>
+
+<p><big>Program History</big></p>
+
+<p>Bloody, just like christian history. For the full story please visit one of the sites
+mentioned earlier. They (SOS) are constantly mutating the protectionscheme in vain
+attempts to 'defeat' reverse engineering.</p>
+
+<p><br>
+</p>
+
+<p><strong><big><a name="Essay"><em><big><big>Essay</big></big></em></a></big></strong><br>
+</p>
+
+<p align="left"><a name="Installation"><big>Installation - &quot;Evidence of sucking&quot;</big></a></p>
+
+<p>When running the installation you will notice that you are not allowed to specify where
+the program is to be installed. Yes, it do seem like SOS sucks just as much as I've been
+telling you, no? The installer will spread it's 'wares' all over your harddrive,
+specifically it'll target your %windir% and %windir%\system paths.</p>
+
+<p>Let's start the program. Here, we're presented with a MessageBox() with the text
+'&quot;4.0&quot; is not valid floating point value.' but your mileage may vary. If you do
+get this box, you will notice that it contains a famous Delphi-resource. So now we know
+that.</p>
+
+<p>What's first on the menue? Let's crack this bitch. I usually crack for intellectual
+stimulation, but as we soon shall see the people behind this software doesn't want <em>anyone</em>
+to receive <em>any</em> kind of stimulation ;-)</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><a name="TheCrack"><big>The Crack - &quot;So where's the challenge?&quot;</big></a></p>
+
+<p>Open the &quot;Enter Unlock Code&quot; registration-box (under the 'register' menu).
+You are asked to enter your unlock-code. No username asked for? They must get the material
+for the serial-calculation from somewhere.. let's see... Let's check out the 'on-line
+order form' alternative. We're informed that we can order the full retail version for only
+$39.95. Oh, that's <em>soo</em> tempting, but I digress. Now, let's see what we can learn
+from the 'order by phone' alternative. Ah, now we're getting somewhere. We are presented
+with a key, mine is '0184C1ACD'. Looks like HEX to me, let's do some probing. Back to the
+unlock-code thingy. Let's enter something, say.. '1223344' and break in on hmemcpy (works
+well in Delphi applications).</p>
+
+<p>We'll snap back to SoftICE after a call to CallWindowProcA. We're nested pretty deep
+inside the kernel or something, so let's trace back to CS. After stepping back thru seven
+or eight ret's you'll find yourself in the 'CYB97!code' module, looking good.</p>
+
+<pre>:0045FDF4   call 0041F8B0                       ; hmemcpy ...
+:0045FDF9   mov eax, dword ptr [ebp-24]         ; ... we land here
+:0045FDFC   lea edx, dword ptr [ebp-20]</pre>
+
+<p>Checking eax and edx we'll find our code at <strong>eax</strong>. Let's step further
+down the road..</p>
+
+<pre>:0045FDFF   call 004074FC
+:0045FE04   mov eax, dword ptr [ebp-20]
+:0045FE07   mov edx, 0045FF9C</pre>
+
+<p>Again, checking eax and edx we'll find the text '<strong>extend</strong>' at edx. So if
+one would want to extend ones trialperiod, use 'extend' as the serial. (. This is <em>sooo</em>
+hard .)</p>
+
+<pre>:0045FE0C   call 00403D80			; check if 'extend'
+:0045FE11   jne 0045FEB1</pre>
+
+<p>We're looking for the correct serial, so let's hitch a ride with that jump...</p>
+
+<pre>:0045FEB1 33C0                    xor eax, eax
+[ silly initcode snipped ]
+:0045FEC2   mov al, 43
+:0045FEC4   call 00444BD8
+:0045FEC9   lea edx, dword ptr [ebp-24]
+:0045FECC   mov eax, dword ptr [ebx+000001E8]</pre>
+
+<p>Let's see what that call did. We '<strong>d edx</strong>' and find something
+interresting. The C:\ volume label, the text '<strong>FAT32</strong>'. I instantly
+recognized it as the result of a filesystem-info-query,&nbsp; very interresting indeed.</p>
+
+<pre>:0045FED2   call 0041F8B0   ; This we know is hmemcpy. 'bd *' and step over.
+:0045FED7   mov eax, dword ptr [ebp-24]</pre>
+
+<p>eax points to the unlock-code we entered. We're getting close here.</p>
+
+<pre>:0045FEDA   call 00407850</pre>
+
+<p>What happened to <strong>eax</strong> there? (We see that it was modified thanks to
+SoftICE)</p>
+
+<pre>:? eax
+00012AAB0  0001223344   '&lt;character-representation&gt;'</pre>
+
+<p>So, we have our unlock-code in <strong>eax</strong>, as a number...</p>
+
+<pre>:0045FEDF   sub eax, 00001424
+:0045FEE4   mov esi, dword ptr [ebp-1A]</pre>
+
+<p>When my eyes fell on 'esi' after this move I was certain I'd cracked this program. What
+I had only suspected a minute or two ago had now been confirmed.</p>
+
+<pre>:0045FEE7   cmp eax, esi</pre>
+
+<p>They subtract $1424 and compares it esi, which holds the correct serial+$1424.</p>
+
+<pre>:0045FEE9   jne 0045FF2B</pre>
+
+<p>Just another good/bad-guy jump. So what did I see in esi above? What else but $184C1ACD
+:-)</p>
+
+<p>In short: The correct unlock-code is the <em>VOLUMEID</em> of 'C:\' (in decimal)
+increased by $1424. I don't know if you find this obvious - it may look like I skipped a
+step here - but I really had this 'hunch' groving since that call which resulted in the
+pointer to the structure holding the string '<strong>FAT32</strong>'...</p>
+
+<p>I made a 'keymaker' for this. All one need is:</p>
+
+<pre>.radix 16
+         mov  bl,3
+         mov  ax,6900
+         mov  dx,offset BUFFER
+         int  21                       ; Get disk serial number.
+         mov  edx,dword ptr [BUFFER+2]
+         add  edx,1424
+         &lt;output edx here&gt;</pre>
+
+<p>Done. :-) One can conclude that the live approach worked very well in this case. I have
+also tried&nbsp; the dead listing approach (just now), but it don't think I would have
+found out the basic&nbsp; 'algorithm' as fast that way (I'm kind of slow :-)</p>
+
+<p>That's it for cracking, now let's get going with the &quot;tough-stuff&quot;...<br>
+</p>
+
+<p>&nbsp;</p>
+
+<p><a name="Reversal"><big>Reversing the encryption - &quot;Why security through obscurity
+/doesn't/ work&quot;</big></a></p>
+
+<p>While we (moving from 'I' to 'we' form here. I made the crack, <em>we</em> reversed the
+encryption) certainly had nothing against reversing the serial scheme of this disgusting
+software, that was in no way our primary goal. The primary goal was to extract all those
+oh-so-secret keywords and lists of sites that are blocked, those lists that are so loved
+by the authors behind this program that they almost threw a lawsuit at the guy doing an
+earlier reversal (in a time where the program had no 'do not reverse-engineer' notice, the
+protection-scheme as changed since then). As usual, if you want the full story, search the
+net.</p>
+
+<p>First a little behind-the-scene knowledge is required. Question: Where do they store
+the keywords/list of blocked sites? Let's find out.</p>
+
+<p>I knew the program were using one or more encrypted files that it had hid away
+somewhere under the %windir% path. Well, knew and knew, I assumed this because that was
+how the older version worked (had I read). So, I pretty much launched Volkov Commander,
+set it to sort on filesize and started looking through the files in %windir%\. When I
+found nothing but shards of old installations I progressed to check the .\system\
+directory too. This is where I found the *fil.dll files, which certainly didn't look like
+any DLL I've ever seen. It was obvious these files were encrypted. (Looking back, using
+regmon or examining the string-resources of CYB97.EXE would have paid off faster,
+obviously. Let's try and remember that for the future :-)<br>
+</p>
+
+<pre>ADWFIL   DLL        32,410  98-02-16  12.16 adwfil.dll
+BNRFIL   DLL         2,322  98-02-16  12.16 bnrfil.dll
+CULTFIL  DLL         1,450  97-11-20  12.33 cultfil.dll
+HIWFIL   DLL           502  97-11-20  12.33 hiwfil.dll
+IAWFIL   DLL         2,138  97-11-20  12.33 iawfil.dll
+LGWFIL   DLL         1,982  97-11-20  12.33 lgwfil.dll
+PICSFIL  DLL           744  97-11-20  12.33 picsfil.dll
+USRFIL   DLL            42  98-02-16   0.52 usrfil.dll
+         8 file(s)         41 590 bytes</pre>
+
+<p>Actually, I found the file &quot;WFILEU.DRV&quot; first, but it was too short to
+contain all the data. We'll get back to that file later.</p>
+
+<p>Looking at the filenames and the &quot;options\filter files&quot; menu of CS one can
+puzzle out which file holds which kind of filters/keywords - which could be important if
+we were to choose to launch a cryptanalysis attack - however, inspection of the files
+showed that such an attack would be out of our league (ie: it wasn't a singlepass XOR or
+Ceasar-chiper :-) (note: I've been informed that earlier versions used a static XOR-key of
+$96 or some such. How's that for security?)</p>
+
+<p>The first line of ADWFIL.DLL look like this.</p>
+
+<p><small>1{9})b#b!b4g(f1a8g%f9c5c=a-n&amp;n&lt;o0o&amp;l=i3m!j&quot;j.j1i.h&amp;h-h+r&lt;w1w5u!t
+t-v r6s,p)p8q?q$z6&amp;127;0&amp;127;&amp;|5}4})z!~8{ x=y:y=e</small></p>
+
+<p>Now, going thru the files, pondering, trying to see patterns, etc. We came to the
+conclusion that the encryption is a 16-&gt;8 bit transformation (all lines contain an even
+number of bytes), possibly with an add or xor operation entwined (the beginning of the
+first line seemed to hold far more low-ascii characters than the end).</p>
+
+<p>So we progress by setting up a bpx on CreateFileA (<strong>bpx createfilea do &quot;d
+ecx&quot;</strong>), tracing until the program tries to open one of those
+o-so-interresting &quot;DLL&quot; files.</p>
+
+<p>Starting CS we're pulled in to SoftIce a couple of times. Somewhere around the fifth
+break he's trying to open WFILEU.DRV. That file was encrypted too, so let's check it out.
+We add a bpx to '<strong>ReadFile</strong>' and let it run.</p>
+
+<p>Softice will break in again in a module called STCP!.text, obviously this is a DLL used
+by CS,<br>
+and thus worthy of closer inspection.</p>
+
+<pre>:00B0CCA3   call [kernel32!ReadFile]
+:00B0CCA9   test eax,eax                    ; We'll land here</pre>
+
+<p>Now, let's trace out of this subroutine and we'll eventually find ourself in a loop,
+like this:</p>
+
+<pre>:00B0CD45   mov al,[esi]
+:00B0CD47   cmp al,1A
+:00B0CD4A   jz  B0CE21
+:00B0CD4F   cmp al,0D
+:00B0CD51   jz  B0CD55
+:00B0CD53   inc esi
+:00B0CD54   mov [edi],al</pre>
+
+<p><strong>esi</strong> and <strong>edi</strong> point to a buffer holding encrypted data.
+Ah, we're getting real close here. He seem to be doing some sort of preprocessing, maybe
+stripping end-of-line characters or some such. Looking at the code at B0CD55 and B0CE21
+(the two exit paths) we decide that this routine isn't doing anything we need to
+understand fully, at least not now, so we scroll down and do a 'HERE' on the ret
+terminating the subroutine. We could set a bpm on the buffer holding the encrypted data,
+but because we feel real close now we refrain ourselves from such an drastic move - we may
+miss something important if we let the program run wild.</p>
+
+<p>Instead, let's continue stepping over code, it's worked real well so far, hasn't it?<br>
+<br>
+Take your time and examine the contents of memory and registers after suspicious moves
+(like subproc arguments, EBP-xx). Not too many instructions later you'll find the address
+of the encryption buffer being loaded and pushed to the stack. This is how it looks:</p>
+
+<pre>:100023B1   lea eax, dword ptr [ebp+FFFFFBD8]
+:100023B7   push eax
+:100023B8   lea eax, dword ptr [ebp-220]
+:100023BE   push eax
+:100023BF   lea ecx, dword ptr [ebp-1C]
+:100023C5   call 10003740
+:100023CA   test eax,eax
+	(note: the EBP's may differ, depending on what file
+	       you are currently decrypting)</pre>
+
+<p>Examination of the memory areas addressed showed that the last address pushed is the
+buffer holding encrypted data. The topmost push pointed to something that I first thought
+to be a key (In my case it held the string '09') but we were later able to puzzle it all
+together using the magnificent program IDA and it's function for renaming stack-variables
+(in other words, I was going down the wrong path and my friend rescued me :-)</p>
+
+<p>It dawned on us that what is pushed is the address of the buffer holding the soon-to-be
+decrypted data, and <strong>ecx</strong> is loaded with a pointer to a buffer holding a
+16-bit decryption key.</p>
+
+<p>Now, back to the encryption-algorithm which is to be found under that &quot;call
+xxxx3740&quot;.<br>
+<br>
+This would be a good time for you to examine Appendix 1 - our commented disassembly. The
+decryption loop is rather lengthy, and examining it at the bit-level would be overkill,
+instead I will assume you've taken a casual glance at the code, and will proceed by
+outlining the overall algorithm.</p>
+
+<p>First, the key. They use a dword to hold the decryption-key, but only use the lower
+16-bits for actual decryption. First they create two keys by shifting and anding out a
+five-bit value (0-31d) from both the upper and lower bits of the 16-bit key. like this:</p>
+
+<pre> key1 = (key SHR 4) AND $1F
+ key2 = (key SHR 8) AND $1F</pre>
+
+<p>The two-bytes-for-one scheme (do you remember?) comes from dividing the byte to be
+encrypted into two 4-bit parts which are then encrypted individually using the two keys.
+Here we want to take those two bytes and <em>reverse</em> the encryption, to form the one
+decrypted character.</p>
+
+<pre> ch1 = inbyte1 XOR key1
+ ch2 = inbyte2 XOR key2</pre>
+
+<p>The 'decrypted' bits are then shifted some more, and OR'ed together to form the one
+decrypted character.</p>
+
+<pre> ch2   = (ch2 AND $F) SHL 4
+ chout = (ch1 AND $F) OR ch2</pre>
+
+<p>Here <strong>chout</strong> is the fully decrypted character, which is written to the
+decryptionbuffer.</p>
+
+<p>Now the key (which I call a 'cyclic' key) is updated using the following formula:</p>
+
+<pre> key = key + ($100 - chout)</pre>
+
+<p>And the process repeats.</p>
+
+<p>One important ingredient is missing. What are the initial value of the key?! Further
+analysis of the disassembled specimen will reveal a mysterious push $DEAD ;-). However,
+again the live approach paid off as we got this magic key automatically while tracing the
+code. Some more testing showed that this key only is reseeded upon opening a file to
+decrypt. In other words, the cyclic key above shall not be reset for each line decrypted,
+but just as with a CRC you feed the old (previous) key to the decryption-subroutine each
+pass through it.</p>
+
+<p>All in all, this work took us many hours, counting a couple of hours spent by us
+individually to get to know the program and the encryption. It was first when we sat
+together in front of IDA, really _looking_ at the code, filling in the blanks and tossing
+ideas about that we were able to create a program in C to partially (more on this later)
+decode a file. We had the advantage of having access to multiple machines, so that we
+could run IDA and do the documentation on one, while running CS under SoftICE on another,
+examining the live specimen at our leisure.</p>
+
+<p>It's hard to document something like this, it's easy to go into too much detail in some
+places, or forget to fully explain, or be fuzzy about the greater picture, just <em>how</em>
+one reached a certain conclusion and <em>why</em> one did what one did.</p>
+
+<p>One thing is clear to us after researching and writing this one essay. We now
+understand better just how much effort is put into&nbsp; work like this by all our
+colleagues over the world. Take for instance our biggest slip: Our first try at decrypting
+a file fail short of okay.&nbsp; The result was that only the first few lines were
+decrypted okay, then came garbage for a few screens, and then it seemed like the decryptor
+'came in sync' again and some more lines were decoded. We thought we had missed a
+key-update somewhere. So of course we (in this case it was mostly I, I must admit) went
+about looking in <em>all the wrong places.</em> To sum it up (to experience): After a
+couple of hours I compared our HLL code to the actual assembler and found we'd missed one
+little instruction when converting the assembler-decryptor. Now, checking this should have
+been the number one prio. The lesson is: Do not assume something is more complex or
+advanced than it has to be. I'm prone to that error. Instead, apply logic, the Zen way of
+doing things. Ah, but you <em>knew</em> that already, didn't you? ;-)</p>
+
+<p>Please refer to Appendix 2 - &quot;HLL implementations of decryption-loop&quot; if you
+need help understanding/implementing this decryption.<br>
+<br>
+</p>
+
+<p><a name="Finalnotes"><strong><big><em><big><big>Final notes - &quot;I've got a right to
+rant&quot;</big></big></em></big></strong></a><br>
+</p>
+
+<p>This was researched by Bobban and Saruman of DFR Research &amp; Engineering, in
+cooperation.<br>
+The essay was written by me, Saruman. I'm solely responsible for the presentation, which
+may not be all one could wish for, but there it is.</p>
+
+<p>So what /are/ in those encrypted files then? Well, apart from the obvious smut-sites
+and smut-words they also block perfectly legit sites, such as <a href="http://www.c2.org">www.c2.org</a>
+and www.linkexchange.com and usegroups such as alt.crackers (!), alt.censorship and
+soc.women. They seem to have listened somewhat to their critics, because the used to block
+a whole range of sites containing criticism (such as www.peacefire.org). In the past
+they've even gone so far as to let the installation-program scan the harddrive for
+references to peacefire.org (the searched the http-cache) or the old decryptor program and
+<em>refuse</em> to install if traces of these were detected. It's our moral right to
+continue the reversal of censorwares to make sure that they do not try to push their bent
+morals down the throat of us, their customers - IN SECRET. To me it's obvious that all
+keywords and sites blocked should be public knowledge, and editable through the standard
+user interface of the censorware in question. Anything less than that is unacceptable.</p>
+
+<p>If you want to contact me, well.. use your brain, or shout my name in the fidonet echo
+'HOLYSMOKE' :-)</p>
+
+<p>Good bye, and happy cracking. I do hope that others will pick up from here, there are a
+lot of censorwares out there, all waiting to be throughly reversed. A cool project would
+be one in-memory-disabler for every one of these censorwares? I can't do it on my own
+though, but together... </p>
+
+<p>/%)+Saruman - food for thought, anyway. Bye.</p>
+
+<p>PS.</p>
+
+<p>The 'master password' (if any) is stored in the registry:<br>
+HKLM\System\CurrentControlSet\control\SecurityProviders\NetSet\MSwcf\EMP\</p>
+
+<p>The surf's up!<br>
+</p>
+
+<p>PPS</p>
+
+<p>For compiled binaries and more, download the <a
+href="zipped/cs97hack.zip">cs97hack.zip</a> file. The
+file contains the binaries for the serial-generator, the file-decryptor and an
+WIN32-application for fetching and showing the master-password, if any, from the registry.<br>
+<br>
+<br>
+<br>
+</p>
+
+<p><big><em><strong><big><a name="Appendix1">Appendix 1</a> - Commented disassembly of
+decryption-loop (from IDA)</big></strong></em></big><br>
+</p>
+
+<pre><small>10003740 Decrypt         proc near
+10003740
+10003740 keybuf          = dword ptr -18h
+10003740 cryptkey2       = byte ptr  -14h
+10003740 cryptkey1       = byte ptr  -10h
+10003740 out_count       = dword ptr -0Ch
+10003740 in_count        = dword ptr -08h
+10003740 bufsize         = dword ptr -04h
+10003740 cryptbuf        = dword ptr  08h
+10003740 decryptbuf      = dword ptr  0Ch
+10003740
+10003740                 push    ebp
+10003741                 mov     ebp, esp
+10003743                 sub     esp, 18h
+10003746                 push    ebx
+10003747                 push    esi
+10003748                 push    edi
+10003749                 mov     [ebp+keybuf], ecx         ; on entry ECX = ptr to key
+1000374C                 mov     eax, [ebp+cryptbuf]
+1000374F                 push    eax
+10003750                 call    _strlen
+10003755                 add     esp, 4
+10003758                 mov     [ebp+bufsize], eax
+1000375B                 mov     [ebp+out_count], 0
+10003762                 mov     [ebp+in_count], 0
+10003769                 jmp     loc_10003771
+1000376E ; -------------------------------------------
+1000376E
+1000376E loc_1000376E:
+1000376E                 inc     [ebp+in_count]
+10003771
+10003771 loc_10003771:
+10003771                 mov     eax, [ebp+bufsize]
+10003774                 inc     eax
+10003775                 cmp     eax, [ebp+in_count]
+10003778                 jle     loc_10003824
+1000377E                 mov     eax, [ebp+in_count]
+10003781                 mov     ecx, [ebp+cryptbuf]
+10003784                 xor     edx, edx
+10003786                 mov     dl, [eax+ecx]
+10003789                 cmp     edx, 20h
+1000378C                 jl      loc_1000380A
+10003792                 mov     eax, [ebp+keybuf]
+10003795                 mov     eax, [eax+4]
+10003798                 shr     eax, 4
+1000379B                 and     al, 1Fh
+1000379D                 mov     [ebp+cryptkey2], al
+100037A0                 mov     eax, [ebp+keybuf]
+100037A3                 mov     eax, [eax+4]
+100037A6                 shr     eax, 8
+100037A9                 and     al, 1Fh
+100037AB                 mov     [ebp+cryptkey1], al
+100037AE                 mov     eax, [ebp+in_count]
+100037B1                 mov     ecx, [ebp+cryptbuf]
+100037B4                 xor     edx, edx
+100037B6                 mov     dl, [eax+ecx+1]
+100037BA                 xor     eax, eax
+100037BC                 mov     al, [ebp+cryptkey1]
+100037BF                 xor     edx, eax
+100037C1                 and     edx, 0Fh
+100037C4                 shl     edx, 4
+100037C7                 mov     eax, [ebp+in_count]
+100037CA                 mov     ecx, [ebp+cryptbuf]
+100037CD                 xor     ebx, ebx
+100037CF                 mov     bl, [eax+ecx]
+100037D2                 xor     eax, eax
+100037D4                 mov     al, [ebp+cryptkey2]
+100037D7                 xor     ebx, eax
+100037D9                 and     bl, 0Fh
+100037DC                 or      dl, bl
+100037DE                 mov     eax, [ebp+out_count]
+100037E1                 mov     ecx, [ebp+decryptbuf]
+100037E4                 mov     [eax+ecx], dl
+100037E7                 mov     eax, 100h
+100037EC                 mov     ecx, [ebp+decryptbuf]
+100037EF                 mov     edx, [ebp+out_count]
+100037F2                 xor     ebx, ebx
+100037F4                 mov     bl, [ecx+edx]
+100037F7                 sub     eax, ebx
+100037F9                 mov     ecx, [ebp+keybuf]
+100037FC                 add     [ecx+4], eax
+100037FF                 inc     [ebp+out_count]
+10003802                 inc     [ebp+in_count]
+10003805                 jmp     loc_1000381F
+1000380A ; -------------------------------------------------------------
+1000380A
+1000380A loc_1000380A:                           ; CODE XREF: Decrypt+4C
+1000380A                 mov     eax, [ebp+in_count]
+1000380D                 mov     ecx, [ebp+cryptbuf]
+1000380D                 mov     ecx, [ebp+cryptbuf]
+10003810                 mov     al, [eax+ecx]
+10003813                 mov     ecx, [ebp+out_count]
+10003816                 mov     edx, [ebp+decryptbuf]
+10003819                 mov     [ecx+edx], al
+1000381C                 inc     [ebp+out_count]
+1000381F
+1000381F loc_1000381F:                           ; CODE XREF: Decrypt+C5
+1000381F                 jmp     loc_1000376E
+10003824 ; -------------------------------------------------------------
+10003824
+10003824 loc_10003824:                           ; CODE XREF: Decrypt+38
+10003824                 mov     eax, 1
+10003829                 jmp     $+5
+1000382E                 pop     edi
+1000382F                 pop     esi
+10003830                 pop     ebx
+10003831                 leave
+10003832                 retn    8
+10003832 Decrypt         endp
+</small></pre>
+
+<pre>
+</pre>
+
+<p><em><strong><big><big><a name="Appendix2">Appendix 2</a> - HLL implementations of
+decryption-loop</big></big></strong></em><br>
+</p>
+
+<pre><strong>ANSI-C</strong></pre>
+
+<pre><small>// by Bobban / DFR Research &amp; Engineering
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;conio.h&gt;</small></pre>
+
+<pre><small>typedef unsigned long ulong;
+typedef	unsigned char byte;</small></pre>
+
+<pre><small>	ulong	key = 0xDEADL;</small></pre>
+
+<pre><small>void decrypt_line(char *inbuff, char *outbuff)
+{
+	int     in_count , out_count = 0,len;
+	byte	ch1,ch2;
+	ulong	subkey1,subkey2;
+	len = strlen(inbuff)/2;</small></pre>
+
+<pre><small>	for (in_count = 0; in_count &lt; len ; in_count++) {
+		subkey1 = key;
+		subkey1 = (subkey1 &gt;&gt; 4) &amp; 0x1fL;
+		subkey2 = key;
+		subkey2 = (subkey2 &gt;&gt; 8) &amp; 0x1fL;
+		ch2 = *(inbuff+in_count*2+1);
+		ch2 ^= subkey2;
+		ch2 = (ch2 &amp; 0x0f) &lt;&lt; 4;
+		ch1 = *(inbuff + in_count*2);
+		ch1 ^= subkey1;
+		ch1 &amp;= 0x0f;
+		ch1 |=ch2;
+		outbuff[out_count] = ch1;
+		key += 0x100L - (ulong)ch1;
+		++out_count;
+	}
+	outbuff[out_count] = NULL;
+}</small></pre>
+
+<pre><small>int main (void)
+{
+	FILE 	*infile;
+	char 	inbuff[400];
+	char	outbuff[400];
+	clrscr();</small></pre>
+
+<pre><small>	if ((infile = fopen(&quot;.\\usrfil.txt&quot;,&quot;r&quot;)) == NULL) {
+		printf (&quot;file not found \n&quot;);
+		exit(1);
+	}
+	   while(fgets(inbuff,400,infile) != NULL) {
+		decrypt_line(inbuff,outbuff);
+		printf(&quot;%s\n&quot;,outbuff);
+	   }</small></pre>
+
+<pre><small>	close(infile);
+	return 0;
+}
+</small>
+
+</pre>
+
+<pre><strong>Borland Pascal</strong></pre>
+
+<pre><small>Program CSDecode; { By Saruman / DFR Research &amp; Engineering }
+Uses CRT,Utils,ASMUtils;</small></pre>
+
+<pre><small>CONST
+ Version        :String[5]='1.0.0';
+ {$I UPDATE.INC }</small></pre>
+
+<pre><small>VAR
+ KEY            :LongInt;</small></pre>
+
+<pre><small> T              :Text;
+ S1             :String;
+ S2             :String;</small></pre>
+
+<pre><small>Function Decrypt(const S: String): String;
+var
+ loop           :Word;
+ uts            :String;
+ key1,key2      :LongInt;
+ ch1,ch2        :Byte;
+begin
+ uts[0]:=chr(Length(s) div 2);
+ for loop:=0 to (length(S) div 2)-1 do
+  begin
+   { create two keys }
+   key1:=(key SHR 4) AND $1F;
+   key2:=(key SHR 8) AND $1F;
+   { decode high bits }
+   ch2:=ord(S[(loop*2)+2]) XOR key2;
+   ch2:=(ch2 AND $F) SHL 4;
+   { decode low bits and create final output character (ch1+ch2) }
+   ch1:=ord(S[(loop*2)+1]) XOR key1;
+   ch1:=(ch1 AND $F) OR ch2;
+   { Write to output }
+   uts[loop+1]:=char(ch1);
+   { Update cyclic key }
+   Inc(key,$100-ch1);
+  end;
+ Decrypt:=uts;
+end;</small></pre>
+
+<pre><small>BEGIN
+ ClrScr;
+ TextColor(14);
+ Write('CyberSitter''97 Decryptor v'+Version+' ú Crackware ú Compiled '+Compiled+#10+#13);
+ TextColor(12);
+ Write('Copyright (C)1998 Saruman / DFR Research &amp; Engineering ú FREEWARE'+#10+#13+#10+#13);
+ NormVideo;</small></pre>
+
+<pre><small> if ParamCount=0 then
+ begin
+  WriteLn('Usage: CSDEC &lt;file-to-decrypt&gt; [$seedkey] [&gt;redirect]');
+  Halt;
+ end;</small></pre>
+
+<pre><small> if NOT Exist(ParamStr(1)) then
+  begin
+   WriteLn('Error: File &quot;',ParamStr(1),'&quot; not found.');
+   Halt(1);
+  end;</small></pre>
+
+<pre><small> if va(ParamStr(2))=0 then key:=$DEAD else key:=va(ParamStr(2));
+ WriteLn('  Infile: ',ParamStr(1));
+ WriteLn('Seed key: $',HexW(key));
+ WriteLn;</small></pre>
+
+<pre><small> if CheckRedirectOUT then
+  begin
+   WriteLn(' redirecting output ... ');
+   Assign(output,'');
+   ReWrite(output);
+  end;</small></pre>
+
+<pre><small> Assign(T,ParamStr(1));
+ Reset(T);</small></pre>
+
+<pre><small> While NOT EoF(T) do
+  begin
+   ReadLn(T,S1);
+   if length(S1)>1 then WriteLn(Decrypt(S1)); { SS-update }
+  end;
+ Close(T);
+END.</small></pre>
+
+<p>[version 1.1.1]</p>
+</body>
+</html>

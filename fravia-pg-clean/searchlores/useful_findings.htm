@@ -1,0 +1,656 @@
+<html>
+<head>
+<title>useful_findings.htm: Useful findings for linux afecionados</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<meta http-equiv="Content-Type" content= "text/html; charset=us-ascii">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content= "This site teaches basic and advanced search techniques for people interested in de-streaming any kind of information on the web. Here are informations, documents, links, etc. related to de-streaming">
+<meta name="keywords" content= "searching, de-streaming, combing, klebing, how to search, how to de-stream, de-streaming techniques, hints and tips for de-streaming, How do I catch a stream?, Advanced Internet de-streaming, How do I de-stream?, fravia+">
+<meta name="author" content="father">
+<meta name="copyright" content="Copyright(c) 1952-2032 fravia+">
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+</head>
+<body bgcolor="#CCCCCC" text="#001010" link="#214131" alink="#405040" vlink="#8850AA">
+<center>
+<div align="center">
+<table border="0" width=88%><TR><TD width="37%"><FONT size=-1 align="left">&nbsp;  <A target="_blank"  
+      href="index.html">portal</A> &#8594; <a target="_blank" href="linux.htm">linux</a>  &#8594;  
+      useful_findings.htm</FONT>
+<TD>&nbsp;</TD>
+<TD width="37%" align=right><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" 
+border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</TD></TR></table>
+<p align="center"><strong><font size="+5"><u>Useful findings &nbsp; (Solving problems)
+</u></font></strong></p>
+</div>
+<table width="98%" align="center" border="0">
+<tr>
+<td width="66%">
+<center>
+<p align="center"><font size="+4">GNU/Linux</font></p>
+<p align="center"><font size=
+"+2"><em>...shortcuts, ...useful commands, ...tricks</fonT>
+<br><br><hr width=44%>
+
+<br>
+<table width="75%">
+<tr>
+<td width="54%">
+<div align="center"><a href="useful_findings.htm#Intro"><font size=
+"+2">Introduction</font></a></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center"><a href="useful_findings.htm#vuc"><font size=
+"+2">Various commands and tricks</font></a></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center"><a href="useful_findings.htm#connectionproblems"><font size=
+"+2">Connection poblems</font></a></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center"><a href="useful_findings.htm#bmc"><font color="#FF0000" size=
+"+2">"Must know" useful shortcuts (GNOME)</font></a><br><br><hr width=55%></div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align="center"><font size=
+"+2">GNU/Linux Related Sections</font></div>
+</td>
+</tr>
+<tr>
+<td>
+<div align="center"><a href="linux.htm"><font size=
+"+1">Going to GNU/Linux</font></a><br>    <a href="find_the_command.htm"><font size=
+"+1">Find, the command</font></a>  &nbsp; &#8596; &nbsp;
+<a href="linux_games.htm">Linux_games</a> 
+<br>
+<a href="gimp_versus_photoshop_1.htm">Gimp versus photoshop</a>
+  &nbsp; &#8596; &nbsp;
+<a href="bash_galore.htm">The shell is awesome!</a>
+<bR>
+
+</div>
+</td>
+</tr>
+
+</table>
+</center>
+</td>
+<td width="105">
+&nbsp;
+</td>
+<td width="282">
+<center>
+<p><a href="linux.htm"><img src="images/ubuntu_66.jpg" alt="Poser" width="631"
+height="499" border="0"></a></p>
+<p><font size="+1">Version <font color="blue">0.09</font>:
+<font color="blue">March</font>&nbsp;2009</font></p>
+</center>
+</td>
+</tr>
+</table>
+<br>
+<div align="center"><a name="Intro" id="Intro"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Introduction</font></center>
+</td>
+</tr>
+</table>
+</center><font size=+1>
+<p align="left">
+How often do we have "to go back to the web" in order to solve for the nth time a small 
+problem we keep encountering? Well, it happens to me all the time, so I 
+have assembled in this section a series of "useful tricks" (and commands) 
+that have been useful to me in many circumstances. Thattaway I may even remember them&nbsp;:-)</p>
+
+You'll take full advantage of the following -rather eclectic- section 
+only if you have already some knowledge of the GNU/Linux operating system (here, more specifically, the 
+Gnome-oriented and Debian-based <a href="http://www.ubuntu.com/">Ubuntu</a> distribution). 
+<br>Some of the commands listed here 
+are self-explanatory, some are not; some are well-explained, some 
+not. I'll modify, add, correct and remove stuff 
+<i>au fur et mesure</i>.<br> Readers' contributions (and/or corrections) are always welcome.<br><br>
+</p>
+  
+
+<div align="center">
+<a name="vuc" id="vuc"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Various commands and tricks</font>
+<br>
+<a href="useful_findings.htm#terdis">1st: decide the terminal dimensions</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+
+<a href="useful_findings.htm#brfaw">being root for a while</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+
+<a href="useful_findings.htm#kyv">knowing your version</a> <br>
+<a href="useful_findings.htm#kyt">knowing your temperature</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+<a href="useful_findings.htm#cp">Cleaning processes</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp; 
+<a href="useful_findings.htm#paft">Preparing avi for TV</a> <br>
+<a href="useful_findings.htm#hm">history marvels</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+<a href="useful_findings.htm#sp">sound problems</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+<a href="useful_findings.htm#debu">Debugging</a> 
+
+
+</center>
+</td>
+</tr>
+</table>
+<p align="left">
+<a name="terdis"></a>
+<bR><br>
+<font color=blue size=+2>1st: decide the terminal dimension</font><br>
+The terminal in GNU/Linux is a cosmic weapon. You better have it as perfectly honed as possible.<br>
+Check with the followinbg command in order to see if setting dimensions works at all:
+
+<prE>gnome-terminal --geometry=180x28+6+52</pre>
+(180x28 = dimensions; 6/52 = coordinates) 
+if you want to use this as default from now on, then:
+
+<prE>System => Preferences => Preferred Applications => System</pre>
+
+terminal emulator = Custom<br>
+Command  (for instance) = gnome-terminal --geometry=180x28+6+52
+
+<br><br>
+<p align="left">
+<a name="brfaw"></a>
+<bR><br>
+<font color=blue size=+2>being root for a while</font><br>
+I much prefer Ubuntu (and Mac OS X's) 
+<font color=blue>sudo model</font> to the root/user 
+one typical of most Linux distributions. However at times you get fed up with 
+your terminal asking once more for your password.<br> 
+As usual (with any good operating system) there are various commands to get -and remain- root:
+
+<ol><li>
+<font color="#0000FF">sudo -s</font> (HOME in previous user)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin</li><li>
+<font color="#0000FF">sudo -i</font> (HOME in root)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin</li><li>
+<font color="#0000FF">sudo su -</font> (HOME in root)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</li><li>
+<font color="#0000FF">sudo su</font> (HOME in root)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</li><li>
+<font color="#0000FF">sudo bash</font> (HOME in previous user)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin
+</li></ol>
+
+
+(and then <font color=blue>CTRL+d</font>, or <font color=blue>exit</font>  to exit root)
+<br><br>
+In fact there are <u>many other options</u> to get root:
+<ul><li>sudo perl -e'system("/bin/bash")'<br>
+(HOME in previous user)<br>
+echo $PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin</li></ul>
+
+&nbsp;<IMG SRC="images/warning.png" ALT="!" align="center" valign="center" WIDTH="40" 
+HEIGHT="40">&nbsp;Please remember that being root all the time in a GUI environment <font color=blue>is insane and bound to harm you 
+soon or later</fonT>.
+<br>However there are moments where you know (or rather <i>you think you know</i>) what you are doing, and 
+in those (rare) cases you might enjoy being root without sudo timeouts.
+<br><br>
+Alternatively you can modify the TIMEOUT parameter and change the default 5 minutes to a 
+longer period (in minutes): use <font color=blue>sudo visudo</font> (which is the safe way, using nano) 
+and modify your /etc/sudoers.<br>If there's no 'Defaults' line, add a line with 
+the parameter <font color=blue>passwd_timeout</font> to the file: 
+<font color=blue>Defaults passwd_timeout=10</font> and all 
+users that can sudo will have 10 minutes root instead of 5. Limit to yourself with 
+<font color=blue>Defaults:mynick 	&nbsp; &nbsp; passwd_timeout=10</font>. 
+<bR>If there's already a 'Defaults' line there, just add the parameter <font color=blue>passwd_timeout</font> 
+after a comma:<bR>
+<font color=blue>Defaults !lecture,!fqdn,passwd_timeout=15</fonT>.
+<br>
+<br>Note that
+<pre>sudo -L</pre>
+will show you all the possible options for Default.
+Alternatively: <font color=blue>sudo -L | grep timeout</font>
+
+<br>
+<br>Anyway, there should be no need to explain you that adding either of both 
+<pre>timestamp_timeout=-1
+timestamp_timeout=0</pre>
+in order to allow being root <u>for the whole session</u> would be nonsensically insane&nbsp;:-)
+<br><br>
+Finally it should be recalled that 
+sudo's timeout exists to avoid forcing users to type their 
+passwords more than once for sequential commands, all of which start with "sudo...", 
+<font color=blue>because in principle, asking for passwords too often is insecure</font>, NOT because 
+of convenience for the users. 
+<bR><br>
+Another, different, method is allows an "unpassworded" use of a list of selected commands 
+through the <font color=blue>= NOPASSWD</font> parameter, 
+using <font color=blue>sudo visudo</font> and adding to the
+/etc/sudoers file (supposing your username is "me" and your box's hostname is "mybox") 
+a line like:
+<pre>me mybox = NOPASSWD: /bin/kill, /bin/ls</pre>
+As you can see there is a list
+of  the available commands that "me" can access using sudo <font color=blue>without any need to enter 
+ a password</font>; these commands are separated by commas.<br><br>
+More generally, still supposing your username is "me", 
+<pre>sudo ls --full-time /var/run/sudo/me/</pre> is a useful command that 
+ will give you the number of the <font color=blue>valid sudo tickets</font> for "me".
+
+
+
+<a name="cp"></a>
+<bR><hr width=44%><br>
+
+<font color=blue size=+2>Cleaning processes</font><br>
+There are many ways to check the active processes, apart from <font color=blue>top</font> and 
+<font color=blue>lsof</font>, 
+ the following ps commands:
+<prE>ps
+ps -au
+sudo ps -aeu
+sudo ps -A
+ps axu | less</pre>
+will give you different lists (snapshots) of current processes; 
+ <font color=blue>ps -au</font>  will for instance give you <u>all</u> the pts ("pseudo-terminal slaves").
+ <br><br>
+Often useful is the "visual" representation:
+ <prE>pstree -a</pre>
+<bR><br>While... 
+<pre>tty</pre>
+...shows which pts we are on.
+<br><br>
+Anyway, now that we have the processes, we can "clean the system" killing them, using option 9: if the 
+process you want to terminate is -say- PID 5520:
+<pre>kill -9 5520</pre>
+<br>
+Related to this, there's a wondrous little graphic utility that allows you 
+to see at once who is using most memory on your system: in fact it shows you 
+the relative proportions of memory used by running processes (updated in real time).<br>By all means do 
+install 
+<font color="blue">gmemusage</font> (sudo apt-get install gmemusage), a very useful 
+graphical memory usage viewer.
+<br>
+Of course, once you have individuated a particolarly program that "hogs" memory, you might want to 
+get more information using something like -say-
+<bR><br><center>
+<font color="blue"><b>lsof | grep opera</b></font></center><br> or, 
+<bR><center>
+<b><font color="blue">lsof -c ope</font></b> </center><br>
+
+Whereby you can also check the <font color="blue">memory map</font> of a given process 
+ -say- 17518 (find 
+out with top),<bR><br><center>
+
+<b><font color="blue">pmap 17518</font></b> or <b><font color="blue">pmap -x 17518</font></b></center><br>
+ 
+
+
+</center>
+
+<a name="paft"></a>
+<bR><hr width=44%><br>
+
+<font color=blue size=+2>Preparing your avi for TV usage</font><br>
+This is about how to create VCDs starting from your AVI files. In our example we create a VCD,  
+starting with <font color="blue">myown.avi</font>, that we 
+	transform first into a <font color="blue">mpeg</font> format (using <font color="blue"><b>ffmpeg</b></font>) 
+	and then into <font color="blue">vcd.bin</font> 
+	& <font color="blue">vcd.cue</font> (using <font color="blue"><b>vcdimager</b></font>). 
+	This we can then burn onto the CD (using <font color="blue"><b>cdrdao</b></font>).<br> 
+	<br> 
+To prepare your avi file for burning, just use
+ the commands ffmpeg (first) and vcdimager (next).
+ <br>
+ <font size=-1>(if necessary install both commands first: <font color="blue">sudo apt-get install ffmpeg</font> 
+ and <font color="blue">sudo apt-get install vcdimager</font>)</font>
+<pre>
+ffmpeg -i myown.avi -target pal-vcd myown.mpg</pre>
+You can of course choose <font color="blue">ntsc-vcd</font> instead of 
+that <font color="blue">pal-vcd</font>, depending on your 
+<a href="http://en.wikipedia.org/wiki/Image:PAL-NTSC-SECAM.svg" />location</a> and on 
+your TV-box settings.<br>
+ffmpeg is an incredibly powerful and 
+versatile application, just have a look at its manual pages: <font color="blue">man ffmpeg</font>.
+<bR>
+In fact a variant of the previous command could be
+<pre>ffmpeg -i myown.avi -y -target pal-dvd -sameq -aspect 16:9 myown.mpg</pre>
+<font size=-1>"<font color="blue">-sameq</font>" means "Same Quality". Meaning it will convert the video as the exact same quality as the original.</font>
+<br><br>
+Now let's port the mpg we have obtained to a vcd.cue/vcd.bin<br>
+<pre>
+vcdimager -t vcd2 -l "MYOWN" -c vcd.cue -b vcd.bin myown.mpg
+</pre>
+Then put a new CD into your cd-writer and launch cdrdao:
+<br>
+ <font size=-1>(if necessary install cdrdao first: <font color="blue">sudo apt-get install cdrdao</font>)</font>
+<pre>cdrdao write --device /dev/cdrw vcd.cue
+</pre>
+
+You can quickly check if the resulting VCD works using the command
+<pre>mplayer vcd://2</pre>
+(<font size=-1>or <font color="blue">mplayer vcd://1</font> or <font color="blue">mplayer vcd://</font>)
+
+
+
+<a name="kyv"></a>
+<bR><hr width=44%><br>
+
+<font color=blue size=+2>knowing your version</font><br>
+There are many ways to check your kernel, ubuntu and gcc versions:
+<prE>lsb-release -a
+cat /etc/lsb-release
+cat /proc/version</prE>
+<font size=-1 color="#0000FF">Note that the files in the <i>/proc</i> directory are not real files, 
+they are hooks to look at information which is available to the kernel</font>
+<br>So if you want to check & get info on your CPU(s):
+<prE>cat /proc/cpuinfo
+cat /proc/interrupts</pre>
+There is also:
+<pre>cat /etc/debian_version</pre>
+
+This last command underlines the "paternity" of Ubuntu&nbsp;:-)
+<br><br>
+
+
+
+<a name="kyt"></a>
+<bR><hr width=44%><br>
+
+
+<font color=blue size=+2>knowing your temperature</font><br>
+There are basically TWO ways to check your CPU's temperature. 
+<br><br>You can  <font color=blue>either</fonT> use 
+the acpi motherboard monitor(s):
+<prE>cat /proc/acpi/thermal_zone/THRM/temperature
+acpi -t
+acpi -V</pre>
+
+ <font color=blue>Or</fonT> install an ad hoc program that will read the CPU sensor(s): 
+<font color=blue>sudo apt-get install lm-sensors</font> (and then <font color=blue>sudo sensors-detect</font>, answer yes to 
+everything).
+<br><br>
+How does this work? Motherboards' 
+manufacturers define one or more ACPI thermal zones, 
+centered on a temperature monitoring device that sits 
+on the motherboard (<a href="http://www.acpi.info/spec.htm">http://www.acpi.info/spec.htm</a>).
+But there's also a "coretemp reading", that comes 
+from a temperature sensor embedded inside  the CPU 
+(<a href="http://www.debianhelp.org/node/5156">http://www.debianhelp.org/node/5156</a>).
+<br>Most geeks 
+trust the coretemp values more, being more confident 
+in the true position of the temperature they provide (and don't really know where on their 
+motherboards the temp monitors are).
+<br><br>It can happen: you have installed the sensors, but they will not work on your box.<br>
+In that case <b>remove everything</b> with<br>
+<font color="blue">sudo apt-get remove --purge lm-sensors</font>.<br>
+In fact <font color="blue">sudo apt-get remove --purge</font> is 
+the "contrary" of <font color="blue">sudo apt-get install</font>.
+
+
+<a name="hm"></a>
+<bR><hr width=44%><br>
+<font color=blue size=+2>history marvels</font><br>
+Find out what command lines you use most...
+<prE>history | cut -b8- | cut -d' ' -f1 | sort | uniq -c | sort -rg | head</pre>
+
+Your task is of course now, as a final gift to yourself, to explain  what exactly happens through the command above&nbsp;:-)
+
+
+<a name="sp"></a>
+<bR><hr width=44%><br>
+<font color=blue size=+2>sound problems</font><br>
+First check if you really have more than one card:
+<prE>asoundconf list</pre>
+
+Then repair your sound (this is a great general fixall for sound issues):
+<pre>asoundconf reset-default-card</pre>
+
+(or <font color=blue>asoundconf reset-default-card PARAMETER</font>, where "PARAMETER" is one of the cards 
+given by the previous <font color=blue>asoundconf list</font>).
+
+and restart.
+<br><br>
+Other sound-related commands:
+<hr width=23% align=left>
+Does the system see the soundcards? And what is their respective number?
+<prE>cat /proc/asound/cards</pre>
+<hr width=23% align=left>
+Show oss & alia
+<prE>lsmod | grep snd</pre>
+<hr width=23% align=left>
+Show stuff
+<pre>cat /etc/modprobe.d/alsa-base</pre>
+<hr width=23% align=left>
+Soundcards on your system
+<pre>aplay -l
+lspci -v
+lspci | grep audio
+lsmod | grep snd</pre>
+
+<hr width=23% align=left>
+"another program is blocking the soundcard" error<br>
+Launch...
+<pre>ps au</pre>
+...in order to check who's responsible, say "<font color=blue>PID 32382</font>", and then kill it...
+<pre>sudo kill -9 <font color=blue>32382</font></prE>
+
+<br><br>
+Should you choose OSS or ALSA drivers?
+Well, ALSA (Advanced Linux Sound Architecture) is free and standard for more recent GNU/Linuxes (>= 2.6.),  
+with features such as full duplex, digital I/O and more.
+<br> OSS (Open Sound System) is free as well, and was the standard in more older GNU/Linuxes (<= 2.4), 
+but has poor support for soundcards and features.
+<br><br>
+The recent "Hardy Heron" version of Ubuntu has introduced the pulse audio server. Strangely enough, 
+when installing Hardy, the user is NOT automatically part of the various "pulse" groups, and so there is 
+no sound until you manually join these groups.
+
+
+<a name="debu"></a>
+<bR><hr width=44%><br>
+
+<font color=blue size=+2>Debugging (file-related)</font><br>
+<br><br>
+For <font color=blue>network debugging</font> check the <a href="tools.htm#stools">Searchers' tools</a>, 
+for <font color=blue>file-related</font> debugging there are many useful commands...<br>
+
+<prE>lsof | less -S</pre>
+(A single open file can prevent a filesystem from being unmounted)
+<hr width=23% align=left>
+<pre>ps awxo pid,command | sort -n | head -10</pre>
+(Sorting processes by PID indicates when and/or where an early process was started)
+<hr width=23% align=left>
+<pre>strace /bin/echo probeone
+strace xmms</pre>
+(Tracing system calls and signals is the sine qua non for debugging malfunctionings appz)
+
+<hr width=23% align=left>
+<pre>less /var/log/dmesg </pre>
+(To see what "dmesg" dumped into this file right after the last system bootup)
+ 
+<br><br>Other useful commands:<br><ol><li>dmidecode<br>
+For instance: <font size="3" color="#0000FF">sudo dmidecode | grep bank</font><br>
+<table width= 66% borderm="1"><tr><td>
+<font size="1" color="#0000FF">"Get a rough idea on a pinch". Beware that DMI (Desktop Management Interface: 
+a table provided by the BIOS) 
+data have proven to be too unreliable 
+to be blindly trusted: dmidecode does not scan your hardware, it only reports what the BIOS told it to. Still useful: 
+some data present in the DMI table are unique, you will not find them anywhere else, this 
+includes serial numbers, asset numbers, BIOS revisions. These are not things you can physically detect, so fetching the info from the DMI table 
+is the way to go. This is used by the Linux kernel itself to uniquely identify motherboards.
+</font></td></tr></table></li>
+<li>sudo biosdecode
+</li>
+
+<li>lshw
+</li><li>hwinfo
+</li><li>hwinfo | grep memory
+</li><li>sysinfo  &nbsp; &nbsp; &nbsp; &nbsp; <font size="1" color="#0000FF">(has GUI)</font>
+</li></ol>
+<hr width=23% align=left>
+<pre>cat var/log/syslog | grep -i <font color="blue">dhclient</font> </pre>
+This is a <font color="blue">cat</font>/<font color="blue">grep</font> example 
+with <font color="blue">dhclient</font> as target example, but you 
+can of course have "<i>la totale</i>" with 
+<font color="blue">less var/log/syslog</font> or be inventive about your grepping, for instance: 
+<pre>cat var/log/syslog | grep 15:3 </pre>
+
+
+
+<bR><hr width=44%><br>
+<br><br>
+<div align="center"><a name="connectionproblems" id="connectionproblems"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">Connection problems</font></center>
+</td>
+</tr>
+</table>
+</center>
+<br><br>
+For inexplicable reasons, sometime network manager has the blues and 
+your wi-fi connection will not kick in. This is not to be confused with 
+a slow connection, where the 
+use of utilities like ping and mtr (mytraceroute) will show you the 
+'state' (or rather the speed) of your connection and help you 
+trace eventual backbone problems.<br>
+Here you don't have any connection, or might might even have a connection to the router, but you 
+still don't have access to the Internet.
+<bR><br>
+I have  always found very useful, in such cases, to connect my wifi card  
+<font color=blue>per hand</font>. I am supposing here 1) that you have a open or a wep "protected" router 
+(no wpa) and 
+2) that your wi-fi card is simply 
+<font color=blue><b>eth1</b></font>. You should 
+check first of all the info about your wifi-card with the 
+command <font color=blue>iwconfig</font> (without any parameter) or with the 
+command <font color=blue>sudo lshw -class network</font>, (and there, see "logical name").
+Once you know if your wifi card is indeed eth1 (or something else), 
+  use the following commands in order to connect to the web "per hand":
+  <br><br>
+<table border="3" align="center" width= 66% bgcolor="#FFE4C4"><tr><td><font size=+1> 
+down
+<pre>sudo ifconfig <font color=blue><b>eth1</b></font> down</pre>
+release current lease just in case
+<pre>sudo dhclient -r <font color=blue><b>eth1</b></font></pre>
+up
+<pre>sudo ifconfig <font color=blue><b>eth1</b></font> up</pre>
+choose essid and connect
+<pre>sudo iwconfig <font color=blue><b>eth1</b></font> essid <font color=blue>name_of_your_essid_in_quotes</font></pre>
+give hexadecimal key (if needed)
+<pre>sudo iwconfig <font color=blue><b>eth1</b></font> key <font color=blue>string_of_your_secret_key_in_hex_digits</font></pre>
+or alternatively give password (if needed)
+<pre>sudo iwconfig <font color=blue><b>eth1</b></font> key <font color=blue>s:password_in_ASCII</font></pre>
+</font></td></tr></table>
+
+This should be enough.<br>
+You might add two extra commands:
+<br><bR>
+<table border="3" align="center" width= 66% bgcolor="#FFE4C4"><tr><td><font size=+1> 
+<pre>sudo iwconfig <font color=blue><b>eth1</b></font> mode Managed
+sudo dhclient <font color=blue><b>eth1</b></font></pre>
+</font></td></tr></table>
+<br>
+Finally check your wifi card and see your new assigned IP 
+with  the command lshw (list hardware):
+<prE>sudo lshw -class network</pre>
+Also check the various wifi access points around you:
+<prE>iwlist scan</pre>
+The name ifconfig comes from "interface configurator", while the name iwconfig comes instead from  
+"interface wireless configurator"
+
+
+<bR><br>
+<br><br>
+<div align="center"><a name="bmc" id="bmc"></a></div>
+<table width="88%" border="1" align="center">
+<tr>
+<td bgcolor="#C6E7C6">
+<center><font size="+3">"Must know" useful shortcuts (GNOME)</font>
+<br>
+<i>Don't "click around" like an headless windows chicken!</i><br>
+<a href="useful_findings.htm#qtt">quicker than thou</a> &nbsp; &nbsp; &#8226;&#8226; &nbsp; &nbsp;
+<a href="useful_findings.htm#nsho">nautilus shortcuts</a> &
+</center>
+</td>
+</tr>
+</table>
+</center>
+
+<a name="qtt"></a>
+<br><br>
+
+
+<font color=blue size=+2>quicker than thou</font><br>
+These might be so obvious,  that I don't know if 
+I should be blamed or, given the fact that they are 
+so often underestimated, <u>praised</u> for my compilation:
+<prE>ALT+F2</pre>
+
+brings up the "run application" popup in gnome. Quicker than any "opening terminal" 
+or "mousing around for icons" for launching a program <a href="nomomen.htm">you already know the name of</a>.
+
+<a name="nsho"></a>
+<bR><hr width=44%><br>
+<p align="left">NAUTILUS<br><br> 
+You'll use nautilus a lot in Gnome, so it is good to remember how -say- 
+<font color=blue>alt+enter</font> show the properties of the highlighted file. 
+
+<br>   
+<ul><li>ctrl-h : show hidden files
+</lI><li>
+    ctrl-t : move to trash 
+</lI><li>
+    f9 : toggle side-panel
+</lI><li>
+    alt-home : jump to home folder
+</lI><li>
+    alt-enter : file / folder properties
+</lI><li>
+    alt-f1 : launch applications menu
+</lI><li>
+    alt-f2 : launch "run application" dialogue
+</lI><li>
+    ctrl-alt - right/left arrow : move to the next virtual desktop
+</lI><li>
+    ctrl-alt-shift - right/left arrow : take current window to the next virtual desktop
+</li></ul>
+  
+<bR><br><br>
+<center>
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>(c) 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"http://searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, revealed and
+reviled</center>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

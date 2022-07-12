@@ -1,0 +1,56 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>altavi1.htm: How to search the web, by fravia+
+altavi1.htm</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+
+<br><font size=+2>
+avs_addword</font><br>
+Adds words to the document index.<br><hr><pre>
+C Synopsis
+AVSAPI(int) avs_addword (
+IN avs_idxHdl_t idx,      /* Index handle (from avs_open) */
+IN unsigned char *pWords, /* words to add */
+IN long loc,              /* location to add words */
+OUT long *pNumWords       /* number of words added */
+Arguments
+idx The index handle.
+pWords Pointer to the words to add to the index.
+loc Location value to assign to the first word.
+*pNumWords Number of words added.
+Description
+The avs_addword procedure adds words to the index. A word is defined 
+as a contiguous string of alphanumerics, bounded by non-alphanumerics 
+(like spaces and special characters), as defined in the ISO Latin-1 
+standard.
+It should be called by a filter procedure, which prepares a block of 
+text for indexing. The avs_addword procedure returns the number of words 
+added to the index. Usually, the next call to avs_addword will be given a
+starting location which is *pNumWords (the number of words added) higher 
+than the last call.
+
+Return Values
+AVS_OK or an error code.
+See also
+· avs_adddate
+· avs_addfield
+· avs_addliteral
+· avs_addvalue
+</pre>

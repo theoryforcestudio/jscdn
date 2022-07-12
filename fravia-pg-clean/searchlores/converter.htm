@@ -1,0 +1,428 @@
+<HTML>
+
+<HEAD>
+<TITLE>Converter: convert anything on the fly without silly advertisements aor annoying popups</TITLE>
+   <meta name="author" content="Father">
+   <META NAME="description" CONTENT="convert anything on the fly without silly advertisements aor annoying popups">
+ <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+ <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This totally advertisement-free site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced websearching, web searching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+</HEAD>
+
+<!-- BODY BACKGROUND="../images/tissue.jpg" BGCOLOR="#ffffff" TEXT="#400040" -->
+
+<BODY  BGCOLOR="#c0c0c0" TEXT="#400040">
+<TABLE WIDTH="100%" BORDER=0>
+<TR>
+<td>
+<CENTER>
+<b><FONT SIZE="3" FACE="Times New Roman"><FONT SIZE="+1"><a href="http://www.searchlores.org">SEARCHLORE</a>'S CONVERTER</FONT></B><BR>
+
+<BR><font size=+2>
+
+<i>I was so feedup with all the sites offering those crap and advertisement-heavy converters, that I have extrapolated my own one from some 
+ available web-scripts. <br>No ads here, no cookies, no crap. Power and speed. Enjoy!</i><br>
+</font><br>
+You have to click on a "calculate" button, not just hit enter<br><br><font size=+2>
+<a href="converter.htm#length">Length</a> &nbsp;
+<a href="converter.htm#weight">Weight</a> &nbsp;
+<a href="converter.htm#pressure">Pressure</a> &nbsp;
+<a href="converter.htm#volume">Volume</a> &nbsp;
+<a href="converter.htm#temperature">Temperature</a>
+</font>
+<form method="POST"><center>
+
+                                <script language="JavaScript"><!--
+// from various Authors found on the wide web
+
+function convertTempform(form)
+{
+	if (form.elements[1].value != null && form.elements[1].value.length != 0) 
+	{
+		firstvalue = form.elements[1].value;
+		form.elements[2].value = formatvalue((1.8 * firstvalue) + 32, form.rsize);
+		return
+	}
+	if (form.elements[2].value != null && form.elements[2].value.length != 0) 
+	{
+		firstvalue = form.elements[2].value;
+		form.elements[1].value = formatvalue(( firstvalue - 32) / 1.8, form.rsize);
+		return
+	}
+}
+
+function convertform(form){
+    var firstvalue = 0;
+
+    for (var i = 1; i <= form.count; i++) {
+
+       // Find first non-blank entry
+
+       if (form.elements[i].value != null && form.elements[i].value.length != 0) {
+
+          if (i == 1 && form.elements[2].value != "") return false;
+
+          firstvalue = form.elements[i].value / form.elements[i].factor;
+
+          break;
+
+       }
+
+    }
+
+    if (firstvalue == 0) {
+
+       clearform(form);
+
+       return false;
+
+    }
+
+    for (var i = 1; i <= form.count; i++)
+
+       form.elements[i].value = formatvalue((firstvalue * form.elements[i].factor), form.rsize);
+
+    return true;
+
+}
+
+function formatvalue(input, rsize) {
+
+   var invalid = "**************************";
+
+   var nines = "999999999999999999999999";
+
+   var strin = "" + input;
+
+   var fltin = parseFloat(strin);
+
+   if (strin.length <= rsize) return strin;
+
+   if (strin.indexOf("e") != -1 ||
+
+       fltin > parseFloat(nines.substring(0,rsize)+".4"))
+
+      return invalid.substring(0, rsize);
+
+   var rounded = "" + (fltin + (fltin - parseFloat(strin.substring(0, rsize))));
+
+   return rounded.substring(0, rsize);
+
+}
+
+function resetform(form) {
+
+    clearform(form);
+
+    form[1].value = 1;
+
+    convertform(form);
+
+    return true;
+
+}
+
+function clearform(form) {
+
+    for (var i = 1; i <= form.count; i++) 
+	    form[i].value = "";
+
+    return true;
+
+}
+
+
+// -->
+													</script>
+                            <tr>
+                            <td><div align="center">
+<!-- table lengths  begin -->                                
+<table width="96%" border="0" align="center" cellpadding="9" cellspacing="1" bgcolor="#cccccc">
+                                  <tr bgcolor="#cccccc"> 
+                                    <td colspan="5" align="center"> <h2 class="subdivisia"><a name="length">Length</a> 
+                                        Conversion Calculator</h2></td>
+                                  </tr>
+                                  <tr bgcolor="#cccccc"> 
+                                    <td align="center" class="wwmservicezoom">Millimeters</td>
+                                    <td align="center" class="wwmservicezoom">Centimeters</td>
+                                    <td align="center" class="wwmservicezoom">Miles</td>
+                                    <td align="center" class="wwmservicezoom">Inches</td>
+                                    <td align="center"> <input name="button3" type="button" onClick="clearform(this.form)" value="Clear"></td>
+                                  </tr>
+                                  <tr bgcolor="#cccccc"> 
+                                    <td align="center"> <input type="text" name="valMM" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input type="text" name="valCM" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input type="text" name="valMiles" size="7" onfocus="clearform(this.form)"></td>
+                                    <td align="center"> <input type="text" name="valInch" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#cccccc"> 
+                                    <td align="center" class="wwmservicezoom">Meter</td>
+                                    <td align="center" class="wwmservicezoom">Kilometers</td>
+                                    <td align="center" class="wwmservicezoom">Feet</td>
+                                    <td align="center" class="wwmservicezoom">Yards</td>
+                                    <td align="center">&nbsp;</td>
+                                  </tr>
+                                  <tr bgcolor="#cccccc"> 
+                                    <td align="center"><input type="text" name="valMeter" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input type="text" name="valKM" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input type="text" name="valFeet" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input type="text" name="valYard" size="7" onFocus="clearform(this.form)"></td>
+                                    <td align="center"><input name="button22" type="button" onClick="convertform(this.form)" value="Calculate"></td>
+                                  </tr>
+                                </table>
+                              </div></td>
+                          </tr>
+				
+                        </table>
+                      </center>
+													
+														
+													</form>
+													<center>
+														<script language="JavaScript"><!--
+// factors must convert the first item to the current item.
+// Be sure to use the correct form index. The first form is
+// always index "0" and remaining forms are numbered in the
+// order they appear in the document.
+document.forms[0].count = 8;  // number of unit types
+document.forms[0].rsize = 7;  // Rounding size, use same as SIZE
+document.forms[0].valMM.factor = 100;            // mm to mm.
+document.forms[0].valCM.factor = 10;            // mm to cm.
+document.forms[0].valMiles.factor = 0.0000621371;            // mm to miles.
+document.forms[0].valInch.factor = 3.937007874;  // mm to in.
+document.forms[0].valMeter.factor = 0.1;  // mm to mtr.
+document.forms[0].valKM.factor = 0.0001;  // mm to kilomtr.
+document.forms[0].valFeet.factor = 0.3280839895;  // mm to feet.
+document.forms[0].valYard.factor = 0.1093613298; //mm to yards.
+// -->
+														</script>
+														<hr size="1">
+													</center>
+													<form method="POST">
+														
+														<center>
+															<p>
+<!-- table weights  begin -->  																
+                        <table width="76%" border="0" cellpadding="7" cellspacing="1" bgcolor="#cccccc">
+                          <tr bgcolor="#cccccc"> 
+                            <td colspan="11" align="center"> <h2 class="subdivisia"><a name="weight">Weight</a> 
+                                Conversion Calculator</h2></td>
+                          </tr>
+                          <tr bgcolor="#cccccc" class="wwmservicezoom"> 
+                            <td width="153" align="center">Metric Tons</td>
+                            <td width="153" align="center">Kilograms</td>
+                            <td width="112" align="center">Pounds</td>
+                            <td width="112" align="center">Oz</td>
+                            <td width="112" align="center">Grams</td>
+                            <td width="112" align="center">Tons</td>
+                            <td width="160" colspan="5" align="center"> <input name="button2" type="button" onclick="clearform(this.form)" value="Clear"></td>
+                          </tr>
+                          <tr bgcolor="#cccccc"> 
+                            <td align="center"><input type="text" name="valMTon" size="6" onFocus="clearform(this.form)"></td>
+                            <td align="center"> <input type="text" name="valKG" size="6"></td>
+                            <td align="center"><input type="text" name="valLBS" size="6" onFocus="clearform(this.form)"></td>
+                            <td align="center"><input type="text" name="valOz" size="6" onFocus="clearform(this.form)"></td>
+                            <td align="center"><input type="text" name="valGram" size="6" onFocus="clearform(this.form)"></td>
+                            <td align="center"><input type="text" name="valTons" size="6" onFocus="clearform(this.form)"> 
+                            </td>
+                            <td align="center"> <input name="button2" type="button" onclick="convertform(this.form)" value="calculate"> 
+                            </td>
+                          </tr>
+                        </table>
+														</center>
+													</form>
+													<script language="javascript"> <!-- set conversion factors for each item in form.
+
+document.forms[1].count = 6;
+document.forms[1].rsize = 6;
+document.forms[1].valMTon.factor = 0.001; //KG To MTon;
+document.forms[1].valKG.factor = 1; //KG;
+document.forms[1].valLBS.factor = 2.2046215; //KG TO Pounds;
+document.forms[1].valOz.factor = 35.27396; //KG To Oz;
+document.forms[1].valGram.factor = 1000; //KG To Gram;
+document.forms[1].valTons.factor = 0.0011023; //KG To Tons;
+<!-- done hiding from old browsers --> </script>
+													<hr size="1">
+													<form method="post"><center>
+<!-- table pressures  begin -->  
+														<table width="556" border="0" cellpadding="9" cellspacing="1" bgcolor="#cccccc">
+															<tr bgcolor="#cccccc">
+																<td colspan="13" align="center" valign="center">
+																	<h2>
+																		<span class="subdivisia"><a name="pressure">Pressure</a> 
+                              Conversion Calculator</span></2 onfocus="clearform(this.form)"></h2>
+																</td>
+															</tr>
+															<tr bgcolor="#cccccc" class="wwmservicezoom">
+																<td width="110" align="center">Bar</td>
+																<td width="184" align="center">Kg/cm</td>
+																<td width="110" align="center">Psi</td>
+																<td colspan="4" align="center">
+																	<input name="button2" type="button" onclick="clearform(this.form)" value="Clear"></td>
+															</tr>
+															<tr bgcolor="#cccccc">
+																<td align="center">
+																	<input type="text" name="valBar" size="6"></td>
+																<td align="center">
+																	<input type="text" name="valKgCm" size="6" onfocus="clearform(this.form)"></td>
+																<td align="center">
+																	<input type="text" name="valPsi" size="6" onfocus="clearform(this.form)"></td>
+																<td width="147" align="center">
+																	<input name="button2" type="button" onclick="convertform(this.form)" value="calculate">
+																</td>
+															</tr>
+														</table>
+													</form>
+													<script language="javascript"> <!-- set conversion factors for each item in form.
+
+document.forms[2].count = 3;
+document.forms[2].rsize = 6;
+document.forms[2].valBar.factor = 0.980665; //KgCm to Bar
+document.forms[2].valKgCm.factor = 1; //KgCm to KgCm
+document.forms[2].valPsi.factor = 14.22; //KgCm to Psi
+<!-- done hiding from old browsers --> </script>
+													<hr size="1">
+													<form method="post"><center>
+<!-- table volumes begin -->  														
+                      <table width="96%" border="0" cellpadding="9" cellspacing="1" bgcolor="#cccccc">
+                        <tr bgcolor="#cccccc"> 
+                          <td colspan="16" align="center" valign="center"> <h2> 
+                              <span class="subdivisia"><a name="volume">Volume</a> Conversion Calculator</span></2 
+                              onfocus="clearform(this.form)"></h2></td>
+                        </tr>
+                        <tr bgcolor="#cccccc" class="wwmservicezoom"> 
+                          <td align="center">Milliliters</td>
+                          <td align="center">Liters</td>
+                          <td align="center">Fluid<br>Ounces</td>
+                          <td align="center">Pints</td>
+                          <td align="center">Cups</td>
+                          <td align="center">Quarts</td>
+                          <td align="center">Gallons</td>
+                          <td colspan="3" align="center"> <input name="button2" type="button" onclick="clearform(this.form)" value="Clear"></td>
+                        </tr>
+                        <tr bgcolor="#cccccc"> 
+                          <td align="center"><input type="text" name="valML" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"> <input type="text" name="valLiters" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"> <input type="text" name="valFluid" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"><input type="text" name="valPints" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"><input type="text" name="valCups" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"> <input type="text" name="valQuarts" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"> <input type="text" name="valGallons" size="6" onfocus="clearform(this.form)"></td>
+                          <td align="center"> <input name="button2" type="button" onclick="convertform(this.form)" value="calculate"> 
+                          </td>
+                        </tr>
+                      </table>
+													</form>
+													<script language="javascript">
+//set conversion factors for each item in form. document.forms[3].count="4;" 
+document.forms[3].count = 7;
+document.forms[3].rsize=6; 
+document.forms[3].valML.factor=1000; //Liters to ML;
+document.forms[3].valLiters.factor=1; //Liters to Liters;
+document.forms[3].valFluid.factor=33.8239926; //Liters to Fluid Ounces;
+document.forms[3].valPints.factor=2.11337; //Liters to Pints; 
+document.forms[3].valCups.factor=4.22675; //Liters to Cups; 
+document.forms[3].valQuarts.factor=1.056998; //Liters to Quarts; 
+document.forms[3].valGallons.factor=0.2642499; //Liters to Gallons
+// end hiding script - - 
+//onfocus="clearform(this.form)"
+													</script>
+													<hr size="1">
+													<!-- Start: Temperature Conversion -->
+													<form method="POST">
+														<center>
+<!-- table temperatures  begin -->  
+																<table border="0" cellpadding="9" cellspacing="1" bgcolor="#cccccc" ID="Table1">
+																	<tr bgcolor="#cccccc">
+																		<td colspan="6" align="center">
+																			<h2 class="subdivisia"><a name="temperature">Temperature</a> Conversion Calculator</h2>
+																		</td>
+																	</tr>
+																	<tr bgcolor="#cccccc">
+																		<td width="67" align="center" class="wwmservicezoom">Celsius</td>
+																		<td width="100" align="center" class="wwmservicezoom">Fahrenheit</td>
+																		<td width="107" align="center">
+																			<input name="button" type="button" onclick="clearform(this.form)" value="Clear" ID="Button1"></td>
+																	</tr>
+																	<tr bgcolor="#cccccc">
+																		<td align="center">
+																			<input type="text" name="valCel" size="7" onfocus="clearform(this.form)" ID="Text1"></td>
+																		<td align="center">
+																			<input type="text" name="valFah" size="7" onfocus="clearform(this.form)" ID="Text2"></td>
+																		<td align="center">
+																			<input name="button2" type="button" onclick="convertTempform(this.form)" value="Calculate" ID="Button2"></td>
+																	</tr>
+																</table>
+														</center>
+													</form>
+													<script language="javascript">
+//set conversion factors for each item in form. document.forms[3].count="4;" 
+document.forms[4].count = 2;
+document.forms[4].rsize=6; 
+													</script>
+													<hr size="1">
+												<!-- End: Temperature Conversion -->
+											</td>
+										</tr>
+										</table>
+										
+<br><center>
+Back to <a href="index.html">portal</a> &nbsp; Back to <a href="fu_sussi.htm">Audiovisual aids</a>
+</CENTER>
+
+</TD>
+	</TR>
+</TABLE>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</BODY>
+
+</HTML>

@@ -1,0 +1,266 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>chainin.htm: How to search the web, by fravia+
+chainin tools</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html;
+charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and
+advanced search techniques for people interested in finding any
+kind of information on the web. Here are informations, documents,
+links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how
+to search, search techniques, hints and tips for searching the
+web, How do I learn to search?, Advanced Internet searching, How
+do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040
+VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Chaining ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="pro_essa.htm"><IMG
+SRC="images/proxpeti.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+030300</th>
+</tR></table>Version March 2000
+<!-- internet searching techniques: imageheader end -->
+<hR><font size=+2> Proxomitron and Junkbuster chaining, an important lore</fonT>
+<hr width=44%>
+<i>There is an interesting short snippet by NME <a href="chainin.htm#below">below</a>, that you'll appreciate 
+after having read the following 'teamwork' presented by 'threestars' proxy-cooks Iefaf and Bone Digger (I 
+have collected it 
+on
+my old  <a href="http://www.insidetheweb.com/messageboard/mbs.cgi?acct=mb155985&MyNum=952057226&P=No&TL=952057226">msgbrd</a> 
+ in March 2000).<bR>The thread is meant as an answer thread to vgb's question below:</i>
+</center><prE>
+OK - I've got Proxomitron and Junkbuster configured and running
+with apparently no problems. I've gone to a few of the proxy
+checking sites and all they get is an IP and my provider. Since
+the IP is assigned each time I call in can I assume a *bit* of
+anonymity? I'm not paranoid about it but I really don't want
+anyone tracking my browsing habits if I can help it.
+Would it be overkill if I used proxomitron and junkbuster and then
+connected to an external proxy?
+
+Pardon the newbie questions but I've only become concerned with
+what I'm sending out lately - my education is sadly lacking.
+
+I've read some FAQ's on proxy's but I don't understand the
+distinction between something like virtualave proxy and
+proxomitron other than one resides on *my* system.
+
+Thanx for the help,
+
+vgb
+</prE>
+<center>
+<i>Great work, enjoy!</i>
+</center>     
+
+<bR><hr>
+
+<BR>To have JunkBuster and Proxomiton to run together<BR>- In the
+JB directory open the sforward.ini file, delete everything and
+insert this line:  <BR><pre>*	localhost:8080	.	.</pre><BR>- While
+we are here have a look at the sblock.ini file as it will block
+any unwanted URL (doubleclick and so on) NME made a list at
+www.locus.webprovider.com/sblock.txt<BR><BR>Open your browser<BR>-
+<u>Opera</u> Preferences >Proxy >Proxy server
+preferences<BR><pre><BR>Check HTTP	localhost	Port:	8080</pre><BR>-
+<u>Netscape</u> Preferences >Advanced >Proxies Servers >Manual
+Proxy Configuration<BR><pre><BR>Type	Address of proxy server to
+use	Port<BR>HTTP: 	localhost			8080</pre><BR><BR>To use a proxy
+with Proxomitron<BR>-Open Proxomitron >Check Use remote Proxy
+>Proxy >Add www.iaea.org:3128(*) >OK >OK<BR>(*)This is a working
+one but text only.<BR><BR>Now the browser, JunkBuster and
+Proxomitron are ready to work together.<BR>Of course each program
+must be launched before surfing.<BR>Schematicaly after setting
+your browser, JunkBuster and Proxomitron a request to an URL will
+look like this:<BR><pre>your
+browser-->Proxomitron-->JunkBuster-->Proxy
+Server-->URL</pre><BR>then<BR><pre>URL-->Proxy
+Server-->Junkbuster-->Proxomitron-->your browser</pre><BR>The URL
+is requested by the proxy which send it back to the browser after
+being filtered by JunkBuster and Proxomitron<BR><BR>Test your
+proxy at<BR>http://www.tamos.com/bin/proxy.cgi (Proxy server not
+detected = good)<BR>Test your environment variables
+at<BR>http://www.tamos.com/bin/envir.cgi<BR><BR>Some more
+links<BR>http://proxys4all.cgi.net/files/why_proxy.txt<BR>Why Use
+a Proxy, or the Tales of a Proxateer, by
+AnonyMouse<BR><BR>http://ctservice.de/taker/cgi-bin/anon-snoop.cgi
+<BR>Many mice surf the web under the illusion that their actions
+are private<BR><BR>http://www.magusnet.com/proxy.html<BR>Chaining
+of proxy servers to improve
+anonymity<BR><BR>http://echo.znet.de:8888/<BR>Check what your
+browser is sending each time you connect to a
+site<BR><BR>http://privacy.net/anonymizer/<BR>You don't need to
+tell they know already about you<BR>
+<BR>http://www.secureroot.com/category/anonymity/proxies/<BR>More
+interesting links
+<BR>
+       <hR>
+ea.ethz.ch:8080
+and not the transparent www.iaea.org:3128
+
+By the way, ea.ethz.ch is a proxy intended to make life easier to
+blind people, so don't abuse.
+
+W3 Access for Blind People
+http://gehtnix.fernuni-hagen.de/MMM/W3blinds/user_man.html
+
+
+iefaf
+  <hR>
+
+<BR>iefaf gave you very good advice. I hope I don't offend him by
+following up his response to you. I am only responding because it
+appears to me that you have failed to understand that you must
+input an open proxy in Proxomitron. Proxomitron is not a proxy in
+and of itself. Nor is Junkbuster. They are best thought of as
+filters.<BR><BR>To proxy (used as a verb) you must find & then
+input in Proxomitron one or more open proxies in the
+format<BR><BR>proxyname:port <BR><BR>by selecting Proxy->Add->OK.
+Then open the log window and select Test to verify that your proxy
+is working and to examine the headers. <BR><BR>When you visit a
+test page or any web page for that matter the REMOTE_ADDR ENV
+should display the IP number of your newly added open proxy and
+not your dynamically assigned (static if you connect by cable) ISP
+connection IP number. A proxy acts as a re-performer on your
+behalf. One that is commonly referred to as "anonymous" (sometimes
+the term "nontransparent" is misused to convey the same concept)
+will act on your behalf in retrieving the requested web resource
+but will not pass your real IP number (or resolved host name) in
+any ENV header. Please note that if you run a server on your
+machine to act as a proxy your real IP number will still be passed
+unless your requests are sent onward via a second external proxy.
+Junkbuster & Proxomitron are often called proxies but they are not
+sufficient to protect your privacy BECAUSE THEY RESIDE ON YOUR
+LOCAL MACHINE. That is why Proxomitron will filter your headers
+(as you have configured it) but then send your request onward to
+the external open proxy you have entered and
+selected.<BR><BR>External websites that you might find at say
+Anonymizer run a proxy server that acts by undefining the
+important ENV headers that are passed by you before sending your
+request onward. The website from which a resource has been
+requested should only see the proxy's IP number (not yours) and
+thus respond by sending  the requested resource to the exteral
+proxy which will in turn send it onward to you. The proxy again is
+simply a re-performer; I might add a re-performer that must
+understand the underlying protocol of your request.<BR><BR>I hope
+this helps. I apologize to iefaf if I offended by adding my own
+two cents.<BR><BR>- Bone Digger<BR><BR><BR><BR>
+<BR>
+<hR>
+
+   <prE>
+Iefaf & Bone Digger -
+
+Thanx for the explanation. Combined ( team work ) you gave me what
+I needed to understand the difference between a *filter* and a
+*proxy*.
+
+Iefaf - one question however - the browser connects to :8000 which
+is JB which is forwarded to :8080 which is Prox which uses
+external :xxxx.
+In your example you indicate browser->Prox->JB->proxyserver->URL.
+Is that correct or should it be
+Browser->JB->Prox->proxyServer->Url?
+                  
+Iefaf - Correction - you didn't say to connect JB on :8000,
+I read that in another post.
+You indicate to connect *browser* to :8080 AND forward JB to
+:8080?
+
+Am I misunderstanding or is it a typo?
+
+
+Thanx again for the help.
+
+vgb     </prE>
+<hR>
+<BR><center><font size=+2>Chaining the Proxomitron and
+Junkbuster<br></font>(snatched on my messageboard by myself)</center><br>You can reverse the order and have the Proxomitron listen to port
+8000, entering your proxy into the Junkbuster's configuration. You 
+can thus set your browser's proxy
+configuration to localhost:8080 (for HTTP) and have all the
+filtering of both the Proxomitron and Junkbuster in effect, while
+your browser can be configured for a Security proxy of
+localhost:8000 to allow Junkbuster to act as a Security
+filter for HTTPS. Since you can more easily
+fine tune Junkbuster's ad filtering capacities for the specific sites you 
+frequent, you can kill more ads (and more easily) in this way, speeding 
+up your browsing. The disadvantage is that Proxomitron's
+excellent proxy administration features will be disabled.<BR><BR>
+Those that prefer not to chain Junkbuster and
+Proxomitron locally, but still wish the advantages of doing so,
+can alternatively use the Proxomitron as a local proxy, 
+entering the external Junkbuster proxies into its proxy list. For a couple of interesting 
+lists see <font color=blue>[</font><a href="pxylist1.txt">pxylist1.txt</a><font color=blue>]</font>
+ & <font color=blue>[</font><a href="pxylist2.txt">pxylist2.txt</a><font color=blue>]</font>
+<BR><BR>
+<BR>  
+<hr>
+ <a name="below"></a>
+<hr><center><font size=+2>Junkbuster & Proxomitron chaining instructions</fonT>
+<bR>by NME, February 2000<br>    </center>
+<br>Proxomitron is not really efficient at blocking a long list of
+banner gif URL's. Junkbuster, however, was born for this task.
+Download and install Junkbuster. Enter your GIF-kill list in the
+sblock.ini file and save. For a good kill list to get you started
+you can go to waldherr.org You may see some of the same URL's that
+you have, maybe even more.
+                       <br><br>
+You then have to include Junkbuster in your local proxy chain to
+get the benefits of both JB and Proxo. You could set your browser
+to proxy to localhost:8000 to forward to JB. In JB's sforward.ini
+file enter:           <pre>
+*(TAB)localhost:8080(TAB).(TAB).
+                              </pre>
+except (TAB) should be replaced by actually hitting the tab key. <bR>
+JB will now forward to Proxomitron.
+
+<!-- begin da closing bit, duh -->
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="pro_essa.htm"><IMG
+SRC="images/proxpeti.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2"
+bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><u>fravia+</u><font
+color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+<hR>
+
+
+</body>
+</HTML>

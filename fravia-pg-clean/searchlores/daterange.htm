@@ -1,0 +1,577 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>googledigger</title> 
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="Main search engines; Altavista's answer to Google's success; qxapoiu proximity secrets; Hotbot and Fast">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+<script language="JavaScript">
+<!-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+// convert calendar to Julian date
+//-----------------------------------------------------------------------------
+function cal_to_jd( era, y, m, d, h, mn, s )
+{
+	var jy, ja, jm;			//scratch
+
+	if( y == 0 ) {
+		alert("There is no year 0 in the Julian system!");
+        return "invalid";
+    }
+    if( y == 1582 && m == 10 && d > 4 && d < 15 ) {
+		alert("The dates 5 through 14 October, 1582, do not exist in the Gregorian system!");
+        return "invalid";
+    }
+
+//	if( y < 0 )  ++y;
+    if( era == "BCE" ) y = -y + 1;
+	if( m > 2 ) {
+		jy = y;
+		jm = m + 1;
+	} else {
+		jy = y - 1;
+		jm = m + 13;
+	}
+
+	var intgr = Math.floor( Math.floor(365.25*jy) + Math.floor(30.6001*jm) + d + 1720995 );
+
+	//check for switch to Gregorian calendar
+    var gregcal = 15 + 31*( 10 + 12*1582 );
+	if( d + 31*(m + 12*y) >= gregcal ) {
+		ja = Math.floor(0.01*jy);
+		intgr += 2 - ja + Math.floor(0.25*ja);
+	}
+
+	//correct for half-day offset
+	var dayfrac = h/24.0 - 0.5;
+	if( dayfrac < 0.0 ) {
+		dayfrac += 1.0;
+		--intgr;
+	}
+
+	//now set the fraction of a day
+	var frac = dayfrac + (mn + s/60.0)/60.0/24.0;
+
+    //round to nearest second
+    var jd0 = (intgr + frac)*100000;
+    var jd  = Math.floor(jd0);
+    if( jd0 - jd > 0.5 ) ++jd;
+    return jd/100000;
+}
+
+//-----------------------------------------------------------------------------
+// convert Julian date to calendar date
+// (algorithm adopted from Press et al.)
+//-----------------------------------------------------------------------------
+function jd_to_cal( jd, form )
+{
+	var	j1, j2, j3, j4, j5;			//scratch
+
+	//
+	// get the date from the Julian day number
+	//
+    var intgr   = Math.floor(jd);
+    var frac    = jd - intgr;
+    var gregjd  = 2299161;
+	if( intgr >= gregjd ) {				//Gregorian calendar correction
+		var tmp = Math.floor( ( (intgr - 1867216) - 0.25 ) / 36524.25 );
+		j1 = intgr + 1 + tmp - Math.floor(0.25*tmp);
+	} else
+		j1 = intgr;
+
+	//correction for half day offset
+	var dayfrac = frac + 0.5;
+	if( dayfrac >= 1.0 ) {
+		dayfrac -= 1.0;
+		++j1;
+	}
+
+	j2 = j1 + 1524;
+	j3 = Math.floor( 6680.0 + ( (j2 - 2439870) - 122.1 )/365.25 );
+	j4 = Math.floor(j3*365.25);
+	j5 = Math.floor( (j2 - j4)/30.6001 );
+
+	var d = Math.floor(j2 - j4 - Math.floor(j5*30.6001));
+	var m = Math.floor(j5 - 1);
+	if( m > 12 ) m -= 12;
+	var y = Math.floor(j3 - 4715);
+	if( m > 2 )   --y;
+	if( y <= 0 )  --y;
+
+	//
+	// get time of day from day fraction
+	//
+	var hr  = Math.floor(dayfrac * 24.0);
+	var mn  = Math.floor((dayfrac*24.0 - hr)*60.0);
+		 f  = ((dayfrac*24.0 - hr)*60.0 - mn)*60.0;
+	var sc  = Math.floor(f);
+		 f -= sc;
+    if( f > 0.5 ) ++sc;
+
+    if( y < 0 ) {
+     	y = -y;
+        form.era[1].checked = true;
+    } else
+        form.era[0].checked = true;
+
+    form.year.value          = y;
+    form.month[m-1].selected = true;
+    form.day[d-1].selected   = d;
+    form.hour.value          = hr;
+    form.minute.value        = mn;
+    form.second.value        = sc;
+}
+
+//-----------------------------------------------------------------------------
+// calculate Julian date from calendar date or calendar date from Julian date
+//-----------------------------------------------------------------------------
+function JDcalc( form ) {
+    var era;
+    for( k=0; k < form.era.length; ++k ) {
+        if( form.era[k].checked ) {
+            era = form.era[k].value;
+            break;
+        }
+    }
+    var calctype;
+    for( k=0; k < form.calctype.length; ++k ) {
+        if( form.calctype[k].checked ) {
+            calctype = form.calctype[k].value;
+            break;
+        }
+    }
+    if( calctype == "JD" ) {
+        var m;
+        for( var k=0; k < form.month.length; ++k ) {    //Netscape 4.7 is stoopid
+            if( form.month[k].selected ) {
+                m = k+1;
+                break;
+            }
+        }
+        var d;
+        for( var k=1; k <= form.day.length; ++k ) {    //Netscape 4.7 is stoopid
+            if( form.day[k-1].selected ) {
+                d = k;
+                break;
+            }
+        }
+        var y  = parseFloat(form.year.value);
+//      var m  = parseFloat(form.month.value);
+//      var d  = parseFloat(form.day.value);
+        var h  = parseFloat(form.hour.value);
+        var mn = parseFloat(form.minute.value);
+        var s  = parseFloat(form.second.value);
+        if( y < 0 ) {
+	    	y   = -y;
+            era = "BCE";
+            form.year.value = y;
+            form.era[1].checked = true;
+        }
+        form.JDedit.value = cal_to_jd(era,y,m,d,h,mn,s);
+    } else {
+        jd_to_cal(form.JDedit.value,form);
+    }
+    //weekday
+    var	weekday = new Array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+    var t  = parseFloat(form.JDedit.value) + 0.5;
+    var wd = Math.floor( (t/7 - Math.floor(t/7))*7 + 0.000000000317 );   //add 0.01 sec for truncation error correction
+    form.wkday.value = weekday[wd];
+}
+
+var	month = new Array("January","February","March","April","May","June","July",
+					  "August","September","October","November","December");
+var numdays = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+
+function ModifiedDate() {
+	updated = new Date(document.lastModified);
+	Month   = month[updated.getMonth()];
+	Day     = updated.getDate();
+	Year    = updated.getYear();
+	Hour    = updated.getHours();
+	Min     = updated.getMinutes();
+    if( Year < 2000 ) Year += 1900;
+    if( Year < 2000 ) Year += 100;  //Netscape 3 and IE 4.7 return 0 instead of 100 for 2000
+	if( Hour < 10 )  Hour = "0" + Hour;
+	if( Min  < 10 )  Min  = "0" + Min;
+	document.write("Last modified " + Month + " " + Day +  ", " + Year + " at " + Hour + ":" + Min);
+}
+
+function set_form_fields(form) {
+
+    //grab the current USNO clock time
+    var today = new Date();
+
+    var year = today.getYear();
+    if( year < 2000 ) year += 1900;
+    if( year < 2000 ) year += 100;  //Netscape 3 and IE 4.7 return 0 instead of 100 for 2000
+    var month = today.getMonth();
+    var day   = today.getDate();
+    var hour  = today.getHours();
+    var mins  = today.getMinutes();
+    var secs  = today.getSeconds();
+
+    //convert to UT
+    var TZ = today.getTimezoneOffset()/60;
+    hour += TZ;
+    if( hour >= 24 ) {
+        hour -= 24;
+        ++day;
+        if( day > numdays[month-1] ) {
+            day = 1;
+            ++month;
+            if( month > 11 ) {
+                month -= 12;
+                ++year;
+            }
+        }
+    }
+
+    //set the form fields
+    form.year.value = year;
+    for( k=0; k < form.month.length; ++k ) {    //Netscape 4.7 is stoopid
+        if( k == month ) {
+            form.month[k].selected = true;
+            break;
+        }
+    }
+    form.day.value = day;
+    for( k=1; k <= form.day.length; ++k ) {    //Netscape 4.7 is stoopid
+        if( k == day ) {
+            form.day[k-1].selected = true;
+            break;
+        }
+    }
+    form.hour.value   = hour;
+    form.minute.value = mins;
+    form.second.value = secs;
+
+    doJD(form);
+}
+
+function dodate(form) {
+    for( k=0; k < form.calctype.length; ++k ) {
+        if( form.calctype[k].value == "date" ) {
+            form.calctype[k].checked = true;
+            break;
+        }
+    }
+}
+
+function doJD(form) {
+    for( k=0; k < form.calctype.length; ++k ) {
+        if( form.calctype[k].value == "JD" ) {
+            form.calctype[k].checked = true;
+            break;
+        }
+    }
+}
+
+function addDateRange(form1, form2, form3) {
+    form3.q.value += " daterange:"+Math.floor(form1.JDedit.value)+"-"+Math.floor(form2.JDedit.value);
+}
+//---------------------------------------------------------------------------->
+</script>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+             <center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3><a href="google.htm">Google</a> time "slices"</font>&nbsp;</center></td></tr></table><br><br><i>
+      These masks have been cleverly implemented by <b>Ritz</b> in July 2004, on my request, using the 'archeological digging' form 
+      that you will find in the ad hoc <a href="google.htm#usef">google</a> page of <a href="http://www.searchlores.org">www.searchlores.org</a>. (Note that the 'before common era' switch 
+      wont probably be that much useful when searching with google). Enjoy!
+      <br><br>
+</i>
+</center>
+<form name="JD1">
+
+<table cellspacing="1" cellpadding="0" border="0">
+<tr>
+    <td><font size=+3 face=sans-serif color=#008800>CHANGE "FROM":</font></td></tr><tr><td></td>
+    <td>&nbsp;year</td>
+    <td>&nbsp;month</td>
+    <td>day</td>
+    <td width="13">&nbsp;</td>
+    <td>&nbsp;hr</td>
+    <td>min</td>
+    <td>sec</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td>
+        CommonEra<input type="radio" name="era" value="CE" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)" checked>
+        BeforeCommonEra<input type="radio" name="era" value="BCE" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)">
+        &nbsp;
+    </td>
+    <td><input type="text" name="year" size="4" maxlength="4" value="2003" OnBlur="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)"></td>
+    <td><select name="month" OnClick="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)">
+            <option value="1">January
+            <option value="2">February
+            <option value="3">March
+            <option value="4">April
+            <option value="5">May
+            <option value="6">June
+            <option value="7">July
+            <option value="8">August
+            <option value="9">September
+            <option value="10">October
+            <option value="11">November
+            <option value="12">December
+        </select></td>
+    <td><select name="day" OnClick="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)">
+            <option value="1">1
+            <option value="2">2
+            <option value="3">3
+            <option value="4">4
+            <option value="5">5
+            <option value="6">6
+            <option value="7">7
+            <option value="8">8
+            <option value="9">9
+            <option value="10">10
+            <option value="11">11
+            <option value="12">12
+            <option value="13">13
+            <option value="14">14
+            <option value="15">15
+            <option value="16">16
+            <option value="17">17
+            <option value="18">18
+            <option value="19">19
+            <option value="20">20
+            <option value="21">21
+            <option value="22">22
+            <option value="23">23
+            <option value="24">24
+            <option value="25">25
+            <option value="26">26
+            <option value="27">27
+            <option value="28">28
+            <option value="29">29
+            <option value="30">30
+            <option value="31">31
+        </select></td>
+    <td>&nbsp;</td>
+    <td><input type="text" name="hour"   value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)"></td>
+    <td><input type="text" name="minute" value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)"></td>
+    <td><input type="text" name="second" value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD1)" OnFocus="doJD(document.JD1)" OnKeyPress="doJD(document.JD1)"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr><td height="6" colspan="9"></td></tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="3">&nbsp;Julian&nbsp;date</td>
+    <td>&nbsp;</td>
+    <td colspan="4">&nbsp;weekday</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="3"><input type="text" name="JDedit" value="" size="13", maxlength="13" OnBlur="JDcalc(document.JD1)" OnFocus="dodate(document.JD1)" OnKeyPress="dodate(document.JD1)"></td>
+    <td>&nbsp;</td>
+    <td colspan="4"><input type="text" name="wkday" value=" * * * * *" size="10" maxlength="10"></td>
+</tr>
+<tr><td height="10" colspan="9"></td></tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="8" style="color: Navy;">calculation type</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="8">
+        JD<input type="radio" name="calctype" value="JD" checked>
+        date<input type="radio" name="calctype" value="date">
+        &nbsp;&nbsp;
+        <input type="button" name="calcbutton" value="calculate" OnClick=JDcalc(document.JD1)>
+    </td>
+</tr>
+</table>
+</form> 
+<script language="JavaScript">
+    <!--------------------
+    set_form_fields(document.JD1);   //initialize the date & time to now
+    JDcalc(document.JD1);            //calculate Julian Date of now
+    //------------------->
+</script>
+
+<hr>
+
+<form name="JD2">
+
+<table cellspacing="1" cellpadding="0" border="0">
+<tr>
+    <td><font size=+3 face=sans-serif color=#008800>CHANGE (or leave) "TO":</font></td></tr><tr><td></td>
+    <td>&nbsp;year</td>
+    <td>&nbsp;month</td>
+    <td>day</td>
+    <td width="13">&nbsp;</td>
+    <td>&nbsp;hr</td>
+    <td>min</td>
+    <td>sec</td>
+    <td>&nbsp;</td>
+</tr>
+<tr>
+    <td>
+        CommonEra<input type="radio" name="era" value="CE" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)" checked>
+        BeforeCommonEra<input type="radio" name="era" value="BCE" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)">
+        &nbsp;
+    </td>
+    <td><input type="text" name="year" size="4" maxlength="4" value="2003" OnBlur="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)"></td>
+    <td><select name="month" OnClick="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)">
+            <option value="1">January
+            <option value="2">February
+            <option value="3">March
+            <option value="4">April
+            <option value="5">May
+            <option value="6">June
+            <option value="7">July
+            <option value="8">August
+            <option value="9">September
+            <option value="10">October
+            <option value="11">November
+            <option value="12">December
+        </select></td>
+    <td><select name="day" OnClick="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)">
+            <option value="1">1
+            <option value="2">2
+            <option value="3">3
+            <option value="4">4
+            <option value="5">5
+            <option value="6">6
+            <option value="7">7
+            <option value="8">8
+            <option value="9">9
+            <option value="10">10
+            <option value="11">11
+            <option value="12">12
+            <option value="13">13
+            <option value="14">14
+            <option value="15">15
+            <option value="16">16
+            <option value="17">17
+            <option value="18">18
+            <option value="19">19
+            <option value="20">20
+            <option value="21">21
+            <option value="22">22
+            <option value="23">23
+            <option value="24">24
+            <option value="25">25
+            <option value="26">26
+            <option value="27">27
+            <option value="28">28
+            <option value="29">29
+            <option value="30">30
+            <option value="31">31
+        </select></td>
+    <td>&nbsp;</td>
+    <td><input type="text" name="hour"   value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)"></td>
+    <td><input type="text" name="minute" value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)"></td>
+    <td><input type="text" name="second" value="0" size="2" maxlength="2" OnBlur="JDcalc(document.JD2)" OnFocus="doJD(document.JD2)" OnKeyPress="doJD(document.JD2)"></td>
+    <td>&nbsp;</td>
+</tr>
+<tr><td height="6" colspan="9"></td></tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="3">&nbsp;Julian&nbsp;date</td>
+    <td>&nbsp;</td>
+    <td colspan="4">&nbsp;weekday</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="3"><input type="text" name="JDedit" value="" size="13", maxlength="13" OnBlur="JDcalc(document.JD2)" OnFocus="dodate(document.JD2)" OnKeyPress="dodate(document.JD2)"></td>
+    <td>&nbsp;</td>
+    <td colspan="4"><input type="text" name="wkday" value=" * * * * *" size="10" maxlength="10"></td>
+</tr>
+<tr><td height="10" colspan="9"></td></tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="8" style="color: Navy;">calculation type</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td colspan="8">
+        JD<input type="radio" name="calctype" value="JD" checked>
+        date<input type="radio" name="calctype" value="date">
+        &nbsp;&nbsp;
+        <input type="button" name="calcbutton" value="calculate" OnClick=JDcalc(document.JD2)>
+    </td>
+</tr>
+</table>
+</form> 
+<script language="JavaScript">
+    <!--------------------
+    set_form_fields(document.JD2);   //initialize the date & time to now
+    JDcalc(document.JD2);            //calculate Julian Date of now
+    //------------------->
+</script>
+
+<br>
+<hr> 
+<font size=+3 face=sans-serif color=#008800>GOOGLE YOUR SPECIFIC TIMESLICE:</font><br>
+<form name=srrch method=get action="http://www.google.com/search" onSubmit="addDateRange(document.JD1, document.JD2, document.srrch)">
+<input type=text size=80 name=q><input type=submit value=Slice!>
+</form>
+<pre>
+
+
+
+
+                                              <hr>
+                                             Enjoy!
+                                                <hr>
+
+
+
+
+</pre>
+<!-- Begin Lately, many of our more industrious ------------------------------->  
+<center>
+<i>Lately, many of our more industrious and investigative 
+readers have taken it upon themselves to supply our 
+ <a href="http://www.searchlores.org">searchlores</a>  offices with documents 
+which purport to complete and/or 
+further illuminate  this section. We send our thanks to the readers who provided 
+hints and material; like-minded souls are encouraged to send further discoveries and suggestions to 
+the addresses of the responsibles of this site, that you'll find listed <a href="info.htm#write">elsewhere</a>. 
+
+</i> 
+<!-- End Lately, many of our more industrious ------------------------------->
+<br>
+<hr> 
+<br>
+<!-- internet searching strategies and hints content, end -->
+<table><tr>
+<td><center><a href="basic.htm"><IMG SRC="images/basipet.jpg" 
+ALT="basic" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to basic
+</center></tD>
+<td><center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg" 
+ALT="advanced" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to advanced
+</center></tD>
+<td><center><a href="classroo.htm"><IMG SRC="images/asspetit.jpg" 
+ALT="classroom" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to classroom
+</center>
+<td><center><a href="further.htm"><IMG SRC="images/classpet.jpg" 
+ALT="further" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to further
+</center>
+</td></tr></table>
+
+ 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="600" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) III Millennium: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved, coupla wrongs reversed 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

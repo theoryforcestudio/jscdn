@@ -1,0 +1,226 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ dolmen_1.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Essays ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="http://www.searchlore.org">searching
+  lores</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;A PHP reformater for the Palm&nbsp;¸.·´¯)</font>
+  <br>
+ 
+  <br>
+  <font size=+2>by Dolmen</FONT>
+  <BR>
+  (very slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org"  target="_blank">searchlores</a> in 
+  Mai 2001
+  <br>
+  <hr width=44%><i>
+A very interesting small PHP script by Dolmen, useful even for those 
+that - like _Mammon - have their Palm 'superglued to the cradle'</i>&nbsp;:-)<br><hr>
+  
+</center>
+<H2>A PHP reformater for the Palm</h2>
+<p>I decided to buy a Palm the day I discovered the fabulous <a href="http://avantgo.com/" target="_blank">AvantGo</a>
+application. It brings to the device the content of web sites updated at each synchronization.</p>
+<p>AvantGo is basically a proxy that transform HTML 3.2 to a format suitable for a display
+on small devices. Here is the AvantGo architecture:</p>
+<font size=-1><pre>
++--------+                   +----+                +-------------+                 +--------+
+|  Palm  | - serial port --> | PC |  - Internet -> | AvantGo.com |  - Internet ->  | target |
++--------+                   +----+                +-------------+                 +--------+
+
+</pre></font>
+<p>For example I have the schedule of the 3 cinemas around to my home, the daily news from <i>Le
+Monde</i>, and computer news from ZDNet.</p>
+<p> You can also add your own custom channels, if the target site has a simple layout built using
+HTML 3.2, without tables or frames. However, many cool news sites are not like that. My target in
+particular was <a href="http://www.net-security.org/" target="_blank">HNS</a>, which is not layout from a small
+screen as the Palm.</p>
+<p>So it was time for me to build a bot that, at the AvantGo proxy request, will download the original page, extract the info, and give it to AvantGo formatted
+with a basic layout. My architecture just adds a layout between AvantGo.com and HNS: my PHP script.</p>
+<font size=-1><pre>
+        +-------------+                 +----------------+                +-----+
+... --> | AvantGo.com |  - Internet ->  | PHP reformater |  - Internet -> | HNS |
+        +-------------+                 +----------------+                +-----+
+</pre></font>
+<p>The code is below.</p>
+<hr><font size=-1>
+<code><pre>&lt;?php
+
+$f = fopen("http://www.net-security.org:80/", "r");
+if (!$f) {
+   echo "Error!";
+   exit;
+}
+
+$data = "";
+
+while (!feof($f)) {
+    $data = $data . fgets($f, 1024);
+}
+fclose($f);
+
+
+function intelligent_split($s, $pos, $a)
+{
+    // Use the code in comments to debug
+    $i = 0;
+    //echo "[ pos = $pos ]&lt;BR&gt;\r\n";
+    //echo "[ sub = &lt;TT&gt;".htmlspecialchars($a[$i])."&lt;/TT&gt; ]&lt;BR&gt;\r\n";
+    $pos = strpos($s, $a[$i++], $pos);
+    while ($i &lt; count($a) &amp;&amp; !is_string($pos)) {
+	//echo "[ pos = $pos ]&lt;BR&gt;\r\n";
+        $pos += strlen($a[$i-1]);
+        $pos2 = strpos($s, $a[$i], $pos);
+        //echo "[ sub = &lt;TT&gt;".htmlspecialchars($a[$i])."&lt;/TT&gt; ]&lt;BR&gt;\r\n";
+        if (is_string($pos2))
+            break;
+        $result[$i++] = substr($s, $pos, $pos2-$pos);
+        $pos = $pos2;
+    }
+    //echo "[ pos = $pos ]&lt;BR&gt;\r\n";
+    //echo "[ pos2 = $pos2 ]&lt;BR&gt;\r\n";
+    //echo "[ sub = &lt;TT&gt;".htmlspecialchars($a[$i])."&lt;/TT&gt; ]&lt;BR&gt;\r\n";
+    $result[0] = $pos;
+    return $result;
+}
+
+?&gt;&lt;HTML&gt;
+&lt;HEAD&gt;
+ &lt;TITLE&gt;HNS News&lt;/TITLE&gt;
+ &lt;META Name="HandheldFriendly" Content="True"&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;H1 Align="center"&gt;H E L P &amp;nbsp; N E T &amp;nbsp; S E C U R I T Y&lt;/H1&gt;
+&lt;CENTER&gt;&lt;B&gt;www.net-security.org&lt;/B&gt;&lt;BR&gt;
+AvantGo version by &lt;A HRef="mailto:dolmen@_nospam_.bigfoot.no2spam.com"&gt;Dolmen&lt;/A&gt;&lt;BR&gt;
+Last update: &lt;?php echo gmdate("M d Y, G:i") ?&gt; GMT&lt;/CENTER&gt;
+&lt;HR&gt;
+&lt;?php
+
+$a = array(
+    '&lt;P&gt;&lt;FONT SIZE="-1" FACE="Arial"&gt;&lt;B&gt;',                                    // $title
+    '&lt;/B&gt;&lt;BR&gt;&lt;FONT SIZE="-2" FACE="Arial"&gt;by &lt;/FONT&gt;&lt;FONT'."\n".'SIZE="-2" FACE="Arial"&gt;&lt;a'."\n".'href="mailto:', // $email
+    '"&gt;&lt;FONT'."\n".'SIZE="-2" FACE="Arial"&gt;&lt;B&gt;',                              // $author
+    '&lt;/A&gt;&lt;/B&gt;&lt;/FONT&gt; &lt;FONT SIZE="-2"'."\n".'FACE="Arial"&gt;',                   // $datestr
+    '&lt;BR&gt;&lt;BR&gt;&lt;font size="-1" face="arial, verdana"&gt;',                         // $text
+    '&lt;/FONT&gt;&lt;P&gt;&lt;FONT SIZE="-1"'."\n".'FACE="Arial"&gt;&lt;img'."\n".'src="http://net-security.org/images/news_divider.gif"&lt;/FONT&gt;&lt;/P&gt;'
+);
+
+$pos = 0;
+do {
+    list($pos, $title, $email, $author, $datestr, $text) = intelligent_split($data, $pos, $a);
+    if (!$pos)
+        break;
+    //echo "$pos&lt;BR&gt;\r\n";
+    echo "&lt;P&gt;\n&lt;B&gt;$title&lt;/B&gt;&lt;BR&gt;\n";
+    //echo "$email&lt;BR&gt;\r\n";
+    //echo "$author&lt;BR&gt;\r\n";
+    echo "$text\n";
+} while (1);
+
+?&gt;&lt;HR&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre></code>
+<hr></font>
+<p>This was my first useful (I use it every day) PHP script, let's hope it wont be the last.<br>
+Look at my <a href="dolmen_2.htm">other essay</a> about Java bots!</p>
+
+<p>Dolmen (dolmen*at*bigfoot*dot*com)<br>
+May 1st, 2001</p>
+<hr></font>
+    <font size=+1><center>
+<table><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to essays"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to essays</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm"  target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

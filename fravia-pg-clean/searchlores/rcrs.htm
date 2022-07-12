@@ -1,0 +1,306 @@
+<html>
+<head>
+<titlercrs.htm: reversing customer review services</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="An essay about manipulations in online review services.">
+<meta name="keywords" content="fake review, fraud">
+<meta name="author" content="Father">
+<meta name="copyright" content="Copyright(c) 2007 sem and slappy">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#dfe6e4" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+ <center>
+
+<font size="+3">~ Reverse engineering of online customer reviews ~</font><br>
+
+<b>By <font color="blue">slappy and sem</font> (slightly edited by fravia+)</b><br>
+           <br>
+<a target=_top href="trolls.htm"><img SRC="images/Propaganda.gif" ALT="to essays" 
+ALIGN=BOTTOM WIDTH="279" HEIGHT="400" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+<br>
+<b>Published @ <a target=_top href="http://www.searchlores.org">http://www.searchlores.org</a> in late <font color="blue">May 2007</font> | </b>
+<b>Version <font color="blue">0.01</font></b><br>
+
+
+   </center>
+<hr>
+<br>
+<p align="center">
+<font size="+3">~ Reverse engineering of online customer reviews ~</font><br>
+
+By <font color="blue">slappy and sem</font><br><br></center>
+<font size=+1>
+<p></p>
+<h2><a name=prologue>Prologue</a></h2>
+<p>During our research phase slappy and I found several interesting and quite 
+promising papers which led to many further aspects that should be taken into
+account or be inquired more in depth. So at some point we needed to decide 
+whether to keep gathering information and expanding the paper to the point 
+where it would have enough loose threads that it will never be finished or tie
+several knots and wrap the paper up to get it out. This is the result of our
+efforts, hope you enjoy it.</p>
+<br>
+<h2><a name=intro>Introduction</a></h2>
+<p>Online reviews can be found on nearly every site that sells things. The reason 
+is to improve the perception of the product. In comparison to general marketing 
+the main advantage is that it is a cheap and easy way to do this, since 
+everyone may post their opinion and the only thing that needs to be provided is 
+a medium. This doesn't mean general marketing is dead, reviews work on a 
+different, more personal level as you will see.</p>
+
+<p>Naturally, companies have a big interest in selling their goods. So when a 
+correlation between good reviews and a rise in product sales becomes visible
+one comes to think of what can be done to get more positive feedback. And since
+writing a review is technically allowed for everyone, the idea of creating 
+reviews isn't far fetched.</p>
+
+<p>Let's take a look at the scenario of a review feature. In general there are 
+three roles that can be taken.</p>
+<li> The manufacturer<br>
+   He produces goods and wants to sell them. Because it is convenient and 
+   cheap he sells his product through a widely known online shop (e.g. amazon).</li>
+   
+<li> The online shop<br>
+   This role is the man in the middle with all sales that take place through 
+   the shop. The shop provides a public and presumably well known and 
+   frequented site on the net where people buy goods of the different 
+   manufacturers.</li>
+   
+<li> The customer<br>
+   He is the end user, the one that buys the product. The decision to buy is 
+   what all this fuzz is about.</li>
+   
+<p>Let's have a closer look at these three and start with the online shop. What
+can be said about these places?</p>
+<p>First their interest is in making sales, as every sold item is a gain for them.
+What the manufacturers offer to the customer doesn't matter so much as every
+sale provides income. On the other hand they do want to improve overall sales
+as this is what counts for them. Their resource is their publicity as this is 
+what determines the amount of visitors who will eventually buy things.</p>
+<p>This is why manufacturers also sell there and not only on their own sites. 
+The trick is to immerse the visitor in the site, to give him a feeling
+of a known and controlled environment (generally people like the feeling of a
+surrounding where they think nothing bad can happen, but that's another story),
+which provides a service to them and also is giving feedback to their opinions.
+Mostly the feedback is not about appraising the customers opinion but to make
+him feel in control. By giving the option of writing reviews the user is put "in
+control" to some extent. Not enough to have him worry too much about the 
+consequence of his actions, but enough to make him feel that what he does, does matter. And in
+a way it actually does. Good reviews may persuade others to buy, bad ones may
+discourage others from buying. Interestingly Microsoft actually advises 
+midsized businesses to employ customer reviews on their sites <a href="rcrs.htm#111">[1]</a>, as this 
+would be beneficial for their sales. Their site has some intersting points.</p>
+
+<p>Next let's take a look at the customer, the person what all of this is about...
+ oh well it's probably more about his money, but you catch my drift.</p>
+<p>As said before the user needs to be put into an environment where he feels 
+nice and comfortable. Giving him a means of reading experiences of other people
+with the product, he'll get more involved and get a better "feeling" for the
+product and also improve his ties to the service as he gets "uncensored" 
+information. This whole theme is part of the "word of mouth" propagation that
+also takes place in every day life and - matter of factly - behaves quite like 
+it<a href="rcrs.htm#222">[2]</a>. The user thinks that the reviews he's reading are authentic since they
+were written by another "user" who is just stating his point of view which may be
+a pro or contra opinion. This gives the user a (sometimes not so) slight prod
+in the direction of buying the product or not.</p>
+
+<p>The last one on the list is the manufacturer. He must take care that his 
+products will be sold more often than those of any competitor. For him it's all
+about optimizing his assets. Focusing on the reviewing theme there is a clear
+signal coming through to the manufacturer, better reviews translate into more sales. 
+The solution could be to either improve the products by taking the information 
+which can be gleaned from the reviews, or generating good reviews on their 
+own.</p>
+
+<p>Let's get back to the review theme. So the question is "why do people write 
+reviews?"</p>
+<p>While looking for texts about why people do write reviews doesn't give any 
+fast results, asking google for people's opinions about it does.</p>
+
+<i><a href="http://www.google.com/search?q=%22write+*+reviews+because%22">http://www.google.com/search?q=%22write+*+reviews+because%22</a></i>
+<br>
+<p>In summary these are the reasons:</p>
+<li> They have strong emotions about the product (either good or bad)<a href="rcrs.htm#333">[3]</a></li> 
+<li> They feel the need to be helpful or improve things (either for other 
+  customers or to the company by providing information about how they think it 
+  would be better) </li>
+<li> Empowerment, the feeling of having some way to influence things</li> 
+<li> Along the lines of empowerment, the ego-boost of writing something that 
+  someone might actually read and find helpful.</li> 
+
+<p>As you can see most reasons to engage in review writing is about emotions. It's 
+a basic human need to communicate and to feel accepted and this is what 
+positive reactions or even their thoughts about their reviews do... but we digress.</p>
+<br>
+<h2><a name=influence>Influence peddlers</a></h2>
+<p>Several techniques are utilized by the shills <a href="rcrs.htm#444">[4]</a> to manipulate peoples views. 
+The following elements differ in levels of personal interaction and targeted 
+audience. They are listed in order of growing personal interaction.</p>
+
+ <i><b>Spammers</b></i><br>
+<p>As of today only the most gullible people fall for that kind of crap. It lives
+by the sheer amount of messages posted everywhere, mostly regardless of context
+and topic. There is no personal level from which the communication operates 
+even though there were and still are several attempts to give a touch of a 
+personal message to it. This is done by a style of writing which tries to 
+create emotions (fear and curiosity are the ones used most) in the victim 
+without actually addressing any substantial information. An example for this is
+the "you won xxx$ !" notification. In terms of manipulating customer reviews
+this isn't much of an issue but more of a nuisance since most spam is easily
+recognized by the absence of any information about the product and shameless
+exaggeration of its greatness. By the way, many positive posts of normal users
+are subject to this definition of spam.</p>
+
+
+<i><b>Opinion makers</b></i>
+<p>They turn up every now and then, especially when a product is taking a beating.
+Then they try to tell that the product isn't so bad and actually is the 
+greatest thing since the invention of sliced bread. Well you get the point. 
+Most of the time (e.g. when actual discussion on a product is possible) they
+stay around for a few posts to support their statement and then leave. Many of
+those are not much better than the average spammer and just keep writing their
+appraisals. A difference to the spammer is that those people have a slight 
+contextual grasp of the average opinions where they post. Mostly they don't 
+bother to read all of the opinions before they post which is part of the reason
+they are detected quite quickly. In general they speak good of their product
+which they claim isn't theirs and try to sublime the credibility of critics or
+ridicule their doubts. Some more inclined opinion makers tend to improve their
+initial trust-base by supplying additional "personal" information <a href="rcrs.htm#101010">[10]</a>. People
+are generally more inclined to believe a supposedly "real" person than some 
+strange nickname. Another scam to improve credibility of faked reviews is to 
+publish them under the name of a known / prominent person. Many people tend to let
+their guard of critical thoughts (if there's any) down when reading opinions
+from so called "experts".</p>
+
+
+<i><b>Bribers</b></i>
+<p>Although they don't fit nicely into the active manipulators of users they 
+should be mentioned. Companies or marketers which give away free sample 
+products or pay money to people who happen to have a way of broadcasting their 
+opinion to many people. Mostly this happens with writers of highly frequented 
+blogs. The idea is to rely on something that most people are subject to. When 
+given a present, many people tend to feel the need to return the favor. Even 
+more so without an obligement to do something in return. So the hope of the 
+"gift-bringer" is to earn a few favorable words in public in trade for his free
+product. When calculating the return of investment this pays much more than 
+paying for advertisments.<a href="rcrs.htm#121212">[12]</a></p>
+
+
+<i><b>Sleepers</b></i>
+<p>As with the secret agent kind of sleeper, this fellow is someone who behaves normally and integrates himself
+into the community until his time is due. Until then he works to become a 
+trusted member whose opinion and statements are taken as a good lead by other
+members. When his time has arrived the mission is to plant beneficiary comments
+about a product without "blowing his cover". This does not only lead to 
+imminent improvement of preception but may also result in further gain by 
+additional word of mouth propaganda as other members might actually take the
+point of view presented by the sleeper.</p>
+<p>To perform this in a profitable manner the sleeper has to be active in several
+forums at the same time. This idea is actually practiced <a href="rcrs.htm#555">[5]</a> but requires 
+people who are capable of handling multiple personalities and topics and have
+some social engineering skills in order to work properly. The way of the 
+sleeper presented above is the "ideal" way of how this theme should work. 
+Luckily efficiency is reduced by shortage on qualified personnel willing to do
+this and the requirement of fast results with short integration times.</p>
+<br>
+<h2><a name=reality>The real world</a></h2>
+<p>Until now you might have wondered if you should, or not, take my word for this, and asked youself if this isn't a paranoid 
+view on the online shopping theme. So here are a few things to see for yourself.</p>
+
+<i><b>Amazon</b></i>
+<p>Take a look at the top reviewer on amazon. As of today this is harriet klausner
+with 13723 reviews. On first sight there is nothing that catches the eye, but 
+doing some math raises questions. Lets suppose she has been reviewing for 
+amazon the last 5 years.</p>
+
+    <p>13723 book reviews<br>
+    2744.6 books per year<br>
+    52.78 books per week<br>
+    7.54 books per day.</p> 
+<p>For the sake of argument one could say that she might be around 40 years old 
+and read all her life. Assuming she remembers all  the books she has read and assuming again that she 
+actually tooke the time to write a review for every single one of these books, this would mean a 
+reduction of her ratio to ~1 book every single day of her life. And if that 
+doesn't look suspicious to you how about this:</p>
+<p>Between 2007-04-26 09:16 and 2007-04-27 15:26 her review count increased from 
+13723 to 13736. That is the impressive amount of 13 reviews all submitted within 
+one hour. All except one of the reviewed books were published in April 2007.
+By the way her stats around the 20th of february of this year was 13282 
+submitted reviews. This means 441 reviews within 66 days. So the average quote 
+is 6.68 Reviews per day. What d'you say? Would you trust her? :-)</p>
+<p>On a related matter there are also authors who choose to hold their quarries on
+amazon <a href="rcrs.htm#777">[7]</a> and <a href="rcrs.htm#888">[8]</a>. So they also use the reviews as a tool to manipulate the 
+potential buyers, even if their primary intention isn't the thought of 
+manipulating others but to take revenge on the other one. Anyways the result is 
+the same.</p>
+
+<i><b>eBay</b></i>
+<p>Although you might at first think different, what eBay employs as a "reputation
+system" is nothing else than a review based system. The only difference is that not the 
+product but also the vendor (and also the buyer) is "reviewed". Scams are commonly 
+known incidents by almost every user. And you can see that there are several 
+people who try to reduce the risk of people being fooled <a href="rcrs.htm#999">[9]</a>. Although the 
+actual deals are in this case more along the lines of general fraud, the "building 
+of trust" to have the user take the bait is performed by manipulating the 
+reviewing system.</p>
+
+<i><b>nVidia</b></i>
+<p>Here's an example of the usage of forums (which can take quite the same 
+function as the general review service) to improve the perception of the main 
+target audience, as those will surely influence others to also buy their 
+product (see sleepers) <a href="rcrs.htm#111111">[11]</a>.</p> 
+
+<p>If you care to look for it, you'll be able to find lots of smaller and not so 
+small schemes all around these reviews, blogs and forum landscapes.</p> 
+
+<br>
+<h2><a name=epilogue>Epilogue</a></h2>
+<p>Actually we planned on going deeper into the matter of how shills operate and 
+try to manipulate people but this would be more a topic for a paper of another 
+scope e.g. as an extension to the trolling lore.</p>
+<p>I hope you found some interesting hints and thoughts. That's all folks.</p>
+
+
+<br>
+<h2><a name=refs>References</a></h2>
+[<a name="111">1</a>]  <a href="http://www.microsoft.com/midsizebusiness/businessvalue/onlinereviews.mspx">Microsoft's advice on online reviews</a><br>
+[<a name="222">2</a>] <a href="http://ccs.mit.edu/dell/papers/movieratings.pdf">[PDF] Draft: Exploring the Value of Online Reviews to Organizations</a><br>
+[<a name="333">3</a>]  <a href="http://dagda.shef.ac.uk/dissertations/2004-05/External/Buchanan_Alexander_MALib.pdf">[PDF] Study: 
+Everyone's a Critic: a Qualitative Study to Investigate the Perceptions and Attitudes towards Book Review Websites...</a><br>
+[<a name="444">4</a>]  <a href="http://en.wikipedia.org/wiki/Shill">Wikipedia definition of a shill</a><br>
+[<a name="555">5</a>]  <a href="http://www.penny-arcade.com/news/show/21589">A post about guerilla marketing, hiring sleepers / opinion makers</a><br>
+[<a name="666">6</a>]  <a href="http://www.dancingbadger.com/amareview.htm">A rant about amazons review scheme</a><br>
+[<a name="777">7</a>]  <a href="http://www.robneyer.com/OneDayFenway.html">An example of authors taking influence on the competition</a><br>
+[<a name="888">8</a>]  <a href="http://weblogs.java.net/blog/monsonhaefel/archive/2003/11/amazoncom_revie.html">Another example of authors taking influence on the competition</a><br>
+[<a name="999">9</a>]  <a href="http://reviews.ebay.co.uk/FEEDBACK-WARNING-GOOD-REPUTATIONS-CAN-BE-FAKED_W0QQugidZ10000000001644127">A short text about the issue of reputation faking on ebay</a><br>
+[<a name="101010">10</a>] <a href="http://www.time.com/time/magazine/article/0,9171,1000636-1,00.html">An article about credibility of movie reviews on the net</a><br>
+[<a name="111111">11</a>] <a href="http://consumerist.com/consumer/evil/did-nvidia-hire-online-actors-to-promote-their-products-152874.php">A blog entry about nvidia using shills</a><br>
+[<a name="121212">12</a>] <a href="http://www.niallkennedy.com/blog/archives/2005/12/paying_bloggers.html">Another blog entry about bloggers being paid to create content</a><br>
+
+<br><hr width=44%>
+<center><font size=-1>
+(c) sem / slappy 2007 </font></center>
+
+
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"essays.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>

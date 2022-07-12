@@ -1,0 +1,650 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>bots.htm: (¯`·.¸(¯`·.¸ Searching Bots ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author" content="Father">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center><!-- fravia's searching lore: bigtitle, begin -->
+
+
+<!-- internet searching techniques: imageheader begin -->
+<table border="0"><tr><td><center>
+<a href="advanced.htm"><IMG SRC="images/bot.jpg"
+ALT="bot image"
+ALIGN=BOTTOM WIDTH="235" HEIGHT="260" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+
+<!-- --------------------|||||------------->
+Version <font color=blue>January</font> 2008
+<!-- --------------------^^^^^------------->
+</center></td><td>&nbsp;&nbsp;</td><td><center>
+<!-- internet advanced searching techniques: imageheader end -->
+<!-- internet searching strategies and hints content, begin --><font size=+4>~ Bots lore ~</font><br><br><br>
+<Font size=+3>
+BOT WRITING, BOT TRAPPING & BOT WARS
+</fonT><br>Part of <a href="index.html">searchlore</a></center></td></tr></table>
+<br>This is 
+a 'living' workshop on <u>bots trapping and reversing</u>, you will find elsewhere on my 
+site other web searching and data mining 
+"broad" lore. <br>
+As ~S~ <u>deep</u> wrote in his bot-essay: 
+<font color=blue>"There are
+many Perl bots available on the
+net, but I'm fairly certain that you will not find one
+that does exactly what you want.
+There's also a "convention" amoung bot writers not to
+give bots source code to people who do not
+understand them - it's considered irresponsible. Of
+course, once you've learned how to
+build bots, you can be as irresponsible as you like"</fonT>. This is exact.  
+Anyway knowledge runs downhill on the web: we will find more knowledge <u>only</u> if we create it ourself at the same time.
+<br> 
+Your own contributes and  work 
+are necessary. The material presented here should be more than enough to "get you started" on the bot path. Write your own bots, 
+publish the code so that others may improve them. Reverse the code of the existing bots. 
+<br>Awaiting your own contributions...<br>
+<br>
+<hr width=88%>
+<font size=+3>
+<font color=blue>[</font><a href="bots.htm#essays">"Our" essays!</a><font color=blue>]</font><br> <a href="bots.htm#recent">recent</a> 
+and <a href="bots.htm#old">old</a></font><hr width=88%>
+<font size=+1>
+<bR>
+A good <a href="rabats.txt">robots.txt</a><br>
+<i>If you <font color=blue>do not know</font> what is a <font color=blue>robots.txt</font> just leave now 
+ and come back later</i>&nbsp;:)
+<br><br>More (older) stuff<br>
+<font color=blue>[</font><a href="bots.htm#iliad">Iliad fetchbot</a><font color=blue>]</font>
+&nbsp;&nbsp;<font color=blue>[</font><a href="bots.htm#juno">Juno autoresponder</a><font color=blue>]</font>
+
+
+&nbsp;&nbsp;<font color=blue>[</font><a href="bots.htm#friend">our friends' essays!</a><font color=blue>]</font>
+</font>
+<br><bR>
+
+
+<a name="intro"></a>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>An older introduction - explanation</center>
+</td></tR></table><br></center>
+The term 
+"<u>bot</u>" is, according to DeadelviS, a short for "<u>robot</u>",
+     which sounds much cooler than "<u>program</u>"<p>As Andrew Leonard 
+explains, like mechanical robots, bots are guided by algorithmic
+     rules of behavior - if this happens, do that; if that happens, do
+     this. But instead of clanking around a laboratory bumping into
+     walls, software robots are executable programs that maneuver through
+     cyberspace bouncing off communications protocols. Strings of code
+     written by everyone from teenage chat-room lurkers to top-flight
+     computer scientists, bots are variously designed to carry on
+     conversations, act as human surrogates, or achieve specific tasks -
+     such as seeking out and retrieving information. And... 
+bots can also be used as weapons: great fun assured.<bR>
+
+</p><hR><p>
+These pages of mine may regards all sort of web bots: spiders, wanderers, and worms. Cancelbots, Lazarus,
+     Automoose. Chatterbots, softbots, userbots, taskbots, knowbots, 
+     mailbots, searchbots. MrBot and MrsBot. Warbots, clonebots, floodbots,
+     annoybots, hackbots, and Vladbots. Gaybots, gossipbots, 
+     gamebots. Skeleton bots, spybots, and sloth bots. Xbots,
+     meta-bots. Eggdrop bots... as you can see the terminology is far from 
+being simple... basically, though, the idea is to allow you to learn enough to WRITE 
+<u>your own</u> search bots. Information searching through commercial engines -<i>y compris</i> google- is less 
+and less efficient, alas: it is of paramount importance, for a ~S~, to learn 
+how to bulid his OWN 'home made and tailored" specific bots. You'll be amazed at the whealth 
+of really strong signals you'll be able to find among the noise as soon as you use your own bots, 
+even with imperfect and surely not 100% state of the art, tiny, simple bots...
+<br><br>
+It's up to you to help us with your own work or, alternatively, to keep what you'll dvelop guarded for yourself: 
+it is my intention to offer 
+ enough material on this 
+section to allow anyone to start. Choose the konwledge path or choose the dark path, it's up to you.
+<br>I'll NEVER charge money for 
+accessing my site, hence I ask you the only "money" that's worth something 
+on this web of ours: knowledge for all.
+<br><br>
+Contribute with YOUR knowledge:
+if you build on other people's shoulders, you should imho offer your 
+own shoulders for others  
+to build upon
+
+
+<a name="iliad"></a>
+<bR><bR><center>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>The old Iliad fetchbot</center>
+</td></tR></table>
+<br>
+<br><center><font size=+2>Hey! I wanna see a real bot in action before joining this section!</fonT><bR>
+</center><br>Yessir! Here is a good and powerful 'fetchbot', very useful for seekers and searchers alike. 
+And if you knew nothing of this stuff you'll be fascinated (and even if you 
+already knew... :-)<bR>
+You'll now (at once if I were you) approach the 
+"iliad" Searchbot (a very useful one, btw, was at iliad@algol.jsc.nasa.gov, is now at iliad@prime.jsc.nasa.gov):<br></center>
+Send an email to:<bR>
+<font color= blue><font size=+2>iliad@prime.jsc.nasa.gov</fonT></fonT><br>
+write into the SUBJECT part of your email (into the subject field, duh!):<br>
+<font color= blue><font size=+2>iliad query</fonT></font><br>
+write into the TEXT part of your email (that's your letter, duh!):<bR>
+<font color= blue><font size=+2>
+?Q: internet bots automated retrieval 
+</fonT></fonT><bR>
+(for instance... and you'll -most probably- get quite 
+a lot of interesting material about 
+bots from this mighty useful Searchbot... whatt'd'ya say?<bR>If you're stuck email the same address 
+with the word <font color= blue><font size=+2>help</fonT></font> both in Subject and 
+in text (a pretty poor help will you get :-(</p>
+<center>
+<a name="juno"></a>
+<bR><bR><center>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>The old Juno autoresponder</center>
+</td></tR></table>
+<br>
+<br><font size=+2>Hey, this is great! I wanna taste another email-bot, just for fun!</fonT><bR>
+</center><br>Yessir! Please go ahead: have a look at friend autobot:
+Send an email to:<bR>
+<font color= blue><font size=+2>autobot@junoaccmail.org</fonT></fonT><br>
+write into the SUBJECT part of your email (into the subject field, duh!):<bR>
+<font color= blue><font size=+2>
+send index
+</fonT></fonT><bR>
+or if you want to have a laugh at some 'scarecrow' copyright propaganda, write - always 
+in the SUBJECT field - the following:<bR>
+<font color= blue><font size=+2>
+send Copyrights
+</fonT></fonT><bR><hR>
+<center>
+<br>
+<a name="essays"></a>
+<font size=+2>Hey, this is gorgeous! Now, before I start working on my own, let 
+me please see and touch the code of a "real" bot!</fonT><bR>
+Yessir! Please go ahead: enjoy the following essays!<bR>You'll find here all the code you may 
+need to start working on your own!<bR><bR>
+<a name="recent"></a>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>Recent Essays</center>
+</td></tR></table>
+<br>
+
+
+
+<li> <font color=blue>[</font><a 
+ href="mhyst_w3s.htm">mhyst_w3s.htm</a><font color=blue>]</font>:  W3S: Web Personal Spyder.<br> by <u>Mhyst</u>, January 2008<br> 
+ "<i>The aim of this document is to put forward the structure and functionality of W3S and, at the same time, 
+ to describe a basic searching web spider. 
+ I hope this essay will bring somebody the possibility of making his own web spider.</i>"<br>
+ Part of the <a href="bots.htm">bots</a> section.
+ <br>
+</li>
+<br><br>
+<li> <font color=blue>[</font><a 
+ href="termisearch.htm">termisearch.htm</a><font color=blue>]</font>:  A proof of concept: a pre-search filter/bot.<br> by <u>fravia+</u>, Mai 2007<br>
+ Just an example of a possible application of a simple, but effective google's pre-filtering approach<br> 
+ 
+Part of the <a href="bots.htm">bots</a> 
+section (even if it is just a pre-filter and not a bot <i>strictu sensu</i>).<br>
+<i>This is here simply done
+adding, subtracting or ORring automatically some ad hoc search terms to whatever query you may have.<br>
+This is the whole point of this example. Tou don't need to go linguistic. You modify or create your own forms at leisure.<br>
+You may want special effective forms in order to search for books or images and just eliminate all those idiot sites that try to
+ 'trap' searchers into advertisement hells or crippled items for zombies and guinea pigs.<br>
+Or maybe you want mp3s without having to wade knee-deep into morons trying "to sell" 
+you those very mp3s (quelle vulgarité!). Or whatever... I'm sure you get the infinite 
+possibilities now in your own hands :-) 
+</i><br>
+</li> 
+<br><br>
+<li>
+<a href="winky_stripper.htm">winky_stripper.htm</a>: Winky strips for Yahoo (A Yahoo results stripper)<br>
+ by <u>Winky ;-)</u>, April 2004<br>A further introduction to the power of python, by Winky. <br>
+Part of the <a href="bots.htm">bots</a> 
+section. <br>
+<i>
+...on the board they where
+ talking about "stripping" and searching html.<br>
+Anyway I decided to make one for yahoo, it is primative a learning tool,
+ but could be expanded to handle next queries etc.
+<center>
+<font color=blue>yahoo_stripper.py</font> -> is the actual script itself<br>
+<font color=blue>clean.html</font> -> is the "output from the script"
+</center>
+ To create the "docs" which reside in the html directory just run the
+ script thru epydoc.<br>
+This sort of tactic of stripping webpages is much more effective then
+just blindly using regular expressions.<br>
+
+<font color=red>Not for beginners!</font>
+
+
+</i><br><br></li> 
+
+<br><br>
+<a name="old"></a>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>Older Essays: how to build your own bots</center>
+</td></tR></table>
+<br>
+ <font color=blue>PHASE ONE</FONT> (16 July 1999)<br><bR>
+this essay (<a href="perl_es1.htm">perl_es1.htm</a>): <i>Perl@usa.net
+ ~  How to reverse a "free" service</I> has been written 
+by [blue] in July 1999 for the <a href="remobann.htm">removing banners</a> section, read and enjoy, 
+let's hope  
+you'll write afterwards your own perl-bots and send them here so that others can ameliorate 
+and give feedback...
+</fonT></fonT><bR>
+
+<hr width=44%>
+ <font color=blue>PHASE TWO</FONT> (22 July 1999)<br><bR>
+this essay (<a href="rt_bot1.htm">rt_bot1.htm</a>):<i>The HCUbot: a simple Web Retrieval Bot in Perl</i> has been written 
+by deep in July 1999, read and enjoy! Let's hope  
+you'll write afterwards your own perl-bots and send them here so that others can ameliorate 
+and give feedback...
+</fonT></fonT><bR>
+
+<hr width=44%>
+ <font color=blue>PHASE THREE</FONT> (14 September 1999)<br><bR>
+this essay (<a href="botcgi.htm">botcgi.htm</a>):<i>Mirbot 1.0: 
+a very special kind of a Robot</i> has been written 
+by The Mystical Friend  in September 1999, read and enjoy! Let's hope  
+you'll write afterwards your own perl-bots and send them here so that others can ameliorate 
+and give feedback...
+</fonT></fonT><bR>
+
+<hr width=44%>
+ <font color=blue>PHASE FOUR</FONT> (14 September 1999)<br><bR>
+this essay (<a href="rt_bot2.htm">rt_bot2.htm</a>):<i>The HCUbot (Version 2.0): a simple Web Retrieval Bot in Perl</i> has been written 
+by deep in July 1999 and updated and ameliorated in September 1999, read and enjoy! Let's hope  
+you'll write afterwards your own perl-bots and send them here so that others can ameliorate 
+and give feedback...
+</fonT></fonT><bR>
+
+<hr width=44%>
+ <font color=blue>PHASE FIVE</FONT> (21 September 1999)<br><bR>
+this essay (<a href="sono_bot.htm">sono_bot.htm</a>):<i>spider.r: a handy search tool and intro to REBOL</i> has been written 
+by sonofsamiam in September 1999, read and enjoy! Let's hope  
+you'll write afterwards your own rebol-bots and send them over here so that others can ameliorate 
+and give feedback...
+</fonT></fonT><bR>
+
+ <hr width=44%>
+ <font color=blue>PHASE SIX</FONT> (March 2000)<br><bR>
+<font color=blue>[</font><a href="ftpbot1.htm">ftpbot1.htm</a><font color=blue>]</font>: 
+<i> A small ftp fetcher 
+bot</i><br><u>by DarkWyrm</u><br>This bot searches a FTP site for a particular file (in Perl)
+</fonT></fonT><bR>
+
+ <hr width=44%>
+ <font color=blue>PHASE SEVEN</FONT> (May 2000)<br><bR>
+<font color=blue>[</font><a href="plbtgrab.htm">plbtgrab.htm</a><font color=blue>]</font>: 
+<i>Source code for a spam bot</i>  
+(Kevin's spider) (in Perl)<br>
+by <u>Kevin Jobson</u><br>Automatical link searching
+</fonT></fonT>
+
+
+
+ <hr width=44%>
+ <font color=blue>PHASE EIGHT</FONT> (September 2000)<br><bR>
+<font color=blue>[</font><a href="scan_reb.htm">scan_reb.htm</a><font color=blue>]</font>: 
+<i>A simple REBOL scanner</i>  
+ways to retrieve hidden files, pages, zips, images<br>
+by <u>-Sp!ke</u><br>Automatical link sniffing
+</fonT></fonT>
+
+ <hr width=44%>
+ <font color=blue>PHASE NINE</FONT> (October 2000)<br><bR>
+Check  <font color=blue>[</font><a href="zipped/mysearch.zip">mysearch.zip</a><font color=blue>]</font>: ~ 20233 bytes
+<i>A search bot in Visual Basic
+</i> by <u>Shoki</u> (see <font color=blue>[</font><a href="shokiwcd.htm">shokiwcd.htm</a><font color=blue>]</font>)
+</fonT></fonT>
+
+
+ <hr width=44%>
+ <font color=blue>PHASE TEN</FONT> (February 2001)<br><bR>
+Check  <font color=blue>[</font><a href="wf_add.htm">wf_add.htm</a><font color=blue>]</font>: 
+
+<i>Adding engines to WebFerret
+</i> by <u>Laurent</u> (The guts of a search engines parser) <font color=red>Advanced</font>
+
+</fonT></fonT>
+<hr width=44%>
+ <font color=blue>PHASE ELEVEN</FONT> (April 2001)<br>
+<font color=blue>[</font><a href="perlbot.htm">perlbot.htm</a><font color=blue>]</font>:
+<i>HOW TO FOOL SSL DOWNLOAD OBSTACLES 
+(spelunking into https "secure" servers)</i><br>by <u>DigJim</u>, 
+<font color=red>Very Advanced</font> essay
+
+<hr width=44%>
+ <font color=blue>PHASE TWELVE</FONT> (April 2001)<br>
+<ul>
+<li><font color=blue>[</font><a href="lexi_wot.htm">lexi_wot.htm</a><font color=blue>]</font>:
+<i>the lexibot essay (600 engines for next to nothing </i> - part ONE - <i>first steps)</i> by <u>WayOutThere</u>,  
+<font color=red>Advanced</font> essay, part of the <font color=blue>[</font><a href="bots.htm">bots</a><font color=blue>]</font>, 
+ and of the <font color=blue>[</font><a href="essays.htm">Essays</a><font color=blue>]</font> sections.
+<br></li>
+
+<li><font color=blue>[</font><a href="lexi_lau.htm">lexi_lau.htm</a><font color=blue>]</font>:
+<i>the lexibot essay (600 engines for next to nothing - </i> part TWO - <i>delving deeper)</i> by <u>Laurent</u>, 
+<font color=red>Advanced</font> essay, part of the <font color=blue>[</font><a href="bots.htm">bots</a><font color=blue>]</font>, 
+ and of the <font color=blue>[</font><a href="essays.htm">Essays</a><font color=blue>]</font> sections.
+<br></li>
+
+
+<hr width=44%>
+ <font color=blue>PHASE THIRTEEN</FONT> (April 2001)<br>
+<ul>
+<li><font color=blue>[</font><a href="cope_wot.htm">cope_wot.htm</a><font color=blue>]</font>:
+<i>Reversing to Enhance and Expand (754 engines into the pot) </i> 
+<br>by <u>WayOutThere</u>,  
+<font color=red>Advanced</font> essay, part of the <font color=blue>[</font><a href="malware.htm">malware</a><font color=blue>]</font>, 
+ and of the <font color=blue>[</font><a href="essays.htm">Essays</a><font color=blue>]</font> sections.
+<br></li>
+</ul>
+<hr width=44%>
+ <font color=blue>PHASE FOURTEEN</FONT> (Mai 2001)<br>
+<ul>
+<li><font color=blue>[</font><a href="dolmen_1.htm">dolmen_1.htm</a><font color=blue>]</font>:
+<i>A PHP reformater for the PALM</i> 
+<br>by <u>Dolmen</u>,  "So it was time for me to build a bot that, at 
+the AvantGo proxy request, will download the original page, extract the 
+info, and give it to AvantGo formatted 
+with a basic layout...", part of the <font color=blue>[</font><a href="bots.htm">bots</a><font color=blue>]</font>, 
+ and  <font color=blue>[</font><a href="essays.htm">essays</a><font color=blue>]</font> sections.
+<br></li>
+
+<li><font color=blue>[</font><a href="dolmen_2.htm">dolmen_2.htm</a><font color=blue>]</font>:
+<i>Java Bots introduction</i> 
+<br>by <u>Dolmen</u>,  "Here is a simple bot that downloads a page from the URL given on the command line
+and outputs it preceded by the HTTP headers (if it is an http:// URL).", part of the <font color=blue>[</font><a href="bots.htm">bots</a><font color=blue>]</font>, 
+ and  <font color=blue>[</font><a href="essays.htm">essays</a><font color=blue>]</font> sections.
+<br></li>
+</ul>
+<hr width=44%>
+ <font color=blue>PHASE FIFTEEN</FONT> (Mai 2001)<br>
+<ul>
+
+
+
+<li><font color=blue>[</font><a href="bullseye.htm">bullseye.htm</a><font color=blue>]</font>:
+<i>Hitting The BullsEye</i> 
+<br>by <u>CiNiX</u>,  "I took a little peek in the 'hidden' engine
+ directory and found about 897 engine files, mucho 
+interesting information for the people that work on the oslse project!", 
+part of the <font color=blue>[</font><a href="bots.htm">bots</a><font color=blue>]</font>, 
+ and  <font color=blue>[</font><a href="essays.htm">essays</a><font color=blue>]</font> sections.
+<br></li>
+</ul>
+
+<hr width=44%>
+ <font color=blue>PHASE XVI</FONT> (February 2002)<br>
+<ul>
+
+<li>
+ <a href="bastarfl.htm">A "flamebot"</a>: <i>A perl script that makes automatic replies to one or more usenet posters of
+your choice</i>
+by <b>Dr. Flonkenstein</b>
+part of  the <font color=blue>[</font><a href="trolls.htm">Trolling lore</a><font color=blue>]</font> 
+and of  the <font color=blue>[</font><a href="bots.htm">bots lore</a><font color=blue>]</font> 
+</li>
+</ul>    
+
+<hr width=44%>
+ <font color=blue>PHASE XVII</FONT> (September 2004)<br>
+<ul>
+<li>
+<font color=blue>[</font><a href="phpregexspider.htm">phpregexspider.htm</a><font color=blue>]</font>, by <u>Frank Mitchell</u><br>
+Learn how to write your own bots! Here you have a PHP web-spider, and a well commented one!<br>"<font color=blue>It was in this sort of scenario that I found myself, 
+and it was from here that my spider was born. It's job: harvest a list of user names from a website</font>"
+<br> Part of the <a href="bots.htm">bots</a>    
+section and of the <a href="http://fravia.2113.ch/phplab/phplab.htm">PHP Lab</a>.        <br>
+</li> 
+</ul>  
+    <hr width=44%>
+ <font color=blue>PHASE XVIII</FONT> (November 2004)<br>
+<ul>
+<li>
+<font color=blue>[</font><a href="mhyst_del.htm">mhyst_del.htm</a><font color=blue>]</font>: 
+Deliverer: Distributed Framework for Bots<br>by <u>Mhyst</u><br>
+        <i>Mhyst offers here, to every reader, a quite powerful 'queuer' bot, a sort of 'sandwich' for java small snippet bots that you may want 
+to write yourself and that 
+<font color=blue>deliver</font> will schedule and send around. This is <u>not an essay for newbyes</u>.<br>Sourcecode is provided. 
+I am confident that whomever will take the time to study (and implement) this interesting java bot will for sure 
+learn quite a lot of things about (java) bots. I hope that your feedback will flow, and that this first step will span 
+a lot of new small searching bots.</i><br>
+Part of the <a href="bots.htm">bots</a> 
+section.  
+</li>
+
+</ul>    
+
+<!-- FRIEND BOTS SECTION BEGIN -->
+<a name="friend"></a>
+<bR><bR>
+
+<center>
+<table border=1 width=88%><tr><td  bgcolor="#FFFFEA">
+<center>Friends' essays: how to build your own bots<br>(www::search modules in perl)</center>
+</td></tR></table>
+
+
+
+<ul><br>
+
+
+<!-- INSERT HERE ------------>
+<li>
+
+<font color=blue>[</font><a href="bot-block.php.txt">bot-block.php.txt</a><font color=blue>]</font>
+<br>
+ Alex Kemp's  BLOCK BAD BOTS & anti-scrapers routine (in PHP)  -- April 2006
+
+
+<br>
+<i>In fact, <a href="links.htm#SE0beasts">SEO</a>s spammers may even produce something useful. <u><font color=blue>A</font></u>lle <u><font color=blue>A</font></u>chtung <u><font color=blue>A</font></u>lex for your BBB routine!</i>
+<br>
+<font color=red>Not for beginners!</font>
+</li>
+
+<br><br>
+
+
+
+  <li> <font color=blue>[</font><a 
+ href="nbbw.c">nbbw.c</a><font color=blue>]</font>: Scroogle Scraper
+ <br>"Google provides a version of their main index to the public that is
+free of ads. This is at www.google.com/ie on all of their data centers.
+It is apparently used by some versions of Explorer for some feature.
+The point is, Google provides this for public use"<br> by <u>Daniel Brandt, Public Information Research</u>, January 2005,  Part of the <a 
+ href="bots.htm">bots</a>    section.</i>   </li>  
+ 
+ 
+ <li>
+ <br><br>
+
+<font color=blue>[</font><a href="test_for_ip_blocks.php.txt">test_for_ip_blocks.php.txt</a><font color=blue>]</font>
+<br>
+Hanu's  test_for_ip_blocks routine (in PHP)  
+
+<br>
+<font color=red>Not for beginners!</font>
+</li>
+
+<br><br>
+
+</ul><hr width=66%><br>
+
+<bR><font size=+1><font color=red>Advanced</font> ~ For programmer-seekers 
+only.<br></font>Started in July 2000<bR>
+<font color=blue size=+1><br>If you are 
+really serious about advanced searching the following www::search modules in perl, which
+are constantly tuned to return results from the
+major search engines and news indexes, are 
+a (basic) MUST READ. It is difficoult to underestimate how important this stuff is for 
+any Seeker. Believe me, the time you'll invest reading their code will be WELL SPENT... 
+oh yeah, actually <u>
+very well</u> spent. Pay special attention to some of the comments to the code&nbsp;:-)<br>Feedback with 
+your own bots built on this stuff is mandatory.</font>
+<br><br>
+
+
+
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="AdvancedWeb.pm.txt">AdvancedWeb.pm.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser & USC/ISI, v 2.02 2000/04/04
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="AlltheWeb.pm.txt">AlltheWeb.pm.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser v 1.4 2000/04/03 
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="AltaVista.pm.txt">AltaVista.pm.txt</a><font color=blue>]</font>
+<br>
+by John Heidemann v 1.6 2000/05/03  
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Deja.pm.txt">Deja.pm.txt</a><font color=blue>]</font>
+<br>
+by Martin Thurn v 1.2 2000/02/24 
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Dejanews.pm.txt">Dejanews.pm.txt</a><font color=blue>]</font>
+<br>
+by Martin Thurn v 1.25 2000/06/23
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Excite.pm.txt">Excite.pm.txt</a><font color=blue>]</font>
+<br>
+by Martin Thurn v 1.24 2000/06/19
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Google.pm.txt">Google.pm.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser v 2.20 2000/06/08
+<br>
+<br>
+
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="HotBot.pm.txt">HotBot.pm.txt</a><font color=blue>]</font>
+<br>
+by Wm. L. Scheding and Martin Thurn v 1.58 2000/06/26 
+<br>
+<br>
+
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Infoseek.pm.txt">Infoseek.pm.txt</a><font color=blue>]</font>
+<br>
+by Martin Thurn v 1.26 1999/12/10
+<br>
+<br>
+
+<hr width=44%><font size=+1>
+<font color=blue>[</font><a href="Lycos.pm.txt">Lycos.pm.txt</a><font color=blue>]</font>
+<br>
+by Wm. L. Scheding and Martin Thurn v 1.18 2000/06/15
+<br>
+<br>
+
+<hr width=44%>
+<font color=blue>[</font><a href="Magellan.pm.txt">Magellan.pm.txt</a><font color=blue>]</font>
+<br>
+by Martin Thurn v 1.19 2000/05/22
+<br>
+<br>
+
+
+<hr width=44%>
+<font color=blue>[</font><a href="NorthernLight.pm.txt">NorthernLight.pm.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser, v 2.06 2000/06/16
+<br>
+<br>
+
+<hr width=44%>
+<font color=blue>[</font><a href="OpenDirectory.pm.txt">Opendirectory.pm.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser, v 1.4 2000/02/04
+<br>
+<br>
+
+<hr width=44%>
+<font color=blue>[</font><a href="Yahoo.pm.txt">Yahoo.pm.txt</a><font color=blue>]</font>
+<br>
+by Wm. L. Scheding and Martin Thurn, v 1.29 2000/05/10
+<br>
+<br>
+
+<hr width=44%><center><font size=+2>Conclusion</fonT><br><br>Ehm, yes, you should learn <font color=blue>[</font><a href="http://search.msn.com/results.aspx?q=%7Bfrsh%3D94%7D+%7Bpopl%3D20%7D+%7Bmtch%3D99%7D+rapidshare.de%2Ffiles+perl&FORM=QBRE">Perl</a><font
+color=blue>]</font> , by all means... but if you prefer to learn 
+<font color=blue>[</font><a href="http://www.google.com/search?num=100&hs=Vhp&hl=en&lr=&client=opera&rls=en&q=php+pdf%7Cdoc%7Clit%7Crar%7Czip+site%3Arapidshare.de&btnG=Search">PHP</a><font color=blue>]</font> instead, all these classes 
+ can be easily ported there, of course...
+</fonT>
+
+
+<hr width=44%>Err, this could be quite useful as well, come to think of it&nbsp;:-)<bR>
+<font color=blue>[</font><a href="https://searchlores.nickifaulk.com/X-Search.pl.txt">X-Search.pl.txt</a><font color=blue>]</font>
+<br>
+by Jim Smyser, v 1.06 2000/06/14
+<br>
+<br>
+
+
+<!-- FRIEND BOTS SECTION END -->
+<hr>
+<center>
+<font color= red><font size=+2>Helping hands needed!</font></font><br></center>
+Enjoy! 
+Just take your time, there is no 
+hurry whatsoever, 
+reverse some of the script above, understand their working,  
+try some slightly different models... implement your 
+own ideas... and finally write some (good) essays on this stuff 
+yourself!
+</p>
+<hr size=5>
+<!-- internet searching strategies and hints content, end -->
+<center>
+<a href="advanced.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 1952-2032: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue>]</font>, all rights reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER></body></HTML>

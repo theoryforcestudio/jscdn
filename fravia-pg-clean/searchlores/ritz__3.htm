@@ -1,0 +1,322 @@
+<html>
+<head>
+<title>ritz__3.htm: javascript bookmark tricks</title>  
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+
+<center>
+<font size=+3>
+  <i>javascript bookmark tricks</i>
+<br>
+~ enhance your search experience&nbsp;;) ~<br>by Ritz</font>
+<br>published at <a href="http://www.searchlores.org">searchlores</a> in September 2002<br> 
+Updated in <font color=blue>October 2004</font> with a <a href="ritz__3.htm#matri">Magical trick</a> by ~S~ Ritz: the    <a href="ritz__3.htm#elkilla">EL_KILLA</a> wand!
+</center>
+
+
+<br>
+
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;by &nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"><IMG
+SRC="images/petipand.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#996600"><Font color=black SIZE="3">ritz</th>
+</tR></table>
+<!-- internet searching techniques: imageheader end -->
+
+<hr>
+<p><center>
+<font size=+1><i>Did you know you can use javascript in your url-line or in a bookmark 
+to add even more searching functionality to opera [or any other browser]? This is not a tutorial 
+on javascript, there are enough other sites that do that.
+</i></center></p>
+
+<hr><p align="right"><font size="6">ok, so how does it work?</font></p>
+
+<p>When you type an URL starting with javascript: in your browser, the browser will interpret the line as a piece of javascript. using this technique you can do things to the current webpage [or document, as it is called in javascript] like changing the url in certain ways, or compiling the information in a different way.</p>
+
+<p>a small, and well-known example is:</p>
+
+<p><b>javascript:alert(document.lastModified);</p>
+
+<p>this small script brings up a messabox displaying the time and date the document was last modified.. good for evaluating the site you are looking at, for example.</p>
+
+<p>there are basically three ways of implementing these small javascripts, or <a target=_top href="http://www.bookmarklets.com">bookmarklets</a> as they are called sometimes:
+<ul>
+<li>first, you can just type or paste the entire url, including the 'javascript:'-part in your URL-line. easy, but not very efficient.</li>
+<li>second, you can bookmark the entire line, that way you can easily access your script everytime you need it. remember that you can 'nickname' your bookmarks in Opera, so if you bookmark the example above, and nickname it 'last' [or something], you can access it just by typing 'last' in the url line. this way you can have very fast access, especially if you use two- or three-letter acronyms, pretty much like the "g &lt;term&gt;" shortcut in Opera for google-searching.</li>
+<li>the third method is very interesting.. you can modify the search.ini file in your opera directory. 
+<a target=_top href="http://www.schrode.net/opera/search/search_ini.html">this site</a> explains 
+the syntax of this file, and how to modify it. note that you can also delete the 'useless' search 
+shortcuts like mp3/audio search and stock search :) anyway, the advantage of this method versus bookmarking-and-nicknaming 
+is that you can specify one variable for your javascript with %s .. this way if your javascript needs some user input to function 
+correctly, you don't need to prompt him for it, but you can directly put it after the searchengine-key. read the site and you will 
+know what i mean. one day i might publish a modified search.ini file, with all the useless stuff scrapped, and with lots of handy 
+javascripts added..</li>
+</ul> <a name="matri"></a>       
+<hr><p align="right"><font size="6">the BIG (magic) meat</font> (October 2004)</p> 
+             <font size="3"> 
+             This is an "ad hoc" solution found by ~S~ Ritz on our <a href="http://fravia.2113.ch/phplab/mbs.php3/mb001" notarget>Seekers' 
+             msgboard</a>. It began like this...<br><br>
+             ...has anybody of you also noticed that a lot of those new, hip, CSS sites with sidebars 
+             (like <a href="http://www.oreillynet.com/">http://www.oreillynet.com/</a> and thousands of others) 
+when you zoom in at them, the letters get bigger, but the middle bar, 
+containing the article you want to read, actually gets a smaller proportion 
+of the screen because Opera is still trying to fit all three bars on the 
+screen. <br><br>
+
+This is of course not what i want.. anybody got any suggestions for tricks 
+how to tame my browser further?<br> 
+
+javascript? <br><br>
+
+<font color=blue>- ritz</font> <br><br>
+Seems to be because the table has fixed length for the left (and right) 
+crap and only relative length for the middle text you are actually interested in.<br> 
+A variant of this shit, even more annoying, are those articles "cutted" into 15 sequels, 
+where every time you want to read more you are compelled to open more pages (with their repetitive and annoying correlated crap).<br> 
+
+What does Selim do, in cases like <a href="http://www.oreillynet.com/">http://www.oreillynet.com/</a>?<br><br> 
+
+While I agree with you that we should find a more elegant solution, I still use the old school "pasting relevant text" approach:<br> 
+I just click on the first letter of the article... shift+click on the last one... CTRL+C in memory... tab below to my ultraedit editor... 
+CTRL+V (pasting the lines there)... Format it (through "convert to hard returns")... and read at ease without frills, images, crap. <br>
+Takes a coupla seconds, less with a good macro.
+            <br><br>
+
+
+
+
+
+<font color=blue>Selim</font>   <br><hr width= 44%><br><i>And  ~S~ Ritz answered with a loud  "Bingo!"...</i><br>
+                                                        <br>
+...Took me some time.. but here is the javascript:
+<br>
+<br>
+
+<pre>javascript:
+<br>var clicks=1;
+<br>
+<br>function info(x){
+<br>  if(clicks&#33;=0) window.status='click to delete '+x.srcElement.tagName+', shift+click to stop the killing.';
+<br>};
+<br>
+<br>function del(x){
+<br>  if(clicks&#33;=0 && &#33;x.shiftKey){
+<br>    x.srcElement.setAttribute('style','display:none');
+<br>    window.status=x.srcElement.tagName+' deleted.';
+<br>  } else {
+<br>    clicks=0;
+<br>    window.status='';
+<br>  };
+<br>};
+<br>
+<br>window.status='busy..';
+<br>a=document.getElementsByTagName('*'); 
+<br>for(i=0; a.length&#33;=i; i++){
+<br>  a.item(i).onclick=del;
+<br>  a.item(i).onmouseover=info;
+<br>};
+<br>window.status='done. hide any document element by clicking on it. shift+click to abort.';
+<br>void(0);</pre><br>
+<br>coded & tested in <a href="tuttiope.htm">Opera</a> 7.54 (and <a href="tuttiope.htm">Opera</a> 7.23).
+<br>
+<br>the window statusbar should inform you of how to operate the script. basically
+<br>just click on any HTML-element you want to kill. then shift-click anywhere if you're done killing.
+<br>
+<br>loads of fun this little script is :)))
+<br>
+<br>fravia, would you mind adding this thingy to my javascript essay? (add it to
+<br>the top, since it's one of the most useful so far).
+<br>
+<br><font size=+2><a href="javascript:var clicks=1;function info(x){if(clicks&#33;=0) window.status='click to delete '+x.srcElement.tagName+', shift+click to stop the killing.';};function del(x){if(clicks&#33;=0 && &#33;x.shiftKey){x.srcElement.setAttribute('style','display:none');window.status=x.srcElement.tagName+' deleted.';} else {clicks=0;window.status='';};};window.status='busy..';a=document.getElementsByTagName('*'); for(i=0; a.length&#33;=i; i++){a.item(i).onclick=del;a.item(i).onmouseover=info;};window.status='done. hide any document element by clicking on it. shift+click to abort.';void(0);">test it</a></font>, bookmark it, put it on your personal bar, print it out, frame it, hang it above your bed, meditate on it, pray to me, etc..
+<br>
+<br>bye,
+<br>
+<br>- ritz <br> <a name="elkilla"></a><hr> 
+ <center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>IMPROVED VERSION</font>&nbsp;(EL_KILLA wand)</center></td></tr></table>
+</center> <br>
+<b>0k - all done, no clicking, good highlighting</b>&nbsp; (please remember you need to have a  <a href="tuttiope.htm">Opera</a> browser in order to use this magic wand...
+<ul>
+<a href="javascript: var lastEL=document.body; var lastStyle=document.body.getAttribute('style'); var EL_KILLA=1;  function hover(x){   e=x.srcElement;   if(EL_KILLA){     window.status='press DEL to delete '+e.tagName+', ESC to cancel.';     lastEL.setAttribute('style',lastStyle);         lastEL = e;     lastStyle = e.getAttribute('style');     e.setAttribute('style', 'border:2px dashed red');   } };  function key(x){   k = x.keyCode;   if(k==27){     EL_KILLA=0;     window.status='';     lastEL.setAttribute('style',lastStyle);       }   if(k==0 && EL_KILLA){       lastEL.setAttribute('style',lastStyle='display:none');     window.status=lastEL.tagName+' deleted.';   } };  window.status='busy..'; document.onkeypress=key;  a=document.getElementsByTagName('*');  for(i=0; a.length&#33;=i; i++){   a.item(i).onmouseover=hover; };  window.status='done. point and press DEL on any element. ESC to cancel.'; void(0);">try it right away</a> (no more clicking, press DEL to delete and ESC to cancel)
+<br>
+<br>the source:
+<br><b><pre>javascript:
+<br>var lastEL=document.body;
+<br>var lastStyle=document.body.getAttribute('style');
+<br>var EL_KILLA=1;
+<br>
+<br>function hover(x){
+<br>  e=x.srcElement;
+<br>  if(EL_KILLA){
+<br>    window.status='press DEL to delete '+e.tagName+', ESC to cancel.';
+<br>    lastEL.setAttribute('style',lastStyle);    
+<br>    lastEL = e;
+<br>    lastStyle = e.getAttribute('style');
+<br>    e.setAttribute('style', 'border:2px dashed red');
+<br>  }
+<br>};
+<br>
+<br>function key(x){
+<br>  k = x.keyCode;
+<br>  if(k==27){
+<br>    EL_KILLA=0;
+<br>    window.status='';
+<br>    lastEL.setAttribute('style',lastStyle);    
+<br>  }
+<br>  if(k==0 && EL_KILLA){  
+<br>    lastEL.setAttribute('style',lastStyle='display:none');
+<br>    window.status=lastEL.tagName+' deleted.';
+<br>  }
+<br>};
+<br>
+<br>window.status='busy..';
+<br>document.onkeypress=key;
+<br>
+<br>a=document.getElementsByTagName('*'); 
+<br>for(i=0; a.length&#33;=i; i++){
+<br>  a.item(i).onmouseover=hover;
+<br>};
+<br>
+<br>window.status='done. point and press DEL on any element. ESC to cancel.';
+<br>void(0);</pre></b>
+<br>&lt;daydream&gt;i think it should *in principle* be possible to save the deleted elements
+<br>namespace-URI's in a cookie, have the javascript check for a present cookie
+<br>and immediately delete those elements. at least if the browser supports
+<br>DOM2 .. but on the other hand, my opera throws away cookies on exit, so it's
+<br>not much use.&lt;/daydream&gt; ..and maybe it's not possible anyway.
+<br>
+<br>next version will feature also a sound-effect and an animation of an explosion
+<br>when you press DEL.
+<br>
+<br>- ritz
+<br>
+</ul>
+ritz<br>
+
+<br><br><hr><i>Ok, there are few words capable to describe the importance of the above <font color=blue>awesome</font> trick by ~S~ Ritz, but, as huge as it is, let it not 
+distract you from the wondrous tricks and codes below</i>&nbsp;:-)
+
+     <hr>
+<br> </font>
+<p align="right"><font size="6">the (rest of) the meat</font></p>
+
+<p>Ok, here follows a list of javascript-oneliners i've developed so far, copy, bookmark, whatever, abuse for your own pleasure.. some of these might be stolen from <a target=_top href="http://www.bookmarklets.com">bookmarklets.com</a> but i've only included the scripts that could be used for our purposes here.. please check out their site if you want more bookmarklets [i didn't get all of them to work in Opera, though.]</p>
+
+<hr width=66%>
+<p><b>javascript:void(location.href='http://' + location.host + '/robots.txt')</p>
+<p>display robots.txt for this domain.</p>
+
+<hr width=66%>
+<p><b>javascript:if(document.Cracker.length&lt;1){alert('No cookie for this site.')}else{zz=prompt('Cookie for this site:',document.Cracker)}</p>
+<p>display cookie for this site</p>
+
+<hr width=66%>
+<p><b>javascript:location.href+='&num=100'</p>
+<p>google 100 results. changes the url line so google will give 100 results instead
+of whatever you have now.</p>
+
+<hr width=66%>
+<p><b>javascript:location.search+='&filter=0'</p>
+<p>google no filter. changes the url so google will "repeat the search with the omitted results included."</p>
+
+<hr width=66%>
+<p><b>javascript:location.search+='&filter=0&num=100'</p>
+<p>combines the two previous scripts :)</p>
+
+<hr width=66%>
+<p><b>javascript: location.href='http://translate.google.com/translate?u='+location.href+'&hl=en'</p>
+<p>automatic google translator. google autodetects the source language if you omit the &amp;sl= tag, so all you have to do is run this script over any site in any language google understands to translate it to english. ofcourse you can change &amp;hl=en to any other destination language instead of english.</p>
+
+<hr width=66%>
+<p><b>javascript:a0=prompt('two-letter source language code:'); location.href='http://world.altavista.com/urltrurl?lin='+a0+'&lout=en&url='+location.href</p>
+<p>altavista translator. i couldn't get altavista to autodetect the source language, so the user is prompted for it. it still saves time, compared to loading bablefish..</p>
+
+<hr width=66%>
+<p><b>javascript:ttt314=prompt('Highlight words on this site:','');ttt314=ttt314.replace(/\s/g,'+');location.href='http://www.google.com/search?q=cache:'+location.href+'+'+ttt314;</p>
+<p>google cache highlight. prompts the user for a set of words to highlight, and looks the current page up in google's cache, with those words highlighted.</p>
+
+<hr width=66%>
+<p><b>javascript: location.href='http://spireproject.com/cgi-bin/footnote.pl?form=2&page='+escape(prompt('URL:',''));</p>
+<p>pseudo-proxy. of course you can modify this script to work for any "proxy" site that works in this manner. you are prompted for the url.</p>
+
+<hr width=66%>
+<p><b>javascript: location.href='http://spireproject.com/cgi-bin/footnote.pl?form=2&page='+escape(location.href);</p>
+<p>automatic pseudo-proxy. the user is not prompted, but instead the current url is used.</p>
+
+<hr width=66%>
+<p><b>javascript:aaa314='&lt;html&gt;&lt;body&gt;';for(xxx314=0; xxx314&lt;document.links.length; xxx314++){aaa314+='&lt;img src='+document.links[xxx314]+'&gt;&lt;br&gt;';};document.write('&lt;center&gt;'+aaa314+'&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;');void(document.close());</p>
+<p>show pictures. makes a new html-pages, that solely consists of &lt;img&gt;-tags. <b>every</b> link on the source page is turned into an &lt;img&gt;-tag, no matter whether it is an actual image or not. very useful if you find an open directory and quickly want to check out all the pictures inside it. [hello pr0n searchers :-P]</p>
+
+<hr width=66%>
+<p><b>javascript:zepp=prompt('cookiestring? [ex: cookieName=cookieValue]','');document.Cracker = zepp;</p>
+<p>add cookie. prompts the user for the cookiestring, and then sets the according cookie. good to circumvent pages with 
+very stupid login-protections.<br>(<i>ahem</i>&nbsp;:-)</p>
+
+<hr width=66%>
+<p><b>javascript:blarg=prompt("unescape what?", ""); xxxx=prompt("okay y0!", unescape(blarg));</p>
+<p>unescape. to convert escaped strings to readable text. use this to read those redirection urls full of http%3A// stuff..</p>
+
+<hr width=66%>
+<p><b>javascript:blarg=prompt("escape what?", ""); xxxx=prompt("ok4y y0!", escape(blarg));</p>
+<p>escape. to convert characters that are illegal in URLs or whatever, to escaped strings.. useful for messing up scripts and forms 
+[making them accept strings they weren't meant to accept :) ]
+<br>(<i>ahem</i>&nbsp;:-)</p>
+
+<hr width=66%>
+<p><b>javascript:href7=location.href;qsplit7=href7.split("?"); asplit7=qsplit7[1].split("&"); for(ind7=0; ind7&lt;asplit7.length&&asplit7[ind7].charAt(0)!="q"; ind7++);clean7=prompt("this be cleaned url", qsplit7[0]+"?"+asplit7[ind7]);location.href=(clean7==null)?href7:clean7;</p>
+<p>google url cleaner. this is a MUST for all you people posting on <a href="http://fravia.2113.ch/phplab/mbs.php3/mb001" notarget>~S~ board</a>!! :) it strips the current URL [assuming that it is from google] to everything but the bare http://www.google.com/search?q=qxapoiu . makes the url much clearer to read and who needs all that &amp;hl=en&amp;lr=&amp;ie=ISO-8859-1 crap anyway?</p>
+<hr width=66%>
+<p>Well that's all the javascript-oneliners i've made until now.. every once 
+in a while i think of something new "that should be simpler using javascript" .. 
+perhaps i will post my new findings on <a href="http://fravia.2113.ch/phplab/mbs.php3/mb001" notarget>~S~ board</a>, or i will write an additional essay.. 
+anyway, i hope i have given you a nice taste of the power of in-url javascript, so if you 
+have coded a cool piece of bookmarklet, please let me know about it :)</p> 
+<br>
+<hr>
+<br>   <center>An addition by Jean-Luc (September 2004)</center>
+ <br><br>
+
+
+A new function for the HOME Button i.e. the start page of IE:  <br>
+Increment the URL  and open new pages in a for loop.  <br>
+It work on Images too! <br>
+    <br>
+Jean-Luc  <br><br>
+ 
+Windows Registry Editor Version 5.00 <br>
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main]
+"Start Page"="javascript:theLink = document.location.href;if(theLink.indexOf(\"javascript\") >= 0 )location.assign(\"about:blank\"); else {r=(theLink.lastIndexOf(\".\")>theLink.length-7);t=r?theLink.lastIndexOf(\".\")-1:theLink.length-1;theNmbr=theLink.substring(t-2,t+1).match(/[0-9]{1,3}/);for(i=0;i<1;i++){q=r?theLink.substring(theLink.lastIndexOf(\".\"),theLink.length):\"\";p=\"000\" + eval(theNmbr++ + '+1');open(theLink.substring(0,t-2+RegExp.index)+p.substring(p.length+RegExp.index-3,p.length) +q)};history.back(-1)}"
+
+<br><br><!-- begin da closing bit, duh -->
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="essays.htm"><IMG
+SRC="images/petipand.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2"
+bgcolor="#993300"></td></tr></table><b> Whatever <font color=blue>[<a href="info.htm">c</a>]</font> you want, we know we did it anyway.</b>
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+<hR>
+</body>
+</HTML>

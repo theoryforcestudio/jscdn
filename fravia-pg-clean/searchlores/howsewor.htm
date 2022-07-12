@@ -1,0 +1,218 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>howsewor.htm: How to search the web, by fravia+
+howsewor</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html;
+charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and
+advanced search techniques for people interested in finding any
+kind of information on the web. Here are informations, documents,
+links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how
+to search, search techniques, hints and tips for searching the
+web, How do I learn to search?, Advanced Internet searching, How
+do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040
+VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ How search engines work ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="details.htm"><IMG
+SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+How search<br>engines work</th>
+</tR></table>Version March 2000
+<!-- internet searching techniques: imageheader end -->
+<hr width=44%> 
+    <i>Eh, this is still in fieri, and is just a first attempt, ya know...</i>
+<hr>   
+<center><table border=1 width=88%><tr><td
+bgcolor="#C6E7C6"><center><font size=+3>How search engines
+work</font></center></td></tr></table><br>by fravia+, March 2000<hr width=44%></center>
+</center>
+
+<IMG align=left valign=top width=9 height=40 SRC="images/dot_green.gif">
+A search engine is a complex funny beast, as you can imagine. 
+It's <SPAN STYLE="color: black; background: yellow">eyes</span> 
+are 
+the programs it uses in order to find information, 
+its great ugly <SPAN STYLE="color: black; background: yellow">body</span> 
+is a giant database of continuously updated findings and his 
+<SPAN STYLE="color: black; background: yellow">brain</span> are the    specific 
+algos used to decide the relevance results for a given query.
+Of course there are major "parts". 
+Each engine needs (at least) <ol><li>to FIND information;</lI><li>to STORE information</lI><li>
+to ORGANIZE its stored information (weighting, ranking)</lI>
+<li>
+ to ALLOW querying (user interface)
+<bR>
+and, since most users using the search engines are basically idiots incapable of searching with 
+more than one term,
+</lI> <lI>to automatically AMELIORATE the mostly poor query that they got as input 
+(query expansion, neural net techniques, pseudo-relevance feedback)  in order to 
+offer results that make some sense.
+</li>
+</oL>
+Finding information<br>
+Human URL-adding and spidering.<bR>
+
+Each search engine has a "<SPAN STYLE="color: black; background: yellow">spider</span>" (aka crawler, aka bot) 
+which  automatically scours the Net for sites and report the results. 
+The spider visits web pages, 
+reads them,
+and then 
+follows links to other pages within the site. 
+At times these spiders discover "uncharted pages" following links 
+outside the submitted or found site (this 
+is happening less and less now, for reasons discussed <font color=blue>[</font><a href="tadimens.htm">elsewhere</a><font color=blue>]</font> on my site).<bR> 
+This is
+what it means when someone refers to a site being "spidered". 
+The spider returns to the site on a regular basis, such
+as every couple of months, to check if the site still exists and to 
+look for changes. Note that the average life of a site on the web was of less than 
+two months at the beginning of 2000.<br>
+
+The spider's findings land into the second part of all search
+engines, the database, aka <SPAN STYLE="color: black; background: yellow">the 
+index</span> or catalog. A giant book containing a copy (google) or a 
+archived and zipped reference to every web page 
+that the
+spider has found. If a web page changes, then this database is updated 
+with the new
+information.
+         <br><br>
+This indexing process of the spidered info, <i>nota bene</i> can take <u>weeks</u>.<br><bR>
+
+Search engine specific <SPAN STYLE="color: black; background: yellow">algos</span> are another important element for all 
+search engines. This
+are programs and algos that grep and sift 
+through the millions of pages recorded
+in the database to find matches fore a query 
+and rank them in order of
+what the programmers believe should be 
+most relevant. All search engines have the parts listed above, but the 'tuning' is different, that's the 
+reason the same query will give DIFFERENT results on different search engines. 
+In the other pages of this 
+<font color=blue>[</font><a href="details.htm">details</a><font color=blue>]</font> 
+section we will examine 'in depth' the specific quirks of the main 
+search engines.<bR>
+ Of course the 'relevance ranking' part is a tricky business. 
+Filtering unwanted information ourt can even be more difficoult than 
+searching for info in the first place, since in searching for info you may allow 
+a certain marge of uncertainity, but when you fuilter something out, that's a binary 
+ <i>aut aut</i>, not a <i>vel vel</i> decision.<bR>You should 
+beware of filter agents (unless you have or happen to have found 
+their source code :-)    Godzilla knows what for silly algos have been implemented by 
+the programmers to filter information out that YOU wanted but that Billy the userzombie 
+usually discards.<bR> 
+<bR>
+In fact the most commonly used algos leave a great marge for errors and blunders:
+<ol><lI><SPAN STYLE="color: black; background: yellow">link analysis</span> 
+("best sites based on how many sites link 
+to that page") I am sure you can list on yourself a dozen good reasons NOT to trust 
+such a methodology :-)<bR><br></lI>
+<li><SPAN STYLE="color: black; background: yellow">result clustering</span>
+ that's summarizing results into (supposedly) useful groups and 
+
+ <SPAN STYLE="color: black; background: yellow">automatic 
+creation of taxonomies</span> 
+(and directories) on the fly... see Northernlight for an example: those folders 
+may at times be even useful, but are often puzzling, to say the least;<bR><br></lI><li> <SPAN STYLE="color: black; background: yellow">clicking 
+weighting</span> this is an hotbot speciality: user click on a link from the retrieved results? That site 
+will get a plus. User remains very little on that site and goes back? It's a bogus site, will 
+have less weight next time. User click first on site listed number eight and 
+jumps the first seven? That site gets more weight, and so on... it is easy to imagine 
+how this system will automagically 
+tend to a 'common denominator' of crap/spam sites that bozo the user loves and that 
+you personally wouldn't probably want to touch with a badger pole. Another good reason to 
+always begin from the fourth (at least) page of results downwards :-)</li></oL> 
+All the methods and algos listed above are arbitrary to say the least. Maybe future 
+clustering algos will be able to use format distinctions more efficiently, since the 
+relevance analysis necessary to evaluate a scientific paper must 
+obviously use different parameters from those used to evaluate a spamcommmercial 
+site. But for the moment you better be very careful and sceptic about the results 
+presented and try to use queries that are unlikely to have 
+been standardized by the programmers. Once more, never forget that there are 2 milliard sites 
+and that the search engines 'see' only a tiny part of that huge mass.  Search engines 
+are useful to start a query, but once you have found the signal among the 
+noise, you will usually switch to more advanced and complicated seeking techniques.
+
+<bR><bR>
+ Does the arbitrariety of modern automated relevance ranking methods 
+mean that only human directories can offer correct ranking results? 
+Of course not: 
+
+the real problem is that categorization is <i>per se</i> very hard to create and to maintain and that 
+if you put three humans together they will almost immediatly -&nbsp;and 
+quite hotly&nbsp;-  
+disagree about each other's  
+chosen categorization guidelines and choices. 
+Automated systems make admittedly more blunders than humans and return a greater 
+number of irrelevant sites, but 
+the ab uility to cast larger nets compensate this. Anyway <font color=blue>both</font>  
+will happily try to impose you their 'petty' taxonomical visions, which more than 
+often have also the added duisadvantage of being <SPAN STYLE="color: black; background: yellow">extremely provincial</span>. (This is 
+typical of all euroamericanocentrics attempts: you'll quickly realize how true this is 
+once you will have learned how to search -and fish- extremely 
+valuable info on -for instance- chinese, korean or russian 
+sites).
+<bR><bR><center><font color=blue>A request for help deguised as anti-commercial rant</font> :-)<Br></center>
+Note that on the ugly web of to-day  many  commercial 
+bastards offer
+this kind of (easy to find) 
+information  to the zombies 
+on a 'per pay' basis. Your help in developing this specific <SPAN STYLE="color: black; background: yellow">detail</span> section of my site 
+is <u>therefore</u> even more 
+appreciated than usual, as a first, and I hope painful, 
+'retaliating' action against those that 
+want to sell easy to find information instead of spreading it. Painful because if we get enough 
+deep with this stuff we will cast a knowledge spike through our enemies' heart: 
+their wallet.
+<bR><bR>
+
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="details.htm"><IMG SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>
+
+
+

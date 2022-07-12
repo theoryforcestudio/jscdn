@@ -1,0 +1,310 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>dawicra.htm: Fravia's web-searching lore (�`�.�(�`�.� Dancing With Crawlers �.���)�.���)</title>
+<!-- web searching lore: pagename end --> <!--<meta name="ROBOTS" content="NOINDEX">-->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952 - 2032 fravia+">
+
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head> <body bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Dancing With Crawlers ~</font>
+<!-- fravia's searching lore: bigtitle, end --><br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"><img SRC="images/basipet.jpg" ALT="to basic" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+</th></tr></table><br>
+Published @ <a href="http://www.searchlores.org">searchlores</a>
+<!-- --------------------|||||------------->
+   in <font color=blue>December</font> 2002 
+<!-- --------------------^^^^^------------->
+<br>
+<!-- internet searching techniques: imageheader end --></center><!-- fravia's searching lore: bigtitle, begin -->
+<br><center><font size=+2>Dancing With Crawlers<br>by  Dan Ciammaichella
+</font>
+<br>
+<hr>
+<i>
+ Well... I received this essay per anonymous mailer yesterday, and I have decided 
+to publish it because some of the matters it deals with (for instance site accessibility 
+for ANY browser) are of OUTMOST interest for seekers. I checked 
+and found out that the original article 
+(subdivided in 4 parts) dwells (without date) at <a href="http://www.chipcom.net/searchengine1.php">http://www.chipcom.net/searchengine1.php</a> and 
+that    Dan Ciammaichella wrote also <a href="http://www.chipcom.net/articles.php">many more</a> interesting essays about webdesign.
+</i></center>
+<hr><font size=+2>
+<br>
+<center>
+Dancing With Crawlers
+<br><br></center>           </font><center>
+An essay about making websites both search-engine friendly and
+accessible, without sacrificing 'cool' design.<br>
+by Dan Ciammaichella  </center>
+<br><br>   <font size=+1>
+An effective method of optimizing your website for search engines,
+that includes the added benefit of also making it accessible to
+the widest range of viewers, is to display your content in a
+presentation layer that best fits the user-agent. Accomplishing
+this does not require compromising your 'cutting edge' design or
+basic accessibility guidelines.
+<br><br>
+Sounds complicated doesn't it? The first thing many mis-informed
+'experts' claim when presented with this idea, is that it is too
+much trouble to maintain multiple versions of a website to
+accommodate different browsers. They miss the point entirely. You
+do not need to maintain multiple versions of your site content -
+the key is to use the SAME content, placed within custom design
+templates at runtime. At it's very basic, this strategy only
+involves two design templates; one for graphical web browsers, the
+other text-only. Both templates can be coded into the same page,
+with the content coming from either a database, or a separate
+include file. While I have used the very-cool extreme of a
+model-view-controller architecture to dynamically generate
+presentation layers based on the requesting user-agent, I will
+only cover a very basic method to accomplish similar results here.<br>
+The basic method is effective for most sites, if it is
+incorporated into the build. It's much more work as an
+afterthought.
+<br><br>
+Before we get much farther, I need to mention that this method
+requires the use of server-side scripting. The flavor doesn't
+really matter, as long it can read the User-Agent string in the
+HTTP header. I've used Microsoft Active Server Pages (ASP), Java
+Server Pages (JSP) and Cold Fusion. The examples here use my
+favorite, PHP, which is freely available and already installed on
+the servers of many web hosts. PHP is very easy to learn, so even
+a relative beginner to building websites can get up to speed
+fairly quickly.
+<br><br>
+Assuming that you have PHP installed on your host or local
+machine, and a basic understanding of <a href="http://fravia.2113.ch/phplab/phplab.htm">how to write PHP pages</a>, we
+can begin building our template.  
+<br><br>
+Detecting the User-Agent
+<br><br>
+The first thing we will do is detect the user-agent from the
+HTTP_USER_AGENT string in the header of the request. We are not
+going to get crazy trying to determine the exact browser, version
+or operating system though - there is no need. For our purposes we
+simply want to know if the user agent is a fairly-modern graphical
+browser, or something else. Most of the major modern graphical
+browsers provide one common string - 'Mozilla'. If 'Mozilla' is in
+the User_Agent string, you can be pretty darn sure the browser is
+Netscape, Internet Explorer, or one of the lesser known browsers.
+One exception is Opera, which allows the user to pick from a
+choice of strings to identify it. Most of the available Opera
+strings contain 'Mozilla', but one only contains the word 'Opera'.
+I am quite happy to settle for detecting these two strings alone
+for our purposes. Below is a simple PHP script to do just that:
+<pre>&lt;?php
+$browser = false;
+if (getenv(strstr("HTTP_USER_AGENT"), "Mozilla") != ""
+| getenv(strstr("HTTP_USER_AGENT"), "Opera") != "")
+{ $browser = true; }
+?></pre>
+The script initially sets the variable $browser to false, then IF
+the words 'Mozilla' OR 'Opera' are part of the HTTP_USER_AGENT
+string, we set $browser to true, indicating a graphical web
+browser.
+<br><br>
+Obviously, you could create a more sophisticated function to
+detect the user-agent down to the version, but again, for our
+purposes here there is no need. Of course feel free to come up
+with what works best for you.
+<br><br>
+Some will say that a user-agent string can be 'spoofed' or faked,
+and they are 100% correct. Of course if someone does spoof their
+user-agent string, what is the worst that can happen? They will
+simply see one of the two versions of your site - not a big deal,
+unless you are trying to spam the search engines using this method
+- in that case you're busted and deserve to be exposed. The
+purpose of this technique is to make your site search-engine
+friendly and accessible, not to spam and mislead.
+<br><br>
+Now that we have a simple user-agent detection script built, save
+it as browserDetect.php. I usually create an 'includes' directory
+and save all of my included code snippet files there. From a
+maintenance standpoint, Include files will make your life much
+simpler. If you decide to make changes, you only need to edit one
+file, instead of every file that uses the code.
+<br><br>
+
+Building Page Templates
+<br><br>
+Building a page template that incorporates both a graphical design
+and a text-only design using the same content is fairly simple.
+The first step is to create your well-designed graphical version
+in straight HTML. While doing so, keep in mind that you want the
+actual content of the page to be easily separated from the design
+elements. The simplest method of seeing how this works is to think
+of your page as having three distinct parts; header, footer and
+content.
+<br><br>
+<b>Header</b> - includes everything from (and including) the closing HEAD
+tag of your page, to the beginning of the actual content. Using
+this site as an example, the logo, top navigation bar and
+breadcrumb trail are all part of the header. If your site includes
+a left-hand navigation, this would usually be part of the header
+as well.<br>
+<b>Footer</b> - includes everything from the end of the content to the
+closing BODY tag. Again using this site as an example, the bottom
+navigation bar and copyright notice would be make up the footer.
+If you use a right-hand column for navigation and/or promotions,
+that could be part of the footer as well.
+Content - this is the actual content of the site. All text for the
+most part, but can also include graphical and other elements that
+are required to convey your information. If parts of your content
+require client-side scripting, flash or other multimedia elements,
+ensure they also include an alternative version for user-agents
+that do not support them. Use of the NOSCRIPT tag is one example.
+<br><br>
+Once you have the graphical page laid out to your satisfaction
+(and validated to whatever version of HTML you are using), save
+it. Now recreate the page, replacing the graphical header and
+footer with text-only versions. You may want to incorporate an
+alternate style-sheet as well. This will be the version of the
+page that must be accessible to any user-agent that is not a
+Mozilla compatible browser. When you have this page completed and
+validated to your satisfaction, save it as well.
+<br><br>
+The next step is to incorporate both versions of your page into
+one page template. This is much easier accomplished and maintained
+if you cut out each respective header and footer into include
+files. Of course there will only be one include file for the
+content itself. I usually create a separate 'content' directory to
+save these. If you are using dynamic pages and pulling your
+content from a database, there are many ways to streamline the
+template, but for the purposes of this article we will stick with
+manually created content include files.
+<p>Now that you have your headers, footers and content separated into include files, we can build our template. The template logic will display the default graphical template and content if the <strong>$browser</strong> variable is true, or the alternate text-only template with the same content if the <strong>$browser</strong> variable is false. The template elements will include the following:
+<ul>
+<li>Document Type Declaration (DTD) and opening HTML tag</li>
+<li>PHP declaration of the <strong>$content</strong> variable containing the path to the applicable content include file</li>
+<li>Browser detection script as an include file</li>
+<li>Opening HEAD TITLE and META tags</li>
+<li>PHP conditional If statement checking if the <strong>$browser</strong> variable is true</li>
+<li>Applicable style sheets and javascripts for the default graphical template, closing HEAD tag and opening BODY tag</li>
+<li>Default header as an include file</li>
+<li>Content as an include file using the <strong>$content</strong> variable</li>
+<li>Default footer as an include file</li>
+<li>PHP conditional Else to begin the alternate text-only template if <strong>$browser</strong> is not true</li>
+<li>Text-only header as an include file</li>
+<li>Content as an include file using the <strong>$content</strong> variable</li>
+<li>Text-only footer as an include file</li>
+<li>Close the PHP conditional statement</li>
+<li>Closing BODY and HTML tags</li>
+</ul>
+<p>The following  example contains all of the elements listed above.
+<br><br>
+
+An Example Template
+<pre>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+&lt;html dir="ltr" xml:lang="en" lang="en">
+&lt;?php
+# set content file name as variable for ease of creating templates
+$content = includes/myContent.php;
+# this is where we include our browser detection script
+include ("includes/browserDetect.php");
+?>
+&lt;head>
+&lt;title>Page Title&lt;/title>
+&lt;meta name="description" content="Page Description" />
+&lt;meta name="keywords" content="Page Keywords" />
+&lt;meta http-equiv="content-type" content="text/html; charset=ISO-
+8859-1" />
+&lt;?php # if $browser is true then display the default template
+if ($browser == true) {
+?>
+&lt;!-- this is the sytlesheet for the default template only -->
+&lt;link rel="stylesheet" type="text/css" href="css/
+mainStyleSheet.css" />
+&lt;!-- include any javascripts for the default template here -->
+&lt;/head>
+&lt;body>
+&lt;!-- include the default header include file -->
+&lt;?php include ("includes/defaultHeader.php"); ?>
+&lt;!-- include the content include file-->
+&lt;?php include ($content); ?>
+&lt;!-- include the default footer include file -->
+&lt;?php include ("includes/defaultFooter.php"); ?>
+&lt;?php } # end default template, begin text-only template $browser
+is false
+else { ?>
+&lt;!-- this is the sytlesheet for the text-only template only -->
+&lt;link rel="stylesheet" type="text/css" href="css/
+alternateStyleSheet.css" />
+&lt;/head>
+&lt;body>
+&lt;!-- include the text-only header include file -->
+&lt;?php include ("includes/altHeader.php"); ?>
+&lt;!-- include the content include file-->
+&lt;?php include ($content); ?>
+&lt;!-- include the text-only footer include file -->
+&lt;?php include ("includes/altFooter.php"); ?>
+&lt;?php } # end text-only template ?>
+&lt;/body>
+&lt;/html>
+     </pre>
+Feel free to copy/paste this template and modify for your own use.
+<br><br>
+Wrap Up</p>
+<p>Notice how the same content include file is used in both the default graphical portion of the template and the text-only portion. As I stated earlier, the key to making the site content easily maintainable is not having to edit multiple versions of the same content. The use of include files also makes the site easier to maintain. If you are a more experienced web developer, you will of course find better and more inventive ways of cutting up your templates to incorporate more functionality and a more sophisticated design than in this very basic example. You'll also note how easily this can be modified to use dynamic content from a database or content management system.</p>
+<p>Also note the use of two different style sheets. Just because the alternative presentation is text-only does not mean it has to look drab if viewed by a more capable user-agent. Using CSS you can give even a plain-text page a more attractive appearance.</p>
+<p>Incorporating the concept of serving the same content in a presentation layer customized for the user-agent is the most effective way I have found to:</p>
+<ul>
+    <li>Use a cutting edge-visual design for modern browsers</li>
+    <li>Make your content accessible to the the widest range of users</li>
+    <li>Increase your chances of top search engine positions for relevant keywords</li>
+</ul>
+<p>Of course this technique alone will not guarantee you anything. It is not a magic bullet that removes the need to apply other essential elements in your website design and coding. The following best practices still apply</p>
+<ul>
+    <li>Use valid HTML in all of your templates - <a target=_top href="http://validator.w3.org/" title="W3C Html Validator">validate to the W3C specs</a></li>
+    <li>Make sure you follow <a target=_top href="http://www.w3.org/WAI/" title="W3C Web Accessibility Initative">WAI Accesibility Guidelines</a>. Even the graphical version should follow these guidelines as much as possible.</li>
+    <li>Create informative, useful content</li>
+    <li>Make navigating and finding information on your site fast and easy - usability</li>
+    <li>Be search-engine friendly with meaningful TITLE, META Description and META Keywords that are relevant to your content</li>
+</ul>
+<p>One question I often get asked is - &#34;So how do you test your alternative presentations?&#34;  Easy. In development you can simply change the initial <strong>$browser</strong> conditional statment to <strong>If ($browser=false) {</strong>. Now when viewed in a browser you will see the alternate version. (Note: when validating your graphical page you should set this conditional to false as well, otherwise the validator will be run against your alternative page.) Also, if you leave the <strong>$browser</strong> conditional set to true and use the  <a target=_top href="http://ugweb.cs.ualberta.ca/~gerald/lynx-me.cgi" title="Lynx-Me home page">Lynx-Me</a> viewer, you will see your alternative version as Lynx - and most search engines, will see it. </p>
+<p>Other elements of architecting successful websites will be covered in future articles. 
+Good Luck!</p>
+ </font>       
+(c) Dan Ciammaichella 2002
+<br><br>     
+
+<br>
+<center>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><a href="essays.htm"><img SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</font></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</center>
+</body>
+</html>
+

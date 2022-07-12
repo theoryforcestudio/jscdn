@@ -1,0 +1,91 @@
+<html>
+<head>
+<META Name="Voluntary Content Rating" content="it's fravia's: great!">
+<title>plbtgrab.htm: a perl based bot that searches the net for emails (a.k.a. spam bot)</title>
+</head>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010 ALINK=#405040 VLINK=#8850AA>
+<center><a href="bots.htm"><img SRC="https://searchlores.nickifaulk.com/botstart.gif"
+ALT="bots" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0
+VSPACE=0
+HSPACE=0></a><br><font color=gray>Bots section</FonT><hR>
+<font size=+3>
+Source code for a spam bot<br>(Kevin's spider)<bR>
+by <bR>
+Kevin Jobson<bR></fonT>
+May 2000
+<hr>
+
+courtesy of fravia's searchlores.org<bR>
+<hR></center>
+<pre>      I've made a perl based bot that searches the net 
+      for emails (a.k.a. spam bot). 
+      I couldn't help but grin when I saw your email was 
+      "fravia(at)linuxmail(point)org".
+      
+					Kevin Jobson</pre>.<center>
+Yep, I know how easy it is to fetch slightly encoded 
+email addresses... anyway afaik all "real" spammers fetch them 
+on the fly extracting them from all emails transiting through their servers, and  
+ther's not much you can do against that (sauf punishing 
+the spammers once they do dare to spam you :-)<br>I have slightly 
+edited some french comments.
+<hR>
+</center>
+
+<P>#!/usr/bin/perl<BR><BR>use LWP::UserAgent;<BR><BR>require 
+"subparseform.lib";<BR><BR>&Parse_Form;<BR><BR>$varurl = 
+$formdata{'varurl'}; # url permanente de base (ex. www.infinit.com)<BR>$baseurl 
+= $formdata{'base_url'}; # url variante (ex. 
+www.infinit.com/blabla/encorebla/)<BR>$newurl = $formdata{'newurl'}; # flag si nouveau url (flag if new URL)<BR><BR>print "Content-type: text/html\n\n";
+<BR>print "&lt;HTML>&lt;BODY>";<BR><BR>if ($newurl == 1) # si nouveau url, mettre le 
+dans la base permanente (new URL? ==> smash it into database)<BR>{<BR>$varurl = $baseurl;<BR>}<BR><BR>if ($newurl 
+!= 1) # si pas un nouveau url, chercher dans la liste pour 
+une nouvelle (no new URL? search list for new)<BR>{<BR><BR>open(URLS, "&lt;data/url.txt") || &ErrorMsg; # lire 
+url.txt<BR><BR>$continue = 0;<BR><BR>while ($continue == 0 && 
+($baseurl = readline *URLS)) # lire une ligne a la fois (one line only)<BR>{<BR><BR>if (eof 
+URLS) # si la fin de url.txt alors fin de recherche (end of url.txt? ==> end of search)<BR>{<BR>print 
+"&lt;center>&lt;h1>RECHERCHE COMPLETÉ&lt;/h1>&lt;/center>";<BR>exit;<BR>}<BR><BR>open(VERIFURL, 
+"&lt;data/verifurl.txt") || &ErrorMsg;<BR><BR>$found = 0;<BR><BR>while 
+(($found == 0) && ($line = readline *VERIFURL)) <BR>{<BR>if ($line 
+eq $baseurl) # si $line = $baseurl alors url a 
+deja été fais. saute au prochain (jump to next URL in this 
+case)<BR>{<BR>$found = 1;<BR>}<BR>}<BR>if(!$found)<BR>{<BR>$continue 
+= 1;<BR>}<BR><BR>close(VERIFURL);<BR>}<BR>close(URLS);<BR>}<BR>if (($continue == 1) || ($newurl == 1))<br> 
+### MAIN LOOP ###<BR>{<BR>###############SEARCH URL'S######################<BR>
+<BR>$ua = LWP::UserAgent->new;
+<BR>$req = HTTP::Request->new ('GET', $baseurl);
+<BR>$resp = $ua->request($req);<BR>
+<BR>$response_http = $resp->as_string(); # mettre code de la page http en une variable (smash http source code into variable)<BR>
+<BR>#print "$response_http";<BR>
+<BR>$response_http =~ s/&lt;a href=.?\//&lt;a href="$varurl/gi;<br> 
+# remplace les lien (a href=/fr) relatif avec un lien absolu (replace relative link with absolute lkink)<BR>
+<BR>print "&lt;h1>BaseURL: $baseurl &lt;BR>file length: ";
+<BR>print length $response_http;
+<BR>print "&lt;br>&lt;/h1>"; 
+<BR><BR><BR>while ($response_http =~ m/$varurl[a-zA-Z0-9\:\.\/\%\?\=\&]+/i) 
+# cherche des liens http (search http links)<BR>{<BR><BR>$varhttp = $&;<BR>$varremainhttp = 
+$';<BR>if ($varhttp =~ m/(\.php|\.htm|\.shtm|\.asp|\?|\.cgi)/i) <BR>{<BR>print 
+"FOUND: $varhttp &lt;br>";<BR>push(@http, $varhttp);<BR><BR>}<BR>$response_http = 
+$varremainhttp;<BR>}<BR><BR>open (URLS, ">>data/url.txt") || 
+&ErrorMsg; #Append to data folder<BR>foreach $url (@http)<BR>{<BR>print "URL 
+AJOUTÉ: $url&lt;br>";<BR>print URLS "$url\n";<BR>}<BR>close (URLS);<BR>
+<BR>################### SEARCH EMAILS #########################<BR>
+<BR>$response_email = $resp->as_string();<BR>
+<BR>while ($response_email =~ m/\w+@\w+\.\w+/) # cherche 
+email with pattern something@something.something<BR>
+{<BR><BR>push(@email, $&);<BR>$response_email = $';<BR><BR>}
+<BR>print "&lt;br>&lt;h3>@email&lt;/h3>"; # afficher les emails qui on été trouvé (show found emails)<BR><BR>open (EMAILS, ">>data/email.txt") || &ErrorMsg; # 
+Append to data folder<BR><BR>foreach $single_email (@email)<BR>{<BR>print EMAILS 
+"$single_email\n";<BR>}<BR>close (EMAILS);<BR><BR>############################ 
+WRITE CHECKED URL TO FILE ###########################<BR><BR><BR>open (VERIFURL, 
+">>data/verifurl.txt") || &ErrorMsg; # Write to data folder<BR>print 
+VERIFURL "$baseurl";<BR>close (VERIFURL); # ajouter le URL verifier a verifurl.txt<BR>
+<BR><BR><BR>} #### END IF ####<BR><BR><BR><BR>print "&lt;meta http-equiv=\"refresh\" 
+content=\"0; URL=spider.cgi?newurl=0&varurl=$varurl\">"; # reload page<BR><BR>print 
+"&lt;/BODY>&lt;/HTML>";<BR><BR><BR>####################### SUB #####################<BR>sub ErrorMsg<BR>{<BR>print "Server can't open file : $!";<BR>exit;<BR>}<BR></P></FONT>
+
+
+<hR>
+
+</body>
+</HTML>

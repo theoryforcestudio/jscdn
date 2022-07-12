@@ -1,0 +1,199 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>adq_pdb1.htm: PDB Information Leakage</title>
+
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's  <a href="http://www.searchlore.org">searchlore.org</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+<hr>
+<font size=+2>
+<br><b>(¯`·.¸(¯`·.¸&nbsp;PDB Information Leakage¸.·´¯)¸.·´¯) 
+</b><br>
+by adq (Andrew de Quincey)</font> <br>
+<br> published @ <a href="https://searchlores.nickifaulk.com/www.searchlores.org">searchlores</a> 
+in <b>September 2002</b><br>
+<hr><i>
+Some (inexpert) searchers may not immediately see the connection between 
+the matters investigated here and our web-searching activities.
+Rest assured, however, that if you take the time to understand and try 
+out some (or, even better, all) of the hints you'll find here you'll have 
+added a couple of powerful (and sharp) arrows to your seeker's quiver.   
+Andrew has published this work @ sourceforge as well.
+
+      </i></center><hr><br>
+<CENTER>Written by adq<BR>Released 
+in September 2002, published at <a href="http://www.searchlores.org">http://www.searchlores.org</a> in 
+September 2002.<BR><a href="http://pdbdump.sourceforge.net">http://pdbdump.sourceforge.net</a><BR>PDB Information Leakage
+<hr width=44%>
+</CENTER>
+
+    <h3>Abstract</h3>
+    <p>This document describes a source of information leakage discovered during 
+      research into Microsoft's Program DataBase (PDB) debugging information files.</p>
+    <p>&nbsp;</p>
+    <h3>Background</h3>
+    <p>This project originally started as an investigation into Microsoft's Program 
+      DataBase (PDB) debugging information files. I started off looking at the <a href="http://www.winehq.org">
+        WINE</a> implementation of the DbgHelp APIs, but quickly found that Microsoft 
+      had introduced a new, incompatable, format with Visual Studio.NET. Whilst 
+      researching this new format, I found the Debug Information Accessor (DIA) SDK 
+      2.0 which was handily provided with Visual Studio.NET.</p>
+    <p>This provided a great deal of functionality, much more than the old DbgHelp 
+      APIs. Unfortunately, however, it also had a COM interface that was quite hard 
+      to use. To ameliorate this, I started writing DiaLib, a C++ wrapper around the 
+      COM interface.</p>
+    <p>To test this library, I wrote PdbDump, which is a simple tool to dump out the 
+      contents of PDB files.</p>
+    <p>&nbsp;</p>
+    <h3>PDB Private Information</h3>
+    <p>I had assumed, like most people, that PDB files contained just a simple list 
+      of function names and addresses; this is all that the old DbgHelp API exposed. 
+      However, while developing DiaLib, I noticed that on <em>certain</em> PDB files, 
+      PdbDump was outputting a lot more information than I had expected. This 
+      included C++ class prototypes, full enumeration definitions, local function 
+      variables, and much more.</p>
+    <p>Later I noticed that if I linked a debug version of a program against .LIB 
+      files (or .OBJ files), the generated PDB file would contain private information 
+      from the third party .LIB file <em>as well as </em>my own code.</p>
+    <p>This information is akin to the metadata in CLR or Java programs. It provides 
+      information on data structures, function prototypes, and certain variables in 
+      the compiled code. It does <strong>not </strong>contain any of the original 
+      sourcecode. So while it doesn't provide people with details of private 
+      algorithms, it does provide them with a lot more private information than 
+      expected.</p>
+    <p>This situation is obviously not ideal if you are releasing a commerical 
+      library.
+    </p>
+    <p>&nbsp;</p>
+    <h3>PDB Private Information in .OBJ/.LIB Files</h3>
+    <p>This is a more complex issue, and is best described with the help of an 
+<a href="zipped/demopdbproject.zip">
+        example</a>. This contains a sample VS.NET C++ project containing a static 
+      library and an executable which uses that library.</p>
+    <p>The static library contains a public function, a private function, and a 
+      private structure definition. If you compile the projects as is (Debug or 
+      Release targets), and run pdbdump on the resulting <code>testexe.pdb</code> file, 
+      you will find the following somewhere in the output (edited to remove 
+      irrelevancies):</p>
+    <pre>
+struct privatestruct1 {
+  // non-static data --------------------------------
+  /*&lt;thisrel this0x0+&gt;*/ /*|0x4|*/ int a;
+  /*&lt;thisrel this0x4+&gt;*/ /*|0x4|*/ int c;
+  /*&lt;thisrel this0x8+&gt;*/ /*|0x4|*/ char* banana;
+};
+// &lt;size 0xc&gt;
+
+char* __cdecl aPublicFunction(/*&lt;regrel ebp0x8+&gt;*/ /*|0x4|*/ char* banana);
+// &lt;rva 0x11a60&gt;
+// &lt;size 0x57&gt;
+// &lt;staticlocal &lt;rva 0x11aaf*&gt;*/ /*|0x0|*/ ... &gt; 
+// &lt;staticlocal &lt;rva 0x11aa3*&gt;*/ /*|0x0|*/ ... &gt; 
+// &lt;staticlocal &lt;rva 0x11a9b*&gt;*/ /*|0x0|*/ ... &gt; 
+// &lt;staticlocal &lt;rva 0x284e0*&gt;*/ /*|0x4|*/ int hello&gt;
+// &lt;local &lt;regrel ebp-0x10*&gt;*/ /*|0xc|*/ struct privatestruct1 struct1&gt;
+
+char* __cdecl aPrivateFunction(/*&lt;regrel ebp0x8+&gt;*/ /*|0x4|*/ struct privatestruct1* privateStructArg);
+</pre>
+    <p>As you can see, a considerable amount of information has leaked out of the 
+      static library. The private structure definition is visible, and even the 
+      static variable in aPublicFunction() is exposed. PdbDump does not output line 
+      number information, but it is likely that this is present as well.</p>
+    <p>
+      The problem with .LIB files is that there are no visible PDB files present, yet 
+      somehow this information still leaks. If you dump the .LIB file with <code>ar t 
+        testlibrary.lib</code> (yes, .LIB files are just AR archives :), the only 
+      object visible is <code>object1.obj</code>. Therefore, the PDB information must 
+      be stored inside .OBJ files.</p>
+    <p>&nbsp;</p>
+    <h3>Stripping Private Information</h3>
+    <p>To remove this private information from PDB files, you must use the <code>/PDBSTRIPPED</code>
+      flag on Microsoft's compiler. This will reduce the PDB file to just function 
+      names.</p>
+    <p>
+      Static .OBJ or .LIB files. You can remove the information from these by 
+      disabling debug information generation completely when compiling the <strong>source
+      </strong>files for the library. It should be noted that Visual Studio sets 
+      the debugging status to "Program Database for Edit &amp; Continue (/ZI)" if you 
+      create a library project using its wizard. I have not been able to find a 
+      switch equivalent to <code>/PDBSTRIPPED</code> for .OBJ/.LIB files.
+    </p>
+    <p>DLL files do not require any form of stripping as long as any supplied debug 
+      information is contained in a PDBSTRIPPED PDB file. However, I believe there 
+      are other methods of storing debugging information; I have not investigated 
+      these for this problem.</p>
+    <p>I would recommend using PdbDump as a tool to check for information leakage in 
+      your commercially released PDB files, and also enusuring that no debug 
+      information is creeping into released .OBJ/.LIB files.</p>
+    <p>&nbsp;</p>
+    <h3>Future work</h3>
+    <p>The next focus of this project will be to write a program to strip the private 
+      information from .OBJ/.LIB files (like the <code>/PDBSTRIPPED</code> option). 
+      Basic debugging (with function names) should still be possible, but the private 
+      information will be removed.</p>
+    <p>&nbsp;</p>
+    <h3>Availability</h3>
+    <p>DiaLib and PdbDump are both hosted on sourceforge <a href="http://sourceforge.net/projects/pdbdump">
+        here</a>. They are licensed under a BSD-style license.</p>
+
+
+
+
+    <p>You can contact me at <a href="mailto:adq@tardis.ed.ac.uk">adq@tardis.ed.ac.uk</a>.</p>
+
+
+
+    <hr>
+    <font size=+1><center> 
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a>
+  <br><A HREF="http://www.baidu.com/gaoji/advanced.html" target="_blank">B</a><A HREF="http://www.kartoo.com/" target="_blank">k</a>:<A HREF="http://www.alltheweb.com/advanced" target="_blank">f</a><A HREF="http://search.lycos.com/adv.asp" target="_blank">l</A><a href="http://www.altavista.com/web/text?" target="_blank">a</a><a href=http://groups.google.com/advanced_group_search target="_blank">n</a><a href="http://www.google.com/advanced_search" target="_blank">g</a><A HREF="http://www.infospace.com/info.xcite/" target="_blank">e</a><a href="http://web.archive.org/collections/web/advanced.html" target="_blank">&nbsp;</a><a href="http://fravia.2113.ch/phplab/scroll.htm" target="_blank">o</a><A HREF="ftp.htm" target="_blank">f</a><A HREF="http://www.wisenut.com/" target="_blank">&nbsp;</a><A HREF="http://search.msn.com/advanced.asp" target="_blank">m</a><A HREF="http://search.yahoo.com/web/advanced" target="_blank">y</a><A HREF="http://s.teoma.com/AdvancedSearch?q=" target="_blank">t</a><A HREF="http://www.hotbot.com/adv.asp?prov=Inktomi&tab=web" target="_blank">h</a><a href="http://a9.com/-/search/advSearch">&nbsp;</a>
+
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

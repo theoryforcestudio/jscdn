@@ -1,0 +1,474 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>rea_kane.htm: Fravia's web-searching lore (�`�.�(�`�.� Eliminating the evil real player �.���)�.���)</title>
+<!-- web searching lore: pagename end --> <!--<meta name="ROBOTS" content="NOINDEX">-->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952 - 2032 fravia+">
+
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head> <body bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Eliminating the evil real player ~</font>
+<!-- fravia's searching lore: bigtitle, end --><br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="basic.htm"><img SRC="images/basipet.jpg" ALT="to basic" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+</th></tr></table><br>
+<!-- --------------------|||||------------->
+Published in <font color=blue>November</font> 2002 &nbsp; <font color=gray>(Version 0.07: October 2003)</font>
+<!-- --------------------^^^^^------------->
+<br>
+<!-- internet searching techniques: imageheader end --></center><!-- fravia's searching lore: bigtitle, begin -->
+<br><center><font size=+2>Eliminating the evil real player<br>by Kane
+</font>
+<br>
+<br>
+<a href="rea_kane.htm#smallu">small update</a> by Kane
+<br>  
+<br>
+<a href="rea_kane.htm#stile1">Stiletto's observations</a>
+         &nbsp;&nbsp; 
+<a href="rea_kane.htm#frav1">Fravia's observations 1</a> &nbsp;&nbsp;    
+<a href="rea_kane.htm#frav2">Fravia's observations 2</a>
+<br>  
+<a href="rea_kane.htm#suppe">Windows Media Player is evil: the "Supercookie"</a>
+<br>
+  <br>
+(Awaiting more input /feedback / suggestions / critics&nbsp;:-)
+<br>
+<hr> &nbsp;<i>'twas about time. I will repeat it: it was about time that some reverser would 
+'solve' the problems caused by the spyware known as Real player. Here is the solution. Read 
+and enjoy (and please consider that this is still in fieri)
+</i>&nbsp;
+</center>
+<br><font size=+1>
+<hr>    
+
+<font size=+2>Beginning</font> <i>(all great snowballs begin small)</i><br><hr>
+
+  <b>Real Player/Real One</b>&nbsp;<font size=-2>(07/11/02&nbsp;14:59:28)</font>
+<ul>
+I've recently started having to use a lot of .RM files, which brings along that nasty virus called RealPlayer or even nastier RealOne, other than being insanely bloated and degrading your privacy, I just plain don't like not being able to play files in any media player I damn well please :)
+<br>
+<br>So I went looking for solutions to my virus problem, I found two which work well.
+<br>
+<br>Firstly
+<br>tinra
+<br>http://evc.to/tinra/ (official site, down at the moment)
+<br>http://www.geocities.com/tinra04/ (so we'll use a mirror)
+<br>
+<br>tinra converts .RM into raw .AVI so you can compress it into any format you choose. Well thats a partial solution but too time consuming for my needs, you also still have to have real player installed to convert, and thats without mentioning tinra's other limitations.
+<br>
+<br>Secondly 
+<br>Media Player Classic
+<br>http://vobsub.edensrising.com/mpc.php
+<br>
+<br>Can kill two birds with one stone with this one, get rid of windows media player (reasons why here http://www.petri.co.il/wmp_spyware.htm) and also get rid of the need to run real player (although yet again it still has to be installed).
+<br>
+<br>First bootup of a .RM file in MPC and there it goes, playing flawlessly, other than a few problems with tracking it works on all the .RMs i tried it on. Ok so now we have a partial solution, after turning off all the blatantly spying options in real player, adding it to kerio personal firewalls not allowed to connect out filter and killing that annoying systray startup agent, we have a nice functional way to play .RMs without using realplayer. That might be fine for some people but i'm picky :)
+<br>
+<br>Maybe, just maybe,we don't need ALL of real player, maybe its a codec hiding someplace in that mess called c:\. So I break out our old friends filemon and regmon, set a filter on MPC and watch what it opens when its playing a .RM, i'll spare you the long output. 
+<br>
+<br>Bingo, there we go, it doesn't touch the real.exe, just some registry entries and a few DLLs. After a bit of trial and error, heres the list i've got that works without having any *.exe from realplayer installed.
+<br>
+<br>DLL list
+<br><a href="realDLLlist.txt">realDLLlist.txt</a>
+<br>
+<br>Registry Entrys
+<br><a href="Real.reg">Real.reg</a>
+<br>
+<br>Now with a simple .bat file you could have it install all the needed files easily. Something like this 
+<br>
+<br>----------------------- cut here --------------
+<br>@echo off
+<br>
+<br>xcopy /EYH <font color=blue>nameoffolderwithdlls</font> "C:\Program Files\Common Files\Real\"
+<br>copy /Y pncrt.dll %<font color=blue>WINDIR</font>%\System32\
+<br>regedit -s Real.reg
+<br>----------------------- cut here --------------
+<br>
+<br>This was all done on a windows 2000 machine, 
+I have no other windows OS available to test it on, so it might not work on 9x/XP etc.
+<br>   <br></font>
+Kane (<font color=blue>kane [AT] darkflux [DOT] org</font>, november 2002)
+<br>
+ <hr>
+<font size=+2>Further observations</font> <i>(snowball is getting bigger, and quicker&nbsp;:-)</i><br><hr>
+   <br><font size=+1>
+Ok, now let's have a look... for win 98:<br>
+You already have realplayer installed, so just delete the whole real subdirectory 
+ with all the bin files in <font color=blue>c:/program files</font>, 
+screw real once for all!
+<br> Just keep the whole bangazz with all subdirectories in <font color=blue>C:\Program Files\Common Files\Real\</font>, but make sure 
+you delete the Update directory! That's it! Bie bie Real player, hope you wont feel too lonely 
+down the drain, you commercial vermine, in fact you'll be <a href="malware.htm">in good company</a>!
+     <br><br>  Gabest's creation, 
+Media Player Classic, could -I fear- disappear from the web, 
+so here you have the relevant copies:
+<br>
+         <a href="zipped/mpc2kxp6465.zip">../zipped/mpc2kxp6465.zip</a> (896001 bytes, for win 2000 and XP)
+<br>
+<a href="zipped/mpc98me6405.rar">../zipped/mpc98me6405.rar</a> (366318, for win 98). 
+    <br>You should by all means thank Gabest for this <a href="http://vobsub.edensrising.com/mpc.php">http://vobsub.edensrising.com/mpc.php</a>, 
+or, more directly, <a href="http://order.kagi.com/cgi-bin/r1.cgi?N4A&&">http://order.kagi.com/cgi-bin/r1.cgi?N4A&&</a> 
+  <hr>           </font> 
+
+
+
+
+
+
+<br> <a name="smallu"></a>
+ <hr>
+<font size=+2>Small update</font> <i>(automating the elimination)</i><br><hr>
+   <br><font size=+1><br><br>
+
+Step 1 <br>
+<a href="zipped/unreal.zip">unreal.zip</a>   
+        Real reg + unreal.bat 
+<font size=-1>
+<pre>
+@echo off
+
+rmdir /S /Q "C:\Program Files\Real"
+rmdir /S /Q "C:\Program Files\Common Files\Real\Visualizations"
+rmdir /S /Q "C:\Program Files\Common Files\Real\Update_OB"
+del /S /Q   "C:\Program Files\Common Files\Real\Common\*DB*"
+xcopy /EYH  "C:\Program Files\Common Files\Real" "C:\Program Files\Common Files\unreal\"
+rmdir /S /Q "C:\Program Files\Common Files\Real"
+regedit -s Real.reg
+</pre>   
+</font>
+
+
+Unzip both files to the same dir and run unreal.bat <br>
+(i shouldn't have to tell you the dangers of running batch files when 
+you don't know what they do, so open it in a text editor first so YOU know what 
+its doing) <br>
+it will automatically remove all 
+the crap from a default realone install, and move them to its own dir named 
+unreal. realsched.exe might not delete if realone has ran at 
+some point since your last reboot, if not, reboot after running 
+the batch file and then remove it manually. 
+<br><br>
+Step 2 <br>
+unreal_clean.zip 
+<br> 
+      <a href="zipped/unreal_clean.zip">unreal_clean.zip</a>   <br>
+        Real.reg + unreal_clean.bat 
+<br><br>
+unreal_clean.bat:
+   <pre>
+@echo off
+
+xcopy /EYH DLLs "C:\Program Files\Common Files\unreal\"
+copy /Y pncrt.dll %WINDIR%\System32\
+regedit -s Real.reg     
+
+</prE>
+This is to be used after a clean install of windows, 
+but firstly you'll have to have done step 1. Now make a directory on 
+your hard drive, something like <br>
+"<font color=blue>C:\unreal\</font>" <br>
+and copy all the directorys out of <br>
+"<font color=blue>C:\Program Files\Common Files\unreal\</font>" <br>
+into <br>
+"<font color=blue>C:\unreal\DLLs\</font>" <br>
+next, copy <br>
+"<font color=blue>C:\WINNT\system32\pncrt.dll</font>" <br>
+into <br>
+"<font color=blue>C:\unreal\</font>" <br>
+and finally, unzip the 2 files in unreal_clean.zip into <br>
+"<font color=blue>C:\unreal</font>" <br>
+<br><br>
+backup "<font color=blue>C:\unreal</font>" somewhere safe, 
+and next time you install windows just run the install.bat. 
+Thats the end of having to install realone ever again (or at 
+least till theevil ones get wise to this) :) 
+<br><br>
+Yet again this was all on a win2k box, its up to others 
+to put this technique onto the other winOS. 
+<br><br>
+And with that i'm off to do a reinstall of win2k :) <br>
+I really should ghost/image the hdd so i don't have 
+to reinstall so much<br><br>
+   
+
+</font>
+
+<a name="stile1"></a>
+<font size=+2>Stiletto's observations</font> <i>(snowball is getting even bigger, and even quicker&nbsp;:-)</i><br><hr>
+   <br>     <font size=+1>
+<b>Comments</b>&nbsp;<font size=-2>(08/11/02&nbsp;20:34:59)</font>
+<ul>
+All these comments are made on Kane's <a href="rea_kane.htm#smallu">small update</a>.
+<br><br>
+<br>UNREAL.BAT and INSTALL.BAT:
+<br>On Windows 2000/XP, the /S switch on RMDIR and DEL is for deleting the entire directory, no matter if it is empty or not. The /Q switch will skip the prompt generated by the /S switch.
+<br>
+<br>On Windows 98SE, there are no /S or /Q switches on either RMDIR and DEL. RMDIR defaults to not deleting the directory if there's stuff in it, and there's no switch to change that. Thus, you need to use DELTREE. The /Y switch suppresses prompting to confirm you want to delete the subdirectory.
+<br>
+<br>DEL defaults to removing the files without question. So you don't need a /S or /Q. You can FORCE it to prompt by running DEL with a /P.
+<br>
+<br>On xcopy (and most other DOS programs), /EYH won't work. You need to put spaces between the switches like so: "/E /Y /H".
+<br>
+<br>Thus, on Windows 98:
+<br>change "rmdir /S /Q" to "deltree /Y"
+<br>change "del /S /Q" to "del"
+<br>change "xcopy /EYH" to "xcopy /E /Y /H"
+<br>
+<br>But there must be some way to unify both batch files.
+<br>
+<br>Additionally, when I tested my edited batch, it removed everything but:
+<br>(folder) C:\Program Files\Common Files\Real
+<br>(folder) C:\Program Files\Common Files\Real\Common
+<br>(folder) C:\Program Files\Common Files\Real\Update_OB
+<br>(file)   C:\Program Files\Common Files\Real\Update_OB\evntsvc.exe
+<br>I don't know why. Otherwise, it's all gone.
+<br>
+<br>INSTALL.BAT worked fine.
+<br>
+<br>Also, in REAL.REG:
+<br>on Windows 98 it must be headed "REGEDIT4" instead of "Windows Registry Editor Version 5.00"
+<br> [HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\UserAddress]
+<br>@="exploitation@sucks.com" did not work. I don't know why.
+<br>
+<br>My Comments: This is by far NOT THE BEST way of removing RealPlayer - 
+it left bits and pieces all through the registry and likely the operating system. 
+You'd do better to completely monitor the install process and uninstall process 
+at least once, and work out by hand the registry entries that are necessary for 
+a program to be able to play RealAudio files. I don't think we're quite 
+there yet, there should be more to remove. It's just codecs, I mean... 
+We should unregister them, copy them to another folder, reregister them - 
+the monitored install process should tell you how.
+<br>
+<br>Also, I didn't install my player alternative beforehand. When Windows 
+goes to look for the player for RM files - Oh no&#33; It's not there&#33; So 
+I go install Media Player Classic as a solution mentioned by Kane and launch it. 
+I try to open my Noam Chomsky RM file obtained from the site he mentioned and... 
+OH NO&#33; RealMedia ERROR&#33; (not sure why) File associations should be taken 
+care of in a patch like this too.
+<br>
+<br>I'd reboot to make sure all the changes have been applied, but on this 
+machine, I can't. (http://www.deepfreezeusa.com)
+<br>
+<br>Fravia+, this RealPlayer "hack" is still very beta and IMHO doesn't deserve 
+a full-fledged essay yet. We need to "nice" it all up - make a .MSI installation 
+file or use another installer that will work on both Win9x/NT, get it to remove all 
+registry entries for RealPlayer/RealOne, only add back the ones that are necessary for 
+RealAudio (and RealVideo?) playback. (That's beyond my capacity, however.) And a lot 
+more research needs to be put into alternative players, and how they operate. IMHO 
+you should find one that works on many if not all of the Windows OS's, is free and 
+open-source. There are some talented reversers and programmers on these boards, I'm 
+sure they'll think of something. ;)
+<br>
+</ul>
+Stiletto<br>
+
+<hr>
+ </font>
+
+<a name="frav1"></a>
+<font size=+2>Fravia's observations (1)</font> <br><hr>
+   <br>     <font size=+1>
+<i>I (fravia+) do not agree: these things start rolling --if they ever do-- 
+ through sudden movements, like snow-avalanches :-) Therefore there 
+is no need to fear that an 'incomplete' (coz it will always be "incomplete") solution 
+will do any damage, 
+on the contrary (imho) it will help us.
+<br>
+So we must get onwards with what we have... alas! we do 
+not have yet "<font color=blue>a lot 
+more research needs... into alternative players</font>". Wish we had. If anybody has it (does 
+it), please send it over...<br><br>
+"<font color=blue>make a .MSI installation 
+file</font>", says Stiletto... of course. But in the mean time <font color=blue>our</font> 
+(read <font color=blue>Kane's</font>) 
+silly simple hack works wonders... why should'nt we use / spread it?    And I'm sure 
+that readers that found their way to this page will be able to finetune a dos batch file.
+<br><br>
+"<font color=blue>it left bits and pieces all through the registry 
+and likely the operating system</font>" &nbsp; <i>It does not wonder me in  the least... 
+so what?
+ As long as these bits and pieces are DEAD BEEF, I could not care less. Let's invest 
+our precious time in destroying our enemies' mischiefs, not exclusively 
+on 'purity' tasks. This said, 
+if anyone does develop a 'neater' solution, by all means, send it over! 
+But I would not (personally, 
+and I may be wrong) give to 'cleaning' a bigger priority than to 'solving'...   
+<br><br>
+     What I mean is that we have all been annoyed by real player for a long time, and 
+simply by <font color=blue>1</font>. deleting it, <font color=blue>2</font>. keeping its 
+codecs, <font color=blue>3</font>. cleaning as much as we can 
+its "left behind mess" 
+and <font color=blue>4</font>. using Gabest's Media Player Classic instead 
+of Real, we move a long way, imo, towards a real 
+player free world&nbsp;:-)
+
+<br><br>
+And no, thanks, their <a href=" http://www.helixcommunity.org ">helix</a> <a href="http://slashdot.org/article.pl?sid=02/07/22/1648257&mode=thread&tid=126">source 
+code offers</a> still sound bogus to me, coming from people 
+that practicized large-scale spywaring, yet, by Jupiter! If they 
+really go open source we'll re-start using their products, maybe.
+</i> </i>
+<hr> 
+ </font>
+
+<a name="frav2"></a>
+<font size=+2>Fravia's observations (2)</font> <i></i><br><hr>
+   <br>     <font size=+1>    
+  Better be careful when experimenting with this stuff. Like putting your hands in a hornet nest. 
+<br>
+My first impression is that the very moment you install the new huge   RealOnePlayerV2GOLD.exe (that 
+most sites will link you to as soon as you try to download <u>any</u> real player's version), it will 
+screw -once uninstalled- your windozian register (and box) so that <u>you will not 
+be allowed any more to install a previous 
+version of it</u>. At least I began getting C++ error messages and system crashes, after having 
+deinstalled it (thoroughly, I thought), on a win98 box, when trying to install Real 8.1 (not realone).
+<br>
+I noticed that when installing realone plays <i>inter alia</i> with following files:<pre>     
+C:\WINDOWS\HISTORY\DESKTOP.INI <font color=blue>(quite interesting <i>per se</i>&nbsp;:-)</font>
+C:\PROGRAM FILES\DESKTOP.INI <font color=blue>(have a look&nbsp;:-)</font>
+C:\WINDOWS\TEMPORARY INTERNET FILES\CONTENT.IE5\INDEX.DAT 
+C:\WINDOWS\HISTORY\HISTORY.IE5\INDEX.DAT 
+C:\WINDOWS\COOKIES\INDEX.DAT 
+C:\WINDOWS\SYSTEM\STDOLE2.TLB
+C:\WINDOWS\SYSTEM\MSHTML.TLB  
+C:\WINDOWS\SYSTEM\WININET.DLL
+C:\WINDOWS\SYSTEM\OLE32.DLL 
+C:\WINDOWS\SYSTEM\MSVCRT.DLL
+C:\WINDOWS\SYSTEM\JSCRIPT.DLL
+C:\WINDOWS\SYSTEM\SHDOCVW.DLL             
+C:\WINDOWS\SYSTEM\SHFOLDER.DLL
+C:\WINDOWS\SYSTEM\SHLWAPI.DLL		
+C:\WINDOWS\COOKIES\INDEX.DAT			
+</pre>My impression is that <font color=blue>if</font> you do happen  to have 
+installed recent versions of Real Player 
+(8.1 or realone) <font color=blue>then</font> 
+you better <ol><li>
+uninstall through its uninstaller,
+</li><li> 
+check per hand that everything disappeared (it will have not),  
+deleting what's still there  if needs be
+</li><li>
+check with Jouni Vuorio's <a href="zipped/regcle34.zip">regcleaner</a>  that all entries 
+have really disappeared, uninstalling what's still there  if needs be
+ </li><li>
+reinstall an older version for instance, [<a href="zipped/realplayer8basicSetup.exe">realplayer8basicSetup.exe</a>   
+5026304 bytes, Real Player 8 basic (win 32) Build 6.0.9.584] This was a version you could 
+still (try to) 
+control when phoning home... give up any such hope with the more recent ones&nbsp;:-(
+    </li><li>
+check that everything ("modern" rm files) works with realplayer 8 basic
+ </li><li>
+check that everything ("modern" rm files) works with Gabest's  Media Player Classic
+ </li><li>
+uninstall real player (keeping the codecs & co, see essays above)<br>
+If you want to be "quick and dirty" ('ts not very professional, <i>zugegeben</i>,  but it works for simpletons 
+ and, hey Stiletto! it  screws real player enough&nbsp;:-)<br>
+You just delete EVERYTHING in <br><font color=blue>C:\Program Files\real</font><br>
+You just <u>keep</u> the existing subdirectories codecs, plugins and commons inside <br><font color=blue>C:\Program Files\Common Files\REAL</font>
+ </li><li>
+cross your fingers, restart and enjoy&nbsp;:-)
+ </li></ol>
+    
+Ha! Science! What would not we do for thee!
+<br>
+&nbsp;:-)
+</font>
+      
+<hr>
+<a name="suppe"></a>
+
+<font size=+2>Windows Media Player is evil: the "Supercookie" </font> <i></i><br><hr>
+   <br>     <font size=+1>  
+    Maybe you did not know it, but every time it installs,  
+this Microsoft's malware assign a unique ID number in the form of a GUID 
+to the player. This ID number is stored in the Windows registry. 
+The ActiveX interface to the Windows Media Player allows any JavaScript 
+Program to retrieve the ID number using the property "ClientID".   
+<br>
+Here is your own one (Opera wont show it: you will need a stupid insecure browser to see it, 
+with the "WMP plugin" installed. 
+Remember, however that zombies -mostly- browse happily around with their MSIE :-)
+<br> <br><center>
+<a href="supercookie.htm" target="_blank">click here</a>
+        </center>
+</script>
+<br>Of course, once a JavaScript program fetches 
+the ID number, this info 
+can be gathered appending it to the URL of a Webbug 
+or it can be stored in a normal cookie.   Either case you 
+have been tagged, courtesy of Microsoft.    
+<br>
+In the most recent version of the wmp, Microsoft graciously allows 
+users to uncheck the new WMP option "Allow Internet sites to uniquely identify 
+your player"... if users manage to find it. 
+Note that in the previous versions there was/is NO WAY to avoid 
+this malware tracking.
+<hr>
+<pre>
+          ~ Bibliography ~ Links ~
+
+Real Time Streaming Protocol: 
+<a href="http://www.rtsp.org/">http://www.rtsp.org/</a> 
+ 
+Maillists:
+<a href="http://online.securityfocus.com/archive/1">BugTraq</a> and <a href="http://www.ntbugtraq.com/">NTBugTraq</a> mailing lists
+
+Other interesting places:  
+<a href="http://www.xmms.org/">http://www.xmms.org/</a> 
+<a href="http://www.computerbytesman.com/index.htm">http://www.computerbytesman.com/index.htm</a>
+<a href="http://forum.xmms.org/">http://forum.xmms.org/</a>
+<a href="http://www.xiph.org/ogg/vorbis/">http://www.xiph.org/ogg/vorbis/</a>
+<a href="http://www.icecast.org/about.html">http://www.icecast.org/about.html</a>
+<a href="http://www.angrycoffee.com/tutorials/mp3/index.html#toolbox">http://www.angrycoffee.com/tutorials/mp3/index.html#toolbox</a>
+
+</pre>
+<!--         codes you can used for experimenting purposes
+Real player plus                       0094-32-4766
+Real Player G2 Plus1.1 v6.0.0.360      1010116160
+Real Player G2 6.0.6.99                0094-32-4766
+Real Player Basic V7.0                 0094-32-4766 
+Real Player 7 Plus ?                   s/n: 0600-16-1010 or 1610-16-0000
+Real Player Plus V7.0 Retail           email: home@home.com  sn#: 0429-01-6260
+Real Player 8 Plus beta                s/n: 1116-01-1060 or 0444-90-4466
+Realplay 8 plus                        1356-04-4068
+RealPlayer V8.0 Basic Build 6.0.9.380  0094-32-4766
+RealProducer Plus V8.5                 212-08976-3639  or  212-09483-1266  -->
+
+<br>
+<center>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><a href="basic.htm"><img SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</font></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</center>
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>teport_3.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ teport_2.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to malware"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Teleport Pro V1.29 (Build 1107)&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Faulpelz<BR></FONT>published at fravia's searchlores in
+  January 2001<br>
+  <hr width=44%>Slightly edited by fravia+<hr width=44%></center>
+  <hr>
+  See also Noos' <a href="noos_tel.htm">Delving deeper into Teleport Pro 1.29</a> (October 2000) and 
+  Faulpelz's <a href="teport_2.htm">Teleport Pro 1.29, malware galore</a> which is 
+  replaced and completed by 
+  this essay.
+  <hr>
+    
+  <br><center>
+ <font size=+3>&quot;Teleport Pro V1.29 (Build 1107)&quot;<bR>
+  </font>
+    <font size=+1>
+  <br>by Faulpelz<BR></center><P> 
+    </font><font size="3">
+TARGET: Teleport Pro V1.29 (Build 1107)<br>
+<p>
+After reading NOOS essay I re-checked my findings today (late, but who cares...)<br>
+First I have to apologize for my 'false' (not so false at all) warning.<br>
+Everything what Noos wrote in <a href="noos_tel.htm">Delving deeper into Teleport Pro 1.29</a> 
+(October 2000) was correct, so I asked Fravia+ to remove my old essay.<br>
+I was a little bit to 'voreilig' - sorry guys... Anyway, I want to made some<br>
+additions to Noos's essay:<br>
+<p>
+1)<br>
+TENMAX does not retrieve any data about you (except your IP) , but there are several 
+hidden triggers inside the code i.e. look at this:<br>
+<p>
+:0041A110 50                      push eax<br>
+:0041A111 8D4DEC                  lea ecx, dword ptr [ebp-14]<br>   
+:0041A114 E89267FFFF              call 004108AB<br>                      
+:0041A119 81382C010000            cmp dword ptr [eax], 0000012C      &lt;- 300 connections?<br>
+:0041A11F 0F8EF5010000            jle 0041A31A                       &lt;- skip if lower or equal<br>
+:0041A125 51                      push ecx<br>
+:0041A126 8B8E96100000            mov ecx, dword ptr [esi+00001096]<br>
+:0041A12C 8BC4                    mov eax, esp<br>
+:0041A12E 8965E4                  mov dword ptr [ebp-1C], esp<br>
+:0041A131 8908                    mov dword ptr [eax], ecx<br>
+:0041A133 8D45E4                  lea eax, dword ptr [ebp-1C]<br>
+:0041A136 50                      push eax<br>
+:0041A137 8D4DEC                  lea ecx, dword ptr [ebp-14]<br>
+:0041A13A E86C67FFFF              call 004108AB<br>
+:0041A13F 8138F0000000            cmp dword ptr [eax], 000000F0      &lt;- 240 connections?<br>
+:0041A145 0F8ECF010000            jle 0041A31A                       &lt;- skip if lower or equal<br>
+:0041A14B 389E95100000            cmp byte ptr [esi+00001095], bl<br>
+:0041A151 0F843D010000            je 0041A294                        &lt;- get update.txt from tenmax.com<br>
+<p>
+as you can see the 'call 4108AB' returns a counter in EAX so let's take a look at it.<br>
+<p>
+* Referenced by a CALL at Addresses:0040919E, :0040E748, :0040FC53, :0041089D<br>
+:00411B05, :00419F00, :0041A114, :0041A13A, :0041A34D, :0041A42C, :00426165<br>
+:004108AB 8B09                    mov ecx, dword ptr [ecx]<br>
+:004108AD 8B442404                mov eax, dword ptr [esp+04]<br>
+:004108B1 2B4C2408                sub ecx, dword ptr [esp+08]<br>
+:004108B5 8908                    mov dword ptr [eax], ecx<br>
+:004108B7 C20800                  ret 0008<br>
+   
+quite a lot references ...<br>
+<p>
+ok, now let's take a look at some of them...<br>
+<p>
+:0041A114 &lt;- do something (what?) after &gt;300 connections<br>
+<p>
+:0041A13A &lt;- get update.txt after &gt;240 connections<br>
+<p>
+:0041A34D &lt;- do something (what?) after &gt;60 connections<br>
+<p>
+Ok, some of the references are just to display the progress etc.,<br>
+but others should be worth to take a closer look at... Unfortunatly<br>
+I don't have the time to do this now. I just wanted to show you some<br>
+of the *obvious* triggers (if they would use random numbers it<br>
+wouldn't be SO obvious - maybe there are allready some random's inside...)<br>
+I am still not sure if Teleport is so harmless as it seems to be...<br>
+Take a closer look at ALL references, if you have the time! I bet that one<br>
+of those references is near to the 'registered?' check because AFAIK Teleport<br>
+has some internal fetch-limits, but as we don't want to cr*ck this target you<br>
+should ignore it (if you can ;) - we are just looking for sniffing actions...<br>
+<p>
+2)<br>
+We can remove these checks (to speed up Teleport) with an Hex-Editor<br>
+and modify the trigger-values to i.e 0xffffffff OR change the jle's<br>
+etc., but if you do it you have to remove the silly selfcheck of<br>
+Teleport:<br>
+<p>
+* Referenced by a (U)nconditional or (C)onditional Jump at Address:<br>
+|:0040B4C8(U)<br>
+|<br>
+:0040B4CC 3BFB                    cmp edi, ebx<br>
+:0040B4CE 5F                      pop edi<br>
+:0040B4CF 741C                    je 0040B4ED<br>
+:0040B4D1 A1EC964700              mov eax, dword ptr [004796EC]<br>
+:0040B4D6 3B30                    cmp esi, dword ptr [eax]<br>
+:0040B4D8 7413                    je 0040B4ED                       &lt;- i.e change '74' to 'EB' (jmps)<br>
+:0040B4DA 53                      push ebx                          (of course there are other ways, too)<br>
+:0040B4DB 53                      push ebx<br>
+<p>
+* Possible StringData Ref from Data Obj -&gt;&quot;This program has been altered, &quot;<br>
+                                        -&gt;&quot;possibly by a virus; program execution &quot;<br>
+                                        -&gt;&quot;will stop now.&quot;<br>
+                                  |<br>
+:0040B4DC 68FC964700              push 004796FC<br>
+:0040B4E1 E83BE20300              call 00449721<br>
+<p>
+<p>
+3)<br>
+If you don't want to modify Teleport, but want it to stop to connect to<br>
+tenmax.com (and try to retrieve the non-existing update.txt, giving them<br>
+your IP - btw: the tenmax server responses with 'access forbidden')<br>
+you can simply add &quot;127.0.0.1 <a href="https://searchlores.nickifaulk.com/redirect?http://www.tenmax.com" target="WMLink3A5A5109">www.tenmax.com&quot;</a> to your Windows HOSTS file...<br>
+   
+that's it... bye, faulpelz (thx to Noose for correcting me... ;)<br>
+-cut-<br>
+
+<br><font color=gray>- 'Faulpelz', January 2001</font><hr>
+ <bR></font>
+    <font size=+1><center> 
+    <a href= "malware.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 1952-2032: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>

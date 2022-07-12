@@ -1,0 +1,284 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>angela_1.htm:  (¯`·.¸ (¯`·.¸ Have you ever wondered... ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright (c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#c0c0c0" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC><center>
+<a href="antiadve.htm"><IMG SRC="images/bilivasi.jpg" alt="remobann.gif" 
+ALIGN=BOTTOM WIDTH=353 HEIGHT=124 BORDER=0 VSPACE=0 HSPACE=0></a><br>
+Back to the Antiadvertisement section<br>
+<hr>Courtesy of fravia's 
+<a href="http://www.searchlores.org">searchlores</A><hr></center>  
+
+<H1 ALIGN="CENTER">Down in the Gehenna of Internet ads connections</H1>
+<center>
+<i>The following reading is quite an eye-opener for those, among the readers, that 
+yet fail to realize how much bandwidth is hiddenly used by the commercial bastards in 
+order to blogger their PCs with advertsiement puke.<br>Enjoy the scary findings by Angela... 
+and remember this essay the next time you visit wired.
+</i>
+</center>
+<H2 ALIGN="CENTER">Have you <U>ever</U> wondered...</H2><center>
+By Angela Zaharia  (September 2001)
+<br><br>
+</center>
+Have you <U>ever</U> wondered...
+ what exactly happens when you go on the Internet, type ( or click on a) URL and access a Web site with your browser? How do all those images, text, multimedia special effects, (and let's not forget the ads here!) "magically" appear on your screen? It's all rather mysterious, isn't it? Wanna take a lookie-see "behind the scenes"? That is what this FAQ is all about.</P>
+
+First, let's mention a few truths here and throw in some hooks:<BR>
+Very few Web sites are actually profitable (making enough/or even <U>any</U> 
+money to be in the black). That is why most dot-com sites throw all 
+sorts of ads/Pop-Up banners/ combination at you. 
+<br>But wait, have you 
+<U>ever</U> noticed how all of those advertisments are on <U>top</U> of the page and are the first thing to appear (be d/loaded)? Have you ever monitored how many cookies an average Web site write onto your HD?  Ever heard of companies such as <B>DoubleClick</B>, <B>Aureate</B>, <B>Akamai</B> and if yes, do you know what they do to make money? When you use a search engine, do you ever wonder why all the links you find on page one are all major commercial companies' sites? Weren't you surprised even a little bit when advertisments tailor made to fit what you were looking at began to pop up on your screen? All these questions, eh?</P> 
+
+Here are the tools I will be using to unvail all those "secrets":<BR>
+Your ordinary Web browser (<B>Netscape</B>, and <U>not</U> InternetExplorer</B>), 
+<B>EditPad</B> (a freeware, same as Windoze's <B>NotePad</b>, but of-course it does a lot more), a good firewall such as <B>@Guard</B> (oldie but goodie), and my brain. I will use <B>@Guard</B>'s wonderful logging capabilites and <B>dashboard window</B> to monitor <U>all</U> the connections my Web browser will make in the course of my investigation, no matter how short-lived they may be, hehehe. The Web site I will be looking at is <A href=http://www.wired.com/news/technology target="_blank">http://www.wired.com/news/technology</A> from the WIRED magazine, a tech news site, which I read almost daily. For this session, I will be accepting <U>all</U> ads, cookies, Java, java-script ActiveX and everything else they throw at me. 
+I activate <B>@Guard</B>'s <B>dashboard window</B> and I am ready to begin!</P> 
+
+I start Netscape, click on the <A href=http://www.wired.com/news/technology target="_blank">http://www.wired.com/news/technology</A> link and <U>immediatly</U> begin checking my connections by refreshing the option on the <B>dashboard window</B>. Here is what appears:
+
+<PRE><B>
+Executable    State          Remote                 Local Port  Sent  Recivd
+===========   =============  =====================  ==========  ====  =====
+NETSCAPE.EXE  Connected/Out  a112.g.akamai.net:http myPC 2372   371   503
+NETSCAPE.EXE  Connected/Out  a112.g.akamai.net:http myPC 2373   368   582
+NETSCAPE.EXE  Connected/Out  lubid.lycos.com:http   myPC 2374   350   419
+</B></PRE>
+
+
+Hmmmm....Rather interesting, isn't it?? Let's go over each part and explain what we are looking at exactly:
+<UL><LI>NETSCAPE.EXE is the browser of course
+    <LI>Connected/Out means Netscape is reaching out and connecting right     now
+    <LI>Remote is the remote server Netscape is connected to (in this case      it's 2 servers named <B>a112.g.akamai.net</B> and <B>lubid.lycos.com</B> both using server port <B>http</B> (or <B>80</B>)) 
+    <LI>Local is my PC and Port is what port is being used on my PC (in this     case it's 3 ports-2372, 2373 and 2374)
+    <LI>Sent and Received are bytes sent by my PC and received by my PC</UL>
+
+ Anything jumping at you already? I sure hope so! I do <U>not</U> remember asking to connect to either <B>a112.g.akamai.net</B> or <B>lubid.lycos.com</B>, but to <A href=http://www.wired.com/news/technology target="_blank">http://www.wired.com/news/technology</A>. So who/what <U>are</U> those places and more importaintly <U>why</U> am I connecting to them and <U>why</U> am I sending and receiving data to/from them?? (small as it may be - 371 bytes is next to nothing)</P> 
+
+Oops, and since I told Netscape to: "Warn me before accepting any Cookies" I get this lovely message on mah screen:<BR>
+<UL><B>The server www.wired.com wishes to set a cookie that will automatically be send to any server in the domain wired.com. Tha name and value of the cookie are: p_uniqueid=7s42L2dLf04XY6gr3B. This cookie will persist untill Thu Dec 31 15:59:11 2037. Do you wish to allow the cookie to be set?"</B></UL>
+ 
+Wowo, this cookie will be "alive" on mah HD for a loooong time, won't it?? Not to worry, I love cookies and I eat them every day, making sure none are left on mah HD. So I click yes. But did you notice in the message how that cookie will be read by <U>any</u> 
+server that is part of Wired.com? 
+<br>We will come back to that part later.</P>
+ 
+Let's now save the <B>HTML</B> code of the Web page 
+and look at it. To do that in Netscape, I go to File-->Save 
+As (or Ctrl+S)-->Save. The name of the page is <B>technology.html</B>. 
+Oh, wait, while talking to you, another connection appears, so 
+let's hurry and look at it by refreshing the <B>dashboard window</B> again. 
+The new connection is "connection number 4":
+
+<PRE>
+Executable    State          Remote                 Local Port  Sent  Recivd
+===========   =============  =====================  ==========  ====  =====
+NETSCAPE.EXE  Connected/Out  a112.g.akamai.net:http myPC 2372   371   503
+NETSCAPE.EXE  Connected/Out  a112.g.akamai.net:http myPC 2373   368   582
+NETSCAPE.EXE  Connected/Out  lubid.lycos.com:http   myPC 2374   350   419
+NETSCAPE.EXE  Cnnctd/UNKNOWN local host             myPC        0     0
+</PRE>
+
+It stays active for a second and then its gone. Hehe, that was just an ad WIRED was trying to get by me, but I'm too clever for them and I simply threw it right back into their faces using my <B>Hosts</B> file. That's what <B>local host</B> means. I will talk about the <B>Hosts</B> file at the end of this FAQ. Let's continue studing. Using <B>EditPad</B>, I open the saved <B>HTML</B> code of <B>technology.html</B> and scroll down. AHA! There it is! Almost right at the top, in the &lt;!-- THIS IS THE NEW NAV BAR  --&gt;
+I see multiple references to both the mysterious <B>lycos</B> and <B>akamai</B>. Here are a few of them:<BR>
+<BR>
+<UL><B>
+&lt;a href="http://www.lycos.com/network/" target=_top&gt;
+and<BR> 
+&lt;img
+src="http://a1112.g.akamai.net/7/1112/492/03312000/static.wired.com/news/images/lycos_logo_3.gif" width=116 height=19 alt="The Lycos Network" border=0&gt;
+<BR>
+
+&lt;a href="http://www.lycos.com/"&gt;Lycos Home&lt;/a&gt;
+
+&lt;a href="http://www.lycos.com/sitemap.asp"&gt;
+&lt;a href="http://my.lycos.com/"&gt;My Lycos&lt;/a&gt;
+
+&lt;img src="http://a1112.g.akamai.net/7/1112&gt;</B></UL></P>
+
+The details of what all the above giberrish mean don't really matter; what's importaint is they include <B>lycos</B> and <B>akamai</B>. Let's just mark those obvious Web addresses: <A href=http://www.lycos.com/network/ target="_blank">http://www.lycos.com/network/</A>, <A href=http://www.lycos.com/ target="_blank">http://www.lycos.com/</A> and <a href=http://my.lycos.com/ target="_blank">http://my.lycos.com/</A>. So now it is begining to make <U>some</U> sense, doesn't it? Everytime I go to <A href=http://www.wired.com/news/technology target="_blank">http://www.wired.com/news/technology</A> I also connect to this bunch of other web sites too. <B>lycos.com</B> appears to be one of the the main servers for this domain. I have done some
+info digging previously and I know Wired is part of the large <B>lycos</B> corporation which also includes free web hostings such as <A href=http://www.tripod.lycos.com/ target="_blank">http://www.tripod.lycos.com/</A> and <A href=http://angelfire.lycos.com/ target="_blank">http://angelfire.lycos.com/</A>, search engines (<a href=http://hotbot.lycos.com/ target="_blank">http://hotbot.lycos.com/</a>)
+ and other various "free" Internet services such as free web pages building tools. Remember what my cookie said? It will be read by all the <B>lycos</B> domains, which means that if I ama frequent visitor to a few of their sites, they will have a rather detailed report of what I like to look at and what I like to do online just by tracking me with their cookies. Visiting those web sites, you can see they are international, with servers in just about every major country in the world. Spider webs indeed!</P>
+ 
+Now, let's  look at the <B>akamai</B> part and see how they fit into this puzzle:<BR>
+<BR>
+
+<UL><B>&lt;img
+src="http://a1112.g.akamai.net/7/1112/492/03312000/static.wired.com/news/images/<BR>lycos_logo_3.gif" width=116 height=19 alt="The Lycos Network" border=0&gt;</B></UL>
+
+
+<B>img src</B> means <B>image source</B>. Its Web address matches exactly what the <B>dashboard window</B> showed:
+
+<PRE>
+ Remote                 Local Port  Sent  Recivd
+ =====================  ==========  ====  =====
+ a112.g.akamai.net:http myPC 2372   371   503
+ a112.g.akamai.net:http myPC 2373   368   582
+</PRE>
+
+Reading the <B>HTML</B> <B>akamai</B> code further, it becomes clear what its function is. <B>Akamai</B> keeps Wired images on its servers and when we click on a Wired site, our browsers read the <B>HTML</B> code and also connect to the <B>akamai</B> server to get the images from there. Very interesting, isn't it? Bet you didn't know that, eh? <B>Akamai</B> hosts often-requested images and other data from hundreds of sites on their ring of servers scattered around the world. What's even more interesting, <B>Akamai</B> does all that "free of charge". How do you think they make their money, eh? I will leave that little puzzle for you to figure out.</P>
+
+Going thru the <B>HTML</B> code, I see numerous references to <B>akamai</B>. Just for the fun of it, I count them and come up with 36 times the <B>akamai</B> server got contacted to serve an image to me. Doing the same for <B>lycos</B>, I find 33 references.</P>
+
+Let's now look at my <B>@Guard</B>'s logs and see what extra info we can dig from them. Here is <B>@Guard</B>'s Web History Event Log, showing more sites my browser made connection with:</P>
+8/25/01 10:47:17.227 http://lubid.lycos.com/one.asp?site=wired.lycos.com&ord=825356<BR>
+8/25/01 10:46:56.857 http://www.wired.com/news/technology/</P>
+
+As you can see, the <B>?site=wired.lycos.com&ord=825356</B> matches the date, but I'm not sure what the rest means.</P> 
+
+Here is <B>@Guard</B>'s Web Connections Event Log, showing the sites my browser made connection with:<BR>
+<B>8/25/01 10:47:16.510 Connection:  www.wired.com: http  from  [myPC]: 2368,  283 bytes sent,  43118 bytes received,  22.053 elapsed time</B></P>
+
+2368 is the port my PC used, 283 were the bytes my PC sent and 43118 is the bytes my PC recieved</P>
+
+Most eye opening is the Privacy Event Log, showing just about every connection established while the Web page's data (the images) was being transfered:
+
+<UL><B>8/25/01 10:47:16.630 Allowed User-Agent: Mozilla/4.08 [en]  (Win95; U ;Nav) sent to http://lubid.lycos.com/one.asp?site=wired.lycos.com&ord=825356
+8/25/01 10:47:16.630 Blocked Referer: http://www.wired.com/news/technology/ sent to http://lubid.lycos.com/one.asp?site=wired.lycos.com&ord=825356
+8/25/01 10:47:16.623 Allowed User-Agent: Mozilla/4.08 [en]  (Win95; U ;Nav) sent to http://a112.g.akamai.net/7/1112/492/20010825/www.wired.com/news/images/mail2.gif
+8/25/01 10:47:16.623 Blocked Referer: http://www.wired.com/news/technology/ sent to http://a112.g.akamai.net/7/1112/492/20010825/www.wired.com/news/images/mail2.gif
+8/25/01 10:47:16.547 Allowed User-Agent: Mozilla/4.08 [en]  (Win95; U ;Nav) sent to http://a112.g.akamai.net/7/1112/492/20010825/www.wired.com/news/images/w_button.gif
+8/25/01 10:47:16.547 Blocked Referer: http://www.wired.com/news/technology/ sent to http://a112.g.akamai.net/7/1112/492/20010825/www.wired.com/news/images/w_button.gif
+8/25/01 10:46:54.478 Allowed User-Agent: Mozilla/4.08 [en]  (Win95; U ;Nav) sent to http://www.wired.com/news/technology/</B></UL>
+
+Opps, I guess I told <B>@Guard</B> to block a few connections, hehe. Oh well....</P>
+
+Now, let's try accessing again exactly the same site, but this time with  <B>@Guard</B> firewall turned off, just to see if anything different happens. I will again be using <B>Netscape</B>, so I can watch the connections as they appear on Netscape's <B>status bar</B> located along the lower bottom left side.</P>
+
+I go thru the same steps, and keep a constant eye on the bottom left part of <B>Netscape</B>. This time, along with the expected <B>akamai</B> and <B>lycos</B> I notice something different, something I haven't seen before:<BR>
+
+   
+<UL>Connect: Contacting Host: ln.doubleclick.net/ad...<BR>
+Transfering data from: http://ln.doubleclick.net/ad...
+<BR>
+
+Connect: Contacting Host: ln.doubleclick.net/ad...<BR>
+ Transfering data from: http://ln.doubleclick.net/ad...<BR>
+
+Connect: Contacting Host: ln.doubleclick.net/ad...<BR>
+Transfering data from: http://ln.doubleclick.net/ad...<BR>
+<BR>
+
+then:<BR>
+<BR>
+
+Connect: Contacting Host: ad.doubleclick.net/ad...<BR>
+Transfering data from: http://ad.doubleclick.net/ad...
+<BR>
+<BR>
+
+Connect: Contacting Host: ad.doubleclick.net/ad... <BR>
+Transfering data from: http://ad.doubleclick.net/ad...<BR>
+<BR>
+
+and finally:<BR>
+<BR>
+Connect: Contacting Host: m.doubleclick.net/ad...<BR>
+Transfering data from:<BR>
+Connect: Contacting Host: m.doubleclick.net/ad...<BR> 
+Transfering data from:<BR>
+Connect: Contacting Host: m.doubleclick.net/ad...<BR>
+ Transfering data from:<BR></UL>
+
+
+The connections last for 1, 2 seconds at most.</P>
+
+[<B>note* here is a secret I failed to mention before: I run on a painfully s-l-o-w 33,600 bps modem connection which helps me observe everything that happens in kinda of a slow motion.  People using 56K modems, DSL cable or T1 lines won't be able to see what <U>I</U> see because everything will happen very fast for them. This is one instance where slow speed pays off, hehe.</B>]</P> 
+
+ Intrigued, I go back to the <B>technology.html</B> file
+ and search for the <B>ln.doubleclick.net</B> string first and again, I find numerous references such as:
+
+<UL><B>
+&lt;a href="http://ln.doubleclick.net/jump/wn.ln/technology;h=net;sz=468x60;ptile=1;pos=1;<BR>
+!category=adult;ord=2215222830?" target=_top&gt;<BR>
+and 
+
+&lt;img height=60 SRC="http://ln.doubleclick.net/ad/wn.ln/technology;h=net;sz=468x60;ptile=1;pos=1;<BR>!category=adult;ord=2215222830?" &gt;</B></UL></P>
+
+How interesting! Besides connecting to <B>ln.doubleclick.net</B>, they also send images <B>&lt;img height=60 SRC=...</B> from their server <B>http://ln.doubleclick.net/ad/wn.ln</B> to my PC. Care to guess what kind of images those might be? Well, <B>doubleclick</B> are notorious for their ads! In fact, a big stink was raised last year when it was found out and how they began combining their ads with cookies, this tracking and making detailed reports on everyone who is stupid enough to even clicks on an ad. Just for the fun of it, I again count how many times my browser has to connect to <B>doubleclick.net</B> to receive all the images and this time it's <U>only</U> 7 times. Well, I guess  that's better than 36 times! Yeah, right!!</P>
+
+Let's play with the doubleclick ad now and see if we can learn anything interesting from it. On the Web page I run my mouse over it and carefully watch Netscape's <B>status bar</B>. Here is what I get:<BR>
+
+<UL><B>http://ln.doubleclick.net/click;3215854;0-0;1;3630096;1-468|60;0|0|0;;%3f<BR>http://music.lycos.com/features/pd....</B></UL> 
+and my browser runs into the end of the screen on the right side. Again that <B>lycos</B> appears, eh? Almost like its following us <U>everywhere</U> we wanna go! Wanna grab the whole string from the <B>HTML</B> code? Betcha million bux I can find it in there, hehe. No? Didnt think so either. What the hell I say, let's click on it, see what happens and where it will lead us. 
+Immediatly, I begin to see the same:<BR>
+ <B>Connect: Contacting Host: ln.doubleclick.net/ad...</B> as before, over and over and over again.
+<B>Transfering data from: http://ln.doubleclick.net/ad...</B>
+
+and I am send to <A href=http://music.lycos.com/features/pdiddy/ target="_blank">http://music.lycos.com/features/pdiddy/</A>. I guess <B>lycos</B> is in the music bizz too, selling/giving away free mp3, etc with that <B>music.lycos.com</B> web site.  I patiently wait untill the page has loaded, then since I don't care to get any pdiddy material, I use the Back button to go to the original Wired page. And the ad has now changed. Hmmm.....
+</P>
+Since I simply <U>love</U> punishment, I again click on the ad, and now I am sent to:</P>
+
+<UL><B>http://www-3.ibm.com/e-business/lp/innov3/innov3_flat.html?formId=15&P_Site=S03&<BR>
+P_Campaign=101C4E02&P_Creative=koustuv&c=Innovations_W3&n=koustuv&r=lycos
+<BR>&t=ad&P_Vanity=</B></UL>
+
+...and when I go back to Wired, I am <U>not</U> surprised to see that the ad has changed again...</P>
+Noticed all those <B>lycos</B> references all over the place in all the URL links? </P>
+
+Finally, I check the cookie file in 
+<B>C:\Program Files\Netscape\default\</B> folder. Here is the full text of the cookie I allowed in earlier:<BR>
+<BR>
+
+<UL><B>.lycos.com	TRUE	/	FALSE	2147403541	lubid	010000508BD395FD04483AB11D7000BD0D1400000000</B></UL></P>
+<BR>
+
+There are those <B>lycos</B> and <B>lubid</B> names yet again. Funny, eh? Lycos, lycos, lycos, lycos, everywhere, even if it was a Wired cookie!</P>
+
+Let's review everything we have learned so far:<BR>
+When we click on an ordinary Web page to access it, our browser reads the <B>HTML</B> code of that Web page and most likely it also opens numerous other short-lived back door connections to various other Web servers which contain the images and the ads for the original Web site. Usually, an average Web page will contact up to between 4 to 9 other servers and get data from them. The most common (the ones I know of) are <B>akamai</B> which "serves" images, <B>doubleclick</B> which servers both ads (in form of images) and cookies embedded into the ads. All this surreptious activity can easily be spotted with a good firewall and a bit of patience.</P>
+ 
+Are you starting to feel a little uncomfortable now, seeing all these "behind the scenes" activities happening just to read one lousy Web page??
+Personally, all that connecting to multiple servers and sending and receiving data from/to them makes me highly annoyed, because I know  <U>exactly</U> what <B>doubleclick</B> and <B>akamai</B> do. Numerous articles have already been written about doubleclick, so I don't have to repeat them here.</P>
+
+To summarize:<BR>
+ To survive the collapse of the NASDAQ, most commercial bastards on the Internet have been trying to find new various ways to make money. They throw as many ads at us as possible, and try to compile a very detailed use of all of our online activites using cookies, ads, web bugs, java, java-script and other known and unknown ways. Internet companies serving "content" (be it news, information, etc) get into contracts with sleaze bags such as doubleclick, akamai and others, and create <B>data bases</B> out of every bit of information they can squiize about 
+ <U>you and your</u> surfing habits.
+<br><br>
+Do you know how many people are monitoring, logging, classifing  <U>everything</U> you are doing online right now? Isn't privacy importaint to you? Personally, I say that anyone who monitors you without your permission is your enemy. I say we must fight them with everything we got including but not limited to: knowledge how our PCs and all of our software  work, a good firewall, and last but not least our brains!!</P>
+
+Don't kid yourself: Those clowns don't have any shame nor remourse. All the very juicy information they collect about you is later sold for a lot of money to different companies that may be interested in this kind of stuff (trust me, there are a lot). Go ahead and check what your favorite
+web page is doing behind your back. Betcha you will be surprised.</P>
+
+<BR>
+ <BR>
+<hr>
+</font>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="antiadve.htm"><img SRC="images/antiadv.gif" ALT="antiadv" BORDER=0 
+height=43 width=114 align=BOTTOM></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+<IMG align=center valign=center width=500 height=4
+SRC="images/dot_peri.gif"><bR><IMG align=center valign=center width=5
+height=40 SRC="images/dot_peri.gif">
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<IMG align=center valign=center width=5 height=40
+SRC="images/dot_peri.gif"><br><!-- how to search the web, by fravia+,
+signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

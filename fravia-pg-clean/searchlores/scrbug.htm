@@ -1,0 +1,330 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>scrbug.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ Scripting Bugs ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+
+<meta http-equiv="Content-Type"        content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"  content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description"               content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"                  content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"                    content="fravia+">
+<meta name="copyright"                 content="Copyright(c) 2000 fravia+">
+
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</style>
+</head>
+
+<body bgcolor="#cccccc" text=#001010 link=#0000ff alink=#00ff00 vlink=#3366cc>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Scripting Bugs ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" align=center><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th bgcolor="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#993300"><a href="essays.htm"><img src="images/basipet.jpg" alt="to essays" align=bottom width="118" height="68" border=0 vspace=0 hspace=0></a></th>
+<th bgcolor="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><font color="#993300" size="3">essays</font></th>
+</tr></table>
+<!-- next absolute link is necessary for mirrored copies of this document -->
+(Courtesy of fravia's <a href="http://www.searchlores.org/advanced.htm">advanced</a> searching lores)<br><br>
+<!-- internet searching techniques: imageheader end -->
+</center>
+
+<center>
+<font size=+2>
+(¯`·.¸&nbsp;Looking behind the curtains of server side scripts&nbsp;¸.·´¯)
+</font>
+<br>
+Based on information kindly submitted by <a href="mailto:pretoria@katamail.com">Entr0py</a>
+<br>
+published at fravia's searchlores in August 2000
+<br>
+</center>
+
+<!-- internet searching techniques: intro start -->
+<center><table width=65% border=0><tr><td><hr><i>
+A huge amount of web pages are generated dynamically by server side
+scripts, like ASP from Microsoft, PHP or Perl.
+As such, it should be quite obvious how much extra and unfiltered info
+you can get if you manage to look at the sources of these scripts.
+<br>
+You'll be able to fetch original URLs for articles, user names and passwords
+required to log to reserved areas, databases, more exploitable
+bugs to get even more stuff, like hidden directory listings, etc.
+</i><hr></td></tr></table></center>
+<!-- internet searching techniques: intro end -->
+
+<!-- internet searching strategies and hints content, start -->
+
+<br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6">
+<center><font size=+3>Microsoft's <font color="blue">Translate:f</font> bug</font></center>
+</td></tr></table></center><br>
+
+The first exploit is related to the severe "Translate:f" bug published 5th of June 2000.
+The full article should be available here:
+<a href="http://svet.namodro.cz/go/r-art.asp?id=1000817375">Translate:f - history, remedy and thoughts</a>.
+Otherwise check <a href="http://www.google.com/">google's</a> cache or other mirrors hosting this same article.
+<br>
+This is an easy method to retrieve source code of ASP scripts by simply
+including <font color="blue">Translate:f</font> in the headers forming the GET request,
+and by terminating the requested URL with a backslash.
+<br>
+By now you should realize the power of client side proxies like
+<a href="http://proxomitron.cjb.net/">Proxomitron</a> ;-)
+<br>
+<br>
+BTW, you should check out the reaction from Microsoft to this bug,
+especially if you buy and blindly trust in technology from
+"closed source preacher" Microsoft ;-)
+<br>
+<br>
+
+<table border=1 cellpadding=0 cellspacing=7 bgcolor="#c0c0c0"><tr><td>
+<table border=0 width=100% cellpadding=7 bgcolor="#cccccc">
+<tr><td colspan=2 align=center><font size="+2">The silent <i>evolution</i>
+of Microsoft's Knowledge Base</font>
+<br>based on Microsoft's Knowledge Bug Q256888
+</td></tr><tr><td align=center>
+<font size="+1">Last Reviewed: <a href="http://www.google.com/search?q=cache:support.microsoft.com/support/kb/articles/Q256/8/88.ASP">June 8, 2000</a></font><br>
+hosted on Google's cache
+</td><td align=center>
+<font size="+1">Last Reviewed: <a href="http://support.microsoft.com/support/kb/articles/Q256/8/88.ASP">August 16, 2000</a></font><br>
+links to Microsoft's <i>current</i> version
+</td></tr><tr><td align=center valign=top>
+<font size="+1">Internet Information Service Returns Source of
+Active Server Pages File When Request Contains Translate:f and Ends
+with a Backslash</font>
+</td><td align=center valign=top>
+<font size="+1">Internet Information Service may Return Source of
+Active Server Pages File</font>
+</td></tr><tr><td valign=top>
+<font size="+1">SYMPTOMS</font><br><br>
+A specially formatted GET request that includes a trailing backslash
+(\) and contains a "Translate: f" header may cause Internet
+Information Server (IIS) to return the contents of the Active Server
+Pages (ASP) page.
+</td><td valign=top>
+<font size="+1">SYMPTOMS</font><br><br>
+If an Internet Information Services (IIS) server receives a file
+request that contains a specialized header as well as one of several
+particular characters at the end, the expected ISAPI extension
+processing may not occur. The result is that the source code of the
+file would be sent to the browser.
+</td></tr></table></td></tr></table>
+<br>
+
+
+<br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6">
+<center><font size=+3>Fishing the web pond for include files</font></center>
+</td></tr></table></center><br>
+
+The next exploit is more generic and related to the information
+slip found on error messages of badly implemented server side scripts.
+This one can be applied to pages processed through ASP or PHP.<br>
+<br>
+Try feeding these script generated pages with extraneous or impossible input,
+and watch the reaction. If you are lucky, you'll get an error
+message similar to this example:<br>
+<i>Parse error on line XYZ in file /home/www/htdocs/<font color="blue">include/filter.inc</font></i>
+<br>
+In this case, just point your browser to
+<i>http://www.example.com/<font color="blue">include/filter.inc</font></i>
+and check if you're able to retrieve that file as simple text.
+Just to wet your appetite, here you'll see the standard behaviour when
+entering URLs pointing directly to these *.inc files.
+<a href="http://www.php.net/include/shared.inc">http://www.php.net/include/shared.inc</a>
+or
+<a href="http://www.php.net/include/site.inc">http://www.php.net/include/site.inc</a>
+<br>
+<br>
+A better approach is asking the many search engines for help,
+especially those with an active cache, like <a href="http://www.google.com/">google</a>.
+Tell them to show all pages that came up with a similar error message
+when the search robot visited those pages.
+<br>
+This feature/bug was found by Jerry Walsh as reported on this
+<a href="http://archives.neohapsis.com/archives/bugtraq/2000-02/0092.html">bugtraq article</a>
+<br>
+Try out this link, asking raging what it knows about the subject ;-)
+<br>
+<i>Hey, raging, tell me about <a href="http://ragingsearch.altavista.com/cgi-bin/query?q=%2B%22Microsoft+VBScript+runtime+error%22+%2B%22.inc%2C+%22&search=Search">+"Microsoft VBScript runtime error" +".inc, "</a></i>
+<br>
+<br>
+
+<br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6">
+<center><font size=+3>Avoiding leaks from include files</font></center>
+</td></tr></table></center><br>
+
+Information slipping out of include files can be stopped several
+different ways:
+<ol type=I>
+
+<li>
+Store the include files out of the directory branch accesible
+through http requests.<br>
+For example, if all your pages are served out of directory
+<font color="blue">/home/www/</font><font color="red">htdocs</font>
+then store the include files and other auxiliary private files
+in a parallel branch, like
+<font color="blue">/home/www/includes</font>
+but never in a subdirectory <u>under</u> htdocs, like
+<font color="blue">/home/www/</font><font color="red">htdocs/includes</font>
+
+<li>
+Rename all include files to *.php or *.asp, depending if you're
+using the PHP or ASP parser.<br>
+This doesn't solve everything. Include files are no longer listed,
+but they can be executed, thus, behaving perhaps in an unwanted or unexpected way.
+
+<li>
+Enable PHP or ASP parsing for *.inc include files. This has the
+same drawback as the previous patch.
+
+<li>
+Disable retrieval of include files. In the case of Apache web server,
+you can include the next statements in an .htaccess file to deny browser access:<br>
+<tt>&nbsp;&nbsp;&lt;Files *.inc&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Order allow,deny<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Deny from all<br>
+&nbsp;&nbsp;&lt;/Files&gt;</tt>
+
+<li>
+Disable error feedback to the user so as not to disclose any
+path information about include file locations.<br>
+In the case of PHP, this is done by inserting this next line at the
+beginning of all your scripts<br>
+<tt>&nbsp;&nbsp;error_report(0);</tt><br>
+Of course, as long as you're debugging, revert this to<br>
+<tt>&nbsp;&nbsp;error_report(63);</tt><br>
+Remember, security through obscurity should only be a last resort,
+as this is quite weak. Just look at the number of "Scr1pt&nbsp;&nbsp;|<1dd13s"
+trying out brute force scanners and other bandwidth hogging tools.
+</ol>
+
+<br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6">
+<center><font size=+3>Knocking on heaven's door</font></center>
+</td></tr></table></center><br>
+
+Here's an incomplete list of server side scripting features/bugs.
+Use it to protect your own site against these attacks, or
+to find what you're looking for ;-)
+<br>
+
+
+<br>
+<font size=+2>Regular expressions - too much power?</font>
+<br>
+<br>
+It's incredible what can be done with regular expressions.
+<br>
+At times, you can even remotely execute PHP4 scripting commands on the server ;-)
+<br>
+<br>
+Find out if there's a web form with regular expression search and replace fields, study
+the <a href="http://www.php.net/manual/function.preg-replace.php">preg_replace()</a>
+function from PHP4, and start digging into the remote server aided by the /e option.
+<br>
+
+
+<br>
+<font size=+2>Exploiting JavaScript frontend filters</font>
+<br>
+<br>
+Blindly trusting correct input from clients is a clear NO. That's the reason why
+many form based interactive web pages use hard coded limits in these forms, and JavaScript
+based filters to check for correct input.
+<br>
+Needless to say, any implementation of client-side filters can be disabled.
+So it is of utmost importance to also write input checking filters at the server side,
+doublechecking any client input.
+<br>
+Sadly, this security crosschecking is ignored by most webmasters, who blindly trust their
+JavaScript skills to keep lurkers away.
+<br>
+<br>
+If <b>you</b> are interested at specific server side scripts, disable all JavaScript filters
+and start feeding bogus information until you hit error messages from included files, which,
+in most cases, are not protected against direct leeching ;-)
+<br>
+
+
+<br>
+<font size=+2>Using the 127.0.0.1 backdoor</font>
+<br>
+<br>
+Most servers have restricted web pages, only available to a certain
+group, for example, for local users using IP address 127.0.0.1.
+<br>
+It would be nice to access these pages remotely, by disguising
+ourselves as local users, thus, replacing our true IP source
+address with the loopback address.
+<br>
+This can be done by abusing some weak server side scripts to request documents
+from the local domain.
+<br>
+In the case of PHP, the standard
+<a href="http://www.php.net/manual/function.fopen.php">fopen() function</a>
+also allows fetching files over HTTP or FTP protocols. It's just a matter
+of replacing a filename, perhaps encoded within a POST or GET request,
+with an interesting URL, for example, http://127.0.0.1/server-status.<br>
+<br>
+More information about the restricted server-status page, generated by
+the module mod_status, is available on the <a href="http://www.apache.org/docs/mod/mod_status.html">Apache site</a>.<br>
+<br>
+To avoid this kind of information leak, all scripts should check
+their parameters, rejecting everything suspicious.<br>
+Also, Access Control Lists should deny access to the loopback address
+wherever possible.
+<br>
+A last radical measure is to recompile PHP without socket support, thus, disabling this
+specific backdoor.
+<br>
+
+<br><center><table border=1 width=88%><tr><td bgcolor="#C6E7C6">
+<center><font size=+3>Final words</font></center>
+</td></tr></table></center><br>
+
+Server side scripts are a powerful extension to make the internet
+experience more interactive.
+<br>
+All web portals use them to track their visitors, to give them
+feedback forms, to set up messageboards, etc.
+<br>
+As powerful as these extensions are, they are also pretty sharp.
+So beware of cutting your own fingers with these tools!
+<br>
+Learn to use server side scripts wisely, checking once, twice, and
+many times all likely and unlikely input combinations from browser clients.<br>
+Don't trust anything running on client machines, no JavaScript,
+no length limits as in <font size="-1" color="blue">&lt;INPUT&nbsp;NAME="Key"&nbsp;TYPE="PASSWORD"&nbsp;<font color="red">MAXLENGTH</font>=10&gt;</font>,
+and no Java applets.<br>
+<br>
+New bugs are discovered on a daily basis, so be sure to check the
+relevant security forums (sp: fora, forii?) for updated material.<br>
+<br>
+Please send feedback to the <a href="mailto:phplab@xodox.org">folks</a> at the <a href="http://www.2113.ch/phplab/">PHPlab</a>.
+<br>
+
+<!-- internet searching strategies and hints content, end -->
+
+<!-- begin da closing bit, duh -->
+<center>
+<hr width=66%>
+<a href="essays.htm"><img src="images/basipet.jpg" alt="to essays" align=bottom width="118" height="68" border=0 vspace=0 hspace=0></a>
+<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue>]</font>, all rights reserved
+<!-- how to search the web, by fravia+, signet end -->
+</center>
+<!-- end da closing bit, duh -->
+</body>
+</html>

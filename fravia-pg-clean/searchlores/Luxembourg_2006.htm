@@ -1,0 +1,1429 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>Luxembourg_2006.htm: fravia's talk at the Hack.lu 2006</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This contribution to the Hack.lu 2006 conference in Luxembourg will attempt to demonstrate that you can find anything you want wherever and whenever and that google is quite spammed and censored and maybe NOT the best engine in order to search the web">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c), better known as 'Ugly Patent', 1952-2032 fravia+"><link href="https://searchlores.nickifaulk.com/styles-site.css" rel=stylesheet type=text/css>
+<STYLE type="text/css">
+
+  .submit { border: none; padding: 3px; background-color: #C6E7C6; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; text-transform: uppercase; text-align: center; text-decoration:none; display: inline; height: 20px; width: 110px;}
+
+</STYLE>
+</HEAD>
+<body alink="#00ff00" bgcolor="#cccccc" link="#0000ff" text="#001010" vlink="#3366cc">
+
+<!-- START OF DIV BLOG -->
+
+<A name="top"></A>
+<CENTER>
+<TABLE border="0" width="96%">
+  <TBODY>
+  <TR>
+    <TD colspan=2 align=left><FONT size=-1 align="left"><A target="_blank"  
+      href="index.html">portal.htm</A> &#8594; <a target="_blank" href="mines.htm">mines.htm</a>  &#8594;  Luxembourg_2006.htm</FONT> </CENTER>
+     <td width="4%">&nbsp;</td>
+    <TD width="48%" align=right>
+    <!--                           |||||||||||||||||||||||||| ------------------------->
+   <FONT size=-1>Version 0.33, Updated 21/<font color=blue>OCT</font>/2006</FONT></TD></TR>   
+   	 <TR>
+    <TD colspan=3>&nbsp;</td></tr>
+    <!--                           |||||||||||||||||||||||||| ------------------------->
+  <TR>
+    <TD colspan=2>
+      <CENTER><a href="mines.htm"><IMG src="images/Goodall_finding4.jpg" height=680 width=345></a> 
+    </CENTER></TD><td>&nbsp;</td><td><center>
+<font color=blue size=+3>How to find *anything*<br>underneath the commercial web</font><br>
+<bR><font size=+2>
+
+"Powersearching without google"</font><br><br><hr width=88%><br>
+<a target=_top href="http://www.searchlores.org">Fravia</a>'s talk 
+at the <a target=_top href="http://www.hack.lu/index.php/Main_Page">Hack.lu</a> 
+(Luxembourg, Luxembourg - 19-21 October 2006)<br>This file dwells @ 
+<a target=_top href="http://www.searchlores.org/Luxembourg_2006.htm">http://www.searchlores.org/Luxembourg_2006.htm</a>
+<br><bR>
+</center>
+<hr width=88%><font size=+1><center>
+<a href="Luxembourg_2006.htm#intro">Introduction</a> <bR>  
+  <a href="Luxembourg_2006.htm#recallprecision">Recall and Precision</a><br>
+  <a href="Luxembourg_2006.htm#analiz">Let's analyze some simple music queries</a><bR>
+
+<a href="Luxembourg_2006.htm#quarry">Today's targets (python & proximity galore)</a><br>    
+<a href="Luxembourg_2006.htm#findingthetargets">Finding the three targets</a> <br>  
+<a href="Luxembourg_2006.htm#potpourri">Potpourri searches</a> <br> 
+
+<a href="Luxembourg_2006.htm#quarrynog">Look ma, no google!</a><br> 
+ <a href="Luxembourg_2006.htm#else">Let's search elsewhere</a><br> 
+
+<a href="Luxembourg_2006.htm#goalo">Spamming (& "popularity")</a> <bR>
+
+<a href="Luxembourg_2006.htm#goalt">Conclusions </a><br>
+<a href="Luxembourg_2006.htm#fivee">Assignment</a> <br>
+<a href="Luxembourg_2006.htm#slides">Forms</a></td>
+   
+    </TR></TBODY></TABLE>
+      
+      
+<!-- internet searching strategies links begin -->
+
+
+
+
+<!-- a little script INTERNET SEARCHING  begin -->
+
+<br><br>  <font size=+1>
+<a name="intro"></a>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Introduction</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></center></td></tr></table>
+
+<br>
+<i>
+Well, I didn't know *<u>anything</u>* was already in the public domain! </i>
+
+<br><br>
+</center></center></center></center>
+
+Please excuse my English, and please excuse my excessive lack of political correctness. That -and my disdain for 
+all commercial aspects- is probably 
+also one of the reasons I'm the only one 
+here, together with my good old <a href="photos.htm#dange">friend</a>: The <a target=_top href="http://www.hack.lu/index.php/List#The_grugq">Grugq</a>, 
+who prefers to use a 
+pseudonym&nbsp;:-)<br>
+<br>Thank-you for inviting me. I kinda like Luxembourg: klein aber fein. 
+<br>
+I also like reversers, and crackers and hackers. Always did. Sons of the light: deserve some cosmic searching power.
+<bR>
+<br>
+We'll examine some 'alternative'  
+       searching techniques: On today's menu: music and books � la carte.<br>As a proof of concept we will search  
+        some <a href="Luxembourg_2006.htm#analiz">mp3s</a> and some 
+       <a href="Luxembourg_2006.htm#quarry">books</a> (today about the python programming language). 
+       <br> 
+       <br>Searching such simple targets (music and books) 
+       we will, maybe, demonstrate 
+      <ol type=a><li> that everything is on the web; 
+      </li><li> that you can  search rather effectively <u>without</u> using google; 
+      </li><li> that  some "alternative searching paths" can be quite useful for seekers.</li></ol>
+   
+       Of course our searches are not limited to just music and books. 
+       <br>Seekers can always find anything: whatever. Any image, any journal, any film, any software you fancy is somewhere
+       on the nethervoid at your disposal. <bR>
+       In fact <font color=blue>anything that may have been digitized</font> <u><b>is indeed</b></u> 
+       somewhere out there (one of the 'optimistic' laws of searching). <bR><br>
+       
+       <center><table border=1 width=86% cellpadding=4><tr><td>
+       Even more important is the fact 
+       that not only  "tangible" and "digitized" targets are available to anyone, 
+       but also  all kind of 
+        <u><font color=blue>solutions</font></u> are there, at your disposal. And I don't mean just messageboard solutions 
+        on -say- how to port a proprietary driver to GNU/Linux.<bR>
+        I mean real <u>concrete</u> solutions:  
+   <ul><li>
+        You want to counter a specific politician?<bR>  
+        Find out and document all his nasty deeds during the last 10 years. A little <a href="stalking.htm">stalking</a> and 
+      a moderate amount of searching skills are probably all you need to send him in Jail.</li><li> You want to 
+        counter and diminish those annoying ubiquitous advertisement panels?<bR>
+             Someone, somewhere has posted experiences, <a href="realicra/as_billi.htm">best practices</a> and ideas.</li><li>
+        You want to free once for all a nice square of your town from those stinking private cars?<bR>
+     Someone, somewhere has already done it. Find the stuff.</li></ul>Synergical cosmic power: 
+       Ideas, Methods, Techniques, Lines of attack, 
+       Tactics,  
+        Approaches, Strategies...<IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">  
+      
+      </td></tr></table></center> 
+      <br>A propos mp3 and books: <font color="#400080">a small caveat: Somebody  told me     long ago
+      -politely- that we should not download  songs or books that  are patented, or have not  yet 
+       been released in the public domain. OK. I can understand that,  as strange as it sounds</font> (because, silly me,
+        I  always understood copyright as 
+       the right to copy).
+        <bR>Anyway we will just have an innocent look at our targets <u>on line</u>. 
+        If your local political clowns forbid it, <u>don't download forbidden fruits</u>, please, (or if you do it,       
+        you should practice some basic <a href="noanon.htm">anonymity</a> precautions...<br>
+ <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13"> (Torpark, Ubuntu on USB ---> Casper Cow, wardriving and downloading...).
+
+<br><br>
+ Your browser (should be <a href="tuttiope.htm">Opera</a> btw) is of tantamount importance for searching purposes, 
+and can do wonders, if correctly trimmed...<br>
+<IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13"> (HOST file, Proxomitron...).
+        
+       
+<br><br>
+And now let's begin... 
+<br>
+<br>
+<br>         
+   <a name="recallprecision"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Recall and Precision</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><table><tR><td rowspan=2><center><font size=+2><font color="#000080">Recall</font>&nbsp;&nbsp;</fonT></td><td><i>
+<center>Really comprehensive retrieval... <td>&nbsp;</tD>
+<td><center> <i>...or just a few but very relevant data?</td><td rowspan=2><center><font size=+2>&nbsp;&nbsp;<font color="#000080">Precision</font></tD></tr><tr><td>
+<center><i>Almost everything but also a lot of junk... <td>&nbsp;</tD><td><center> <i>...or just a few mostly relevant results?</i></td></tr></table>
+<br><br> </center>
+
+
+
+The real problem -when searching- is not even anonymity and it is not even speed: it is the 
+<font color=blue>relevance</font>, 
+<font color=blue>coherence</font> and 
+<font color=blue>reliability</font> 
+of our searching results.<br><bR>In order to obtain such relevance, coherence and reliability you need  some sound
+<a href="evaluate.htm">evaluation</a> techniques, but  a more methodological approach to searching can help as well.<bR>
+Two important concepts you must be aware of, when searching, are those of <font color="#0000ff">RECALL</font> and 
+<font color="#0000ff">PRECISION</font> ("precision" is the accepted terminology, but "relevance" would probably be 
+a better term).
+<bR><bR>
+ <font color="#0000ff">Recall</font> is the ratio (%) of 
+		   the number of relevant records retrieved to the total number of <b><u>relevant</u></b> records that might exist 
+		   (hard to calculate how many might really exist, of course, but 
+		   we are just using indicative parameters).<bR> Hence recall is <u>relevant retrieved documents</u> / relevant documents.<bR>
+		  <br>
+<font color="#0000ff">Precision</font> (or "Relevance") is the ratio (%) of the number of relevant 
+		records retrieved to the total  
+		number of <b><u>all</u></b> (irrelevant and relevant) records retrieved (this might be calculated, anyway note that
+		in reality there is not such a clean "objective" distinction between relevant and irrelevant, a lot depends on your taste). 
+		<bR>Hence Precision is <u> retrieved documents</u> / relevant documents.<br>
+		   <br>
+		   Here two graphic attempts to explain this: in the  void of the <font color="#0000ff">irrelevant blue</font> results,  
+		   there are some  <font color="#ff0000">relevant red</font> results.<br>
+		   Different kind of queries, here imagined as a transparent layer, (but you can see some real life examples -for mp3 
+		   searching- <a href="Luxembourg_2006.htm#analiz">below</a>)  
+		   will give <u>either</u> recall <u>or</u> precision. <br><bR>
+		       <center>
+         <table border=0>
+         	<tR>
+         	<td><center><u>Broad</u> (<font color="#0000ff">Recall</font>) Query</td>
+         	<td>&nbsp; &nbsp; &nbsp;</td>
+        <td><center><u>Narrow</u> (<font color="#0000ff">Precision</font>)  Query</td></tr>
+         	<tR>
+         	<td><IMG src="images/precision7.jpg" height=300 width=300></td>
+         	<td>&nbsp; &nbsp; &nbsp;</td>
+        <td><IMG src="images/precision6.jpg" height=300 width=300></td></tr></table> </center>
+
+   <br>Add synonyms to your query (or use our <a href="synecdoc.htm">synecdochical searching method</a>) and your precision will suffer (but 
+   your recall will increase). Use a proximity operator (like the NEAR operator in altavista) and your precision  (may/will) increase (but also, 
+   of course, your 
+   recall will/might suffer).       <br>
+   There are differences between the <a href="main.htm">main</a> search engines as well: for instance google has a (slightly) higher precision than
+    yahoo, yahoo has a (slightly) higher recall than google. <br>
+   <bR> 
+    
+    
+    <br><table border="0" width=88%><tR><td><font size=+1>
+    	Also  always consider that the  <a href="main.htm">main</a> search engines DO NOT overlap too much and yet 
+    that they cover together (at best) only 1/4 of the web, 
+    this may be quite significant when deciding your search strategies.<br> 
+Many clueless zombies consider "searching the web" tantamount to digit one term inside google and then clicking enter.
+
+Such a simplistic approach is wrong, and not only for the "one-termness" of it.
+The real problem is that google <font color=blue>covers only a small part</fonT> of the web. 
+<bR> 
+In order to access a bigger part of it you will need to use techniques that go from <a href="stalking.htm">stalking</a> to <a href="luring.htm">social 
+engineering</a>, 
+through <a href="trolls.htm">trolling</a> and <a href="password.htm">passwords breaking</a>.</td><td> &nbsp; &nbsp; &nbsp;</tD><td align=right><center>
+<IMG SRC="images/searchenginescoverage.jpg" ALT="coverage" WIDTH="283" HEIGHT="283" ></tD></tR></table>  
+     <br><br>
+   <bR>Back to Recall and Precision: 
+   as a seeker, you must decide beforehand the aim of your search:
+   do you want to find everything on a given topic, or do you want just the most relevant texts? 
+   Or do you instead want <u>almost</u> everything? Or just <u>some</u> 
+   texts?<bR> 
+   This will determine what searching <a href="longtermsearching.htm">strategies</a> you'll have to use. 
+   Many search techniques 
+     may be used to gain either more recall or more precision (in fact there are even techniques that will 
+     allow you to increase BOTH, despite the fact that recall and precision are -usually- inversely related).  
+     <br><br>
+     This said, as the two graphics above point out, there's absolutely no way you can cover ALL relevant results, due to the fact that even 
+     using the best searching techniques (remember that 
+    the <a href="main.htm">main</a> search engines  cover just about a  
+     third of the indexed web) you will never be able to cover the whole web. <bR><br>
+     Our aim as seekers is to have BOTH precision and recall. We want (ideally) to retrieve everything that is relevant, 
+     and everything that has been retrieved should (ideally) be relevant. We'll now use some tricks  to (try to) do this.
+<br>
+<br>
+<br>         
+   <a name="analiz"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Let's analyze some simple music queries</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>
+Pulling some MP3-webbits out of the web</i> <bR>(a "<a href="rabbits.htm">Webbit</a>" is a "Querystring Rabbit" out of a magician's hat")
+<br><font size=+2>                                                               </CENTER><br><center><table border="1" width= 87% cellpadding=6><tr><td><center>
+    A quick list of the most important operators:<bR></font>
+              <font color="#0000ff">Yahoo operators:</font>
+              <br>
+              site: 
+          
+hostname: 
+link:
+linkdomain:
+(links that points to one domain) 
+url:
+    intitle: 
+inurl:
+(a specific keyword as part of indexed urls, 
+example: <a target=_top href="http://uk.search.yahoo.com/search?p=inurl%3Asearching&fr=FP-tab-web-t340&ei=UTF-8&meta=vc%3D">inurl:searching</a>) 
+<br><u>intitle & inurl</u> are VERY  
+important parameters... 
+<a href="nomomen.htm">nomen est omen</a>: <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">images 
+<a target=_top href="http://uk.search.yahoo.com/search?p=giotto5.jpg&prssweb=Search&ei=UTF-8&fr=FP-tab-web-t340&x=wrt&meta=vc%3D">giotto5.jpg</a>... 
+
+<br><br>  <font color="#0000ff">Google's operators: </font><br>
+site: 
+allintitle: 
+(all of the query words in the title) 
+intitle:
+(that word in the title) 
+allinURL:
+(all of the query words in the URL) 
+inURL:
+(that word in the URL)
+cache:
+link:
+related:
+(pages that are "similar" to a specified web page) 
+
+info: (google's info)<bR><bR> <font color="#0000ff">Altavista's most important operator: </font><br>
+NEAR (more on this later)
+<br>
+        <bR> <font color="#0000ff">MSN Live's  operators:</font> <br>
+        	                <font color="#0000ff">contains:</font>
+Restricts results to sites that have links to the file type(s) you specify. 
+For example, to search for websites that contain links to mp3 files, type music contains:mp3.
+ 
+<font color="#0000ff"> filetype:</font> 
+Returns only web pages created in the file format you specify. 
+Live Search recognizes html, txt, and pdf extensions. 
+Live Search also recognizes the extensions for primary 
+Office document types. For example, to find reports created in PDF format, 
+type your subject, followed by filetype:pdf. For example, 
+type information filetype:pdf.
+ 
+ <font color="#0000ff">inanchor:, inbody:, intitle:, inurl: </font>
+Returns pages that contain the specified term in the anchor, 
+body, title, or web address of the site, respectively. 
+Specify only one term per keyword. You can string multiple keyword entries as needed. 
+For example, to find pages that contain google in the anchor, and 
+the terms black and blue in the body, type inanchor:google inbody:black inbody:blue.
+ 
+ <font color="#0000ff">ip: </font> 
+Finds sites that are hosted by a specific IP address. 
+The IP address must be a dotted quad address. 
+Type the IP: keyword, followed by the IP address of the website. For example, type IP:80.83.47.151.
+ 
+<font color="#0000ff"> language: </font> 
+Returns web pages for a specific language. Specify the language code directly after the language: keyword. 
+
+ 
+ <font color="#0000ff">link:</font>  
+Finds sites that have links to the specified website or domain. 
+This is useful for determining who links to whom. Do not add a space between link: 
+and the web address. For example, to find pages that contain the word games 
+and that link to searchlores.org, type <a target=_top href="http://search.live.com/results.aspx?q=games+link%3Asearchlores.org&mkt=en-IE&form=QBRE&go.x=0&go.y=0">games link:searchlores.org</a> &nbsp; 
+ 
+ <font color="#0000ff">linkdomain: </font> 
+Finds sites that link to any page within the specified domain. 
+Use this keyword to determine how many links are being made to a 
+specific page, as well as how those links are made. For example, 
+to see pages that link to searchlores, type linkdomain:searchlores.org.  
+ <font color="#0000ff">linkfromdomain:</font>  
+Finds sites that are linked from the specified domain. Use this keyword to determine how many 
+links are being made from a specific page, as well as how those links are made. 
+For example, to see pages that are linked from my site, type <a target=_top href="http://search.live.com/results.aspx?q=linkfromdomain%3Afravia.net&mkt=en-IE&form=QBRE&go.x=0&go.y=0">linkfromdomain:fravia.net</a> &nbsp;   
+ <font color="#0000ff">loc:, location:</font> 
+Returns web pages from a specific country or region. Specify the country or region code directly after the 
+loc: keyword. To focus on two or more languages, use a logical OR 
+and group the languages. For example, <a target=_top href="http://search.live.com/results.aspx?q=%22core+python%22+%28loc%3ARU+OR+loc%3ACN%29&mkt=en-IE&form=QBRE&go.x=0&go.y=0">"core python" (loc:RU OR loc:CN)</a> &nbsp; 
+ 
+ <font color="#0000ff">prefer: </font> 
+Adds emphasis on either a word or another operator. For example, type <a target=_top href="http://search.live.com/results.aspx?FORM=QBRE3&q=searching+prefer%3Ainternet&go.x=0&go.y=0">searching prefer:internet</a> &nbsp;
+ 
+ <font color="#0000ff">site:</font>  
+
+Returns web pages that belong to the specified site. To focus on two or more domains, 
+use a logical OR and group the domains. Do not add a space after the colon (:). 
+You can use site search for web domains, top level domains, 
+and directories that are not more than two levels deep. For example, 
+to see web pages about media reporting from the BBC or CNN websites, 
+type "media reporting" (site:bbc.co.uk OR site:cnn.com).
+
+You can also search for web pages that contain a specific search word on a site. 
+For example, to find the library pages  
+on searchlores, type <a target=_top href="http://search.live.com/results.aspx?q=site%3Awww.searchlores.org%2Flibrary&mkt=en-IE&form=QBRE&go.x=0&go.y=0">site:www.searchlores.org/library</a> 
+
+ 
+ <font color="#0000ff">feed:</font>  
+Finds RSS or Atom feeds on a website. For example, to find RSS or Atom feeds about web searching, 
+type <a target=_top href="http://search.live.com/results.aspx?q=feed%3A%22web+searching%22&mkt=en-IE&form=QBRE&go.x=0&go.y=0">feed:"web searching"</a> &nbsp; 
+ 
+ <font color="#0000ff">hasfeed:</font>  
+Finds web pages that contain an RSS or Atom feed on a website. You can add search words to 
+narrow your search. For example, to find web pages 
+on the Guardian website that contain RSS or Atom feeds about google, type <a target=_top href="http://search.live.com/results.aspx?q=site%3Awww.guardian.co.uk+hasfeed%3Agoogle&mkt=en-IE&form=QBRE&go.x=0&go.y=0">site:www.guardian.co.uk hasfeed:google</a> &nbsp;
+ 
+ <font color="#0000ff">url: </font> 
+Checks whether the listed domain or web address is in the Live Search index. 
+Do not add a space between url: and the domain or web address. For example, 
+to verify that searchlores is in the index, type <a target=_top href="http://search.live.com/results.aspx?q=url%3Asearchlores.org&mkt=en-IE&form=QBRE&go.x=0&go.y=0">url:searchlores.org</a> &nbsp; 
+ 
+
+        	 <br>Most important MSNLive operator: </font><bR><a target=_top href="http://search.live.com/results.aspx?q=linkfromdomain%3Asearchlores.org+pdf&mkt=en-US&form=QBRE&go.x=0&go.y=0">linkfromdomain:</a>   
+        (an outbound links operator)</center></td></tr></table>
+        	<br>
+
+        </center>
+  
+<br>
+<br>We'll now use as an example the <font color="#0000ff">intitle:</font> operator.<br>
+The structure of the following old -and already "blunt" <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">- mp3s webbit,   
+has various interesting characteristics, that may be used to exemplify general webbits' structures and purposes.<br><br>
+<center>
+<table border=1 width=98%>
+<tr><td><center>Click to try</center></td>
+<td><center><font size=+2>1</font> 
+</td><td><center><font size=+2>2</font> 
+</td><td><center><font size=+2>3</font>
+</td><td><center><font size=+2>4</font> 
+</td><td><center><font size=+2>5</font>
+</td><td><center><font size=+2>6</font>
+</td>
+<td><center>Try s.e. swap!
+</td></tr>
+<tr bgcolor="#F0E68C"><td><center><a href="Luxembourg_2006.htm#recallprecision">High precision</a></td>
+<td><center><font size=+2>beatles</font> 
+</td><td><center><font size=+2>imagine</font> 
+</td><td><center><font size=+2>mp3 OR ma4 OR ogg</font> 
+</td><td><center><font size=+2>intitle:"Index of"</font> 
+</td><td><center><font size=+2>-metallica</font>  
+</td><td><center><font size=+2>+"4.2M"</font>
+</td>
+<td><center><font size=+1><a href="http://www.google.com/search?num=100&hl=en&lr=&rls=en&q=beatles+imagine+mp3+OR+ma4+OR+ogg+intitle%3A%22Index+of%22+-metallica+%2B%224.2M%22&btnG=Search">On google</a></font>
+</td></tr>
+<tr bgcolor="#F0E68C"><td><center><a href="Luxembourg_2006.htm#recallprecision">High recall</a></td>
+<td><center><font size=+2>lavigne</font> 
+</td><td><center><font size=+2>&nbsp;</font> 
+</td><td><center><font size=+2>mp3 OR ma4 OR ogg</font> 
+</td><td><center><font size=+2>intitle:Index.of</font> 
+</td><td><center><font size=+2>-beatles</font>  
+</td><td><center><font size=+2>+"4.4M"</font>
+</td><td><center><font size=+1><a href="http://search.yahoo.com/search?p=lavigne+++mp3+OR+ma4+OR+ogg+intitle%3A%22Index+of%22+-beatles+%2B%224.4M%22&prssweb=Search&ei=UTF-8&n=100&fl=0&x=wrt">On Yahoo</a></font>
+</td></tr><tr><td>&nbsp;</td>
+<td><center><font size=+2>group</font> 
+</td><td><center><font size=+2>title</font> 
+</td><td><center><font size=+2>format variants</font>
+</td><td><center><font size=+2>index of in title</font> 
+</td><td><center><font size=+2>spamkiller</font>
+</td><td><center><font size=+2>variable parameter<br>(guarantees length)</font>
+</td>
+<td><center>&nbsp;
+</td></tr></table>
+
+
+</center>
+
+<ol>
+	
+	<li>
+The <font color=blue>"group"</font> (or singer name) is mandatory. 
+</li><li>Simply specifying a <font color="#0000ff">"title"</font> adds precision and 
+loses recall (precision and recall are -most of the time- inversely proportional). 
+
+(This means that if you add your target's <font color=blue>title</font> you diminish excessive noise but may miss some target sites).
+</li><li>
+The <font color=blue>"format variants"</font> will guarantee a broader spectrum. If the search engine you are using is heavily censored (as 
+it happens more and more often) just <u>eliminate the <font color=blue>mp3</font> parameter</u>. Chances are that 
+some (yet) 
+uncensored
+ma4 or some ogg file will be present inside our "real target" (mp3 censored music lists), and that these "ogg oddballs" will allow their retrieval.
+When they will censor ma4s we'll invent something else&nbsp;:-)
+</li><li>
+The <font color=blue>intitle:"index of"</font> (or <font color="#000080">intitle:index.of</font>, which is the same but avoids 
+two key-presses) is mandatory, and -spammers notwithstanding-
+still allow fairly decent results. Of course the <font color=blue>intitle:</font> operator is to be used with 
+google and yahoo, 
+check the different operators for the other search engines, or just use a more simple (and spammed) 
+<font color=blue>"index of"</font> string snippet.
+</li><li>
+The <font color=blue>-metallica</font> (or -beatles, or whatnots) serves as a <font color=blue>spamkiller</font>, because many clowns still try 
+to fish zombies out of the knowledge web uploading huge lists of groups' names. If you'r going for high recall, then re-launch 
+the same query with a different 
+ singer acting as spamkiller.
+</li><li>
+Finally we come to the <u><font color=blue>LENGTH</font></u> parameter, which not only guarantees the 
+presence of at least some Megabyte heavy mp3, thus cutting away all the irrelevant noise of those 
+bogus "index of" spammer sites with "small snippets" of music, but also can be
+varied  <i>ad libitum</i> and will thus guarantee you hours of fishing pleasure. You may try for instance all variations
+in the range <font color=blue>1.6M - 6.4M</font>. I suggest starting in the range 3.5-4.5 (which is a good signal ratio for mp3s) and 
+moving upward if you are an optimist and downward if you are a pessimist.
+</li></ol> 
+<br><br> A more recent <a href="rabbits.htm">webbit</a>:
+<br><br>
+<a href="http://www.google.com/search?client=opera&rls=en&q=-inurl:htm+-inurl:html+-inurl:jsp+-inurl:php+-inurl:pdf+-inurl:asp+-inurl:txt+-inurl:shtml+-inurl:phtml+-inurl:cgi+-intitle:free+-intitle:download+-intitle:archive+%2Bintitle:index%2Bof/+%2Bparent-directory+%2Bname+%2B%22last+modified%22+%2Bsize+%2Bdescription+(oasis+OR+shakira)+(mp3+OR+wma+OR+m4a)+-download&sourceid=opera&num=100&ie=utf-8&oe=utf-8">-inurl:htm -inurl:html -inurl:jsp -inurl:php -inurl:pdf -inurl:asp -inurl:txt -inurl:shtml -inurl:phtml -inurl:cgi -intitle:free -intitle:download -intitle:archive +intitle:index+of/ +parent-directory +name +"last modified" +size +description (oasis OR shakira) (mp3 OR wma OR m4a) -download</a>
+          <br><br>
+Note the useful spamkiller <font color="#0000ff">-download </font> and the fact that we search only for 
+<font color="#0000ff">(mp3 OR wma OR m4a)</font>. You may add <font color="#0000ff">ogg</font> files as well. In fact there's no point 
+in searching those infamous Ipod's  <font color="#0000ff">m4p</font>. However, 
+should you happen to download some of those <font color="#0000ff">Ipod</font>'s "fairplay infected" AAC files, you may use 
+a program like <a target=_top href="http://hymn-project.org/">JHymn</a> to play them wherever and whenever despite their ridiculous patents, 
+and/or  converting them on the fly to a more useful (and unprotected) m4a format.
+  <br>
+     <bR>
+     Here a very simple, extremely short and yet quite useful query. You can launch this (or a very similar one) 
+     with any good search engine... even 
+     with google...<br><a target=_top href="http://www.google.com/search?num=100&hl=en&lr=&q=shakira+%224.6m+%2A+snd%22&btnG=Search">shakira 
+     	"4.6m * snd"</a><br>"Grown up" humans will probably substitute 
+     "<font color="#0000ff">shakira</font>" with -say- "<a target=_top href="http://www.google.com/search?num=100&hl=en&lr=&q=bach+%224.6m+%2A+snd%22&btnG=Search">bach</a>"&nbsp;:-)
+     <br>
+     Note -again- the added "variable" parameter +"4.6m". 
+which is quite important in order to reduce noise and spam (again: you can  modulate as much as you fancy: 4.5, 4.6, 6.2 etc.)
+<br><br> 
+
+<br>  
+  <a name="quarry"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Today's targets (python & proximity galore)</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>How to get inside libraries at night</i>
+<br><br>
+</center>Ah, Python! Maybe the most powerful programming language for the web.<br>
+The following books about  python    
+will today serve as "example queries".<br>
+<br> 
+ Note that finding <a href="books.htm">books</a>   on the web 
+ is extremely <a target=_top href="http://digital.library.upenn.edu/books/search.html">easy</a>.   <br><br>
+       In fact there's even a direct relation between the "celebrity" of a target and how easy it will be to find it on the web. 
+       <br>For example: if you want <i>hic et nunc</i> 
+       the "Lord of the ring", you just search for a passage of it: <a target=_top href="http://search.ask.com/web?q=%22At+last+the+voice+of+Faramir+ordered+them+to+be+uncovered%22&qsrc=1&o=0">At 
+      last the voice of Faramir ordered them to be uncovered</a>. See? Even the heavy censored 
+      <a href="http://beta.search.msn.com/results.aspx?q=%22At+last+the+voice+of+Faramir+ordered+them+to+be+uncovered%22&mkt=en-US&form=QBRE&go.x=8&go.y=12">MSNSearch</a> gives us 
+      	some results. This is true for all books:  <a href="http://www.google.com/search?client=opera&rls=en&q=%22But+few+of+any+sort+and+none+of+name%22&sourceid=opera&num=100&ie=utf-8&oe=utf-8">"But few of any sort and none of name"</a> 
+      	and you immediately have Shakespeare's "Much ado about nothing" 
+      	(and, I may add, you discover <i>en passant</i> a lot of book repositories as well).
+
+<br>
+<br>
+Hence finding books, patented or not, is extremely easy. Yet today's  "examples"  will give us -I hope- 
+an opportunity to investigate  some alternative searching methods... some 
+different ways of cutting the noise and getting the signal <u>without</u> just using google (or anyone of the many <a href="main.htm">main 
+search engines</a>).<br><bR> 
+The following three books will be our '<font color="#0000ff">virtual targets</font>':<br>
+   <ol><li>                                                                               
+<i><font color=blue>Core Python Programming</fonT></i> by Wesley J. Chun<br>   
+	First Edition, Prentice Hall, December 14, 2000
+ISBN: 0-13-026036-3, 816 pages. <br>Note that the new 1120 pages - September 2006 - second edition (Prentice Hall, ISBN: 0132269937) 
+is too new to have already "percolated" the web, it's already 
+out there all the same, of course, and you'll have to find it yourself (see the <a href="Luxembourg_2006.htm#fivee">assignment</a> section), 
+but keep in mind that for a book  it takes usually a couple of months after its publication  to "sink in" the web. 
+<br>
+A good introduction  to python:  explains the language, and does put it in a wider context. (Incidentally: reversers should note 
+ the usual tricks with the 
+ font sizes: here so big that the book could be condensed to half it's size -or less- 
+if the type was reduced to a normal level&nbsp;:-)</li><li>  
+   <i><font color=blue>Python Cookbook</fonT></i> by Alex Martelli and David Ascher (O'Reilly,  ISBN: 0596001673),  2002<br>
+   Advanced:  a collection of problems, solutions, and practical examples for Python programmers, written by Python programmers.
+   In principle this book is for those that already know Python. In practice it's quite useful for anyone.
+</li><li>
+
+<i><font color=blue>Python Essential Reference</fonT></i> by David Beazley, (Sams, ISBN: 0672328623), 2006 <br>
+Syntax, functions, operators, classes, and libraries. This is first and foremost a reference, yet quite useful if you have 
+some experience with other programming languages.</li>
+	</ol>
+	Now, of course
+	we all know that 'printed' books on such matters are often both obsolete as soon as printed and   quite superficial 
+	vis-a-vis what you can find for free on the Web, 
+	because we also know  that the best knowledge (and material) 
+	 is to be found   instead 
+	in some 'gray areas' of the web, or visiting 
+	<a target=_top href="http://www.programmersheaven.com/c/MsgBoard/wwwboard.asp?Board=64">ad hoc  
+	messageboards</a>  or   perusing <a target=_top href="http://groups.google.com/group/comp.lang.python?lnk=sg">Usenet</a> 
+		emails. 
+		<br>
+		Moreover there is such a wealth of <a target=_top href="http://gnosis.cx/TPiP/">free useful texts</a> on the web that this fact alone 
+		(<u>not</u> the fact 
+		that you can easily find all these patented books for free) makes one wonder whether  nowadays
+		  it makes   any sense at all to "buy" a book.
+	<br>	
+	<br>Again a caveat: the following queries are just a proof of concept,  showing 
+	how we <u>could</u> search for books... the specific "quarries" (in this case our three 
+	python books) don't matter that much: you'll be able to adapt the  following 
+	approaches to OTHER, different, targets of yours...  
+	
+	    replace for instance "python" with -say- "assembly" or "digital photography" 
+	    and you'll obtain a different complete library instead. <bR>
+	    The approaches and the techniques we are examining together 
+	    are important, the targets themselves are irrelevant.<center>
+	<bR>    <font size=+3>Proximity galore</fonT></center>
+	<bR>Another interesting side effect of a correct web-seeking approach 
+	is  that often, when searching for something, you will find on the same servers 
+	<font color=blue>many other targets related to your topic</font>, targets that you did not even know existed. While this is  true for many different targets and only for books, we call this 
+	the "<font color="#0000ff">being inside the library</font>" effect. Imagine  you are  not filling out  
+	a request form at the counter, imagine you are physically  
+	retrieving a book <b>inside<u></u></b> a library,  with 
+	shelves and shelves of books around you and within your immediate reach. 
+	Thus you can scan with your eyes all <u><b>other</b></u> books in the proximity: books,  
+	more or less related to the topic you are searching for, that are, imagine,  
+	<font color=blue>located on the same shelf, next to your target book</fonT> 
+	and that you can also pick  up  at leisure.  Gee... the amazing power of knowing how to search!
+        <br><bR>
+        Enough theory! A good <a href="rabbits.htm">webbit</a> for our  
+        python books? Here a "regional" one (say: China): 
+        <a target=_top href="http://www.google.com/search?num=100&hl=en&lr=&rls=en&as_qdr=all&q=python+site%3A.cn+%22index%2Bof%22&btnG=Search">python site:.cn "index+of"</a>
+<br>
+<bR>
+Now let's leave theory and enter practice...
+<br>
+<br>  
+  <a name="findingthetargets"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Finding the three targets (the simple way)</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br>"<i>A posse ad esse</i>"&nbsp;:-)
+<br><br>
+</center>
+
+       <br>Yep: searching for <a href="books.htm">books</a> on the web is -most of the time- extremely simple, especially if you 
+       have the exact title, the name of the author, the ISBN number and/or some snippets of text.
+       <br> 
+       <br>So let's now <font color="#000080">find</font> the three targets listed <a href="Luxembourg_2006.htm#quarry">above</a>.<bR> 
+        <ol><li>                                                                               
+<i><font color=blue>Core Python Programming</fonT></i> by Wesley J. Chun<br>  <br>
+       Please note that -in general- you find most books just inputting a title "tel quel" in any search engine: for instance a simple 
+       query on the good (and still commercially not infected)  
+       <a href="compound.htm">compound</a> search engine <a target=_top href="http://www.seekz.com">seekz</a>  
+       <a target=_top href="http://www.seekz.com/search/?q=core_python_programming&page=1&amount=40&submit=Seekz">"core_python_programming"</a>  
+       (note the underscores between the words)   
+      will  almost immediately give us aplenty locations with the 
+      complete version of <a target=_top href="http://lab.lpicn.org/pub/books/">Chun's nice book</a>.
+      <br>On this same <a target=_top href="http://lab.lpicn.org/pub/books/">repository</a>   we register 
+      the  "inside the library" phenomenon we discussed before: <u><b>19 further books on python</b></u>, 
+      some of them crap, some of them good.<bR><br> 
+       Alas! This "Core" target is  the old "2000" edition. 
+        The new 1120 pages - September 2006 - second edition (Prentice Hall, ISBN: 0132269937) 
+is more difficult to find, because too new to have already percolated the web: it takes (at most) a couple of months: 
+you'll be anyway easily find it easily around December... but you may want to find it right now in order  
+to solve today's <a href="Luxembourg_2006.htm#fivee">assignement</a>.</li>
+       <br><br>
+       <li>  
+   <i><font color=blue>Python Cookbook</fonT></i> by Alex Martelli and David Ascher
+       Let's try good ole Altavista with
+        <br>
+        <a target=_top href="http://www.altavista.com/web/results?itag=ody&q=%22Python+Cookbook%22+NEAR+rapidshare&kgs=0&kls=1">"Python Cookbook" NEAR 
+        	rapidshare</a> and choose 
+        results only in Russian,   Persian, Chinese, Bulgarian, Arabic and other interesting non-copyright obsessed languages&nbsp;:-) <br><br>
+        We'll reap good results aplenty, and the first one (an <a target=_top href="http://www.python.ir/index.php?topic=161.msg797">Iranian</a> 
+        messageboard) looks promising: in fact it gives us another Iranian <a target=_top href="http://www.python.ir/bayazee/python/books/">URL</a>, 
+        where we could download our target  BOTH in chm and pdf format. As an added bonus, due -again- 
+        to that powerful "inside the library" effect, we 
+        could fetch the following books:<font size=-1>  
+<uL>
+<li><a href="http://www.python.ir/bayazee/python/books/Green%20Tea%20Press%20_%20Learning%20with%20Python%20(How%20to%20Think%20Like%20a%20Computer%20Scientist).pdf">Learning%20with%20Python%20(How%20to%20Think%20Like%20a%20Computer%20Scientist</a>, 
+</li>
+<li><a target=_top href="http://www.python.ir/bayazee/python/books/Gui%20Programming%20With%20Python%20-%20Qt%20Edition.chm">Gui%20Programming%20With%20Python%20-%20Qt%20Edition.chm</a>,
+</li>
+<lI><a target=_top href="http://www.python.ir/bayazee/python/books/OReilly%20_%20Learning%20Python.pdf">OReilly%20_%20Learning%20Python.pdf</a>,
+</li>
+<lI><a target=_top href="http://www.python.ir/bayazee/python/books/Oreilly%20-%20Python%20Standard%20Library.pdf">Oreilly%20-%20Python%20Standard%20Library.pdf</a>,
+</li>
+<lI><a href="http://www.python.ir/bayazee/python/books/Python%20Programming%20with%20the%20Java%20Class%20Libraries%20-%20A%20Tutorial%20for%20Building%20Web%20and%20Enterprise%20Applications%20with%20Jython%20(Addison%20Wesley,%202002).chm">Python%20Programming%20with%20the%20Java%20Class%20Libraries%20-%20A%20Tutorial%20for%20
+<br>Building%20Web%20and%20Enterprise%20Applications%20with%20Jython%20(Addison%20Wesley,%202002).chm</a>,
+</li>
+<lI><a target=_top href="http://www.python.ir/bayazee/python/books/Python%20Standard%20Library,%20ebook.chm">Python%20Standard%20Library,%20ebook.chm</a>,
+</li>and
+<lI><a href="http://www.python.ir/bayazee/python/books/Python.Programming.for.the.Absolute.Beginner.-.Michael.Dawson.Premier.Press,.2003.chm">Python.Programming.for.the.Absolute.Beginner.-.Michael.Dawson.Premier.Press,.2003.chm</a>.
+</li></fonT>
+</ul>
+        <br>In fact -its title notwithstanding- this last book is not *that* bad either.<br><font color="#400080">(Caveat: again, don't download pirated stuff: as a seeker 
+        you'll always be 
+        able to find on the fly these books somewhere).</font><br>
+        Please note that even if we DID apparently search for a book inside a online porn-depot � la rapidshare (more on this later), 
+        we found our target -in fact- inside an OPEN directory, and not on 
+        rapidshare itself... simply because the word 'rapidshare' was somewhere else on that first target page. Aso NOTE that this 
+        specific URL was not -until now-
+        indexed by the main search engines, yet we found it nevetheless <a href="combing.htm">combing</a> the web.
+        </lI> 
+        <br><br>
+          <li>
+
+<i><font color=blue>Python Essential Reference</fonT></i> by David Beazley
+       <br> We start with a simple yahoo query:
+       <a target=_top href="http://search.yahoo.com/search?p=%22Python+Essential+Reference%22+rapidshare&prssweb=Search&ei=UTF-8&x=wrt">"Python Essential Reference" rapidshare</a>
+       and we almost immediately get (inter <u>many</u> alia) 
+       <a target=_top href="http://doci.nnm.ru/it_ebooks_digest">a Russian promising URL</a>, 
+       http://doci.nnm.ru/it_ebooks_digest,     that 
+        gives us     on a silver plate 
+       our third target (and many other as well, btw) . 
+       <br>Bingo. Done. Finished. We could stop here.
+       <br>
+       As many among you will know, rapidshare is (an important one) among <a href="local.htm#reposi">HUNDREDS of file repositories</a> 
+       services which  
+       make money hosting porn crap and patented material 
+       anyone can upload (they will 'remove it due to complaints' if needed) 
+        fooling idiots into buying "special accounts" in order to download this 
+       pirated and patented stuff/porn at leisure.
+     <br>  However, the logic is that in order to fool the zombies they HAVE TO be known and HAVE TO lure people 
+     into using them.<br>Therefore they HAVE TO provide a (often penalized and slower) 
+       free download opportunity for everyone and his leeching dog. Apart from the many simple possibilities to bypass these 
+       simple  penalizing scripts 
+       (mostly written in php), the fact that there's now a huge industry thriving on the selling of patented  software/porn/film/music 
+       material is very bad news for the poor & suffering patent holders.  Not that anyone would give a dead rat, he :-)
+      </li>
+    </ol>
+      
+<br><br>
+ 
+  <a name="potpourri"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Potpourri searches</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>
+Alltogether now!</i>
+<br><br>
+</center>
+
+       
+     <bR><bR>
+  We can also search <font color=blue>all our titles together</fonT> with our nice "potpourri" approach. 
+   <br>   
+        
+        At times simply guessing that interesting places MUST have all your targets on the same page can
+        be useful... in order to find these interesting places <u>and also</u> your targets&nbsp;:-) 
+        <br>Here a "potpourri"  example: 
+        on yahoo <a href="http://search.yahoo.com/search?_adv_prop=web&x=op&ei=UTF-8&fr=yfp-t-500&fr2=op&va=%22Core+Python+Programming%22+%22Python+Cookbook%22+%22Python+Essential+Reference%22&va_vt=any&vp_vt=any&vo_vt=any&ve_vt=any&vd=all&vst=.org&vs=.org&vf=all&vm=i&fl=0&n=100">Core Python Programming" "Python Cookbook" "Python Essential Reference"</a> 
+         (note the <font color="#0000ff">&vst=.org&vs=.org&n=100</font> snippet in the search string)<br>
+         and on google: 
+         <a href="http://www.google.com/search?as_q=+Python-Cookbook+Python-Essential-Reference&num=100&hl=en&rls=en&btnG=Google+Search&as_epq=Core+Python+Programming+&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i&as_sitesearch=.org&as_rights=&safe=images">"Core Python Programming" "Python Cookbook" "Python Essential Reference"</a>
+        (note the <font color="#0000ff">&as_sitesearch=.org&num=100</font> snippet in the search string)<br><br>
+       When you search the web, the biggest problem is noise. Your target, your signal, will be often half-drowned underneath it.<br>
+        And  today's web has  a lot of commercial noise.<br>    
+        If you search for an image for instance, say a picture of a famous painter,  you will immediately find
+        a gazillion spammers who want <u><font color="#000080">to sell  you</font></u> those very images  you could easily find for free.  
+        <br>
+         So you'll find thousand of low resolution images, or images defaced with an ugly watermark,  put on line 
+         by "snake oil" sellers.  So "<font color="#0000ff">cutting the noise</font>" is crucial.
+        <br> This holds true for everything, and for books as well.
+        Hence we must "clean up" our queries a little, and, as the title of this conference: "searching underneath the commercial web" implies, a
+        simple apprach is for instance to limit 
+        our searches to "edu" and "org" sites.       
+<br><br>
+        The first query above will give us <a target=_top href="http://www.miex.org/book.html">this link</a> that brings 
+        us in <a target=_top href="http://www.miex.org/python/">this
+        subdirectory</a>, 
+        and the second query will give us this  
+        "<a target=_top href="http://forum.hackinthebox.org/login.php?redirect=viewtopic.php&t=11281&start=550&sid=875c400344e6ca492b54c1759e5f92f7">blocked link</a>", 
+        yet  through google's <a href="http://66.249.93.104/search?q=cache:sgbriBuXbeoJ:forum.hackinthebox.org/viewtopic.php%3Ft%3D11281%26postdays%3D0%26postorder%3Dasc%26start%3D550%26sid%3D6fcb0d167424b24ebcdefb53e18597bf+Python-Cookbook+Python-Essential-Reference+%22Core+Python+Programming+%22+site:.org&hl=en&ct=clnk&cd=3">cached copy</a>
+        	 
+        we will still be able to find  this nice 
+        <a target=_top href="http://slav0nic.xss.ru/books/python/">Russian site</a>.  
+        <br>(Note in this example <font color="#000080">the importance of cached copies</font>. 
+        In fact most search engines offer them: Ask, MSNSearch, Yahoo, 
+        Google, Alexa, Baidu, Gigablast...).
+        	
+        </ul>
+<br><br>  
+   
+     So, that's it:  as you have seen, any and every book is at seekers' disposal.
+       <br><br>
+      
+
+   <font color="#400080"> (<u>Caveat</u>: <font color="#191970">Download your targets only if you are positively sure they have been released 
+on the public domain. 
+Real seekers do not need to waste harddisk space downloading doubtful stuff. This could even be constructed as 'illegal' by the patent  
+holders and their political lackeys. <font color=blue>Downloading is not necessary!</fonT> Seekers will always find again and again on the fly 
+-and consult on line- 
+whatever they fancy</fonT>).</font>
+<br>      
+
+
+
+
+<br>Ok, ok. It was too easy. Much too easy. In order to continue,  
+let's imagine for a moment that it would NOT have been so incredibly easy to find these books through such simple searches. 
+Imagine we didn't find them.  Imagine <font color="#000080">we will not</font> find them again on those  URLs. 
+<br>After all, <font color=blue>the web is a quicksand</font>, and the specific locations where we found our  targets 
+ after today's talk probably will disappear.
+<br>  <bR><br>
+  <a name="quarrynog"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Look Ma: no google!</font>	<br>
+	Go for the <a href="Luxembourg_2006.htm#format">format</a>, 	go for the <a href="Luxembourg_2006.htm#name">name</a>, do it like the <a href="Luxembourg_2006.htm#lamers">lamers</a> or 
+	search  <a href="Luxembourg_2006.htm#else">elsewhere</a></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>
+Sprinkles of cosmic searching power </i>
+<br><br>
+
+<font size=+2>Let's  find again the same three targets WITHOUT using the same simple querystrings
+	</fonT></center> 
+	
+
+<br><bR>
+     <a name="format"></a>
+<ul><LI>We could go for the  <u>format</u>.<br> For obvious reasons, given that our quarry are books, the most promising formats will be 
+<font color=blue>.chm</fonT>,
+<font color=blue>.pdf</fonT>,
+<font color=blue>.rar</fonT>, <font color=blue>.zip</fonT> or <font color=blue>.ace</fonT>. 
+<br>
+Of course we could 
+take advantage of this with a simple 
+ <a href="rabbits.htm">webbit</a> (on google this time): <a href="http://www.google.com/search?hl=en&lr=&q=-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%E2%80%9Dindex+of%E2%80%9D+%2B%28%E2%80%9C%2Febooks%E2%80%9D%7C%E2%80%9D%2Fbook%E2%80%9D%29+%2B%28chm%7Cpdf%7Czip%29+%2B%E2%80%9Dpython%E2%80%9D&btnG=Search">-inurl:htm -inurl:html intitle:�index of� +(�/ebooks�|�/book�) +(chm|pdf|zip) +�python�</a>.
+<br>
+    Here a similar query for yahoo: <a href="http://search.yahoo.com/search?p=%2B%28%E2%80%9C%2Febooks%E2%80%9D%7C%E2%80%9D%2Fbook%E2%80%9D%29+%2B%E2%80%9Dpython%E2%80%9D+intitle%3A%22index+of%22&prssweb=Search&ei=UTF-8&n=10&fl=0&x=wrt">+(�/ebooks�|�/book�) +�python� intitle:"index of"</a> 
+    (note the <font color=blue>&vf=pdf</fonT> inside this querystring).
+<br>
+Let's examine these two querystrings, step by step... <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">
+<br>
+<br></li> <a name="name"></a>
+<li>We could go for the  <u>name</u>.<br>The very simple yahoo/rapidshare query:  
+	<a target=_top href="http://search.yahoo.com/search?p=%22Core+Python+Programming%22+rapidshare&prssweb=Search&ei=UTF-8&x=wrt">"Core Python Programming" rapidshare</a> will 
+give us not only some locations, but also much more valuable <a href="nomomen.htm">names</a>: 
+<ul><li>OReilly - Core Python Programming [miex.org].pdf  
+	<br><font size=-1>(hxxp://www.miex.org/book.html)</fonT>
+                                              </lI><li>Core_Python_Programming[Wesley J. Chun](Prentice Hall PTR).pdf <br><font size=-1>
+                                              	 (hxxp://noc.unila.ac.id/~gigih/ebooks/)</fonT>
+                                            </li><li>Core Python Programming.pdf<br><font size=-1>(hxxp://e-books.amagrammer.net/Python/)</fonT>
+                                            	</lI></ul>
+                                            		Now, even if these specific URLs disappear (and they will) you already 
+                                            		have  the   
+                                            		<a href="nomomen.htm">names</a>, i.e. the keys to find these files again and again whenever 
+                                            		you want.     Note also how some <a href="magicfi.htm">guessing</a> can be useful 
+                                            		when searching a target on the web. <br>
+<br></li>
+     <a name="lamers"></a>
+<li>We could do it like  the <u>lamers</u>.<br>
+  	
+  	The lamers' slow way is simple: using <a href="ftp.htm">P2P</a> and torrents<br> Using <a href="p2p.htm#search">P2P specific search engines</a>  
+     is a somehow slow, but mostly very simple way to find your targets.<bR>
+     Let's <I>exempli gratia</i> give <a target=_top href="http://www.filedonkey.com/search">filedonkey</a> a chance:   
+     let's just input <a target=_top href="http://www.filehash.com/search/core+python/::ad">core python</a> and see what we fish. See?<br>
+     Another "lame but valid" possibility is of course to check what the 
+     <a target=_top href="http://www.bitenova.nl/search.php">torrents</a> can deliver 
+     when  searching -say- <a target=_top href="http://www.torrentspy.com/search?query=python&submit.x=0&submit.y=0">python</a>.
+     <bR>
+     A lot of monty python as you can see, but also all our targets as well. In order to reduce the monty noise 
+     you can make the same search and limit the max size of the file to, say, <a href="http://www.torrentspy.com/search?mode=advanced&query=python&submit=Advanced+Search&mcat=0&scat=0&minf=&maxf=150&mins=&maxs=&mind=&maxd=">150 mega</a> 
+     (note the <font color="#0000ff">&maxf=150</font> snippet in the searchstring).<br>
+     Anyhow real seekers        <font color=blue>deprecate</fonT>   P2P and Torrents "searches". they are considered too slow and vulgar. 
+     It is always 
+     <font color=blue>much quicker</fonT>  <u>and  more elegant</u>     
+     to fetch your targets from locations    nobody is visiting, than to slowly download them from overwhelmed servers together with 
+     a zillion other zombies doing the same thing.
+     <br>
+      <bR>   
+      
+      <!-- <a href=""></a> -->
+</li>
+
+    
+ </ol>  <br><br>
+	      <a name="else"></a>        
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Let's search elsewhere</font>	<br> You can search <a href="Luxembourg_2006.htm#ftp">ftp</a>, you can go 
+	<a href="Luxembourg_2006.htm#local">local</a>, or even better: <a href="Luxembourg_2006.htm#regional">regional</a>. 
+	You can  
+	zap   
+	<a href="Luxembourg_2006.htm#irc">IRC</a> channels and  
+	explore <a href="Luxembourg_2006.htm#funny">uncommon</a> search engines</center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>
+Aut inveniam viam aut faciam</i>
+<br><br> </center>
+	             
+	             
+	
+	<ol>
+		  
+		     <a name="ftp"></a>
+		<li>
+<a href="ftp.htm">FTP</a><br> 
+Using <a href="ftp.htm#search">ftp specific search engines</a> is in many cases a useful way to quickly find your targets.
+Let's give <a target=_top href="http://www.files.lt/?">our Lithuanian friends</a> a chance:   let's just input <font color=blue>python</fonT> 
+and choose as format <font color="#0000ff">pdf</font>.<br>
+Here we have only three results: <font color=blue>A.D.S.Lessa - Python Developer's Handbook.pdf</fonT>, 
+<font color="#000080">Apress.Beginning.Python.From.Novice.to.Professional.Sep.2005.pdf</font>  
+and        
+<font color=blue>John.Wiley.and.Sons.Making.Use.of.Python.pdf</fonT>. 
+<br>
+BUT, if we repeat the same search for the <font color="#000080">rar</font> format:<br><font size=-1>  
+<a href="ftp://anonymous@202.96.64.144/pub/books/%28ebook%20-%20HTML%20-%20Python%29%20O%27Reilly%20-%20Core%20Python%20%5Bfound%20via%20ww.rar">ftp://anonymous@202.96.64.144/pub/books/%28ebook%20-%20HTML%20-%20Python%29%20O%27Reilly%20-%20Core%20Python%20%5Bfound%20via%20ww.rar</a><br></fonT> 
+(and of course all the other books as well).<bR>So, when searching, choosing the "right" format is quite important.
+  <br><bR>
+  </li>
+  
+    
+
+     <a name="local"></a>
+<li> 
+	
+	Going <a href="local.htm">local</a> (<a href="local.htm">Homepages, Usenet, topic-related messageboards, blogs, forums & webrings</a>)<br> 
+ At times it can be useful to "throw a narrow net" inside the searchscape, going  "specific".<br> 
+ Searching <a target=_top href="http://s2.webring.com/cgi-bin/hubsearch?search">webrings</a>  gives no results, but 
+on <a href="usenet.htm">usenet</a> you have 
+ <a target=_top href="http://groups-beta.google.com/group/comp.lang.python/topics?lnk=srg&hl=en">comp.lang.python</a> (a high-volume Usenet open newsgroup for general discussions and questions about 
+ Python), 
+ <a target=_top href="http://groups-beta.google.com/group/comp.lang.python.announce/topics?lnk=srg&hl=en">comp.lang.python.announce</a>
+
+(a low-volume moderated forum for Python-related announcements, useful to keep up to date) 
+and <a target=_top href="http://groups-beta.google.com/groups/dir?lnk=srgmb&q=python&hl=en">quite a lot</a> of local or regional python newsgroups.
+ <bR>                                              
+    
+ <br>     
+We could also Search private homepages
+ like  <a target=_top href="http://us.geocities.yahoo.com/search?p=python+programming">geocities</a> 
+ or <a target=_top href="http://search.lycos.com/index.php?adv=1&dfi=tripod.com&src=af&query=python">Tripod</a> 
+ for "python".   <br><bR>
+ A further very good idea is to spot  
+ relevant and authoritative topic-related messageboards <a target=_top href="http://europython.org/">conference proceedings</a> 
+ and/or <a href="blog.htm">blogs</a>. There you may even find topic-related fora, 
+ like  for instance <a target=_top href="http://python-forum.org/py/index.php">python-forum.org</A> 
+ and   <a target=_top href="http://lowlife.jp/cgi-bin/moin.cgi/PythonProgrammersWeblog">programmers' weblogs</a>.<bR>
+ It is also worth repeating <i>ad nauseam</i> that on the web much knowledge can be found in "grey areas" that are completely outside the "academic circuits". 
+ Indeed, if you are  interested in python, you'll soon realise that the  books we have chosen as targets today are   already quite 
+  obsolete, 
+ and almost irrelevant, if compared to the free huge knowledge you can gather by visiting the messageboards, usenet groups 
+ and fora pointed out above.
+ 
+   <br><bR>
+   
+   </li>
+   
+   <a name="regional"></a>
+   <li>Going <a href="regional.htm">regional</a><br><table border="0" width=88%><tr><td><font size=+1>  
+    Going "regional" is ALWAYS a very good idea when searching. We have already seen how adding a simple <font color=blue>.ru</font> to 
+  our queries can help. But why Russia? WHERE should we search? Which are the, how should I say? the "less copyright-obsessed" countries? 
+  <a href="images/piracy.gif" ALT="red" align="bottom" valign="bottom" WIDTH="270" HEIGHT="634">Here</a> 
+  you can 
+    see a interesting 
+    "piracy subdivision"  published this summer by 
+    <a target=_top href="http://www.economist.com/markets/indicators/index_wide.cfm?page=Emerging%20Market&story_id=7039860">The 
+  Economist</a>.
+  <br><br> 
+      We may as well use these 'scarecrow' data (produced by 
+      US-lobbyist Robert Holleyman's  "Business Software  alliance" in order to scrap some money) 
+for our own purposes...<bR>
+      And look! As you can see,      Vietnam, Zimbabwe, Indonesia, China, Pakistan, Kazakistan, Ukraine, Cameroon, 
+      Russia, Bolivia, Paraguay and Algeria seem  to have a more relaxed attitude towards   
+        patent holders. Good to know&nbsp;:-)<bR>
+      Here the relevant <a target=_top href="http://www.iana.org/cctld/cctld-whois.htm">country codes</a>: 
+             <font color=blue>.vn</fonT>, <font color=blue>.zw</fonT>, <font color=blue>.id</fonT>, <font color=blue>.cn</fonT>, 
+             <font color=blue>.pk</fonT>, <font color=blue>.kz</fonT>, <font color=blue>.ua</fonT>, <font color=blue>.cm</fonT>, 
+             <font color=blue>.ru</fonT>, <font color=blue>.bo</fonT>, <font color=blue>.py</fonT> and  <font color=blue>.dz</fonT>, 
+             codes, that we could use to <font color=blue>restrict searches</fonT> <u><b>only</b></u> and/or 
+             <u><b>especially</b></u> to such relaxed places.
+             <bR>
+             Of course some of these countries are just tiny local niches, with next to no activity and 
+             extremely weak signals, and can be ignored: throwing our clever queries in -say- Zimbabwe or Cameroon 
+             we'll probably just wasting our (or our <a href="bots.htm">bots</a>) precious searching time.. 
+             <bR>
+             Let's say that -in general-    
+             <font color=blue>.vn</fonT>(Vietnam),
+             <font color=blue>.id</fonT> (Indonesia),   <font color=blue>.cn</fonT> (China),  <font color=blue>.pk</fonT> (Pakistan),
+                      <font color=blue>.ua</fonT> (Ukraine) and   <font color=blue>.ru</fonT> (Russia) look promising enough.  We may add
+                      -out of our experience-   
+                      Iran, Korea, Bulgaria and India (<font color=blue>.ir</fonT>, <font color=blue>.kr</fonT>, <font color=blue>.bg</fonT> and <font color=blue>.in</fonT>).
+                    <br>
+                      So let's go local: let's visit <a target=_top href="http://www.baidu.com/s?ie=gb2312&bs=%22professional+assembly%22&sr=&z=&cl=3&f=8&wd=%22core+python%22&ct=0">China</a>,  
+                      where we can find, among hundreds other, for instance
+                       <a target=_top href="http://www.xpbook.com/downpage.asp?id=4142">this link</a>, 
+                      that requires just some <a href="magicfi.htm">guessing</a> capacity (or some understanding of Chinese&nbsp;:-)
+                      <bR>Of course we should also have a look 
+                      in    
+                      <a target=_top href="http://www.google.com/search?hl=vi&as_qdr=all&q=+%22core+python%22+site%3Avn&btnG=T%C3%ACm+ki%E1%BA%BFm">Vietnam</a>, 
+                      in    <a target=_top href="http://search.uaportal.com/?enc=utf8&type=net&q=core+python&r=">Russia/Ukraine</a> (where 
+                      we will at once retrieve our <a target=_top href="http://shelek.tmf.ru/archive/books/pyton/coreprogpython.zip">Target</a> and 
+                      as many other <a target=_top href="http://club.shelek.com/viewfiles.php">programming books</a> as you fancy), 
+                      and 
+                      here is how 
+you would search in <a target=_top href="http://search.msn.com/results.aspx?q=%22core+python%22+loc%3AKR&mkt=en-US&form=QBRE&go.x=0&go.y=0">KOREA</a> or in  
+                      
+                        <a target=_top href="http://search.msn.com/results.aspx?q=%22python+cookbook%22+loc%3ARU&mkt=en-US&form=QBRE&go.x=0&go.y=0">RUSSIA</A> 
+                        using MSN Search. 
+                        
+                        <bR><bR><font color="#400080">Caveat: this was all just academically speaking, duh. Once again: seekers don't need to download anything from 
+                        the web, since they can always find their targets again and again if and when needed&nbsp;:-P</font>
+                        
+                    
+  
+  <br> <bR>
+ 
+
+</lI>    
+
+    <a name="irc"></a>
+<li>
+<a href="irc.htm">IRC</a> channels and <a href="blog.htm">blogs</a><br> 
+Searching through <acronym title="Internet Relay Chat -  a multi-user chat system, where people convene on 'channels'">IRC</acronym> channels 
+and blogs can be -for specific targets- quite useful.       However the ratio noise/signal is
+quite bad on these channels, and therefore IRC-searching and blog-searching is -in many cases- a 
+waste of time if compared to more effective searching 
+techniques. 
+    <br>After all, and behind the hype, blogs are just messageboards where only the Author can start a thread, and IRC channels need, in order to be useful, a lot of 
+    social engineering.
+<bR>I'll just direct you to some 
+<a href="blog.htm#bigalist">blogs search engines</a> and to some 
+<a href="irc.htm#ircsearch">IRC search engines</a> like 
+<a target=_top href="http://searchirc.com/search.php?F=partial&N=all&M=min&C=1&D=color&T=both&PER=15&I=python&Submit.x=0&Submit.y=0">this one</a>. Nuff said.           <bR><bR>
+  </li>
+        <a name="funny"></a>   
+     <li>
+<a href="main.htm">Various "uncommon" search engines</a><br>     
+        
+        At times simply switching to less known (but quite interesting) search engines can cut mustard. 
+        <br>Here's a related search with 
+         <a target=_top href="http://www.kartoo.com/flash04.php3?langue=en&q=python">kartoo</a>
+              <br>
+              and here's another search using <a target=_top href="http://www.gigablast.com/cgi/0.cgi?plus=core+python&ns=2&sc=1&n=100">gigablast</a>.
+       <br>
+       Finally, since we are speaking of a programming language, we may also  have a look at the recent google codesearch:<br>
+       <a target=_top href="http://www.google.com/codesearch?hl=en&lr=&q=return+lang%3Apython&btnG=Search">return lang:python</a> gives 283000 
+       scripts, enough for some serious studying. Samo with <a target=_top href="http://gallery.live.com">MSNsearch macros</a>.<br><br>
+       So we found our targets again and again using a palette of different searching colours. These are all paths that lead into 
+       the forest, and you'll be able to find many more on your own. Now let's go back to the theory.
+       
+       </li>
+            
+           
+            
+            
+       </oL>
+       
+
+          
+<br><bR><br>  
+
+<a name="goalo"></a>
+<center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Search engines' spamming (& "popularity")</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br>
+<i>Google alone and you're never done</i>
+<br><br>
+</center>
+
+     Google's results, after many years of legendary quality, are
+now  being spammed more and more.<br> 
+Using a plethora of methods (cloaking, doorway pages, hidden text, blog-farms, you name it) 
+the  <a href="links.htm#SE0beasts">SEO beasts</a> ("search engines optimizators" 
+they have the cheek to call themselves) deny everybody the possibility to gather  real knowledge 
+pushing up 
+their crap commercial sites into the first positions of the <acronym title="Search Engines Result Pages">SERP</acronym>s.<br>
+	<br>
+      <table><tr>
+      	<td align=left><center>
+<IMG SRC="images/spammingcoverage3.jpg" ALT="coverage" WIDTH="283" HEIGHT="283" ></tD>
+<td> &nbsp; &nbsp; &nbsp;</tD>
+      	<td>
+<font size=+1>  
+
+
+Of course you can apply some <a href="nemo_SEO.htm">countermeasures</a>: 
+users -rather than spammers- should be able to influence the ranking of search results and some 
+search engines (MSNsearch's until a few months ago had beautiful 
+<a href="http://search.msn.com/results.aspx?q=%7Bfrsh%3D94%7D+%7Bpopl%3D20%7D+%7Bmtch%3D99%7D+rapidshare.de%2Ffiles+google&FORM=QBRE">sliders</a> 
+-now MSNlive has  
+ <a target=_top href="http://gallery.live.com">macros</a> though- 
+and Yahoo still has <a target=_top href="http://mindset.research.yahoo.com/search.php?p=%22advanced+web+searching%22&t=2.00">philtron</a>)  
+provide users with the opportunity 
+to influence -at least rudimentary- the  ranking algorithms. 
+<br>
+A notorious case is the infamous 'popularity' ranking criterion. This you should by all means avoid or slide to insignificancy, since 
+it is <i>eo ipso</i> tantamount to crappiness.
+<br>
+ Contrary to 
+what search engines' algos designer still seem to believe,  <font color=blue>TURNING POPULARITY DOWN</fonT> if given half a 
+chance, is very important, since for  humans with brains what -say-  some idiots in Idaho are massively looking for 
+has no relevance whatsoever.   "Sites popular for zombies" are exactly those sites that you will never need. Remember the beautiful 
+ old trick of adding a <font color=blue>site:edu</fonT> or <font color=blue>site:org</fonT> specification to all your searchstrings per default: 
+ all the "<font color="#000080">com</font>" sites will disappear: good riddance.
+
+
+</td></tR></table>  
+ <bR><br>
+ For search engines that do not allow any algo fine-tuning, a possible defensive approach is the "<a href="yoyo1.htm">yo-yo</a>" approach: 
+ jumping  from the start 
+ onto lower <acronym title="Search Engines Result Pages">SERP</acronym>s and then going slowly back up.
+<br><br> 
+Such methods can soon prove 
+even more crucial for Internet searching purposes:
+ while google may not be yet a sinking boat, anyone can  
+see how much water is already leaking through its many spammed holes. <br><br>
+So we have <font color=blue>to refine our seeking techniques</font>.
+<br>
+Instead of just using google again and again, every time  we 
+begin a search, we should 
+carefully consider <font color=blue>how and where</font>  we start our searches, delve a little more 
+inside 
+our own specific requirements, and avoide wasting too much time 
+on irrelevant side paths... <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">&nbsp; &nbsp; 
+<br>
+
+<br>
+<br> 
+
+<br>
+<!-- ----------- ------- -->
+<!-- CONCLUSIONS (begin) -->
+<!-- ----------- ------- -->
+
+<a name="goalt"></a>
+  <center>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Conclusions</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+<br><br><i>
+Quaeras ut possis, quando non quis ut velis</i>
+<br><br>
+</center>  
+<br>There are various strategies you can use when searching the web.
+Some are more relevant for <a href="longtermsearching.htm">LONG TERM</A> searching, some 
+on the contrary, for <a href="tips.htm">SHORT TERM</A> searching.
+<br>  But even the various simple techniques we used today (searching 
+for mp3s and books) can and should be used together with the <a href="quickforms.htm">main</a> 
+search engines.       On the ever moving web-quicksands 
+it does not make much sense to give a list of links to places where you can 
+"search alternatives". It is better, I believe, to  (try to) show directly how to "search alternatively". 
+<br><br>
+Of course there are various important <u>non commercial</u> databases, like Infomine (<a target=_top href="http://infomine.ucr.edu">http://infomine.ucr.edu</a>), 
+Librarians Internet Index (<a target=_top href="http://lii.org">http://lii.org</a>), The Internet Public Library (<a target=_top href="http://www.ipl.org/">http://www.ipl.org/</a>) Resource Discovery Network (<a target=_top href="http://rdn.ac.uk">http://rdn.ac.uk</a>), 
+Academic Info (<a target=_top href="http://www.academicinfo.net/">http://www.academicinfo.net/</a>), The Front (for journals: <a target=_top href="http://www.arxiv.org/multi?group=math&%2Ffind=Search">http://www.arxiv.org/multi?group=math&%2Ffind=Search</a>)
+and finally the best one of all: The Open Directory Project (<a target=_top href="http://dmoz.org">http://dmoz.org</a>).<br>
+These are all  
+possible alternatives to a single approach limited to the <a hre="main.htm">main</a> search engines.   <br><br>
+Yet lists of links  are and remain just that: lists of links. Bound to decay into 
+obsolescence. 
+<bR>We have seen some alternative approaches. Practice them on your own subjects and interests. Once you learn how to seek, the world is yours. 
+Cosmic power for free.
+<br>
+
+
+
+
+
+
+<br>
+
+
+<br>
+<!--ASSIGNEMENT (begin) -->
+<!-- ----------- ----- -->
+  <center>
+<a name="fivee"></a>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Assignment</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+
+<br><i>Nil perpetuum, pauca diuturna sunt</i><br><br>
+  </center>
+<br>
+		An easy assignment for this evening:
+(just in order to practice the various techniques explained today, lest you forget everything):  
+find <u><b><font color=blue>the new 1120 pages - September 2006 - second edition</fonT></b></u> 
+of our target <i>Core Python Programming</i> by Wesley J. Chun,    (Prentice Hall, ISBN: 0132269937)<br>
+This search should take you at most 10 minutes if done now (and just a few seconds in a couple of months, 
+when the book will have percolated the Web).
+
+<bR><bR>
+    And now I'm finished. 
+    <bR>Thank-you for your patience. Any questions?
+<br><br>
+<br><br>
+<br><br>
+
+  <a name="disapp"></a> 
+  <a name="slides"></a>
+<br><br>
+<!-- Begin disappeared  --> 
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6" width=88%><center><font
+size=+3>FORMS</font></center></td><td><center><a href="Luxembourg_2006.htm#toptop">Top</a></center></td></tr></table>
+</center><center><br><font size=+3> SEARCHING THE PAST
+(DISAPPEARED SITES)</fonT><br>
+<br><a target=_top href="http://webdev.archive.org/">http://webdev.archive.org/</a> 
+~ The 'Wayback' machine at Alexa: explore the Net as it was!</center><br>
+<br><font size=+2>
+Visit <a target=_top href="http://webdev.archive.org/">The 'Wayback' machine</a> at Alexa</font>, 
+or try your luck with the form below. 
+
+<br>
+<form action="http://web.archive.org/archive_request_ng" method="get">
+									<input type="hidden" name="collection" value="web">
+									<input type="text" name="url" value="http://" size="40" maxlength="256">
+									<input type="submit" value="Take Me Back!" name="Submit">							
+								</form>
+<br>
+<br>
+<font size=+2>
+Alternatively, learn how to navigate through
+ <font color=blue>[</font><a href="serend_1.htm">Google's cache</a><font color=blue>]</font>! </font>
+<br><br>
+  Alternatively a new "preservation" 
+  project from <a target=_top href="http://www.loc.gov/webcapture/">Webcapture</a>:
+  the <a target=_top href="http://netpreserve.org/about/index.php"> International Internet Preservation Consortium</a> is coming along.     
+       
+          <bR><br>
+<br>
+<a name="mainsea"></a>
+  <center>
+<table border="1" width=55%><tr><td width="8%" bgcolor="#C6E7C6"><center><a href="Luxembourg_2006.htm#goalt">aap</a></td><td bgcolor="#FFE4B5"><center><font
+size=+3>All the various main search engines. </font> </center></td><td width="8%"><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+</center>
+<br><br>A quick tour of the <a href="main.htm">main</a> search engines...  <IMG SRC="images/bulletr.gif" ALT="red" align="bottom" valign="bottom" WIDTH="13" HEIGHT="13">&nbsp; &nbsp; 
+<bR><center>
+<!--***** BEGIN QUICK SEARCH FORMS *****--> 
+<a name="quickforms"></a><br>
+<!--***** BEGIN QUICK SEARCH FORMS *****--> 
+
+<table border="1" cellpadding="0" cellspacing="0" width= 76%>
+<tr><td colspan="5"><center><font size=+2><a href="quickforms.htm">Quick forms</a>&nbsp; 
+</font></center></td></tr>
+<tr><td colspan="5"></td></tr>
+
+<!-- googlette  begin -->   
+<form  target="_blank" method=GET action=http://www.google.com/search target=_blank name=gs>
+<tr><td width="9">&nbsp;<a href="http://www.google.com/advanced_search?" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td width="81">
+<input type=text name=q value="" size=30><input type=hidden></font>
+<input type=hidden name=num value=100><input type=hidden name=safe value="off"><input type=hidden name=hl value="en"><input type=hidden name=lr value=""><input type=hidden name=ie value="ISO-8859-1">
+</td><td width="99"><center><input TYPE="submit" class="submit" NAME=btnG VALUE="Google">
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.google.com/options/">T</a>&nbsp;
+</td><td><center>&nbsp;Always 100 rez, safe off
+</td></tr>
+</form>		
+<!-- googlette  end -->      
+
+<!-- Msnette  begin  -->    
+<form  target="_blank" id="qf" action="http://beta.search.msn.com/results.aspx" target="_blank" method="get">
+<tr><td>&nbsp;<a href="http://beta.search.msn.com/results.aspx?FORM=QBHP&qb=1&q=" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td>
+<input id="q" size="30" value="" name="q" VCARD_NAME="SearchText" />
+</td>
+<td><center>
+<input id="srch_btn" type="submit" class="submit" value="MSN&nbsp;" />
+<input type="hidden" name="FORM" value="QBHP"/>
+</td><td width="9"><center>&nbsp;<a target=_top href="http://adlab.msn.com/demo.aspx">T</a>&nbsp;
+</td><td><center>&nbsp;&nbsp;No more sliders, but <a target=_top href="http://gallery.live.com">macros</a>
+</td></TR>
+</form>
+<!-- Msnette a end  --> 
+
+<!-- Yahootte  begin  --> 
+<form  target="_blank" method="get" action="http://search.yahoo.com/search" target="_blank">
+<tr><td>&nbsp;<a href="http://search.yahoo.com/web/advanced?ei=UTF-8" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td>
+<input size="30" name="p"> 
+</td><td><center><input type="submit" class="submit" value="Yahoo">
+</td><td width="9"><center>&nbsp;<a target=_top href="http://tools.search.yahoo.com/more/">T</a>&nbsp;
+</td><td><center>Da biggest index?
+</td></TR>
+</form>    
+<!-- Yahootte  end  -->   
+
+<!-- A9  begin -->
+<FORM target="_blank" onsubmit="return ShowFormWarning()"  id=sf name=sf action=http://a9.com/  method=get>
+<tr>
+<td>&nbsp;<a href="http://a9.com/-/search/advSearch" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td>
+<INPUT id="SEARCH"  size=30 value="" name=q>
+</td>
+<td width="99"><center>
+<input type="submit"  class="submit" width="123" value="&nbsp;A9"/ name=submit">
+</td><td width="9"><center>&nbsp;<a target=_top href="http://opensearch.a9.com/-/search/moreColumns.jsp">T</a>&nbsp;
+</td><td> <input type="hidden" name="ns" value="2" />
+    <input type="hidden" name="sc" value="1" />
+    <input type="hidden" name="n" value="50" /><center>You can <a target=_top href="http://a9.com/-/search/moreColumns.jsp">personalize it</a>
+</TD></TR>
+</form>
+<!-- A9 end  --> 
+
+<!-- teomette  begin -->
+<form  target="_blank" name="ft" id="ft" action="http://search.ask.com/web" method="get" >
+<tr>
+<td>&nbsp;<a href="http://search.ask.com/webadvanced?q=" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td><input name="q" type="text" size="30" value="" id="q"/></td>
+<td width="99"><center>
+<input type="submit"  class="submit" width="123" value="&nbsp;Ask"/>
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.ask.com/edittools?tool=ask">T</a>&nbsp;
+</td><td> <input type="hidden" name="qsrc" value="1" />
+<input type="hidden" name="o" value="0" /><center>ex-teoma
+</TD></TR>
+</form>
+<!-- teomette  end  -->  
+
+<!-- gigablast  begin -->
+<form  target="_blank" method="get" action="http://www.gigablast.com/cgi/0.cgi">
+<tr>
+<td>&nbsp;<a href="http://www.gigablast.com/adv.html" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td>
+<input type="text" name="plus" size="30" maxlength="100" value="">
+</td>
+<td width="99"><center>
+<input type="submit"  class="submit" width="123" value="&nbsp;Gigablast"/>
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.gigablast.com/products.html">T</a>&nbsp;
+</td><td> <input type="hidden" name="ns" value="2" />
+<input type="hidden" name="sc" value="1" />
+<input type="hidden" name="n" value="50" /><center>Quite good
+</TD></TR>
+</form>
+<!-- gigablast end  --> 
+
+<!-- wisenut begin -->
+<FORM  target="_blank" METHOD="GET" ACTION="http://www.wisenut.com/search/query.dll" NAME="form1">
+<tr>
+<td>&nbsp;<a href="http://www.wisenut.com/wisesearch/wisesearch.html" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td>
+<INPUT type="text" name="q" size="30" value="" hspace="0" vspace="0" maxlength=128 >
+</td><td width="99"><center>
+<input type="submit"  class="submit" width="123" value="&nbsp;Wisenut"/>
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.wisenut.com/preferences/preferences.html?ce=true">T</a>&nbsp;
+</td><td><input type="hidden" name="p" value="0"><center>You 
+	can <a target=_top href="http://www.wisenut.com/preferences/preferences.html?ce=true">set your preferences</a>
+</TD></TR>
+</form>
+<!-- wisenut end  -->  
+        
+<!-- altavista begin -->
+<FORM  target="_blank" METHOD="GET" action="http://www.altavista.com/cgi-bin/query" name="mfrm">
+	 
+<tr>
+<td>&nbsp;<a href="http://www.altavista.com/web/adv" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td><input type="hidden" name="hl" value="on"><input type="hidden" name="kl" value="XX"><input type="hidden" name="kgs" value="0">
+<input type="hidden" name="pg" value="aq"><input type="hidden" name="enc" value="iso88591"><input type="hidden" name="text" value="yes">
+<input type="text" name="q" size="30" maxlength="128">
+</td><td width="99"><center>
+<input type="submit"  name="search" class="submit" width="123" value="&nbsp;Altavista"/>
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.altavista.com/web/res?">T</a>&nbsp;
+</td><td><input type="hidden" name="p" value="0"><center>With its wondrous <font color=blue>NEAR</fonT> operator!
+</TD></TR>
+</form>
+<!-- altavista end  -->  
+
+<!-- fastette begin  -->
+<form  target="_blank" action="http://www.alltheweb.com/search?" method="get" target=_blank> 
+<tr><td>&nbsp;<a href="http://www.alltheweb.com/advanced?advanced=1&cat=web&q=" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td><input type="text" name="query" value="" size="30">�
+<input type=hidden name=hits value=100><input type=hidden><input type=hidden name=ocjp value=1></td>
+<td width="99"><center>
+<input type="submit" class="submit" width="123" value="&nbsp;Fast&nbsp;">
+</td><td width="9"><center>&nbsp;<a target=_top href="http://www.alltheweb.com/help/faqs/query_language">T</a>&nbsp;
+</td><td><center>
+&nbsp;&nbsp;fastsearching for: 
+<select name="type"><option value="all">all of the words</option><option value="any">any of the words</option><option value="adv">boolean expression</option><option value="phrase" selected="selected">the exact phrase</option></select> 
+</td>
+</tr>
+</form>  
+<!-- fastette  end  -->   
+
+<!-- seekz  begin  -->
+<FORM target="_blank" onsubmit="return ShowFormWarning()"  action="http://www.seekz.com/search/"  id=headForm method=get name=headForm>  
+<tr>
+<td>&nbsp;<a href="http://www.seekz.com/about/" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td><INPUT size="30" name=q></td>
+<td><center><INPUT name=page type=hidden value="1">
+<INPUT name=amount type=hidden value="40"><INPUT type=submit class="submit" value="Seekz" name="submit"></td>
+<td width="9"><center>&nbsp;&nbsp;&nbsp;
+</td><td><center>Da &#252;ber<a href="compound.htm">compound</a></td></tr> 
+</form>
+<!-- seekz end  --> 
+
+<!-- Exaleadotte  begin  --> 
+<form  target="_blank" action="http://beta.exalead.com/?" method="GET">
+<tr><td>&nbsp;<a href="http://www.exalead.com/search/C=0/?2p=1" target="_blank">&#8730;</a>&nbsp;&nbsp;</td><td>
+<input type="hidden" name="U" value="" />
+<input type="hidden" name="C" value="0" />
+<input type="hidden" name="2q" value="" />
+<input id="$3" size="30" type="text" name="q" value="" />
+</td>
+<td><center><input type="submit" class="submit" value="Exalead" name="submit"></center></td>
+<td width="9"><center>&nbsp;&nbsp;&nbsp;
+</td><td><center>Exalead!</center></td>
+</TR>
+</form> 
+<!-- Exaleadotte a end  --> 
+
+<!-- bbc begin  --> 
+<form target="_blank" name="topform" method="get" action="http://search.bbc.co.uk/cgi-bin/search/results.pl">
+<tR><td>&nbsp;<a href="http://www.bbc.co.uk/search/advanced.shtml" target="_blank">&#8730;</a>&nbsp;&nbsp;</td>
+<td>
+<input name="q" type="text" size="30" value="" class="searchform" /></td><tD><center>
+<input type="submit" class="submit" name="submit" value="BBC.co.uk" /> 
+<input name="recipe" type="hidden" value="allbbc" /><input name="tab" type="hidden" value="www" />
+</td><td width="9"><center>&nbsp;&nbsp;&nbsp;
+</td><td><center><a href="inktomi.html">inktomi</a> type</center></tD>
+</form></td></tR>
+<!-- bbc end  --> 
+
+<!-- dmoz begin  --> 
+<FORM target="_blank" accept-charset="UTF-8" action="http://search.dmoz.org/cgi-bin/search" method="GET">
+<tR><td>&nbsp;<a target=_top href="http://search.dmoz.org/cgi-bin/search?a.x=0">&#8730;</a>&nbsp;&nbsp;</td>
+<td>
+<input size="30" name="search" value="" class="searchform" />
+</td><tD><center>
+<input type="submit" class="submit" name="submit" value="DMOZ" /> 
+</td><td width="9"><center>&nbsp;&nbsp;&nbsp;
+</td><td><center>the ALPHA & OMEGA of searching</center></tD>
+</form></td></tR>
+<!-- dmoz end  --> 
+<!-- final explanations for quickforms begin  -->
+<tr><td colspan="5"><center><font color=blue>&#8730;</fonT> = advanced; <font color=blue>T</fonT> = tools; visit the <a href="main.htm">main</a> search engines page.<br> Learning the 
+advanced specs and operators of a few major search engines (not only <a href="google.htm#adaope">google</a>'s),
+<br>knowing   
+ their common commands and their specific features,<br> will improve your 
+chances to fetch relevant information when <a href="longtermsearching.htm">seeking</a> the web.
+</center></td></tr>
+<tr><td colspan="5"></td></tr>
+<!-- final explanations for quickforms end  -->
+</table> 
+</center>
+<!--***** END QUICK SEARCH FORMS   *****--> 
+     
+<br><bR>   <!--***** BEGIN ALMOST FORGOT *****--> 
+
+          <center>
+  <font size=+1>
+            <a name="almost"></a>
+<table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Almost forgot...</font></center></td><td><center><a href="Luxembourg_2006.htm#top">top</a></td></tr></table>
+
+<br><br>
+        
+        Uhhh.. almost forgot, a small book-searching present for those that solved the assignment (all others shouldn't look):
+                               <br>
+        <a target=_top href="http://ebook.manboo.info/index.php?s=ubuntu">finding Ubuntu books</a>
+<br><br> </center>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+</font></font><center><br><br>
+<TABLE width="80%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#993300 height=2></TD></TR></TBODY></TABLE><BR><A  
+href="https://searchlores.nickifaulk.com/portal.htm">back to portal</A> &nbsp;
+&nbsp;
+<A href="Luxembourg_2006.htm#top">back to top</A>
+
+</FONT><BR><BR><!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="600" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) 1952-2032: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, 
+all rights reserved, all wrongs reversed 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+
+      <!-- END OF DIV BLOG -->
+</body>
+</HTML>

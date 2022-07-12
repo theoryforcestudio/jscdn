@@ -1,0 +1,255 @@
+
+<pre>
+It's very easy to set the MAC Address on a linux box:
+<font color=blue>ifconfig eth0 hw ether 01:00:00:00:00:01</font>
+
+not so easy on windoze, you can use a ready made program:
+
+either <a href="http://students.washington.edu/natetrue/macshift/">Macshift</a>, by Nathan True, 
+which is free, and comes with
+source code released under the terms
+of the <a target=_top href="http://www.gnu.org/licenses/gpl.html">GNU General Public License (GPL)</a>), 
+or SMAC (commercial, but easy to find)
+<br>
+
+
+If you are referring to SMAC, save your breath because it is
+spotty at best, and in my testing with different corporate clients
+the implementation of changing the MAC address made the DHCP fail.
+
+This is from the SMAC site:
+
+Quote:
+SMAC took advantage of the NdisReadNetworkAddress function in the
+Microsoft Device Driver Development Kit (DDK.)
+
+NdisReadNetworkAddress(...) is called by the network adapter
+driver to obtain a user specified MAC address in the registry.
+After the driver confirms that there's a valid MAC address
+specified in the registry key, the driver then programs the MAC
+address to its hardware registers to override the burn-in MAC
+address.
+
+
+Overriding is not the issue, getting it to behave solidly and
+stable is.
+
+http://www.klcconsulting.net/smac/
+
+These are the most popular methods of changing the MAC address,
+however 99% of the time will fail in the DHCP resolution.
+
+Quote:
+Method 1:
+
+This is depending on the type of Network Interface Card (NIC) you
+have. If you have a card that doesn’t support Clone MAC address,
+then you have to go to second method.
+
+Go to Start->Settings->Control Panel and double click on Network
+and Dial-up Connections.
+
+Right click on the NIC you want to change the MAC address and
+click on properties.
+
+Under “General” tab, click on the “Configure” button
+
+Click on “Advanced” tab
+
+Under “Property section”, you should see an item called “Network
+Address” or "Locally Administered Address", click on it.
+
+On the right side, under “Value”, type in the New MAC address you
+want to assign to your NIC. Usually this value is entered without
+the “-“ between the MAC address numbers.
+
+Goto command prompt and type in “ipconfig /all” or “net config
+rdr” to verify the changes. If the changes are not materialized,
+then use the second method.
+
+If successful, reboot your systems.
+
+
+This method works only "in theory", as I haven't seen anyone reach
+any degree of success with it.
+
+
+
+Quote:
+Method 2:
+
+This method requires some knowledge on the Windows Registry. If
+you are not familiar with Windows Registry, just use the SMAC tool
+to change the MAC addresses, or consult with a technical person
+before you attempt on the following steps. Also, make sure you
+have a good backup of your registry.
+
+a. Goto command prompt and type “ipconfig /all”, and
+
+I. Record the Description for the NIC you want to change.
+
+II. Record the Physical Address for the NIC you want to change.
+Physical Address is the MAC Address
+
+b. Goto command prompt and type “net config rdr”
+
+c. Remember the number between the long number (GUID) inside the {
+}. For example, in the above “net config rdr” output, for MAC
+address “00C095ECB793,” you should remember
+{1C9324AD-ADB7-4920-B02D-AB281838637A}. You can copy and paste it
+to the Notepad, that’s probably the easiest way.
+
+d. Go to Start -> Run, type “regedt32” to start registry editor.
+Do not use “Regedit.”
+
+e. Do a BACKUP of your registry in case you screw up the following
+steps. To do this
+
+I. Click on “HKEY_LOCAL_MACHINE on Local Machine” sub-window
+
+II. Click on the root key “HKEY_LOCAL_MACHINE”.
+
+III. Click on the drop-down menu “Registry -> Save Subtree As” and
+save the backup registry in to a file. Keep this file in a safe
+place.
+
+f. Go to
+“HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E9
+72-E325-11CE-BFC1-08002BE10318}. Double click on it to expand the
+tree. The subkeys are 4-digit numbers, which represent particular
+network adapters. You should see it starts with 0000, then 0001,
+0002, 0003 and so on.
+
+g. Go through each subkey that starts with 0000. Click on 0000,
+check DriverDesc keyword on the right to see if that's the NIC you
+want to change the MAC address. The DriveDesc should match the
+Description you recorded from step (a.-I.). If you are not 100%
+sure about the DriverDesc, then you can verify by checking if the
+NetCfgInstanceID keyword value matches the GUID from step (c).
+If there is no match, then move on to 0001, 0002, 0003, and so on,
+until you find the one you want. Usually 0000 contains the first
+NIC you installed on the computer.
+
+
+h. Once you selected the subkey (i.e. 0000), check if there is a
+keyword "NetworkAddress" exist in the right side of the window.
+
+I. If "NetworkAddress" keyword does not exist, then create this
+new keyword:
+
+i. Click on the drop down menu “Edit -> Add Value”.
+
+ii. In the Add Value window, enter the following value then click
+OK. (See figure 4.)
+Value Name: = NetworkAddress
+Data Type: = REG_SZ
+
+
+iii. String Editor window will pop up at this time.
+
+iv. Enter the new MAC address you want to modify. Then click OK.
+(There should not be any "-" in this address. Your entry should
+only consist of 12 digits).
+
+II. If "NetworkAddress" keyword exists, make sure it shows the
+keyword type is REG_SZ, and it should show as
+NetworkAddress:REG_SZ: . This keyword might not have a value at
+this time.
+
+i. Double click on the keyword NetworkAddress and the String
+Editor window will pop up.
+
+ii. Enter the new MAC address you want to modify. Then click OK.
+(There should not be any "-" in this address. Your entry should
+only consist of 12 digits.
+
+
+j. There are 2 ways to make the new MAC address active. Method I
+does not require a system reboot:
+
+I. Goto Start->Setting->Control Panel, and double click on
+"Network Neighborhood".
+WARNING: Make sure you understand that you WILL lose the network
+connection after completing step "ii." below, and
+if you have a DHCP client, you will get a new IP address after
+completing step "iii."
+
+i. Select the Network Adaptor you just changed the MAC address.
+
+ii. Right click on the selected Network Adaptor and click
+"Disable."
+Verify the status column for this adaptor changes to "Disabled"
+
+iii. Right click on the selected Network Adaptor and click
+"Enable."
+Verify the status column for this adaptor changes to "Enabled"
+
+iv. If for any reason it cannot be disabled or re-enabled, you
+have to
+reboot your system to make the changes effective.
+
+II. Reboot your Windows system.
+
+k. Once completing step j (if rebooting the system, wait until the
+reboot is completed), go to command prompt, type “ipconfig /all”
+to confirm the new MAC address.
+
+
+Unfortunately in most cases the following procedure follows the
+attempt to change the MAC address. Restoring the true HW MAC
+address:
+
+Quote:
+Restore The TRUE Hardware burned-in MAC Address:
+
+Remove the entry you added:
+
+If you followed Method 1, then go back to the advanced properties
+window and remove the entry you add.
+
+If you followed Method 2, then remove the "NetworkAddress" keyword
+you added in the registry.
+
+Use step (j) above to activate the change you make.
+
+Once rebooted, go to command prompt, type “ipconfig /all” to
+confirm the original MAC address.
+
+
+
+If MAC Address changes does not work:
+
+If for whatever reason the MAC address cannot be changed using
+method 2, make sure you restore the registry setting by following
+the "Restore The TRUE Hardware burned-in MAC Address" instruction
+above. If necessary, restore the registry you just backed-up to
+get your system back to the original state. You can do this by
+clicking on the drop-down menu “Registry->Restore,” and restore
+your backup registry file.
+
+
+It may work (as I noted there is a very small % that will succeed
+in changing the MAC address), but the number of factors that must
+coincide to make it work is just not worth even trying (unless you
+are positive beforehand that those requirements/factors are
+present).
+
+
+In fact, under Windows XP, the MAC address can be changed in the Ethernet 
+adapter's Properties menu, in the Advanced tab, as "MAC Address", 
+"Locally Administered Address", "Ethernet Address" or "Network Address". 
+The exact name depends on the Ethernet driver used; not all drivers 
+support changing the MAC address in this way.
+
+However, a better solution - requiring Administrative User Rights 
+- is to pass over the System Registry Keys under 
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4D36E972-E325-11CE-BFC1-08002BE10318}. 
+Here settings for each network interface can be found. 
+The contents of the string value called 'NetworkAddress' 
+will be used to set the MAC address of the adapter when next it 
+is enabled. Resetting the adapter can be accomplished in script with 
+the freely available command line utility 'devcon' from Microsoft, 
+or from the adapters context menu in the Network Connections 
+control panel applet.
+
+</pre>

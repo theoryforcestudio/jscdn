@@ -1,0 +1,281 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>serend_1.htm: How to search the web, by fravia+, 
+Serendipity ~ (or how I figured out an easy way to
+search Google's cache)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html;
+charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and
+advanced search techniques for people interested in finding any
+kind of information on the web. Here are informations, documents,
+links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how
+to search, search techniques, hints and tips for searching the
+web, How do I learn to search?, Advanced Internet searching, How
+do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) IIIrd Millennium fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040
+VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Serendipity ~</font><br>(or how I figured out an easy way to
+search Google's cache)<br>by Shoki, November 2001<br>   Updated October 2002<br>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="details.htm"><IMG
+SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Serendipity</th>
+</tR></table>Version <font color=blue>November</FONT> 2001
+<!-- internet searching techniques: imageheader end -->
+<hr width=44%> 
+<br> 
+    <i>Eh, this is still in fieri, and is just a first attempt, ya know...</i>
+<hr>
+An addition by <a href="serend_1.htm#addi">radix42</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+An addition by <a href="serend_1.htm#nit">nit</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+An addition by <a href="serend_1.htm#arro">Arrowfrog</a> 
+<hr>
+</center>
+<br>
+<pre>Serendipity (or how I figured out an easy way to
+search Google's cache)  by Shoki
+
+  This isn't a full-blown essay, more of a starting
+point.  I hope someone will take this idea and make it
+more flexible.
+
+  I was playing with the idea of using visual basic to
+write a simple web browser using the internet explorer
+object in order to create a way to surf around
+Google's cache.  Then lo and behold the next week I
+see a post by Stiletto on the seeker's messageboard
+mentioning the very same idea.  vvf replied to his
+post and mentioned a server side script that would get
+all urls and translate them to point to Google's cache
+instead of the original location.  This made me think
+there must be an easier way then creating a web
+browser to do the job.
+
+  Well I didn't give this whole idea much more thought
+and let it sit on the back-burners.  Then the other
+day I was looking for a file on my hard drive.  I
+moved it and forgot where I put it and forgot what it
+was called.  I did know it was a very large file (like
+500megs) so I did a find, and searched for any files
+over 99999kb (that seems to be the limit in windows
+find).  Up popped a bunch of big files, one of them
+was inet.chm at 119mb.  This file is part of the MSDN
+collection I had installed on my machine, but I had
+never open it before.  So out of curiousity I opened
+it and started randomly clicking links in the table of
+contents and various pages.  I wasn't really looking
+or paying much attention to what i was doing, when all
+of a sudden the page I was on said "Adding Entries to
+the Standard Context Menu" (in Internet explorer). 
+Bang! the light went on, out of the recesses of my
+mind came the connection of "Boy wouldn't it be cool
+to have a right click option to search Google's cache
+within IE"  Ok, I know everybody hates M$ and IE
+(Personally I still use Opera 3.62) but I have no idea
+how to add a right click menu to Opera and here was
+some information on how to do it in IE.  Reading
+through the information I saw that the context menu
+calls a script.  That got me thinking about getting
+javascript to grab a URL I right click on and passing
+it to Google.
+
+  Well after some searching for code on Deja to do
+this and many trial and error attempts I finally got
+it working!
+
+  Here is what you need so you can right click on
+"most" links and jump straight to the Google cached
+copy (if it exists).  You can also use it to stay
+inside Google's cache (if the page exists).
+
+Create the following registry entry;
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet
+Explorer\MenuExt\Google Cache]
+@="C:\GoogleCacheSearch.htm"
+"contexts"=dword:00000020
+
+Create a file, with the following code, called
+GoogleCacheSearch.htm and save to c:\ (if you save it
+to a different location, change the registry entry
+above to point to the correct location)
+
+
+&lt;SCRIPT LANGUAGE = "JavaScript"&gt;
+var oWindow = window.external.menuArguments;
+var oDocument = oWindow.document;
+theEvent = oDocument.parentWindow.event;
+theLink = theEvent.srcElement;
+oWindow.location.href =
+("<a href="http://www.google.com/search?q=cache" target=_blank>http://www.google.com/search?q=cache</a>:" + theLink);
+&lt;/SCRIPT&gt;
+
+When you run IE, you should now have a context menu
+with "Google Cache" available when you right click on
+a link.  Choosing this will grab the URL of the link
+and query Google's cache.
+
+  As I said, this is a starting point, and hopefully
+someone will pick this up and expand upon it, as I
+don't intend to.  The way it currently works, it will
+only work with links (not all kinds), so I'm sure the
+javascript can be expanded to include images, or
+selected text, etc.
+
+  Here is the information on the "contexts" values;
+
+Set the value of Contexts to indicate which contexts
+your entry should appear in the standard context menu
+by using a bit mask consisting of the logical OR of
+the following values:
+
+Context Value 
+Default 0x1 
+Images 0x2 
+Controls 0x4 
+Tables 0x8 
+Text selection 0x10 
+Anchor 0x20 
+</pre>
+<br>
+(c) Shoki 2001<br>
+<a name="addi"></a>
+<hr><center>
+<font size=+3>
+An addition by <u>radix42</u>
+</font></center><br>
+<pre>Hi Fravia+,
+
+I just read the essay by Shoki about easily accessing
+the Google cache. It looks interesting, but I prefer
+not using IE. I took another approach and it seems to
+work: Using Proximotron 4.0 it is possible to setup
+URL redirection. Proximotron can replace every URL
+with another ('http:/www.site.com' will silently
+replaced by
+'<a href="http://www.google.com/search?q=cache:http:/www.site.com'" target=_blank>http://www.google.com/search?q=cache:http:/www.site.com'</a>).
+
+Setup
+
+Install Proximotron, add a HTTP Header filter with
+following values:
+
+HTTP Header = 'URL: Google Cache (Out)'
+URL Match = {empty}
+Header Value match = '\1'
+Replacement Text =
+'$RDIR(<a href="http://www.google.com/search?q=cache:\1" target=_blank>http://www.google.com/search?q=cache:\1</a>)'
+
+That's all.
+
+radix42     
+</pre>
+
+        
+<a name="nit"></a>
+<hr><center>
+<font size=+3>
+An addition by <u>nit</u>
+</font></center><br>
+      <pre>
+hi, fravia+ 
+i  suggest  one  addition  in order to make the thing 
+more usefull: 
+in GoogleCacheSearch.htm the script should look like this: 
+
+&lt;SCRIPT LANGUAGE = "JavaScript">
+   var oWindow = window.external.menuArguments;
+   var oDocument = oWindow.document;
+  
+   theEvent = oDocument.parentWindow.event;
+   theLink = theEvent.srcElement;
+   psWindow = oWindow.open('http://www.google.com/search?q=cache:' +theLink)
+&lt;/SCRIPT> 
+
+this way it will open the page in cache in a new window. 
+
+nit
+</pre>   
+
+    
+      
+<a name="arro"></a>
+<hr><center>
+<font size=+3>
+An addition by <u>Arrowfrog</u>
+</font></center><br>
+<pre>
+Hi fravia+,
+
+I like to suggest a small addition to the article at 
+http://www.searchlores.org/serend_1.htm
+
+As google doesn’t always cache everything, we can also 
+use this method to link to Wayback machine. That way, 
+we can get more hits easily :) 
+
+Just create another registry key exactly as that for 
+Google except change the name to Wayback machine or 
+something like that and create a file WayBackMachineSearch.htm 
+with the following: 
+
+&lt;SCRIPT LANGUAGE = "JavaScript">
+var oWindow = window.external.menuArguments;
+var oDocument = oWindow.document;
+theEvent = oDocument.parentWindow.event;
+theLink = theEvent.srcElement;
+psWindow = oWindow.open("http://web.archive.org/web/*/" + theLink);
+&lt;/SCRIPT> 
+
+Arrowfrog 
+</pre>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center> <a href="details.htm"><IMG SRC="images/petothe.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>
+
+
+

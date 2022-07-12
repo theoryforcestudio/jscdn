@@ -1,0 +1,641 @@
+<HTML>
+<HEAD>
+<TITLE>rt_bot2.htm The hcuBOT/0.2: a simple Web Retrieval Bot in Perl</TITLE>
+</HEAD>
+<BODY BGCOLOR=#C0C0C0 TEXT=#001010
+VLINK=#405040><TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100% HEIGHT=" 26">
+<TR><td></td>
+<td>
+<!-- Choose a TITLE probably wont be changed -->
+<center><FONT SIZE="+2">A simple Web Retrieval Bot in
+Perl</fonT><br>
+<FONT SIZE="+1"></fonT>
+</center>
+</td>
+<td>
+<!-- Choose a PROJECT GIF, leave this if unsure -->
+<center><a href="bots.htm"><img SRC="https://searchlores.nickifaulk.com/images/botstart.gif"
+ALT="bots" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0
+VSPACE=0
+HSPACE=0></a><br><font color=gray>Bots section</FonT>
+<br><bR></center>
+</center></td></tr>
+<tR>
+<td bgcolor="#FFFFEA"><center>
+<FONT COLOR="890000">
+<!-- CHOOSE A DATE (will probably be changed) -->
+14 September 1999
+</FONT></center>
+</td>
+<td bgcolor="#FFFFEA"><center>by <font size=+3>
+<!-- CHOOSE A HANDLE (wont be changed) -->
+deep</font><br>
+</fonT></center>
+</td>
+<td VALIGN="center" bgcolor="#FFFFEA">
+<!--
+<a href="hcu98_3.htm"
+tppabs="<a
+href="<a href="http://www.fravia.net/hcu98_3.htm" target=_blank>http://www.fravia.net/hcu98_3.htm</a>"><IMG
+SRC="hcu1.gif"
+ALT="+cracker" ALIGN=BOTTOM
+WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+-->
+</td>
+</tr>
+<TR><td><center><a href="index.htm"><IMG
+SRC="images/bulletr.gif"
+ALIGN="BOTTOM"
+BORDER="0" VSPACE="0" HSPACE="0" width="13" height="13"></a></center></td>
+<TD BGCOLOR="898030"><center>Courtesy of Fravia's searchlores.org</center>
+</center></TD>
+<td BGCOLOR="898030">
+</td>
+</TR>
+<tr><td><font
+color="#C4C0CF">fra_00xx<bR>98xxxx<br>deep<br>1000<br>BO<br>PC<br></fonT></td><td><i><center>
+The second version of the famed HCUbot that you'll be able to study in its 
+first incarnation <a href="rt_bot1.htm">here</a>.
+</i></center></td>
+<td></td>
+</tr>
+<TR><td></td>
+<!-- Leonard Coehn's old song, because we are poets,
+not only crackers -->
+<TD BGCOLOR="898030"><center></i><b>There is a crack,
+a crack in everything
+That's how the light gets in</b></center>
+<!-- Leonard Coehn's old song, because we are poets,
+not only crackers -->
+</center></TD><td></td>
+</TR>
+<TR>
+<td VALIGN= "MIDDLE" bgcolor="#C6E7C6"><font
+color=blue><center>
+Rating</FONT></FONT></center>
+</TD>
+<td VALIGN = "MIDDLE" bgcolor="#C6E7C6"><font
+color=blue><center>
+<!-- CHOOSE A RATING (may be changed) -->
+(x)<B>Beginner</B> ( )<B>Intermediate</B> (
+)<B>Advanced</B> ( )<B>Expert</B></FONT>
+</center></td>
+<td></td>
+</tr>
+</table>
+<!-- END HEAD -->
+<bR>
+<!-- CORPUS -->
+<!-- CHOOSE A COMMENT (may be changed) -->
+<hR>
+<center>
+<FONT SIZE="+2">
+<!-- CHOOSE A TITLE (wont probably be changed) -->
+Simple Web Retrieval Bot in Perl
+</FONT><BR>
+<FONT SIZE="+2">
+<!-- CHOOSE A SUBTITLE (wont proably be changed) -->
+</FONT><BR>
+<FONT COLOR="0B7FC1">
+<!-- REPEAT YOUR CHOSEN HANDLE HERE -->Written by
+deep
+</FONT>
+</center><br><br>
+<!-- INTRO STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%" HEIGHT="26" >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Introduction</fonT>
+</fonT></center></td></tr></table>
+<center>
+<P>
+Perl is a good language to learn - fairly
+straightforward, quick, very powerful and ideal
+for bots, cgi and the net generally! I hope that
++reverser will publish this as part of the
+botstart section and that the bot section will start
+boting. </center> <br><br>
+<!-- TOOLS STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%" HEIGHT="26" >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Tools required</fonT>
+</fonT></center></td></tr></table>
+<P>
+Perl (standard on Linux and freely available) and
+various Perl modules (small, free
+downloads),<BR>
+net access,<BR>
+a text editor,<BR>
+Linux (not absolutely necessary, but a far superior,
+free and real operating system).
+<br><br>
+<!-- REAL ESSAY STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%" HEIGHT="26" >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Essay</fonT></fonT>
+</center></td></tr></table>
+<P>
+What can I say about Perl? It's a good language to
+learn. Virtually all cgi is done in
+Perl but it's good for virtually anything that you'd
+care to do and it's possible to
+develop applications very quickly. I'm not yet that
+experienced at Perl - this is my first
+'real' app and I'm certain that this bot is not
+written at all well, but it is
+written. Perhaps that's the best thing about Perl - it
+enables you to do things that would
+not otherwise be possible. The CPAN Perl code
+repository on the net holds vast quantities
+of free code to do almost anything you could ever wish
+- but you have to be able to use
+Perl. You will need to download at least the LWP (it
+stands for libwwwperl) module from
+CPAN for this or almost any Perl bot to work.
+<P>
+There are
+many Perl bots available on the
+net, but I'm fairly certain that you will not find one
+that does exactly what you want.
+There's also a convention amoung bot writers not to
+give bots to people who do not
+understand them - it's considered irresponsible. Of
+course, once you've learned how to
+build bots, you can be as irresponsible as you like.
+What all this means is that you have
+to learn to appreciate them and Perl or you don't
+deserve them. Don't worry, it's easy
+enough - just a little effort.
+<P>
+Please note that this is not good Perl code and I am
+not a programmer.
+This bot shows that to start using Perl you only need
+to understand
+a little. The accepted approach for newbies writing
+Perl5
+applications is to get them working first, then
+improve on them if
+necessary.
+<P>
+Here's a very simple web retrieval bot I've written
+that
+retrieves many web pages from a single
+site. This bot is fairly limited in what it can
+achieve, (and bots can do far more than download web
+pages) but you are free to add any
+functionality you like - just write the code.
+</i>
+</PRE>
+<P>
+The hcuBOT/0.2 is written as a Linux application -
+it will need work to use on windoze (I recommend
+installing Linux;).
+ActivePerl (1.5 meg) needs to be downloaded to use
+Perl under
+windoze.
+<P> Perl helps development all the way with excellent
+error messages. You can write it cryptically or you
+can write it
+simply. I'm going to write it simply until I learn
+more - I hope that
+this code is fairly clear. Use 'use diagnostics' and
+the -w switch
+only while developing - they can cause strange
+messages to be sent to
+servers. If something doesn't work, try it a slightly
+different way. I
+tend to use print statements to identify where perl
+fails and this
+seems to work well but there's also a very good
+debugger built in.
+<P>
+There are notes after the source to explain what's
+happening.
+<PRE>
+#!/usr/bin/perl   # -w
+# use diagnostics;
+use LWP::RobotUA;
+use HTML::Parser;
+use URI::URL;
+use POSIX;
+use DB_File;
+
+ my $url;
+ my $arg = (shift @ARGV);
+ my $domain_name = "http://".$arg."/";
+ my @get_list = $domain_name;
+ local (%main,%localise);
+ local $counter = 0;   # local files
+ my $maxcount = 100; 	
+ my $dirname = $arg;
+
+
+		 # subclass package ParseLink based on Randal L.
+Schwartz's ~ see	
+{        #
+<a href="http://www.stonehenge.com/merlyn/WebTechniques/col07.html" target=_blank>http://www.stonehenge.com/merlyn/WebTechniques/col07.html</a>
+  package ParseLink;
+  @ISA = qw(HTML::Parser);
+
+  sub start {                   # called by parse
+    my $this = shift;
+    my ($tag, $attr) = @_;
+    if ($tag eq "a") {
+      $this->{links}{$attr->{href}}++;
+    }
+  }
+
+  sub get_links {
+    my $this = shift;
+    sort keys %{$this->{links}};	
+  }
+}
+
+
+change_dir($arg);
+
+tie(%main, DB_File, 'main-sdbm', O_RDWR | O_CREAT,
+0666) || die "$0: tie() failed : $!\n";
+tie(%localise, DB_File, 'local-sdbm', O_RDWR |
+O_CREAT, 0666) || die "$0:tie() failed : $!\n";
+$ua = new LWP::RobotUA
+'hcuBOT/0.2','<a href="https://searchlores.nickifaulk.com/C:/Documents%20and%20Settings/Administrator.EINSTEIN.000/My%20Documents/My%20Webs/fravia/index.htm?To=jclinton@whitehouse.gov&amp;YY=49912&amp;order=down&amp;sort=date&amp;pos=0">jclinton@whitehouse.gov</a>';
+$ua->delay(0.01);
+
+
+while (($url = shift @get_list) &amp;&amp; ($counter <
+$maxcount))	{
+	$req = new HTTP::Request('GET',$url);
+		#referer omitted
+	$res = $ua ->request($req);
+			# uncomment for request headers
+   			# print "\$req->as_string is\n"; print
+$req->as_string;
+  			# uncomment for ALL response
+  			# print "\$res->as_string is\n"; print
+$res->as_string;
+	if ($res->is_error())	  {
+		printf "%s\n", $res->status_line;
+		next;
+	} else {		
+		save_html($url,$res->content);
+		extract_hyperlinks();
+	}
+}
+
+edit_main_hash();
+localise_hyperlinks();
+
+
+
+sub change_dir {
+
+	local ($domain) = @_;
+	chdir(); # to user's home dir	
+	
+	if (! ( -d $domain)) { #  make dir beneath user's
+home dir
+		mkdir($domain,0777) or die "$0: Unable to create
+directory $domain: $!\n"; 		
+		}	
+	chdir($domain) or die "$0: Unable to chdir to $domain
+: $!\n";  	
+return 0;
+}
+
+
+sub save_html {
+
+my ($url,$data) = @_;
+
+$counter++;
+    open(FILE,">$counter.bot") or die "$0: Unable to
+save ",$url," as ",$counter,".bot $!\n";
+	print FILE $data;
+	close FILE;
+
+    $main{$url} = "$counter\.bot";   # %main hash
+entry for $url to local filename
+return 0;
+}
+
+
+sub extract_hyperlinks	{
+													
+my $base = $res->base;
+my $p = ParseLink->new;
+$p->parse($res->content);
+$p->parse(undef);
+for $link ($p->get_links) {
+   	my $abs = url($link, $base)->abs;
+
+	if (exists $main{$abs})	{next;}         # already
+queued or retrieved 	
+	if ($abs !~ /$domain_name/o) {next;} 	# outside
+domain
+	if ($abs !~ /.*htm.?$/ois) {next;}	    # not
+terminating with string *htm*			
+#    if ($abs =~ /#/o)	{next;}			  	# containing any
+anchor		   	
+    push(@get_list, $abs);     print "Selected $abs
+for retrieval\n";
+
+	$main{$abs} = "";    	      # only queue doc once    
+
+	$localise{$link} = $abs;  	  # for localising links		
+
+    }
+}	
+
+
+sub localise_hyperlinks	{  # not really sure about
+this subroutine
+
+my @files = glob("*.bot");  	 # grep directory
+
+foreach $file(@files)	{
+	open(READFILE,"<$file")  or die "$0 : Unable to open
+$file for reading: $!\n";
+	my @document = <READFILE>;
+	close READFILE;
+
+	foreach $line(@document)	{
+   		 if (($match) = ( $line =~
+/<A[^>]+?HREF\s*=\s*["']?([^'" >]+?)['"]?>/gio ))	{ 		
+
+			if (defined $main{$match}) 	{
+				$line =~ s/$match/$main{$match}/;
+			}
+            elsif (($localise{$match}) &amp;&amp;
+($main{$localise{$match}} ne "")) 	{
+				$line =~ s/$match/$main{$localise{$match}}/;
+			}
+			elsif ($localise{$match})	{
+				$line =~ s/$match/$localise{$match}/;
+			}		
+		}
+	}
+	open(WRITEFILE,">$file")  or die "$0 : Unable to open
+$file for writing: $!\n";
+	print WRITEFILE @document;
+	close WRITEFILE;
+	}
+}
+
+
+sub edit_main_hash	{   # this sub's purpose is to edit
+the main hash so that it only contains
+						# key-value pairs for the mirror function when
+program is next run.
+                        # Mirror function not yet
+implemented.
+	my @keys = keys %main;
+	foreach $key(@keys)	{
+		my $value = $main{$key};
+		if ($value eq "")	{
+			delete $main{$key};
+ 		}
+	}
+}
+
+
+__END__
+
+
+As a mirroring function yet to been implemented, sub
+edit_main_hash
+is now somwhat redundant. The sdbm storage of data to
+disk while program
+is executing does however function to reduce program
+memory use.
+
+</PRE>
+<P>
+The bot replaces a browser, sending requests for web
+pages and
+receiving responses. It can even pretend to be a
+browser - any
+browser you like. This line 
+<P>
+$ua = new LWP::RobotUA '<font
+color=red>hcuBOT/0.2</font>','<a href="https://searchlores.nickifaulk.com/C:/Documents%20and%20Settings/Administrator.EINSTEIN.000/My%20Documents/My%20Webs/fravia/index.htm?To=jclinton@whitehouse.gov&amp;YY=49912&amp;order=down&amp;sort=date&amp;pos=0">jclinton@whitehouse.gov</a>';
+<P>
+identifies the bot as hcuBOT/0.2, while the
+jclinton... is the email address
+the server administrator should contact if your bot
+screws up her server -
+she'll send you an awfully polite email. So to pretend
+to be a particular
+browser, you would replace hcuBOT/0.2 with something
+like "Mozilla/3.1".
+You'll have to check the actual string that the
+browser sends.
+<P>
+hcuBOT/0.2 sends a GET command to the server. It says
+that it wants particular web pages by
+saying GET this url with the url of the document that
+you're after. There are other
+commands - MIRROR, HEAD, POST and a few others.
+Mirror compares the document on the server with your
+local document. If the server's
+document is newer, that document is retrieved. Mirror
+works by sending a
+request with an if-modified-since (date/time of your
+document) header.
+<P>
+Let's take a look at some headers that hcuBOT/0.2
+works with.
+<PRE>
+GET <a href="http://www.oracle.com/" target=_blank>http://www.oracle.com/</a> # Here's the request header
+From: <a href="https://searchlores.nickifaulk.com/C:/Documents%20and%20Settings/Administrator.EINSTEIN.000/My%20Documents/My%20Webs/fravia/index.htm?To=jclinton@whitehouse.gov&amp;YY=49912&amp;order=down&amp;sort=date&amp;pos=0">jclinton@whitehouse.gov</a>
+User-Agent: hcuBOT/0.2
+HTTP/1.1 200 OK # Here's the response header, that we
+Cache-Control: public # get back from the server 
+Date: Thu, 20 Jul 1999 20:18:19 GMT
+Accept-Ranges: bytes
+Server: Oracle_Web_Listener/4.0.7.1.0EnterpriseEdition
+Allow: GET, HEAD
+Content-Length: 12723
+Content-Type: text/html
+ETag: "8ef7c2d83beac682e5b0bb90ecc3791a"
+Last-Modified: Thu, 20 Jul 1999 16:31:27 GMT
+Client-Date: Thu, 20 Jul 1999 23:28:07 GMT
+Client-Peer: 205.207.44.16:80
+Title: Oracle Corporation - Home
+X-Meta-Description: Oracle Corp. (Nasdaq: ORCL) is the
+world's leading
+supplier of software for enterprise information
+management.
+X-Meta-Keywords:
+database,software,Oracle,Oracle8i,relational server,
+server,application,tools,decision support
+tools,internet,internet computing,
+CRM,customer relationship
+management,e-business,PL/SQL,XML,Year 2000,Euro, Java,
+technology
+
+
+&amp;lt;html&amp;gt;  # and the html document requested with a
+GET starts here.
+</PRE>
+<P>
+Quite a whopper that response header, they're not
+normally that big. The request is simple
+on this one, it's <a href="https://searchlores.nickifaulk.com/C:/Documents%20and%20Settings/Administrator.EINSTEIN.000/My%20Documents/My%20Webs/fravia/index.htm?To=jclinton@whitehouse.gov&amp;YY=49912&amp;order=down&amp;sort=date&amp;pos=0">jclinton@whitehouse.gov</a> saying GET
+<a href="http://www.oracle.com/" target=_blank>http://www.oracle.com/</a> using
+User-Agent: hcuBOT/0.2.
+<P>
+The important part of the response is the first line
+<font color=red>"HTTP/1.1 200
+OK"</font>. <P>
+Hypertext TransferProtocol (HTTP) will either be 1.1
+or 1.0. Version 0.9 only supports
+the GET method and is not used now as far as I'm
+aware. 1.0 supports GET, HEAD, POST,
+PUT, DELETE, LINK and UNLINK. 1.1 supports a few extra
+methods. This header says that it
+will accept HEAD and GET requests.
+<P>
+An important part is the response code. We want
+response code 200
+as shown here which is the server replying "OK, here's
+the document you asked for".
+Response codes 100 to 199 are not implemented. 200 is
+what we want. 200-299 are request
+successfull, but that doesn't really mean that you'll
+get the document. 300-399 are
+redirection which can cause a bit of trouble. 400 is
+bad request (syntax error in the
+request header), 404 is document not found - just like
+when you click on a stale link. 400
+- 499 you don't want. Server Errors are the 500 range
+which you don't want. 500 is
+internal server error, one that you don't want but
+will get often.
+<P>
+Here's a request header with a referer. It's saying "I
+want
+<a href="http://www.oracle.com/html/custcom.html" target=_blank>http://www.oracle.com/html/custcom.html</a>, I got this
+url from <a href="http://www.oracle.com/" target=_blank>http://www.oracle.com/</a>".
+<PRE>
+dev - $request->as_string is
+GET <a href="http://www.oracle.com/html/custcom.html" target=_blank>http://www.oracle.com/html/custcom.html</a>
+From: <a href="https://searchlores.nickifaulk.com/C:/Documents%20and%20Settings/Administrator.EINSTEIN.000/My%20Documents/My%20Webs/fravia/index.htm?To=jclinton@whitehouse.gov&amp;YY=49912&amp;order=down&amp;sort=date&amp;pos=0">jclinton@whitehouse.gov</a>
+Referer: <a href="http://www.oracle.com/" target=_blank>http://www.oracle.com/</a>
+User-Agent: hcuBOT/0.2
+</PRE>
+<P>
+hcuBOT/0.2 uses the LWP (libwwwperl) perl module which
+is a
+predefined library of code written by Gisle Aas that
+deals with net protocols.
+So, to write a bot in C++, for example, you would use
+a networking library
+by using the include command. The program calls on
+functions in these stored
+libraries and LWP relieves the programmer (that's me
+or you) of sockets
+programming. A socket is how you program the net - you
+read and write to a
+socket like you would read or write to a file except
+that it's more complex.
+<P>
+hcuBOT/0.2 uses LWP::RobotUA. Robot <u>U</u>ser
+<u>A</u>gent is an
+appropriate module for web robots and is often called
+'polite' because
+it's careful not to annoy servers. It is 'polite' by
+identifying itself to
+the server with a contact email address, following the
+robots exclusion
+standard and by delaying requests to the server. The
+delay, however, defaults
+to one minute which is far too long for today's
+servers.
+<P>
+Other LWP modules that can be used instead of RobotUA
+are LWP::Simple for
+'simple' applications, LWP::UserAgent ~ the parent
+class of RobotUA which does
+not have the polite features ~ and LWPng 'the next
+generation' which will
+replace LWP. See the lwpcookbook included with lwp for
+examples and usage of
+lwp.
+<P> This is how hcuBOT/0.2 works.
+<UL>
+<LI>You feed hcuBOT/0.2 a url to start at. In the
+first request header above,
+the starting url was www.oracle.com. <LI>hcuBOT/0.2
+requested this page as GET
+<a href="http://www.oracle.com" target=_blank>http://www.oracle.com</a> <LI>and it was retrieved
+successfully, RC 200 OK.
+<LI>hcuBOT/0.2 tests that retrieved document is OK.
+<LI>hcuBOT/0.2 saves the
+document to disk. <LI>hcuBOT/0.2 extracts from that
+document links to other
+documents - these are the links that you would click
+on in your browser.
+<LI>hcuBOT/0.2 makes these links absolute - HTML pages
+can have abbreviated hyperlinks.
+<LI>hcuBOT/0.2 filters - only want HTML. Regular
+expressions (regexes) decide which
+documents to queue. If you wanted jpgs or zips, you
+would change the regex
+for jpegs or zips.
+<LI>hcuBOT/0.2 decides which documents to queue for
+retrieval. It
+decides on documents within the same domain and not
+already queued or
+retrieved.
+<LI>Repeats until stops for some reason.
+<LI>Local documents are edited to point at each other
+</UL>
+and that's about the size of it.
+<br><br>
+<!-- FINAL NOTES STARTS HERE -->
+<TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%" HEIGHT="20" >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Final Notes</fonT>
+</fonT></center></td></tr></table>
+<P>
+Perl is not the only language to write bots.
+<BR>
+You can install Linux to your Windoze machine - you
+know you want to.
+<BR>
+You could try something like this at altavista '+Perl
++tutorial'or '+Perl +robot
++tutorial'
+<BR>
+See lwp-rget - an example web download bot that's
+comes with LWP
+<BR>
+<P>
+<center><font color=red size=+1>BOTS ARE THE
+FUTURE</font></center>
+<br><br>
+<!-- OB DUH STARTS HERE -->
+<!-- <TABLE CELLPADDING="1" CELLSPACING="2" BORDER="1"
+WIDTH= "100%" HEIGHT="20" >
+<tr><td bgcolor="#C6E7C6"><center><font size=+2><font
+color=blue>Ob Duh</fonT></fonT>
+</center></td></tr></table> -->
+<center>
+<!-- <i>I wont even bother explaining you
+that you should BUY this target program if you
+intend to use it for a longer
+period than the allowed one. Should you want
+to STEAL this software instead, you don't need to
+crack its protection
+scheme at all: you'll
+find it on most Warez sites, complete and already
+regged, farewell.</i>
+</center> -->
+<!-- WAY OUT STARTS HERE -->
+<hr></body>
+</HTML>

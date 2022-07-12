@@ -1,0 +1,85 @@
+<html>
+<head>
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>stonetips.htm: Stone about protecting better</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+
+<H1>About copy protection schemes</H1><br>by Stone, December 1998 (republished on <a href="http://www.searchlores.org">www.searchlores.org</a> in May 2001)<hr width=77%>
+<bR>Courtesy of fravia's searchlores.org<bR><br>
+<a href="protec.htm"><IMG SRC="../images/protec.gif" ALT="protec" 
+ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<bR><font color=gray>Back to 'how to protect better'</fonT><br>
+<br>
+
+<hR>
+
+</center>
+Many companies live off selling readymade copyprotections. But if you consider buying one of these products there are a few things you should consider first - here I examine one of them - how difficult they are to circumvent. And as explained below you might be surprised what you're getting or rather not getting.
+<br><br>
+Very popular lately has been wrappers which allows time-limited trial versions of your software. 
+<br><br>
+The first product which I'll drag thru the gutter is 20/20 Software's SoftSentry. The product works. If you download a protected application it'll run within the trial period and stop running after the trial period so to the average custumor this is great. But the strength of the scheme is a joke. It doesn't encrypt and there is no anti-debugging. The product grants no safety against cracking attacks what-so-ever. Infact it was cracked even before it was released. A generic unpacking program, would if applied remove the wrapper and allow free use of the software. 
+<br><br>
+Another example of such a program is PreviewSoft's VBox. Vbox utillizes both encryption and anti-debugging in it's scheme. Traditional checksums are applied to avoid patching. Anti-SoftIce code is implemented as well. However the implementation lacks the fundamental trickiness which assures the integrity. While the best program of it's type Vbox doesn't even manage to defeat simple a simple application debugger. Unload SoftIce, take the Borland debugger and you'll now be able to debug it with minimal caution needed. To make it even worse Vbox doesn't implement any strategy against the generic unpacking tools avaible today.
+<br><br>
+ 
+
+In old times floppy disks where used as keys. These days are here again -except now CD's are being used as the key. A general problem that all the various protections in this category suffer is that it's hardware dependant. It doesn't work on all drives and it surely isn't ensured to work on future CD-rom drives. The protection works thru a so called watermark code on the CD which is read and compared to the CD which served as master. This insures that only copies off the original glass-master will run. 
+<br><br>
+ 
+
+C-Dilla is one such protection. C-dilla uses a lot of handwritten assembly anti-debugging code and encryption. The protection is a 2-stage RTE type protection. One program loads the original but encrypted program with CreateProcessA, suspended. Then a check if the correct CD is in the drive is applied and if so the mother program will decrypt it's child using the WriteProcess/ReadProcess api's. This idea is very good. Anti-SoftIce code is thrown on top and imports of the original file are mangled in an effective way. But unfortunately the anti-softice code doesn't prevent a skilled cracker from cracking it. Especially not when other debuggers exists. Infact it was cracked in less than 6 hours by an anonymous cracker. 
+<br><br>
+TTR's DiscGuard is another of these protections.This protection utillizes some innovative anti-softice tricks but never-the-less fails miserably because of the implementation of these tricks. Infact I know of a person who took this protection appart and cracked it in less than 4 hours without the original CD!
+<br><br>
+LinkData's CD-Cops is the first (I believe) of these systems. It utillizes a lot of handwritten 16-bit ASM code to prevent debugging and it's quite successful and very well implemented... or so it seems... I've known a lot of crackers who surrendered to this protection however when push comes to shove it's still not that good... If a good cracker where really determined it's my opinion that it would last less than 48 hours before he broke it. The downside to this package is it's price.
+<br><br>
+In otherwords what you get for your money is: Protection against the most common friendly swapping but little or no protection against real crackers. And as an added bonus potential compatabillity problems with present and future hard/software. It's my humble opion that if you seek protections against crackers you stop and think it over once more before buying a standard package.
+<br><br>
+ 
+
+Happy X'mas 1998
+<br><br>
+Stone<br><br>
+<CENTER>
+<hr>Visit <IMG SRC="../images/bulletr.gif"  ALIGN="BOTTOM" 
+ALT="red" WIDTH="13" HEIGHT="13" BORDER="0" VSPACE="0" 
+HSPACE="0"><a href="http://www.users.one.se/~stone/">Stone's site</a>!<bR>
+
+
+<HR size=3>
+<!-- Begin mover -->
+<center><a href="protec.htm"><IMG SRC="../images/protec.gif"
+ALT="protec" ALIGN=CENTER WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a
+href="https://searchlores.nickifaulk.com/protec/info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

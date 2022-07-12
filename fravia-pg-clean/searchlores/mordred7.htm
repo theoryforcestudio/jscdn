@@ -1,0 +1,320 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>mordred7.htm: Translated Google Sets</title>   
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="Effective Search for Documents, searching for information via the internet, How to Search the Internet Effectively, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching,  Choosing the best searching tool or Web search engine for your needs, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+
+<center>
+<table border="2"><tr><td rowspan=2><center>
+<a href="dictiona.htm"><IMG SRC="images/dicti1.jpg" ALT="heavy 
+dictionary" ALIGN=BOTTOM 
+WIDTH="212" HEIGHT="155" BORDER=0 VSPACE=0 HSPACE=0></a><br><br>
+<a href="dictiona.htm">Back to SLS</a>
+
+</td><td>&nbsp;&nbsp;&nbsp;</td>
+           <td><center>
+<font color=navy size=+4>&nbsp;Mordred's "some in one"&nbsp;</font><br>
+<br>Published at <a href="http://www.searchlores.org">searchlores</a> in June 2003
+</td></tr></table>
+<br><i>
+Translate either a specified URL or a "google sets" result page of user specified words with the translation service of your choice. Uses javascript. 
+Useful when gathering search terms for a foreign language, and you can query google sets without translation too. 
+</i><br><br>
+</center>
+<!-- a little script begin -->
+<script language="javascript">
+<!--
+function SetsURL() {
+	if (the_form.user_specified_url_field_with_uncommonly_long_name.value == "") {
+		return   "http://labs.google.com/sets?q1="+the_form.q1.value+
+											"&q2="+the_form.q2.value+
+											"&q3="+the_form.q3.value+
+											"&q4="+the_form.q4.value+
+											"&q5="+the_form.q5.value+
+											"&btn=Grow%2BSet";
+	} else {
+		return the_form.user_specified_url_field_with_uncommonly_long_name.value;
+	}
+}
+
+function Google() {
+	window.location = "http://translate.google.com/translate?langpair=" + 
+			the_form.google.options[the_form.google.selectedIndex].value +
+			"&u=" + escape(SetsURL());
+}
+
+function Babelfish() {
+	the_form.action = "http://babelfish.altavista.com/tr";
+	the_form.lp.value = the_form.babelfish.options[the_form.babelfish.selectedIndex].value;
+	the_form.url.value = SetsURL();
+	the_form.submit();
+}
+function InterTran() {
+	the_form.action = "http://www.tranexp.com:2000/Translate/result.shtml";
+	the_form.from.value = the_form.intertran_from.options[the_form.intertran_from.selectedIndex].value;
+	the_form.to.value = the_form.intertran_to.options[the_form.intertran_to.selectedIndex].value;
+	the_form.url.value = SetsURL();
+	the_form.submit();
+}
+
+function Prompt_() {
+	the_form.action="http://translation.paralink.com/url_mode/urlbot.asp";
+	the_form.direction.value = the_form.prompt.options[the_form.prompt.selectedIndex].value;
+	the_form.url.value = SetsURL();
+	the_form.submit();
+}
+function WorldLingo() {
+	the_form.action = "http://www.worldlingo.com/wl/Translate";
+	the_form.wl_url.value = SetsURL();
+	the_form.submit();
+}
+//-->
+</script>
+<noscript>Umm... sorry, you need to turn javascript on for this to work</noscript>
+<form name=the_form method=post action="mordred7.htm">
+<!--The wordset part. Can be extended with more words (i.e. q6, q7, q8. etc.), change SetsURL() if you need to.-->
+URL: <input name=user_specified_url_field_with_uncommonly_long_name size=80 value=""> <br>
+Or wordset:<br>
+<INPUT maxLength=128 size=20 name=q1 value="red"> <br>
+<INPUT maxLength=128 size=20 name=q2 value="green"> <br>
+<INPUT maxLength=128 size=20 name=q3 value="blue"> <br>
+<INPUT maxLength=128 size=20 name=q4 value=""> <br>
+<INPUT maxLength=128 size=20 name=q5 value=""> <br>
+<input type=button value="No translation" onClick="window.location = SetsURL();"><br>
+<!-- fake fields for various POST-only translators (well, okay, some may accept GET also, but I checked only the first two before I got pissed off :) -->
+<input type=hidden name="lp" value=""> 		<!--babelfish-->
+<input type=hidden name="url" value=""> 		<!--babelfish, InterTran-->
+<input type=hidden name="from" value="">  	<!--InterTran-->
+<input type=hidden name="to" value="">		<!--InterTran-->
+<input type=hidden name="type" value="url">	<!--InterTran-->
+<input type=hidden name="autotranslate" value="true"> <!--Prompt-->
+<input type=hidden name="direction" value=""> <!--Prompt-->
+<input type=hidden name="template" value="default"> <!--Prompt-->
+<input type=hidden name="status" value="translate"> <!--Prompt-->
+<input type=hidden name="send" value="Translate"> <!--Prompt-->
+<input type=hidden name="wl_url" value=""> <!--WorldLingo-->
+
+
+<!------------------------------------------[ Google ]------------------------------------------->
+<select name=google>
+	<option value="en|de" selected>English to German</option>
+	<option value="en|es">English to Spanish</option>
+	<option value="en|fr">English to French</option>
+	<option value="en|it">English to Italian</option>
+	<option value="en|pt">English to Portuguese</option>
+	<option value="de|en">German to English</option>
+	<option value="de|fr">German to French</option>
+	<option value="es|en">Spanish to English</option>
+	<option value="fr|en">French to English</option>
+	<option value="fr|de">French to German</option>
+	<option value="it|en">Italian to English</option>
+	<option value="pt|en">Portuguese to English</option>
+</select>
+<input type=button value="Google" onClick="Google();"><br>
+<!------------------------------------------[ Babel ]------------------------------------------->
+<select name="babelfish">
+<option value="en_zh" >English to Chinese</option>
+<option value="en_fr" >English to French</option>
+<option value="en_de" selected>English to German</option>
+<option value="en_it" >English to Italian</option>
+<option value="en_ja" >English to Japanese</option>
+<option value="en_ko" >English to Korean</option>
+<option value="en_pt" >English to Portuguese</option>
+<option value="en_es" >English to Spanish</option>
+<option value="zh_en" >Chinese to English</option>
+<option value="fr_en" >French to English</option>
+<option value="fr_de" >French to German</option>
+<option value="de_en" >German to English</option>
+<option value="de_fr" >German to French</option>
+<option value="it_en" >Italian to English</option>
+<option value="ja_en" >Japanese to English</option>
+<option value="ko_en" >Korean to English</option>
+<option value="pt_en" >Portuguese to English</option>
+<option value="ru_en" >Russian to English</option>
+<option value="es_en" >Spanish to English</option>
+</select>
+<input type=button value="Babelfish" onClick="Babelfish();"><br>
+<!------------------------------------------[ InterTran ]------------------------------------------->
+<SELECT  name="intertran_from">
+<option value="eng" selected>English</option>
+<option value="pob" >Brazilian Portuguese</option>
+<option value="bul" >Bulgarian (CP 1251)</option>
+<option value="cro" >Croatian (CP 1250)</option>
+<option value="che" >Czech (CP 1250)</option>
+<option value="dan" >Danish</option>
+<option value="dut" >Dutch</option>
+<option value="spa" >Spanish</option>
+<option value="fin" >Finnish</option>
+<option value="fre" >French</option>
+<option value="ger" >German</option>
+<option value="grk" >Greek</option>
+<option value="hun" >Hungarian (CP 1250)</option>
+<option value="ice" >Icelandic</option>
+<option value="ita" >Italian</option>
+<option value="jpn" >Japanese (Shift JIS)</option>
+<option value="spl" >Latin American Spanish</option>
+<option value="nor" >Norwegian</option>
+<option value="tag" >Filipino (Tagalog)</option>
+<option value="pol" >Polish (ISO 8859-2)</option>
+<option value="poe" >Portuguese</option
+<option value="rom" >Romanian (CP 1250)</option>
+<option value="rus" >Russian (CP 1251)</option>
+<option value="sel" >Serbian (CP 1250)</option>
+<option value="slo" >Slovenian (CP 1250)</option>
+<option value="swe" >Swedish</option>
+<option value="wel" >Welsh</option>
+<option value="tur" >Turkish (CP 1254)</option>
+</SELECT>
+<SELECT name=intertran_to>
+<option value="eng" >English</option>
+<option value="pob" >Brazilian Portuguese</option>
+<option value="bul" selected>Bulgarian (CP 1251) :)</option>
+<option value="cro" >Croatian (CP 1250)</option>
+<option value="che" >Czech (CP 1250)</option>
+<option value="dan" >Danish</option>
+<option value="dut" >Dutch</option>
+<option value="spa" >Spanish</option>
+<option value="fin" >Finnish</option>
+<option value="fre" >French</option>
+<option value="ger" >German</option>
+<option value="grk" >Greek</option>
+<option value="hun" >Hungarian (CP 1250)</option>
+<option value="ice" >Icelandic</option>
+<option value="ita" >Italian</option>
+<option value="jpn" >Japanese (Shift JIS)</option>
+<option value="spl" >Latin American Spanish</option>
+<option value="nor" >Norwegian</option>
+<option value="tag" >Filipino (Tagalog)</option>
+<option value="pol" >Polish (ISO 8859-2)</option>
+<option value="poe" >Portuguese</option>
+<option value="rom" >Romanian (CP 1250)</option>
+<option value="rus" >Russian (CP 1251)</option>
+<option value="sel" >Serbian (CP 1250)</option>
+<option value="slo" >Slovenian (CP 1250)</option>
+<option value="swe" >Swedish</option>
+<option value="wel" >Welsh</option>
+<option value="tur" >Turkish (CP 1254)</option>
+</SELECT>
+<input type=button value="InterTran" onClick="InterTran();"><br>
+<!------------------------------------------[ Prompt ]------------------------------------------->
+<select name="prompt">
+<option value=524289>English-French </option>
+<option value=262145 selected>English-German </option>
+<option value=131073>English-Russian </option>
+<option value=2097153>English-Spanish </option>
+<option value=65544>French-English </option>
+<option value=262152>French-German</option>
+<option value=131080>French-Russian</option>
+<option value=65540>German-English </option>
+<option value=524292>German-French</option>
+<option value=131076>German-Russian</option>
+<option value=131088>Italian-Russian</option>
+<option value=65538>Russian-English</option>
+<option value=524290>Russian-French</option>
+<option value=262146>Russian-German</option>
+<option value=65568>Spanish-English</option>
+</select>
+<input type=button value="Prompt" onClick="Prompt_();"><br>
+<!------------------------------------------[ WorldLingo ]------------------------------------------->
+<select name="wl_gloss"> <!--no name collision possible, so I left it the same-->
+<option value="1" selected>General</option>
+<option>Automotive Technology</option>
+<option>Aviation/Space</option>
+<option>Chemistry</option>
+<option>Colloquial</option>
+<option>Computers, Data Processing</option>
+<option>Economics/Business</option>
+<option>Electronics</option>
+<option>Food Science</option>
+<option>Legal</option>
+<option>Life Sciences</option>
+<option>Mathematics</option>
+<option>Mechanical Engineering</option>
+<option>Medicine</option>
+<option>Metallurgy</option>
+<option>Military Science</option>
+<option>Naval and Maritime</option>
+<option>Photography/Optics</option>
+<option>Physics/Atomic Energy</option>
+<option>Political Science</option>
+</select>
+<select name="wl_srclang">
+<OPTION value="EN" selected>English</OPTION>
+<OPTION value="ZH_CN">Chinese (Simplified)</OPTION>
+<OPTION value="ZH_TW">Chinese (Traditional)</OPTION>
+<OPTION value="NL">Dutch</OPTION>
+<OPTION value="FR">French</OPTION>
+<OPTION value="DE">German</OPTION>
+<OPTION value="EL">Greek</OPTION>
+<OPTION value="IT">Italian</OPTION>
+<OPTION value="JA">Japanese</OPTION>
+<OPTION value="KO">Korean</OPTION>
+<OPTION value="PT">Portuguese(Brazilian)</OPTION>
+<OPTION value="RU">Russian</OPTION>
+<OPTION value="ES">Spanish</OPTION>
+</select>
+<select name="wl_trglang">
+<OPTION value="EN">English</OPTION>
+<OPTION value="ZH_CN">Chinese (Simplified)</OPTION>
+<OPTION value="ZH_TW">Chinese (Traditional)</OPTION>
+<OPTION value="NL">Dutch</OPTION>
+<OPTION value="FR">French</OPTION>
+<OPTION value="DE" selected>German</OPTION>
+<OPTION value="EL">Greek</OPTION>
+<OPTION value="IT">Italian</OPTION>
+<OPTION value="JA">Japanese</OPTION>
+<OPTION value="KO">Korean</OPTION>
+<OPTION value="PT">Portuguese(Brazilian)</OPTION>
+<OPTION value="ES">Spanish</OPTION>
+</select>
+<input type=button value="WorldLingo" onClick="WorldLingo();"><br>
+</form>
+             <center>
+<hr><!-- internet searching strategies and hints content, end -->
+<table><tr>
+<td><center><a href="basic.htm"><IMG SRC="images/basipet.jpg" 
+ALT="basic" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to basic
+</center></tD>
+<td><center><a href="advanced.htm"><IMG SRC="images/stillpet.jpg" 
+ALT="advanced" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to advanced
+</center></tD>
+<td><center><a href="classroo.htm"><IMG SRC="images/asspetit.jpg" 
+ALT="classroom" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to classroom
+</center>
+<td><center><a href="further.htm"><IMG SRC="images/classpet.jpg" 
+ALT="further" ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a>
+<br>to further
+</center>
+</td></tr></table>
+
+ 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="600" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) III Millennium: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved, reversed & revealed 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>
+

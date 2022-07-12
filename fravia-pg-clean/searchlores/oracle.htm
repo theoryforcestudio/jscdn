@@ -1,0 +1,320 @@
+<html>
+<head>
+<title>Seekers' Oracle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">  
+<meta http-equiv="Content-Style-Type" content="text/css"> 
+<meta content="This page guives you the means of giving a context to your search queries and of quickly spoting the most unwanted keywords, which spammers and SEOs have stuffed on their pages in order to make them cling to your queries' results." name="description"> 
+<meta content="JSON, javascript, yahoo apis, web search, image search, context, contextual search, stop words" name="keywords">
+<meta content="Nemo" name="author">
+<meta content="Copyright(c) 2007 Nemo" name="copyright">
+<style type="text/css">
+<!--
+    .container {
+        width: 400px;
+        height: 20px;
+        border: 1px solid black;
+        margin:.5em;
+    }
+    #bar {
+        float: left;
+        height: 20px;
+        width: 0px;
+        background-color: #930;
+        color: #fff;
+    }
+    #r {margin:1em;}
+    a:link {COLOR: #02f}  
+    a:visited {COLOR: #808}  
+    a:hover {BACKGROUND: #afb; COLOR: purple}  
+-->
+</style>
+</head>
+<body alink="#00ff00" bgcolor="#cccccc" link="#0000ff" text="#001010" vlink="#3366cc">
+<center>
+<img src="images/left.gif" align=left alt="~">
+<img src="images/right.gif" align=right alt="~">  
+<h1 align="center">Seekers' Oracle</h1>
+<p style="margin-bottom:2em;">  
+<i>Asking the right questions!</i>  
+</p>
+</center>
+<table border="0" cellpadding="0" cellspacing="0" align=left>
+<tr><td width="196">
+<img src="images/pythia.jpg" alt="Pythia">
+</td><td>&nbsp;</td></tr>
+</table>
+<table align="center" border="0">
+<tr>
+<td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+<td bgcolor="#993300"><a href="essays.htm"><img alt="to essays" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118" style="margin-right:4px;"></a><a href="json.htm"><img alt="to JSON for the masses" src="images/fleece.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a></td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+</tr>
+</table>
+<center>
+<p><b>Published @ <a href="http://www.searchlores.org/">Searchlores</a> in <font color="blue">June 2007</font> <br>Version <font color="blue">0.01</font> June 2007 | By <font color="blue">Nemo</font></b>
+</p>
+</center> 
+<p align=justify>
+The purpose of this page is twofold:
+</p>
+<p align=justify>&nbsp;&nbsp;<b>1.</b> Giving you the means of quickly spotting the most unwanted / unrelated keywords which spammers and SEOs have stuffed on their pages in order to make them cling to your keyword's search results (and often reveal spammers real intentions :). To use the following form in this mode, enter your keywords, one by one, because we want to harvest the maximum number of one keyword optimizers and therefore the most sticky unrelated keywords. To see real life examples where this strategy was used see my essays <a href="nemo_SEO.htm">Search Engines Anti-Optimization</a> and <a href="alltheweb.htm">Yahoo! / AllTheWeb's image search syntax</a>.</p>
+<p align=justify>&nbsp;&nbsp;<b>2.</b> Giving you the means of quickly harvesting more keywords belonging to the context of your search query.
+To use the following form in this mode, enter two keywords belonging to your search query's context. To see why this is useful / important, consult my essay <a href="alltheweb.htm">Yahoo! / AllTheWeb's image search syntax</a>.  
+</p>
+<p align=justify>
+What this tool does is building a table of words appearing in Yahoo! web or image search results sorted by frequency using Yahoo!'s <a href=http://developer.yahoo.com/search/web/V1/webSearch.html>web</a> and <a href=http://developer.yahoo.com/search/image/V1/imageSearch.html>image</a> <a href=http://developer.yahoo.com/search/>search APIs</a>. If you want to know how this page was built see its source code and consult my <a href="json.htm">JSON for the masses</a> essay.
+</p>
+<center>
+<input id="q">
+<select name="type" id="e">
+<option value="Web">web
+<option value="Image">images
+</select>
+<input type=submit value=Search id="b">
+</center>     
+<center id="r"></center>
+<script type="text/javascript">
+<!--
+
+// ===================================================================
+//      Advanced Search using JSON and Multiple callback function
+//
+// Based on Kent Brewster's
+// Simple Search using JSON and callback function
+// Available @ http://developer.yahoo.com/download/
+// ===================================================================
+var obj = {
+    init : function() {
+        obj.b = document.getElementById('b');
+        obj.b.onclick = obj.begin;
+    },
+    begin : function() {
+        this.text = '';
+        obj.array = new Array();
+        obj.start = 1;
+        obj.slider = '&nbsp;&nbsp;&nbsp;';
+        obj.q = document.getElementById('q');
+        obj.r = document.getElementById('r');
+        obj.r.innerHTML = '<b>Searching Yahoo!</b> <div class="container"><div id="bar"></div></div>';
+        obj.e = document.getElementById('e');
+        obj.scripts = document.getElementsByTagName('head')[0].getElementsByTagName('script');
+        for (var i = 0; i < obj.scripts.length; i++) {                              // Remove unneeded script
+            document.getElementsByTagName('head')[0].removeChild(obj.scripts[i]);   // tags to not overhelm
+        }                                                                           // browsers' DOM.
+        obj.pingSearch();
+    },
+    pingSearch : function() {
+        if (obj.q.value) {
+            obj.s = document.createElement('script');
+            obj.s.type ='text/javascript';
+            obj.s.charset ='utf-8';
+            obj.s.src = 'http://search.yahooapis.com/' + 
+                        obj.e.value + 'SearchService/V1/' + obj.e.value.toLowerCase() + 
+                        'Search?appid=oracle&output=json&callback=obj.pongSearch&results=50&start=' + 
+                        obj.start +'&query=' + URLEncode(obj.q.value);
+            document.getElementsByTagName('head')[0].appendChild(obj.s);
+        }
+    },
+    pongSearch : function(z) {
+        for (var i = 0; i < z.ResultSet.Result.length; i++) {
+            obj.array = obj.array.concat(data.prepare(z.ResultSet.Result[i].Url.toLowerCase()));
+            obj.array = obj.array.concat(data.prepare(z.ResultSet.Result[i].Summary.toLowerCase()));
+            if (z.ResultSet.Result[i].Title) {
+                obj.array = obj.array.concat(data.prepare(z.ResultSet.Result[i].Title.toLowerCase()));
+            }
+            if (z.ResultSet.Result[i].RefererUrl) {
+                obj.array = obj.array.concat(data.prepare(z.ResultSet.Result[i].RefererUrl.toLowerCase()));
+            }
+        }
+        if ( obj.start <= 901 && z.ResultSet.Result.length == 50){
+            updateBarByValue(5)
+            obj.start+=50;
+            obj.pingSearch();
+        } else {
+            updateBarByValue(5)
+            data.process();
+        }
+    }
+};
+
+
+// ===================================================================
+//      Words Statistics
+//
+// Based on version .01 of Search Engines Anti-Optimization.
+// ===================================================================
+
+function mySort(a,b) {
+    if (a[1] > b[1]) return -1;
+    if (a[1] == b[1]) {
+        if (a[0] > b[0]) return 1;
+        if (a[0] < b[0]) return -1;
+        return 0;
+    };
+    return 1;
+};
+
+var data = {
+    prepare : function(text) {
+        this.array = new Array();
+        this.result = new Array();
+        this.text = 'a ' + text;
+        this.english = [
+            'the', 'is', 'was', 'be', 'are', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'has', 'had',
+            'i', 'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'does', 'did', 'at', 'this',
+            'but', 'his', 'by', 'from', 'they', 'we', 'say', 'says', 'said', 'her', 'she', 'or', 'an',
+            'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what', 'so', 'up', 'out', 'if', 
+            'about', 'who', 'get', 'gets', 'got', 'which', 'go', 'goes', 'went', 'gone', 'me', 'when',
+            'make', 'makes', 'made', 'can', 'like', 'likes', 'liked', 'time', 'no', 'just', 'him', 'know',
+            'knows', 'knew', 'known', 'take', 'takes', 'took', 'taken', 'people', 'into', 'year', 'your',
+            'good', 'some', 'could', 'them', 'see', 'sees', 'saw', 'sawn', 'other', 'than', 'then', 'now',
+            'look', 'looks', 'looked', 'only', 'come', 'comes', 'came', 'its', 'over', 'think', 'thinks',
+            'thought', 'also', 'back', 'after', 'use', 'uses', 'used', 'two', 'how', 'our', 'work', 
+            'works', 'worked', 'first', 'well', 'way', 'even', 'new', 'want', 'wants', 'wanted', 'because',
+            'any', 'these', 'give', 'gives', 'given', 'day', 'most', 'us', 's', '&amp;amp;', 'http', 'www'
+        ];
+            this.array = this.text.match(/[a-z\x23\x26\x3b\xdf-\xf6\xf8-\xff]{1,25}/g);
+            for (var u = 0; u < this.array.length; u++) {
+                this.notFound = 1;
+                for (var v = 0; v < this.english.length; v++) {
+                    if (this.array[u] == this.english[v]) {
+                        this.notFound = 0;
+                        break;
+                    }
+                }
+                if (this.notFound) {this.result[this.result.length] = this.array[u];}
+            }
+        return this.result;
+    },
+    process : function() {
+        this.Raw = new Array();
+        this.RelArray = new Array();
+        this.SingNames = new Array();
+        this.Names = new Array();
+        this.Names = obj.array;
+        for (var i = 0; i < this.Names.length; i++) {
+            if (this.RelArray[this.Names[i]] == undefined) {
+                this.Raw[this.Raw.length] = this.Names[i];
+                this.RelArray[this.Names[i]] = [this.Names[i],1];
+            } else {
+                this.RelArray[this.Names[i]][1]++;
+            }
+        };
+        for (var i = 0; i < this.Raw.length; i++) {
+            this.SingNames[i] = this.RelArray[this.Raw[i]];
+        };
+        this.Result = this.SingNames.sort(mySort);
+        this.show();
+    },
+    show : function() {
+        this.l = this.Raw.length;
+        this.l = (this.l - (this.l % 4)) / 4;
+        this.text = '<table with=640 border=1 align=center>\n';
+        for (var i = 0; i < this.l; i++){
+            if (this.Result[4 * i][1] < 10) break;
+            this.text += '<tr>';
+            for (var j = 0; j < 4; j++){
+                this.text += '<td width=140>' + this.Result[4 * i + j][0];
+                this.text += '</td><td width=20>' + this.Result[4 * i + j][1] + '</td>';
+            };
+            this.text += '</tr>\n';
+        };
+        this.text += '</table>\n';
+        obj.r.innerHTML = this.text;
+    }
+};
+
+
+// ===================================================================
+//      Progress Bar
+//
+// Based on Ryan Scherf's script
+// http://www.ryanscherf.net/blog/css-progress-bar
+// ===================================================================
+function updateBarByValue (val) {
+    var pWidth;
+    var pBar = document.getElementById("bar");
+    if(pBar.style.width == "") pWidth = 0; // Start at 0 if there is no width defined
+    else pWidth = parseInt(pBar.style.width.substring(0 , pBar.style.width.length - 1), 10);
+    pWidth += parseInt(val, 10);
+    if(pWidth > 100) pWidth = 100;
+    if(pWidth <= 0) pWidth = 0;
+    pBar.style.width = pWidth + "%";
+}
+
+
+// ====================================================================
+//       URLEncode and URLDecode functions
+//
+// Copyright Albion Research Ltd. 2002
+// http://www.albionresearch.com/
+//
+// You may copy these functions providing that 
+// (a) you leave this copyright notice intact, and 
+// (b) if you use these functions on a publicly accessible
+//     web site you include a credit somewhere on the web site 
+//     with a link back to http://www.albionresearch.com/
+//
+// If you find or fix any bugs, please let us know at albionresearch.com
+//
+// SpecialThanks to Neelesh Thakur for being the first to
+// report a bug in URLDecode() - now fixed 2003-02-19.
+// And thanks to everyone else who has provided comments and suggestions.
+// ====================================================================
+function URLEncode( query ) {
+    // The Javascript escape and unescape functions do not correspond
+    // with what browsers actually do...
+    var SAFECHARS = "0123456789" +                      // Numeric
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +      // Alphabetic
+                    "abcdefghijklmnopqrstuvwxyz" +
+                    "-_.!~*'()";                        // RFC2396 Mark characters
+    var HEX = "0123456789ABCDEF";
+    var plaintext = query;
+    var encoded = "";
+    for (var i = 0; i < plaintext.length; i++ ) {
+        var ch = plaintext.charAt(i);
+        if (ch == " ") {
+            encoded += "+";                             // x-www-urlencoded, rather than %20
+        } else if (SAFECHARS.indexOf(ch) != -1) {
+            encoded += ch;
+        } else {
+            var charCode = ch.charCodeAt(0);
+            if (charCode > 255) {
+                alert( "Unicode Character '" 
+                + ch 
+                + "' cannot be encoded using standard URL encoding.\n"
+                + "(URL encoding only supports 8-bit characters.)\n"
+                + "A space (+) will be substituted." );
+                encoded += "+";
+            } else {
+                encoded += "%";
+                encoded += HEX.charAt((charCode >> 4) & 0xF);
+                encoded += HEX.charAt(charCode & 0xF);
+            }
+        }
+    }
+    return encoded;
+};
+
+
+window.onload = function() {
+    obj.init();
+};
+//-->
+</script>
+<p align="justify">
+(c) Nemo 2007 &nbsp;&nbsp; <font color="#0022ff">nemo vitam meam regit@yahoo.com</font> &nbsp;&nbsp; replace white spaces by underscores.
+</p>
+<center>  
+<hr width="66%">  
+<a target="_blank" href="basic.htm"><img alt="Petit image" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a><br>
+<br>
+<table>
+<tr><td bgcolor="#993300" height="2" width="300"></td></tr>
+</table>
+(c) III Millennium: <font color="blue">[</font><a target="_blank" href="http://www.searclores.org/info.htm">fravia+</a><font color="blue">]</font>, all rights reserved, reversed, reviled and  
+revealed  
+</center>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>w3s.htm : W3S - Personal Web Spider</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced web searching, serching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="author" content="Father">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">  
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<a name="top"></a>
+<table border="0" width=99%><tr><td>
+<font size="-1"><a href="index.html">index.html</a></font> / <font size="-1"><a href="bots.htm">bots.htm</a></font> / <font size="-1">mhyst_w3s.htm</font> </center>
+</td><td width=66%>&nbsp;</td><td><a href="rose.htm"><img src="images/windrose.png" alt="This is a windrose" align="middle" border="0" height="48" hspace="0" vspace="0" width="48"></a>  
+</td></tr></table>
+<hr><br>
+<center>
+<table><tr><td><center><a href="advanced.htm"><IMG src="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to Advanced<br></center></td>
+<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td><td><center>
+
+<font color=navy size=+5>~ W3S: Web Personal Spyder ~</font><br> 
+by <font color=navy size=+2><u>Mhyst</u> </font> 
+</td></TR></table>
+
+
+<br>
+<p>  
+<b>First published @ <a target=_top href="http://www.searchlores.org/">Searchlores</a> in <font  
+color=blue>January 2008</font> | Version <font color=blue>1.03</font> | By  
+<font color=blue>Mhyst</font></b>
+</p>
+
+<hr>
+<table width="60%">
+<tr><td><img src="images/w3s.jpg"></td><!--<td width="10%"></td>-->
+<td>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#objectives">Objectives</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#knowledge">Required knowledge</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#whatis">What is a web spider</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#concepts">Basic concepts</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#gmodules">Generic web spider modules</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#language">Language choice</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#w3smodules">W3S modules</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#operation">Operation</a>
+<br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#howdill">How the bot looks like</a>
+<br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#future">The future of W3S</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="mhyst_w3s.htm#references">References</a><br>
+<img height=13 alt=¤ src="images/bulletr.gif" width=13>
+<a href="http://sourceforge.net/project/showfiles.php?group_id=212079" target="_new">Download</a>
+
+</td></tr>
+</table>   
+<hr>
+
+</center>
+
+
+        <p><p>
+        <center>
+        <a name="objectives"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Objectives</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>Every day we have to deal with boring and repetitive tasks in front of the computer. Many times I’ve found myself thinking how easy would be to computerize all those tasks in a program to which, afterwards, we’ll only have to ask whatever we want it to do. I always wanted to own a virtual assistant. A program that would do for me all these things.
+        <p>Internet searching is not always boring, but many times it is. Using search engines is each day more frustrating due to the increasing garbage index of Internet. So often we find pages that only have our search terms amidst other thousands that have been left there just to catch our attention. The SEOs evade the search engines’ ranking algorithms very easily, putting links to the website they want to promote everywhere: forums, blogs, wiki systems, etc. As a result, we have more and more noise and far less signal.
+        <p>I’ve ever thought that every good virtual assistant should have its own web spider or, perhaps, several web spiders: each one devoted to one kind of search. How handy would be to “ask him”  what we wish and he would deal with all those details. But that’s only, by now, a dream. J
+        <p>The aim of this document is to put forward the structure and functionality of W3S and, at the same time, to describe a basic searching web spider. I hope this essay will bring somebody the possibility of making his own web spider.
+        <p>This document is directed to:
+        <ul>
+        <li>Seekers interested in web spiders
+        <li>Programmers interested in coding their own web spider
+        <li>W3S users
+        <li>If you’re reading this, this document is for you too. xD (lol)
+        </ul>
+        
+        <center>
+        <a name="knowledge"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Required knowledge</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>In order to understand this work completely it would be ideal to have knowledge on the following stuff:
+        <ul>
+        <li>Server / client model
+        <li>TCP (sockets)
+        <li>HTTP
+        <li>HTML (very few is needed)
+        <li>Programming
+        </ul>
+        <p>It would be great if you know the way a web browser connects to a web server to bring down a page. But you don’t need that to understand some parts of this essay. And of course, I can tell you how to do the job:
+        <ol>
+        <li>The client opens a TCP socket to the web server port 80;
+        <li>The language or protocol used to talk between client and server is HTTP;
+        <li>Among all the HTTP commands we’ll be using only GET;
+        <li>Some knowledge about HTTP Request Headers will pay off. 
+        </ol>
+        <p>In the section <a href="mhyst_w3s.htm#references">“References”</a> you can find enough resources so to learn things I will tell you about.
+        Some knowledge on Java programming language would help you to better understand the code snippets.
+
+        <center>
+        <a name="whatis"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>What is a web spider?</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <i>
+        <p>"A web crawler (also known as a web spider or web robot) is a program or automated script which browses the World Wide Web in a methodical, automated manner. Other less frequently used names for web crawlers are ants, automatic indexers, bots, and worms (Kobayashi and Takeda, 2000).
+        <p>"This process is called web crawling or spidering. Many sites, in particular search engines, use spidering as a means of providing up-to-date data. Web crawlers are mainly used to create a copy of all the visited pages for later processing by a search engine that will index the downloaded pages to provide fast searches. Crawlers can also be used for automating maintenance tasks on a website, such as checking links or validating HTML code. Also, crawlers can be used to gather specific types of information from Web pages, such as harvesting e-mail addresses (usually for spam).
+        <p>"A web crawler is one type of bot, or software agent. In general, it starts with a list of URLs to visit, called the seeds. As the crawler visits these URLs, it identifies all the hyperlinks in the page and adds them to the list of URLs to visit, called the crawl frontier. URLs from the frontier are recursively visited according to a set of policies."
+        </i>
+        <p align="right"><a href="http://en.wikipedia.org/wiki/Web_spider">Source: The Wikipedia</a>
+        
+        <center>
+        <a name="concepts"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Basic concepts</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>This essay is about a web spider or web robot. When we speak about robots in computer science, we always refer to a program handling a electronic/mechanical part (this time a computer), and that is able to do tasks that are generally done by people. In this particular case, as we’re speaking about a web robot (casually webbot), we deal with a computer program designed to browse the WWW, or at least to visit some web pages.
+        <p>Although we saw before that Wikipedia considers web robot and web spider as synonyms, in my opinion, a web spider is a kind of web robot. Web robots can be designed to do many things on the web. For instance, to log into a forum and post a comment. But these web robots don’t take into account possible links appearing in the pages they visit. They generally have the needed page addresses hardcoded. What I consider truly web spiders are the web robots that take into account the links and whose mission is to follow them. The behavior of these web robots depends on the websites’ structure they happen to visit. They act like the real spiders sliding from link to link as if it were silk threads.
+        <p>For a human being, browsing the web using a web browser is far easy. Even people using it for first time discover how easy and fun is it. But webbots don’t have a web browser. They have to deal with web servers directly via TCP sockets and talk to them in HTTP (HyperText Transfer Protocol). Hence, to design a webbot you have to code part of a browser’s functions to be handled by the bot “intelligence”. Fortunately, a bot doesn’t need to render web pages. A huge part of the browser’s code is devoted to do that: decode the html file, show the texts properly, load and show the pictures, load and play the sounds or music, interpret javascript, and a really long etc.
+        <p>W3S is a searching web spider. But this time it won’t work for a big search engine but for you. You’ll have to tell it where to start the search (the seed) and what we want to search (the search terms) so to allow it to start surfing the web. We’ll never know where its search will finish following every link. The program offers several ways to control its web frontier, to say, the bot scope. Also it’s possible to not set limits and let it explore the web freely. In this last case, one can’t know how much time it will take for it to finish the job. 
+        <p>At the present time, W3S searching abilities are based in taking account of times every search term appears in each visited page and showing the results in your web browser (html formatted). But it has every required module to be a good web spider. Furthermore, its modular design easily allows adding new searching algorithms or totally rewriting the bot reusing the basic modules.
+
+        <center>
+        <a name="gmodules"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Modules required for a generic searching web spider</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p><b>HTTP client:</b>
+        <p>In charge for downloading a specified web page. Coding this module requires wide knowledge about sockets and some knowledge on HTTP. Most times, this kind of module stores the web page to a file.
+        <p><b>Links collector:</b>
+        <p>Opens an html file and search for links which later will add to a links database. If you’re going to code this module, you only need to know how to handle files and strings. 
+        <p><b>Query string analyzer:</b>
+        <p>Its goal is to process the query string in order to determine the search terms. W3S hasn’t query string syntax; you have to enter some words or sentences comma separated. And then, this module only has to detect the comma character and separate the search terms.
+        <p><b>Searching algorithms:</b>
+        <p>Its function depends on the webbot task. W3S, being on a starting phase, only counts search terms occurrences. This module is the web spider’s part you have to think about the most carefully you can. The cleverness of the spider depends on this module.
+        <p><b>Starter:</b>
+        <p>Contains the spider’s main loop. For each iteration the module handles a link until there are no more links left. It has to call every other module in the correct order.
+        <p><b>User interface and results presentation:</b>
+        <p>Can be graphic, console, etc. In first place it must serve to allow the user to state the webbot configuration parameters and to launch the starter. It also must provide a way to show the results. W3S stores the results in an html file that is shown in your default web browser.
+        
+        <center>
+        <a name="language"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Language choice: Why Java</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>When one decides to write a program, the language choice is not always simple. Even after writing the program, one thinks whether the choice was good or not. You can never be sure. That’s so because programmers’ learning process involves studying many programming languages, and as if it weren’t enough torture, almost all programmers decide to learn new programming languages on their own. Lately it’s compulsory to know many languages because there are languages for different tasks. For instance, on a dynamic web project you’d need to know HTML to code the pages, an application server language (PHP, Java Servlets, JSP, ASP, C#, etc), some javascript, maybe XML, SQL (if you’re going to deal with databases), etc. 
+        <ul>
+        <li>My favorite language is Assembly. But considering the effort needed to develop an application in Assembly, I turned into Java for the following reasons:
+        <li>I’ve developed many applications with Java and I know Java rather well, what makes me confident with it.
+        <li>It has a lot of programming libraries (including some we need deadly).
+        <li>Most computers have the Java Virtual Machine preinstalled
+        <li>The pack system (JAR) is good. It allows you to open the application just by double clicking it.
+        <li>It lacks complicated installation systems.
+        <li>Coding the HTTP client module with Java is fair easy. Using the classes URL and HttpURLConnection save us quite much time. Also, we avoid having to work directly with sockets and HTTP communications. Take a look over the following code snippet and see how can we reach a web page and store it in a file:
+        </ul>
+        <pre><code>
+        //Begin of code
+        //Initialization
+        //This is the object we’ll use for the http connection.
+        HttpURLConnection http;
+
+        //Though we need a URL
+        URL url = new URL(“http://www.searchlores.org”);
+
+        //Now http represents our connection with the web server
+        http = (HttpURLConnection) url.openConnection();
+
+        //Between the HTTP methods (GET, PUT, POST, HEAD, etc)
+        //we choose to use “GET”
+        http.setRequestMethod("GET");
+                        
+        //Setting required request headers
+        //Some servers will answer correctly without specifying
+        //request headers, but some won’t.
+        //For instance, google won’t work without it.
+        http.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)");
+        http.setRequestProperty("Accept", "text/html");
+        http.setRequestProperty("Accept-Encoding", "none");
+
+        //Connection		
+        //That’s where the real connection to the web server is made.
+        http.connect();
+
+        //HTTP response code analysis
+        //200 = OK, 201 = Created, 202 = Accepted, etc.
+        //Every code starting by “2” is considered valid.
+        //The rest of the codes may be errors.
+        //For instance: 400 = Bad request.
+        //The worse possible codes are those starting by “5”.
+        int code = http.getResponseCode();
+        if (code < 200 || code > 300) {
+                System.out.println(http.getResponseMessage());
+                http.disconnect();
+                return;
+        } 
+
+        //Write the page to file
+        BufferedReader in = new BufferedReader(new InputStreamReader(http.getInputStream()));
+
+        String line;
+        PrintWriter out = new PrintWriter(new FileWriter(“searchlores.htm”));
+        while ((line = in.readLine())!= null) {
+                out.println(line);
+        }
+        http.disconnect();
+        out.close();
+        //End of code
+        </code></pre>
+
+        <p>W3S collects a lot of links (as many as its web frontier allows). It’s very important to store it carefully so that doesn’t become lost and also to avoid visiting the same page twice (what would lead us to an infinite loop). The collected links are stored in RAM via classes Vector and Hashtable. The faster class Vector is used to quickly get the next link to visit, while the key identified hash table is used to test if the current link was already visited.
+        <p>The user interface is a graphic interface developed with Java Swing. It contains only the basic needed controls.
+        <p>For the rest of the modules I think we only need a set of string functions. That’s enough well with the Java class String.
+        
+        <center>
+        <a name="w3smodules"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>W3S Modules</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+
+        <p><b>HttpToFile</b>
+        <p>It is the HTTP client. As it tells its name, it brings down a page and stores it in a file.	   
+        <p><b>Log</b>
+        <p>Logs recording Subsystem. It’s used to keep track of process incidents or registered errors. (http.log)	   
+        <p><b>Link y LinksManager</b>
+        <p>Link object and Links database respectively. They are the needed system to store links for the webbot job.	   
+        <p><b>LinksExplorer</b>
+        <p>W3S Starter. It also contains the Links collector, the query string analyzer and the very search algorithms.	   
+        <p><b>W3s	Graphic User Interface</b>
+        <p>As I stated before it’s made in Java Swing. Allows the user to enter the webbot configuration parameters and to launch the starter module: LinksExplorer. It is also in charge for showing the results.	 
+
+        <center>
+        <a name="operation"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>Operation</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>Do you want to explore a website for things you're interested in but you don't have time to do it? A personal web spider can do that for you.
+        <p>A personal web spider can be used to explore the web in the most wide meaning of the word, giving as seed a highly connected page. Also, a good idea is to make a common search first (for example in Yahoo!) and establish the Yahoo! search results page as a seed. You can also use the spider to explore a deep website (surely, this way, you’ll discover pages you never dreamed it existed).
+        <p>The spider is able to read internet pages. During the reading, apart from seeking for the search terms you specified, the bot collects links. As soon as it ends reading a page, the bot has to write the results in some way, and then it gets a new link from its links collection and starts again. 
+        <p>The bot does that until there are no more links to process, that's why the search process can last for a long while.
+        <p>Let’s see how the common spider modules we saw interact to do the job:
+        <pre><code>
+        Starter Module: Parameters (seeds, searchQuery, webFrontier)
+                create LinksDatabase;
+                for each seed in seeds do
+        add seed to LinksDatabase;
+                end for;
+
+        //Turns the query string into a search terms array
+        //depending on the query syntax
+        searchTerms[] = SearchTermsAnalysis(searchQuery);
+
+        for each link in LinksDatabase do
+                //webFrontier is actually a set of conditions
+                //that must be evaluated for each link
+                if link in webFrontier do
+        webPageContent = HttpClient.download(link);
+
+        results += searchAlgorithms(searchTerms,    webPageContent):
+
+        //This function will search the
+        //web page content for links
+        //and will store the found links
+        //in the LinksDatabase
+        searchForLinks(webPageContent);
+        end if;
+        end for;
+
+        show (results);
+        End Module;
+        </code></pre>
+
+        <p>The webbot user interface will rely upon retrieving the user orders and calling the starter module telling it the seeds, the query string and the web frontier. Upon process end, it should show us the results.
+        <p>Now, it’s time to see the actual behavior of W3S:
+        <p>W3S has a similar structure. Now we’ll see the differences.
+        <p>W3S works with a unique seed. This may change in the future, though I suppose that some people will find a way to circumvent this limitationJ.
+        <p>W3S lacks any syntax, so it doesn’t have a complex query string analyzer. It only separates items from a comma delimited string. If the user enters spaces before or after a comma it is considered as part of the previous term or the next respectively. Due to this feature, a search term can be a complete sentence. The only character you can never use as part of a search term is, precisely, the comma for obvious reasons. I’m open to suggestions to solve that.
+        <p>The HTTP client stores the every web page to a file.
+        <p>The links database is stored in the RAM, just as we saw in the previous section. This can put a limit to the number of links that the bot is able to store. But I don’t think it is an issue by now. Besides, the data being in RAM makes the access really fast.
+        <p>The web frontier can be controlled in many ways I’ll explain now:
+        <ul>
+        <li>Restrict the gathering of links. You can choose only external links (those starting with http://) or only internal links. The election will depend on the search you're going to undertake. 
+        <li>Discard unrelated links. This option is called "cut the low branches". If you check it, the bot will not collect links from pages where the search terms are not present. This option won’t affect the seed for logical reasons. Think about your search carefully before using this option.
+        <li>Control of depth. That's very important. If you choose a high depth, the search process could last forever. Think carefully before doing that. Experts say the depth of the web is only 19 or 20. Personally for the more common of my searches I use a depth of 3 or 5.
+        <li>Limit the number of results: The option "max entries limit" will shorten the search time shorting the results. That's a good option if the website you're trying to explore is fully connected with the exterior. A value of zero remove the limit.
+        <li>Once you've limited correctly the search, you can choose between two ways of searching: horizontal or vertical. Horinzontal depicts the more natural way (for a bot): the bot reads the entire page and jumps to the first link, then to the second, to the third, and so on. To select the vertical method, you have to check the option "priorize". This way, the next link to be processed depends on the number of ocurrences of your search terms in its mother page. Be carefully, the "priorize" option is preselected, but that doesn't mean you have to use this way always. Before starting any search, think about it.
+        </ul>
+
+        <p>About search algorithms, W3S only have one: count search terms occurrences on every visited page.
+        <p>The links collector works only with the anchor tag (&lt;a href=...).
+        <p>The results are stored during the process in a html file (salida.htm). The file opens in your default navigator when W3S finishes crawling. This part uses RUNDLL Windows library, so if you’re running a different platform it won’t work. But you always can open the file manually.
+        <p>Both, the defined generic search spider and W3S, still require the user action. The results consist on a list of links and their number of appearances of every search term. Hence, when the webbot finishes its job, the authentic work for you begins. In some cases, the appearance one single time of a term will mean to rule out one page, while others a high number of occurrences for a term will bring interest to a page. You’ll have to decide how to evaluate the results. That’s the most important part of the search. If you fail evaluating the results, the bot won’t help.
+        <p>Even so, the bot has proved to be useful for me. Please, consider that using this kind of bot will give you a totally different searching experience. Enjoy it!
+        <p>In short, W3S is only a source of data to help us. Seekers will be still needed in this world for many years (let’s hope it xD).
+<br><br>
+<center>
+       <a name="howdill"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>How the bot looks like</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+
+<center> 
+<br>
+<IMG src="images/W3SbyMhyst.jpg"
+ALT="Mhyst's W3S screenshot"
+ALIGN=BOTTOM WIDTH="741" HEIGHT="341" BORDER=0 VSPACE=0
+HSPACE=0></a></center>
+<br><br>
+        <center>
+        <a name="future"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>The future of W3S</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <p>Obviously, the program is still in a very initial phase. Many improvements can be made and, of course, will be made:
+        <p>Rewriting LinksExplorer: I’d like to separate it into the conceptual modules I described. That will make easier to add extensions.
+        <p>The Searching Algorithms module should be easily extensible so that we can mount new algos on the fly.
+        <p>It would be good to create its own query string syntax. 
+        <p>The current Links Collector only considers the anchor tag (&lt;a>). There are many other ways to add links to a web page and that module should use as much of them as possible. For instance, the new module should identify frames and follow each frame source as a link .
+        <p>Another idea is to make a console versión. That’s an easy modification and many people would like it.
+        <p>If you know about my other essay, about a program called Deliverer; I have in mind writing a W3sTranslator to integrate W3S in Deliverer. That would allow sending W3S requests by email and sending the results also by email.
+        <p>At last, working in the bot “intelligence” is a major issue and improving the results appearance. Perhaps, some day, we’ll reach the point in which a bot can decide for us what pages are worthy and which not. I’m not sure if that would be a better world. In the meanwhile we must continue working in the pursuing of light, as always did. 
+        
+        <center>
+        <a name="references"></a>
+        <table border="1" width=88%><tr><td bgcolor="#C6E7C6" width="84%"><center><font
+size=+3>References</font></center></td><td><center><a href="mhyst_w3s.htm#top">top</a></center></td></tr></table>
+        </center>
+        
+        <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Internet_socket">Socket Definition</a>
+        <li><a href="http://shoe.bocks.com/net/">Sockets Handling Functions</a>
+        <li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">RFC 2616: HyperText Transfer Protocol</a>
+        <li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5.3">HTTP Request Headers</a>
+        <li><a href="http://www.ietf.org/rfc/rfc1866.txt">RFC 1866: HyperText Markup Language</a>
+        <li><a href="http://www.w3.org/TR/html401/struct/links.html">HTML Links</a>
+        <li>Java Classes Reference</br>
+        <ul>
+        <li><a href="http://java.sun.com/j2se/1.3/docs/api/java/net/URL.html">URL</a>
+        <li><a href="http://java.sun.com/j2se/1.3/docs/api/java/net/HttpURLConnection.html">HttpURLConnection</a>
+        <li><a href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/FileReader.html">FileReader</a>
+        <li><a href="http://java.sun.com/j2se/1.3/docs/api/java/util/Vector.html">Vector</a>
+        <li><a href="http://java.sun.com/j2se/1.3/docs/api/java/util/Hashtable.html">Hashtable</a>
+        <li><a href="http://java.sun.com/j2se/1.3/docs/api/java/lang/String.html">String</a>
+        <li>Google for any Java class using the following pattern: java class &lt;classname>. Generally the first result is what you’re searching for.
+        <li><a href="http://java.sun.com/docs/books/tutorial/uiswing/">Java Swing</a>
+        </ul></li>
+        </ul>
+
+
+        <p>Thank's fravia+ for publishing it and thank you for reading it. :)<br>Mhyst</p>
+        
+
+<div id="footer"></a>
+	<p>Copyleft &copy; 2008 by Mhyst. All lefts granted.</p>
+</div>
+
+<br><hr>
+Published @ <a target=_top href="http://www.searchlores.org">searchlores</a> in January 2008
+&nbsp;&nbsp;&nbsp;
+Back to <a href="advanced.htm">advanced searching</a>
+&nbsp;&nbsp;&nbsp;
+Back to <a href="bots.htm">Bots</a><br></center><hr>
+<br>
+<!-- internet searching strategies and hints content, end -->
+<center><a href="advanced.htm"><IMG src="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="500" height="2" bgcolor="#993300"></tD></tR></table>
+ (c) III Millennium: <font color=blue><font color=blue>[</fonT></font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>
+, all rights reserved and reversed
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>

@@ -1,0 +1,92 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>hth_i_ms.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ hth_i_ms.htm ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"	 content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="description" content="This site teaches basic and advanced search techniques for people ]ested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords" content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author" content="fravia+">
+<meta name="copyright" content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+
+<a href="ideale.htm"><IMG SRC="images/antism.gif" 
+ALT="Back to the site busting section" 
+ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<bR><font color="gray">Smut sites busting</font><br>
+<br><font size=+2><br>How you hack into Microsoft: a step by 
+step guide</font>
+<br><br></center>
+<A HREF="mailto:thomas.greene@theregister.co.uk">By: 
+<a href=mailto:thomas.greene@theregister.co.uk>Thomas C 
+Greene in Washington</a></A>
+<hr>
+Originally @ http://www.theregister.co.uk/content/1/14344.html<br>
+Posted @ fravia's <a href="http://www.searchlores.org">searchlores.org</a> in November 2000
+<br><i>Those able to search will find a lot of paths 
+inside this article by Greene, some of these paths will bear fruits that 
+on their turn can easily be
+applied in order 
+to bust pay smut sites. I also like a lot Greene's unhappy end... all the feds reading this should raise one hand, please&nbsp;:-)</i>
+<br>
+<hr>
+<DIV CLASS="story_body">Microsoft's 
+recent sacking at the hands of unskilled malicious crackers has engendered a vast cloud of false scent from company flacks, who in past days have progressively shrunk their damage assessments. According to company sources, the intruders had access for only 12 days, not six weeks as first reported, and did not corrupt any software in development.
+<br>
+<br>Others note that, twelve days or not, the intruders can't have helped stealing the source code for the new versions of Windows ME/2K and Office, and might well have implanted back doors, laying the foundation for easy remote exploitation once the finished products reach the marketplace.
+<br>
+<br>So, were the walls of the castle breached? Was the digital diadem of William Perfidious defiled by the grubby hands of the unwashed? Or did a handful of malicious kiddies manage nothing more than to give the Kingdom of Gates a scare? We don't pretend to know; but we're going to walk you through the likely steps the intruders would have taken, and let you decide how much damage they might, or might not, have done.
+<br>
+<br><b>Barbarians at the gate</b>
+<br>Network security becomes increasingly difficult as point-and-drool cracking tools proliferate. So many painfully easy-to-use appz have been developed in recent years that persistence is now a far more reliable predictor of success than skill: even a newbie cracker can succeed by using pat scripts and casting his nets wide enough.
+<br>
+<br>The Microsoft intrusion was almost certainly not the work of elite hackers; if it had been, we would not now be reporting it. What we're going to detail below is how a fool can (and did) sack the Magic Kingdom.
+<br>
+<br>Everything the newbie cracker needs to break in to the Microsoft Developers' Network is readily available on the Web following a brief search. Here's how you go about it: First, you'll download a Trojan which can be distributed via e-mail. QAZ, which was used in the M$ attack, is a fine choice because it will automatically copy itself throughout shared folders on a LAN. It's a malicious backdoor program masquerading as the familiar Microsoft utility Notepad.
+<br>
+<br>Once activated, QAZ searches for notepad.exe and copies itself in place of the standard Notepad file, while simultaneously re-naming it note.com. The beauty here is that when someone executes their Trojanised Notepad, it also launches note.com, or the original Notepad, so the application appears to behave normally to the user. It then searches the entire LAN for additional copies of notepad.exe to infect.
+<br>
+<br>To get it implanted on a LAN in the first place, you need to feed it to someone dense enough to execute it. It's easy enough to distribute as an e-mail attachment, but not everyone will fall for it. Thus there are two chief obstacles to getting started, neither of which is terribly difficult to overcome.
+<br>
+<br>First there is social-engineering - that is, baiting the victim. The wording of the e-mail message has got to make executing the attached program both desirable and sensible. Presenting it as a software patch or upgrade is a common stratagem, though there are others. Zipping it and naming it PornCollection.zip or DirtyJokes.zip is another.
+<br>
+<br>If the e-mail message makes sense in context of the attachment, and if it's sent to enough potential victims, the combined laws of probability and human nature ensure that some dumb bastard will activate the payload. And with QAZ, you only need one victim; it will propagate on its own.
+<br>
+<br>Your second obstacle is anti-virus software. Not a tough one either, despite all the glowing claims of heuristic genius touted by anti-virus vendors. We took several of the most popular Trojans: Back Orifice, SubSeven, NetBus and Hack'a'Tack, and first verified that our copy of Norton AntiVirus would detect them, both as-is and zipped. We then compressed them using a sweet little developer's tool called <a href="http://www.neoworx.com/products/neolite" target="new">NeoLite</a> and ran Norton AntiVirus again.
+<br>
+<br>Not one Trojan was detected, because NeoLite alters the signatures used by anti-virus manufacturers to identify malicious code. Only the Trojan Deep Throat, which we received already compressed by NeoLite, was detected, presumably because it's usually distributed in that form and its compressed signature is known. And the beauty of NeoLite is that it's self-extracting. No third-party software like WinZip need be loaded on the victim's machine for the compressed programs to be executed.
+<br>
+<br><b>On the inside</b>
+<br>Once you've managed to infect a machine on the target LAN, QAZ will e-mail you the IP automatically, activate WinSock and wait for a connection on port 7597. Simply check your mail, connect, and, voila, you're in. We're assuming you have the sense to use a Web-based e-mail account for QAZ to communicate with, which you will have opened with fictitious personal data, and that you know the basics of concealing your computer's IP.
+<br>
+<br>Now you'll need to swim around inside the LAN sharkwise until you find yourself a nice, juicy target. Be patient; as the Trojan spreads, more machines will come on-line for you to connect to. Check them all thoroughly. What you're looking for is a box to which you can connect directly, and which is trusted by your ultimate target - some machine with valuable data on it.
+<br>
+<br>You can pretty well assume that any box containing real treasures will be protected by a firewall. You probably won't be able to connect directly to it with a Trojan, but that's all right. There are other machines on the LAN which your target box will trust. So find out which of the boxes to which you <i>can</i> connect might themselves be plugged into something sweet, like another box with the source code for Win-2K, <i>par example</i>. The strategy here is to leapfrog from machines which you own, to the one you want to own.
+<br>
+<br><b>Where do you want to go today?</b>
+<br>Now you've got access to a machine with interesting, valuable data. Let's say it's on the MS Developers' Network, and contains the source code for Win-2K. What's your next move?
+<br>
+<br>It would make sense to download the code first so that if you're suddenly discovered and shut out, you'll at least have something to show for your efforts. Source code is jealously guarded and of course extremely valuable to Microsoft's competitors. Owning it can be immensely profitable for you, especially if you know a sleazy development house in a country with virtually no piracy enforcement, like in Russia, say, or anywhere in East Asia.
+<br>
+<br>You might also wish to implant malicious code of your own in the source to make it easy to exploit once it reaches market, or, alternatively, examine it closely for weaknesses already coded into it, to get a jump on the competition once it ships. A lot of valuable data gets served up on these products; merely knowing where the weaknesses are before the security industry catches on can lead to considerable riches.
+<br>
+<br>So how difficult would that be? Obviously, profiting from such an intrusion requires skill; though as we've illustrated, getting inside the network is child's play. You might be a dangerous cracker, and one so clever that as part of your social-engineering strategy you've deliberately opted to use common tools and techniques to conceal your true, terrifying capabilities. But then again, you might not.
+<br>
+<br>More likely you're a young fool with virtually no skills and little ambition, snapping up toolz and appz from the Web and feeling your way blindly towards the cracker pantheon. You'll do no harm because you don't know how to do harm, but you'll think quite highly of your insignificant achievements. You'll recall your modest exploits with fondness, boast about them in IRC h4x0r chatrooms hoping to impress some k1dd13 even lamer than yourself, and get busted by one of the hundreds of Feds who regularly hang out in these venues.
+<br>
+<br>And that, more than anything, is what Microsoft is fervently 
+hoping.<hr>
+<center><a href="ideale.htm"><IMG SRC="images/antism.gif" 
+ALT="Back to the site busting section" 
+ALIGN=BOTTOM WIDTH=114 HEIGHT=43 BORDER=0 VSPACE=0 HSPACE=0></a>
+<bR><font color="gray">Smut sites busting</font><br></center>
+</BODY></HTML>

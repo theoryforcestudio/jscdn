@@ -1,0 +1,282 @@
+<html><head>
+<title>Learn about IP</title>
+</head>
+<body bgcolor="#B8B8B8">
+
+
+<CENTER><H2> Learn about IP and how it can point right at
+ <u>you</u> and <u>your location</u> </h2></CENTER>
+
+
+<H3>Introducing the IP (Internet Protocol)</H3>
+
+
+What´s the IP? The topic of IP is a complex one, 
+and here we can only touch on the basics. The reader is
+actively encoureged to research  on their own. For the sake of
+simplicity, we will say that the IP number is very much like a phone 
+number, identifying EVERY computer ON the Internet with a specific number,  UNIQUE TO that particular computer.  The IP address is to the computer as your fingerprint is to you: it is unique, such that there cannot be two computers with the same IP address.<BR>
+<BR>
+
+ IP Internet addresses are 32-bit (4 bytes) long <i> logical</I> numbers,
+ normally written as 4 bytes or octets (in decimal form) using the numbers 
+0 to 255 and separated by periods, e.g. 128.24.206.18. Althought 8 bits have 256 possible combinations, the 0 and 356 are reserved. Both networks, hosts and clients can only use  0 through 254.<BR>
+<BR>
+Originally, addresses were broken into classes-A, B, C and the IP addresses
+ were assigned by InterNIC (internet Network information Center)
+the agency  responcible for Internet addressing and managment, and is 
+currently owned by Network Solutions. The class system is no longer in use, 
+but it still can provide an easy way to describe the networks. The first
+octet or byte is the class. <BR>  
+<BR>
+
+
+
+<center><TABLE BORDER=2 COLS=5 WIDTH="95%">
+
+<TR Align=center >
+<TD><u>CLASS</TD>
+<TD><u>SIZE OF NETWORK</TD>
+<TD><u>ADDRESS RANGE</TD>
+<TD><u>Possible Networks</TD>
+<TD><u>Possible # of Computers<Br>per network</TD>
+</TR>
+<TR Align=center >
+
+<TD>Class A</TD>
+
+<TD>Very large the first octet is the class, the 3 others are for the 
+computers (hosts)</TD>
+<TD>1.xxx.xxx.xxx through 126.xxx.xxx.xxx</TD>
+<TD></TD>
+<TD>it allows for 16,387,064 computers to be attached to one network<BR> 
+(254 X 254 X 254)</TD>
+</TR>
+<TR Align=center >
+
+
+<TD>Class B</TD>
+<TD>Large</TD>
+<TD>128.xxx.xxx.xxx through 191.254.xxx.xxx</TD>
+<TD></TD>
+<TD>limited to 64,516 computers</TD>
+</TR>
+
+<TR Align=center >
+<TD>Class C</TD>
+<TD>Small</TD>
+<TD>from 192.xxx.xxx.xxx through 223.254.254.xxx</TD>
+<TD>
+621,999,996</TD>
+<TD>limited to 254 clients(computers)</TD>
+</TR>
+
+</TABLE></center>
+<Br><Br>
+
+
+
+Anything sent over the internet needs a 1.
+<FONT COLOR=RED>specific origin</FONT COLOR=yellow> and 2. a 
+<FONT COLOR=RED>specific destination</FONT COLOR=yellow>. For this 
+reason, every computer must have it's own IP address.  The IP information
+ is placed in the header of the data being transferred to ensure correct 
+forward and return data transmission.<Br>
+<Br>
+
+
+
+<H3>So Watch your Trail!</H3>
+
+
+Since your IP is attached every time you request a page, that IP address is 
+sent to the page that you are browsing (along with a LOT of other personal 
+information). What OTHER personal information?..Just about everything
+
+about your computer- the OS, 
+the name of your computer on the Net(from Net BIOS), 
+(to check the name of your PC on the Net, do the following:
+find your <FONT COLOR=RED>Network Neighborhood </FONT>Icon, 
+select <FONT COLOR=RED>Properties</FONT>, 
+then the <FONT COLOR=RED>Identification </FONT>tab. Right 
+there is your computer's name,
+which could have been set by some other piece of software. Change it to 
+something else, click on ok. I believe you'll have to reboot your computer 
+before the change takes affect) your email adrress,
+the Time, the Date, Browser Type, 
+Referer from(where you came from or the last web page before 
+the current one even silly things like your screewn resolution, ets, ets
+For more info on what information  your browser  sends out read the 
+<A HREF="httpheaders.html">The Secret Life of your Web Browser Revealed!</A> FAQ . 
+
+ All this info (IP address + everything else)
+
+ can be recorded 
+by the host site through Java/Javascript, a counter, 
+. The newest idea is to include a counter one pixel
+wide hidden inside an image to grab
+your IP number.  Some Bulletin Boards even post your 
+IP along with your post, making it 
+available for anyone to see.  This is why we recommend
+ using an anonymizer OR <A HREF="proxy.html">proxy </A>
+whenever surfing the web, and 
+<B>especially</b> when browsing unknown sites or 
+posting to boards. See the next section 
+(<A HREF="proxy.html">- Anonymous Surfing</A>) for 
+more information on using anonymizers.
+<Br><Br>
+
+
+
+Hotmail and other "anonymous" mailers send your 
+IP in the header of your message.  We suggest that 
+you use an anonymous Remailer to send e-mail, and 
+include your hotmail address (or other mail address 
+not associated with your own ISP) in the message if 
+you want a reply.  One good Remailer can be found at: 
+
+
+
+<A HREF="http://www.gilc.org/speech/anonymous/remailer.html">
+
+http://www.gilc.org/speech/anonymous/remailer.html</A>.<Br><Br>
+
+For more Remailers, ideas, read <A HREF="check.html">Proxies and where to 
+find them</A>,
+
+Remember that its best too err on the side of 
+caution.  The fewer that see your IP, the better.<Br>
+
+<Br>
+
+
+
+<H3>Static vs. Dynamic IP's</H3>
+
+The IP may be Static or Dynamic.  
+
+A static connection means that your computer has one specific IP address 
+assigned to it, and keeps that number irregardless of whether you are logged
+ on or off the local network or the internet.  A dynamic IP means that when
+ you log onto the network, your ISP (Internet Service Provider) assigns you
+ the next available IP address from its bank of available addresses.  That
+ address remains assigned to your computer until you log off.  The next time
+ you log on to your ISP, you will most likely have a different IP number. 
+ The ISP computer writes in its internal log file "at hour xxxx date xxx 
+the user xxx is using the xxx.xxx.xxx.xxx account".
+<Br>
+
+
+Dynamic IP's are used by nearly every ISP.  The reasons for this are simple. 
+ First, with more and more people accessing the internet, many with multiple
+ accounts, there would be a shortage of available IP addresses if everyone 
+had there own.  Also, assigning each computer a static IP would tend to make
+ a mess for the backbone routing systems, causing fragmentation, and a great
+ loss of efficiency of routing, resulting in longer transfer times.<Br>
+<Br>
+
+
+
+<H3>DNS (Domain Name System)</H3>
+
+You know how you can just type <A HREF=http://www.microsoft.com>
+www.microsoft.com</A> for example and you will be connected to them. Well 
+this is accomplished with the <FONT COLOR=RED>Domain Name System </FONT 
+COLOR=yellow>- DNS where an name is mapped to a particular IP address, since 
+it is easier for us humans to rememeber a name than a string of numbers. 
+This adress name sets itself together from all other names. 
+
+As an example IP adress <FONT COLOR=RED>129.206.100.126</FONT> this is the
+ combination for the <FONT COLOR=RED>ftp.urz.uni-heidelberg.de</FONT>
+(university - heidelberg - germany)
+On the left site ever stands the PC name in this example it is "ftp"
+this name could be any other name too.The administrator sets it up.
+The next is "urz" this keeps all the PC's in the calculating mashine center 
+together.  Followed by the domain "uni-heidelberg" that keeps all the PC's 
+from the whole university together.
+And at last "de" it's the "top or level" domain for all PC's in Germany.<Br>
+ <Br>
+
+
+
+
+<H3> What about the ISP logs?</H3>
+Okay, so now your ISP has a log of who 
+is logged in under which IP number at any particular 
+time.  They also maintain a log of data transfers, logging each 
+transfer of information, the originating IP, and the destination IP. 
+ So it might seem a routing process to do a search of the logs and 
+find any illegal activity, and associate it with the exact computers 
+involved.
+<Br>
+
+
+So why do the ISP's maintain logs of all internet activity?  Mostly for the
+ purpose of debugging.  If the ISP servers develop a problem or they crash, 
+technicians may scan the logs to determine if a particular transfer was 
+involved with the problem.
+<Br>
+
+
+
+
+Now consider a normal day surfing the web.  In a normal day I can 
+download/upload 2000 or 3000 files (the gifs of the pages, the wallpapers, 
+etc. etc.).  Now if the ISP has 10000 or more clients (normally an ISP 
+needs at least 10000 users to survive)that results in: 10000 x 3000 = 
+30,000,000 operations in a day.  Every line has 128 lines (or bytes) =
+ 3.840.000.000 bytes...  wow!  The logs takes 3 Gigas from the disk !!! :) 
+and I dont know an ISP who will waste this much memory for more 3 days. 
+ Consider also the amount of time and money it takes to go through those 
+logs looking for something that the ISP doesn't want to find in the first
+ place.<Br>
+<Br>
+
+
+
+
+
+
+
+
+
+<H3>The Dangers...</H3>
+However, if a federal agency has a 
+search warrant with probable cause, they have the 
+authority to demand a search of the logs.  If the logs for that time 
+period are available, they can trace that data transfer to you.
+  If almost anyone else gets your IP address and tries to identify 
+you, they have practically no chance of doing so.<Br>
+
+
+<Br>
+
+
+
+
+
+
+
+Your biggest danger is if you are using a computer at 
+work, at school, or in a public library.  They keep 
+their own logs, which are usually much smaller than 
+a regular ISP.  They also have more incentive to 
+search their logs, to keep their image clean, and 
+keep an eye on the activities of their 
+employees/students.  We recommend that you do not use such computers for 
+any questionable activity.
+<BR> 
+
+
+
+<BR>
+
+
+</BODY></HTML>
+
+
+
+
+
+
+

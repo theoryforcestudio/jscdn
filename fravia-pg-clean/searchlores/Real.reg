@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences]
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\CountryID]
+@="9"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Codecs]
+@="C:\\Program Files\\Common Files\\Real\\Codecs\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Common]
+@="C:\\Program Files\\Common Files\\Real\\Common\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_EncSDK]
+@="C:\\Program Files\\Common Files\\Real\\Tools\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Objbrokr]
+@="C:\\Program Files\\Common Files\\Real\\Common\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Plugins]
+@="C:\\Program Files\\Common Files\\Real\\Plugins\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_RCAPlugins]
+@="C:\\Program Files\\Common Files\\Real\\RCAPlugins\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Update]
+@="C:\\Program Files\\Common Files\\Real\\Update\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\DT_Update_OB]
+@="C:\\Program Files\\Common Files\\Real\\Update_OB\\"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\NotifyUser]
+@="0"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\RegionData]
+@="78744"
+
+[HKEY_CLASSES_ROOT\Software\RealNetworks\Preferences\UserAddress]
+@="exploitation@sucks.com"
+

@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>winky_stripper.htm: A Yahoo searching and result parsing bot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="description" content="proxy, python and so on">
+<meta name="keywords" content="proxy, python and so on">
+<meta name="author" content="Winky">
+<meta name="copyright" content="Copyright(c) 2006 Winky">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<body bgcolor="#c0c0c0" text="#001010" link="#0000FF" alink="#00FF00" vlink="#3366CC">
+<p align="center">
+
+<a target=_top href="bots.htm"><img SRC="images/064-c.jpg" ALT="to bots" 
+ALIGN=BOTTOM WIDTH="493" HEIGHT="575" BORDER=0 VSPACE=0 HSPACE=0></a><br>
+
+<b>Published @ <a href="http://www.searchlores.org">http://www.searchlores.org</a> in early <font color="blue">April 2006</font> | </b>
+<b>Version <font color="blue">0.01</font></b><br>(part of the <a href="bots.htm">bots</a> section)<br>
+
+
+   </center>
+<hr>
+<font color=blue size=+2>Winky strips for Yahoo<br></font><font size=+1>
+A further introduction to the power of python, by Winky</font><br>
+ The actual script itself: <a href="yahoo_stripper.py.html">yahoo_stripper.py</a>. 
+<br>
+The "output from the script": <a href="clean.html">clean.html</a></center></p>
+
+<hr><br><font color=blue size=+2>The background</font>
+<br><pre>
+
+Not sure what I have convinced you of. I am not a missionary who goes
+arround and converts people to "python". Hmm that could be a lot of
+fun. Pick up java programmers. Burn them with hot irons, recant you
+infidel, give up evil java and convert to python :).
+
+In a nutshell there are 2 ways of processing html, sax and dom.
+<a href="http://www.boddie.org.uk/python/HTML.html">http://www.boddie.org.uk/python/HTML.html</a> look at libxml2dom.
+
+sax is like runtime so always quicker but a little more complex.
+1 pass
+dom makes a "tree", so it is slower. Load html -> tree, parse the tree etc.
+2-3 passes.
+
+svd (i think it was him) made the comment that all languages are the
+same. He is correct but he is wrong. (paradox). Some languages are
+more suited for certain tasks. What he was trying to say this
+"religion" crap with languages is nonsense.
+
+For scheme you would use <a href="http://www.neilvandyke.org/htmlprag/">http://www.neilvandyke.org/htmlprag/</a>, it is
+basically a dom parser, but it creates an "S-Expression" tree.
+
+To use urllib2 with google a slight wrinkle. Google checks the browser
+type. If not proper browser sends back an error. No problem.
+
+opener = urllib2.build_opener()
+opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+f =
+opener.open("http://www.google.ca/search?q=fravia&btnG=Google+Search&meta=")
+page = f.read()
+f.close()
+
+Tell google you are using Mozilla ;)
+
+> Now you are bound to write a 'cleaner' for ask (ex-teoma), msn search and
+> google :-)
+
+That is an exercise left to the reader ;). To be honest right now I
+have no use for stripping search engines. But on the other hand, when
+I was starting out, there where many things which I wanted to do, but
+i could not find info on. That stuff on your old site about teach a
+dude to fish .... :)
+
+Using the same idea lets say you had a list of VIN numbers for
+vehicles you wanted to check, 5000-10000 of them. Find a website that
+does it, and basically make a small script, extract the info you want.
+
+A few tips I have learned. USE THE CSS :). Examining google css we see that
+&lt;a class=l href="http://acrigs.com/FRAVIA/FRAVIA_index.htm"> ....
+search for tag &lt;a> with class="l", pull everything out till the next anchor.
+I am not sure if the above will work, but that is the idea ;). I just
+glanced at the html.
+
+Google is suspect: uses javascript to rewrite the anchors, class =1 to
+stuff in thier redirection crap.
+
+A good editor that shows the html as a tree can be usefull, I use
+quanta on linux, but whatever makes your tractor go will be ok. I have a whole
+sack of editors I use for different purposes, or how I feed that day
+etc ;).
+
+I am not an expert on the subject of html stripping. But if my tips
+can be useful for someone that is good ;). I have to balance my karma.
+
+You can publish the code I send u yesterday, and these tips. Just do
+not use my real name. Call it maybe "Winky strips for yahoo" ;).
+
+Lots of good languages, python,ruby,lua,perl,tcl to mention a few.
+They all do a similar thing, it boils down to taste.
+
+If you see that stallman fellow punch him in the head for inventing
+Autoconf. I admit it is powerful, but mere human beings can not
+understand it ;). 1 week trying to make a cross compiler ;). Probably
+svd is smarter then me and can understand it better :).
+
+Anyway I am happy i was helpful. Your site has given me a lot of
+pleasure over the years.
+
+ Winky ;)
+
+
+On 4/1/06, fravia wrote:
+> Nice proof of concept, I'm checking it right now.
+> I'll seriously consider python for my own fun during the next sabbatical
+> months, you have convinced me :-)
+>
+> Btw: the 'stripper' in the Subject threw your mail straight in the dev/nul
+> lot, but the yahoo yahoo search and queries words allowed the saving angel
+> to make a copy of it.
+>
+> Now you are bound to write a 'cleaner' for ask (ex-teoma), msn search and
+> google :-)
+>
+>
+> winky writes:
+>
+> > Too hot to work yesterday and I noticed on the board they where
+> > talking about "stripping" and searching html.
+> >
+> > Anyway decided to make one for yahoo, it is primative a learning tool,
+> > but could be expanded to handle next queries etc.
+> >
+> > yahoo_stripper.py -> is the actual script itself.
+> > clean.html -> is the "output from the script"
+> >
+> > To create the "docs" which reside in the html directory just run the
+> > script thru epydoc.
+> >
+> > This sort of tactic of stripping webpages is much more effective then
+> > just blindly using regular expressions.
+> >
+> > If needed you can look for the tag of intrest and then use reg-expr.
+> >
+> > Sorry archive in in tar.gz but I am on a linux box and too lazy to reboot ;)
+> >
+> > Possible uses a spider ;). What ever makes your tractor go :).
+
+</pre>
+
+
+</font></font><br><center>
+<hr width="66%">
+<a target=_top href=
+"essays.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>
+
+

@@ -1,0 +1,1751 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ perlbot.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Essays ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm" target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm" target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="advanced.htm" target="_blank">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;HOW TO FOOL SSL DOWNLOAD OBSTACLES&nbsp;¸.·´¯)</font>
+  <br>
+  <FONT SIZE=+2>(spelunking into https "secure" servers)</font>
+  <br>
+  <br>
+  <font size=+2>by DigJim</FONT>
+  <BR>
+  (edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org" target="_blank">searchlores</a> in April 2001
+  <br>
+  <hR><i>
+Quite an interesting essay. Three VERY USEFUL perl scripts. Lotta juicy stuff for those 
+that want to 'customize' their contacts with unknown servers&nbsp;<br>
+Most useful for searchers that 'stolper' into https 
+annoyments... Note also how you could easily modify DigJim's code to fool 
+authentication on MANY servers...
+</i>
+<hr>
+</center>
+
+
+
+<pre>Dear Fravia+.
+At the beginning I want to thank You for your great site. I have been
+learning from your site since 1998. A few essays from your old mirrors have been 
+very useful for me. 
+My English language is not as good as I would like it to be, so you can freely 
+modify my short essay. 
+With best regards:
+DigJim 
+
+_____________The short essay __________________
+
+HOW TO FOOL SSL DOWNLOAD OBSTACLES 
+(spelunking into https "secure" servers)
+
+By DigJim
+
+<hr>
+
+PLATFORM
+Windows 95/98/... 
+
+TOOLS AND COMPONENTS YOU WILL NEED (AND ENJOY)
+MSVisual C++ 6.0
+Masm 6.xx from 
+<a href="http://www.hutch.ukshells.co.uk/masm.htm" target=_blank>http://www.hutch.ukshells.co.uk/masm.htm</a> 
+ActivePerl 5.6 from 
+<a href="http://www.activestate.com/download/ActivePerl/Windows/5.6/ActivePerl-" target=_blank>http://www.activestate.com/download/ActivePerl/Windows/5.6/ActivePerl-</a>
+5.6.0.623-MSWin32-x86-multi-thread.msi 
+openssl-0.9.6 from 
+<a href="http://www.openssl.org/source/openssl-0.9.6.tar.gz" target=_blank>http://www.openssl.org/source/openssl-0.9.6.tar.gz</a> 
+net-ssleay-1.05 from 
+<a href="http://www.bacus.pt/Net_SSLeay/Net_SSLeay.pm-1.05.tar.gz" target=_blank>http://www.bacus.pt/Net_SSLeay/Net_SSLeay.pm-1.05.tar.gz</a> 
+<a href="http://www.bacus.pt/Net_SSLeay/NT.html" target=_blank>http://www.bacus.pt/Net_SSLeay/NT.html</a> 
+
+ESSAY
+This project of mine started in October 2000. 
+At that time I had a very slow  transfer speed from idrive (~100 bits/s) 
+and idrive suddendly changed site configuration and went from http to secure https. 
+My <a href="http://www.getright.com/">GetRight</A> utility (a very full featured downloading tool) 
+doesn't work with such kind of servers (because they are supposed to be secure) 
+and I couldn't find any SSL download managers, so I decided 
+to try to write a new one by myself. 
+<br>
+If you do not know <a href="http://www.idrive.com/">idrive</a> have a look there: 
+for each file on your or your 
+friend's account you have to get in and wait for page, mark up to 4 
+files for download, get a new 
+page with files for download and do download. When you done download, 
+you can start new 
+one. It is a terrible hassle. 
+<br>Especially at night time (the download speed is a 
+bit higher during night). Now things are better and the download speed is not too 
+bad. From "unknown" servers my download speed is now about ~4..8kb/s, but 
+from "xoom" or "..." 
+is still very slow. In the middle of 2000 I started with Perl 
+and I have found it as a good 
+language to start investigate around (on the web) 
+what I really need in order to write such download 
+manager or utility.<br>
+ I 
+have started learning and using Perl after I found a very good e-book: "Web 
+Client Programming 
+with Perl" (<a href="http://www.oreilly.com/openbook/webclient/" target=_blank>http://www.oreilly.com/openbook/webclient/</a>). 
+Frankly, I'm still a
+beginner with Perl but at the 
+beginning, in order to be more familiar with HTTP protocol I have built a very simple 
+web bot: <a href="perlbot.htm#webot2">webot2.pl</a>. And it worked! 
+After 
+this small success I have installed the openssl and net-ssleay perl 
+packages and adopted the 
+original 'https-proxy-sniff.pl'. <br>
+I called the new one: 'https-snif1.pl'. This 
+one help me a lot to build my own utility 
+for idrive: idown1.pl. 
+<bR>Now my task to build a working download manager was a bit easier. <bR>
+Now to build SSL 
+download manager I will have to only 'mix' idwon1.pl with webot2.pl, but this 
+will be done laterby me  or 
+may be someone else will do this building on my work. 
+<br>
+I can't say much more about perl 
+files. Readers will have to 
+learn a bit and try their own ways using this essay of mine (and my code) as a starting point. 
+
+
+<a href="perlbot.htm#webot2">WEBOT2.PL</a><br>
+With this one you can learn and check what any http server needs in its 
+header in order to give you 
+access to requested file using GET method. Sometimes GetRight can't 
+download because of a bad 
+file name or a bad 'Referrer' field. In this case you can use my file 
+and try different name 
+combinations. In my code is used "Win32API::File" package because of my poor 
+perl knowledge. I 
+should have used binmode. Now I Know it. 
+<hr>
+<a href="perlbot.htm#snif">HTTPS-SNIF1.PL</a><br>
+This one is a SSL-SNIFFER!. I'm using Opera 4.02 browser to sniff data. 
+IE doesn't work. This 
+sniffer is using "test.txt" to store incoming and outgoing data. There 
+is an implemented 
+redirection catcher, but this was tested only with idrive. <u>I don't now 
+how this will  work with 
+others SSL servers</u>. The Opera browser has to have 'pictures' switched 
+off.
+<hr>
+<a href="perlbot.htm#idown">IDOWN1.PL</a><bR>
+The last one allow you to list idrive guest account or standard one if a 
+password is supplied. At 
+this time there is no error checking for a closed account. This perl 
+utility opens file: idrive-
+logg.txt file in append mode, so after each run you are able to check 
+what has been sent. <br>
+The idrive server sometimes is sending data using gzip format, so this 
+translation is done and 
+uncompressed data is stored in file. I don't know how to uncompress 
+data in memory (this 
+doesn't work for me), so this is done using "gzip.bin" file. In order to get the 
+file and folders from the 
+account the search process is divided into two parts because the regex 
+search -seems to me-  
+doesn't work correctly for strings larger than 32kB. An uncompressed 
+idrive page has over 
+100kB. So the first search just split that page into small chunks which are 
+processed by regex'es.
+<hr>
+ADDITIONAL INFO
+The full perl package (with open-ssl and net-ssleay) added is stored on the 
+idrive account itself: perl-ssl-net, 
+so anyone can easyly download this copy. Sorry... this is aprox. 20MB 
+large file. After 
+successful download unrar this to 'c:\perl' directory. 
+<br>Before you use 
+this add to your path <br>
+'C:\perl\bin' (PATH=c:\perl\bin;%PATH%). 
+<br>
+To start working with the sniffer or my
+idown1 script you have to
+have 'cert.pem' and 'key.pem' files like the following:
+
+CERT.PEM=
+-----BEGIN CERTIFICATE-----
+MIICyDCCAjGgAwIBAgIBADANBgkqhkiG9w0BAQQFADCBqTELMAkGA1UEBhMCWFgx
+HjAcBgNVBAgUFU5ldDo6U1NMZWF5X3Rlc3RfbGFuZDESMBAGA1UEBxQJVGVzdF9D
+aXR5MSEwHwYDVQQKFBhOZXQ6OlNTTGVheV9Pcmdhbml6YXRpb24xEjAQBgNVBAsU
+CVRlc3RfVW5pdDESMBAGA1UEAxMJMTI3LjAuMC4xMRswGQYJKoZIhvcNAQkBFgxz
+YW1wb0Bpa2kuZmkwHhcNMDEwMTIzMTE1MjA2WhcNMDIwMTIzMTE1MjA2WjCBqTEL
+MAkGA1UEBhMCWFgxHjAcBgNVBAgUFU5ldDo6U1NMZWF5X3Rlc3RfbGFuZDESMBAG
+A1UEBxQJVGVzdF9DaXR5MSEwHwYDVQQKFBhOZXQ6OlNTTGVheV9Pcmdhbml6YXRp
+b24xEjAQBgNVBAsUCVRlc3RfVW5pdDESMBAGA1UEAxMJMTI3LjAuMC4xMRswGQYJ
+KoZIhvcNAQkBFgxzYW1wb0Bpa2kuZmkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJ
+AoGBAKeJgDyaX8nTr6LDKQEn8pvs5yXPjSvNvItrvNziHXk2L/79s37SDj2K5EGg
+u6ZQXOoQFpjly/99x2Ej4K65afoIHNQpOPAiMaOfLJ1A9BkJrR1Y9pmUAeMQL+qd
+MPwYPNdhgLTYpdb7FkpPs7uSW6ncAHfLxkGCDaMkAgDSoPbfAgMBAAEwDQYJKoZI
+hvcNAQEEBQADgYEAIkXJWuNM3d372zggnzsx6+XRGEWi+jymuFkeBgBQ0KtD/+RY
+HGDajyLOL5m9SmqKuukvOtzhkRc99/xcjGSdUQmNMrtgYxdwD4ZCumkrXYc5/x0i
+fIdYlUMMsZ7ZH6QaCIHrg18h4HXD0gkKQcn7DKezQSAk7Sl1ncj3bbgvbKw=
+-----END CERTIFICATE-----
+
+KEY.PEM=
+-----BEGIN RSA PRIVATE KEY-----
+MIICXgIBAAKBgQCniYA8ml/J06+iwykBJ/Kb7Oclz40rzbyLa7zc4h15Ni/+/bN+
+0g49iuRBoLumUFzqEBaY5cv/fcdhI+CuuWn6CBzUKTjwIjGjnyydQPQZCa0dWPaZ
+lAHjEC/qnTD8GDzXYYC02KXW+xZKT7O7klup3AB3y8ZBgg2jJAIA0qD23wIDAQAB
+AoGAdGzKT9Mbs97GlD45NZN0NkVIUG9OdF1RpDWnlnwP7VbpvbLCVORWfxARFUZE
+gQwhtYqemXw/6nmW33uWPPWencG14Hv4/N5DmluvueNDyiQNzKb++7nufEQWWxFA
+eJ6YC2HnPaoPCp03zGU0ZHPMXjut0/Gbdyd3cRA/AI1b2IkCQQDTWqtjr7xHwAGZ
+XRM6GnnJAdaqiyhONlYy9sBBBfAl6mTWZSDl89DSbFG+JDW+09VLspDiRhdmz8FB
+oCG9rJYbAkEAyu1ZtCzqt1w1IT8i8TGmt+APPH/r60cpcmQ7sSTy01/XsdbF32OC
+yw3ZIUaHkshX05I6Zjfshy9sCO5h2SN+jQJBAMJOmkDUgHlKSW4QhqulSY+FlDBI
+LS7yf37tIUTmS6jf/AKrCHrAE5xQnzn6mjqtD2w/ZznPjJYlrBtEN6DkOT8CQQC6
+BidLgjmQ6VhTJ/uyO5/nw+Bzx5jP0CZwlO4bkBGCL8QdZRNzm1eVKRa46Fzz8/B/
+JPegKPgNXS2ealkMovspAkEAhjsQT6XWh9p1LWMsx0odi1qQNcl+KqV7yV7hL+b3
+rjpdO0iU32jb9vSs7x3Q13LTWjWg++vgmkno3QYpVwmdQQ==
+-----END RSA PRIVATE KEY-----
+
+
+=[0/5]====== PERL FILES =======================================
+=[1/5]= CHUNK.pl =============================================
+#############
+# get_chunk #
+#############
+#
+# Given ($socket_handle, $output_file_handle, $chunk_size)
+#       return $received_chunk_size
+#
+#
+
+
+sub get_chunk_header
+{
+	# get parameters
+	my $line = @_;
+	my $len=0;
+	print "line=$line\n";
+	if ($line =~ m/^([0-9aAbBcCdDeEfF]+)\r\n/) {
+		$len  = hex($1);
+	}
+	$len;
+}
+
+
+sub get_chunk
+{
+	# get parameters
+	my ($F, $MYFILE, $size) = @_;
+
+	# print "to read size=$size bytes\n";
+	my $len   = 0;
+	my $count = 0;
+	my $buffer= 0;
+	while( $len &lt; $size ){
+
+		$count = $size-$len;
+
+		# print "trying read $count bytes\n";
+		$count = read( $F, $buffer, $count );
+
+		if( $count &gt;0 ){
+			$len = $len + $count;
+
+			# print "total len = $len bytes\n";
+			# I don't now how to change ascii file behaviour to binary
+			# so I have use 'WriteFile' instead of syswrite !
+			# $wrcnt = syswrite( $MYFILE, $buffer, $count );
+
+			WriteFile( $MYFILE, $buffer, $count, $wrcnt, [] );
+
+			if( $wrcnt != $count ){
+				$ll = length($buffer);
+				print "Write error wrcnt=$wrcnt, towrite=$count, 
+length=$ll!!!\n";
+			}
+		}else{
+			# wrong count
+			# print "get_chunk() :: count=$count\n";
+			$size = $len;
+		}
+	}
+	# return value
+	$len;
+}
+
+1;
+
+=[2/5]= TCP.pl ===============================================
+############
+# open_TCP #
+############
+#
+# Given ($file_handle, $dest, $port) return 1 if successful, undef when
+# unsuccessful.
+#
+# Input: $fileHandle is the name of the filehandle to use
+#        $dest is the name of the destination computer,
+#              either IP address or hostname
+#        $port is the port number
+#
+# Output: successful network connection in file handle
+#
+
+use Socket;
+
+sub open_TCP
+{
+  # get parameters
+  my ($FS, $dest, $port) = @_;
+
+  my $proto = getprotobyname('tcp');
+  socket($FS, PF_INET, SOCK_STREAM, $proto);
+  my $sin = sockaddr_in($port,inet_aton($dest));
+  connect($FS,$sin) || return undef;
+  
+  my $old_fh = select($FS); 
+  $| = 1; 		        # don't buffer output
+  select($old_fh);
+  1;
+}
+1;
+
+<a name="webot2"></a>
+=[3/5]= WEBOT2.pl ============================================
+#!/usr/bin/perl
+# DigJim
+
+use socket;
+use Win32API::File 0.08 qw( :ALL );
+
+require "tcp.pl";
+require "chunk.pl";
+
+$received = 0;
+$orgofile ="KEYTOOLS_LITE_FULL_C_WIN32.zip.bin";
+$ofile ="KEYTOOLS_LITE_FULL_C_WIN32.zip.bin";
+
+$addr="www2.baltimore.com";
+$ifile = "/scripts/dl/ktlitej.pl?KEYTOOLS_LITE_FULL_C_WIN32.zip";
+
+$full_loaded = 0;
+$full_atempt = 0;
+$load_as_bin = 0;
+$req_bin_len = 0;
+$full_maxtry = 1; #change to 2..100 if v.slow connection with errors
+while( $full_loaded==0 ){
+	if (open_TCP(F, $addr, 80) == undef ) {
+		print "Error connecting to server $server ...\n";
+		exit(-1);
+	}
+	$hfile= createFile( "$ofile", "w kc", "" )
+            or  die "Can't get exclusive access to C: $^E\n";
+
+	#
+	# send the GET method with the / as a parameter
+	#
+	print F "GET $ifile HTTP/1.0\n";
+	print   "GET $ifile HTTP/1.0\n";
+	# print F "Connection: Keep-Alive\n";
+	# print   "Connection: Keep-Alive\n";
+	print F "Host: $addr\n";
+	print   "Host: $addr\n";
+	print F "Range: bytes=$received-\n";
+	print   "Range: bytes=$received-\n";
+	print F "User-Agent: Web_Robot/1.2\n";
+	print   "User-Agent: Web_Robot/1.2\n";
+	print F "Accept: *.*, */*\n";
+	print   "Accept: *.*, */*\n";
+	#print F "Cookie: CookieStatus=COOKIE_OK\n";
+	#print   "Cookie: CookieStatus=COOKIE_OK\n";
+	print F "Referer: <a href="http://www2.baltimore.com/scripts/requesteval.pl\n" target=_blank>http://www2.baltimore.com/scripts/requesteval.pl\n</a>";
+	print   "Referer: <a href="http://www2.baltimore.com/scripts/requesteval.pl\n" target=_blank>http://www2.baltimore.com/scripts/requesteval.pl\n</a>";
+	print F "\n";
+	print   "\n";
+
+	# get the header response
+	$response = &lt;F&gt;;
+
+	# get error code
+	$response =~ m/(HTTP....)\s([0-9]+)\s(\S+)/;
+	$httpver= $1;
+	$status = $2;
+	$answer = $3;
+	$httpok = 1;
+	if ($answer =~ /Not/i ) {
+		$httpok = 0;
+	}
+
+	# the $chunk has following meaning
+	# = 0 -- some errors
+	# = 1 -- unknown file size, using [&lt;chunk-size&gt;&lt;CR&gt;&lt;LF&gt;&lt;chunk&gt;],...,0&lt;CR&gt;&lt;LF&gt;] method
+	# &gt; 1 -- known file size
+	$chunk = 0;
+
+	# get the header data
+	print $response;
+	while (&lt;F&gt; =~ m/^(\S+):\s+(.+)/ ) {
+		print "$1: $2\n";
+		$tmp2 = $2;
+		$tmp1 = $1;
+		if ($tmp2 =~ /chunked/) {
+			$chunk = 1;
+		}else{
+			if ($tmp1 =~ /Content-length/i) {
+				$tmp2 =~ m/^([0-9]+)/;
+				$chunk = $1;
+			}
+		}
+	}
+
+	print "\n---------------------\n";
+	print "http version = $httpver\n";
+	print "http status  = $status\n";
+	print "http file    = $answer\n";
+	print "http file ok = $httpok\n";
+	print "chunk value  = $chunk\n";
+	print "\n---------------------\n";
+
+	# get the entity body
+	$bytes = 1;
+	$total = 0;
+	$line  = 0;
+	if ($chunk ==1) {
+		print "load as HTTP file...\n";
+		if ($httpok == 1) {
+			while( $bytes &gt; 0 ){
+				# chunk count
+				$bytes = &lt;F&gt;;
+	#			print "count chunk = $bytes\n";
+				$bytes = hex($bytes);
+	#			print "data chunk size = $bytes bytes\n";
+				if ($bytes&gt;0) {
+					$bytes = get_chunk( F, $hfile, $bytes );
+					$total = $total + $bytes;
+
+					print "\rReceived $total bytes";
+	#				sleep(1);
+				}
+				if( $bytes == 0 ){
+					print "\n";
+				}
+				# CRLF
+				$line = &lt;F&gt;;
+			}
+		}else{
+			# HTTP error :: file not found,...
+			print "Program terminated:: HTTP error = $status\n";
+			close(F);
+			close(MYFILE);
+			exit($status);
+		}
+	}else{
+		# text file
+		print "load as text/bin file...\n";
+		$load_as_bin = 1;
+		$req_bin_len = $chunk;
+
+		$load = 0;
+		$break= 0;
+		while( $break==0 ){
+			if( $load &lt; $chunk ){
+				$bytes = $chunk - $load;
+				if( $bytes &gt; 4096 ){
+					$bytes = 4096;
+				}
+				$bytes = get_chunk( F, $hfile, $bytes );
+				$load = $load + $bytes;
+				print "\rReceived $load bytes";
+				if( $bytes == 0 ){
+					$break = 1;
+					print "\n";
+				}
+			}else{
+				$break = 1;
+			}
+		}
+		$total = $load;
+	}
+
+	print "Total $total bytes\n";
+	close(F);
+	CloseHandle($hfile);
+
+	if( $load_as_bin=0 ){
+		$full_loaded = 1;
+	}else{
+		$full_atempt++;
+		if( $full_atempt &gt;= $full_maxtry ){
+			$full_loaded = 1;
+		}else{
+			$ofile = $orgofile . $full_atempt;
+			if( $load &gt;= $req_bin_len ){
+				$full_load = 1;
+			}else{
+				print "Trying $full_atempt time\n";
+				print "Waiting for 20 seconds to restart......\n";
+				sleep(20);
+			}
+		}
+	}
+}
+print "Load terminated at $full_atempt attempt\n";
+print "Bye...\n";
+exit(0);
+<a name="snif"></a>
+=[4/5]= HTTPS-SNIFF1.pl =======================================
+#!/usr/bin/perl
+# 05.06.1998, Sampo Kellomaki &lt;sampo@iki.fi&gt;
+# 15.02.2001, DigJim
+
+$usage = &lt;&lt;USAGE
+Usage: ./https-snif1.pl *listen_port* *dest_machine* *dest_port*
+E.g:   ./https-snif1.pl 4443 www.idrive.com 443
+
+This proxy allows you to observe the protocol talked by your browser
+to remote https server. Useful for debugging http headers etc sent
+in this dialogue as well as capturing the requests for later
+automating the task.
+
+The proxying is not perfect: the client will see different
+certificate than actually sent by server. You will be able to launch
+only one simultaneous connection (set you browser to attempt only
+one at a time) because it is iterative server, keep-alives are not
+handled at all, etc.
+
+Remember: you must have cert.pem and key.pem 
+in the current working directory.
+
+Example:
+    perl https-snif1.pl 4443 www.idrive.com 443
+Then enter https://localhost:4443/ in Opera Location prompt.
+
+USAGE
+    ;
+
+die $usage unless $#ARGV == 2;
+($listen_port, $dest_host, $dest_port) = @ARGV;
+$trace = 0;
+
+use Socket;
+use Net::SSLeay qw(sslcat die_now die_if_ssl_error);
+$Net::SSLeay::trace = 3; # Super verbose debugging
+Net::SSLeay::load_error_strings();
+Net::SSLeay::SSLeay_add_ssl_algorithms();
+
+$our_ip = "\0\0\0\0";  # Bind to all interfaces
+$sockaddr_template = 'S n a4 x8';
+$our_serv_params = pack ($sockaddr_template, &amp;AF_INET, $listen_port, 
+$our_ip);
+
+socket (S, &amp;AF_INET, &amp;SOCK_STREAM, 0)  or die "socket: $!";
+bind (S, $our_serv_params)             or die "bind:   $!";
+listen (S, 5)                          or die "listen: $!";
+$ctx = Net::SSLeay::CTX_new ()         or die_now("CTX_new ($ctx): $!");
+Net::SSLeay::set_server_cert_and_key($ctx, 'cert.pem', 'key.pem') or die "key";
+
+while (1) {    
+	open( F, "&gt;&gt;test.txt" );
+
+print   "Accepting connections...\n";
+print F "############# NEW SESSION #########################################################\n";
+    print F "Accepting connections...\n";
+    ($addr = accept (NS, S))           or die "accept: $!";
+    select (NS); $| = 1; select (STDOUT);  # Piping hot!
+    
+    ($af,$client_port,$client_ip) = unpack($sockaddr_template,$addr);
+    @inetaddr = unpack('C4',$client_ip);
+    print   "$af connection from " . join ('.', @inetaddr) . ":$client_port\n";
+    print F "$af connection from " . join ('.', @inetaddr) . ":$client_port\n";
+    
+    #print "### We now have a network connection, lets fire up SSLeay...\n";
+ 
+    $ssl = Net::SSLeay::new($ctx)      or die_now("SSL_new ($ssl): $!");
+    &amp;Net::SSLeay::set_fd($ssl, fileno(NS));
+    
+    $err = Net::SSLeay::accept($ssl);
+    die_if_ssl_error("ssl accept: ($!)");
+    print   "Cipher `" . Net::SSLeay::get_cipher($ssl) . "'\n";
+    print F "Cipher `" . Net::SSLeay::get_cipher($ssl) . "'\n";
+    
+print   "#-- Connected. Get the HTTP request and wrap it for transport to remote host.\n";
+print F "#-- Connected. Get the HTTP request and wrap it for transport to remote host.\n";
+    
+    $got = Net::SSLeay::read($ssl) or die "$$: ssl read failed";
+    print   "********** From Local Browser **********\n'$got'\n(" . length ($got) . " chars)\n";
+    print F "********** From Local Browser **********\n'$got'\n(" . length ($got) . " chars)\n";
+    
+	$got =~ s/Host:\s+\S+\r?\n/Host: $dest_host:$dest_port\r\n/i;
+
+    print   "********** From Local Browser **********\n'$got'\n(" . length ($got) . " chars)\n";
+    print F "********** From Local Browser **********\n'$got'\n(" . length ($got) . " chars)\n";
+
+	# split to header and document
+	($head,$reply) = my_split($got);
+	# substitute: 'www.idrive.com' -&gt; 'localhost:1234' to remove redirections
+	# to this sniffer if any
+	$head =~ s/localhost:$listen_port/www.idrive.com/gi;
+	$head =~ s/localhost/www.idrive.com/gi;
+	# make full answer from local browser
+	$got = $head . $reply;
+
+    print   "********** Will send *******************\n";
+    print F "********** Will send *******************\n";
+	print   "'$got'\n(" . length($got) . " chars) to $dest_host:$dest_port\n";
+	print F "'$got'\n(" . length($got) . " chars) to $dest_host:$dest_port\n";
+    
+    ### Set up a client socket
+    
+    $dest_port = getservbyname  ($dest_port, 'tcp')
+	unless $dest_port =~ /^\d+$/;
+    $dest_serv_ip = gethostbyname ($dest_host);
+    $dest_serv_params  = pack ($sockaddr_template, &amp;AF_INET,
+			       $dest_port, $dest_serv_ip);
+    
+    socket  (SS, &amp;AF_INET, &amp;SOCK_STREAM, 0) or die "client: socket: $!";
+    connect (SS, $dest_serv_params)         or die "client: connect: $!";
+    select  (SS); $| = 1; select (STDOUT);
+
+    ### Do SSL handshake with remote server
+
+    $ssl2 = Net::SSLeay::new($ctx) or die_now("client: SSL_new ($ssl2)");
+    &amp;Net::SSLeay::set_fd($ssl2, fileno(SS));
+    &amp;Net::SSLeay::set_cipher_list($ssl2, "DES-CBC3-MD5:RC4-MD5");
+    &amp;Net::SSLeay::print_errs();
+    $err = Net::SSLeay::connect($ssl2);
+    &amp;Net::SSLeay::print_errs();
+	$ssl2_cipher = Net::SSLeay::get_cipher($ssl2);
+    print   "client: Cipher '" . $ssl2_cipher . "'\n";
+    print F "client: Cipher '" . $ssl2_cipher . "'\n";
+    &amp;Net::SSLeay::print_errs();
+
+    ###### Exchange data with remote server
+    print   "Exchange data with remote server........\n";
+    print F "Exchange data with remote server........\n";
+	$err = Net::SSLeay::write($ssl2, $got) or die "client: write: $!";
+    &amp;Net::SSLeay::print_errs();
+	    
+    shutdown SS, 1;
+	    
+	# read answer from remote site
+	($head,$reply) = my_read1($ssl2);
+	print   "_________________reply__________________\n";
+#	print F "_________________reply__________________( before change )\n";
+#	print F "$reply\n";
+
+	#catch redirections
+	$patt1 = '.*ADDRESS';
+	$patt2 = 'www.idrive.com Port 443';
+	$repl  = "localhost Port $listen_port";
+	$reply = my_redir_catch($head,$reply,$patt1,$patt2,$repl);
+
+	#catch link addresses
+	$patt1 = 'www.idrive.com';
+	$patt2 = 'www.idrive.com';
+	$repl  = "localhost:$listen_port";
+	$reply = my_redir_catch($head,$reply,$patt1,$patt2,$repl);
+
+	# make full answer from remote site
+	$got = $head . $reply;
+
+	# reply to our client
+	&amp;Net::SSLeay::write ($ssl, $got) or die "write: $!";
+	&amp;Net::SSLeay::print_errs();
+
+    &amp;Net::SSLeay::free ($ssl2);
+    &amp;Net::SSLeay::print_errs();
+    close SS;
+
+    &amp;Net::SSLeay::free ($ssl);           # Tear down connection
+    close NS;
+	close F;
+}
+
+
+
+#------------------------------------------------------------------------------
+sub my_read1(){
+	my($ssl2) = @_;		#input path (socket)
+	my($page)= '';
+	my($head)= '';
+
+	# at the beginning we have to read header only to determine the page type:
+	# content-length
+	# chunked
+	$head = my_get_head($ssl2);
+
+	if( $head =~ m/Content-Length:\s*(\w+)\s*\r?\n/i ){
+		$len = $1;
+		print   "Content-Length type, len='$len'\n";
+		print F "Content-Length type, len='$len'\n";
+		$page = my_read_len($ssl2,$len);
+	}
+	if( $head =~ /.*chunked/i ){
+		print   "Chunked type\n";
+		print F "Chunked type\n";
+		do{
+			$got = my_get_chunk_size($ssl2);
+			$page .= $got;
+			$len = 0;
+			if( $got =~ /(.*)\r?\n$/ ){
+				$len = $1;
+				$len = hex($len);
+				$got = '';
+				$got = my_read_len($ssl2,$len+2); #+2 &lt;==&gt; "\r\n"
+				$page .= $got;
+			}
+		}while($len&gt;0);
+	}
+	print   "my_read1:: EOF\n";
+	print F "my_read1:: EOF\n";
+	return ($head,$page);
+}
+
+
+#------------------------------------------------------------------------------
+# Redirection changer
+sub my_redir_catch()
+{
+	my($head,$page,$patt1,$patt2,$repl) = @_;
+	my($cnt)=0;
+	my($len)='';
+	my($cnb)=0;
+
+	if ($head =~ m!Content-Type: text/html!i ) {
+	if ($head !~ m/Content-Encoding:.*gzip/i ) {
+		if( $head =~ m/Content-Length:\s*(\w+)\s*\r?\n/i ){
+			$cnb = $1;
+			if( $page =~ /$patt1/ ){
+				$page =~ s/$patt2/$repl/gi;
+				$cnt = length($page);
+				$len = sprintf("%d", $cnt );
+				$head =~ s/Content-Length: (.*)\r?\n/Content-Length: $len\r\n/i;
+				print   "my_redir_catch:: \$cnb=$cnb, \$len=$len\n";
+				print F "my_redir_catch:: \$cnb=$cnb, \$len=$len\n";
+			}
+		}
+		if( $head =~ /.*chunked/i ){
+			my($case) = 0;
+			my(@arr)  =();
+			($case,@arr) = split_chunks($page);
+			warn "http page error in 'my_redir_catch', \$case = $case\n" 
+if($case&gt;0);
+			if( $case==0 ){
+				$cnt = @arr;
+				while( $cnb &lt; $cnt ){
+					$len = $arr[$cnb];
+					$len = hex($len);
+					if( $len &gt; 0 ){
+						if( $arr[$cnb+1] =~ /$patt1/ ){
+							$arr[$cnb+1] =~ s/$patt2/$repl/gi;
+						}
+						$len = length($arr[$cnb+1]);
+						$len = sprintf("%X\r\n", $len-2 );	
+#-2 = "\r\n"
+						$arr[$cnb] = $len;
+					}
+					$cnb += 2;
+				};
+				$page = merge_chunks(@arr);
+			}
+		}
+	}
+	}
+	return ($head,$page);
+}
+
+
+
+
+#------------------------------------------------------------------------------
+sub my_get_head()
+{
+	my($ssl2) = @_;
+	my($head) = '';     #return http header
+	my($char) = '';
+	$head = Net::SSLeay::read($ssl2,3);
+#	print "my_get_head:: got 2 start bytes\n";
+	do{
+		$char  = Net::SSLeay::read($ssl2,1);
+		$head .= $char;
+#	}while($head !~ /\s?\n\s?\n$/);
+	}while($head !~ /\r?\n\r?\n$/);
+print   "********** Received Header *************\n'$head'\n(" . length ($head) . " chars)\n";
+print F "********** Received Header *************\n'$head'\n(" . length ($head) . " chars)\n";
+	return $head;
+}
+
+
+#------------------------------------------------------------------------------
+sub my_get_chunk_size()
+{
+	my($ssl2) = @_;		#input path (socket)
+	my($chunk)= '';     #return chunk count
+	my($char) = '';
+	$chunk = Net::SSLeay::read($ssl2,1);
+	print   "my_get_chunk_size:: got 1 start byte\n";
+	print F "my_get_chunk_size:: got 1 start byte\n";
+	do{
+		$char   = Net::SSLeay::read($ssl2,1);
+		$chunk .= $char;
+	}while($chunk !~ /\r?\n$/ );
+    print   "********** Chunk size ****************** = $chunk";
+    print F "********** Chunk size ****************** = $chunk";
+	return $chunk;
+}
+
+
+#------------------------------------------------------------------------------
+sub my_read_len()
+{
+	my($ssl2,$len) = @_;
+	my($page)= '';
+	my($got) = '';
+	my($cnt) = 0;
+	print   "BlockLength: $len bytes\n";
+	print F "BlockLength: $len bytes\n";
+	if( $len&gt;0 ){
+		do {
+			print "BlockLength: $len bytes to read       \r";
+			$cnt = $len;
+			if( $cnt &gt; 4096 ){
+				$cnt = 4096;
+			}
+			$got = Net::SSLeay::read($ssl2,$cnt);
+			$len -= length($got);
+			$page .= $got;
+		} while ( $len &gt; 0);
+		print "\n";
+	}
+	print   "my_read_len:: EOF\n";
+	print F "my_read_len:: EOF\n";
+	return $page;
+}
+
+
+
+#------------------------------------------------------------------------------
+sub my_split()
+{
+	my($http) = @_;
+    ($headers, $page) = split /\s?\n\s?\n/, $http, 2;
+	return ($headers . "\r\n\r\n", $page);
+}
+
+#------------------------------------------------------------------------------
+# split page into chunks
+# input parameters:
+# ($page) = received https page created from chunks
+# output:
+# ($case,@arr)
+#  $case = 0 we have full https page (no more data comes from socket)
+#          1 if @arr has odd number of elements ant the last element 
+#            is not equal 0 we have to read more
+#            bytes from socket until "\r\n" to get full chunk count.
+#          2 if @arr has even number of elements and the length of last 
+#            element is less then
+#            last chunk count we have to read until we will have full 
+#            chunk data
+#          3 do read next chunk
+# @arr    = ([chunk_count,chunk_value],...)
+sub split_chunks()
+{
+    my($got) = @_;    # http page
+    my(@arr) = ();    # return array
+    my($case)=  0;    # return type
+    my($num) =  0;    # curent chunk count
+    my($tmp) = '';    # temporary substring
+    if( length($got)&gt;0 ){
+        do{
+            if( $got =~ m/.*\r\n/ ){
+                ($num,$got)=split("\r\n",$got,2);
+                push(@arr,($num));
+                $num=hex($num);
+                if( $num&gt;0 ){
+                    if( length($got)-2 &gt;= $num ){
+                        $tmp=substr($got,0,$num+2);
+                        push(@arr,($tmp));
+                        $got=substr($got,$num+2);
+                        if( length($got)==0 ){
+                            $case = 3;
+                            $num  = 0;
+                        }
+                    }else{
+                        push(@arr,($got));
+                        $case = 2;
+                        $num = 0; # to end loop
+                    }
+                }
+            }else{
+                push(@arr,($got));
+                $case = 1;
+                $num = 0;
+            }
+        }while( length($got)&gt;0 &amp;&amp; $num &gt; 0 );
+    }else{
+        $case = 3;
+    }
+    return ($case,@arr);
+}
+
+#------------------------------------------------------------------------------
+# merge input array to create chunked page
+sub merge_chunks()
+{
+    my(@arr) = @_;
+    my($got) = '';    # return page
+    my($count)=0;
+    $count = @arr;
+    do{
+        $num = shift(@arr);
+        $got .= $num . "\r\n";
+        $num = hex($num);
+        $count--;
+        if( $num&gt;0 ){
+            $got .= shift(@arr);
+            $count--;
+        }
+    }while( $count&gt;0 );
+    return $got;
+}
+
+__END__
+<a name="idown"></a>
+=[5/5]= IDOWN1.pl =============================================
+#!/usr/bin/perl
+# 13.03.2001, DigJim
+
+$argc = @ARGV;
+$usage = &lt;&lt;USAGE
+-------------------------------------------------------------------------------
+Usage: perl idown1.pl *option* *user* *pass*
+
+This simple idrive account manager allows you to check the file tree
+from your or your friend's account located at https://www.idrive.com
+
+E.g:   perl idown1.pl -0 q1234 
+       perl idown1.pl -0 q1234 [pass01]
+	   perl idown1.pl -1 q1234 [pass01]
+
+options:
+-0   = full login (get new cookie value)
+-1   = logg using last saved cookie value
+
+
+Remember: you must have cert.pem and key.pem in the current working 
+directory.
+-------------------------------------------------------------------------------
+USAGE
+    ;
+
+die $usage unless $argc &gt;=1;
+
+($option,$user,$pass) = @ARGV;
+$trace = 0;
+
+print "================================================================================\n\n";
+print "user = $user, password=$pass\n\n";
+
+$site = "www.idrive.com";
+$port = 443;
+$path0= "/";
+$path1= "/mydrive/login.jsp";
+$path2= "/$user/?guest=false";
+$path3= "/$user/files/";
+
+$cont1= "userid=$user&amp;guest=false&amp;fromLoginPage=true&amp;password=$pass&amp;Click+here+after+
+typing+your+name+and+password.x=22&amp;Click+here+after+typing+your+name+and+password.y=10";
+$contU= "userid=$user&amp;guest=true&amp;fromLoginPage=true";
+$cookie='';
+
+use Compress::Zlib;
+use Socket;
+use Net::SSLeay; qw( die_now die_if_ssl_error, make_headers);
+$Net::SSLeay::trace = 3; # Super verbose debugging
+Net::SSLeay::load_error_strings();
+Net::SSLeay::SSLeay_add_ssl_algorithms();
+
+$ctx = Net::SSLeay::CTX_new ()         or die_now("CTX_new ($ctx): 
+$!");
+Net::SSLeay::set_server_cert_and_key($ctx, 'cert.pem', 'key.pem') or 
+die "key";
+
+	open    (F, "+&gt;idrive-logg.txt");
+	binmode (F);
+
+	goto entry1 if( $option =~ m/-1/ );
+
+	($head,%header) = 
+	my_do_header( $site, $port, "GET", $path0,
+				 Net::SSLeay::make_headers(
+					"User-Agent"      =&gt; "Mozilla/4.99 (Windows 98; U)",
+					"Accept-Language" =&gt; "en",
+					"Accept-Encoding" =&gt; "deflate, gzip",
+					"Referer"         =&gt; "$site",
+					"Connection"      =&gt; "Keep-Alive, TE",
+					"TE"              =&gt; "deflate, gzip, chunked"
+				 )
+			   );
+
+	$msg = $head;
+	syswrite( F, $msg, length($msg), 0 );
+
+	goto doclose if( $msg !~ m/Set-Cookie:\s*(.*);\s*path/i );
+	$cookie .= $1;
+
+	($head,$page,$response,%header) = 
+		my_do_https( $site, $port, "POST", $path1,
+					 Net::SSLeay::make_headers(
+						"User-Agent"      =&gt; "Mozilla/4.99 
+(Windows 98; U)",
+						"Accept-Language" =&gt; "en",
+						"Accept-Encoding" =&gt; "deflate, gzip",
+						"Referer"         =&gt; "$site",
+						"Cookie"          =&gt; "$cookie",
+						"Cookie2"         =&gt; "\$Version=\"1\"",
+						"Connection"      =&gt; "Keep-Alive, TE",
+						"TE"              =&gt; "deflate, gzip, chunked"
+					 ),
+					 $pass?$cont1:$contU
+				   );
+
+	$msg = $response . "\r\n" . $head . "\r\n\r\n" . $page;
+	syswrite( F, $msg, length($msg), 0 );
+
+	print "Checking for cookie 'JServSessionId=...'\n";
+	goto doclose if( $head !~ m/Set-Cookie:\s*(J.*);/i );
+	$cookie .= "; " . $1;
+
+	print "Checking for 'Found' keyword...\n";
+	goto doclose if( $page !~ m!&lt;TITLE&gt;302 Found&lt;/TITLE&gt;!i );
+
+
+	printf "creating user data...\n";
+	open  FC, "&gt;idrivedata.txt";
+	print FC  "$cookie\n";
+	close FC;
+
+entry1:
+
+	open  FC, "&lt;idrivedata.txt";
+	$cookie = &lt;FC&gt;;
+	if( $cookie =~ m/(.*)\r?\n/ ){
+		$cookie = $1;
+	}
+	close FC;
+
+	printf "logging using cookie...:\n'$cookie'\n";
+
+	($head,$page,$response,%header) = 
+		my_do_https( $site, $port, 
+					$pass? "POST" : "GET",
+					$pass? $path2 : $path3, # . "shared/",
+					 Net::SSLeay::make_headers(
+						"User-Agent"      =&gt; "Mozilla/4.99 
+(Windows 98; U)",
+						"Accept-Language" =&gt; "en",
+						"Accept-Encoding" =&gt; "deflate, gzip",
+						"Referer"         =&gt; "$site$path1",
+						"Cookie"          =&gt; "$cookie",
+						"Cookie2"         =&gt; "\$Version=\"1\"",
+						"Connection"      =&gt; "Keep-Alive, TE",
+						"TE"              =&gt; "deflate, gzip, chunked"
+					 )
+				   );
+
+	$msg = $response . "\r\n" . $head . "\r\n\r\n" . $page;
+	syswrite( F, $msg, length($msg), 0 );
+
+	goto user_folders if $pass;
+
+	print "\n\n================= GUEST LOGGED ON in $user ACCOUNT ==========\n\n\n";
+	@ifiles = extract_ifiles( $page );
+	if( @ifiles ){
+		@afile = @ifiles;
+		do{
+			$tmp = pop @afile;
+				
+			($folder,$public,$filename,$filehref, $fileinfo) = split( /,/ , $tmp );
+			$tmp = $filename;
+			$tmp =~ s/\+/ /g;  # change '+' to  ' '
+			print "$level$folder $public $tmp\n";
+			
+			# uncomment this for more info
+			# print "$level   =$filehref\n";
+			
+			# go down into folder if any
+			if( ($public.$folder) =~ m/^YD/ ){
+				show_folder( $filename, ' ' );
+			}
+		}while( @afile );
+	}
+	goto doclose;
+
+user_folders:
+	print "\n\n================= USER: $user LOGGED ON =====================\n\n\n";
+
+	@shortcuts = extract_folders( $page );
+	$tmp  = @shortcuts;
+	print "Found $tmp folders\n";
+	
+	goto doclose if( $tmp==0 );
+
+	@arry = @shortcuts;
+	do{
+		$tmp = pop @arry;
+			
+		($nodecode,$nodedeep,$nodename) = split( /,/ , $tmp );
+		print "$nodecode  $nodedeep  $nodename  " . @arry . "\n";
+		
+		($head,$page,$response,%header) = 
+			my_do_https( $site, $port, "POST", $path3,
+					 Net::SSLeay::make_headers(
+						"User-Agent"      =&gt; "Mozilla/4.99 (Windows 98; U)",
+						"Accept-Language" =&gt; "en",
+						"Accept-Encoding" =&gt; "deflate, gzip",
+						"Referer"         =&gt; "$site$path1",
+						"Cookie"          =&gt; "$cookie",
+						"Cookie2"         =&gt; "\$Version=\"1\"",
+						"Connection"      =&gt; "Keep-Alive, TE",
+						"TE"              =&gt; "deflate, gzip, chunked"
+				 	),
+				 	"parent-node=$nodecode"
+			   );
+
+		$msg = $response . "\r\n" . $head . "\r\n\r\n" . $page;
+		syswrite( F, $msg, length($msg), 0 );
+
+		print "files in '$nodename':\n";
+
+		@ifiles = extract_ifiles( $page );
+		if( @ifiles ){
+			@afile = @ifiles;
+			do{
+				$tmp = pop @afile;
+				
+				($folder,$public,$filename,$filehref, $fileinfo) = split( /,/ , $tmp );
+# 				$filehref =~ s/\+/ /g;
+# 				$fileinfo =~ s/\+/ /g;
+				print "$folder $public $filename\n";
+			}while( @afile );
+		}
+
+	}while( @arry );
+
+
+doclose:
+	print "================= END OF SESSION ============================\n";
+
+	close F;
+die;
+
+
+
+
+
+# ------------------------------------------------------------------------------
+sub show_folder()
+{
+	my ($fileinfo,$level) = @_;
+	my $tmp = 0;
+	my @ifiles=();
+	my @afile=();
+	
+	# using globals:
+	# $head, $page, $response, %header, 
+	# $site, $port, $cookie
+	# $msg, F
+	# $folder, $public, $filename, $filehref, $fileinfo
+	
+	($head,$page,$response,%header) = 
+		my_do_https( $site, $port, "GET", $fileinfo,
+					 Net::SSLeay::make_headers(
+						"User-Agent"      =&gt; "Mozilla/4.99 (Windows 98; U)",
+						"Accept-Language" =&gt; "en",
+						"Accept-Encoding" =&gt; "deflate, gzip",
+						"Referer"         =&gt; "$site$path1",
+						"Cookie"          =&gt; "$cookie",
+						"Cookie2"         =&gt; "\$Version=\"1\"",
+						"Connection"      =&gt; "Keep-Alive, TE",
+						"TE"              =&gt; "deflate, gzip, chunked"
+					 )
+				   );
+
+	$msg = $response . "\r\n" . $head . "\r\n\r\n" . $page;
+	syswrite( F, $msg, length($msg), 0 );
+
+	@ifiles = extract_ifiles( $page );
+	if( @ifiles ){
+		@afile = @ifiles;
+		do{
+			$tmp = pop @afile;
+				
+			($folder,$public,$filename,$filehref, $fileinfo) = split( /,/ , $tmp 
+);
+			$tmp = $filename;
+			$tmp =~ s/\+/ /g;  # change '+' to  ' '
+			print "$level$folder $public $tmp\n";
+			
+			# uncomment this for more info
+			# print "$level   =$filehref\n";
+			
+			# go down into folder if any
+			if( ($public.$folder) =~ m/^YD/ ){
+				show_folder( $filename, $level . ' ' );
+			}
+		}while( @afile );
+	}
+	$tmp = @ifiles;	# return count
+}
+
+
+# ------------------------------------------------------------------------------
+sub extract_ifiles()
+{
+	my($page)  = @_;
+ 	my($pbeg)  = "&lt;TD valign=\"middle\" bgcolor=\"#FFFFCC\"&gt;&lt;font color=\"#003366";
+	my($pend)  = "&lt;/font&gt;&lt;/A&gt;&lt;/font&gt;&lt;/TD&gt;"; # to get shared value
+	my $pbeg0  = "&lt;TD valign=\"middle\" bgcolor=\"white\"&gt;&lt;font color=\"#003366\"";
+	my $pend0  = "&lt;/font&gt;&lt;/TD&gt;&lt;TD align=\"center\" bgcolor=\"white\"&gt;";
+	my(@arry)  = ();
+	my $index1 =  0;
+	my $index2 =  0;
+	my $temp   = '';
+
+	$index1 = index( $page, $pbeg0, 0 );
+	$index2 = index( $page, $pend0, $index1 );
+
+	if( $index2-$index1 &gt;80 ){
+		$temp = substr( $page, $index1+length($pbeg0), $index2 - $index1 - length($pbeg0));
+		$page = substr( $page, $index2+length($pend0));
+
+		$temp = process_ifile( $temp );
+	
+		if( length($temp)&gt;2 ){
+			push( @arry, $temp );
+		}
+	}
+
+	while(1){
+		$index1 = index( $page, $pbeg, 0 );
+		$index2 = index( $page, $pend, $index1 );
+
+ 		print "index1=$index1 ... index2=$index2\n" if $trace&gt;2;
+		if( $index2-$index1 &lt;10 ){
+			last;
+		}
+		$temp = substr( $page, $index1+length($pbeg), $index2 - $index1 - length($pbeg));
+		$page = substr( $page, $index2+length($pend));
+
+		$temp = process_ifile( $temp );
+	
+		if( length($temp)&gt;2 ){
+			push( @arry, $temp );
+		}
+	}
+	
+	return @arry;
+}
+
+
+
+# ------------------------------------------------------------------------------
+sub process_ifile()
+{
+	my($opt) = @_;
+	my $file = '';
+	my $href = '';
+	my $info = '';
+	my $dir  = '';
+	my $line = '';
+	my $pub  = '';
+ 	my $pend = "&lt;/A&gt;&lt;/font&gt;&lt;/TD&gt;";
+	
+  	print $opt . "\n" if $trace&gt;3;
+	$opt =~ s/amp;//gi;
+
+	# Is public ?
+	$pub = '?';
+ 	if( $opt =~ m/.*serif\"&gt;&lt;b&gt;&lt;strong&gt;(\w+)&lt;\/strong&gt;.*/ ){
+		$pub = $1;
+	}
+
+	if( $opt !~ m/TARGET=/ ){
+		my $index1 = index( $opt, $pend, 0 );
+		$line = substr( $opt, 0, $index1 );
+		$opt = $line;
+	}
+
+
+	if( $opt =~ m/href=\"(.*)\" onClick=\".*false;\"&gt;(.*)/ ){
+		$href = $1;
+		$file = $2;
+		if( $href =~ m/^(.*)&amp;JServSessionId=.*/ ){
+			$info = $1;
+		}
+		$dir = 'F';
+	}else{
+		if( $opt =~ m/href=\"(.*)\" TARGET=\".*href=\"(.*)\"&gt;&lt;font color=\".*/ ){
+			$file = $1;
+			$info = $2;
+			$href = $info; # we can't download folder; only move into
+			$dir = 'D';
+		}
+	}
+
+	$line = $dir . "," . $pub . "," . $file . "," . $href . "," . $info;
+ 	print "\$line = '$line'\n" if $trace&gt;2;
+	return $line;
+}
+
+
+
+# ------------------------------------------------------------------------------
+sub extract_folders()
+{
+	my($page) = @_;
+	my $form = "&lt;form name=goToFolder";
+	my $fbeg = "&lt;td";
+	my $fend = "&lt;/td&gt;&lt;/form&gt;";
+	my @arry = ();
+	my $temp = '';
+	my $pbeg = '&lt;OPTION value=';
+	my $pend = '&lt;/OPTION&gt;';
+	
+	my $index1 = index( $page, $form, 0 );
+	my $index2 = index( $page, $fend, $index1 );
+	
+	$page = substr( $page, $index1, $index2-$index1 );
+
+#  	print "'" . substr( $page,   0, 60 ) . "'\n";
+#  	print "'" . substr( $page, -60, 60 ) . "'\n";
+
+	# extract goToFolder
+ 	# print "search in " . length($page) . "bytes\n";
+ 	while(1){
+		$index1 = index( $page, $pbeg, 0 );
+		$index2 = index( $page, $pend, $index1 );
+		
+ 		print "index1=$index1, index2=$index2\n" if $trace&gt;3;
+		if( $index2-$index1 &lt;10 ){
+			last;
+		}
+		$temp = substr( $page, $index1+length($pbeg), $index2 - $index1 - length($pbeg));
+		$page = substr( $page, $index2+length($pend));
+		$temp = process_shortcut( $temp );
+		if( length($temp)== 0){ last; }else{ push( @arry, $temp ); }
+	}
+	
+	return @arry;
+}
+
+
+# ------------------------------------------------------------------------------
+sub process_shortcut()
+{
+	# "8090924148500463620"&gt;&amp;nbsp;&amp;nbsp;&#149;Dropbox
+	my($opt) = @_;
+	my $line = '';
+	
+	$opt =~ s/&amp;nbsp;/ /gi;
+	$opt =~ s/&amp;#149/ /gi;
+ 	print "$opt\n" if $trace&gt;2;
+ 	
+	if( $opt =~ m/\"(.*)\"&gt;(\s*);(.*)/ ){
+		$line = $1 . "," . length($2) . "," . $3;
+ 		print "$line\n"; 
+	}
+	return $line;
+}
+
+# ------------------------------------------------------------------------------
+sub my_do_https {
+    my ($site, $port, $method, $path, $headers, $content, $mime_type) = @_;
+    my ($response, $page, $errs, $http, $h,$v);
+
+    my $req = my_msg( $site, $port, $method, $path, $headers, $content, $mime_type );
+
+    ($http, $errs) = my_https_cat($site, $port, $req);    
+    return (undef, "HTTP/1.0 900 NET OR SSL ERROR\r\n\r\n$errs") if $errs;
+    
+    ($headers, $page) = split /\s?\n\s?\n/, $http, 2;
+
+    ($response, $headers) = split /\s?\n/, $headers, 2;
+    return ($headers, $page, $response,
+	    map( { ($h,$v)=/^(\S+)\:\s*(.*)$/; (uc($h),$v); }
+		split(/\s?\n/, $headers)
+		)
+	    );
+}
+
+
+# ------------------------------------------------------------------------------
+sub my_do_header {
+    my ($site, $port, $method, $path, $headers, $content, $mime_type) = @_;
+    my ($response, $page, $errs, $http, $h,$v);
+
+    my $req = my_msg( $site, $port, $method, $path, $headers, $content, $mime_type );
+
+    ($http, $errs) = my_https_header($site, $port, $req);    
+    return (undef, "HTTP/1.0 900 NET OR SSL ERROR\r\n\r\n$errs") if $errs;
+    
+    return ($http,
+	    map( { ($h,$v)=/^(\S+)\:\s*(.*)$/; (uc($h),$v); }
+		split(/\s?\n/, $http)
+		)
+	    );
+}
+
+
+# 
+------------------------------------------------------------------------------
+sub my_msg()
+{
+    my ($site, $port, $method, $path, $headers, $content, $mime_type) = 
+@_;
+
+    if ($content) {
+	$mime_type = "application/x-www-form-urlencoded" unless $mime_type;
+my $len = length($content);
+	$content = "Content-Type: $mime_type\r\n"
+	    . "Content-Length: $len\r\n\r\n$content";
+    } else {
+	$content = "\r\n\r\n";
+    }
+    my $req = "$method $path HTTP/1.1\r\nHost: $site\r\n"
+      . $headers . "Accept: */*\r\n$content";    
+	
+ 	print "---------------- MESSAGE -------------------\n" if $trace&gt;1;
+ 	print "'$req'\n" if $trace&gt;1;
+
+	return $req;
+}
+
+
+
+# ------------------------------------------------------------------------------
+sub my_https_header { # address, port, message --&gt; returns reply
+    my ($dest_serv, $port, $out_message) = @_;
+    my ($ssl, $got, $head, $page, $errs, $written, $sock_template,$ssl_cipher);
+
+	$sockaddr_template = 'S n a4 x8';
+
+    $dest_port = getservbyname  ($port, 'tcp')
+	unless $dest_port =~ /^\d+$/;
+    $dest_serv_ip = gethostbyname ($dest_serv);
+
+	my $sin = sockaddr_in($port, $dest_serv_ip);
+    
+    socket  (SS, &amp;AF_INET, &amp;SOCK_STREAM, getprotobyname('tcp') ) or die "client: socket: $!";
+    connect (SS, $sin)         or die "client: connect: $!";
+    select  (SS); $| = 1; select (STDOUT);
+
+    # Do SSL handshake with remote server
+    # 
+    $ssl = Net::SSLeay::new($ctx) or Net::SSLeay::die_now("client: SSL_new ($ssl)");
+    &amp;Net::SSLeay::set_fd($ssl, fileno(SS));
+    &amp;Net::SSLeay::set_cipher_list($ssl, "DES-CBC3-MD5:RC4-MD5");
+    &amp;Net::SSLeay::print_errs();
+    $err = Net::SSLeay::connect($ssl);
+    &amp;Net::SSLeay::print_errs();
+	$ssl_cipher = Net::SSLeay::get_cipher($ssl);
+    print   "client: Cipher '" . $ssl_cipher . "'\n" if $trace&gt;0;
+    &amp;Net::SSLeay::print_errs();
+
+    # Exchange data with remote server
+    # 
+	print "\n------------- SEND -----------------\n" if $trace&gt;0;
+	print "$out_message\n" if $trace&gt;0;
+	$err = Net::SSLeay::write($ssl, $out_message) or die "client: write: $!";
+    &amp;Net::SSLeay::print_errs();
+
+    shutdown SS, 1;
+    
+    ### Connected. Exchange some data (doing repeated tries if necessary).
+
+    warn "waiting for reply...\n" if $trace&gt;2;
+    $head = my_get_head($ssl);
+	$got = $head;
+
+    warn "Got " . length($got) . " bytes.\n" if $trace==3;
+    warn "Got `$got' (" . length($got) . " bytes)\n" if $trace&gt;3;
+
+    &amp;Net::SSLeay::free ($ssl);
+    &amp;Net::SSLeay::print_errs();
+    close SS;
+
+    return wantarray ? ($got, $errs) : $got;
+}
+
+
+
+# 
+------------------------------------------------------------------------------
+sub my_https_cat { # address, port, message --&gt; returns reply
+    my ($dest_serv, $port, $out_message) = @_;
+    my ($ssl, $got, $head, $page, $errs, $written, 
+$sock_template,$ssl_cipher);
+
+	$sockaddr_template = 'S n a4 x8';
+
+    $dest_port = getservbyname  ($port, 'tcp')
+	unless $dest_port =~ /^\d+$/;
+    $dest_serv_ip = gethostbyname ($dest_serv);
+
+	my $sin = sockaddr_in($port, $dest_serv_ip);
+    
+    socket  (SS, &amp;AF_INET, &amp;SOCK_STREAM, getprotobyname('tcp') ) or die "client: socket: $!";
+    connect (SS, $sin)         or die "client: connect: $!";
+    select  (SS); $| = 1; select (STDOUT);
+
+    # Do SSL handshake with remote server
+    # 
+    $ssl = Net::SSLeay::new($ctx) or Net::SSLeay::die_now("client: SSL_new ($ssl)");
+    &amp;Net::SSLeay::set_fd($ssl, fileno(SS));
+    &amp;Net::SSLeay::set_cipher_list($ssl, "DES-CBC3-MD5:RC4-MD5");
+    &amp;Net::SSLeay::print_errs();
+    $err = Net::SSLeay::connect($ssl);
+    &amp;Net::SSLeay::print_errs();
+	$ssl_cipher = Net::SSLeay::get_cipher($ssl);
+    print   "client: Cipher '" . $ssl_cipher . "'\n" if $trace&gt;0;
+    &amp;Net::SSLeay::print_errs();
+
+    # Exchange data with remote server
+    # 
+ 	print "\n------------- SEND -----------------\n" if $trace&gt;0;
+	print "$out_message\n" if $trace&gt;0;
+	$err = Net::SSLeay::write($ssl, $out_message) or die "client: write: $!";
+    &amp;Net::SSLeay::print_errs();
+
+    shutdown SS, 1;
+    
+    ### Connected. Exchange some data (doing repeated tries if necessary).
+    warn "waiting for reply...\n" if $trace&gt;2;
+    ($head, $page) = my_read1($ssl);
+	$got = $head . $page;
+    warn "Got " . length($got) . " bytes.\n" if $trace==3;
+    warn "Got `$got' (" . length($got) . " bytes)\n" if $trace&gt;3;
+
+    &amp;Net::SSLeay::free ($ssl);
+    &amp;Net::SSLeay::print_errs();
+    close SS;
+
+    return wantarray ? ($got, $errs) : $got;
+}
+
+
+# 
+------------------------------------------------------------------------------
+sub my_read1(){
+	my($ssl2) = @_;		#input path (socket)
+	my($page)= '';
+	my($head)= '';
+
+	# at the beginning we have to read header only to determine the page type:
+	# content-length
+	# chunked
+	$head = my_get_head($ssl2);
+
+	if( $head =~ m/Content-Length:\s*(\w+)\s*\r?\n/i ){
+		$len = $1;
+		$page = my_read_len($ssl2,$len);
+	}
+	if( $head =~ /.*chunked/i ){
+		do{
+			$got = my_get_chunk_size($ssl2);
+			$len = 0;
+			if( $got =~ /(.*)\r?\n$/ ){
+				$len = $1;
+				$len = hex($len);
+				$got = my_read_len($ssl2,$len);
+				print ".";
+				$page .= $got;
+				if( $len&gt;0 ){
+					$got = my_read_len($ssl2,2);	#+2 &lt;==&gt; "\r\n"
+				}
+			}
+		}while($len&gt;0);
+		if( $head =~ /content-encoding:\s*gzip/i ){
+			# Write to gzip.bin file...
+			open FGZIP, "&gt;gzip.bin";
+			binmode FGZIP;
+			syswrite( FGZIP, $page, length( $page ));
+			close FGZIP;
+
+			# Unziping gzip.bin file...
+	        my $gz = gzopen("gzip.bin", "rb");
+			$page  = '';
+	        $page .= $got while $gz-&gt;gzread($got) &gt; 0 ;
+	        $gz-&gt;gzclose() ;
+
+			$head =~ s/content-encoding:\s*gzip\s*\r?\n/Content-Encoding: deflate\r\n/i;
+		}
+
+		# Converting to one chunk...
+		$len = sprintf("%x\r\n", length( $page ));
+		$page = $len . $page . "\r\n0\r\n\r\n";
+		print "\n";
+	}
+	return ($head,$page);
+}
+
+
+
+# ------------------------------------------------------------------------------
+sub my_get_head()
+{
+	my($ssl2) = @_;
+	my($head) = '';     #return http header
+	my($char) = '';
+	$head = Net::SSLeay::read($ssl2,3);
+	do{
+		$char  = Net::SSLeay::read($ssl2,1);
+		$head .= $char;
+	}while($head !~ /\r?\n\r?\n$/);
+#    print   "********** Received Header *************\n'$head'\n(" . 
+length ($head) 
+. " chars)\n" if $trace&gt;0;
+#    print F "********** Received Header *************\n'$head'\n(" . 
+length 
+($head) . " chars)\n";
+	return $head;
+}
+
+
+# ------------------------------------------------------------------------------
+sub my_get_chunk_size()
+{
+	my($ssl2) = @_;		#input path (socket)
+	my($chunk)= '';     #return chunk count
+	my($char) = '';
+	$chunk = Net::SSLeay::read($ssl2,1);
+	do{
+		$char   = Net::SSLeay::read($ssl2,1);
+		$chunk .= $char;
+	}while($chunk !~ /\r?\n$/ );
+	return $chunk;
+}
+
+
+# ------------------------------------------------------------------------------
+sub my_read_len()
+{
+	my($ssl2,$len) = @_;
+	my($page)= '';
+	my($got) = '';
+	my($cnt) = 0;
+	if( $len&gt;0 ){
+		do {
+			$cnt = $len;
+			if( $cnt &gt; 4096 ){
+				$cnt = 4096;
+			}
+			$got = Net::SSLeay::read($ssl2,$cnt);
+			$len -= length($got);
+			$page .= $got;
+		} while ( $len &gt; 0);
+	}
+	return $page;
+}
+
+
+__END__
+
+
+
+
+</font></pre>
+<BR>Thank you for reading this essay, hope it was worth it.
+<P>(c) DigJim 2001<hr></font>
+    <font size=+1><center>
+<table><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm" target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to essays"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to essays</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm" target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm" target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>
+

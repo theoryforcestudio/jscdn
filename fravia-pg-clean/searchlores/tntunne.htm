@@ -1,0 +1,181 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>tntunne.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ tntunne ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>    
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>NOT YET OPERATIVE<br></font><font size=+2>Warning: tntunne.htm 
+page not yet 'consolidated'</font><hr width=44%> </center> 
+
+<i>
+You may ask the following question:</i><bR>
+                                     <br>
+Is it possible to maintain a telnet session via a proxy?
+I am stuck behind a corporate firewall with no way out to the outside world 
+(internet) except via a firewall proxy (it's not just a case of port 23 
+being killed, I've tried telnetting to a telnet server which supports port 
+80 and this fails too)             <bR>
+The idea would be to telnet on port 80 via the firewall proxy, so the proxy 
+thinks it's http traffic and let's it through.
+      <bR>
+<hR>  
+<i>
+And get the following answer:</i><bR>
+         <bR>
+A SSH telnet session can be proxies through an SSL Tunnelling proxy.
+They don't check the protocol being proxied. A lot of port 8080 proxies
+ are SSL tunnelling on port 8080.
+       <bR><br>
+Perl can be used. In Windows 9x, selects rather than forking is used.
+The Perl of choice for Win9x seeems to be Activestate's.
+    <bR><br>
+What needs to be done is to add a single CONNECT header and proxy out to an
+ SSL Tunnelling proxy.
+      <bR><br>
+A script to do that is printed below (in blue)
+     <bR><br>
+It contains:
+<prE>
+socket(INC, PF_INET, SOCK_STREAM, $protocol) || die "socket:$!";
+setsockopt (INC, SOL_SOCKET, SO_REUSEADDR, pack ("l", 1)) || die "setsockopt:$!";
+bind(INC,sockaddr_in($dport,INADDR_ANY)) || die "bind: $!";
+listen(INC,1) || die "listen:$!";
+accept(OUT,INC) || die "accept:$!";
+$fhin = $fhout = \*OUT;
+...
+# Send a "CONNECT" command to proxy:
+print PROXY "CONNECT $destination:$destport HTTP/1.0\r\n\r\n";
+
+# Wait for HTTP status code, bail out if you don't get back a 2xx code.
+($status) = (split(/\s+/,<PROXY>))[1];
+
+die "Received a bad status code \"$status\" from proxy server."
+    if ( int($status/100) != 2 );
+
+# Skip through remaining part of HTTP header (until blank line)
+1 until ( <PROXY> =~ /^[\r\n]+$/ );
+
+# Start copying packets in both directions.
+$s = IO::Select->new($fhin,\*PROXY);
+
+while ( 1 ) {
+    foreach $fh ( $s->can_read(10) ) {
+        exit unless ( defined($num = sysread($fh,$_,4096)) );
+        syswrite(( (fileno($fh)==fileno($fhin)) ? PROXY : $fhout), $_, $num);
+    }
+}     </prE>
+
+Sysread attempts to read 4096 bytes from filehandle $fh ino string $_.   <br>
+Syswrite writes that the data in $_, to the SSL Tunnelling proxy if
+ the data came from the browser side connection ($fhin), otherwise
+ if the data came from the proxy, it is written to the $fhout. $fhout
+ is identical to $fhin     <bR><br>
+<hR>
+$s->can_read(10)<bR><br>
+    Activates when data is received from either $fhin (the browser
+    side connection, outoging data) or \*PROXY (the proxy, incoming
+    data)    <bR><br>
+<hR>
+can_read ( [ TIMEOUT ] ) 
+     <bR><br>
+  Return an array of handles that are ready for reading. TIMEOUT
+  is the maximum amount of time to wait before returning an empty
+  list. If TIMEOUT is not given and any handles are registered
+  then the call will block.  <bR><br>
+<hR>
+$ARG, $_  <bR><br>
+
+The default input and pattern-searching space.
+<hR>
+
+This method might have problems if loaded or the select part might
+ not run.
+
+<hr>
+
+
+A perl script for  maintaining a telnet session via a proxy
+     <hr>
+
+Since I didn't hear anything about a current SSH through SSL proxy "solution", 
+(specifically for windows clients), I went ahead a whipped up a Perl script 
+based on another script that I had sitting in the SSH mail directory. <bR>
+It can either run as a UNIX or Windows tunnel script through a proxy server 
+supporting the "CONNECT" command.  (note that a properly setup proxy will only 
+forward connections to the SSL ports (443 and 563))  The windows version was 
+only tested with the ActiveState perl interpretter (www.activestate.com), the 
+UNIX version works with the standard Perl interpretter.<bR>
+It's fairly simple and works nicely from my tests. <bR> 
+Read the comments in the 
+script for more info.<pre>
+Content-Type: text/plain ; name="ssh-tunnel.pl"; charset=us-ascii
+Content-Description: ssh-tunnel.pl
+Content-Disposition: attachment; filename="ssh-tunnel.pl"#!/usr/local/bin/perl#
+# Usage: ssh-tunnel.pl [daemon port] ssl-proxy port destination_host port#
+# This script can be used by ssh to traverse a www-proxy/firewall that
+# supports the http CONNECT command. (Note: Properly setup proxies that allow
+# CONNECT will only allow a connection through to SSL ports (443 and 563
+# according to squid.))#
+# Example-- connect to host named "remote" outside of your firewall:#
+# $ ssh remote -o'ProxyCommand ssh-tunnel.pl www-proxy 8080 remote 443'#
+# Better yet, insert the ProxyCommand definition for host "remote" in 
+# your $HOME/.ssh/config file:##      .#      .#    Host remote
+#      ProxyCommand /usr/local/bin/ssh-tunnel.pl www-proxy 8080 %h %p#      .
+#      .## Originally written by Urban Kaveus &lt;urban@statt.ericsson.se&gt;#
+# Updated by Theo Van Dinter &lt;tvd@chrysalis.com&gt;,&lt;felicity@kluge.net&gt; 4/28/1999
+#  I use TTSSH under Windows which doesn't support the proxycommand option.
+#  I made some modifications to this script to help with that:
+#   1- The script no longer forks to do IO.  Now uses IO::Select to deal with
+#      multiple filehandles at once.
+#   2- The script can optionally "daemonize" itself and sit on a port.  When
+#      a connection is established, the tunnelling process will commence.
+#      Add in the optional port # to listen to as the first commandline param.
+#      Ex: "ssh-tunnel 2345 www-proxy 8080 remotehost 443", then start SSH:
+#          "ssh localhost -p 2345".
+#   3- Tested with ActivePerl (Win32)/TeraTerm/TTSSH and UNIX Perl/SSH client.#
+use Socket;use IO::Select;$dport = shift if ( $#ARGV &gt; 3 );
+($sslproxy,$proxyport,$destination,$destport) = @ARGV;
+die "Usage: $0 [daemon port] ssl-proxy port destination port\n"
+	unless ( $sslproxy && $proxyport && $destination && $destport );
+# Set up network communication$protocol = getprotobyname("tcp");
+if ( $dport ) { # do "daemon" thing.
+	socket(INC, PF_INET, SOCK_STREAM, $protocol) || die "socket:$!";
+	setsockopt (INC, SOL_SOCKET, SO_REUSEADDR, pack ("l", 1)) || die "setsockopt:$!";
+	bind(INC,sockaddr_in($dport,INADDR_ANY)) || die "bind: $!";
+	listen(INC,1) || die "listen:$!";	accept(OUT,INC) || die "accept:$!";
+	$fhin = $fhout = \*OUT;}else { # STDIN/STDOUT used ...	$fhin = \*STDIN;
+	$fhout = \*STDOUT;}# connect to proxy server ...
+socket (PROXY, PF_INET, SOCK_STREAM, $protocol) or
+    die("Failed to create socket:$!");
+connect (PROXY, sockaddr_in($proxyport,inet_aton($sslproxy))) or
+    die("Failed to connect to $sslproxy port $proxyport:$!");
+# Force flushing of socket buffersforeach ( \*PROXY, $fhin, $fhout ) {
+	select($_); $|=1;}# Send a "CONNECT" command to proxy:
+print PROXY "CONNECT $destination:$destport HTTP/1.0\r\n\r\n";
+# Wait for HTTP status code, bail out if you don't get back a 2xx code.
+($status) = (split(/\s+/,&lt;PROXY&gt;))[1];
+die "Received a bad status code \"$status\" from proxy server."
+    if ( int($status/100) != 2 );
+# Skip through remaining part of HTTP header (until blank line)
+1 until ( &lt;PROXY&gt; =~ /^[\r\n]+$/ );# Start copying packets in both directions.
+$s = IO::Select-&gt;new($fhin,\*PROXY);while ( 1 ) {
+	foreach $fh ( $s-&gt;can_read(10) ) {
+		exit unless ( defined($num = sysread($fh,$_,4096)) );
+		syswrite( ((fileno($fh)==fileno($fhin))?PROXY:$fhout),$_,$num);	}}      
+
+</prE><hR>

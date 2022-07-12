@@ -1,0 +1,195 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ dolmen_2.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end -->
+  <meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type"  content="text/java-script>
+  <meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"   content="fravia+">
+  <meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+
+
+  <!-- internet searching techniques: imageheader begin -->
+  <table><tr><td><center><font size=+3>~ Essays ~</font>
+
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>
+  </center></td>
+  <td>&nbsp;&nbsp;&nbsp;</td>
+  <td> <center><font size=+3>~ Bots Lab ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+  SRC="images/basipet.jpg" ALT="to bots"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  bots lab</th>
+  </tR></table></center></td>
+  
+  </tr></table>(Courtesy of fravia's <a href="http://www.searchlore.org">searching
+  lores</a>)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Java Bots introduction&nbsp;¸.·´¯)</font>
+  <br>
+ 
+  <br>
+  <font size=+2>by Dolmen</FONT>
+  <BR>
+  (very slightly edited by fravia+)
+  <br>
+  published at  <a href="http://www.searchlores.org"  target="_blank">searchlores</a> in 
+  Mai 2001
+  <br>
+  <hr width=44%><i>
+Java could indeed be a simple way to develop more portable 
+<a href="http://fravia.2113.ch/phplab/scroll.htm">scrolls</a></i>&nbsp;:-)<br><hr>
+  
+</center>
+<H2>Java Bots introduction</h2>
+
+<p>In this introduction I'll show you how to write a single bot in Java. Of course, when I'm talking about Java, I'm not thinking to applets but to applications.</p>
+<p>Why is Java better than Perl or other languages at writing bots ?</p>
+<ul>
+ <li>Language: Java is cleaner. Few mistakes are possibles compared to C or Perl.</li>
+ <li>"Code scalability": Java is good for small projects (see below) as well as big ones.
+     But it is even better at growing projects because the language and its API push you to use
+     separate classes, packages, inheritance...</li>
+ <li>Portability: every Windows machine now has Internet Explorer. And IE includes a Java
+     virtual machine. You'll will be able to run your bots anywhere cleanly without installing
+     any add-ons. Even on Unix systems you now find JVMs as base packages where Perl is just
+     an option from the vendor (IBM AIX to name one).</li>
+ <li>APIs: clean, and high level APIs handling HTTP connexion are available in the base package.
+     SSL, mail, servlets are available as free extensions from Sun.</li>
+ <li>Threads: Java natively handles multi-threading as a core component of its API. Writing bots
+     accessing simultaneously at multiples sites can be done fingers in the nose.</li>
+ <li>You can make your bot a web application with the serlet API.</li>
+ <li>Many free extensions are available to add what the base API lacks.</li>
+ <li>Reversing: learn from others as Java classes are so easily reversibles.</li>
+</ul>
+<p>Now, here is a simple bot that downloads a page from the URL given on the command line
+and outputs it preceded by the HTTP headers (if it is an http:// URL).</p>
+<hr><center>Java QuickBot: <a href="QuickBot.java">http://www.searchlores.org/QuickBot.java</a>
+<br>
+ QuickBot class: <a href="QuickBot.class">http://www.searchlores.org/QuickBot.class</a>
+</center>
+<hr><font size=-1>
+<code><pre>
+/*
+ * To compile (you need a JDK from http://java.sun.com/):
+ *   javac QuickBot.java
+ * To run with a Sun VM:
+ *   java QuickBot http://www.searchlores.org/
+ * through an HTTP proxy:
+ *   java -Dhttp.proxySet=true -Dhttp.proxyHost=my.proxy.com -Dhttp.proxyPort=8080 QuickBot http://www.searchlores.org/
+ * or with a Microsoft VM (bundled with IE):
+ *   jview QuickBot http://www.searchlores.org/
+ */
+
+import java.net.*;
+import java.io.BufferedInputStream;
+
+public class QuickBot {
+	public static void main(String[] args) {
+		try {
+			URLConnection cnn = new URL(args[0]).openConnection();
+			cnn.setDoOutput(false);
+			cnn.setDoInput(true);
+
+			cnn.connect();
+
+			int i = 1;
+			String headerFieldKey;
+			while ((headerFieldKey = cnn.getHeaderFieldKey(i)) != null) {
+				System.out.println(headerFieldKey+": "+cnn.getHeaderField(i));
+				i++;
+			}
+			if (i &gt; 1)
+				System.out.println();
+
+			BufferedInputStream in = new BufferedInputStream(cnn.getInputStream());
+			int b;
+			while ((b = in.read()) != -1)
+				System.out.write(b);
+		} catch (Throwable t) {
+			t.printStackTrace();
+		}
+	}
+}
+</pre></code></font>
+<hr>
+I'll show you in a next essay how to write your bot as an HTTP servlet
+to show you that you can do the same as some PHP or Perl CGI scripts seen on this site,
+but cleaner.
+
+<p>Dolmen (dolmen*at*bigfoot*dot*com)<br>
+May 1st, 2001</p>
+<hr></font>
+    <font size=+1><center>
+<table><tr><td><center>
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="essays.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to essays"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to essays</th>
+</tR></table>
+</center></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td>
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="bots.htm"  target="_blank"><img 
+SRC="images/basipet.jpg" ALT="to bots"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Back to bots lab</th>
+</tR></table></center></td>
+  
+</tr></table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+(c) III Millennium: <font color= blue><font color= blue>[</fonT></font><a
+href="info.htm"  target="_blank">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

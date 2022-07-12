@@ -1,0 +1,153 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>s01004n1.htm: How to search the web, by fravia+ s01004n1.htm</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 2000 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Perusing Opera's guts ~</font><br>Version April 2000
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+
+</FONT></CENTER>
+</TD></TR><TR><td> 
+<CENTER><hR WIDTH=77% ALIGN=CENTER></CENTER>
+</td></TR><TR><td>
+<!-- #BeginEditable "FirstText" --> 
+This is NOT for beginner reversers, beginners should simply 
+<font color=blue>[</font><a href="basic.htm">learn the basics first</a><font color=blue>]</font> and come here later.<br>Anyway, 
+for those of you that already know the basic of reversing, here it goes...<br>
+Once you "deadlist" Opera (here I have used wdasm32 for this task), you'll find following 
+interesting strings:
+
+<prE>
+ String Resource ID=21425: "Your timed evaluation has %i days left"
+ String Resource ID=21428: "(unregistered)"
+ String Resource ID=22001: "This copy of Opera is already registered. Do you want to cha"
+ String Resource ID=22004: "Opera Registration"
+ String Resource ID=22005: "Invalid registration number. You have probably entered a pre"
+</prE>
+
+The String Resource 22001,  "<font color="blue">This copy of Opera is already registered. Do you want 
+to change the registration information</font>", is the 
+more promising one for reversing purposes, 
+as you will see examining the relevant parts of the code that I have commented, below. 
+In fact, as you will see now, the flag inside memory location 994728 (which corresponds to 
+pointer [eax+4E8]) obviously decides if 
+you are already -or not- a registered user: if this location is 
+one  (true) then you are already registered, else if it is zero (false) you 
+are a unregistered user in his allowed 30 days trial time. As you will see, the same 
+flag is used to decide if the program should check -or not- how many times 
+you have been using it. Another typical case where -if you understand assembly language- 
+changing <font color="blue">one single byte</font> of 
+your target (from zero to one) would defeat a fairly complicated 
+protection which is quite long and windy <i>per se</i> but, alas for the programmers, has 
+been written in a higher level language...
+
+<prE>
+:4911F4 33F6	      xor esi,esi		     ;make sure esi is zero
+...
+:491213 A11C175100    mov eax, dword ptr [0051171C]  ;get this flag
+:491218 3BC6          cmp eax, esi		     ;is it zero?
+:49121A 740F          je 0049122B		     ;if zero then go to <font color="blue">Make_eax_=_1</font>
+:49121C 33C9          xor ecx, ecx	             ;make sure ecx is zero
+:49121E 39B0E8040000  cmp dword ptr [eax+4E8], esi   ;check registered_flag
+:491224 0F94C1        sete cl		             ;set cx=1 if flag=FALSE (0)
+:491227 8BC1          mov eax, ecx		     ;now ax=0 ONLY if flag=TRUE (1)
+:491229 EB03          jmp 0049122E	     	     ;now continue to <font color="blue">second_check</fonT>
+
+* <font color="blue">Make_eax_=_1</font>: Conditional Jump from Address 49121A
+|
+:49122B 6A01          push 1		             ;...setting eax...
+:49122D 58            pop eax		             ;...=1 (bad)
+
+* <font color="blue">Second_check</font>: Unconditional Jump from Address 491229
+|
+:49122E 3BC6          cmp eax, esi		     ;check once more: esi =0: now,
+:491230 7525          jne 00491257                   ;if ax=1 then user NOT registered
+:491232 8B0D3C175100  mov ecx, dword ptr [51173C]    ;else prepare for displaying APIs
+:491238 56  	      push esi		             ;push various parameters
+:491239 56            push esi  		     ;push zero
+:49123A 6A24          push 24			     ;push value 0x24 (36)
+:49123C 56            push esi			     ;push zero
+:49123D 68F1550000    push 55F1           ;ID=22001: Opera is already registered"
+:491242 FF7508        push [ebp+08]		     ;push value 0xB60 (2912)
+:491245 E889EEFDFF    call 004700D3       ;go GetFocus, LoadString and MessageBoxA
+</prE>
+
+Among the 6 parameters pushed before the call (note that the preceding command 
+at 491232: <u>mov ecx, dword ptr [51173C]</u>, pre-points ecx to the string 
+"<font color="blue">Internal program error, please note situation and contact 
+support</font>", just  
+in case something will go wrong during the following calls) the most interesting one 
+(actually 
+the very one that attracted in the first time our attention to the snippet of code above) is 
+obviously the push 55F1, which is the string location "This copy of Opera is already registered. Do you want 
+to change the registration information?" that will appear in a small messagebox ONLY 
+if you are already registered. Hence it is trivial to set the correct memory location 
+to 01 and to FAKE that you are already registered to Opera.<bR><bR>
+Note, moreover, how the 30 days check is implemented inside Opera (a typical snippet 
+for most 30 days limit protections) using the same memory location as check:
+<prE>
+:4AE4BE 8BB1E8040000    mov esi, dword ptr [ecx+4E8]       ;get "registered" flag
+:4AE4C4 85F6            test esi, esi		           ;is this user registered?
+:4AE4C6 7539            jne 004AE501		           ;yep, don't call
+:4AE4C8 6880000000      push 80                            ;else prepare call
+:4AE4CD 8D853CFFFFFF    lea eax, dword ptr [ebp+FFFFFF3C]  ;get how many days?
+:4AE4D3 50              push eax			   ;and pass them below
+:4AE4D4 68B1530000      push 000053B1   ;"Your timed evaluation has %i days left"
+:4AE4D9 E81D40FBFF      call 004624FB		           ;show message
+</prE>
+This confirms the obvious. Once more, it is trivial for any reverser to set the correct 
+memory location once for all to "already registered". Newbies and beginners reading 
+this will just have to wait until they are a little more "erfahren", or 
+they will have to experiment and find out on their own.<br>It is a pity that 
+the programmers didn't find the time to learn <font color=blue>[</font><a href="protec/protec.htm">some obvious anti-cracking tips</a><font color=blue>]</font>.<br>
+This said, <font color=blue>[</font><a href="http://www.operasoftware.com">Opera</a><font color=blue>]</font> is a wondrous application and you should by 
+all means <u>buy</u> it after the allowed trial time.<br> 
+<!-- #EndEditable -->
+<p>&nbsp;</p></td>
+<div align="center">Back to
+<font color="blue">[</fonT><a href="tuttiope.htm">Tutti all'opera!</a><font color="blue">]</fonT> &nbsp;&nbsp;&nbsp;
+Back to the page
+<font color="blue">[</fonT><a
+href="javascript:history.back();">you came from</a><font
+color="blue">]</fonT>
+</div>
+          <!-- #EndEditable --></tD>
+      </TR>
+    </TABLE><hr>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="basic.htm"><IMG SRC="images/basipet.jpg"
+ALT="basic"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 2000: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

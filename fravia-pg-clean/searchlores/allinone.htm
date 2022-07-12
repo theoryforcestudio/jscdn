@@ -1,0 +1,361 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>allinone.htm: How to search the web, by fravia+ allinone</title>
+<!-- web searching lore: pagename end --> 
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+"> 
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Allinone ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="further.htm"><IMG
+SRC="images/classpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+<TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+Allinone</th>
+</tR></table>Version <font color=blue>September</font> 2001<br>
+<!-- internet searching techniques: imageheader end -->
+
+<!-- internet searching strategies and hints content, begin -->
+<font size=+5>~ Allinone searchforms ~</font>
+<br>
+Courtesy of <a href="http://www.fravia.net">fravia</a>'s   <font color=blue>[</font><a href="http://www.searchlore.org">searchlore</a><font color=blue>]</font> & 
+<font color=blue>[</font><a href="http://www.searchlores.org">searchlores</a><font color=blue>]</font>
+<hr><i>Every seeker needs his trusted allinone form. A veritable searcher's "swiss knife", 
+allinones 
+can represent a "quick and dirty" solution for many a seeker's needs. Go ahead with the 
+forms below. Once you have chosen the 
+best configuration for your needs, you can craft your own, klebing it to your 
+favourite sites, pages, hideouts. I present here some DIFFERENT approaches for building your 
+own allinone forms. Study carefully the code (or if you are lazy just use them as they 
+are, duh) modify it as much as you want, play with javascript 
+(or whatever language they have been 
+written in) and then  give feedback and 
+propose <font color=blue>your own</font> allinones! 
+</i><br><br><hr width=88%>Javascript allinones:&nbsp;&nbsp; 
+<font color=blue>[</font><a href="allinone.htm#one">Krok form</a><font color=blue>]</font>
+&nbsp;&nbsp;
+<font color=blue>[</font><a href="allinone.htm#two">kwd form</a><font color=blue>]</font> (updated)
+&nbsp;&nbsp;
+<font color=blue>[</font><a href="allinone.htm#three">Corto Maltese's form</a><font color=blue>]</font>
+</center>
+<a name="one"></a>
+<hr>
+<font size=+1>Form one: the <font color=blue>Krok</font> form (javascript in the body)</font><br>I have 
+slightly modified this form, 
+sent by a russian friend. As you will see perusing the code, it is quite easy to 
+modify or add search engines ad libitum. The code uses some clever subroutines and 
+you can add as many search engines as you like. Note also that keeping the javascript 
+in the body (the form is document.writeln) will allow you to avoid any html-head interference 
+problems, should you want to collect many different allinones for different purposes&nbsp;:-)
+<hr><center>
+<!-- fravia's searching lore: bigtitle, end -->
+<table width=500 border="0">
+	<tr>
+	<td>
+	<center>
+<SCRIPT language="JavaScript">
+
+<!-- 
+var maxmotori = 30;
+var famoseuncicheto = "how+to+search";
+
+function femoselarray(n) {
+   for (var i = 1; i <= n; i++) {
+     this[i] = 0;
+   }
+   this.maxlen = n;
+   this.len = 0;
+   return this;
+}
+
+var motori = new femoselarray(maxmotori);
+
+function trovalasubstringa(bingo, pajaro) {
+   var i, bingon = bingo.length, pajarolength = pajaro.length;
+   for (i=0; i<=pajarolength-bingon; i++) {
+      if (bingo == pajaro.substring(i,i+bingon))
+        return i;
+   }
+   return false;
+}
+
+function motoron(name, opts, home, search) {
+  var krok = trovalasubstringa(famoseuncicheto, search);
+  this.name = name;
+  this.opts = opts;
+  this.home = home;
+  this.pre_krok = search.substring(0,krok);
+  this.post_krok= search.substring(krok+famoseuncicheto.length, search.length);
+}
+
+function sonta(name, opts, home, search) {
+  motori.len++;
+  if (motori.len <= motori.maxlen) {
+    motori[motori.len] = new motoron(name, opts, home, search)
+  }
+  else {
+    alert("Better increase maxmotori: " + motori.len + ">" + motori.maxlen)
+  }
+}
+
+sonta("AltaVista", "",
+   "http://altavista.digital.com/",
+   "http://altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=d&q=how+to+search");
+
+sonta("AltaVista (UseNet)", "",
+   "http://altavista.digital.com/",
+   "http://altavista.digital.com/cgi-bin/query?pg=q&what=news&fmt=d&q=how+to+search" );
+
+sonta("DejaNews", "",
+   "http://www.dejanews.com/",
+   "http://search.dejanews.com/nph-dnquery.xp?query=how+to+search&defaultOp=AND&svcclass=dncurrent&maxhits=25");
+
+sonta("Excite", "",
+   "http://www.excite.com/",
+   "http://www.excite.com/search.gw?searchType=Concept&search=how+to+search&category=default");
+
+sonta("FTP Search", "",
+        "http://ftpsearch.ntnu.no/",
+        "http://ftpsearch.ntnu.no/ftpsearch?query=how+to+search&doit=Search&type=Case+insensitive+substring+search&hits=50&matches=&hitsprmatch=&limdom=&limpath=&f1=Count&f2=Mode&f3=Size&f4=Date&f5=Host&f6=Path&header=none&sort=none&trlen=20");
+
+sonta("Galaxy","",
+   "http://galaxy.einet.net/galaxy.html",
+   "http://galaxy.einet.net/www/www.html?how+to+search");
+
+sonta("HandiLinks", "",
+   "http://www.hotbot.com",
+   "http://www.hotbot.com/search.html?domain=www.ahandyguide.com&MT=how+to+search&DC=50&_v=1.0&SW=web&SM=MC&OP=1&DE=0&RD=DM&search.x=40");
+
+sonta("HotBot", "",
+   "http://www.hotbot.com",
+   "http://www.hotbot.com/search.html?MT=how+to+search&DC=25");
+
+sonta("Infoseek", "",
+   "http://guide-p.infoseek.com",
+   "http://guide-p.infoseek.com/Titles?qt=how+to+search&col=WW&sv=IS&lk=fast");
+
+sonta("Infoseek Ultra", "",
+   "http://guide-p.infoseek.com",
+   "http://guide-p.infoseek.com/Titles?qt=how+to+search&col=WW&sv=IS&lk=fast");
+
+sonta("Infoseek (Usenet)", "",
+   "http://guide-p.infoseek.com",
+   "http://guide-p.infoseek.com/Titles?qt=how+to+search&col=NN&sv=IS&lk=fast");
+
+sonta("Lycos", "",
+   "http://www.lycos.com/",
+   "http://www.lycos.com/cgi-bin/pursuit?query=how+to+search");
+
+sonta("Magellan","SELECTED",
+   "http://www.mckinley.com/",
+   "http://www.mckinley.com/extsearch.cgi?query=how+to+search");
+
+sonta("Infoart (Russia)","",
+        "http://stars.infoart.ru",
+        "http://stars.infoart.ru/cgi-bin/stsrch.pl?=how+to+search");
+
+
+sonta("OpenText", "",
+   "http://search.opentext.com",
+   "http://search.opentext.com/omw/simplesearch?SearchFor=how+to+search&mode=and");
+
+sonta("Rambler (Russia)", "",
+        "http://www.rambler.ru/",
+        "http://www.rambler.ru/cgi-bin/rambler_search?and=1&short=0&news=0&words=how+to+search&Search.x=46&Search.y=12");
+
+sonta("WebCrawler", "",
+   "http://query.webcrawler.com/",
+   "http://query.webcrawler.com/cgi-bin/WebQuery?searchText=how+to+search&maxHits=25");
+
+sonta("Shareware/DOS", "",
+   "http://www.shareware.com/",
+   "http://search.shareware.com/code/motoron/Find?frame=none&logop=and&cfrom=quick&orfile=True&hits=25&search=how+to+search&category=DOS");
+
+sonta("Shareware/Unix", "",
+   "http://www.shareware.com/",
+   "http://search.shareware.com/code/motoron/Find?frame=none&logop=and&cfrom=quick&orfile=True&hits=25&search=how+to+search&category=UNIX");
+
+sonta("Shareware/Windows", "",
+   "http://www.shareware.com/",
+   "http://search.shareware.com/code/motoron/Find?cfrom=quick&frame=none&orfile=True&category=MS-Windows%28all%29&hits=25&search=how+to+search&logop=and&and=");
+
+sonta("WhoWhere (E-mail)", "",
+    "http://www.whowhere.com",
+    "http://query1.whowhere.com/jwz/name.wsrch?name=how+to+search&org=");
+
+sonta("Yahoo!", "",
+   "http://www.yahoo.com/",
+   "http://search.yahoo.com/web/advanced/bin/search?p=how+to+search" );
+
+function HandleForm(form) {
+  form.submit();  
+  var i, oldq=form.query.value, newq="";
+  for (i=0; i<oldq.length; i++) {  // compress [ ]+ into \+
+    var thischar = oldq.charAt(i);
+    if (thischar != ' ')
+      newq += thischar;
+    else if (lastchar != ' ')
+      newq += '+';
+    lastchar = thischar;
+  }
+  var eng = motori[1+form.service.selectedIndex];
+  location.href = newq ? eng.pre_krok + newq + eng.post_krok : eng.home;
+}
+
+function DisplayForm() {
+
+
+  document.writeln('<FORM OnSubmit="HandleForm(this); return false">');
+  document.writeln('Search <select name="service">');
+  for (i=1; i <= motori.len; i++) {
+    document.writeln("<OPTION " + motori[i].opts + "> " + motori[i].name);
+  }
+}
+
+DisplayForm();
+
+// done hiding from old browsers -->
+
+</SCRIPT>
+	
+	</SELECT>
+	</CENTER>
+	</TD>
+<td width=150><font color=blue>[</font><a href="glancekr.txt">Krok's code</a><font color=blue>]</font></td>
+	</TR>
+	<TR>
+	<TD>
+	</SELECT>
+	and find the following:&nbsp;<input size=50 name="query">
+
+	</TD>
+	<TD><br>
+	<input type=submit name=search value=Search! width=100 border=0>&nbsp;
+	</TD>
+	</TR>
+	</FORM>
+	</TABLE>
+	<p>&nbsp<br>
+</center>
+	
+
+<!-- kwd form (javascript in the head) begin -->
+<a name="two"></a>
+<hr>
+<font size=+1>Form two: the <font color=blue>kwd</font> form (javascript in the head)</font><br>As you 
+will see perusing the code, this form uses a completely different approach: 
+it is quite easy to 
+modify or add search engines ad libitum, though. This approach allows a good finetuning for 
+each search engine.
+
+<hr><center><font size=+2>
+<font color=blue>[</font><a href="allinon2.htm">kwd form</a><font color=blue>]</font>
+</font>
+<hr width=44%>
+<font color=blue>[</font><a href="glancekw.txt">kwd's code</a><font color=blue>]</font>
+</center>
+<bR>An "italian student of civil engineering" took the time to update it (september 2001):
+<br><prE>
+*** UNMODIFIED ***
+
+Yahoo
+AltaVista
+Excite
+MetaCrawler
+Northern Light
+
+
+*** UPDATED ***
+
+Ask Jeeves! (new directory for askjeeves.asp)
+Infoseek (now by Go.com)
+Lycos (new URL, but if you try to add its new input tag HotBot don't 
+work)
+HotBot (new URL, but if you try to update its input tag it don't work)
+DejaNews (now by Google)
+WebCrawler (now it use Excite)
+Savvy Search (now by CNET. NOTE: I had problems with Savvy Search but 
+they solved themselves in a way that I wasn't able to reproduce)
+
+
+*** ADDED ***
+
+Google
+All The Web
+AOL Search
+Mamma
+Monster Crawler
+Direct Hit
+Virgilio (italian search engine based on categorized arguments, but if 
+you try to add its input tag HotBot don't work)
+
+
+*** REMOVED ***
+
+Open Text
+</prE>
+
+<!-- kwd form (javascript in the head) end -->
+
+
+<!-- corto maltese form  begin -->
+<a name="three"></a>
+<hr>
+<font size=+1>Form three: the <font color=blue>corto maltese</font> form (used at murchaderecho)</font>
+<br>As it is this form is targeted to 'derecho hispanico', but, perusing its code, you'll easily 
+be able to 
+use it for your own allinones.
+
+<hr><center><font size=+2>
+<font color=blue>[</font><a href="allinon3.htm">corto maltese's form</a><font color=blue>]</font>
+</font>
+
+</center>
+<!-- corto maltese form  end -->
+
+<hr>
+<center>
+<i>a lot to add... soon or later, what about stopping leeching and sending your own contributions?</i>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><a href="further.htm"><IMG
+SRC="images/classpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2"
+bgcolor="#993300"></tD></tR></table>
+
+(c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</fonT></font>, all rights reserved
+<bR><!-- how to search the web, by fravia+, signet end -->
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

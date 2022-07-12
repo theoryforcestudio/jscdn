@@ -1,0 +1,659 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>eurosearch.htm: Taking advantage of polylinguistic tools when searching</title>  
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1"><meta http-equiv="Content-Style-Type"	content="text/css"><meta http-equiv="Content-Script-Type"	content="text/javascript"><meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching"><meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+"><meta name="author"		content="fravia+"><meta name="copyright"		content="Copyright(c) 2000 fravia+">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">  
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>  
+<SCRIPT language=javascript>
+
+	function ComposeAll(){
+		
+        lgar = window.text0.lg.value; 
+        textor=window.text0.textuz.value; 
+        while (textor.indexOf(String.fromCharCode(34)) >=0){
+			textor = textor.replace(String.fromCharCode(34),"%22");
+		}
+        pattern=/\b\/\b/ig;
+
+        from = window.text0.textofrom.value; 
+        day_from = from.substring(0,from.indexOf("/"));
+        month_from = from.substring(from.indexOf("/")+1,from.lastIndexOf("/"));
+        year_from = from.substring(from.lastIndexOf("/")+1);
+        from = from.replace(pattern,"%2F");
+		         
+        to = window.text0.textoto.value;
+		day_to = to.substring(0,to.indexOf("/"));
+        month_to = to.substring(to.indexOf("/")+1,to.lastIndexOf("/"));
+        year_to = to.substring(to.lastIndexOf("/")+1);
+        to = to.replace(pattern,"%2F");
+        
+		window.navigate("http://europa.eu.int/servlet/portail/RenderServlet?search=Query&amp;lg="+ lgar.toLocaleString() + "&amp;nb_docs=25&amp;domain=&amp;coll=&amp;in_force=NO&amp;title=&amp;party=" +"&amp;year_from=" +year_from +"&amp;month_from=" +month_from +"&amp;day_from=" +day_from +"&amp;year_to=" +year_to +"&amp;month_to=" +month_to +"&amp;day_to=" +day_to + "&amp;text=" + textor.toLocaleString() + "&amp;from=" + from + "&amp;to=" +to);
+	}
+
+	function Compose(){
+		
+        lgar = window.text1.lg.value; 
+        textor=window.text1.textuz.value; 
+        while (textor.indexOf(String.fromCharCode(34)) >=0){
+			textor = textor.replace(String.fromCharCode(34),"%22");
+		}
+        pattern=/\b\/\b/ig;
+
+        from = window.text1.textofrom.value; 
+        day_from = from.substring(0,from.indexOf("/"));
+        month_from = from.substring(from.indexOf("/")+1,from.lastIndexOf("/"));
+        year_from = from.substring(from.lastIndexOf("/")+1);
+        from = from.replace(pattern,"%2F");
+		         
+        to = window.text1.textoto.value;
+		day_to = to.substring(0,to.indexOf("/"));
+        month_to = to.substring(to.indexOf("/")+1,to.lastIndexOf("/"));
+        year_to = to.substring(to.lastIndexOf("/")+1);
+        to = to.replace(pattern,"%2F");
+        
+		window.navigate("http://europa.eu.int/servlet/portail/RenderServlet?search=Query&amp;lg="+ lgar.toLocaleString() + "&amp;nb_docs=25&amp;domain=Legislation&amp;coll=&amp;in_force=NO&amp;title=&amp;party=" +"&amp;year_from=" +year_from +"&amp;month_from=" +month_from +"&amp;day_from=" +day_from +"&amp;year_to=" +year_to +"&amp;month_to=" +month_to +"&amp;day_to=" +day_to + "&amp;text=" + textor.toLocaleString() + "&amp;from=" + from + "&amp;to=" +to);
+	}
+         
+
+	function ComposePrep(){
+		
+        lgar = window.text2.lg.value; 
+        textor=window.text2.textuz.value; 
+        while (textor.indexOf(String.fromCharCode(34)) >=0){
+			textor = textor.replace(String.fromCharCode(34),"%22");
+		}
+        pattern=/\b\/\b/ig;
+
+        from = window.text2.textofrom.value; 
+        day_from = from.substring(0,from.indexOf("/"));
+        month_from = from.substring(from.indexOf("/")+1,from.lastIndexOf("/"));
+        year_from = from.substring(from.lastIndexOf("/")+1);
+        from = from.replace(pattern,"%2F");
+		         
+        to = window.text2.textoto.value;
+		day_to = to.substring(0,to.indexOf("/"));
+        month_to = to.substring(to.indexOf("/")+1,to.lastIndexOf("/"));
+        year_to = to.substring(to.lastIndexOf("/")+1);
+        to = to.replace(pattern,"%2F");
+        
+		window.navigate("http://europa.eu.int/servlet/portail/RenderServlet?search=Query&amp;lg="+ lgar.toLocaleString() + "&amp;nb_docs=25&amp;domain=Preparatory&amp;coll=&amp;in_force=NO&amp;title=&amp;party=" +"&amp;year_from=" +year_from +"&amp;month_from=" +month_from +"&amp;day_from=" +day_from +"&amp;year_to=" +year_to +"&amp;month_to=" +month_to +"&amp;day_to=" +day_to + "&amp;text=" + textor.toLocaleString() + "&amp;from=" + from + "&amp;to=" +to);
+	}
+         
+</SCRIPT>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center><table><tr><td colspan=3><center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<!-- fravia's searching lore: bigtitle, end -->
+</td></tr><TR><td>
+        <!-- internet searching techniques: imageheader begin -->
+        <a href="basic.htm"><IMG SRC="images/babel.jpg"
+ALT="useful Babel"
+ALIGN=BOTTOM WIDTH="448" HEIGHT="391" BORDER=0 VSPACE=0
+HSPACE=0></a> <br>
+        
+      
+      
+      </td>
+      
+      <td>&nbsp;&nbsp;</td>   
+       <td><font size=+1><center>Version 01.01, September 2004<hr width=55%>
+
+<font size=+3>Das grosse  europ&#233;enne bellissimo search</font><br>
+<font size=+1>by fravia+</font> <br>
+(Taking advantage of free polylinguistic tools when searching)
+<br><br>  first published at <a href="http://www.searchlores.org">searchlores</a> in September 2004, <i>in fieri</i>  <br><br>
+Part of the <a href="essays.htm">searching essays</a>  and of the <a href="dictiona.htm">Seekers' Linguistic Station</a>   
+sections.  <br><br>
+<br><a href="eurosearch.htm#intro">Introduction</a><br><a href="eurosearch.htm#firsto">First example</a>: "resale right"<br><a href="eurosearch.htm#scondo">Second example</a>: "web searching"</center>
+
+       
+       
+       
+       </td>
+      </tr></table><br><br></center>     
+      
+      
+<a name="intro"></a>  <center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Das grosse europ&#233;enne bellissimo search</font>&nbsp;</center></td></tr></table>
+</center>  <br>
+
+   <font size=+1>      
+   
+   
+   
+    
+ 
+ <br><br>The importance of a <a href="regional.htm">regional</a> approach when performing some long term searches 
+ is well known among seekers, and has been demonstrated <i>ad abundantiam</i>, for instance through the "<font color=blue>The 'Moundarren' field case</font>" examined 
+ in <a href="synecdoc.htm">The synecdochical searching method</a>, where we saw that simply using the term  
+ <font color=blue>ha&#239;ku</font> (with  the <font color=blue>&#239;</font>
+ dieresis) at the place of <font color=blue>haiku</font> brought us new and amazing 
+ "french" target constellations instead of the (relatively easy to find) anglo-saxon ones.
+       <bR><br>We have moreover already seen, in a <a href="frav_eu1.htm">previous essay by il-li</a>, how 
+       to fetch on the fly any EU-document, in any of the older 11 (and more recently 20) EU 
+    official languages 
+<br>
+There were eleven official languages  of the European Union:<br>
+Danish, 
+Dutch, 
+English, 
+Finnish, 
+French, 
+German, 
+Greek, 
+Italian, 
+Portuguese, 
+Spanish, 
+Swedish. 
+
+ <br>9 more languages are slowly coming in since Mid-2004 (slowly from a "document finding" point of view: it takes time 
+ to find enough translators)<br>
+ Czech, Estonian, Hungarian, Latvian, Lithuanian, Maltese, Polish, Slovakian and Slovenian.
+ <br><br>
+ Kinda Babel, but it still seems to work and quietly produces millions of translations: <i>Stultorum plena sunt omnia</i>.
+ <br><br>  
+ As our readers may and will easily imagine, this opens -for us- an incredible wealth of documents of all sorts, 
+ on all possible 
+ matters, that have been translated in 20 languages and that will at once deliver us FURTHER 
+ interesting search arrows even in     languages 
+ that we may not know     at all.
+ 
+                   <br><br>Alas, first of all, in order to search for it, and for its multiple and various linguistic versions, we need the REFERENCES of a given document.
+                   Of course, as always on the web, <a href="nomomen.htm">nomen est omen</a>   (and reference is reference).
+                   
+                      <br><br>
+                   In order to fetch the documents corresponding to a specific text, 
+                   you may use the following three forms:
+                   <br><br> 
+                   
+                   
+<!-- FIRST FORM: All begin -->
+<TABLE border=2>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>
+      <CENTER>input text </CENTER></TD>
+    <TD>
+      <CENTER>modify begin date if needed</CENTER></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT size=+1>&nbsp;&nbsp;</FONT>&nbsp;<B><A 
+      href="http://europa.eu.int/eur-lex/en/search/search_lif.html">&nbsp;&nbsp;&nbsp;Anything</A></B>: 
+    </TD>
+    <TD>
+      <FORM id=text0 name=text0 
+      action=http://europa.eu.int/servlet/portail/RenderServlet? 
+      method=get><SELECT name=lg> <OPTION id=0 value=en selected>en</OPTION> 
+        <OPTION id=0 value=fr>fr</OPTION> <OPTION id=0 value=de>de</OPTION> 
+        <OPTION id=0 value=it>it</OPTION> <OPTION id=0 value=nl>nl</OPTION> 
+        <OPTION id=0 value=es>es</OPTION> <OPTION id=0 value=pt>pt</OPTION> 
+        <OPTION id=0 value=sv>sv</OPTION> <OPTION id=0 value=fi>fi</OPTION> 
+        <OPTION id=0 value=el>sv</OPTION></SELECT>&nbsp;&nbsp;&nbsp; </TD>
+    <TD>text: <INPUT id=textuz name=textuz> </TD>
+    <TD>from: <INPUT id=textofrom maxLength=10 size=11 value=01/01/2001 
+      name=textofrom> to: <INPUT id=textoto maxLength=10 size=11 name=textoto> 
+    </TD>
+    <TD><INPUT id=btnGO onclick=ComposeAll() type=button value=GO name=btnGo> 
+    </TD></TD></TR></TBODY></TABLE></FORM><!-- FIRST FORM: ALL end --><!-- FIRST FORM: LEGISLATION begin -->
+<TABLE border=2>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>
+      <CENTER>input text </CENTER></TD>
+    <TD>
+      <CENTER>modify begin date if needed</CENTER></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT size=+1>&nbsp;&nbsp;</FONT>&nbsp;<B><A 
+      href="http://europa.eu.int/eur-lex/en/search/search_lif.html">Legislation</A></B>: 
+    </TD>
+    <TD>
+      <FORM id=text1 name=text1 
+      action=http://europa.eu.int/servlet/portail/RenderServlet? 
+      method=get><SELECT name=lg> <OPTION id=0 value=en selected>en</OPTION> 
+        <OPTION id=0 value=fr>fr</OPTION> <OPTION id=0 value=de>de</OPTION> 
+        <OPTION id=0 value=it>it</OPTION> <OPTION id=0 value=nl>nl</OPTION> 
+        <OPTION id=0 value=es>es</OPTION> <OPTION id=0 value=pt>pt</OPTION> 
+        <OPTION id=0 value=sv>sv</OPTION> <OPTION id=0 value=fi>fi</OPTION> 
+        <OPTION id=0 value=el>sv</OPTION></SELECT>&nbsp;&nbsp;&nbsp; </TD>
+    <TD>text: <INPUT id=textuz name=textuz> </TD>
+    <TD>from: <INPUT id=textofrom maxLength=10 size=11 value=01/01/2001 
+      name=textofrom> to: <INPUT id=textoto maxLength=10 size=11 name=textoto> 
+    </TD>
+    <TD><INPUT id=btnGO onclick=Compose() type=button value=GO name=btnGo> 
+    </TD></TD></TR></TBODY></TABLE></FORM><!-- FIRST FORM: LEGISLATION end --><!-- SECOND FORM: PREPARATORY begin -->
+<TABLE border=2>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>
+      <CENTER>input text </CENTER></TD>
+    <TD>
+      <CENTER>modify begin date if needed</CENTER></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT size=+1>&nbsp;&nbsp;</FONT>&nbsp;<B><A 
+      href="http://europa.eu.int/prelex/rech_simple.cfm?">Preparation</A></B>:&nbsp;</TD>
+    <TD>
+      <FORM id=text2 name=text2 
+      action=http://europa.eu.int/servlet/portail/RenderServlet? 
+      method=get><SELECT name=lg> <OPTION id=0 value=en selected>en</OPTION> 
+        <OPTION id=0 value=fr>fr</OPTION> <OPTION id=0 value=de>de</OPTION> 
+        <OPTION id=0 value=it>it</OPTION> <OPTION id=0 value=nl>nl</OPTION> 
+        <OPTION id=0 value=es>es</OPTION> <OPTION id=0 value=pt>pt</OPTION> 
+        <OPTION id=0 value=sv>sv</OPTION> <OPTION id=0 value=fi>fi</OPTION> 
+        <OPTION id=0 value=el>sv</OPTION></SELECT>&nbsp;&nbsp;&nbsp; </TD>
+    <TD>text: <INPUT id=textuz name=textuz> </TD>
+    <TD>from: <INPUT id=textofrom maxLength=10 size=11 value=01/01/2001 
+      name=textofrom> to: <INPUT id=textoto maxLength=10 size=11 name=textoto> 
+    </TD>
+    <TD><INPUT id=btnGO onclick=ComposePrep() type=button value=GO name=btnGo> 
+    </TD></TD></TR></TBODY></TABLE></FORM><!-- SECOND FORM: PREPARATORY end -->   
+    <br><br> 
+    <table border=1><tr><td>
+    <font color=red>WARNING</font>: the forms above may not work if your <a href="tuttiope.htm">Opera</a> 
+                   + <a href="proxopro_1.html">Proxomitron</a> configuration is too 
+                   "harsh" with javascript scripts and redirections. Should this be the case,
+                   just try these forms out with a more "weak" browser à la Mozilla or M$ie    
+  <!-- fetcha_text begin -->                
+                         <br>
+ <!-- fetcha_text end -->         
+                    <BR>Else, for your <FONT color=blue>direct text searching</font> needs, you may jump directly to the <A 
+href="http://europa.eu.int/celex/eurovoc/cgi/sga_doc?eurovoc_dif!SERVEUR/menu!prod!MENU&amp;langue=EN" 
+target=_blank>eurovoc thesaurus</A> and/or to the <A 
+href="http://europa.eu.int/scadplus/leg/en/cig/g4000.htm" 
+target=_blank>Glossary</A> <BR><BR>   
+ Alternatively (better)  you can use <a href="http://europa.eu.int/celex/htm/celex_en.htm">the CELEX menu</a>: 
+                            "<font color=blue>Access to Celex menu search is free of charge from 1 July 2004. Nevertheless the use of a login and a password is temporarily required.
+Please use the login <b>enlu0000</b> and the password <b>europe</b>.</font>"
+   </td></tr></table><br>
+    
+            <br>
+            
+            So, basically, what we are trying to do here is to zap one of the greatest (if not <u>THE GREATEST</u>)
+            free linguistic 
+            resources of the web  in order to ameliorate (and how!) our searches. Note that it is not simply a matter of 
+            using some "dictionary" approach, like those described in our <a href="dictiona.htm">Linguistic Station</a>, 
+            for instance trough the use of the available free on-line <a href="dictiona.htm#vocca">Vocabularies</a>, though 
+            you can of course always use them as well for simple searches, nossir, <font color=blue>the point is 
+            quite different</font>. <br>
+            <br>
+            We have here literally MILLIONS of documents in 10 languages (and, since 2004, in 20 languages, duh) that 
+            cover sectors as different as "food security" or "animal protection". You are BOUND to find, for any search 
+            in your own language (provided it is among the 10 or, later, the 20 official ones of the Union) 
+            the english, german, french 
+            and spanish equivalent (plus italian, dutch and whatnots). <br>
+            <br>This opens to our sharp seekers' eyes millions of <font color=blue>TARGET</font> web-pages we would not have found with 
+            a monolinguistic search!
+            <br>
+            And thus you'll be  able to <font color=blue>REPEAT 
+            YOUR SEARCHES</font> on the <a href="main.htm">main</a> or <a href="regional.htm">regional</a>  search engines 
+            using  the correct linguistic definition for the exact target you'r seeking with a chainsaw of different 
+            languages...    "<i>Scusate se è poco</i>".
+            <br><br>
+            The importance of this both for queries that start in a language different from english (and of course need the english 
+            equivalent to be effective on the web) <font color=blue>and also at the same time</font> for 
+            queries that start in english but often enough badly need some opening to other languages 
+            should not be underestimated.  So do not underestimate it :-)
+            <br><br>
+            The fact that the European Union allows free access to this huge (truly immense) linguistic database is 
+            tantamount -in terms of importance- to the US-Pentagon having allowed people to use the military GPS services 
+            for free in order -<i>inter alia</i>- to sail around the world :-)
+    <br><br>
+ Now let's see an application of this "polylinguistic" approach to some sample searches. As we have seen in the past, there are TWO 
+ possible query scripts for the European Union documents: the <font color=blue>RenderServlet?</font> script and  
+ the <font color=blue>s97.vts</font> script.
+    <br><br>
+
+          
+ Let's begin with a broad search for...         
+   <a href="http://europa.eu.int/servlet/portail/RenderServlet?search=Query&lg=en&nb_docs=25&domain=&coll=&in_force=NO&title=&party=&year_from=2001&month_from=01&day_from=01&year_to=2004&month_to=01&day_to=01&text=copyright&from=01%2F01%2F2001&to=01%2F01%2F2004" target="_blank">copyright</a>, 
+   a concept which should mean "<font color=blue>the right to copy</font>", but has been recently ruthlessly  "privatized" by 
+   the enemies of knowledge: the commercial powers that be and their political lackeys. 
+   <br><br>
+   Note the exact formulation of the (broad) searchstring for the <font color=blue>RenderServlet?</font> script (btw: it seems that the <font color=blue>from</font> and <font color=blue>to</font>
+   date  fields are unneccessary repeated inside the form):<br><br><font size=-1>
+   http://europa.eu.int/servlet/portail/RenderServlet?
+   <br>search=Query<font color=blue>&lg=en</font>&nb_docs=25&domain=&coll=&in_force=NO&title=&party=&year_from=2001&month_from=01&day_from=01
+   <br>&year_to=2004&month_to=01&day_to=01<font color=blue>&text=copyright</font>&from=01%2F01%2F2001&to=01%2F01%2F2004<br>
+   </font><br>Here you could change on the fly both document language (<font color=blue>&lg=en</font>) 
+   and querystring (<font color=blue>&text=copyright</font>).<br>
+             This specific query (<font color=blue>copyright</font>) gives us (at the moment) 178 documents.
+   <br><br> 
+   
+   
+ Of course you can use analogous  strings with more terms and -of course- you could also use the <font color=blue>s97.vts</font> script instead, 
+ for instance <br><a href="http://europa.eu.int/search/s97.vts?Action=FilterSearch&COLLECTION=EURLEXfiles&Filter=EUROPA_filter.hts&ResultTemplate=eur-lex_res-en.hts&QueryMode=Simple&SearchPage=%2Feur-lex%2Fen%2Findex.html&SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&SortField=Score&SortOrder=desc&StartDate=&HTMLonly=&ResultCount=25&queryText=re-use+and+commercial+exploitation+of+public+sector+documents">&queryText=re-use+and+commercial+exploitation+of+public+sector+documents</a>, 
+ <br> thus narrowing the results to three documents.<br>
+ 
+         <br>Here you would have to automate the document language selection (awqwardly present in <font color=blue>much too many</font> 
+         occurrences inside 
+         the s97.vts search strings), still you can always modify on the fly the 
+   querystring itself (&queryText=<font color=blue>re-use+and+commercial+exploitation+of+public+sector+documents</font>).    
+   <br><br>
+   Of course you can use this ad hoc s97 form, 
+  but read the 
+<A HREF="http://europa.eu.int/geninfo/search/firstaid_en.htm">First aid</A>, and 
+then <A HREF="http://europa.eu.int/geninfo/search/firstaid_en.htm">Re-read it</A>.
+<br><br>
+<!-- THIS IS THE SEARCH DOCS FORM begin -->
+<a name="searchdoc"></a>
+<center><font size=+2><a href="http://europa.eu.int/geninfo/query_en.htm">SEARCH DOCUMENTS</a> on the Europa server</font>
+<FORM METHOD="POST" ACTION="http://europa.eu.int/search/s97.vts">  
+				  <INPUT TYPE="hidden" NAME="Action" VALUE="FilterSearch">
+				  <INPUT TYPE="hidden" NAME="Collection" VALUE="fullEUROPA">
+				  <INPUT TYPE="hidden" NAME="Filter" VALUE="EUROPA_filt.hts">
+				  <INPUT TYPE="hidden" NAME="ResultTemplate" VALUE="EUROPA_res-en.hts">
+				  <INPUT TYPE="hidden" NAME="QueryMode" VALUE="Simple">
+				  <INPUT TYPE="hidden" NAME="SearchPage" VALUE="/geninfo/query_en.htm"> 
+				  <TABLE BORDER="0" CELLSPACING="3"> 
+					 <TR> 
+						<TD COLSPAN="3"><STRONG>Formulate your query:</STRONG></TD> 
+						<TD VALIGN="MIDDLE" WIDTH="85%"></TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" COLSPAN="3"> <TEXTAREA NAME="queryText" ROWS="3" COLS="30"></TEXTAREA> </TD> 
+						<TD VALIGN="TOP" WIDTH="85%"><B>&nbsp;&nbsp;How to formulate
+						  your query?</B> 
+						  <UL> 
+							 <LI><FONT SIZE="-1"><B><A
+								HREF="http://europa.eu.int/geninfo/search/firstaid_en.htm">First aid:</A></B> 5 basic search options<BR>
+								</FONT></LI> 
+							 <LI><FONT SIZE="-1"><B><A
+								HREF="http://europa.eu.int/geninfo/search/index.htm#start">Extended help:</A></B> full search
+								capabilities</FONT></LI> 
+						  </UL> </TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" COLSPAN="3"></TD> 
+						<TD VALIGN="TOP" WIDTH="85%"></TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" COLSPAN="3"><B>Number of documents to
+						  display:</B></TD> 
+						<TD VALIGN="TOP" WIDTH="85%"> 
+						  <SELECT NAME="ResultCount"> 
+							 <OPTION VALUE="10"> 10 documents </OPTION> 
+							 <OPTION VALUE="25" SELECTED="SELECTED">25 documents
+								</OPTION> 
+							 <OPTION VALUE="50">50 documents </OPTION> 
+						  </SELECT> </TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" COLSPAN="3"><B>Retrieve only documents
+						   updated after: (date can be left blank) </B> 
+						  <P></P> </TD> 
+						<TD VALIGN="TOP" WIDTH="85%">
+						  <INPUT TYPE="text" SIZE="10" NAME="StartDate" VALUE=""> (dd/mm/yyyy)</TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" COLSPAN="3"><B>Document types: </B></TD> 
+						<TD VALIGN="TOP" WIDTH="85%"><INPUT TYPE="radio"
+						  NAME="HTMLonly" VALUE="yes">Only HTML<BR>
+						  <INPUT TYPE="radio" NAME="HTMLonly" VALUE="no" CHECKED="CHECKED">Multiple
+						  (HTML, PDF, Word, ...)</TD> 
+					 </TR> 
+					 <TR> 
+						<TD VALIGN="TOP" ALIGN="RIGHT">
+						  <INPUT TYPE="submit" VALUE="Search"></TD> 
+						<TD VALIGN="TOP" ALIGN="LEFT">&nbsp;</TD> 
+						<TD VALIGN="TOP" ALIGN="LEFT"><INPUT TYPE="reset"
+						  VALUE="Reset">&nbsp;</TD> 
+						<TD VALIGN="TOP" ALIGN="LEFT"></TD> 
+					 </TR> 
+				  </TABLE> </FORM> 
+
+
+
+
+
+<br><br>
+ <br><br>
+ In BOTH approaches, however, the real point is that once you have identified the documents with the exact jargon that 
+ interests you for a given search-project, you can at once retrieve them in 10 (since 2004: in 20) different languages 
+ and thus replenish your seeker's 
+ quiver with new (and powerful) <a href="terminology.htm#termi_a">arrows</a> :-) 
+                            
+    
+    <br><br>
+         Let us for instance imagine that the <a href="http://europa.eu.int/servlet/portail/RenderServlet?search=Query&lg=en&nb_docs=25&domain=&coll=&in_force=NO&title=&party=&year_from=2001&month_from=01&day_from=01&year_to=2004&month_to=01&day_to=01&text=copyright&from=01%2F01%2F2001&to=01%2F01%2F2004" target="_blank">result</a> 
+          from
+         the previous "broad search" that happens to interest you <font color=blue>most</font> is the following one: <br><br>
+         <table border=1><tr><td width="36" valign="top">119.</td>
+
+<td colspan="5" valign="top"><b>Directive <font color=blue>2001/84</font>/EC of the European Parliament and of the Council of 27 September 2001 
+on the resale right for the benefit of the author of an original work of art</b></td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td>
+
+<td colspan="5"><i>Official Journal <font color=blue>L 272</font> , 13/10/<font color=blue>2001</font> P. 00<font color=blue>32</font - 0036</i>... which will translate as the following string: "<font color=blue>2001l272</font>" for the 
+"<font color=blue>Fetch a JO</font>" form below.</td></tr>
+</table>
+    
+    <br><br>
+            You can then immediately use the form below to fetch the document in PDF format, in <a href="http://europa.eu.int/eur-lex/en/archive/2001/l_27220011013en.html">english</a> (or in any other language). 
+    <br><br>
+
+<!-- fetcha_JO begin -->
+<table border="1" width=98%>
+<tr><td bgcolor="#C6E7C6" width=60%><center>
+<font size=+2><a href="http://europa.eu.int/eur-lex/en/search/search_oj.html">Fetch a JO</a> on the fly</font>&nbsp;&nbsp;("<font color=red>l</fonT>" or "<font color=red>c</fonT>")</fonT>  
+</tD><td><center>(Build a string like <font color=blue>1999<font color=red>l</fonT>138</foNT> 
+or 
+<font color=blue>2001<font color=red>c</fonT>011</fonT>) 
+</center></td></tr></table>
+</center>
+<table border="0"><tR><td><font size=+1>&nbsp;&nbsp;</fonT></tD><td>
+<form name="form3" method="get" action="http://europa.eu.int/cgi-bin/eur-lex/udl.pl?">
+<input type="hidden" name="REQUEST" value="Seek-Deliver">
+<input type="hidden" name="COLLECTION" value="oj">
+<input type="hidden" name="SERVICE" value="all">
+<SELECT NAME="LANGUAGE" wrap=virtual>
+<OPTION SELECTED>en
+<OPTION>fr
+<OPTION>de
+<OPTION>it
+<OPTION>nl
+<OPTION>es
+<OPTION>el
+<OPTION>pt
+<OPTION>sv
+<OPTION>da
+<OPTION>fi
+<OPTION>cs
+<OPTION>et
+<OPTION>lv
+<OPTION>lt
+<OPTION>hu
+<OPTION>mt
+<OPTION>pl
+<OPTION>sk
+<OPTION>sl
+</SELECT>
+&nbsp;&nbsp;&nbsp;string &#8594;&nbsp;<input type="text" SIZE=8 MAXLENGTH=8 name="DOCID" value="2001l272">
+<input type="submit" name="Submit" value="Fetch_a_JO">
+</td>
+
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<td>(Leading zeroes MUST be MANUALLY added) </td>
+</tr></table></form>
+<!-- fetcha_JO end --> 
+
+<br><br>
+Note that you will have to click on the link representing the number of the page 
+            (in this case the beginning page is pag. <font color=blue>32</font>) in order 
+            to fetch <a href="http://europa.eu.int/cgi-bin/eur-lex/udl.pl?REQUEST=Seek-Deliver&LANGUAGE=en&SERVICE=eurlex&COLLECTION=oj&DOCID=2001l272p00320036">the PDF version</a> of this document (yes, pdf formats are <a href="pdffing.htm">VERY annoying</a>, but there are ways to bypass them :-)<br>
+            <br>Still, of course, 
+            you can fetch its html version as well using a DIFFERENT approach: The equivalent HTML version reference would be, 
+            as we saw 
+            in a <a href="frav_eu1.htm">previous essay by il-li</a> the following one:
+            <br>
+            <a href="http://europa.eu.int/smartapi/cgi/sga_doc?smartapi!celexapi!prod!CELEXnumdoc&lg=EN&numdoc=32001L0084&model=guichett">http://europa.eu.int/smartapi/cgi/sga_doc?smartapi!celexapi!prod!CELEXnumdoc&lg=EN&numdoc=32001L0084&model=guichett</a> 
+             <br>in this case "<font color=blue>32001L0084</font>" = document 
+             number <font color=blue>2001/84</font> in sector <font color=blue>3</font>, subsector <font color=blue>L</font>)
+    <br><br>Just change "<font color=blue>EN</font>"  from the "<font color=blue>&lg=EN</font>" substring above to anyone 
+    of the following codes and you'll at once fetch the 
+    chosen language version:<br>
+
+FR
+ - DE
+ - IT
+ - NL
+ - ES
+ - EL
+ - PT
+ - SV
+ - DA
+ - FI 
+ 
+ <br>and since 2004 are also possible:<br>
+CS
+ - ET
+ - LV
+ - LT
+ - HU
+ - MT
+ - PL
+ - SK
+ - SL 
+
+</center>    <a name="firsto"></a> 
+            <br><br><center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>First example</font></center></td></tr></table>
+</center>
+   <br>
+   Forward with this small essay. Let's imagine that your search was all about "<font color=blue>resale right</font>" (just 
+   to make it quick, I am using a part of the title of the previous document, but of course the real juicy   
+   terminological <a href="terminology.htm#termi_a">arrows</a> would be found inside the legislative text, as you will   soon be able
+   to 
+   ascertain if you use this "polylinguistic" searching approach).
+   <br><br>
+   Well, in that case, here we go:
+   <br>
+     <a href="http://www.google.com/search?as_q=%22resale+right%22&num=100&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i">resale right</a>
+    <br> 
+    <a href="http://www.google.com/search?as_q=%22droit+de+suite%22&num=100&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i">droit de suite</a>
+    <br>   
+    <a href="http://www.google.com/search?as_q=%22Folgerecht+des+Urhebers%22&num=100&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i">Folgerecht des Urhebers</a>
+    <br>  
+     <a href="http://www.google.com/search?as_q=%22diritto+sulle+successive+vendite%22&num=100&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i">diritto sulle successive vendite</a>
+    <br>  
+    <a href="http://www.google.com/search?as_q=%22volgrecht+ten+behoeve%22&num=100&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i">volgrecht ten behoeve</a>
+    <br> and so on, and so on...  your original "resale right" search is now (or at least could now be) MUCH more powerful, both in scope and in depth, 
+    <u>independently from your specific linguistic knowledges</u>. 
+    <br>  <a name="scondo"></a> 
+    <br> <center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Second example</font></center></td></tr></table>
+</center> <br>
+    Well, I see from your face that you are still unconvinced. Let's try again, let's imagine 
+    that we start a search for "<font color=blue>web searching</font>" on the europa server&nbsp;:-)
+    <br>As you can see, using the s97 form above, we  get (at the moment) as answer: 
+    <font color=blue>Your search for ""web searching"" matched 3 of 1504180 documents</font>. Uuhh, seems like the EU-bureaucrats haven't 
+    yet realized how imporant this is, try "<font color=blue>tobacco</font>" instead and you get 6000 documents&nbsp;:-(<br>
+    <br>The first document is: <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37en.pdf">Privacy on 
+    the Internet - An integrated EU Approach to On-line Data Protection"</a> which is called wp37<font color=blue>en</font>.pdf  and has of course all 
+    its correspondent
+    linguistic versions, that you'll obtain just changing -- inside your address bar -- the two-letters code <font color=blue>en</font> 
+    for english into
+    another language code, as always, on the web, <a href="nomomen.htm">nomen est omen</a>:                <br>
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37de.pdf">wp37de.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37fr.pdf">wp37fr.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37fi.pdf">wp37fi.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37it.pdf">wp37it.pdf</a> &nbsp; &nbsp;    
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37es.pdf">wp37es.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37pt.pdf">wp37pt.pdf</a> <br>   
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37sv.pdf">wp37sv.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37nl.pdf">wp37nl.pdf</a> &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37da.pdf">wp37da.pdf</a> &nbsp; &nbsp; 
+    ...and even... &nbsp; &nbsp; 
+    <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37el.pdf">wp37el.pdf</a><br>
+    <br><br>Things are complicated by the silly use of pdf files, but we can quickly
+    - and of course <a href="pdffing.htm">automatically</a> -  
+    port them to -say- rtf format for our working needs :-)<br>
+    Now pay attention: The snippet "web searching" is here in <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37en.pdf">wp37en.pdf</a>: 
+    <br>"<b>Portal site</b><br>
+A portal site provides an overview of weblinks in an ordered way. Via the visited portal
+the Internet user can easily visit selected websites of other content providers.
+Modern portals are "supersites" that provide a variety of services including <font color=blue>web
+searching</font>, news, white and yellow pages directories, free e-mail, discussion groups,
+online shopping and links to other sites."  <br><br>Note that 
+this is part of a "GLOSSARY OF TECHNICAL TERMS" at the bottom of the document, a "bingo added value" per se, and that many more juicy terms await us there... yet since 
+the <font color=blue>first commandment</font> when searching is to keep an iron concentration and do not, never, go astray (see <a href="tips.htm">tip 2</a>), 
+thus we'll remain on 
+our  worthy <font color=blue>web
+searching</font> path&nbsp;:-)
+           <br><br>Let's see the <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37de.pdf">german version</a>:<br> 
+           "<b>Portalseite</b><br>
+Eine Portalseite bietet in geordneter Form einen Überblick über die Web-Verknüpfungen. Über das
+besuchte Portal im Internet kann der Nutzer leicht ausgewählte Websites anderer Anbieter von Inhalten
+besuchen. Moderne Portale sind "übergeordnete Standorte" ("supersites"), die eine Vielzahl von
+Dienstleistungen bieten, etwa <font color=blue>die Suche im Netz</font>, Neuigkeiten, weiße und gelbe Telefonbücher (=Personenund
+Branchenverzeichnisse), freie E-Mail-Adressen, Diskussionsgruppen, "Online-shopping" und Links zu
+anderen Standorten."<br><br>
+
+     <br>Let's see the <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37es.pdf">spanish version</a>:<br>
+     "<b>Portal</b><br>
+Los portales proporcionan una vista general de los vínculos web de una manera
+ordenada. Pasando por un portal, el usuario de Internet puede visitar fácilmente otros
+sitios web seleccionados de otros proveedores de contenidos.
+Los portales modernos son "supersitios" que ofrecen una serie de servicios tales como
+<font color=blue>búsqueda en la Web</font>, noticias, guías de páginas blancas y amarillas, correo electrónico
+gratuito, grupos de debate, compras en línea y vínculos con otros sitios.                
+                    
+                    <br><br>
+                    And now let's see even the <a href="http://europa.eu.int/comm/internal_market/privacy/docs/wpdocs/2000/wp37sv.pdf">swedish version</a>! I do not know swedish (unfortunately) and I did not know that 
+                    in swedish web searching was "webbsökning":
+                    <br>
+                    "<b>Portalplats</b><br>
+En portalplats erbjuder en ordnad översikt över webblänkar. Internet-användaren kan
+enkelt besöka andra innehållsleverantörers webbplatser via den besökta portalen.
+Moderna portaler är "superwebbplatser" som tillhandahåller en rad tjänster, exempelvis
+<font color=blue>webbsökning</font>, nyheter, vita och gula sidor, gratis e-post, diskussionsgrupper, inköp och
+länkar till andra webbplatser."
+           <br><br>  
+                   And why should that be important? Because now you can go <a href="regional.htm">regional</a> and 
+                   find all those darn elusive swedish seekers sites: <a href="http://www.google.com/search?as_q=webbs%C3%B6kning&num=10&hl=en&ie=UTF-8&btnG=Google+Search&as_epq=&as_oq=&as_eq=&lr=&as_ft=i&as_filetype=&as_qdr=all&as_nlo=&as_nhi=&as_occt=any&as_dt=i&as_sitesearch=&safe=images">webbsökning</a>
+           <br><br>
+           Such is the slow, clever linguistic path of the überseekers&nbsp;:-)
+           <br><br>
+           Enjoy  !!
+   </font>
+
+<br><br> 
+<hr><center>
+<p><a target=_top href="http://searchlores.org/news.htm"><img src=
+"images/basipet.jpg" alt="Petit image" align="bottom"></a></p>
+
+<table>
+<tr>
+<td width="300" height="1" bgcolor="#993300"></td>
+</tr>
+</table>
+<center>(c) 3rd Millennium: <font color="blue">[</font><a target=_top href=
+"http://searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved.<br>Copyright (in the sense of "<font color=blue>the right to copy</font>"): fravia 2004</center>
+</center>
+</body>
+</html>

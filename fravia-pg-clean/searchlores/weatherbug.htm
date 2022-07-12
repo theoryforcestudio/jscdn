@@ -1,0 +1,526 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>WeatherBug: Investigating spyware</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This totally advertisement-free site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="effective search for documents, searching for information via the internet, advanced websearching, web searching, free sms gateway, web searching, how to search the internet effectively, search techniques, hints and tips for searching the web, How do I learn to search?, advanced internet searching,  choosing the best searching tool, choosing the best web search engine, fravia+ +'search engines' +'how to search'">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head> <body bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ WeatherBug ~</font>
+<!-- fravia's searching lore: bigtitle, end --><br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER><tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+<th BGCOLOR="#993300"><a href="malware.htm"><img SRC="images/basipet.jpg" ALT="Back to malware" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></th>
+<th BGCOLOR="#993300">&nbsp;&nbsp;</th>
+</th></tr></table><br>
+<!-- --------------------|||||------------->
+Published @ <a href="http://www.searchlores.org">www.searchlores.org</a> in <font color=blue>November</font> 2004 &nbsp; 
+<font color=gray> (Version 1.09: January 2005)</font>
+<!-- --------------------^^^^^------------->  
+<br><hr><br>
+<br><center><font color=navy size=+5>Weatherbug's nasty habits</font><br>
+(Investigating spyware)<br>
+by Shinoara
+<br>
+See also below: <a href="weatherbug.htm#answb">An answer by WeatherBug</a> (January 2005)<br>
+See also below: <a href="weatherbug.htm#repsh">A reply by Shinohara</a> (January 2005)
+<br><br></center>
+
+
+
+
+<H2>What is WeatherBug?</H2>
+</center><font size=+1>
+
+<P>WeatherBug is a software program by AWS WeatherNet that provides free weather updates   (for American cities) from a small icon in the systray. WeatherBug will give you details about your current weather conditions including temperchure, pressure, and many other, all compiled from your local weather report from your local TV station. If you click the icon you can also get several day forecast, storm alerts, alerts, maps, radar, plus much more:</P>
+
+<!====================>
+<CENTER><IMG SRC="images/100.jpg"><br></CENTER></P> 
+<BR>
+
+
+<P>You cannot see it from this screen capture  (because I have turned off all images in IE and WeatherBug utilized IE's GUI engine) but WeatherBug runs ads in the banner bottom and it periodically sends pop up ads to your desktop. WeatherBug may bill itself as a totally free application, but it supports itself via those display ads and via aligning itself with TV stations   (in this case CBS) and other various sponsors that you can see on their interface. It is a slick program that is working extermly hard to appears very useful to the average computer user. According to their website, Weatherbug is not spyware. They say that their software does not monitor, collect data or 'spy' on its user base. They even include links to the most popular anti spyware apps such as <A HREF=http://security.kolla.de/>SpyBot</A> and <A HREF=http://www.lavasoftusa.com/software/adaware/>AdAware</A> and invite you to download them and install them and to check your system. This made me laugh  because they totally screwed on this one since upon running SpyBot officially declairs them to be a a problem, calls them adware and possible spyware, points out possible problems with their   (Weatherbug's) privacy policy and asks the user of it wants Weatherbug removed. 
+I have provided a <A HREF="weatherbug.htm#proof">detailed proof of that below</A>.</P>
+<BR>
+
+
+
+<H2>How do you get WeatherBug?</H2>
+   
+WeatherBug finds its way on people's PC from variety of ways. You can certanly download it off their web site but that is not the only way. Talking to many people who have been infected with WeatherBug and asked me what it was and asked me to remove it from their systems it would appear to me a vast majority of WeatherBut users never asked for WeatherBug to be installed, or their WeatherBug installation came via other route, possibly a P2P app. Some people didn't even know what that little icon on their SystemTray was, nor they have ever used it.</P> 
+<BR>
+
+
+<H2>My involvment with WeatherBug</H2>
+
+began when I wrote an article on various spywares and posted it on <a href="http://www.searchlores.org">searchlores</a>. A copy of it also appeared in a recent issue of 2600 Hacker's Quarterly magazine and it was a great success. Many people emailed me thanking me for writing about those nasty modern dangers and asking me for a posibility of a reprint or if they can include it in their own magazines. It also drew the attention of the WeatherBug people who sent me an unpolite email, demanding I fix my article and issue a prominent retraction and how soon can i do that because they claimed I had called WeatherBug a spyware when I had <U>never done such a thing</U>. I also began seeing WeatherBug installed on many of my clients PCs and most of them didn't even know what it was or how it was used. They didn't even remember when it was installed or how. I decided to take a second careful look at WeatherBug and write up a follow up on what I find.</P>
+
+<P>Oh yeah, and here is the retraction WeatherBug people asked f'r:<BR>
+
+<P>In my article <a href="scumware.htm">Spyware, Adware, Scumware, Sneakware</a> I incorrectly stated that Gator comes attached with the WeatherBug utility. For that I apologize. I have done more research on WeatherBug and here is my report:<BR>
+<BR>
+
+
+<H2>WeatherBug review</h2>
+
+I began by downloading a fresh version of Weatherbug and installing it. 
+
+<P>WeatherBug started by asking me for my Zipcode.</P>
+
+<P>The next screen showed me what will be installed on my system:</P>
+<BR>
+ 
+<!=====================>
+<CENTER><IMG SRC="images/101.jpg"><br><br></CENTER></P> 
+
+That was the free WeatherBug 6.0, the WeatherBug companion plus the following buttons:</P>
+ MySearch, Google, Yahoo and Ask Jeeves.</P>
+ 
+As you can see, a <U>checked</U> option there will make <B>My Search</B> into my default stat up page. Since I have my own start up file, I unchecked the <B>Set MySearch as your default browser</B> box and continued. Let me stop here for a second and ask how many users know enough to read everything and uncheck that function, otherwise they <U>will</U> find their start up page quickly changed.</P>
+
+ Next, I was asked to fill in a bunch of info. They asked me for my: gender, email address, zip code   (again), year of birth, type of Internet connection I have, how many times have I previously registered WeatherBug, if I wanted to receive product updates and special offers    (read SPAM!), Industry, Job function and job title, whether   (couldn't resist) I participate in outdoor activities, what my income is, and so on. I filled everything with all-fake-info, and clicked next. Almost immediately, an  icon advertising a $9.95 Internet service was placed on my desktop. When I clicked on it, my Mozilla browser went to the following web site:<BR>
+<I>https://register.isp.netscape.com/default.jsp?promo=NS_2_6_24_2004_1_1</I>. It was an ad for Internet Service by Netscape.</P>
+
+<!=====================>
+<CENTER><br><br><IMG SRC="images/102.jpg"><br><br></CENTER></P>
+
+ How nice. WeatherBug spams its users with unwanted advertising.</P>
+ 
+After the install completed, I began to search my system to see what specific modifications have been done to it. Here is what i found:</P>
+
+ Using <B>Start</B>-><B>Run</B>--><B>regedit</B> I found numeral Registry keys that had been modified, but nothing was added to <B>Run</B>. When I tested the starting up applications via <B>Start</B>-><B>Run</B>--><B>msconfig</B>, I saw that WeatherBug had been added to start up next time I would reboot my computer.</P>
+
+<!=====================>
+<CENTER><br><br><IMG SRC="images/103.jpg"><br><br></CENTER></P>
+
+ I really abhor that practice, so I removed it. Now let me ask you: How many average users would know how to do that? Not too many I am afraid, so most of the people who install WeatherBug would NOT know how to stop it from starting up <U>every time the PC is booted</U>.</P>
+
+Several search buttons had been added to the tool bar of my Internet Explorer browser. They were:<BR>
+
+
+<B>MySearch, Google, Yahoo, AskJeeves, Look Smart, Highlight, WeatherBug companion 95</B>.</P>
+
+<!=====================>
+<CENTER><br><br><IMG SRC="images/104.jpg"><br><br></CENTER></P>
+
+Now correct me if I am wrong, but I don't remember asking for these buttons to be added to my IE; yet there they were. Sure, I had given my permitting, at the very beginning, but I certainly didn't know IE would be modified. I have seen them on countless PCs, and people are constantly  asking me how to remove them. Yes, those buttons were shown at the beginning of WeatherBug instillation, but do the majority of users really understand the buttons will be added? That is NOT a rhetorical question either.</P>
+
+
+ I clicked on MySearech button and it sent me to their web site at: <I>http://ms101cfg.mysearch.com/ms101cfg.jsp</I>. I decided to do a quick search for rabbits just for the heck of it.</P>
+
+
+I stared my TCPViewer to watch what places would WeatherBug connect to. Here are some of them:</P>
+<BR>
+
+
+<!=====================>
+<CENTER><br><br><IMG SRC="images/105.jpg"><br><br></CENTER></P>
+<BR><BR>
+
+
+
+<P>Next, I began investigating what had been installed inside <B>Program Files</B>. A <B>My Search</B> folder had been added. Inside it, was a <B>ban</B> folder. inside the bar folder were the following folders:<BR>
+<B>1.bin</B>, <B>Cache</B>, <B>History</B> and  a <B>Settings</B> folder. History caught my eye. Inside it, there was a file named <B>search</B>. I opened it using Notepad. Inside it there was a long string like this:<BR></P>
+
+<CENTER><PRE>
+     z28 s.4 z28 h5> fOe fOe fOe fOe fOe fOe s.4 u@M fOe fOe fOe
+ fOe z28 s.4 s.4 s.4 fOe fOe fOe fOe fOe fOe fOe s.4 ‚5< fOe fOe fOe fOe fOe 
+ fOe u@M s.4 s.4 s.4 s.4 s.4 s.4 s.4 fOe fOe fOe fOe s.4 s.4 s.4 s.4 h5> fOe
+ fOe fOe h5> s.4 s.4 s.4 s.4 fOe fOe fOe fOe s.4 s.4 s.4 s.4 s.4 s.4 s.4 l+1
+ s.4 s.4 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4
+ l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1
+ s.4 l+1 s.4 l+1 s.4 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1
+ l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1
+ l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 e   (. l+1 l+1 l+1 e   (. l+1 e   (. l+1 
+ e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. 
+ l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ 
+ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ 3ŽÔ ##*     ##*     #U€ $©ÿ
+ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ 
+ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ</PRE></CENTER></P>
+ 
+I don't know what it all meant, but I decided to do some searches on My Search's web site and see if the string would change.</P> 
+
+When I opened the files.ini, I saw a string with today's date that looked like a cookie.</P>
+
+<B>sb&v 2.0.1.5&e eb3c&r 2&l 9&c 01&a 124D0D29-2C60-465D-A079-5EFFBDBF3CF6&n <U>20040927</U>16=00DA3228</B>
+The date was: 2004-09-27, and I have underlined it inside the string.</P>
+
+
+Suddenly IE popped up an applet, asking me for permition to install Macromedia Flash Player. I find Flash Player annoying and unnecessary, so i replied no.</P>
+
+WeatherBug used Explorer's GUI for their interface, but since I have turned all the images off in IE, WeatherBug was not able to display any ads down on the buttom.</P> 
+
+
+I closed IE, shut down WeatherBug, then restarted them all again. Did a few quick searches on rabbit care, Bulgarian and  diamonds using MySearch.  I went back to <B>C:\Program Files\MySearch\bar\History\search</B> and noted the time stamp for the last time the file had been modified file had been updated to 2:19 PM. I again opened the search file with with Notepad. To my honest surprise, some of my previous searches were displayed:<BR>
+</P>
+
+<pRE>
+#   
+   #   
+rabbits care	bulgarian fOe fOe fOe fOe s.4 u@M fOe fOe fOe fOe z28 
+s.4 s.4 s.4 fOe fOe fOe fOe fOe fOe fOe s.4 ‚5< fOe fOe fOe fOe fOe fOe u@M s.4 s.4 s.4
+ s.4 s.4 s.4 s.4 fOe fOe fOe fOe s.4 s.4 s.4 s.4 h5> fOe fOe fOe h5> s.4 s.4 s.4 s.4 fOe
+ fOe fOe fOe s.4 s.4 s.4 s.4 s.4 s.4 s.4 l+1 s.4 s.4 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4
+ l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4
+ l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 s.4 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1
+ l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1
+ l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 l+1 e   (. l+1 l+1 l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1
+ e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1 e   (. l+1
+ e   (. l+1 e   (. l+1 $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ 
+$©ÿ $©ÿ 3ŽÔ ##*     ##*     #U€ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ 
+$©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ $©ÿ </PRE>
+
+
+So my searches <U>are saved</U> inside the search file. Are they send back somewhere to some server? I didn't have an answer to that question yet. Monitoring the ports with TCP/IP, I saw constant chatter back and forth between mutiple servers and my machine.
+
+IE popped another applet, again asking me to install Macromedia Flash Player. Nope, sooooorry.</P>
+
+Clicking on the X didn't shut WeatherBug down. Instead I was told that WeatherBug will remain connected inside my system tray to give me current temperature readings and allow me to receive life-saving alerts. Sure. I had to right-mouse click on the icon inside SystemTray to shut it down.</P>
+
+<A NAME=proof>
+I decided to run SpyBot to see what it says about WeatherBug. To my amusement, SpyBot:</P>
+
+<UL><LI>1. listed the Weatherbug application itself as adware engline, 
+    <LI>2. listed the numerous registry changes as adwares, and
+    <LI>3. listed each instance of My Search button additions as adwares/possible spyware.</UL> 
+I felt justified, now that others have also called WeatherBug adware and possible spyware.</P>
+Here are the screen captures from Spybot that I offer as proof:</P>
+
+
+
+ In this image you can see SpyBot:
+  <UL><LI> catching WeatherBug's ad engine MiniBug.exe and correctly identifiing it. 
+    <LI>pointing where MiniBug was installed inside the registry:</UL></P>
+
+<CENTER><br><br><IMG SRC="images/106.jpg"><br><br></CENTER></P>
+<BR>
+
+
+ here, you can see SpyBot identifing WeatherBug ad plug-is as Adware and possible spyware:</P>
+<BR>
+
+<CENTER><br><br><IMG SRC="images/107.jpg"><br><br></CENTER></P>
+<BR>
+   
+  in this image you can see SpyBot identifing MySearch that was installed as part of WeatherBug package as adware/possible spyware:</P>
+<BR>
+
+<CENTER><br><br><IMG SRC="images/108.jpg"><br><br></CENTER></P>
+<BR>
+
+
+ here you see where MySearch altered the Registry:</P>
+<BR>
+
+ <CENTER><br><br><IMG SRC="images/109.jpg"><br><br></CENTER></P>
+<BR>
+
+<BR><BR>
+
+
+<H2>Conclusions:</H2>
+
+WeatherBug appears cute and useful, but it is definetly <U>not</U> as benign as they claim. They are not a spyware    (which I <U>did not</U>  say anyway), but they certainly do many questionable things when installed. 
+Let's list them:</P>
+             <ul><li>
+1. They carry an adware engine that will server ads on the WeatherBug interface    (that is how the ads show up after all). It is a question of semantics after all. Are they adware? They will say no, yet WeatherBug serves ads. Ads server displaying ads=adware.</P>
+      <li>
+2. WeatherBug modifies specific settings inside the system making it difficult and/or next to impossible for the average person to deal with WeatherBug. For example, WeatherBug modifies system settings so <U>it starts up every time the PC is rebooted</U>. This takes memory, and is annoying.</P>
+      <li>
+3. WeatherBug adds many keys inside the Registry that no average user whould have the slightest idea how to change back or remove. I find that practice nasty.</P>  
+     <li>
+4. They modify the Internet Explorer browser by adding several buttons to it. One of these buttons are the My Search toolbar. Those buttons are difficult for the average user to remove.</P>
+       <li>
+5. Programs    (My Search) installed along WeatherBug keep your web searches in files. WeatherBug clams they do not monitor searches, yet the proof is there. Cookies are also kept. Are they shared with somebody? Who knows? I will install my olde and trusty AtGuard firewall and do bunch of tests over the next several days and see if WeatherBug calls home or not.</P>
+    <li>
+6. WeatherBug spams its users with unwanted advertising both on the desktop and inside WeatherBug. 
+ </UL>
+Sure, they have the right to do so since they have to pay their bills. Sure, I agreed to install them. On their web site they claim that they are not adware, yet they are supported by ads. That makes them adware.</P>
+What's even more amusing, they have a link to SpyBot on their web site. After I installed WeatherBug, i did run SpyBot and it listed all the MySearch instances as adware/possible spyware, plus it targeted WeatherBug itself as adware and asked me if I wanted them to be removed.</P>
+<BR>
+
+
+Use WeatherBug at your own risk. In fact, Weatherbug is not needed. You can quickly find weather information about your country and region via many other ways.</P>
+
+<H2>WeatherBug alternatives</H2>
+
+There are many. Here are some of them   (thanx to Fravia+):</P>
+
+<H3>International Weather Conditions</H3> 
+     at <A HREF=http://weather.noaa.gov/index.html TARGET=BLANK>http://weather.noaa.gov/index.html</A>. 
+
+Simply select a US state or a country for International Weather Conditions of current weather and weather conditions for the past 24 hours</P> 
+                  
+<!=============================================================================================>
+The major search engines carry detailed info for each world region. For example, here is weather forecasts for the Mediterranean:  
+
+<A HREF=http://weather.yahoo.com/regional/MEDITER.html TARGET=BLANK>http://weather.yahoo.com/regional/MEDITER.html</A>
+   (yahoo weather with North African, Italian and Greek places, useful for sailing :-)</P> 
+<BR>
+<br>
+Yahoo's main weather page is at at <A HREF=http://weather.yahoo.com/>http://weather.yahoo.com/</A>. It's got tons of links there, you can choose 
+<A HREF=http://weather.yahoo.com/imgindex/world.html>http://weather.yahoo.com/imgindex/world.html</A> for the world, or <A HREF=http://weather.yahoo.com/imgindex/uscities.html>http://weather.yahoo.com/imgindex/uscities.html</A> for US cities and <A HREF=http://weather.yahoo.com/imgindex/index.html>http://weather.yahoo.com/imgindex/index.html</A> for US national.</P>
+Among its many links Yahoo offers cool US satelite images at <A HREF=http://weather.yahoo.com/img/ussat_440x297.html>http://weather.yahoo.com/img/ussat_440x297.html</A></P> 
+<BR>
+I will let you find more weather links on your own...<br><br> This ends the WeatherBug article. For any corrections, additions, hate mail, 
+love letters and so on, contact me at shinohara-at-ziplip.com.</P>
+<BR>
+</P>
+<br></font>     
+<font color=blue>  (c) shinohara 2004</font>
+<br>
+<hr>
+<a name="answb"></a>
+An answer by WeatherBug (January 2005)
+<pre>
+WeatherBug incorrectly identified
+
+Dear Fravia and crew:
+
+I would like to correct some of the information in the posting at
+www.searchlores.org/weatherbug.htm
+
+First, our company is formally called WeatherBug, with parent
+company AWS, not AWS WeatherNet.  WeatherNet was a separate part
+of our company that distributes our award-winning education
+software that teaches kids about weather through science and math. 
+That division was formally renamed as part of WeatherBug quite a
+few months ago.  I do not believe AWS WeatherNet ever distributed
+a consumer product- though there may have been a separate product
+for the 7000 schools that have our weather stations installed.
+
+My team and I test our program against dozens of the top spyware
+detectors and similar programs every week.  In the rare event that
+our product or partner products are misidentified, we contact the
+company, ask them to test it and await the results.  It took Giant
+software 1 day after we formally notified them during their recent
+beta test to verify we are not spyware nor adware and they removed
+us.  It took Spyware Doctor about 2 weeks (they are overseas and
+it was right before Christmas).  With Spybot, because it was 1
+person running the company in Germany, it took us a bit longer. 
+Spybot has NOT listed WeatherBug or any components (Minibug) in
+about 9 months.  I do not know when that screenshot of Spybot was
+taken that appears on your page, but not since late April or early
+May of 2004 have they shown us.  I just tested it once again
+before writing – no minibug, no WeatherBug, no AWS listed. 
+
+It is possible you were using old files from pre-May 2004 when you
+took the screenshot.  I’d encourage you to test again and it
+should be clean.  I think you’d agree that it would seem unlikely
+that a company with 20 million unique users a month would post a
+link to encourage those members to download Spybot if they were
+listing us as a threat. 
+
+You stated you did not like the program starting up when a
+computer is first booted up.  This is easily fixed by clicking the
+PREFERENCES button on WeatherBug 6.0 and the CONNECTION tab and
+unchecking the top boxes- it does not require registry
+readjustments, though I’d imagine if one wished to, this could
+work as well.  We want users to be able to customize their
+WeatherBugs as much as possible, therefore we put options to
+customize right in the PREFERENCES button at the very top of the
+main screen.  You can even customize the level of alerts you wish
+to receive from the National Weather Service alert system or the
+times you DON’T want to receive alerts.
+
+Regarding the WeatherBug Browser Companion toolbar by MySearch and
+Netscape icon- it appears you selected the STANDARD installation
+instead of the CUSTOM installation.  We, like Yahoo toolbar and
+many other programs, offer both a standard install which includes
+other programs we are integrated with, and a custom install that
+allows users to easily opt out of installing any other software or
+icons they do not wish to have.
+
+If you wish to verify this, I’ll be happy to send you the full
+uninstall instructions to remove WeatherBug from your registry,
+then you can go back and redownload and click the CUSTOM install
+to see the option not to install these components.
+
+Regarding your CONCLUSIONS section, we do appreciate you correctly
+stating that we are NOT spyware (as well as correcting the
+misinformation in your magazine article that we come bundled with
+Gator.)
+
+If your definition of ‘adware’ is any program that has ads, then
+yes, along with AOL Instant Messenger, Yahoo mail, hotmail, the
+Weather Channel’s desktop weather app and many other programs, by
+that definition we would be adware.
+
+We do not ‘hide’ keys in the registry to make it difficult to
+uninstall.  In fact, we offer in our customer support templates
+the very instructions to that.  Just go to www.weatherbug.com/help
+and click the 6.0 version (since that’s the version you show) to
+get 6.0 FAQs- the 3rd question is “HOW DO I UNINSTALL” and when
+you click it, there is a link that gives full registry uninstall
+directions.  Placing information in the registry after downloading
+is no different than many programs (including some well-known
+spyware detectors) that leave information behind so it recognizes
+you as a former customer.  They do this sometimes because they
+have 30 day free trials of their software and don’t want you
+simply uninstalling and reinstalling to keep getting the free
+version.  We do it so we don’t count you as a new customer.  We
+can therefore legitimately say we’ve had over 50 million downloads
+and over 20 million unique users a month without counting people
+who may have uninstalled and reinstalled multiple times.
+
+We do NOT require a valid email address to register.  We require a
+valid US ZIP code (international users can go to our website
+ww5.weatherbug.com) to give you your local weather.  If we did not
+require this, anyone who made up a ZIP, say 01234, would default
+to our headquarter’s weather outside Washington, DC, which would
+not be helpful unless you live in Gaithersburg, Maryland. 
+
+Regarding points 4 and 5 about the toolbar, please see the CUSTOM
+install information previously mentioned.
+
+Regarding point 6, WeatherBug 6,0 serves no pop up ads and does
+not send unwanted spam- again, we don’t even require a valid email
+address- there is no “click here to confirm” link sent to an email
+necessary to activate like some weather programs.  Like most
+companies, we have valid unsubscribe links at the bottom of ALL
+WeatherBug emails (and require our advertisers to have the same)
+and of course a user can simply email us, asking to unsubscribe,
+which we will gladly do for them.
+
+Regarding the claim that the author of the article in the magazine
+called us spyware, while it’s been quite a while, I do recall the
+author of a letter, possibly in response to the article, saying
+something to the effect that our partnership with the Dept. of
+Homeland Security means we secretly transmit or share data about
+our users with them.  Other than sounding like a plot for a good
+conspiracy movie, this has not a shred of truth to it.  PERIOD. 
+Our partnership with DOHS is that we, unlike the National Weather
+Service (where the weather for all the other websites you
+recommend comes from) have 8000 of our OWN, exclusive live weather
+stations.  Plus the 1000 NWS stations- most of which are at
+airports and only update once an hour.  Therefore, if God forbid,
+this country is attacked again, let’s say with a biological agent,
+within seconds the DOHS can get LIVE, wind speed, temperature,
+humidity, and precipitation data from any of our 8000 stations. 
+If they had to rely on the NWS sites, 1) these are at airports
+often many miles away from the actual city, and 2) the data they
+get can be up to an hour old.  DOHS decided that getting wind
+direction from 60 minutes ago probably isn’t going to help much
+right now if they need to make a decision to evacuate.  That is
+why they partnered with us, not to get secret data.  Again, the
+ONLY information we require is totally non-identifiable- your ZIP,
+whether you’re male or female, your age range, and how you connect
+to the internet.  This allows us, like most companies that ask it
+(even free email services ask this) to better determine the
+demographics of our users.
+
+Thank you for taking the time to read this and I hope you will
+consider posting a reply.  Please contact me should you wish to
+edit parts of this email for posting.
+
+Sincerely,
+
+Jay Hoffman
+Manager, WeatherBug Customer Support
+</pre>
+
+
+
+
+<br>
+<hr>
+<a name="repsh"></a>
+A reply by Shinohara (January 2005): Wetaher<u>bug</u> indeed: it's a <font color=blue>Bug</font>!
+<br><br>
+---------------------------------<br>
+ More smoke and FUD (fear, uncertainity and doubt) from Weatherbug. They have
+stooped so low, they have to drag Bush and Co's "war on terrorism" into the
+discussion, have the audacity to talk about "possible" bio attacks and mention
+some "conspiracy nut-sounding letters by some writer" that I HAD NOTHING to do
+with and that are NOT relevant for my article at ALL. 
+<br><br>
+
+ My article was written during September 2004 on a version of WeatherBug newly
+downloaded in September 2004 and installed immediately thereafter. The exercise was
+to perform a <font color=blue>typical</font> installation of Weatherbug (NOT a <font color=blue>custom</font> installation), dissect it and see
+what exactly  Weatherbug does once it lands onto an ordinary PC. Nothing more and
+nothing less. Install EVERYTHING -> do not refuse anything -> observe -> comment.   
+<br><br>
+Funny how their only suggestion to ALL my points is to perform a custom
+installation and turn off all the "free offers".   It is eyeopening how
+they fail to discuss the real issues - why they keep data on all searched webaddresses, why
+ the data is collected and how and why it is shared with other third companies. Instead
+they post a long paragraph about some imaginary bioterrorism scares and about
+ changes of the Weatherbug parent companies' names. Who are AWS and AWS WeatherNet and
+how they are associated with Weatherbug is irrelevant. What is relevant is
+what the software called Weatherbug does.  
+<br><br>
+ Software obviously changes and newer versions will be different from  older ones. 
+ My article talked about a September 2004 version,  NOT about a pre-May 2004
+version. I certainly do not intend to rewrite the same text over and over again every
+time a new version appears, so the text may well stay as it is. 
+<br><br>
+The only reason Spybot and other  spyware software do NOT list WeatherBug
+anymore today is because they probably had some long, "civilized" discussions with them and persuated Spybot
+and others to cancel them from their lists of possible Adware/Spyware. So what?
+Dropping WeatherBug from different spyware and adware removal utilities' lists doesn't
+change how the WeatherBug software itself behaves.  
+<br><br>
+The review was based on a simple every day installation as done by an ordinary
+every day <font color=blue>average</font> computer user. I have had extensive contact and have deep knowledge of
+"ordinary users" operation patterns and thoughts, since my job is computer support tech. 
+The average computer user doesn't know  even <font color=blue>how to choose</font> the custom
+installation. Therefore most of the claims made by weatherbug fail to address the point I made. Moreover I 
+speak out of experience. I
+have personally seen plenty of PCs where WeatherBug was installed and where people
+asked me <font color=blue>how, please, to uninstall it</font>. Weatherbug has joined the long list of
+companies like RealPlayer, that produce software that the support stuff later has to keep on removing from PCs, on users' request, 
+over and over and over.
+ <br><br>
+As a final thought, I actually thank Weatherbug: they are one of
+the companies that keep me employed. I  still get a lot of phone calls
+from people who want WeatherBug uninstalled from their PC! Seems there are
+plenty of  computer users, besides me, who finds this application troublesome and
+annoying.<br> 
+
+------------------------------------------<br><br>
+
+<font color=blue>  (c) shinohara 2005</font>
+
+
+</font>     
+
+<br>
+<center>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><a href="malware.htm"><br><br><IMG SRC="images/basipet.jpg"
+ALT="Back to malware"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+   (c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</font></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</center>
+</body>
+</html>
+
+
+
+   

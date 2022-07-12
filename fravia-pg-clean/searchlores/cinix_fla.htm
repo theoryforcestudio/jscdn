@@ -1,0 +1,626 @@
+<html>
+<title>Password Busting: SWF Protections</title>
+<script language="javascript">
+
+function set_language(){
+   document.fish.language.length = 7;
+   document.fish.language.options[0] = new Option("english","english");
+   document.fish.language.options[1] = new Option("german","german");
+   document.fish.language.options[2] = new Option("spanish","spanish");
+   document.fish.language.options[3] = new Option("dutch","dutch");
+   document.fish.language.options[4] = new Option("italian","italian");
+   document.fish.language.options[5] = new Option("french","french");
+   document.fish.language.options[6] = new Option("portuguese","portuguese");
+   document.fish.language.options[0].selected = true;
+}
+
+function set_variation(){
+   document.fish.variation.length = 6;
+   document.fish.variation.options[0] = new Option("(none)","(none)");
+   document.fish.variation.options[1] = new Option("0","0");
+   document.fish.variation.options[2] = new Option("1","1");
+   document.fish.variation.options[3] = new Option("2","2");
+   document.fish.variation.options[4] = new Option("3","3");
+   document.fish.variation.options[5] = new Option("s","s");
+   document.fish.variation.options[0].selected = true;
+}
+
+function set_pool(){
+   document.fish.pool.length = 2;
+   document.fish.pool.options[0] = new Option("google","google");
+   document.fish.pool.options[1] = new Option("altavista","altavista");
+   document.fish.pool.options[0].selected = true;
+}
+
+function set_approach(){
+   document.fish.approach.length = 3;
+   document.fish.approach.options[0] = new Option("object","object");
+   document.fish.approach.options[1] = new Option("nomomen","nomomen");
+   document.fish.approach.options[2] = new Option("both","both");
+   document.fish.approach.options[0].selected = true;
+}
+
+function set_bait(){
+   var language = document.fish.language.value;
+   
+   if (language == "english"){
+      document.fish.bait.length = 25;
+      document.fish.bait.options[0] = new Option("password","password");
+      document.fish.bait.options[1] = new Option("passw","passw");
+      document.fish.bait.options[2] = new Option("pass","pass");
+      document.fish.bait.options[3] = new Option("passwrd","passwrd");
+      document.fish.bait.options[4] = new Option("passwd","passwd");
+      document.fish.bait.options[5] = new Option("login","login");
+      document.fish.bait.options[6] = new Option("logon","logon");
+      document.fish.bait.options[7] = new Option("pass-login","pass-login");
+      document.fish.bait.options[8] = new Option("pws","pws");
+      document.fish.bait.options[9] = new Option("psw","psw");
+      document.fish.bait.options[10] = new Option("secure","secure");
+      document.fish.bait.options[11] = new Option("client","client");
+      document.fish.bait.options[12] = new Option("access","access");
+      document.fish.bait.options[13] = new Option("admin","admin");
+      document.fish.bait.options[14] = new Option("administrator","administrator");
+      document.fish.bait.options[15] = new Option("registration","registration");
+      document.fish.bait.options[16] = new Option("reg","reg");
+      document.fish.bait.options[17] = new Option("multi-pass","multi-pass");
+      document.fish.bait.options[18] = new Option("join","join");
+      document.fish.bait.options[19] = new Option("member","member");
+      document.fish.bait.options[20] = new Option("private","private");
+      document.fish.bait.options[21] = new Option("restricted","restricted");
+      document.fish.bait.options[22] = new Option("lock","lock");
+      document.fish.bait.options[23] = new Option("locked","locked");
+      document.fish.bait.options[24] = new Option("user","user");
+   }
+   else if (language == "german"){
+      document.fish.bait.length = 7;
+      document.fish.bait.options[0] = new Option("kennwort","kennwort");
+      document.fish.bait.options[1] = new Option("passwort","passwort");
+      document.fish.bait.options[2] = new Option("formular","formular");
+      document.fish.bait.options[3] = new Option("kundenlogin","kundenlogin");
+      document.fish.bait.options[4] = new Option("loginkunde","loginkunde");
+      document.fish.bait.options[5] = new Option("pws","pws"); 
+      document.fish.bait.options[6] = new Option("mitglied","mitglied");
+      
+   } 
+   else if (language == "spanish"){
+      document.fish.bait.length = 5;
+      document.fish.bait.options[0] = new Option("contrasena","contrasena");
+      document.fish.bait.options[1] = new Option("clave","clave");
+      document.fish.bait.options[2] = new Option("ac","ac");
+      document.fish.bait.options[3] = new Option("lengueta","lengueta");
+      document.fish.bait.options[4] = new Option("acceso","acceso");
+   }
+   else if (language == "dutch"){
+      document.fish.bait.length = 8;
+      document.fish.bait.options[0] = new Option("wachtwoord","wachtwoord");
+      document.fish.bait.options[1] = new Option("gebruiker","gebruiker");
+      document.fish.bait.options[2] = new Option("privaat","privaat");
+      document.fish.bait.options[3] = new Option("paswoord","paswoord");
+      document.fish.bait.options[4] = new Option("aanmelden","aanmelden");
+      document.fish.bait.options[5] = new Option("leden","leden");
+      document.fish.bait.options[6] = new Option("lid","lid");
+      document.fish.bait.options[7] = new Option("aanloggen","aanloggen");
+   }
+   else if (language == "italian"){
+      document.fish.bait.length = 6;
+      document.fish.bait.options[0] = new Option("accesso","accesso");
+      document.fish.bait.options[1] = new Option("privato","privato");
+      document.fish.bait.options[2] = new Option("amministratore","amministratore");
+      document.fish.bait.options[3] = new Option("chiave","chiave");   
+      document.fish.bait.options[4] = new Option("superutente","superutente"); 
+      document.fish.bait.options[5] = new Option("cliente","cliente");
+   }
+   else if (language == "french"){
+      document.fish.bait.length = 6;
+      document.fish.bait.options[0] = new Option("mot de passe","mot de passe");
+      document.fish.bait.options[1] = new Option("motdepasse","motdepasse");
+      document.fish.bait.options[2] = new Option("passe","passe");
+      document.fish.bait.options[3] = new Option("admini","admini");
+      document.fish.bait.options[4] = new Option("membre","membre"); 
+      document.fish.bait.options[5] = new Option("client","client");
+   }
+   else if (language == "portuguese"){
+      document.fish.bait.length = 5;
+      document.fish.bait.options[0] = new Option("senha","senha");
+      document.fish.bait.options[1] = new Option("cadastro","cadastro");
+      document.fish.bait.options[2] = new Option("dados","dados");
+      document.fish.bait.options[3] = new Option("cliente","cliente");
+      document.fish.bait.options[4] = new Option("teste","teste");
+   }  
+   document.fish.bait.options[0].selected = true;
+}
+
+function gofish(){
+
+var googlesearch = "http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&btnG=Google+Search&q=";
+
+var bait = document.fish.bait.value;
+var variation = document.fish.variation.value;
+var pool = document.fish.pool.value;
+var approach = document.fish.approach.value
+
+var query;
+if (variation != "(none)"){
+   query = bait + variation;
+}
+else{
+   query = bait;
+}
+
+var searchquery;
+if (pool == "google"){
+   if (approach == "object"){
+      searchquery = "http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&btnG=Google+Search&q=" + query +"+%2Bfiletype%3Aswf";
+   }
+   else if (approach == "nomomen"){
+      searchquery = "http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&btnG=Google+Search&q=" + query + ".swf";
+   }
+   else{
+      searchquery = "http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&btnG=Google+Search&q=" + query + ".swf+%2Bfiletype%3Aswf" ;
+   }
+}
+else{
+   if (approach == "object"){
+      searchquery = "http://www.altavista.com/web/results?kgs=0&kls=1&avkw=xytx&q=object%3A" + query;
+   }
+   else if (approach == "nomomen"){
+      searchquery = "http://www.altavista.com/web/results?kgs=0&kls=1&avkw=xytx&q=" + query + ".swf";
+   }
+   else{
+      searchquery = "http://www.altavista.com/web/results?kgs=0&kls=1&avkw=xytx&q=object%3A" + query + ".swf" ;
+   }
+}
+
+//alert (searchquery);
+window.open(searchquery,'', 'status=yes,location=yes');
+}
+</script>
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><font size="+3">~ Password Busting ~</font><br>
+ 
+<table border="0" align="center">
+<tr>
+<th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th bgcolor="#993300">&nbsp;&nbsp;</th>
+<th bgcolor="#993300"><a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="to basic" align="bottom" width="118" height="68" border=
+     "0" vspace="0" hspace="0"></a></th>
+<th bgcolor="#993300">&nbsp;&nbsp;</th></tr></table>
+<br>
+ v0.02 published at <a href="http://www.searchlores.org">searchlores</a> in <font color="blue">March</font> 2003</center>
+<br>
+
+
+
+<center>
+<font size=+3>(¯`·.¸&nbsp;Password Busting: SWF Protections&nbsp;¸.·´¯)</font><br>
+<font size=+2>- <i>Getting access in a flash</i> -</font><br><br>
+<font size=+1>by Cinix</font><br><br>
+<i>With contibutions by madhaha, jeff, Mordred, Nemo, and others gathered @ <a href="http://www.2113.ch/phplab/mbs.php3/mb001?num=-1&thread=1041462660#1041462660"">~S~</a> Seeker's messageboard</i><br><br>
+</center>
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- CONTENTS                                                                                    -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Contents">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Contents</b></font></td>
+</tr></table>
+
+<ul>
+<li><a href="cinix_fla.htm#Introduction">Introduction</a> ~ <font color=red>Updated!</font>
+<li><a href="cinix_fla.htm#Toolbox">SWF Password Busting Toolbox</a> ~ <font color=red>Quite the addition by Mordred.</font>
+<li><a href="cinix_fla.htm#Analysis">HTML Source Analysis</a> ~ <font color=red>New!</font>
+<li><a href="cinix_fla.htm#Fishing">Fishing Flash Protected Sites</a> ~ <font color=red>Updated!</font>
+<li><a href="cinix_fla.htm#General">General Flash Reversing</a> ~ <font color=red>Minor addition.</font>
+<li><a href="cinix_fla.htm#Case">Case Study</a> : <i>Flash component of the <a href="http://www.coffeecup.com/java-password/samples/">CoffeeCup Password Wizard</a> solution</i>
+<li><a href="cinix_fla.htm#Better">How To Protect Better</a> ~ <font color=red>Minor addition.</font>
+</ul>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- INTRODUCTION                                                                                -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Introduction">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Introduction</b></font></td>
+</tr></table>
+
+<p>In his essay <a href="http://www.searchlores.org/lokijoy1.htm">"The Joylock Case"</a> loki suggested to me to 
+write a small essay about the Flash component of the <a href="http://www.coffeecup.com/">CoffeeCup Password Wizard</a> 
+solution, well here it is. Altough I used CoffeeCup as a <a href="cinix_fla.htm#Case">Case Study</a> I've tried to make this essay as general as possible. 
+After all we are here to learn some basic password busting skills and not work target specific. 
+
+<p>Macromedia Flash movies are graphics and animation for Web sites. They consist primarily of vector graphics, 
+but they can also contain imported bitmap graphics and sounds. Flash movies can incorporate interactivity to permit 
+input from viewers using Flash's scripting language Actionscript. For example, you can write a script that tells Flash 
+to load different Web pages depending on the information provided by a user. e.g. password protection ;)
+
+<p>Of some importance is that the flash format has been revised several times, it has 6 versions (though they don't
+call the last Flash 6, but Flash MX). An easy way to tell which version is your target is to look at the first four
+bytes: They should be <SPAN STYLE="color:black; background:yellow">"<b>FWSx</b>"</SPAN> or <SPAN STYLE="color:black; background:yellow">"<b>CWSx</b>"</SPAN>, where x is the version number 
+(binary, not ascii), and C marks a zlib-compressed SWF (available from Flash 6). In reality, you can meet only 
+versions 4-6 on the wild. Note that because of compression you may not be able to use regular text-scanning utilities.
+
+<p>In conjunction with the decompilers listed below, there are other kinds of tools you may or may not need.
+SWFs can be embedded in EXE files, or zlib-compressed, or "protected" from import, and tools to deal with these 
+things are <a href="http://www.google.com/search?q=exe2swf&num=25&ie=utf-8&oe=utf-8">widely</a> 
+<a href="http://www.google.com/search?num=25&hl=en&lr=&ie=UTF-8&oe=utf-8&q=decompress+swf">accessible</a> 
+on the <a href="http://www.google.com/search?num=25&hl=en&lr=&ie=UTF-8&oe=utf-8&q=unprotect+swf">web</a>. 
+
+<p>There are plenty of <a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=flash+obfuscator&btnG=Google+Search">
+Flash obfuscators</a> out there that will screw, crash <a href="cinix_fla.htm#Toolbox">Action Script Viewer</a> or <a href="cinix_fla.htm#Toolbox">Sothink 
+SWFDecompiler</a> with <font color="blue">control flow tricks</font>. Since <a href="cinix_fla.htm#Toolbox">Flasm</a> has a different 
+approach in analysing the SWF file it wont be fooled and will help you in time of destress. This is why you are advised to use
+flasm along with the decompiler of your choice.
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- FLASH PASSWORD BUSTING TOOLBOX                                                              -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Toolbox">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>SWF Password Busting Toolbox</b></font></td>
+</tr></table>
+
+<p><b>Screwdrivers and multitools</b> - For the regular students
+<ul>
+   <li><a href="http://buraks.com/asv/">Action Script Viewer</a> <font color=blue>[</font><a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=asv20.zip&btnG=Google+Search">asv20.zip</a><font color=blue>]</font> version <b>3.0</b>: (<font color=red>SWF6</font>) Shows actionscript and bytecode (assembly)
+   <li><a href="http://www.sothink.com/flashdecompiler/">Sothink SWFDecompiler</a> <font color=blue>[</font><a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=fo-ssd02.zip&btnG=Google+Search">fo-ssd02.zip</a> | <a href="http://www.google.com/search?q=swf_decompiler2002.zip&num=25&ie=utf-8&oe=utf-8">swf_decompiler2002.zip</a><font color=blue>]</font> version <b>MX 2002</b>: (<font color=red>SWF6</font>) Shows actionscript only; integrates into IE 
+   <li><a href="http://www.liatro.com/product/swf.php">Liatro SWF Decoder</a> <!--font color=blue>[</font><a href="http://www.google.com/search?q=swfdecoder.exe&num=25&ie=utf-8&oe=utf-8">swfdecoder.exe</a><font color=blue>]</font--> version <b>3.0</b>: (<font color=red>SWF6</font>)  Shows actionscript only
+   <li><a href="http://www.livetronix.com/products/swfscanner/index.php">SWF Scanner</a> <font color=blue>[</font><a href="http://www.google.com/search?q=swfscn2-6-3.exe&num=25&ie=utf-8&oe=utf-8">swfscn2-6-3.exe</a><font color=blue>]</font> version <b>2.6.3</b>: (<font color=red>SWF5</font>)  Shows actionscript, bytecode, actual bytes
+   <li><a href="http://warplayer.free.fr/files/swflib03b.zip">SWFLib</a> version <b>.03b</b>: (<font color=red>SWF5</font>) Command-line, shows bytecode / actionscript. Don't use the GUI, it's too buggy
+   <li><a href="http://www.flash2be.com/tools/f2b_AS2FLA/index.php">f2b AS2FLA </a> <!--font color=blue>[</font><a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=fo-ssd02.zip&btnG=Google+Search">fo-ssd02.zip</a><font color=blue>]</font--> version <b>alpha III</b>: (<font color=red>???</font>)  Claims to convert .swf to .fla files, but failed my tests. Parts of the actionscripts were visible, maybe later versions will be better.
+   <li><a href="http://www.fontimages.org.uk/cgi-bin/swfparse.cgi">Swf parse</a>  version <b>???</b>: (<font color=red>SWF6</font>) An <u>online</u> bytecode disassembler (prints ALL info about the SWF, search <i>"constants:"</i> to skip the noise)
+   <li><font color=blue>reAnimator</font> - Mystery tool #1 (<font color=red>SWF5</font>) - Claims to rebuild the .fla files. Didn't show any actionscript, although claimed to have discovered some
+   <li><font color=blue>DSWF</font> - Mystery tool #2 
+</ul>
+
+<p><b>SWF File Format Specifications and other tech info</b> - For those who really want to get into SWF reversing.
+<ul>
+   <li><a href="http://download.macromedia.com/pub/flash/flash_file_format_specification.pdf">Flash format specs</a> [pdf] (for versions 3-6)
+   <li><a href="http://www.openswf.org/">OpenSWF.org</a>
+   <li><a href="http://flasm.sourceforge.net/">Flasm</a> (Use the source, Luke ... )
+</ul>
+<ul>   
+
+   <li><a href="http://www.macromedia.com/support/flash/action_scripts/index.html">Actionscript dictionary</a> 
+   <li><a href="http://www.flash-db.com/Board/index.php?board=19;action=display;threadid=1262">Methods of passing data to a flash movie</a> 
+   <li><a href="http://www.vmstudio.com/materials.php?flashvars">Two of the methods explained from the HTML (cracker's) point of view (well, in russian, but the coloured bits speak for themselves :) </a> 
+</ul>
+<ul>   
+   <li><a href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=SWF+specification&btnG=Google+Search">. . .</a>
+</ul>
+
+
+<p><b>Related fora</b> - For those who really want to get the people which already got into SWF reversing.
+<ul>
+	<li><a href="http://chattyfig.figleaf.com/cgi-bin/ezmlm-cgi/4">sfwcoders mailinglist archive</a>
+	<li><a href="http://board.flashkit.com/board/forumdisplay.php?forumid=23">OpenSWF board</a>
+	<li><a href="http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&oe=UTF-8&group=macromedia.open-swf">macromedia.open-swf newsgroup</a> or (identical) <a href="http://webforums.macromedia.com/openswf/categories.cfm?catid=221">web board</a> (for better searching)
+	<li><a href="http://www.flash-db.com/Board/index.php">Flash-db board</a>
+</ul>
+<ul>   
+   <li>Further info and/or experts can be found following the path of the <font color=blue>obfuscators</font>.
+</ul>
+
+
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- HTML SOURCE ANALYSIS                                                                        -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Analysis">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>HTML Source Analysis</b></font></td>
+</tr></table>
+
+<p>Each SWF file that is embedded in HTML must identify itself as an Flash file in order for a browser to
+correctly display its content. In theory there are constants involved we can use to try and fish them out, 
+but in reality we will see that it's not that easy. <i>- At least I couldn't get my theory to work but maybe 
+others have better results, don't hesitate to share -</i>
+
+<p>But first the analysis, note that this is the format currently produced by Flash MX and deviations, and other mutant forms exist on the web.
+ 
+<PRE>
+&lt;!-- URL's used in the movie--&gt;
+   <font color=green>// We might find here something like a backdoor url,</font>
+   <font color=green>// but only if the implementation is really stupid</font>
+   <font color=green>// so I wouldn't get my hopes up.</font>
+   
+&lt;!-- text used in the movie--&gt;
+   <font color=green>// Maybe some strings like password, username, ...</font>
+   
+&lt;OBJECT 
+   CLASSID=<SPAN STYLE="color:black; background:yellow">"<b>clsid:D27CDB6E-AE6D-11cf-96B8-444553540000</b>"</SPAN>   <font color=green>// Identification -> flash movie</font>
+   CODEBASE="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#<SPAN STYLE="color:black; background:yellow"><b>version=5,0,0,0</b>"</SPAN>   <font color=green>// Flash version</font>
+   WIDTH=100% 
+   HEIGHT=100%
+   &gt;
+ 
+   &lt;PARAM NAME=movie VALUE=<SPAN STYLE="color:black; background:yellow">"<b>password.dud</b>"</SPAN>&gt;   <font color=green>// Flash filename can be <u>anything</u> but often ending on <b>.swf</b></font> 
+   &lt;PARAM NAME=menu VALUE=false&gt;
+   &lt;PARAM NAME=quality VALUE=medium&gt;
+   &lt;PARAM NAME=bgcolor VALUE=#000000&gt;
+ 
+   &lt;EMBED 
+      SRC=<SPAN STYLE="color:black; background:yellow">"<b>password.dud</b>"</SPAN>  <font color=green>// Same value as &lt;PARAM NAME=movie&gt;</font> 
+      MENU=false          <font color=green>// Same value as &lt;PARAM NAME=menu&gt;</font>
+      QUALITY=medium      <font color=green>// Same value as &lt;PARAM NAME=quality&gt;</font>
+      BGCOLOR=#000000     <font color=green>// Same value as &lt;PARAM NAME=bgcolor&gt;</font>
+      WIDTH=100% 
+      HEIGHT=100% 
+      TYPE=<SPAN STYLE="color:black; background:yellow">"<b>application/x-shockwave-flash</b>"</SPAN>   <font color=green>// Identification -> flash movie</font> 
+      PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+      &gt;
+      
+   &lt;/EMBED&gt;
+   
+&lt;/OBJECT&gt;
+</PRE>
+
+<p>As we see many - if not all - constants worth looking fore are embedded within 
+the HTML tags and not actually visible, thus for the most part ignored by the SE 
+spiders, bots, indexers... and the results returned for our query will be mostly useless. <i>- by all means, correct me if I'm wrong -</i>
+
+<p>A custom SWF password finder <a href="http://www.searchlores.org/bots.htm">bot/spider</a> could of course take these findings into 
+account and present us a nice database of closed SWF doors. 
+<p>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- FISHING FLASH PROTECTED SITES                                                               -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Fishing">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Fishing Flash Protected Sites</b></font></td>
+</tr></table>
+
+<p><b><a href="http://www.searchlores.org/nomomen.htm">Nomomen</a> | <a href="http://www.searchlores.org/magicfi.htm">Guessing</a> Approach: Using selective dynamite </b><i>Who still uses worms? ;)</i>
+<p>Searching for file names is a good starting approach, but one must consider that everything up to ".swf" is possible, even the ".swf" part isn't a constant given as we have seen in the <a href="cinix_fla.htm#Analysis">analysis</a> so that is where the guessing part comes in.<br>
+<p>In theory, the human mind has no limits on it's imagination but it is often the case that only a handfull individuals will travel and explore the imaginations boundaries. Most people follow the same path when giving names to files: <SPAN STYLE="color:black; background:yellow">"<b>content - name relation</b>"</SPAN>.
+Most of the times this is a good thing but when it comes to protection you might want to deviate from it,... except if you want to be fished out.
+<p>Examples: <i>pass.swf, login2.swf, pwd1.swf, member.swf, members.swf,...</i>
+
+<p><b>Object Approach</b>
+<p>Because an SWF file is an object embedded in a htm/l file - See <a href="cinix_fla.htm#Analysis">analysis</a> -, you can specify that all returned results must include this type of object in their page. This is of course only possible on search engines who's features support this type of searches.
+
+<ul>
+   <li>On <a href="http://www.altavista.com">Altavista</a> we can do a search using the <font color=blue>object:</font> keyword that will search the &lt;object&gt;, &lt;parameter&gt; (&lt;embed&gt;???) tag for the supplied query.
+   <li>On <a href="http://www.google.com">Google</a> we can use the query string <font color="blue">filetype:swf</font> to fish promising pages.
+   <li>On <b>Inktomy</b> we can search for promising pages containing flash files with the filter <font color=blue>+feature:flash -feature:form</font>
+   <li>On <a href="http://www.alltheweb.com">Alltheweb</a> we can use two strategies:
+   <ul>
+   <li>Search for pages contains flash (in the advanced search form check <i>Must include Macromedia Flash</i>)
+   <li>Search for text inside flash files (in the advanced search form select <i>File format Macromedia Flash(.swf)</i>)
+</ul>
+
+
+</ul>
+
+<p><b>Combining it all</b>
+<p>As you might have noticed: best results come from combining both techniques. Only searching for filenames like <i>pass.swf</i> will even fish out this page altough there isn't a SWF based login in sight.  
+
+<form name="fish">
+<table border="0" bgcolor=#DDDDDD>
+<tr><td width="70">Language: </td><td width="120"><select style="width:120" name="language" onChange="set_bait();"></select></td><td width=10></td><td width="70">Pool: </td><td width="120"><select style="width:120" name="pool" ></select></td></tr>
+<tr><td width="70">Bait: </td><td width="120"><select style="width:120" name="bait" ></select></td><td width=10></td><td width="70">Approach: </td><td width="120"><select style="width:120" name="approach" ></select></td></tr>
+<tr><td width="70">Variation: </td><td width="120"><select style="width:120" name="variation" ></select></td><td width=10></td><td colspan=2 align=center><button onclick="gofish();">Here fishy, fishy...</button></td></tr>
+</table>
+<BR>
+</form>
+
+<script language="javascript">
+   set_language();   
+   set_bait();
+   set_variation();
+   set_pool();
+   set_approach();
+</script>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- GENERAL FLASH REVERSING                                                                     -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="General">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>General Flash Reversing</b></font></td>
+</tr></table>
+
+<p>The technique is actually pretty straight forward and the same for all Flash based protections: 
+analyse the Action Script of the Flash animation ;) It is basically the same as with JavaScript based 
+password protections, but the actual code is hidden inside the Flash animation.
+
+<p>In 97% of the cases a simple text-scan will give you the unencrypted password, username or a backdoor url (actually you only need the backdoors and shouldn't care about all the rest) since most protections have them hardcoded inside the Flash. 
+
+<p>In some cases the Flash protections use external files to store their data. If you see something like this in the Action Script tab:
+
+<pre>
+var UserData = this.<SPAN STYLE="color:black; background:yellow"><b>loadVariables</b></SPAN>("Users.txt", 0);
+</pre>
+
+<p>All you need to do now is to download the "Users.txt" file and you'll have access:
+
+<pre>
+UserData=user_0,password_0,your.backdoor.url_0
+user_1,password_1,your.backdoor.url_1
+user_2,password_2,your.backdoor.url_2
+user_3,password_3,your.backdoor.url_3
+user_4,password_4,your.backdoor.url_4
+</pre>
+
+<p>Since Flash 5 it is actually possible to load an xml file (with user data) in the animation, so keep an eye out for the following commands:
+
+
+<pre>
+doc = new <SPAN STYLE="color:black; background:yellow"><b>XML</b></SPAN>("Users.xml");
+
+or
+
+UserData = new <SPAN STYLE="color:black; background:yellow"><b>XML</b></SPAN>();
+UserData.<SPAN STYLE="color:black; background:yellow"><b>load</b></SPAN>("Users.xml");
+</pre> 
+
+<p>Now guess what "Users.xml" contains.
+
+<p><i>A small remark I received from a guy named Bertrand</i>
+
+<p><i>Using a </i><SPAN STYLE="color:black; background:yellow">"<b>loadMovie</b>"</SPAN><i>, there can be several files around a flash 
+"protection scheme", so it's also wise to watch wich SWF's are requested
+through -say- privoxy while trying the SWF.</i>
+
+
+<p>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- CASE STUDY                                                                                  -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Case">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Case Study</b></font><br>&nbsp;<b>Flash component of the <a href="http://www.coffeecup.com/java-password/samples">CoffeeCup Password Wizard</a> solution.</b></td>
+</tr></table>
+
+<p>download the Flash file at <a href="http://www.coffeecup.com/java-password/samples/sample.swf">http://www.coffeecup.com/java-password/samples/sample.swf</a> and open it with the Action Script Viewer. In the Action Script tab you'll get a list of all ActionScripts in the current Flash animation. The one we are looking for is:
+
+<pre>
+on (press) {
+    V = new String ("0");
+    z = new String ("");
+    z = userBox + passBox;  <font color=green>  // Add the two strings together.</font>
+    if (z == "sampletest") {<font color=green>  // Compare to hardcoded data.</font>
+        V = "1";
+        getURL ("http://www.coffeecup.com/");
+    }
+    
+    <font color=green>/*
+    * New users are added by the CoffeeCup Password Wizard like this:
+    * 
+    * if (z == "user_0password_0") {
+    *     V = "1";
+    *     getURL ("http://your.backdoor.url_0", "_top");
+    * }
+    * 
+    * if (z == "user_1password_1") {
+    *     V = "1";
+    *     getURL ("http://your.backdoor.url_1", "_top");
+    * }
+    */</font>
+
+    if (V == "0") {
+        gotoAndStop (2);
+    }
+    userBox = "";
+    passBox = "";
+}
+</pre>
+
+<p>The username is <SPAN STYLE="color:black; background:yellow">"<b>sample</b>"</SPAN> and password is <SPAN STYLE="color:black; background:yellow">"<b>test</b>"</SPAN>. The backdoor is <SPAN STYLE="color:black; background:yellow">"<b>http://www.coffeecup.com/</b>"</SPAN>.
+<p>Due to bad programming we could also use one of the following combinations:
+
+<pre>
+ / sampletest
+s / ampletest
+sa / mpletest
+sam / pletest
+samp / letest
+sampl / etest
+sample / test   <font color=green>// This is the only one that should be allowed.</font>
+samplet / est
+samplete / st
+sampletes / t
+sampletest /
+</pre>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- HOW TO BETTER PROTECT                                                                       -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Better">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>How To Protect Better</b></font></td>
+</tr></table>
+
+<p>Are SWF files usable as a protection method? The real question you should ask yourself is shouldn't my content be shared with everyone instead of hoarding all the knowledge for monitary gain.
+<p>SWF is as good (or bad) as every other client side protection method like Javascript, Java Applets, ActiveX plugins to name a few. Each of them are reversable but when you take this fact into account when you design your sites protection scheme you can give a possible seeker for knowledge a hard time.
+
+<ul>
+<li>Avoid being fished out: don't use a file name (or extension for that matter) that corresponds with the content.
+<li>Never store anything unencrypted/unhashed, SWF protection is client side oriented so everything will be available to a possible intruder.<br>
+This includes usernames, passwords and even the links you jump to upon receiving the correct information.
+<li>Use a hard to break encryption/hashing scheme like MD5 to store usernames and passwords and use a hash of a string generated from the username and password to decrypt/encrypt the URL data (URL must be reversable, passwords and usernames not)
+</ul>
+<p>This way you are forcing a "Brute Force" technique onto everyone attempting to break your protection. Now it 's pretty straight forward to make a Brute force attempt fail miserably.
+
+<ul>
+<li>Choose passwords and usernames with a minimum length of 10 characters that are not easy to guess (non dictionary)
+<li>Use uppercase, lowercase, numbers and signs into usernames and passwords.
+<li>Do anything to increase possible combinations :-)
+</ul>
+
+<p>If you really want a good SWF password protection, You certainly shouldn't pay 30$ for that <a href="http://www.coffeecup.com/">lame crap</a>.
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<p>Cinix<br> 
+lord_cinix(a7)hotmail(p0in7)com 
+
+</font><br><center>
+<hr width="66%">
+<a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"http://www.searchlores.org/info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>

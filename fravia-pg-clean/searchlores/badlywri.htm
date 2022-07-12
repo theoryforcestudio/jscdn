@@ -1,0 +1,224 @@
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>Fravia's web-searching lore (¯`·.¸(¯`·.¸ badlywri.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 2000 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;What search engines don't index and why&nbsp;¸.·´¯)
+  </font><font size=+2><br>by Rumsteack<BR></FONT>published at fravia's searchlores in
+  May 2000<br>
+  <hr width=44%>Slightly edited by fravia+<hr width=44%></center><i>Fravia+, <P> One thing 
+(among many others) the unawares learn with your site is that 
+ the search engines don't index all the web (far from that...),
+  and that they have serious limitations. Nevertheless, I didn't find much informations on your pages about these 
+  ones, other than database capacity limitations.
+  So, I've decided to write this short essay about this (major) problem.<P> 
+  PS : My reference about the actual number of Apache severs can be studied here : 
+   <A HREF="http://www.netcraft.com/survey/" TARGET="_new"><FONT COLOR="BLUE">http://www.netcraft.com/survey/</FONT></A>
+  Microsoft's servers lose the competition... as they deserve</i>!<br><font color=gray>Rumsteack</font><hr>
+    
+  <br><center>
+ <font size=+3>&quot;What search engines don't index and why&quot;<bR>
+  </font>
+    <font size=+1>
+  <br>by Rumsteack<BR></center><P> 
+    </font><font size="3">
+ Title :  Search engines limitations, or What search engines don't index, 
+  and why ? <P> 
+  These few lines should be useful for people who don't know the problems the 
+  s.e. encounter when indexing web sites. <P> It could be easy to think that 
+ALL data which are on indexed pages are indeed searchable, 
+  because it could be easy to think that
+  submitting a site to a s.e. allows necesseraly ALL its content to be 
+  indexed. Too easy a thought actually: that's not true at all! <P> 
+There are several things which can prevent some parts of a site from being 
+  indexed by a search engine spider.<br>
+  I'm going to talk about the ones I know, but you should consider what 
+  follows ONLY as a base to begin your own future works and researches in this field. <P> 
+  First, the 'voluntary' things: you are aware of what you are doing.
+  In this category, we have the possible use of:<br><br>   - 
+<SPAN STYLE="color: black; background: yellow">Domain 
+or password restrictions</span> 
+    The most commonly know method is the .htaccess file.
+  Within this file, you set up a list of the ressources you do not want 
+  everyone to be able to see. In other words, you create a database of logins 
+  and passwords, associated with the different parts of your site.
+    The use of this file was introduced in the NCSA servers, and continued 
+  with the Apache servers. So, given that there are
+  7.8+ <u>millions</u> Apache servers in use, you see the huge quantity of data 
+  which can be blocked from indexing, just with this (basic) method.<br> I wrote 
+    "Just with this method" because there are many others: SQL and other 
+  databases have similar possibilities as well.<br>Moreover Javascript offers some 
+blocking possibilities (yes, it is possible 
+to protect a site 
+  with vanilla javascript: see 'gate keeper' scripts). <P> 
+    Consequently, you see that some pivate parts (generally, for obvious reasons, the most 
+  interesting ones) of a site can
+  easily be protected (from the search engines spiders, but also from YOU).<br>
+In all these cases, you will need some 
+  cracking/hacking skills if you want to make these sites more *cooperatives*. <P>    - 
+<SPAN STYLE="color: black; background: yellow">robots.txt</span>
+    This text file was set up in 1994, following some complaints from the 
+  sysadmins about web spiders indexing 'indelicate' matters.<br>
+    With it, a site-owner can indicate which parts of his site he doesn't want the 
+  well behaved spiders to index.
+    This file is generally placed in the root directory of a site (that's 
+  where it is most useful).
+    Actually, when a <u>well behaving</u> robot visit a site, he first seeks 
+for the /robots.txt 
+  file. Provided he finds one, he will obey it and wont index any page beneath the robot.txt.
+        Nevertheless, keep in 
+  mind that you can write your OWN bots, which you can make as 'irreponsibles'  
+  as you like (or you can use utilities like Teleport Pro, for example, 
+with its  "obey robots.txt 
+  file" case unchecked !!)<br>
+     The content of this file (<SPAN STYLE="color: black; background: yellow">which can 
+be viewed with your browser</span>, by the 
+  way... See where I want to go? :-D  consist in lines
+  which are all like this : <P>   &lt;field>: &lt;optionalspace> &lt;value> &lt;optionalspace><br>
+#field is case insensitive, 
+  but the value is case sensitive ! <P>   The field values can be (one line by bot/directory, 
+as previously said):<br>User-agent: the name of the spider(s) you (don't) like<br>
+    Disallow: the directories (or the files) you (do not) want the previous 
+  bot to index <P>   The use of special commands is allowed, but the unrecognised fields are 
+  ignored : <P>   User-agent: * (for all bots)<br>
+    Disallow: / (to forbid the whole site) or a white space (to allow the whole site)<br>
+    #: for inserting comments in the file. <P>   Of course, multiple combinaisons are allowed, 
+and you can even think of 
+  sites which are "racists" toward some specific bots, and
+  not toward anothers. <P>   For example : User-agent: Bot I like<br>
+     	       Disallow: Bot I dislike<br>
+     	
+     	       User-agent: *<br>
+     	       Disallow: / <br>
+    A site with a robots.txt file of this kind can be a pain for search 
+  engines. BUT, since you can see it with your browser,
+  <SPAN STYLE="color: black; background: yellow">you are able to know which are the 
+"restricted" parts of a site with no effort whatsoever!</span>. <P>    - <SPAN STYLE="color: black; background: yellow">robots 
+meta-tag</span>
+    Note that not every spider obeys to this tag. That's one of the few 
+  ways a web-page AUTHOR (server admin not needed anymore) can prevent some pages of 
+  his site from being indexed.
+    This meta-tag (like all meta-tags, by the way) should be placed in the 
+  head section of your page. It is one line, like this: <P>    
+&lt;meta name="robots" content=""> <P>   The content value can be : "all", "none" or mixes.<br>
+    The mixes values are : "{index || noindex}, {follow || nofollow}". <P>   
+"index" mean that the page will be indexed.
+    "noindex" is the contrary.
+    "follow" means that the spider will follow the links present on the page.
+    "nofollow" is the contrary. <P>   "all" is equivalent to "index, 
+follow". It is also the default value, if 
+  robots meta-tag is not present.
+    "none" is equivalent to "noindex, nofollow". <P> 
+    So, when searching for specific URLs (url: or u:), keep in mind that if 
+  the spider you use reads this meta-tag, you can't
+  reach a page which has been protected with the "noindex" tag. <P>  <P>   - <SPAN STYLE="color: black; background: yellow">special 
+commands</span> 
+    These commands enable the author to choose what he wants to be indexed on 
+  a page. For example, he can choose
+  to keep some passages invisible to search engines (for whatever reason!).
+    Nevertheless, I only know the command capable to stop the Infoseek's spider.
+    Here it is :<br>
+&lt;!--stopindex--> Write whatever you want here &lt;!--startindex--> <P> 
+    Authors are consequently able to choose what they want to index or not. 
+  All the *special* words (mp3, appz, warez, hack,
+  commercial crap, smut sites nuking, destroy commercial bastards, :-D ) can 
+  be deleted from the 'vision field' of the search engines, even if
+  the page itself is indexed. This is VERY useful to know when searching for - ahem - 
+special content. <P>  <P> 
+  Given that my little knowledge of this lore ends here, let's talk about the 
+  other things that our beloved tools don't like.
+  That is, let's talk about the content they CAN'T index. In fact, spiders not only can  be 
+  blocked by admins/authors through the above procedures, but also have some
+  problems when they bump into : <ul><li>  - HTML syntax mistakes (duh !)<br>
+    Search engines parse out HTML files, like your browser. But the s.e. may 
+  not be complying with the errors that your browser would gladly 
+allow to go by. <br> Syntax checker, or better, a good knowledge of HTML coul be helpful to 
+  avoid these mistakes, by the way (or to use them on purpose :-D</li><li>  - PDF and 
+formatted files<br>
+    There are certain kind of files that the search engines simply don't 
+  read. Actually, if a plug-in or an add-on software is needed to read a 
+  file, then the search engine will (probably, that's not true for all of 
+  them) ignore it.
+    Some examples are PDF, PostScript, RTF, Word, Excel, and PowerPoint files. <br>  Links search is here of a helping hand. 
+</li><li>  - Huge pages<br>
+    Though theorically search engines offer full-text indexing, practicaly 
+  there is an upper limit, beyond which robots stop indexing a file. </li><li>  - Frames, 
+image maps, and the like<br>
+    These methods of enhancing your site have problems with the s.e. Frames 
+  and image maps are not indexed by all of them. So, all of the content 
+  (including links) entered into image maps and frames sites are not scanned 
+  by the all of the search engines. <br>  But maybe this is not so bad after all! </li><li> 
+ - Dynamic pages<br>
+    On some servers most of the web pages are dynamic (produced from 
+  databases or other applications, in response of a  request), and they do 
+  not exist as static HTML files. Consequently, the search engines CANNOT index them.
+    To better understand the problem, we can say that all the URLs for 
+  database access that contain a "?" symbol in them, are not indexed by 
+  any s.e. I hope you see what huge amount of information you are losing here!! <P> 
+    That explains you why you must use specific search engines, when 
+  searching for specific subjects: the big s.e. don't have
+  any access to the specialised databases that exist (which are called 'the Invisible 
+  Web'). So, different targets, different tools as someone I don't recall said :-D</li></ul> That's also finished for this part. <P> 
+  I hope you have enjoyed this little text, and I hope you will now be aware 
+  of the REAL limitations of the s.e. (that is,
+  not only about their size), which oblige us to find OTHER tools for 
+  searching purposes (combing and the like).
+<br><font color=gray>Rumsteack, May 2000</font><br>
+<hr>
+ <bR></font>
+    <font size=+1><center> 
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+
+

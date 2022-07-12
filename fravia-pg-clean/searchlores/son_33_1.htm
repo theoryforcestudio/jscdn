@@ -1,0 +1,153 @@
+<html>
+<html>
+<head>
+  <!-- web searching lore: pagename begin -->
+  <title>son_33_1.htm: Fravia's web-searching lore (¯`·.¸(¯`·.¸ son_33_1.htm ¸.·´¯)¸.·´¯)</title>
+  <!-- web searching lore: pagename end --> 
+  <meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Style-Type"	content="text/css">
+  <meta http-equiv="Content-Script-Type"	content="text/javascript">
+  <meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+  <meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+  <meta name="author"		content="fravia+">
+  <meta name="copyright"		content="Copyright(c) 2000 fravia+">
+  
+  <STYLE type="text/css">
+  A:link { color: #02F }
+  A:visited  { color: #808 }
+  A:hover { color: purple; background: #AFB }
+  </STYLE>
+  </head>    
+  <body bgcolor="#CCCCCC" TEXT=#001010 LINK=#0000FF ALINK=#00FF00 VLINK=#3366CC>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <center>
+  <!-- fravia's searching lore: bigtitle, begin -->
+  <font size=+3>~ Essays ~</font>
+  <!-- fravia's searching lore: bigtitle, end -->
+  <br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="essays.htm"><IMG
+  SRC="images/basipet.jpg" ALT="to essays"
+  ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+  HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  essays</th>
+  </tR></table>(Courtesy of fravia's advanced searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+  
+  <FONT SIZE=+3>(¯`·.¸&nbsp;Javascript obscure conversion&nbsp;¸.·´¯)
+  </font><font size=+2><br>by sonofsamiam<BR></FONT>published at fravia's searchlores in
+  May 2000<br>
+  <hr width=44%>Slightly edited by fravia+<hr width=44%></center><i>Hello, fravia+,
+ I have found your site quite nice, just the sort of things i am interested in,
+ wonderful to poke around at. I am quite flattered by your link to me, I have
+ not really done so much in the fields of bots, anti-ads, but i'm flattered
+ nonetheless :)
+ I have only a small contribution for your site, for the obscure.htm page, some
+ javascript that does the conversions nicely, ie and opera-compliant.
+ I use it all the time, maybe someone else would like it too...
+ -thanx,</i>
+   <br><font color=gray>sonofsamiam</font><hr>
+    
+  <br><center>
+ <font size=+3>&quot;Javascript obscure conversion&quot;<bR>
+  </font>
+    <font size=+1>
+  <br>by sonofsamiam<BR></center><P> 
+    </font><font size="3">
+<Pre> &lt;html&gt;&lt;head&gt;&lt;title&gt;dword-converter, hex &amp; octal&lt;/title&gt;
+ &lt;!-- various ip-obfuscation functions by sonofsamiam --&gt;
+ &lt;script language=&quot;Javascript&quot;&gt;&lt;!--
+ function convet(ip,level){
+ n=ip.split('.');
+ for(i=0;i&lt;4;i++){n[i]=parseInt(n[i]);}
+ var
+ dword=(n[0]*16777216)+(n[1]*65536)+(n[2]*256)+n[3]+(parseInt(level)*4294967296);
+ prompt('dword:',dword);
+ return;
+ } <P> function tooct(a){
+ n=a.split('.');
+ for(i=0;i&lt;4;i++){
+ n[i]=parseInt(n[i]);
+ if(n[i]&gt;255||isNaN(n[i])){alert('invalid ip!');return;}
+ var one=Math.floor(n[i]/64);
+ var t=n[i]%64;
+ var two=Math.floor(t/8);
+ var three=n[i]%8;
+ n[i]='0'+one+two+three;
+ }
+ var octip=n.join('.');
+ //needed 'coz of a bug in opera's join()
+ if(octip.substring(octip.length-1,octip.length)=='.')
+ {octip=octip.substring(0,octip.length-1);}
+ prompt('octal ip:',octip);
+ return;
+ } <P> function tohex(ip){
+ n=ip.split('.');
+ for(i=0;i&lt;4;i++){
+ n[i]=parseInt(n[i]);
+ if(n[i]&gt;255||isNaN(n[i])){alert('invalid ip!');return;}
+ var two=numlet(n[i]%16);
+ var one=numlet(Math.floor(n[i]/16));
+ n[i]='0x'+one+two;
+ }
+ var hexip=n.join('.');
+ //needed 'coz of a bug in opera's join()
+ if(hexip.substring(hexip.length-1,hexip.length)=='.')
+ {hexip=hexip.substring(0,hexip.length-1);}
+ prompt('hexed ip:',hexip);
+ return;
+ }
+ function numlet(num){
+ if(num==10){return 'a';}
+ if(num==11){return 'b';}
+ if(num==12){return 'c';}
+ if(num==13){return 'd';}
+ if(num==14){return 'e';}
+ if(num==15){return 'f';}
+ return num;
+ }
+ //--&gt;&lt;/script&gt;&lt;/head&gt;&lt;!-- body --&gt;
+ really, just some simple (and none too pretty :) javascript aping unfrozen.exe
+ i wrote to get around my school's censoring.
+ &lt;form name=&quot;r&quot;&gt;&lt;h3&gt;dword:&lt;/h3&gt;&lt;form&gt;ip:&lt;input type=&quot;text&quot; name=&quot;ip&quot; size=15
+ value=&quot;127.0.0.1&quot;&gt;&lt;input type=&quot;text&quot; size=2 name=&quot;level&quot; value=&quot;0&quot;&gt;:level&lt;br&gt;
+ &lt;input type=&quot;button&quot; value=&quot;convert to dword&quot;
+ onclick=&quot;convet(ip.value,level.value);&quot;&gt;&lt;/forM&gt;
+ &lt;form&gt;
+ &lt;h3&gt;hexed ip's:&lt;/h3&gt;
+ ip:&lt;input type=&quot;text&quot; name=&quot;hex&quot; size=&quot;15&quot; value=&quot;127.0.0.1&quot;&gt;&lt;br&gt;&lt;input
+ type=&quot;button&quot; value=&quot;convert to hex&quot; onclick=&quot;tohex(hex.value);&quot;&gt;&lt;/form&gt;&lt;form&gt;
+ &lt;h3&gt;octal ip's:&lt;/h3&gt;
+ ip:&lt;input type=&quot;text&quot; name=&quot;oct&quot; size=&quot;15&quot; value=&quot;127.0.0.1&quot;&gt;&lt;br&gt;&lt;input
+ type=&quot;button&quot; value=&quot;convert to octal&quot; onclick=&quot;tooct(oct.value);&quot;&gt;
+ &lt;/form&gt;
+ &lt;/body&gt;&lt;/html&gt; </Pre> 
+<br><font color=gray>sonofsamiam, May 2000</font><hr>Examine sonofsamiam's <a href="sonjas33.htm">ip-obfuscation</a> page<br>
+<hr>
+ <bR></font>
+    <font size=+1><center> 
+    <a href= "essays.htm"><IMG  SRC= "images/basipet.jpg" 
+  ALT= "Petit image"
+  ALIGN= BOTTOM WIDTH= "118" HEIGHT= "68" BORDER= 0 VSPACE= 0
+  HSPACE= 0></a><br>
+    <br>
+    <!-- how to search the web, by fravia+, signet begin --> 
+    <table><tR><td width= "300" height= "2"  bgcolor= "#993300"></tD></tR></table>
+  (c) 2000: <font color= blue><font color= blue>[</fonT></font><a
+  href= "info.htm">fravia+</a><font  color= blue><font color= blue>]</fonT></font>, all rights
+  reserved
+  <!-- how to search the web, by fravia+, signet end -->
+  
+  
+  <!-- begin da closing bit, duh -->
+  </CENTER>
+  </body>
+  </HTML>
+
+

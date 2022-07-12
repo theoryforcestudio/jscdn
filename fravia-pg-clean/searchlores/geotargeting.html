@@ -1,0 +1,546 @@
+<html>
+<head>
+  <title>Bypassing Google's geotargeting</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">  
+  <meta http-equiv="Content-Style-Type" content="text/css"> 
+  <meta content="Tips and tricks for bypassing Google's geotargeting." name="description"> 
+  <meta content="Google, bypass geotargeting, bypassing geotargeting, bypass geolocation, bypassing geolocation" name="keywords">
+  <meta content="Nemo" name="author">
+  <meta content="Copyright(c) 2006 Nemo" name="copyright">
+  <style type="text/css"> #obmessage a:link {COLOR: #02f}  
+     #obmessage a:visited {COLOR: #808}  
+     #obmessage a:hover {BACKGROUND: #afb; COLOR: purple}  
+     #obmessage ul, blockquote {text-align: justify;}  
+  </style>
+</head>
+<body alink="#00ff00" bgcolor="#cccccc" link="#0000ff" text="#001010" vlink="#3366cc">
+  
+<center>  
+<h1 align="center">~ Bypassing Google's geotargeting ~</h1>
+  
+<p>  
+<i>When there's a will, there's a way!</i>  
+</p>
+
+</center>
+
+<br>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td rowspan="2" width="341">
+      <img src="images/Gwaihir.jpg" alt="Escaping from Orthanc." align="left" height="450" 
+      hspace="0" width="331">
+      
+      </td>
+      <td align="center" valign="top" width="*">
+      <table align="center" border="0">
+  
+        <tbody>
+          <tr>
+  
+            <td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  
+            <td bgcolor="#993300">&nbsp;&nbsp;</td>
+  
+            <td bgcolor="#993300"><a href="essays.htm"><img alt="to  
+essays" src="images/basipet.jpg" align="bottom" border="0" height="68" hspace="0" width="118"></a></td>
+  
+            <td bgcolor="#993300">&nbsp;&nbsp;</td>
+  
+          </tr>
+  
+        </tbody>
+      </table>
+  
+      <p>  
+      <b>Published @ <a href="http://www.searchlores.org/">Searchlores</a> in <font color="blue">November 2006</font> <br>
+ Version <font color="blue">0.01</font> November 2006 | By  
+      <font color="blue">Nemo</font></b>
+      </p>
+ 
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" valign="center"> 
+      <p style="padding: 10px;" align="justify">
+      <i>Google is well known for his geotargeting and this is the way
+how Google makes money: &#8211;showing adds to geographically targeted
+searchers&#8211;. This wouldn't be a problem, if it
+weren't for the fewer search results got by searchers outside the USA...<br><br>
+This amazingly interesting <u>and very important</u> short essay by <b>Nemo</b> should be carefully 
+printed and then read, and re-read, and again read, to your children, slowly, 
+when the commercial night cometh, the creativity wind falls low, and 
+the trees of conformism swing slowly to and fro.
+<br>Gosh I'm glad that people like Nemo still spread knowledge!&nbsp;:-)</i>
+      </p>
+
+      <table>
+  
+        <tbody>
+          <tr>
+            <td nowrap="nowrap">  
+            <hr>  
+            <img alt="¤" src="images/bulletr.gif" height="13" width="13"> <a href="geotargeting.html#problem">The problem</a> 
+            <img alt="¤" src="images/bulletr.gif" height="13" width="13"> <a href="geotargeting.html#solutions">Some solutions</a>  
+            <img alt="¤" src="images/bulletr.gif" height="13" width="13">   
+            <hr>  
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+   
+<a name="problem"></a>
+<h2>The problem</h2><font size=+1>
+<p align="justify">  
+Google is well known for 'customizing' his search results to please governments in several countries, not only in <a href="http://news.com.com/What+Google+censors+in+China/2100-1030_3-6031727.html">China</a> (<a href="http://asp-cyber.law.harvard.edu/filtering/list.html">here</a>'s a 2Mb list of censored sites), but leaven in
+<a href="http://cyber.law.harvard.edu/filtering/google/">Europe</a>, as shown by <a href="http://cyber.law.harvard.edu/filtering/">several</a>
+studies of Jonathan Zittrain and Benjamin Edelman. Usually searchers
+can also customize Google to get less biased search results by
+following the link <a href="http://www.google.com/ncr">Google.com in English</a>.
+If you follow the previous link, Google still knows from where do you
+come from, as shown by the link present on google.com homepage &#8211;<font color="blue"><u>Go 
+to Google <i>your country here</i></u></font>&#8211;. Searchers wouldn't care 
+less, if it weren't for the <b>fewer search results</b>
+they get outside the USA. It goes without saying that this does not
+only affect non Americans, but also Americans traveling or working
+abroad and perhaps even american soldiers and diplomats... </p>
+
+<a name="solutions"></a>
+<h2>Some Solutions</h2>
+
+<p align="justify">
+Before seeing the solutions, lets for the sake of an example see how many search 
+results we get for the query <i>redhat</i> on www.google.com: 
+</p>
+
+<center>
+<img src="images/redhat1.gif">
+</center>
+
+<p align="justify">
+An now the solutions:
+</p>
+
+<h3>Use an american Google IP</h3>
+
+<p align="justify">If you use an american IP to which www.google.com
+resolves in USA, 72.14.203.104 for instance, you noticeably get more
+search results for the query <i>redhat</i>: 
+</p>
+
+<center>
+<img src="images/redhat2.gif">
+</center>
+
+<p align="justify">
+So the question is how do we know to which IPs www.google.com resolves in USA? 
+To begin we need a tool to resolve the host name, for that we can use a <a href="http://en.wikipedia.org/wiki/Ping">ping</a>, or a <a href="http://en.wikipedia.org/wiki/DNS_lookup">DNS lookup</a>
+to get an IPcorresponding to www.google.com. To complicate things we
+need to run one of these tools in USA to get an american IP to which
+the host www.google.com resolves, otherwise you'll get an IP to which
+your local Google resolves.
+</p>
+
+<p align="justify">
+ As I'm outside US, the simplest way is using an american site which kindly would run one of these tools for me. 
+
+With Yahoo!, thanks to its <a href="inktomi.html">advanced search syntax</a>, is fairly easy to find such a site, because we can restrict search results to north america (<font color="green">region:northamerica</font>), excluding Canada (<font color="green">-domain:ca</font>), to webpages containing a box (<font color="green">feature:form</font>) where we can put the host (<font color="green">host</font>) to be pinged (<font color="green">ping</font>). Translating in Yahoo! language we get the following query: 
+</p>
+
+<blockquote>
+  <a href="http://search.yahoo.com/search;_ylt=A0geuorER05FO5wADlxXNyoA?p=ping+host+region%3Anorthamerica+-domain%3Aca+feature%3Aform&amp;prssweb=Search&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt">ping host region:northamerica -domain:ca feature:form</a>
+</blockquote>
+
+<p align="justify">
+A quick analysis of search results gives the following list, which is by no means complete:
+</p>
+
+<table cellppading="0" border="0" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+
+      <td width="50%">
+      <ul>
+
+        <li><a href="http://centralops.net/asp/co/Ping.vbs.asp">http://centralops.net/asp/co/Ping.vbs.asp</a>
+        </li>
+        <li><a href="http://www.dnsstuff.com/">http://www.dnsstuff.com/</a>
+        </li>
+        <li><a href="http://www.dnzh.com/ping.php">http://www.dnzh.com/ping.php</a>
+        </li>
+      </ul>
+
+      </td>
+      <td width="50%">
+      <ul>
+
+        <li><a href="http://www.fifi.org/services/ping">http://www.fifi.org/services/ping</a>
+        </li>
+        <li><a href="http://www.net-ok.net/index.php">http://www.net-ok.net/index.php</a>
+        </li>
+        <li><a href="http://www.nwtools.com/">http://www.nwtools.com/</a>
+        </li>
+      </ul>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p align="justify">
+Using those webtools I got the following american IPs for www.google.com:
+</p>
+
+<table cellppading="0" border="0" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+
+      <td width="50%">
+      <ul>
+
+        <li>72.14.203.104
+        </li>
+        <li>64.233.161.104
+        </li>
+      </ul>
+
+      </td>
+      <td width="50%">
+      <ul>
+
+        <li>64.233.161.99
+        </li>
+        <li>64.233.179.99
+        </li>
+      </ul>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p align="justify">As the american IPs for www.google.com might change
+from time to time, you are well advised to run, from time to time, one
+of the previous webtools to get a fresh american IP. You can also see
+how much you are loosing by searching on www.google.com, instead of
+72.14.203.104, by filling your favorite keywords in the following boxes
+and comparing the number of search results, which will open in a new
+window. </p>
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td valign="center" width="50%">
+      <form method="get" action="http://www.google.com/search" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>www.google.com</legend>
+        <input name="q" size="20" maxlength="2048" value="" title="Search" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+      </td>
+      <td valign="center" width="50%">
+
+      <form method="get" action="http://72.14.253.147/search" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>72.14.253.147</legend>
+        <input name="q" size="20" maxlength="2048" value="" title="Search" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h3>Use an american webproxy</h3>
+
+<p align="justify">
+Another way of getting more for the same query is using an american web proxy, <a href="http://www.officebrowse.com/">www.officebrowse.com</a> for instance. Here's a screenshot for the query <i>redhat</i>: 
+</p>
+
+<center>
+<img src="images/redhat3.gif">
+</center>
+
+<p align="justify">In this case the question is how to get webproxies
+located in USA? Once more this task is fairly easy if you use Yahoo! So
+lets search for a north american (<font color="green">region:northamerica</font>) webproxy, excluding Canada (<font color="green">-domain:ca</font>).
+One of the most common softwares used for webproxies is the nph-proxy
+and its presence is revealed by the presence of the following file in
+the url: nph-proxy.pl (<font color="green">inurl:"nph-proxy.pl"</font>). So the corresponding query is: 
+</p>
+
+<blockquote><a href="http://search.yahoo.com/search;_ylt=A0geuoR4SE9FqUUBSWal87UF?ei=UTF-8&amp;fr=sfp&amp;p=region%3Anorthamerica+-domian%3Aca+inurl%3A%22nph-proxy.pl%22&amp;n=100">region:northamerica -domian:ca inurl:"nph-proxy.pl"</a>
+</blockquote>
+
+<p align="justify">After analyzing the search results, I got the following list of webproxies which were sufficiently quick for my taste:
+</p>
+
+<table cellppading="0" border="0" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+
+      <td width="50%">
+      <ul>
+
+        <li><a href="http://filterjam.com/">filterjam.com</a>
+        </li>
+        <li><a href="http://kissmyproxy.com/">kissmyproxy.com</a>
+        </li>
+        <li><a href="http://projectbypass.com/">projectbypass.com</a>
+        </li>
+        <li><a href="http://proxythat.com/nph-proxy.pl/000000A/">proxythat.com</a>
+        </li>
+        <li><a href="http://www.24proxy.com/">www.24proxy.com</a>
+        </li>
+      </ul>
+
+      </td>
+      <td width="50%">
+      <ul>
+
+        <li><a href="http://www.cgi-proxy.net/">www.cgi-proxy.net</a>
+        </li>
+        <li><a href="http://www.ninjaproxy.com/">www.ninjaproxy.com</a>
+        </li>
+        <li><a href="http://www.officebrowse.com/">www.officebrowse.com</a>
+        </li>
+        <li><a href="http://www.siteallow.com/cgiproxy/nph-proxy.pl/010110A/">www.siteallow.com</a>
+        </li>
+        <li><a href="http://www.wizproxy.com/cgiproxy/nph-proxy.pl/000000A/">www.wizproxy.com</a>
+        </li>
+      </ul>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p align="justify">The previous list is not intended to be complete.
+You can get a taste of what you are not getting when you use
+www.google.com, by filling your favorite keywords in the following
+boxes and comparing the number of search results, which will open in a
+new window. </p>
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td valign="center" width="50%">
+      <form method="get" action="http://www.google.com/search" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>www.google.com</legend>
+        <input name="q" size="20" maxlength="2048" value="" title="Search" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+      </td>
+      <td valign="center" width="50%">
+
+      <form action="http://www.officebrowse.com/cgiproxy/nph-proxy.pl/010110A/http/www.google.com/search" method="get" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>www.officebrowse.com</legend>
+        <input name="q" size="20" maxlength="2048" value="" title="Search" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h3>Use Google's custom search engines</h3>
+
+<p align="justify">
+Another way of getting the job done is by using a custom Google search engine, the Cumberland's County <a href="http://www.co.cumberland.nc.us/google_search.asp">search engine</a>, for instance. Follows a screenshot of Telaio's <a href="http://www.google.com/coop/cse?cx=012978056484458600694%3Acma6lakklia">search engine</a> for the query <i>redhat</i>: 
+</p>
+
+<center>
+<img src="images/redhat4.gif">
+</center>
+
+<p align="justify">
+This essay is a consequence of the good question put by fravia+ @ <a href="http://2113.ch/phplab/mbs.php3/mb001?since=21600&amp;num=-1&amp;thread=1161617999#1161617999">seekers' message board</a>:
+</p>
+
+<blockquote>
+Now the real price would be how to fetch a google/gogle/ncr site that DOES NOT KNOW where you are coming from. 
+</blockquote>
+
+<p align="justify">That is a question I also have been wandering for
+quite some time and I remembered that I had seen local search engines
+powered by Google which also allowed global web search... Lets see if
+we can find such a local search engine
+(<font color="green">title:search</font> the title should describe what the page is all about), containing a box (<font color="green">feature:form</font>) where I can put my keywords, powered by Google (<font color="green">"powered by Google"</font> Google loves to put that phrase on his pages) and located in north america (<font color="green">region:northamerica</font>), excluding Canada (<font color="green">-domain:ca</font>) and Google's own site (<font color="green">-domain:google.com</font>) to defeat Google geotargeting... Translating in Yahoo! language, we have the query: 
+</p>
+
+<blockquote>
+  <a href="http://search.yahoo.com/search;_ylt=A0oGkjsFXk9Fb5MAc11XNyoA?p=region%3Anorthamerica+%22powered+by+google%22+-domain%3Agoogle.com+feature%3Aform+title%3Asearch+-domain%3Aca&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt">region:northamerica "powered by google" -domain:google.com feature:form title:search -domain:ca</a>
+</blockquote>
+
+<p align="justify">
+On those search results, the following description seemed quite promising:
+</p>
+
+<blockquote><a href="http://www.co.cumberland.nc.us/google_search.asp">Google Search - Cumberland County NC</a><br>
+Cumberland County NC is celebrating its past and embracing its future
+... Open search results in: New window. Current window. Frame below ...<br>
+  <font color="green">www.co.cumberland.nc.us/google_search.asp</font> - <font color="royalblue">13k</font> - <a href="http://216.109.125.130/search/cache?p=region%3Anorthamerica+%22powered+by+google%22+-domain%3Agoogle.com+feature%3Aform+title%3Asearch+-domain%3Aca&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt&amp;u=www.co.cumberland.nc.us/google_search.asp&amp;w=%22powered+by+google%22+search&amp;d=exJkZpIFNsLy&amp;icp=1&amp;.intl=us">Cached</a> - <a href="http://search.yahoo.com/search;_ylt=A0geus4WXk9FYyYAVAdXNyoA?p=region%3Anorthamerica+%22powered+by+google%22+-domain%3Agoogle.com+feature%3Aform+title%3Asearch+-domain%3Aca&amp;ei=UTF-8&amp;n=100&amp;fr=sfp&amp;vst=0&amp;vs=www.co.cumberland.nc.us">More from this site</a></blockquote>
+
+<p align="justify">
+This site is using a custom Google search:
+</p>
+
+<blockquote>
+  <a href="http://www.google.com/custom?hl=en&amp;lr=&amp;cof=AH%3Aleft%3BS%3Ahttp%3A%2F%2Fwww.co.cumberland.nc.us%2F%3B&amp;domains=www.co.cumberland.nc.us&amp;q=&amp;btnG=Search&amp;sitesearch=">http://www.google.com/custom?hl=en&amp;lr=&amp;cof=AH%3Aleft%3BS%3Ahttp%3A%2F%2Fwww.co.cumberland.nc.us%2F%3B
+&amp;domains=www.co.cumberland.nc.us&amp;q=&amp;btnG=Search&amp;sitesearch=</a>
+</blockquote>
+
+<p align="justify">The previous URL is quite interesting, as it
+provides more arrows to use in more search engines, if necessary... By
+the shear number of Google's custom search engines, as shown by the
+following query, we'll never run out of such search engines:
+</p>
+
+<blockquote>
+  <a href="http://search.yahoo.com/search;_ylt=A0oGklF.Lk5FiIUA1CFXNyoA?p=%22google.com%2Fcustom%22+client+cof&amp;prssweb=Search&amp;ei=UTF-8&amp;fr=sfp&amp;n=100&amp;x=wrt">"google.com/custom" client cof</a>
+</blockquote>
+
+<p align="justify">You can get a glimpse of what you are not seeing
+when you use www.google.com, by filling your favorite keywords in the
+following boxes and comparing the number of search results, which will
+open in a new window.
+</p>
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td valign="center" width="50%">
+      <form method="get" action="http://www.google.com/search" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>www.google.com</legend>
+        <input name="q" size="20" maxlength="2048" value="" title="Search" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+      </td>
+      <td valign="center" width="50%">
+
+      <form method="get" action="http://www.google.com/custom" style="display: inline;" target="_blank">
+        <font size="-1">
+        <fieldset>
+        <legend>www.ferrarichat.com</legend>
+        <input name="q" size="20" maxlength="2048" value="" type="text">
+        <input name="btnG" value="Search" type="submit">
+        <input name="hl" value="en" type="hidden">
+        <input name="lr" value="" type="hidden">
+        <input name="client" value="google-coop" type="hidden">
+        <input name="cof" value="CX:Telaio%20Search%20for%20Ferrari;" type="hidden">
+        <input name="cx" value="!012978056484458600694:cma6lakklia" type="hidden">
+        </fieldset>
+
+        </font>
+      </form>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p align=justify>
+BTW delete your cookies before doing these queries, because otherwise Google
+already know from where do you come from and don't forget to change the
+Accept-Language header sent by your browser to en, either directly on your
+browser, or use proxomitron to do the job:
+</p>
+<blockquote>
+<pre>
+In = FALSE
+Out = TRUE
+Key = "Accept-Language: English"
+Match = "*"
+Replace = "en"
+</pre>
+</blockquote>
+<p align=justify>
+Otherwise you'll be greeted with Google on your own language as you asked for.
+</p>
+</fonT>
+<p>
+(c) Nemo 2006 &nbsp;&nbsp; <font color="#0000ff">nem0@nowhere.org</font>  
+&nbsp;&nbsp; replace nowhere by linuxmail.   
+  
+</p>
+  
+<center>  
+<hr width="66%">  
+<a href="essays.htm"><img alt="Petit image" src="images/basipet.jpg" align="bottom" border="0" 
+height="68" hspace="0" width="118"></a><br>
+<br>
+  
+<table>
+  
+  <tbody>
+    <tr>
+      <td bgcolor="#993300" height="2" width="300"></td>
+    </tr>
+  
+  </tbody>
+</table>
+  
+(c) III Millennium: <font color="blue">[</font><ahref="http://www.searclores.org/info.htm">fravia+</a><font color="blue">]</font>, all rights reserved, reversed, reviled and  
+revealed  
+</center>
+  
+</body>
+</html>

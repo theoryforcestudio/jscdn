@@ -1,0 +1,115 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>formir.htm:  (¯`·.¸(¯`·.¸ +forseti's wget bot ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 2000 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><font size=+3>+Forseti's own made wget mirroring bot</font></center><hr width=88%>
+Version 28 Mai, 02004<br>
+Hola Fravia+<br>
+Con permiso, I will tell you of the most recent (circa Jan. 02004) version of the <a target=_top href="http://www.gnu.org/software/wget/wget.html">Wget</a> Type bot for searchlores mirroring. A bit of RTFM has enlightened me to a pura vida script for this:<br><p>
+The nueva mirror script:<br>
+<p>
+-----------------------<br>
+<p><font color=blue>
+#!/bin/sh cd s/ && mv wget-log.1 wget-log && wget -r -m -b -k www.searchlores.org<br>
+<p></font>
+-----------------------<br>
+Non che male, eh?<br><p>
+The <font color=blue>-k</font> flag addresses all the other crap in the previous versions of the scripts. RTF<a target=_top href="http://www.gnu.org/software/wget/manual/wget-1.8.1/wget.html">M</a> for explaining what it does.
+<hr width=88%>
+
+The following <u>Old</u> version of this script is <font color=red>depricated</font>.<br>
+<hr width=88%>
+
+Fravia+, I noticed you have Luc's perl mirroring bot up, and I thought you'd like 
+to have mine as well. It's not quite as long and involved&nbsp;:)
+<p>
+I use wget ( get=http://www.gnu.org/software/wget/wget.html ) and call it via 
+a shell script to mirror searchlores.org. I also have a script to move the 
+images and other sub-directories after wget gets them, as my mirror is not 
+a root directory.<br>
+<p>
+Here they are:<br>
+<p>
+<p>
+The mirror script:<br>
+<p>
+-----------------------<br>
+<p><font color=blue>
+#!/bin/sh 
+cd /qu00l.net/html/s/ &amp;&amp; mv wget-log.1 wget-log &amp;&amp; wget -r -m -b www.searchlores.org<br>
+<p></font>
+-----------------------
+<p>
+Simple /sh script, the first command sets the working directory, the 
+second overwrites the log so as not to have infinitely iterated wget.logs, 
+I think 2 will do nicely for comparison, and the third calls wget and 
+instructs it to recursively (-r) mirror (-m) and run in the background 
+(-b).
+<p>
+<p>
+And the moving script:<br>
+<p>
+-----------------------
+<p><font color=blue>
+#!/bin/sh -<br>
+cd /qu00l.net/html/s/<br>
+cp ./www.searchlores.org/fiatlu/* ./fiatlu/<br>
+cp ./www.searchlores.org/images/* ./images/<br>
+cp ./www.searchlores.org/pdffing/* ./pdffing/<br>
+cp ./www.searchlores.org/realicra/* ./realicra/<br>
+cp ./www.searchlores.org/zipped/* ./zipped/<br>
+cp ./www.searchlores.org/protec/* ./protec/<br>
+<p></font>
+-----------------------
+<p>
+Which is the only part of the scripts that may need to change, as you make 
+new child dirs I add them to this script. This arises as wget places it's 
+output into a dir named www.searchlores.org, whereas on the actual site 
+this dir would be /, therefore everything is copied one directory up so as
+I dont have to write a crazy script to rewrite all the url's in all of the 
+pages.
+<p>
+I'm using 2 scripts instead of one, because wget works in the background 
+and using &amp;&amp; (which means 'upon completion of the last command do
+the next) won't work. The shell sees that the command has been executed 
+but it actually has just gone to the background. 
+<p>
+Wget is a great program too, it can grab images, or single files, or whole 
+sites, or just sections, and it's very flexible and configurable. 
+<p>
+Enjoy&nbsp;:)
+<p>
+Forseti+
+<p>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><center><a href="news.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 1952-2032: <font color=blue>[</font><a
+href="info.htm">fravia+</a> & <a href="http://s.teoma.com/search?q=%22forseti%22&qcat=1&qsrc=1&submit.x=32&submit.y=15">+Forseti</a><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>
+</body>
+</HTML>

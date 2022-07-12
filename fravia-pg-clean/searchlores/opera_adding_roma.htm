@@ -1,0 +1,431 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>opera_adding_roma.htm: Adding functionality to Opera</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK=#214131 ALINK=#405040 VLINK=#8850AA>
+<center>
+<!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Tutti all'opera! ~ Essays ~</font>
+<!-- fravia's searching lore: bigtitle, end -->
+<br>
+<!-- internet searching techniques: imageheader begin -->
+<table border="0" ALIGN=CENTER WIDTH="64" HEIGHT="64"><tr>
+<th bgcolor="#183d6b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<TH BGCOLOR="#183d6b"><a href="tuttiope.htm"><IMG SRC="images/spirale2.gif" ALT="spirale2 " WIDTH="64" HEIGHT="64"  ALIGN="BOTTOM"></a></th>
+<TH BGCOLOR="#183d6b">&nbsp;&nbsp;</th>
+<th bgcolor="#183d6b"><Font color="#993300" SIZE="3">
+Fravia's<br>special<br>pages</th>
+</tR></table>
+<!-- internet searching techniques: imageheader end -->
+
+<hr width=44%>
+
+
+
+<br><font color=blue size=+3>
+Adding functionality to Opera</font><br>
+by ~Roman<br>this was written 3 April 2005
+</center><br><br><hr><br><font size=+1>
+
+
+Opera is truly a brilliant browser, offering near infinite extensibility. <a href="opera_java_roma.htm">In a
+previous essay</a> i
+wrote about adding functionality to Opera using mouse gestures and keyboard
+shortcuts to 
+execute javascript (like bookmarklets).
+Javascript is, however not the only thing that can be run. Arbitrary
+executables can be executed
+using (for buttons):
+<br><br>
+opera:/button/Execute program,"<program name>","<arg1>","<arg2>" 
+(although i couldn't get arguments to work in linux)
+<br><br>
+In this project I'll be using Opera's panel (the bar down the left hand side
+that displays links,
+transfers etc.) to display the HTTP headers from our incoming and outgoing
+packets.
+<br><br>
+NOTE: I am using linux, and this program will be written in C. It is almost
+definately possible to
+do in windows, but at present i could not be bothered trying. Also you must be
+root to get the
+packet listener to work.
+<br><br>
+First we need a way of capturing our incoming and outgoing packets, without
+stealing them from
+Opera, and without using a proxy. For this task there is a C library called
+"libpcap" or "the packet
+capture library". Find it on the web and download it. There are many tutorials
+on installing and
+using this library, just look on google.
+<br><br>
+Next we need a program that, given all of our packets, will discard any
+non-http ones, and extract
+the http headers from those remaining. This is not as hard as it sounds, i have
+included
+"httpheader.c" see the end of the document. To compile it use:
+gcc httpheader.c -o httpheader -lpcap
+then run it using ./httpheader
+<br><br>
+There is little error checking, it is more of a 'proof of concept' than a well
+thought out, robust piece
+of code.
+<br><br>
+The program at the moment writes text to a file called httpheaders.html in
+/home/<username>/. Run
+the program and visit some sites on the net. The program will stop collecting
+packets after it has
+seen 50 tcp packets (note this many will not be displayed in the file, since we
+are only printing
+the http packets, and not all tcp packets are http). Once this is done, open
+the output file
+(/home/<username>/httpheaders.html) using Opera, and all your http headers
+should be visible in the
+file. Go to "bookmark page...", name it "headers", then click the "Show in
+panel" box. Now there
+should be a button on the panel that says "headers". Click on it. The contents
+of the file should
+be shown in the panel.
+<br><br>
+At the moment, this is not really all that useful, since we are just showing a
+static html file. But
+this can be changed.
+<br><br>
+Copy the file ./httpheaders (the executable) to /usr/bin so it can be run from
+the command line. Now
+go to opera preferences and find the 'keyboard shortcuts' modifying page, find
+a convenient keyboard
+shortcut (such as F12), and modify the action to be (this could also be done
+with mouse gestures or
+buttons):
+Execute program,"httpheaders"
+<br><br>
+This will run the program everytime you press the F12 key. Now press F12, then
+visit a few sites.
+Bring up the "headers" panel and press "reload", and all your http headers from
+your browsing will be
+shown in the panel. Viewing your headers in opera like this is kind of useful,
+but it could probably
+be improved. My initial prototype had as output plain text, but this was easily
+changed to HTML. At
+the moment the user IP is hardcoded in and then compared to the packets to
+determine if they are
+outgoing or incoming, so that incoming is in red and outgoing is in blue text.
+An improvement on
+this could be to use the port numbers, since if the destination is port 80, it
+is going to the
+server, and if it is going to some other port it is probably going to the
+client. Each packet's
+source IP and destination IP is printed in any case.
+<br><br>
+I got up to this stage and thought everything was pretty good, except that
+having to reload the
+panel manually after running the program was a bit cumbersome. So what about
+embedding javascript in
+the program output so that it automatically reloads itself in opera every 5
+seconds? I tried using
+Opera's "reload every..." function, but when i did this it reloads the main
+page periodically, not
+the page in the panel.
+<br><br>
+Using javascript to autorefresh the page every 5 seconds does work, but every
+time it refreshes it
+jumps back to the top of the file, which gets quite annoying if you want to
+read something at the
+bottom of the page. So I think I'll just be stuck with the annoyance of having
+to manually reload it
+every time I run the program with F12.
+<br><br>
+With all this you would have a pretty good http header viewer, all without
+exiting opera.
+<br><br>
+The good thing is, this approach is not just limited to viewing headers, but to
+any application that
+you can write a C (or any other language) application for. 
+<br><br>
+A possibility I have been thinking of is a "search log" that automatically logs
+all the search terms
+you use in each search engine that you use, with all of these queries viewable
+in a side panel
+similar to the one used in the http header viewer. Basically used to keep track
+of what you have
+searched for. It could be handy when following many side-trails to keep from
+getting lost on a long
+search.
+<br><br>
+I can not help but think though, that perhaps I am doing this the hard way. It
+would probably be far
+more effective to write a plugin for opera that does this, instead of writing a
+html file and
+getting opera to read it. If you are interested, opera uses the netscape4
+plugin api. Have a look on
+google.
+<br><br>
+In any case, have a go, write up what you did and send it back to fravia so we
+can build upon each
+others findings.
+<br><br>
+Here is httpheaders.c, try pasting it into a C IDE so you can get syntax
+highliting, this makes it
+much easier to read.
+<br><br>
+
+   ~Roman<br><br>
+<br><br></font>
+
+
+
+<pre>
+/***************************BEGIN OF FILE******************************/
+/* 
+   This program picks up http headers from the machine it
+   is running on. It only gets 50 tcp packets before it quits,
+   but since not all tcp packets are http, and only the http
+   ones get output to file, you wont get 50 http headers.
+   
+   program output is in the form of a html document, with incoming
+   packets in red and outgoing in blue. If you make this thing format
+   your harddisk its not my fault.
+   
+   Trying to implement a 
+   program that does the same thing will teach you a lot
+   about the subject areas involved.
+
+   ~Roman
+*/
+
+#include &lt;pcap.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;time.h>
+
+#define ETHERNET_HEADER_LENGTH 14
+
+/* function definitions */
+int ip_header_len(const unsigned char *packet);
+int tcp_header_len(const unsigned char *packet);
+void printInfo(const unsigned char *packet, FILE* fp);
+
+char timeString[256];
+time_t tod; /* holds the time */
+
+/* insert your own ip here, this allows different coloured html
+   depending on whether the packets are incoming or outgoing */
+char *sourceIP = "123.123.123.123";
+char *initial = "&lt;HTML>&lt;PRE>&lt;/FONT>&lt;/PRE>&lt;/HTML>";
+
+/*
+ * this gets called every time a packet is recieved 
+ */
+void callback(unsigned char *args, const struct pcap_pkthdr* pkthdr,
+              const unsigned char *packet)
+{
+    /* -packet is a pointer to the start of the packet
+       -http is a pointer to the beginning of the http header */
+    const unsigned char *http;
+
+    const unsigned char *ptr;
+    int i;  /* used for various counting tasks */
+    FILE* fp; /* file pointer to the file we are writing */
+
+    /* we already know the packet is tcp because we set the
+       filter in the main method */
+    if (pkthdr->len > 66){ /* ignore packets that are too short */
+
+        /* the http header starts after the ethernet, ip 
+           and tcp headers. We have to read ip and tcp header
+           lengths from the packet */
+        i = ETHERNET_HEADER_LENGTH + 
+             ip_header_len(packet) + tcp_header_len(packet);
+        
+        http = packet + i; /* make http point to the right spot */
+
+        /* open a file */
+        fp = fopen("httpheaders.html", "r+b"); 
+        if (fp == 0){ printf("error opening file\n"); exit(1); }
+              
+        /* start writing 21 bytes before end of file 
+           so we overwrite the old "&lt;/FONT>&lt;/PRE>&lt;/HTML>"
+           at the end of the file */
+        i = fseek(fp, -21,SEEK_END);
+        if (i == -1){ printf("error with fseek\n"); exit(1); }
+
+        /* print header if packet starts with GET,POST or HTTP */
+        /*-----------------------------------------------------*/
+        if( (strncmp(http,"GET",3) == 0) || (strncmp(http,"POST",4) == 0) ){
+            
+            printInfo(packet,fp); // print src,dst and capture time
+
+            /* set i to the length of the http header */
+            i = pkthdr->len - (int)(http - packet);
+
+            /* if it starts with GET or POST, we want to write the 
+               rest of the packet to file */
+            fwrite(http, i, 1, fp);
+
+        /*-----------------------------------------------------*/
+        }else if (strncmp(http,"HTTP",4) == 0){
+            printInfo(packet,fp); /* print src,dst and capture time */
+
+            /* if it starts with HTTP, we only want to write the section
+               up to "\r\n\r\n" to file */
+            ptr = strstr(http,"\r\n\r\n"); 
+            if (ptr == 0){ printf("cant tell where to stop\n"); return; }
+
+            /* ptr should be a pointer to where to stop writing */ 
+            fwrite(http, (int)(ptr - http), 1, fp);
+            fwrite( "\n\n", 2, 1, fp);
+        }
+        /*------------------------------------------------------*/
+        
+        fwrite("&lt;/FONT>&lt;/PRE>&lt;/HTML>",21,1,fp);
+        fclose(fp);
+    }
+    return;
+}
+
+/* this initialises the network interface so we can read packets
+   from it */
+int main(int argc,char **argv)
+{ 
+    char *dev; 
+    char errbuf[PCAP_ERRBUF_SIZE];
+    pcap_t* descr;
+    struct bpf_program cp;      /* hold compiled program     */
+    bpf_u_int32 maskp;          /* subnet mask               */
+    bpf_u_int32 netp;           /* ip                        */
+    u_char* args = NULL;
+    FILE* fd;
+
+    /* grab a device to peak into... */
+    dev = pcap_lookupdev(errbuf);
+    if(dev == NULL)
+    { printf("%s\n",errbuf); exit(1); }
+
+    /* ask pcap for the network address and mask of the device */
+    pcap_lookupnet(dev,&netp,&maskp,errbuf);
+
+    /* open device for reading.*/
+    descr = pcap_open_live(dev,BUFSIZ,0,-1,errbuf);
+    if(descr == NULL)
+    { printf("pcap_open_live(): %s\n",errbuf); exit(1); }
+
+    /* Lets try and compile the program.. get only tcp to/from port 80 */
+    if(pcap_compile(descr,&cp,"tcp port 80",0,netp) == -1)
+    { fprintf(stderr,"Error calling pcap_compile\n"); exit(1); }
+
+    /* set the compiled program as the filter */
+    if(pcap_setfilter(descr,&cp) == -1)
+    { fprintf(stderr,"Error setting filter\n"); exit(1); }
+ 
+    /* creates the file if it doesnt exist, deletes contents
+       if it is present */
+    fd = fopen("httpheaders.html", "w"); 
+
+    /* we write initial HTML tags */ 
+    fwrite(initial,strlen(initial),1,fd);
+    fclose(fd);
+    
+    /* ... and loop   */
+    pcap_loop(descr,50,callback,args); /* get 50 packets */
+    return 0;
+}
+
+/* ip_header_len returns the length of the ip header.
+   If something other than an ip packet gets passed to it,
+   you'll just get gibberish. The packet must be a complete 
+   packet lifted from the wire including ethernet header etc. */
+int ip_header_len(const unsigned char *packet){
+   return 4 * (packet[14] & 0x0f); 
+}
+
+/* tcp_header_len returns the length of the tcp header.
+   If something other than a tcp packet gets passed to it,
+   you'll just get gibberish. The packet must be a complete 
+   packet lifted from the wire including ethernet header etc. */
+int tcp_header_len(const unsigned char *packet){
+   return 4 * ((packet[46]) >> 4);
+}
+
+/* print the source ip, destination ip, and time of capture */
+void printInfo(const unsigned char *packet, FILE* fp){
+    char sourceStr[20];
+    char destStr[20];
+    char line[30] = "\n------------------------\n";
+    char src[7] = "src: ";
+    char dst[8] = " dest: ";
+    char tme[12] = "\ncaptured: ";
+   
+sprintf(sourceStr,"%d.%d.%d.%d",packet[26],packet[27],packet[28],packet[29]);
+    sprintf(destStr,"%d.%d.%d.%d",packet[30],packet[31],packet[32],packet[33]);
+    if (strcmp(sourceIP,sourceStr) == 0){
+        fwrite("&lt;/FONT>&lt;FONT COLOR=\"#0000ff\">",29, 1,fp);
+    }else{
+        fwrite("&lt;/FONT>&lt;FONT COLOR=\"#ff0000\">",29, 1,fp);
+    } 
+    tod = time(&tod);
+    strftime(timeString, 256, "%c", localtime(&tod));
+    fwrite(line,strlen(line), 1,fp);
+    fwrite(src,strlen(src), 1,fp);
+    fwrite(sourceStr, strlen(sourceStr), 1,fp);
+    fwrite(dst, strlen(dst), 1,fp);
+    fwrite(destStr, strlen(destStr), 1,fp);
+    fwrite(tme,strlen(tme), 1,fp);
+    fwrite(timeString,strlen(timeString),1,fp);
+    fwrite(line,strlen(line), 1,fp);
+    return;
+}
+
+/***************************END OF FILE******************************/
+
+</pre>
+
+<br><br><font size=+3>And here it is how it looks like:</font><br><br>
+<IMG SRC="images/httpheaders.jpg"
+ALT="example of http capture"
+ALIGN=BOTTOM WIDTH="602" HEIGHT="604" BORDER=0 VSPACE=0
+HSPACE=0>
+
+<br><br>
+
+<hr>
+<!-- internet searching strategies and hints content, end -->
+<center>
+Finally, since we are on a "Opera-related" page, a famous svdism (Svd's wisdom):<br>
+<font size=+2>"<font color=blue>hit ctrl-B in opera. Then LEARN it by 
+mind!</font>"<br></font>
+you'll thank me more than once for this advice...</center>
+<hr width=66%><center><a href="tuttiope.htm"><IMG SRC="images/basipet.jpg"
+ALT="back to tutti all'opera!"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br>Back to tutti all'opera!<br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>   
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) 1952-2032: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</CENTER>  
+</body>
+</HTML>

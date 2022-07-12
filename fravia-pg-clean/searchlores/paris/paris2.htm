@@ -1,0 +1,245 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>paris2.htm: How to search the web, by fravia+ (¯`·.¸(¯`·.¸ Paris, ecole polytechnique ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"   content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type"  content="text/javascript">
+<meta name="description"  content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"   content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"   content="fravia+">
+<meta name="copyright"    content="Copyright(c) 1952-2032 fravia+">
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+<BODY bgcolor="#CFCFCF" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+
+<!-- fravia's searching lore: bigtitle, end -->
+
+<table><tr>
+<td>
+<a href="paris.htm"><IMG SRC="ecolpoly.jpg" width=240 height=322></a>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+<td><center><br><font size=+2><font color=blue>
+fravia @ Paris<br>Ecole polytechnique, 6 February 2001</font></center><br>
+<hr width=55%><br>
+<font size=+2>The main search engines: Altavista quirks</font>
+<br><br><i>
+How do search engines work and how the commercial clowns do spam them</i>
+</center></td></tr></table><br>
+
+<hr>
+
+
+Since the invention of the "Altavista-type" of indexing texts, search techniques 
+became COMPLETELY different than before. As you probably already know, there are 
+many "main" search engines. In this workshop I'll limit my (relative) "depth" 
+covering to Altavista, but there are many other main engines that use the same 
+approach, like Alltheweb/Fast, for instance, a search engine that recently claimed 
+to have the 
+maximum 'coverage' of the web, whatever that is supposed to mean coming from 
+people that did index whole databases of millions of -say- "galactic images" just to be 
+the first to pass the 'one milliard' target in their race with Google...
+<br><br>
+But indexing à-la Altavista they do, indeed. You must understand correctly what this kind 
+of word for word indexing meaned (and still means).<br> 
+The COMPLETE text of hundred of millions of pages, "y compris" the positions of commas, has been indexed. This means that if you input in -say- Alltheweb/fast  the relatively long phrase
+<a href=" http://www.alltheweb.com/cgi-bin/asearch?type=all&query=%22These+are+pages+that+the+Nucleus+points+to%2C+and+that+may+%28or+may+not%29+point+back+to+the+Nucleus.%22 ">These are pages that the Nucleus points to, and that may (or may not) point back to the Nucleus."</a> 
+you'll find immediately the page where I began speaking about such matters 
+(it was during a workshop in Milan last October)... and, even more interesting, 
+ using the same search, you'll soon find the minutes of this very workshop of mine, 
+ here in Paris to-day, PROVIDED they will be published with EXACTLY the same 
+ sequence of terms.<bR><br>
+As you can and will see, the longer and more exact the phrase you have given as input, 
+the more precise will be the 'magic' that will pull out of the dark huge hat containing 
+millions of indexed sites exactly the page you wanted. As you can imagine this makes it on 
+the one hand extremely easy to search for copycatted texts ('plagiarisms') 
+around the web. At the same time, on the other hand, knowing how to search 
+effectively could easily allow anyone of you to find an almost 
+ready-made text to -ahem- "solve brilliantly" whatever assignment you are bound to do 
+for tomorrow. So even 
+plagiarism -as everything in life- may have two faces, eh&nbsp;:-)<br>
+<br>
+The (brilliant) idea behind Altavista was to create a full-text search 
+of the entire internet. This was an incredible step. The main search engines todays
+are Google (with Topclick), Fast/alltheweb, Altavista (with Raging) and Hotbot. 
+<br>Google went even further: they have made a <SPAN STYLE="color: black; background: yellow">cached copy</span> 
+of every page they have indexed. You can imagine how important this can be when a page 
+you'r stalking did disappear or was pulled down.<br><br>
+This said, if I were you, I wouldn't limit myself to one or just to a few 
+engines: Northernlight with its folders and webtop with its new algos are for 
+instance very useful TOOLS, that you'll 
+have to use during some delicate queries...
+<br><br>Let's have a quick look at the <i>sancta sanctorum</i> of a search engine. 
+For any search engine, <i>ergo</i> for <B style="color:black;background-color:#ffff66">Altavista</B> as well, it is critically important to assign location values 
+properly when indexing sites. Inside Altavista the assigning of
+locations is fully automatic in the simplest case... where a function called 
+<SPAN STYLE="color: black; background: yellow"><a href="https://searchlores.nickifaulk.com/paris/addwo.htm">avs_addword</a></span> does all the work.<br> In this
+case the words of the document are laid out end to end and are numbered sequentially starting
+with the value returned by other functions (avs_newdoc or avs_startdoc). 
+The same is true for field boundaries
+and for values (indexed quantities like dates that can be range-searched).
+The following diagram shows how two very short documents would be stored inside altavista's 
+index
+database.<br><br><center>
+<table border=1>
+<tr><td></td><td colspan=6 bgcolor="#C6E7C6"><center>document 1</center></td><td colspan=7 bgcolor="#C6E7C6"><center>document 2</center></td></tr>
+<tr><td bgcolor="#C6E7C6">word</td><td>here</td><td>you</td><td>have</td><td>a</td><td>short</td><td>page</td><td>Thisnotwithstanding<br>thisnotwithstanding</td><td>here</td><td>you</td><td>have</td><td>another</td><td>short</td><td>page</td></tr>
+<tr><td bgcolor="#C6E7C6">location</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+
+</table></center><br>
+As the figure illustrates, each word is actually stored as a word-location pair. The index also
+contains information about the starting and ending locations of each document. Document1
+starts at location 1, and Document2 starts at location 7.
+In Document2, the first word contains an uppercase letter, so the word is indexed twice: once
+with case preserved and once in all lowercase. Both versions of the word are at the same
+location, so that the word would be found appropriately regardless of whether a query is case
+sensitive or case-insensitive.<br><br>
+The words are added sequentially,  the actual update to the index is made, using
+avs_makestable every so many documents, 
+or when the last
+document of a linked bunch has been processed.<br><br>
+Thus Altavista keeps separate indexes both for case-insensitive and case-sensitive queries, to allow both types. Thus a search for Paris would give you at the moment more or less 3,310,210 pages as "Paris" but more or less 3,598,040 pages as "paris", which covers all possible uppercase/lowercase occurrences. And yes, before you ask: a search for "PAris" would give you "quand même" more or less 614 pages... 'mistakes' searches are btw at times quite useful for stalking purposes... but that is another story.
+<br><br>
+Why did I say "more or less"? Because the same searches on Altavista will give you DIFFERENT results depending on 
+a series of  parameters: which of the many altavista servers you have locked into, 
+<SPAN STYLE="color: black; background: yellow">the time of the day</span> (when the united states' populace is awake  and cheerfully 
+browsing, everything is slower on all backbones and the servers of the main search 
+engines prefer to 'cut' the number of reported answers quite brutally to anyone 
+querying). Note also that even if the results of your query are MORE than 1000, Altavista 
+will only give you the first 1000 hits.<br><br>Finally take account of  the fact that 
+many 'first positions' on any search-query are being <SPAN STYLE="color: black; background: yellow">SOLD 
+for money</span>, or are being 
+spammed by the many clowns that spend their time trying to outsmart the anti-spamming 
+algorithms of all main search engines.
+<br>
+In Altavista words are indexed by their location AND their placement on the page (it makes 
+an helluva 
+difference, for ranking purposes, 
+if the key words are in the title, in the abstract, in the description or in the text).
+<br>
+<bR>
+Altavista does not index non-standard text formats like <SPAN STYLE="color: black; background: yellow">adobe's pdf 
+files</span> (google now does, I bet Alta and the 
+others will HAVE TO follow soon, eheh). Alta does not list excessively big files (5 megabytes), password-based access pages (obviously), and dynamic information, such as pages generated by a cgi script.<br>
+Scooter, Altavista's spider, also registers the date of the document and, which was quite a 
+clever invention, <SPAN STYLE="color: black; background: yellow">the distance between different 
+keywords</span>, 
+assuming that they are reciprocally related if they are close to each other. Other search engines do 
+not do that, 
+hence the differnces when using the NEAR operator... maybe the most important boolean operator for searching 
+purposes.
+<br><br>
+The <SPAN STYLE="color: black; background: yellow">frequency of words</span> on a page is quite a complicated parameter, because spammers (especially in the old times) used this as a quick method to get their pages in the first positions.
+Most of the people inside 'search engines algos cracking' are either spammers or 
+commercial operators intent on 'pushing' their client sites into the first ranking 
+positions. Since the average zombie user would never dream to go 
+behyond the first 20 results ranked (<b>if ever!</b>: most lusers 
+won't even look to the second page of their results!), 
+high rankings on the 
+first result page(s) are - as you may expect - of paramount relevance 
+(and commercial value).
+<br><br>
+Each search engine has a set of specific algorithms, of course. This 'pool' of algos 
+is responsible for the different results you'll get when querying.  
+Spammers are thus compelled to (try to) reverse ALL these algos 
+and then build a SET OF DIFFERENT PAGES each targeted through its  
+specific keywords and structure for one single main search engine.
+<bR>Would you always present the same page to the  different search engines
+spiders, you would fare well on one engine and fail miserably on others. 
+<br>For instance, while one search engine will give high relevancy to 
+keyword occurrence in one position, others will ignore it. 
+<br><br>
+<center><font size=+2>
+Leeching from the spammers</font></center><br>
+Hence it pays to perform specific searches for a given target on as many search engines 
+as possible and compare the generated pages of THE SAME SITE. 
+You'll quickly discover that they are differently structured, and you'll be able to 
+'leech' some useful knowledge from the bastard commercial spammers that spend their 
+working nights and days doing just that, eheh&nbsp;:-)<br><br>
+Additionally, some spammers are now running "stealth keywords" hoping that others
+wont be able to detect if they are viewing true keywords or bogus keywords.  
+You can get around this somewhat if you use a browser or a browser-firewall 
+combination that 
+allows you to set both the USER_AGENT and the referring URL. 
+By setting the USER_AGENT to <u>one of the major search spiders</u> (look in 
+your site's own loggings to see how they declare themselves :-) and by setting  
+the referring URL to null, you can sometimes trick spammers' web 
+pages into thinking you are the spider of one of the major search 
+engines and being able to see <u>the juicy real set of keywords</u>. It's amazing 
+how often this works. I can't understand why the search engines themselves 
+don't use rotating spiders' names.
+<br>
+
+<br>
+Indeed there's a lot of money currently raining into this specific field... run around 
+the search engines algos with your hat upside down and you'll surely get a part of it. 
+Yet be warned: 
+I have noticed that searchers and algo-reversers overly interested in money don't 
+understand much of what's really going on under the hood... they always have a 
+too 'contingent' attitude, their 'money' aims inevitably cover -soon or later- their 
+original 'knowledge' aims... A nice "legge del 
+contrappasso" if you understand what I mean.
+<bR><bR>
+Let's summarize some important points  you should remember when searching 
+with Altavista, I'll just list them here to give an idea of the 
+<SPAN STYLE="color: black; background: yellow">depth of understanding</span> you need to search effectively with the main search 
+engines:
+<br><bR>
+
+   
+<center><table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font size=+3>Basic Alta's 
+recall</font></center></td></tr></table><br>
+</center></center>
+<ul><li><font color=red>!!</font> ALWAYS use the advanced search with boolean operators and result ranking options. 
+</li><li> <font color=red>!!</font> Phrase searching - through heavy use of <font color=blue>""</font> - is the <i>sine qua non</i> when cutting through the web.
+</li><li> <font color=red>!!</font> The 
+rule is: case sensitive name searching. Lower case retrieves either lower 
+or upper case. Upper case kills all other case occurrences. Note that 
+<B style="color:black;background-color:#ffff66">Altavista</B> IS 
+accent and character sensitive.
+</li><li> <font color=red>!!</font> Boolean logic (AND, OR, AND NOT, NEAR) should be 
+used <font color=blue>only</font> in advanced search, <u>do not</u> use this in altavista's 
+simple search form, nor in 
+the advanced search 'sort' box. Always remember that the so-called simple search always 
+defaults to OR (you can use it nevertheless for a 'quick and dirty' search session).
+</li><li> <font color=red>!!</font> Subsearching inside sort box<br>Result 
+ranking through sortbox... you MUST understand this! You should use  
+ the results ranking criteria "Sort by" box <u>whenever possible</u> or you'll get a 
+ less useful   
+unsorted list. For instance, if you're looking for <U>all</U> "searching and seeking" related  
+pages but have a particular interest in filtering, type <font color=blue>filtering</font> 
+in the "Results 
+Ranking Criteria" space in order to bring <u>those</U> useful listings to the top. Incredibly useful 
+addition!
+</li><li> <font color=red>!!</font> Field limiting: title: ~ url: ~ link: ~ host: ~ domain: ~ anchor: ~ text: ~ image: ~
+ applet:<br>You will realize how 
+important this "field limiting" approach is only once you will have tried it, therefore 
+ just try it: <i>probieren 
+geht Über studieren</i>
+</li><li> <font color=red>!!</font> Truncation: <font color=blue>*</font> ~ 
+<font color=blue>**</font> ~ <font color=blue>?</font><br> Either you use truncation or 
+you will be truncated!
+</li></ul>
+
+Write it down and remember it: for queries at Altavista the best 
+method is ALWAYS advanced search with boolean logic (and field limiting) and then 
+heavy use of the sort box.
+<br><br>
+
+Anyway even knowing how the main search engines operate and reversing 
+their algos is not enough for a good searcher: in order to search 
+effectively you must also know that there are important seeking 
+resources elsewhere. But first you must understand that you smear 
+your data around everytime you're on the web!
+
+
+
+
+

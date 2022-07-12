@@ -1,0 +1,371 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>(¯`·.¸(¯`·.¸ There is never just 'one' way ¸.·´¯)¸.·´¯)</title>
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"		content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"			content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"			content="fravia+">
+<meta name="copyright"			content="Copyright(c) 1952-2032 fravia+">
+
+<STYLE type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head>
+
+<BODY bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- TITLE                                                                                       -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<center>
+
+<font size="+3">~ Magic Tool Lore ~</font><br>
+ 
+<table border="0" align="center"><tr>
+<td bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+<td bgcolor="#993300"><a target=_top href="tools.htm"><img SRC="images/basipet.jpg" ALT="to basic" 
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0 HSPACE=0></a></td>
+<td bgcolor="#993300">&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<br>
+
+<font size="+3"><b>(¯`·.¸&nbsp; There is never just 'one' way &nbsp;¸.·´¯)</b></font><br>
+<font size="+3">Learning a browser new tricks</font><br>
+<font size="+2">- <i>'Sit', 'roll over' and 'play dead'</i> -</font><br>
+
+<br>
+
+<b>Published @ <a href="http://www.searchlores.org">Searchlores</a> in <font color="blue">January 2004</font> | </b>
+<b>Version <font color="blue">0.01</font> | </b>
+<b>By <font color="blue">Cinix</font></b><br>
+
+<br>
+
+</center>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- SNIPPET                                                                                     -->
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<center><i>
+A True ~S~ <a href="tools.htm">toolbox</a> is full of those 'independant' little, but very usefull tools. Wouldn't it be great to have them all work together, and obey your every command?
+</i></center>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- CONTENTS                                                                                    -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Contents">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Contents</b></font></td>
+</tr></table>
+
+<ul>
+<li><a href="cinix_run.htm#Introduction">Introduction</a>: <i>Copy & Paste... Yeh right!</i>
+<li><a href="cinix_run.htm#Approach">Approach</a>
+<li><a href="cinix_run.htm#Solution1">Solution 1</a>: <i>A custom protocol handler</i>
+<li><a href="cinix_run.htm#Solution2">Solution 2</a>: <i>Local webserver: <a href="http://fravia.2113.ch/phplab/phpinstall.htm">Apache - PHP</a></i>
+<li><a href="cinix_run.htm#Solution3">Solution 3</a>: <i>Local webserver: A custom application</i>
+<li><a href="cinix_run.htm#Notes">Notes</a>
+<li><a href="cinix_run.htm#Contributions">Contributions</a>: <i>and paths you may want to explore</i>
+</ul>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- INTRODUCTION                                                                                -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Introduction">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Introduction</b></font><br>&nbsp;<b>Copy & Paste... Yeh right!</b></td>
+</tr></table>
+
+<p>Copying and pasting, or for that matter re-typing, an URL in your favorite 'Seekers Magic Tool' like wget or the latest Sourcerer from Mordred,...We've all done it, to great extent in our quests for knowledge, and tought nothing off it but Mordred really ticked me off by saying: <a href="source_3.htm"><i>Now open the same URL in Sourcerer (copy & paste the URL - <b>that's the only way</b> which is anyway the fastest, so get used to it).</i></a> I don't want to get used to it, I want my tools to obey my every command and preferably without much efford.
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- APPROACH                                                                                    -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Approach">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Approach</b></font></td>
+</tr></table>
+
+<p>A ~S~ most important tool is without a doubt his browser, nearly all other tools are used in order to complement it.
+So we will try to optimize the way we use (or abuse) our browser by teaching it some new tricks.
+
+<p>We could start by <a href="softreve.htm">reversing</a> the guts out of it but this hardly the most optimal way. For one this method isn't browser independant, isn't easy to maintain and adapt for new tools and not all of us are fluently speaking machinecode.
+
+<p>The main way we 'actually' communicate with our browser, is when we use the 'addressbar'. Trough there we can tell it everything, but like an old dog it only responds to the tricks it already knows. Imagine what could happen if we used something like the following code as a <a href="ritz__3.htm">bookmarklet</a> to grab data from a page (in this case the current url), convert it into a command and pass it along the address bar for the browser to obey.
+
+<p><i>(I'll use Mordred's <a href="source_3.htm">Sourcerer</a> as an example trougout the essay)</i><a href="cinix_run.htm#Note0">[0]</a>
+
+<p><pre>
+&lt;script language="javascript"&gt;
+   new_trick = "fetch " + location.href + " and open with sourcerer";
+   location.href = new_trick;
+&lt;/script&gt;
+</pre>
+
+<p>Of cource a command like: <b>"fetch http://www.searchlores.org/cinix_run.htm and open with sourcerer"</b> is a bit on the demanding side, but if we base our new trick on some of the older tricks our browser already knows, I'm sure we will find a workable solution.
+
+<p>There is only one main rule: <b>the tool we wish to command from our browser needs to support commandline arguments.</b><a href="cinix_run.htm#Note1">[1]</a>
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- SOLUTION 1                                                                                   -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Solution1">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Solution 1</b></font><br>&nbsp;<b>A custom protocol handler</b></td>
+</tr></table>
+
+<p>I'm sure you all have seen links starting with sig2dat://, ed2k://, copernic://, ... these are all custom protocol handlers installed together with applications that wander the net: desktop based search engines, P2P appz,... 
+We could in fact create our own custom protocol handler to launch an application like sourcerer.<a href="cinix_run.htm#Note2">[2]</a>
+
+<p><pre>
+&lt;script language="javascript"&gt;
+   new_trick = "sourcerer://" + location.href;
+   location.href = new_trick;
+&lt;/script&gt;
+</pre>
+
+<p>Or as a <font color=blue>[</font><a href="javascript:new_trick='sourcerer://'+location.href;location.href=new_trick;">Bookmarklet</a><font color=blue>]</font>
+
+<p>Implementing a custom protocol handler in the latest Opera versions for windows is exactly like the Microsoft IE appoach. Add a registry key with all needed data.
+
+<pre>
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\<b>sourcerer</b>]
+   @="URL:<b>Sourcerer Protocol</b>"
+   "URL Protocol"=""
+   "EditFlags"=dword:00000002
+
+   [HKEY_CLASSES_ROOT\<b>sourcerer</b>\DefaultIcon]
+   @="<b>C:\\path_to_handler\\handler.exe</b>"
+
+   [HKEY_CLASSES_ROOT\<b>sourcerer</b>\shell]
+
+   [HKEY_CLASSES_ROOT\<b>sourcerer</b>\shell\open]
+
+   [HKEY_CLASSES_ROOT\<b>sourcerer</b>\shell\open\command]
+   @="<b>C:\\path_to_handler\\handler.exe \"%1\"</b>"
+</pre>
+
+<p>In order to startup sourcerer we also need to write a protocol handler program (here handler.exe) that will do the following:
+<ul>
+<li>Accept a command line argument because the full URL is passed as one argument to the handler like: <a href="sourcerer://http://www.searchlores.org/source_3.htm">sourcerer://http://www.searchlores.org/source_3.htm</a>.
+<li>Parse out the appropriate data from the commandline.
+<li>Ask for more info if needed.
+<li>Launch sourcerer.exe with the correct parameters.
+</ul>
+<p><i>Download the code for: <a href="zipped/cinix_run_solution1.zip">Solution 1</a> (Visual Basic 6 Source Code)</i>
+
+<p>Or we could rewrite sourcerer to do this all since we have the source code, but that is not always the case.
+
+<p>Problems with this solution
+<ul>
+<li>Not all browsers support custom protocol handlers.
+<li>Implementation is browser dependent.
+<li>Not easy to remove if not used. (security issues)
+</ul>
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- SOLUTION 2                                                                                   -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Solution2">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Solution 2</b></font><br>&nbsp;<b>Local webserver: <a href="http://fravia.2113.ch/phplab/phpinstall.htm">Apache - PHP</a></b></td>
+</tr></table>
+
+<p>Running a web server locally is in my opinion a better way to go. You can start it up (when you need it) and shut it down (when you don't) without much effort and is easy to adapt, expand and customize.
+
+<p><pre>
+&lt;script language="javascript"&gt;
+   new_trick = "http://localhost:80/run.php?app=sourcerer&cmdln=" + location.href;
+   location.href = new_trick;
+&lt;/script&gt;
+</pre>
+
+<p>Or as a <font color=blue>[</font><a href="javascript:new_trick='http://localhost:80/run.php?app=sourcerer&cmdln='+location.href;location.href=new_trick;">Bookmarklet</a><font color=blue>]</font>
+
+<p> Now how would our run.php code then look like?
+
+<p><pre>&lt;?php 
+   if(isset($_GET["app"]) && $_GET["app"]=="sourcerer"){
+      $exe = "start /D C:\path_to_sourcerer\sourcerer.exe";
+      if(isset($_GET["cmdln"]){
+         $exe .= $_GET["cmdln"];
+      }
+      exec($exe);
+      
+      // return an answer
+      // just instruct the browser to go back to the page we used the bookmarklet on.
+      echo ("&lt;html&gt;");
+      echo ("&lt;script language='javascript'&gt;");
+      echo ("history.go(-1);");
+      echo ("&lt;/script&gt;");
+      echo ("&lt;/html&gt;");
+   }
+   else{
+      // show an error message
+      echo ("error running application");
+   }
+?&gt;
+</pre>
+
+<p>Problems with this solution
+<ul>
+<li>Each webserver has it's own security issues.
+<li>You are installing quite more than you actually might need.
+<li>It's hard to ask for additional options.
+<li><font color="red">I couldn't get this solution to work on my Win XP due to user security rights and/or other issues. (let me know if you can)</font>
+</ul>
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- SOLUTION 3                                                                                   -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Solution3">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Solution 3</b></font><br>&nbsp;<b>Local webserver: A custom application</b></td>
+</tr></table>
+
+<p>The third solution is somewhat a mix between the <a href="cinix_run.htm#Solution1">first</a> and the <a href="cinix_run.htm#Solution2">second</a> and is my personal favorite. It is basically the hander with an internal webserver so we don't need to start messing in the registry, it will support all types  of browsers and we don't need to install a full blown webserver with added php functionality.
+
+<p><pre>
+&lt;script language="javascript"&gt;
+   new_trick = "http://localhost:81/sourcerer/" + location.href;
+   
+   // or for the more demanding amongst you, it now is somewhat possible :)
+   // new_trick = "http://localhost:81/fetch " + location.href + " and open with sourcerer";
+   
+   location.href = new_trick;
+&lt;/script&gt;
+</pre>
+
+<p>Or as a <font color=blue>[</font><a href="javascript:new_trick='http://localhost:81/sourcerer/'+location.href;location.href=new_trick;">Bookmarklet</a><font color=blue>]</font>
+   
+<p>In order to startup sourcerer, our program will do the following:
+<ul>
+<li>Listen on a port for incomming http commands like: 
+<ul><li>GET /sourcerer/http://www.searchlores.org/sourcerertestfile HTTP1/1
+<li>GET /fetch%20http://www.searchlores.org/sourcerertestfile%20and%20open%20with%20sourcerer HTTP1/1
+</ul>
+<li>Instead of actually serving a page it parses the command and executes it accordingly.
+<ul><li>if needed ask for more options.
+<li>launch sourcerer (the application could also be a wrapper for non command line enabled tools)<a href="cinix_run.htm#Note3">[3]</a>
+</ul>
+<li>Respond in a way like <a href="cinix_run.htm#Solution2">Solution 2</a>
+</ul>
+<p><i>Download the code for: <a href="zipped/cinix_run_solution3.zip">Solution 3</a> (Visual Basic 6 Source Code)</i>   
+   
+<p>Problems with this solution
+<ul>
+<li>It is coded in Visual Basic 6. To bad it was the only thing at hand :(
+</ul>
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- NOTES                                                                                       -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Notes">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Notes</b></font></td>
+</tr></table>
+
+<p><a name="Note0">[0]: <i>It is only fair to say I adapted Mordred's Sourcerer in such a way that a commandline like <b>sourcerer.exe http://page_you_want_to_open/</b> also works so there is no need to include a filename where the source needs to be saved.</i>
+
+<p><a name="Note1"><a name="Note3">[1],[3]: <i>As you might know: all rules are bendable. For a non commandline enabled tool in a graphical OS, we can always create a wrapper tool that takes the commandline arguments, starts up the tool we need and sends the application the appropriate low level system messages like: "fill in this text in that textbox", "that button clicked"...</i>
+
+<p><a name="Note2">[2]: <i>In fact there are some <b>run:// protocol handler</b> programs <a href="http://www.google.be/search?q=run+protocol+handler&ie=UTF-8&oe=UTF-8&hl=en&meta=">out there</a> but some caution must be executed since they allow all programs to execute, and the protocol handler is known with those that might lead you to obsure, javascript bug infested web pages.</i>
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+<!-- CONTRIBUTIONS                                                                               -->
+<!-- ------------------------------------------------------------------------------------------- -->
+<a name="Contributions">
+<table border="0"><tr>
+<td width="9" bgcolor="00CC00"></td>
+<td><font size=+1>&nbsp;<b>Contributions</b></font><br>&nbsp;<b>and paths you may want to explore</b></td>
+</tr></table>
+
+<p>The content of this essay covers only some ideas I had with some proof of concept code. This is by far complete, polished or fully bugfree functional code. Feel free to use or abuse as you see fit and build upon the base I have provided here, but remember to share. If you for example created a <a href="bots.htm">search bot</a> with a webinterface, a wrapper tool,... or if you adapted and improved the code here or even just ported it to another language (C, Java, ...)
+
+<p>Remarks, suggestions or contributions: just stick them on the <a href="http://fravia.2113.ch/phplab/mbs.php3/mb001">~ S ~ messageboard</a>. I'm sure some interesting discussions and or ideas can come to life there.
+
+<p>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<p>Cinix
+
+</font><br><center>
+<hr width="66%">
+<a target=_top href=
+"basic.htm"><img src="images/basipet.jpg"
+     alt="Petit image" align="bottom" width="118" height="68"
+     border="0" vspace="0" hspace="0"></a><br>
+<br></font> 
+<table>
+<tr>
+<td width="300" height="2" bgcolor="#993300"></td></tr></table>
+(c) III Millennium: <font color=
+"blue">[</font><a target=_top href=
+"info.htm">fravia+</a><font color=
+"blue">]</font>, all rights reserved, reversed, reviled and revealed</font></center></div>
+</body>
+</html>

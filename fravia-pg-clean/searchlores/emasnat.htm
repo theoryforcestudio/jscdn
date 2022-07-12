@@ -1,0 +1,78 @@
+<HEAD>
+<TITLE>emanat.htm Emailsnatching through javascript</TITLE>
+</HEAD>
+
+<BODY onLoad=ResetFraviaEsForm() BGCOLOR="#C0C0C0" TEXT="#001010"  VLINK="#405040">
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+    function ResetFraviaEsForm()
+  {
+    document.Get_User_Information.Msg.value =
+    "You just sent mail from Fravia's E-mail Snagger";
+
+    document.Get_User_Information.NavigatorInformation.value =
+    unescape("%0D%0A") +
+    "appCodeName : " + navigator.appCodeName + unescape("%0D%0A") +
+    "userAgent   : " + navigator.userAgent + unescape("%0D%0A") +
+    "appVersion  : " + navigator.appVersion + unescape("%0D%0A") +
+    "appName     : " + navigator.appName + unescape("%0D%0A");
+
+    document.Get_User_Information.DocumentInformation.value =
+    unescape("%0D%0A") +
+    "Viewing document : " + document.location + unescape("%0D%0A") +
+    "Last modified    : " + document.lastModified + unescape("%0D%0A") +
+    "Referred by      : " + document.referrer + unescape("%0D%0A");
+
+    document.Get_User_Information.action = "mailto:fravia_@yahoo.com?subject=LOGGING"
+
+   //document.Get_User_Information.submit();
+  }
+
+
+  // Finished hiding script -->
+
+</SCRIPT>
+
+
+<A NAME="anchortop"></A>
+<!-- Begin Introdo -->
+<IMG SRC="https://searchlores.nickifaulk.com/bulletr.gif" tppabs="http://fravia.net/bulletr.gif" ALIGN=LEFT BORDER=0 VSPACE=0 HSPACE=0 width="13" height="13">
+<H1><CENTER>fravia's emailsnatcher</CENTER></H1>
+<center><i><b>See how easy it is...</b></i></center>
+<HR ALIGN=CENTER WIDTH=100% size=2>
+<!-- End Introdo -->
+
+<!-- Begin Showoff -->
+<CENTER>
+    Information that was gathered from your browser...
+    <FORM METHOD=POST ENCTYPE="text/plain" NAME="Get_User_Information">
+      <TEXTAREA NAME="Msg" cols=60></TEXTAREA><P>
+      <TEXTAREA NAME="DocumentInformation"  COLS=60 ROWS=5></TEXTAREA><P>
+      <TEXTAREA NAME="NavigatorInformation" COLS=60 ROWS=5></TEXTAREA><P>
+    </FORM>
+</CENTER>
+<CENTER> I get so much mail from this that I have altered the address, and
+hopefully you get a bounced mail reply, In effect you'll get (as an
+attachment) what I usually get when you visit. Have a look... you'll see
+that Java script (as well as many other
+internet tools) can be used to gather quite a lot of information about you.
+</Center>
+<!-- End Showoff -->
+<hr size=2><center>
+<!-- Begin mover -->
+<!-- internet searching strategies and hints content, end -->
+<a href="basic.htm"><IMG SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a>
+<br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tR><td width="300" height="2" bgcolor="#993300"></tD></tR></table>
+(c) 2000: <font color=blue>[</font><a href="info.htm">fravia+</a><font color=blue><font color=blue>]</fonT></font>,
+all rights reserved
+</CENTER>
+</body>
+</HTML>

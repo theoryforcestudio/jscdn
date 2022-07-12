@@ -1,0 +1,263 @@
+<html>
+<head>
+<!-- web searching lore: pagename begin -->
+<title>ritz_google_anti_snoop.htm:  Scumware</title>
+<LINK REL="SHORTCUT ICON" HREF="images/favicon.ico">
+<!-- web searching lore: pagename end -->
+<meta http-equiv="Content-Type"		content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type"	content="text/css">
+<meta http-equiv="Content-Script-Type"	content="text/javascript">
+<meta name="description"	content="This site teaches basic and advanced search techniques for people interested in finding any kind of information on the web. Here are informations, documents, links, etc. related to web-searching">
+<meta name="keywords"		content="searching, combing, klebing, how to search, search techniques, hints and tips for searching the web, How do I learn to search?, Advanced Internet searching, How do I search the web?, fravia+">
+<meta name="author"		content="fravia+">
+<meta name="copyright"		content="Copyright (c) 1952 - 2032 fravia+">
+
+<style type="text/css">
+A:link { color: #02F }
+A:visited  { color: #808 }
+A:hover { color: purple; background: #AFB }
+</STYLE>
+</head> <body bgcolor="#CCCCCC" TEXT=#001010 LINK="#0000FF" ALINK="#00FF00" VLINK="#3366CC">
+<center><!-- fravia's searching lore: bigtitle, begin -->
+<font size=+3>~ Google malbehaves ~</font>
+<!-- fravia's searching lore: bigtitle, end --><br>
+  <!-- internet searching techniques: imageheader begin -->
+  <table border="0" ALIGN=CENTER><tr>
+  <th bgcolor="#993300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th BGCOLOR="#993300"><a href="malware.htm"><IMG SRC="images/stillpet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a></th>
+  <TH BGCOLOR="#993300">&nbsp;&nbsp;</th>
+  <th bgcolor="#FF0000"><Font color="#993300" SIZE="3">
+  Malwares</th>
+  </tR></table>(Courtesy of fravia's <a href="advanced.htm">advanced</a> searching
+  lores)<br><bR>
+  <!-- internet searching techniques: imageheader end -->
+<!-- --------------------|||||------------->
+First published @ <a href="http://www.searchlores.org">www.searchlores.org</a> in <font color=blue>August</font> 2005<br> 
+<font color=gray> (This is version 0.05: August 2005)</font>
+<!-- --------------------^^^^^------------->
+<br>
+<!-- internet searching techniques: imageheader end --></center><!-- fravia's searching lore: bigtitle, begin -->
+<br><center><font size=+2>Google is tracking your clicks<br></font>  by <font color=blue>ritz</font> 
+<br>with <a href="ritz_google_anti_snoop.htm#addit">additions</a> by Netzen (and vvf)<br>
+<br>with a <a href="ritz_google_anti_snoop.htm#fuaddit">further addition</a> (by fravia+)<br>
+           </center></center>
+<br>
+<br>      <font size=+1>
+
+  <center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Google is tracking your clicks&#33;</font>&nbsp; &nbsp; </center></td></tr></table>
+</center>
+<br>
+
+
+While playing around with the google results page in order to create some
+<br>customizing <a href="tuttiope.htm">opera</a> user javascript, I noticed this snippet of code:<font size=-1>
+<br>
+<br><pre>function rwt(el,ct,cd,sg){
+<br>  el.href="/url?sa=t&ct="+escape(ct)+"&cd="+escape(cd)+"&url="+escape(el.href).replace(/\+/g,"%2B")+"&ei=gyoLQ96BI8fYwgGNseDZDQ"+sg;
+<br>  el.onmousedown="";
+<br>  return true;
+<br>}</pre></font>
+<br>activated in the <font color=blue>mousedown</font> event that fires just before clicking in the link:
+<br><font color=blue>&lt;a href="http://..." onmousedown="return rwt(this,'res','4','')"&gt;</font>
+<br>As you can see, it carries four parameters:
+<br>1. <font color=blue>this</font> : called "el" (for element?) the DOM-object containing the hyperlink. the expression 'this.href' contains the URL of the hyperlink and can be modified to whatever you want, just before the link is clicked.
+<br>2. <font color=blue>'res'</font> : called "ct", probably it's telling google that the link came from the search <b>res</b>ults
+<br>3. <font color=blue>'4'</font> : called "cd", this is the number of the search result. in this case it was the fourth 'hit' on google.
+<br>4. <font color=blue>''</font> : called "sg", is also added at the end of the url, probably for transferring any other information as needed, that doesn't fall into "ct" or "cd".
+<br>
+<br>and what does the function do? "rwt" obviously stands for "rewrite".
+<br>this is the line that does it all:
+<br>el.href="/url?sa=t&ct="+escape(ct)+"&cd="+escape(cd)+"&url="+escape(el.href).replace(/\+/g,"%2B")+"&ei=gyoLQ96BI8fYwgGNseDZDQ"+sg;
+<br>Let's say your URL is "<font color=blue>http://somewhere.com</font>" and it's the <font color=blue>5th</font> result on the SERP you received.
+<br>Then this is what happens:
+<br>you see the link http://somewhere.com, you hover over it, see in your statusbar
+<br>"http://somewhere.com", so you think you will go to http://somewhere.com and you click on it, BUT THEN&#33; the event fires and quickly ReWriTes this url to:
+<br>/url?sa=t&ct=res&cd=5&url=http://somewhere.com&ei=3427ABCDbla
+<br>("ei" is probably some kind of tracking identification code uniquely connected 
+<br>to your cookie or search-query)
+<br>so your browser fires a GET request to www.google.com for this url, google 
+<br>kindly saves all the (extra&#33; and unnecessary) information your browser is 
+<br>spewing, and the google.com server gives you back a 302 FOUND header:<br><br>
+<br><font color=blue>HTTP/1.1 302 Found
+<br>Cache-Control: private
+<br>Location: http://somewhere.com
+<br>Content-Type: text/html
+<br>Server: GWS/2.1
+<br>Content-Length: 155
+<br>Date: Tue, 23 Aug 2005 16:19:24 GMT</font><br><br>
+<br>which redirects you to the actual site you <b>thought</b> you were clicking
+<br>on in the first place. Of course you will never notice this little "detour"
+<br>your browser is taking, because google's servers are so darn fast, and the
+<br>information amount sent is tiny.
+<br>
+<br>Now this is -in itself- nothing new, alltheweb has been doing it for ages, but
+<br>at least it doesn't try to do it secretly&#33; you clearly see that the link you
+<br>click on doesn't go immediately to your webpage, but to some kind of ads.yahoo
+<br>server instead, where you get redirected in a similar way that google does.
+<br>i think this is sneaky and not very nice from mr google. also I wonder since
+<br>*when* have they been doing this? I'm quite sure I looked at googles' SERPs
+<br>some years ago and it wasn't there.
+<br>
+<br>Well i know one thing for sure: THIS is going in my opera user script:
+<br><pre>// ==UserScript==
+<br>// @namespace    ritz.orange
+<br>// @name         google distracktion
+<br>// @description  removes one tracking script from google
+<br>// @include      http://www.google.com/search?*
+<br>// ==/UserScript==
+<br>window.opera.defineMagicFunction('rwt',
+<br>function ( oRealFunc, oThis, el,ct,cd,sg) {
+<br>  // do nothing&#33;
+<br>  return true;
+<br>}
+<br>);</pre>
+<br>Copy/paste, save to googledistrackt.js, in your Opera Userscript directory
+<br>(set that via prefs&gt;advanced&gt;content&gt;javascript options&gt;my javascript files)
+<br>.. just tested it, it works exactly as advertised in my opera 8.02 and you
+<br>know what, I think I can even notice a slight speed increase when loading the
+<br>page I want after clicking the link in my google SERP..
+<br>
+<br>(copyright 2005 - ritz)
+<br>
+<hr width=44%>
+<br>Addendum  by <font color=blue>- ritz</font>:<br>
+I should of course be writing as crossbrowser code as possible, so 
+here is one that i think should work in firefox greasemonkey as well 
+as opera: 
+<pre>
+// ==UserScript==
+// @namespace    ritz.orange
+// @name         google distracktion
+// @description  removes one tracking script from google
+// @include      http://www.google.com/search?*
+// ==/UserScript==
+
+window.addEventListener('load', 
+  function(){
+    window.rwt = function(){return true};
+  },
+  false);</pre>
+
+I just tried it out, and it seems to work. except when google tried to redirect 
+me to my local google, which didn't match www.google.com/search?* .. so maybe 
+you have to adapt the @include line a bit. (or tame your ffox browser - why does 
+it redirect me in the first place?) 
+<br><br>
+
+
+<a name="addit"></a>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Additions</font>&nbsp; &nbsp; </center></td></tr></table>
+</center>
+<br>
+<br> 
+You can use Proxomitron for the same purpose
+
+<pre>
+[Patterns] 
+Name = "Kill Google tracking clicks by Netzen" 
+Active = TRUE 
+URL = "www.google.com" 
+Bounds = "[script*[/script]" 
+Limit = 256 
+Match = "*(function clk|function ga)*" 
+Replace = "[!-- Killed Google tracking clicks JavaScript --]" </pre>
+
+
+
+Netzen  
+ <br><br>
+If you try this: 
+
+
+<pre>
+[Patterns] 
+Name = "Kill Google tracking clicks by Netzen" 
+Active = TRUE 
+URL = "www.google.com" 
+Bounds = "[script*[/script]" 
+Limit = 256 
+Match = "*(function clk|function ga)*" 
+Replace = "[!-- Killed Google tracking clicks JavaScript --]"</pre>
+
+
+and it doesn't work, try increasing "Limit" to 1024, it should do the trick. 
+<br>Also be careful, in "Bounds", to replace square brackets by angle brackets.<br> 
+If you're entering this info via the Proxo/Web Pages option, you must also remove all double quote marks. 
+<br><br>
+vvf
+<br>
+<a name="fuaddit"></a> 
+<br>
+<center>
+<table border=1 width=88%><tr><td bgcolor="#C6E7C6"><center><font
+size=+3>Furter Addition</font>&nbsp; &nbsp; </center></td></tr></table>
+</center><br>
+The "sneakiness" of this google approach is due to the fact that all links in the serp have the 
+normal HREF attribute, so when you hover your mouse over the link you see the cleaned target URL in the status bar.<br> 
+However, only when actually clicking, the mousedown event handler invokes the  Javascript function described by ritz.<br>
+You can check everything at ease with -for instance- <a href="http://www.searchlores.org/tools.htm#ppt">ipticker</a>.
+<br>
+This might -also- be a system for tracking user browsers: firefox & opera versus M$IE.
+<br><br>
+Netzen, with his "<font color=blue>ga</font>" addition is referring to the fourth function below:
+<table cellpadding="4" width="100%" cellspacing="1" border="0"><tr><td bgcolor="#cccccc"><font size="2" face="arial" color="#000000">&lt;script&gt; 
+<br>&lt;!--  </font><p><font size="2" face="verdana" color="#000000" class="mo"><b style="color:black;background-color:#C6E7C6">function 
+ss</b>(w){window.status=w;return true;}  <br><br><b style="color:black;background-color:#C6E7C6">function cs</b>(){window.status='';}  
+</font><p><font size="2" face="verdana" color="#000000" class="mo"><b style="color:black;background-color:#C6E7C6">function rwt</b>
+(el,ct,cd,sg){ <br>el.href=&quot;/url?sa=t&amp;ct=&quot;+escape(ct)+&quot;&amp;cd=&quot;+escape(cd)+&quot;&amp;url=&quot;+escape(el.href).replace(/\+/g,&quot;%2B&quot;+&quot;&amp;ei=wAsMQ8mKI6bWwgGuuaXZBw&quot;+sg; <br>el.onmousedown=&quot;&quot;;return true; 
+<br>}  </font><p><font size="2" face="verdana" color="#000000" class="mo"><b style="color:black;background-color:#C6E7C6">function 
+ga</b>(o,e){if (document.getElementById){a=o.id.substring(1); <br>p = &quot;&quot;; <br>r = &quot;&quot;; <br>g = e.target; <br>if (g) { t = g.id; 
+<br>f = g.parentNode; <br>if (f) {p = f.id; <br>h = f.parentNode; <br>if (h) r = h.id; <br>}} else{h = e.srcElement; <br>f = h.parentNode; 
+<br>if (f) p = f.id; <br>t = h.id; <br>} if (t==a ¦¦ p==a ¦¦ r==a) return true; 
+<br>location.href=document.getElementById(a).href}} //--&gt; <br> &lt;/script&gt; <br> </font></td></tr></table>
+<br><br>in my opinion this has mainly to do with their sponsored crap:<br>
+<font color=blue>http://www.google.com/url?sa=t&ct=res&cd=1&url=http%3A//www.searchlores.org/&ei=wAsMQ8mKI6bWwgGuuaXZBw<br></font>
+sa=t &nbsp;-->&nbsp; "t" for normal links, "l" for  sponsored links<br>
+ct=res &nbsp;-->&nbsp; "res" for normal links, "pro" for those sponsored results above normal links<br>
+cd=1 &nbsp;-->&nbsp; link position for normal links, special code for sponsored links<br>
+url=http%3A//www.searchlores.org/  &nbsp;-->&nbsp; HTTP encoded version of target<br>
+ei=wAsMQ8mKI6bWwgGuuaXZBw &nbsp;-->&nbsp; a base-64 encoded request number imo corresponding to the target being searched<br>
+<br><hr width=44% align=left><br>
+Also let's not be too harsh with google. Do not forget that 
+other search engines are even worse. <br>
+Yahoo has an HARDCODED redirect in its URLs, for instance the apparent 
+<pre>
+http://search.yahoo.com/search?p=fravia&sm=Yahoo%21+Search&fr=FP-tab-web-t&toggle=1&cop=&ei=UTF-8
+</pre>
+is in reality (today)
+<font size=-2>
+<pre>
+http://rds.yahoo.com/S=2766679/K=fravia/v=2/SID=e/TID=F548_118/l=WS1/R=1/IPC=be/SHE=0/H=2/;_ylt=AeUuhC1bosym47SMr4uRX5xXNyoC/SIG=11fclpehd/EXP=1124327757/*-http%3A//www.searchlores.org/
+</pre></font>
+
+f+
+
+
+
+<center>
+<!-- internet searching strategies and hints content, end -->
+<hr width=66%><a href="basic.htm"><img SRC="images/basipet.jpg"
+ALT="Petit image"
+ALIGN=BOTTOM WIDTH="118" HEIGHT="68" BORDER=0 VSPACE=0
+HSPACE=0></a><br><br>
+<!-- how to search the web, by fravia+, signet begin -->
+<table><tr><td width="300" height="2" bgcolor="#993300"></td></tr></table>
+ (c) III Millennium: <font color=blue>[</font><a
+href="info.htm">fravia+</a><font color=blue><font
+color=blue>]</font></font>, all rights
+reserved
+<!-- how to search the web, by fravia+, signet end -->
+
+
+<!-- begin da closing bit, duh -->
+</center>
+</body>
+</html>
