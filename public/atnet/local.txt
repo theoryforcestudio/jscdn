@@ -1,57 +1,29 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 07/26/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 07/30/22
 
 
-Galaxy Digital (MATIC) Airdrop
-Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.
-https://www.altcointrading.net/airdrops/#galaxy-digital-(matic)-airdrop
+Atomix (SOL) Airdrop
+A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.
+https://www.altcointrading.net/airdrops/#atomix-(sol)-airdrop
 
-GUNX (AVAX) Airdrop
+UltimateRanger (ETH) Airdrop
+Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.
+https://www.altcointrading.net/airdrops/#ultimateranger-(eth)-airdrop
+
+Sarosism NFT (SOL) Airdrop
+Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.
+https://www.altcointrading.net/airdrops/#sarosism-nft-(sol)-airdrop
+
+OEG_DAO GUNX (AVAX) Airdrop
 GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.
-https://www.altcointrading.net/airdrops/#gunx-(avax)-airdrop
+https://www.altcointrading.net/airdrops/#oeg_dao-gunx-(avax)-airdrop
 
-Signifty (ETH) Airdrop
-A short Gleam form, only 1 task is necessary to be eligible. SIGN tokens will be distributed as a reward.
-https://www.altcointrading.net/airdrops/#signifty-(eth)-airdrop
+FunBlock (BSC) Airdrop
+Gleam form with pool of 2.000.000 $FUNB tokens that will go to 1000 random users. All tasks required.
+https://www.altcointrading.net/airdrops/#funblock-(bsc)-airdrop
 
-Get Kicks X Akatsuki Airdrop
-Another move 2 earn project. Long Gleam form that only gives 150 Access Code WL for Get Kicks App Beta, but you can earn tokens in the app then.
-https://www.altcointrading.net/airdrops/#get-kicks-x-akatsuki-airdrop
-
-AVAX Giveaway
-10 AVAX Giveaway from Digard for a Gleam form.
-https://www.altcointrading.net/airdrops/#avax-giveaway
-
-ALGO giveaway on CEX
-A Gleam form, but you need a KYCd account at CEX.IO. Airdrop pool is 10k ALGO and it is done to promote the launch of ALGO market on CEX. Prizes range between 100-1000 ALGO per winner.
-https://www.altcointrading.net/airdrops/#algo-giveaway-on-cex
-
-RoboWorld NFT Airdrop
-Leave your email address and fill tasks to receive an NFT box.
-https://www.altcointrading.net/airdrops/#roboworld-nft-airdrop
-
-Xenum (BSC) Airdrop
-Just switch metamask to BSC, connect wallet and click Claim Tokens in the join link, no shilling required. No alerts for the contract on bscscan.
-https://www.altcointrading.net/airdrops/#xenum-(bsc)-airdrop
-
-Armaldia Metaverse NFT Airdrop
-30 winners will split almost 6k USD in tokens. Long Gleam form, prizes are NFTs. Armaldia is a play-to-earn MMO metaverse game.
-https://www.altcointrading.net/airdrops/#armaldia-metaverse-nft-airdrop
-
-Biswap (BSC) airdrop
-To promote the token listing on Hotbit, Biswap gives 100 tokens to 7000 people for simple tasks via Google Form.
-https://www.altcointrading.net/airdrops/#biswap-(bsc)-airdrop
-
-Free IPFS storage
-Free to claim. Users who log in 4EVERLAND with Flow address will enjoy free: 5GB IPFS Storage, 100MB Arweave Storage, 100GB Bandwidth, and 250 Build Minutes per month.
-https://www.altcointrading.net/airdrops/#free-ipfs-storage
-
-KUKU on Latoken
-A Gleam form that pays 3093 lucky winners. Pool 20k KUKU, which is about 10k USD. Tasks are just simple social media engagement, there's no trading activity required.
-https://www.altcointrading.net/airdrops/#kuku-on-latoken
-
-NFT Powerup Airdrop
-A Gleam giveaway with a big budget - 10k in USDT and extra NFTs. 600 winners will be drawn. Tasks are mandatory.
-https://www.altcointrading.net/airdrops/#nft-powerup-airdrop
+Melody NFT Airdrop
+Pool of 25 Melody NFTs and 300k SNS tokens to share among winners and top referrers in this Gleam airdrop.
+https://www.altcointrading.net/airdrops/#melody-nft-airdrop
 
 ULAS NFT Airdrop
 Short Gleam form for an NFT airdrop. NFTs go to top 999 referrals, special Discord role to 7000 others. You need to provide Keplr wallet address.
@@ -93,6 +65,10 @@ Meta Squares (SOL) Airdrop
 Complete two simple Gleam entries to get into the airdrop. Pool of 10 MM MSQU tokens.
 https://www.altcointrading.net/airdrops/#meta-squares-(sol)-airdrop
 
+Galaxy Digital (MATIC) Airdrop
+Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.
+https://www.altcointrading.net/airdrops/#galaxy-digital-(matic)-airdrop
+
 Stackspace (BSC) Airdrop
 Bunch of tasks, a lot of them can be repeated daily. 50.000 $STSP to 100 winners, more entries are more chances. Form via Viralsweep, wants your email and wallet address. Stackspace is a marketplace for NFTs and assets from various games.
 https://www.altcointrading.net/airdrops/#stackspace-(bsc)-airdrop
@@ -101,9 +77,17 @@ Anifi Airdrop
 Both tokens and game NFTs are airdropped to referrers and lucky participants in Gleam form. The 6 tasks (all except referral) are mandatory.
 https://www.altcointrading.net/airdrops/#anifi-airdrop
 
+Hyperboard NFT (BSC) Airdrop
+Hyperboards is an NFT needed to start earning Chat And Earn Tokens for (surprise) chatting. Simple Gleam tasks with some daily ones. More tasks more chances to win one of the NFTs. It's 10 NFTs for every 10k entries.
+https://www.altcointrading.net/airdrops/#hyperboard-nft-(bsc)-airdrop
+
 MOVN (MATIC) Airdrop
 A Givelab form with pool of 15,000 MOV for 1,500 Winners. Entries are not compulsory but the more you do the better your chance.
 https://www.altcointrading.net/airdrops/#movn-(matic)-airdrop
+
+BOSE (SOL) Airdrop
+A Metaverse token on Solana airdrops for a short Gleam form. Pool is 10000 $BOSE for 10,000 members.
+https://www.altcointrading.net/airdrops/#bose-(sol)-airdrop
 
 Pocket Official Airdrop
 Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.
@@ -114,8 +98,12 @@ MONALISA is a new NFT art trading platform. This is a short Gleam form that gets
 https://www.altcointrading.net/airdrops/#monalisa-(bsc)-airdrop
 
 
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 07/26/22
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 07/30/22
 
+
+CEX 50 USDC Reward
+The KYC exchange CEX runs a deposit promo for USDC on Stellar. Deposit 30+ USDC on Stellar and get 50 USDC bonus. Pool limited to 50k USDC, a daily balance of over 30 USDC or equivalent is required on exchange through August 25, and you need to fill in a form to get the bonus.
+https://www.altcointrading.net/airdrops/#cex-50-usdc-reward
 
 Ledger NFT Airdrop
 Ledger Nano S is being phased out of production, there is a few thousand last devices left. Everyone who purchases one of them will get an NFT airdrop. It's an artwork from artist <em>what is real?</em>, join link has more info.
@@ -149,16 +137,34 @@ https://www.altcointrading.net/airdrops/#cex.io-token-metrics-discount
 [IG]
 
 
-#airdropalert - Galaxy Digital (MATIC) Airdrop
+#airdropalert - Atomix (SOL) Airdrop
 
-Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.
+A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - GUNX (AVAX) Airdrop
+#airdropalert - UltimateRanger (ETH) Airdrop
+
+Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - Sarosism NFT (SOL) Airdrop
+
+Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - OEG_DAO GUNX (AVAX) Airdrop
 
 GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.
 
@@ -167,33 +173,24 @@ GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - Signifty (ETH) Airdrop
+#airdropalert - FunBlock (BSC) Airdrop
 
-A short Gleam form, only 1 task is necessary to be eligible. SIGN tokens will be distributed as a reward.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Get Kicks X Akatsuki Airdrop
-
-Another move 2 earn project. Long Gleam form that only gives 150 Access Code WL for Get Kicks App Beta, but you can earn tokens in the app then.
+Gleam form with pool of 2.000.000 $FUNB tokens that will go to 1000 random users. All tasks required.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - AVAX Giveaway
 
-10 AVAX Giveaway from Digard for a Gleam form.
+
+#bountyalert - CEX 50 USDC Reward
+
+The KYC exchange CEX runs a deposit promo for USDC on Stellar. Deposit 30+ USDC on Stellar and get 50 USDC bonus. Pool limited to 50k USDC, a daily balance of over 30 USDC or equivalent is required on exchange through August 25, and you need to fill in a form to get the bonus.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
 
 
 #bountyalert - Ledger NFT Airdrop
