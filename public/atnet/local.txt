@@ -1,17 +1,37 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 07/30/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 08/02/22
 
 
-Atomix (SOL) Airdrop
-A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.
-https://www.altcointrading.net/airdrops/#atomix-(sol)-airdrop
+Pocket Official Airdrop
+Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.
+https://www.altcointrading.net/airdrops/#pocket-official-airdrop
+
+HC Capital airdrop
+The HC DeFi ecosystem runs a longish Gleam promo. Winners are random, the reward is 10 USDT for lucky 500 participants.
+https://www.altcointrading.net/airdrops/#hc-capital-airdrop
+
+Melody NFT Airdrop
+Pool of 25 Melody NFTs and 300k SNS tokens to share among winners and top referrers in this Gleam airdrop.
+https://www.altcointrading.net/airdrops/#melody-nft-airdrop
+
+Sarosism NFT (SOL) Airdrop
+Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.
+https://www.altcointrading.net/airdrops/#sarosism-nft-(sol)-airdrop
 
 UltimateRanger (ETH) Airdrop
 Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.
 https://www.altcointrading.net/airdrops/#ultimateranger-(eth)-airdrop
 
-Sarosism NFT (SOL) Airdrop
-Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.
-https://www.altcointrading.net/airdrops/#sarosism-nft-(sol)-airdrop
+SLEEP Airdrop
+All Gleam fields mandatory. SLEEP is launching Airdrop Campaign with prize pool of 2,000,000 $SLEEP tokens, individual rewards up to 50k tokens per person.
+https://www.altcointrading.net/airdrops/#sleep-airdrop
+
+Gamespace x Akatsuki NFT Airdrop
+Game Space & Akatsuki provide 2000 NFTs for this Gleam airdrop. NFT holders will get automatically whitelisted for future AAA Game NFT Airdrops. 
+https://www.altcointrading.net/airdrops/#gamespace-x-akatsuki-nft-airdrop
+
+Diolaunch Airdrop
+Gleam form with all tasks mandatory for a pool of 250.000 $DLA tokens to 1000 winners.
+https://www.altcointrading.net/airdrops/#diolaunch-airdrop
 
 OEG_DAO GUNX (AVAX) Airdrop
 GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.
@@ -20,42 +40,6 @@ https://www.altcointrading.net/airdrops/#oeg_dao-gunx-(avax)-airdrop
 FunBlock (BSC) Airdrop
 Gleam form with pool of 2.000.000 $FUNB tokens that will go to 1000 random users. All tasks required.
 https://www.altcointrading.net/airdrops/#funblock-(bsc)-airdrop
-
-Melody NFT Airdrop
-Pool of 25 Melody NFTs and 300k SNS tokens to share among winners and top referrers in this Gleam airdrop.
-https://www.altcointrading.net/airdrops/#melody-nft-airdrop
-
-ULAS NFT Airdrop
-Short Gleam form for an NFT airdrop. NFTs go to top 999 referrals, special Discord role to 7000 others. You need to provide Keplr wallet address.
-https://www.altcointrading.net/airdrops/#ulas-nft-airdrop
-
-FITR Metaverse Airdrop
-Pool of 1MM FitR Metaverse Token (FMT) for participants of a short Gleam form. 200 highest point counts get a prize and then 250 random participants get a draw.
-https://www.altcointrading.net/airdrops/#fitr-metaverse-airdrop
-
-Trippin (SOL) Airdrop
-Tripin’ is a web3 drive-to-earn game on Solana. $100,000 worth of $FUEL tokens to reward random users. You just need to join a few accounts.
-https://www.altcointrading.net/airdrops/#trippin-(sol)-airdrop
-
-Sharp Sneakers (SOL) Airdrop
-First come first earns airdrop of a Solana token. Simple Gleam form, first 10k participants gets 1K SHS tokens each.
-https://www.altcointrading.net/airdrops/#sharp-sneakers-(sol)-airdrop
-
-CheeseApe Airdrop
-New airdrop of $CSA Token for first 15K eligible users (first come first served). You are asked to complete social media tasks for the reward of 100 $ASC tokens each.
-https://www.altcointrading.net/airdrops/#cheeseape-airdrop
-
-PlaySky Movens Airdrop
-PlaySky &  MOVENS will give $10,000 worth of $MVNS to 500 winners. It's a Google form, you need to do a few tasks on social media.
-https://www.altcointrading.net/airdrops/#playsky-movens-airdrop
-
-SLEEP Airdrop
-All Gleam fields mandatory. SLEEP is launching Airdrop Campaign with prize pool of 2,000,000 $SLEEP tokens, individual rewards up to 50k tokens per person.
-https://www.altcointrading.net/airdrops/#sleep-airdrop
-
-Diolaunch Airdrop
-Gleam form with all tasks mandatory for a pool of 250.000 $DLA tokens to 1000 winners.
-https://www.altcointrading.net/airdrops/#diolaunch-airdrop
 
 QantiumX (BSC) Airdrop
 Short Givelab form that rewards 140 winners with 50 USD worth of QTMX tokens each.
@@ -68,6 +52,10 @@ https://www.altcointrading.net/airdrops/#meta-squares-(sol)-airdrop
 Galaxy Digital (MATIC) Airdrop
 Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.
 https://www.altcointrading.net/airdrops/#galaxy-digital-(matic)-airdrop
+
+Duman NFT (ETH) Airdrop
+Complete a short Gleam form to have a chance to win NFTs of fashion items. The NFTs go to 500 top users by entries and 50 more random users.
+https://www.altcointrading.net/airdrops/#duman-nft-(eth)-airdrop
 
 Stackspace (BSC) Airdrop
 Bunch of tasks, a lot of them can be repeated daily. 50.000 $STSP to 100 winners, more entries are more chances. Form via Viralsweep, wants your email and wallet address. Stackspace is a marketplace for NFTs and assets from various games.
@@ -85,20 +73,20 @@ MOVN (MATIC) Airdrop
 A Givelab form with pool of 15,000 MOV for 1,500 Winners. Entries are not compulsory but the more you do the better your chance.
 https://www.altcointrading.net/airdrops/#movn-(matic)-airdrop
 
+Evolve token airdrop
+Huge Gleam campaign with 420k USD worth of Evolve tokens. EVOLVE is a cryptocurrency offering a blockchain supported Video Game Competition Platform.
+https://www.altcointrading.net/airdrops/#evolve-token-airdrop
+
 BOSE (SOL) Airdrop
 A Metaverse token on Solana airdrops for a short Gleam form. Pool is 10000 $BOSE for 10,000 members.
 https://www.altcointrading.net/airdrops/#bose-(sol)-airdrop
-
-Pocket Official Airdrop
-Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.
-https://www.altcointrading.net/airdrops/#pocket-official-airdrop
 
 MonaLisa (BSC) Airdrop
 MONALISA is a new NFT art trading platform. This is a short Gleam form that gets you a chance to get MONA, the platform token. All tasks mandatory, pool of 50,000 $MONA to 5000 users and some referrers.
 https://www.altcointrading.net/airdrops/#monalisa-(bsc)-airdrop
 
 
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 07/30/22
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 08/02/22
 
 
 CEX 50 USDC Reward
@@ -129,26 +117,31 @@ SomniLand Reward Activities
 SomniLand is a multichain project that aims to bridge Web2 social networks onto Web3 blockchain-based internet. Since May 20, they run NFT land giveaway, you just need to claim a piece of land. Click the join link, connect wallet and Select a Land on the map, click the “Be a Resident” button, and you will become the resident of that Land. Genesis residents of SomniLife will share 200M $SO token reward.
 https://www.altcointrading.net/airdrops/#somniland-reward-activities
 
-CEX.IO Token Metrics Discount
-All CEX.IO users can get 40% off on Token Metrics subscription if they deposit at least 50 USD. You need to pass KYC. Offer is valid until 13 Jul.
-https://www.altcointrading.net/airdrops/#cex.io-token-metrics-discount
-
 
 [IG]
 
 
-#airdropalert - Atomix (SOL) Airdrop
+#airdropalert - Pocket Official Airdrop
 
-A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.
+Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - UltimateRanger (ETH) Airdrop
+#airdropalert - HC Capital airdrop
 
-Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.
+The HC DeFi ecosystem runs a longish Gleam promo. Winners are random, the reward is 10 USDT for lucky 500 participants.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - Melody NFT Airdrop
+
+Pool of 25 Melody NFTs and 300k SNS tokens to share among winners and top referrers in this Gleam airdrop.
 
 [link in bio > airdrops]
 
@@ -164,18 +157,9 @@ Short Gleam form with all tasks mandatory. If you complete all plus do the RT, l
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - OEG_DAO GUNX (AVAX) Airdrop
+#airdropalert - UltimateRanger (ETH) Airdrop
 
-GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - FunBlock (BSC) Airdrop
-
-Gleam form with pool of 2.000.000 $FUNB tokens that will go to 1000 random users. All tasks required.
+Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.
 
 [link in bio > airdrops]
 
@@ -241,15 +225,6 @@ Long running marketing bounty with 75k USD pool. Facebook, Twitter, Telegram, In
 #bountyalert - SomniLand Reward Activities
 
 SomniLand is a multichain project that aims to bridge Web2 social networks onto Web3 blockchain-based internet. Since May 20, they run NFT land giveaway, you just need to claim a piece of land. Click the join link, connect wallet and Select a Land on the map, click the “Be a Resident” button, and you will become the resident of that Land. Genesis residents of SomniLife will share 200M $SO token reward.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - CEX.IO Token Metrics Discount
-
-All CEX.IO users can get 40% off on Token Metrics subscription if they deposit at least 50 USD. You need to pass KYC. Offer is valid until 13 Jul.
 
 [link in bio > airdrops]
 
