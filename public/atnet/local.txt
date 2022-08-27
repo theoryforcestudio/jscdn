@@ -1,13 +1,25 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 08/25/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 08/27/22
 
 
-Stellar (XLM) 25% Extra Staking Bonus
-Stellar, the coin that in the dark prehistoric past airdropped to Bitcoin holders, now implemented cold staking to its blockchain. The APY is projected to 20% at the moment, but if you start staking now within the community bonus event, you will get 25% bonus over your yield. <a href='{{site.data.shill-links.trezor}}'>Trezor</a> or <a href='{{site.data.shill-links.ledger}}'>Ledger</a> wallets are recommended to stake XLM. Detailed guide in the join link.
-https://www.altcointrading.net/airdrops/#stellar-(xlm)-25%-extra-staking-bonus
+Peercoin Airdrop
+Anniversary of a sh1tcoin! Fill simple social tasks and get into the lucky draw for a couple hundred PPC. Top referrals get paid too.
+https://www.altcointrading.net/airdrops/#peercoin-airdrop
 
-Tanukiverse NFT Airdrop
-Total Pool is 8 Free NFT, 50WL & 60,000 NFT Pebbles. Pebbles Holder will get $NUKI token airdrop proportional to amount held.
-https://www.altcointrading.net/airdrops/#tanukiverse-nft-airdrop
+Millionwinner Airdrop
+A Gleam form with the usual tasks that has a 10k USD pool ($4,000 in MWT Token & $6,000 in Genesis NFT Whitelist spots). 
+https://www.altcointrading.net/airdrops/#millionwinner-airdrop
+
+SIKKA Bounty
+This form requires you to write content about the new MATIC token and do tasks that are not really basic, so it is more like a bounty. Top 50 participants by entries get 100 USD in MATIC each.
+https://www.altcointrading.net/airdrops/#sikka-bounty
+
+NOODLE Airdrop
+You need to install the NOODLE app for this Gleam. Otherwise your usual form, pool is 5000 $NODL (soon to be listed on Gate.io) between 100 random users and 10 top referrals.
+https://www.altcointrading.net/airdrops/#noodle-airdrop
+
+World of Potatoes NFT WL
+A very short form that drops whitelist spots for the game NFTs. 
+https://www.altcointrading.net/airdrops/#world-of-potatoes-nft-wl
 
 FIFA Football Airdrop
 Short Gleam form for FIFA Football - an e-sport Play and Earn NFT game on BSC chain. The form has 5000 winners with pool of 500k FIFA tokens. They should start trading near the end of 2022.
@@ -16,38 +28,6 @@ https://www.altcointrading.net/airdrops/#fifa-football-airdrop
 Anifi World Whitelist
 This is a short Gleam form that only gives a presale whitelist.
 https://www.altcointrading.net/airdrops/#anifi-world-whitelist
-
-EggPot (BSC) Airdrop
-Short Gleam form that pays tokens. Total 1.000.000 $EGGPOT Prize Pool to 1000 random winners.
-https://www.altcointrading.net/airdrops/#eggpot-(bsc)-airdrop
-
-GameChanger USDC Airdrop
-Gleam form where 30 winners share 500 USDC. You need a Gamechanger account.
-https://www.altcointrading.net/airdrops/#gamechanger-usdc-airdrop
-
-ProfitFriends X Coindar Airdrop
-Short form that wants you to follow a few accounts. Airdrop pays USDT on Tron.
-https://www.altcointrading.net/airdrops/#profitfriends-x-coindar-airdrop
-
-BitKeep ETC Airdrop
-A short Gleam form that pays ETC. All tasks are mandatory and you need to sign a dangerous ETH contract (MetaMask will give you warning). Don't do this with your main wallet.
-https://www.altcointrading.net/airdrops/#bitkeep-etc-airdrop
-
-Evolve token airdrop
-Huge Gleam campaign with 420k USD worth of Evolve tokens. EVOLVE is a cryptocurrency offering a blockchain supported Video Game Competition Platform.
-https://www.altcointrading.net/airdrops/#evolve-token-airdrop
-
-PolkaFantasy NFT Airdrop
-NFT airdrop on Gleam that rewards game NFTs and Amazon gift cards. Total 30k USD worth of prizes.
-https://www.altcointrading.net/airdrops/#polkafantasy-nft-airdrop
-
-X-Samurai Game Airdrop
-A Gleam form for prizes and NFTs worth 8K USD.
-https://www.altcointrading.net/airdrops/#x-samurai-game-airdrop
-
-CARBO airdrop to holders
-People who transact the largest volume of tokens get an airdrop of CARBO tokens.
-https://www.altcointrading.net/airdrops/#carbo-airdrop-to-holders
 
 BOSE (SOL) Airdrop
 A Metaverse token on Solana airdrops for a short Gleam form. Pool is 10000 $BOSE for 10,000 members.
@@ -64,6 +44,10 @@ https://www.altcointrading.net/airdrops/#unlockd-community-airdrop
 Pocket Official Airdrop
 Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.
 https://www.altcointrading.net/airdrops/#pocket-official-airdrop
+
+Router Protocol Airdrop
+A short form for a cross chain bridging app that drops prizes and $ROUTE tokens for very simple tasks.
+https://www.altcointrading.net/airdrops/#router-protocol-airdrop
 
 ReadOn Token and NFT airdrop
 A short Givelab form that will pay 4000 READ and 100 NFTs to 500 winners. The project is on BSC.
@@ -84,6 +68,10 @@ https://www.altcointrading.net/airdrops/#raideon-blog-launch-airdrop
 OP Launcher Airdrop
 A short gleam form, only winners get paid but there are minimum entries to get qualified for the bigger prizes. Total pool 10k USD in $OPL tokens to 300 winners.
 https://www.altcointrading.net/airdrops/#op-launcher-airdrop
+
+Ready Games Airdrop
+This Gleam form drops 400 rare NFT avatars for a game. Each NFTs contains 100 $AURA tokens. You can melt your NFT at any time to retrieve the infused value, or stake the NFT to accumulate rewards.
+https://www.altcointrading.net/airdrops/#ready-games-airdrop
 
 MagicCraft (BSC) Airdrop
 A Gleam form, not all tasks are mandatory but your chances improve with more entries. Pool is 50 MagicCraft Genesis NFTs + 1,000,000 $MCRT to be shared between 500 winners. 
@@ -109,8 +97,12 @@ Xandar (BSC) Airdrop
 A Givelab form with simple tasks that pays tokens and NFTs for the Play2Earn game. Tokens & NFTs worth $10,000 will be airdropped to 500 top participants with the most entries. 
 https://www.altcointrading.net/airdrops/#xandar-(bsc)-airdrop
 
+Dragons World NFT Airdrop
+A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.
+https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop
 
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 08/25/22
+
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 08/27/22
 
 
 Dokdo Bounty
@@ -120,10 +112,6 @@ https://www.altcointrading.net/airdrops/#dokdo-bounty
 JungleClub NFT Weekly Giveaway
 BSC project that airdrops NFTs to random JC NFT holders every Monday. You need a Binance account and the NFT. <a href='https://twitter.com/JungleClubNFT/status/1559262890464608260'>Details on Twitter.</a>
 https://www.altcointrading.net/airdrops/#jungleclub-nft-weekly-giveaway
-
-Ethax Bounty
-Twitter bounty with a lot of restrictions - won't accept newbies, won't accept fake followers - which means you will end up paid more. Manager: <a href='/interviews/CryptopreneurBrainboss/'>CryptopreneurBrainboss</a>.
-https://www.altcointrading.net/airdrops/#ethax-bounty
 
 AthosMeta Bounty
 AthosMeta is a token of Athos Meta Capital, an investment firm. They pay for social media and blog activity, pool 6 MM $ATM. Manager: Bounty Star, Escrowed.
@@ -141,10 +129,6 @@ NFT marketplace 5% Fee off
 Use code 'altcointrading' on FTX.com or 'altcointradingUS' on FTX.us. FTX launched a marketplace for ETH-based NFTs - that is KYC-verified (for the most part) NFT trading in the US of A on a reliable platform.
 https://www.altcointrading.net/airdrops/#nft-marketplace-5%-fee-off
 
-X Meta Fans Bounty (BSC BEP20)
-Long running marketing bounty with 75k USD pool. Facebook, Twitter, Telegram, Insta, tiktok, blogging. Twitter pays the best. You will need to report in spreadsheets.
-https://www.altcointrading.net/airdrops/#x-meta-fans-bounty-(bsc-bep20)
-
 CEX Crypto Believers
 The KYC exchange CEX.IO is starting a biweekly event in which it will give away NFTs to people for social media engagement. Only random winners get rewarded and you need to KYC.
 https://www.altcointrading.net/airdrops/#cex-crypto-believers
@@ -161,45 +145,45 @@ https://www.altcointrading.net/airdrops/#somniland-reward-activities
 [IG]
 
 
-#airdropalert - Stellar (XLM) 25% Extra Staking Bonus
+#airdropalert - Peercoin Airdrop
 
-Stellar, the coin that in the dark prehistoric past airdropped to Bitcoin holders, now implemented cold staking to its blockchain. The APY is projected to 20% at the moment, but if you start staking now within the community bonus event, you will get 25% bonus over your yield. <a href='{{site.data.shill-links.trezor}}'>Trezor</a> or <a href='{{site.data.shill-links.ledger}}'>Ledger</a> wallets are recommended to stake XLM. Detailed guide in the join link.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Tanukiverse NFT Airdrop
-
-Total Pool is 8 Free NFT, 50WL & 60,000 NFT Pebbles. Pebbles Holder will get $NUKI token airdrop proportional to amount held.
+Anniversary of a sh1tcoin! Fill simple social tasks and get into the lucky draw for a couple hundred PPC. Top referrals get paid too.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - FIFA Football Airdrop
+#airdropalert - Millionwinner Airdrop
 
-Short Gleam form for FIFA Football - an e-sport Play and Earn NFT game on BSC chain. The form has 5000 winners with pool of 500k FIFA tokens. They should start trading near the end of 2022.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Anifi World Whitelist
-
-This is a short Gleam form that only gives a presale whitelist.
+A Gleam form with the usual tasks that has a 10k USD pool ($4,000 in MWT Token & $6,000 in Genesis NFT Whitelist spots). 
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - EggPot (BSC) Airdrop
+#airdropalert - SIKKA Bounty
 
-Short Gleam form that pays tokens. Total 1.000.000 $EGGPOT Prize Pool to 1000 random winners.
+This form requires you to write content about the new MATIC token and do tasks that are not really basic, so it is more like a bounty. Top 50 participants by entries get 100 USD in MATIC each.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - NOODLE Airdrop
+
+You need to install the NOODLE app for this Gleam. Otherwise your usual form, pool is 5000 $NODL (soon to be listed on Gate.io) between 100 random users and 10 top referrals.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - World of Potatoes NFT WL
+
+A very short form that drops whitelist spots for the game NFTs. 
 
 [link in bio > airdrops]
 
@@ -220,15 +204,6 @@ Pool of 200 $DKD for Twitter and bitcointalk signatures. Dokdo is a Lithuanian c
 #bountyalert - JungleClub NFT Weekly Giveaway
 
 BSC project that airdrops NFTs to random JC NFT holders every Monday. You need a Binance account and the NFT. <a href='https://twitter.com/JungleClubNFT/status/1559262890464608260'>Details on Twitter.</a>
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - Ethax Bounty
-
-Twitter bounty with a lot of restrictions - won't accept newbies, won't accept fake followers - which means you will end up paid more. Manager: <a href='/interviews/CryptopreneurBrainboss/'>CryptopreneurBrainboss</a>.
 
 [link in bio > airdrops]
 
@@ -265,15 +240,6 @@ Complete a simple task on Twitter to take part.
 #bountyalert - NFT marketplace 5% Fee off
 
 Use code 'altcointrading' on FTX.com or 'altcointradingUS' on FTX.us. FTX launched a marketplace for ETH-based NFTs - that is KYC-verified (for the most part) NFT trading in the US of A on a reliable platform.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - X Meta Fans Bounty (BSC BEP20)
-
-Long running marketing bounty with 75k USD pool. Facebook, Twitter, Telegram, Insta, tiktok, blogging. Twitter pays the best. You will need to report in spreadsheets.
 
 [link in bio > airdrops]
 
