@@ -1,25 +1,21 @@
 [1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/01/22
 
 
-VanSwap Meme Airdrop
-This is a Gleam for a Twitter meme contest: You need to post a meme on Twitter. Prizes between 50-150 in VAN.
-https://www.altcointrading.net/airdrops/#vanswap-meme-airdrop
+JPGC Airdrop
+This is a Gleam form. 1000 lucky winners will share 1000 JPGC tokens (about 4k USD) paid out by <a href='https://bit.ly/at-latoken'>LATOKEN exchange</a>.
+https://www.altcointrading.net/airdrops/#jpgc-airdrop
 
-Harken Airdrop
-A short Givelab form that drops 60k MATIC pool between 5000 random winners (12 matic per).
-https://www.altcointrading.net/airdrops/#harken-airdrop
+DXSpot Airdrop
+Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.
+https://www.altcointrading.net/airdrops/#dxspot-airdrop
+
+Raceways Airdrop
+A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
+https://www.altcointrading.net/airdrops/#raceways-airdrop
 
 Pub Game NFT Airdrop
 Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar which can be sold.
 https://www.altcointrading.net/airdrops/#pub-game-nft-airdrop
-
-IguVerse Airdrop
-IguVerse is a GameFi app. The airdrop is a Gleam with very simple tasks that pays to 250 winners. The pool is 10k $BALI and 10k $IGU tokens, 48 freemint of IguVerse NFTs and 2 flight tickets to Bali.
-https://www.altcointrading.net/airdrops/#iguverse-airdrop
-
-Bopoverse NFT airdrop
-If you follow this web3 project on Twitter and Discord, you get into a raffle for 2,777 whitelist spots for the first NFT series. Bopoverse™ 1st collection BPVw will be minted on 8 Sep - 7,777 Empowering NFTs.
-https://www.altcointrading.net/airdrops/#bopoverse-nft-airdrop
 
 ZenFarm Airdrop
 Google form with just a few simple tasks that has a pool of 50,000 $ZFT.
@@ -52,6 +48,18 @@ https://www.altcointrading.net/airdrops/#magiccraft-(bsc)-airdrop
 WORLDX NFT Airdrop
 500 WL spots for a metaverse NFT passport and 50 USDT each to 10 winners with the most points accumulated will go to the winners of this short Fyre form.
 https://www.altcointrading.net/airdrops/#worldx-nft-airdrop
+
+Harken Airdrop
+A short Givelab form that drops 60k MATIC pool between 5000 random winners (12 MATIC per).
+https://www.altcointrading.net/airdrops/#harken-airdrop
+
+VanSwap Meme Airdrop
+This is a Gleam for a Twitter meme contest: You need to post a meme on Twitter. Prizes between 50-150 in VAN.
+https://www.altcointrading.net/airdrops/#vanswap-meme-airdrop
+
+IguVerse Airdrop
+IguVerse is a GameFi app. The airdrop is a Gleam with very simple tasks that pays to 250 winners. The pool is 10k $BALI and 10k $IGU tokens, 48 freemint of IguVerse NFTs and 2 flight tickets to Bali.
+https://www.altcointrading.net/airdrops/#iguverse-airdrop
 
 Alonenite (ALGO) Airdrop
 A Gleam form in a campaign worth 120k USD. AloneNite is a survival P2E metaverse game powered by Algorand and UnityEngine.
@@ -117,10 +125,6 @@ ULTRADE Giveaway
 Complete a simple task on Twitter to take part.
 https://www.altcointrading.net/airdrops/#ultrade-giveaway
 
-Dokdo Bounty
-Pool of 200 $DKD for Twitter and bitcointalk signatures. Dokdo is a Lithuanian company that aims to enhance the solar ecosystem. Won't accept fake Twitter followers. Manager: <a href='/interviews/CryptopreneurBrainboss/'>CryptopreneurBrainboss</a>
-https://www.altcointrading.net/airdrops/#dokdo-bounty
-
 NFT marketplace 5% Fee off
 Use code 'altcointrading' on FTX.com or 'altcointradingUS' on FTX.us. FTX launched a marketplace for ETH-based NFTs - that is KYC-verified (for the most part) NFT trading in the US of A on a reliable platform.
 https://www.altcointrading.net/airdrops/#nft-marketplace-5%-fee-off
@@ -141,18 +145,27 @@ https://www.altcointrading.net/airdrops/#somniland-reward-activities
 [IG]
 
 
-#airdropalert - VanSwap Meme Airdrop
+#airdropalert - JPGC Airdrop
 
-This is a Gleam for a Twitter meme contest: You need to post a meme on Twitter. Prizes between 50-150 in VAN.
+This is a Gleam form. 1000 lucky winners will share 1000 JPGC tokens (about 4k USD) paid out by <a href='https://bit.ly/at-latoken'>LATOKEN exchange</a>.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - Harken Airdrop
+#airdropalert - DXSpot Airdrop
 
-A short Givelab form that drops 60k MATIC pool between 5000 random winners (12 matic per).
+Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - Raceways Airdrop
+
+A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
 
 [link in bio > airdrops]
 
@@ -168,18 +181,9 @@ Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - IguVerse Airdrop
+#airdropalert - ZenFarm Airdrop
 
-IguVerse is a GameFi app. The airdrop is a Gleam with very simple tasks that pays to 250 winners. The pool is 10k $BALI and 10k $IGU tokens, 48 freemint of IguVerse NFTs and 2 flight tickets to Bali.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Bopoverse NFT airdrop
-
-If you follow this web3 project on Twitter and Discord, you get into a raffle for 2,777 whitelist spots for the first NFT series. Bopoverse™ 1st collection BPVw will be minted on 8 Sep - 7,777 Empowering NFTs.
+Google form with just a few simple tasks that has a pool of 50,000 $ZFT.
 
 [link in bio > airdrops]
 
@@ -227,15 +231,6 @@ Get paid to learn crypto basics. It's not much - 1 USD for a set of quizzes - bu
 #bountyalert - ULTRADE Giveaway
 
 Complete a simple task on Twitter to take part.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - Dokdo Bounty
-
-Pool of 200 $DKD for Twitter and bitcointalk signatures. Dokdo is a Lithuanian company that aims to enhance the solar ecosystem. Won't accept fake Twitter followers. Manager: <a href='/interviews/CryptopreneurBrainboss/'>CryptopreneurBrainboss</a>
 
 [link in bio > airdrops]
 
