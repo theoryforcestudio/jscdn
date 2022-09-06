@@ -1,33 +1,33 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/01/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/06/22
 
 
-JPGC Airdrop
-This is a Gleam form. 1000 lucky winners will share 1000 JPGC tokens (about 4k USD) paid out by <a href='https://bit.ly/at-latoken'>LATOKEN exchange</a>.
-https://www.altcointrading.net/airdrops/#jpgc-airdrop
+EYN Airdrop on LATOKEN
+A Gleam or Telegram, but organised by the web3 sh1tcoin exchange LATOKEN. 500 winners will share 16k USD in EYN tokens (way too many zeroes in the token count).
+https://www.altcointrading.net/airdrops/#eyn-airdrop-on-latoken
 
-DXSpot Airdrop
-Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.
-https://www.altcointrading.net/airdrops/#dxspot-airdrop
+WidiLand (SOL) Airdrop
+Complete simple Givelab form to win NFTs on SOL: 10 land NFTs, 60 character NFTs. NFTs go to top 10 by entries and 50 random winners.
+https://www.altcointrading.net/airdrops/#widiland-(sol)-airdrop
 
-Raceways Airdrop
-A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
-https://www.altcointrading.net/airdrops/#raceways-airdrop
+Marblex Airdrop
+Gleam with pool of 1000 MBX tokens. The reward goes to top users by entries, reward per person is between 1 - 10 MBX.
+https://www.altcointrading.net/airdrops/#marblex-airdrop
 
-Pub Game NFT Airdrop
-Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar which can be sold.
-https://www.altcointrading.net/airdrops/#pub-game-nft-airdrop
+Proton Airdrop
+A Givelab with 4,000 random winners, reward is 5000 XPR per person. The total pool is worth 60k USD. 
+https://www.altcointrading.net/airdrops/#proton-airdrop
 
-ZenFarm Airdrop
-Google form with just a few simple tasks that has a pool of 50,000 $ZFT.
-https://www.altcointrading.net/airdrops/#zenfarm-airdrop
-
-RHT Token Airdrop
-A sweepwidget with a lot of daily tasks, such as voting. The project is a healthcare token.
-https://www.altcointrading.net/airdrops/#rht-token-airdrop
+Harken Invite Campaign
+This referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.
+https://www.altcointrading.net/airdrops/#harken-invite-campaign
 
 OP Launcher Airdrop
 A short gleam form, only winners get paid but there are minimum entries to get qualified for the bigger prizes. Total pool 10k USD in $OPL tokens to 300 winners.
 https://www.altcointrading.net/airdrops/#op-launcher-airdrop
+
+DXSpot Airdrop
+Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.
+https://www.altcointrading.net/airdrops/#dxspot-airdrop
 
 Ready Games Airdrop
 This Gleam form drops 400 rare NFT avatars for a game. Each NFTs contains 100 $AURA tokens. You can melt your NFT at any time to retrieve the infused value, or stake the NFT to accumulate rewards.
@@ -89,6 +89,10 @@ Xandar (BSC) Airdrop
 A Givelab form with simple tasks that pays tokens and NFTs for the Play2Earn game. Tokens & NFTs worth $10,000 will be airdropped to 500 top participants with the most entries. 
 https://www.altcointrading.net/airdrops/#xandar-(bsc)-airdrop
 
+Raceways Airdrop
+A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
+https://www.altcointrading.net/airdrops/#raceways-airdrop
+
 FreeCity (MATIC) Airdrop
 Pool of 1 Million $FCC tokens goes to 500 winners in this short Gleam form. It is to promote the launch of FreeCity, a social app. There are some grand prizes for top perticipants by entries, you can get between 666-10k tokens. All tasks required.
 https://www.altcointrading.net/airdrops/#freecity-(matic)-airdrop
@@ -102,12 +106,24 @@ A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD 
 https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop
 
 
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/01/22
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/06/22
 
+
+ZIL Staking Promo
+CEX.io launched a no-lockup staking of ZIL. To promote it, you can now spin the wheel to draw a boost to your APY rate. Up to 200% increase of APY is available, but not everybody wins.
+https://www.altcointrading.net/airdrops/#zil-staking-promo
+
+Phemex Learn&Earn
+Get paid to learn crypto basics. It's not much - 1 USD for a set of quizzes - but it'a better than nothing.
+https://www.altcointrading.net/airdrops/#phemex-learn&earn
 
 Slice Chrome Extension
 The Slice app is a Chrome extension that pays you for browsing (and for referrals). It comes with a bitcoin wallet, the ad revenue is paid in bitcoin and you can withdraw without fee via Lightning network.
 https://www.altcointrading.net/airdrops/#slice-chrome-extension
+
+Phemex Launchpad
+Phemex started running a Launchpad program where you can be an early-ish investor in upcoming Web3 coins and NFT projects. Landing page in join link.
+https://www.altcointrading.net/airdrops/#phemex-launchpad
 
 JungleClub NFT Weekly Giveaway
 BSC project that airdrops NFTs to random JC NFT holders every Monday. You need a Binance account and the NFT. <a href='https://twitter.com/JungleClubNFT/status/1559262890464608260'>Details on Twitter.</a>
@@ -116,14 +132,6 @@ https://www.altcointrading.net/airdrops/#jungleclub-nft-weekly-giveaway
 AthosMeta Bounty
 AthosMeta is a token of Athos Meta Capital, an investment firm. They pay for social media and blog activity, pool 6 MM $ATM. Manager: Bounty Star, Escrowed.
 https://www.altcointrading.net/airdrops/#athosmeta-bounty
-
-Phemex Learn&Earn
-Get paid to learn crypto basics. It's not much - 1 USD for a set of quizzes - but it'a better than nothing.
-https://www.altcointrading.net/airdrops/#phemex-learn&earn
-
-ULTRADE Giveaway
-Complete a simple task on Twitter to take part.
-https://www.altcointrading.net/airdrops/#ultrade-giveaway
 
 NFT marketplace 5% Fee off
 Use code 'altcointrading' on FTX.com or 'altcointradingUS' on FTX.us. FTX launched a marketplace for ETH-based NFTs - that is KYC-verified (for the most part) NFT trading in the US of A on a reliable platform.
@@ -145,56 +153,83 @@ https://www.altcointrading.net/airdrops/#somniland-reward-activities
 [IG]
 
 
-#airdropalert - JPGC Airdrop
+#airdropalert - EYN Airdrop on LATOKEN
 
-This is a Gleam form. 1000 lucky winners will share 1000 JPGC tokens (about 4k USD) paid out by <a href='https://bit.ly/at-latoken'>LATOKEN exchange</a>.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - DXSpot Airdrop
-
-Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.
+A Gleam or Telegram, but organised by the web3 sh1tcoin exchange LATOKEN. 500 winners will share 16k USD in EYN tokens (way too many zeroes in the token count).
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - Raceways Airdrop
+#airdropalert - WidiLand (SOL) Airdrop
 
-A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Pub Game NFT Airdrop
-
-Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar which can be sold.
+Complete simple Givelab form to win NFTs on SOL: 10 land NFTs, 60 character NFTs. NFTs go to top 10 by entries and 50 random winners.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - ZenFarm Airdrop
+#airdropalert - Marblex Airdrop
 
-Google form with just a few simple tasks that has a pool of 50,000 $ZFT.
+Gleam with pool of 1000 MBX tokens. The reward goes to top users by entries, reward per person is between 1 - 10 MBX.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
+#airdropalert - Proton Airdrop
+
+A Givelab with 4,000 random winners, reward is 5000 XPR per person. The total pool is worth 60k USD. 
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - Harken Invite Campaign
+
+This referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+
+
+#bountyalert - ZIL Staking Promo
+
+CEX.io launched a no-lockup staking of ZIL. To promote it, you can now spin the wheel to draw a boost to your APY rate. Up to 200% increase of APY is available, but not everybody wins.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#bountyalert - Phemex Learn&Earn
+
+Get paid to learn crypto basics. It's not much - 1 USD for a set of quizzes - but it'a better than nothing.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
 #bountyalert - Slice Chrome Extension
 
 The Slice app is a Chrome extension that pays you for browsing (and for referrals). It comes with a bitcoin wallet, the ad revenue is paid in bitcoin and you can withdraw without fee via Lightning network.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#bountyalert - Phemex Launchpad
+
+Phemex started running a Launchpad program where you can be an early-ish investor in upcoming Web3 coins and NFT projects. Landing page in join link.
 
 [link in bio > airdrops]
 
@@ -213,24 +248,6 @@ BSC project that airdrops NFTs to random JC NFT holders every Monday. You need a
 #bountyalert - AthosMeta Bounty
 
 AthosMeta is a token of Athos Meta Capital, an investment firm. They pay for social media and blog activity, pool 6 MM $ATM. Manager: Bounty Star, Escrowed.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - Phemex Learn&Earn
-
-Get paid to learn crypto basics. It's not much - 1 USD for a set of quizzes - but it'a better than nothing.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#bountyalert - ULTRADE Giveaway
-
-Complete a simple task on Twitter to take part.
 
 [link in bio > airdrops]
 
