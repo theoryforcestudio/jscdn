@@ -1,45 +1,21 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/18/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/21/22
 
 
-Sphynx Airdrop
-Share of 3 million Sphynx airdrop to people who download the wallet app and send a screenshot of it via Gleam.
-https://www.altcointrading.net/airdrops/#sphynx-airdrop
+PLUR Talk NFT Retroactive Airdrop
+A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.
+https://www.altcointrading.net/airdrops/#plur-talk-nft-retroactive-airdrop
+
+NVRO Airdrop
+A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.
+https://www.altcointrading.net/airdrops/#nvro-airdrop
+
+BitMart VTS Airdrop
+A dead simple Google form that pays 1000 random winners with 6.6666 VTS each. You need to have an account at BitMart.
+https://www.altcointrading.net/airdrops/#bitmart-vts-airdrop
 
 RazorNetwork Giveaway
 In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the team launched a Gleam form that pays 200,000 $RAZOR in pool to 200 winners. 
 https://www.altcointrading.net/airdrops/#razornetwork-giveaway
-
-ShipFinex Airdrop
-A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.
-https://www.altcointrading.net/airdrops/#shipfinex-airdrop
-
-Enjinstarter HauntedSpace Airdrop
-A Hypersign form to give away 75 whitelist spots for an NFT mint, NFT is for a P2E game. About Haunted Space Haunted Space is a profound adventure that allows you to explore, play, and earn your way through star-choked skies in this immersive game.
-https://www.altcointrading.net/airdrops/#enjinstarter-hauntedspace-airdrop
-
-Calo Indoor (BSC) Airdrop
-Calo Indoor is a SportFi app. Gleam drops 10 NFT in-app items, 50 Wl slots and 50k tokens as a pool to 500 winners.
-https://www.altcointrading.net/airdrops/#calo-indoor-(bsc)-airdrop
-
-SecondLive NFT Airdrop
-Short Gleam that gives mystery boxes and NFTs to 600 participants (20 top and rest random). NFTs are only in-game items.
-https://www.altcointrading.net/airdrops/#secondlive-nft-airdrop
-
-Aptosix Airdrop
-Very short Givelab, all tasks mandatory. It wants you shill the project on Twitter to access the reward pool of 66k $SIX tokens. 6000 winners will be drawn, if you win they will email you provide address.
-https://www.altcointrading.net/airdrops/#aptosix-airdrop
-
-ALYX Testnet Airdrop
-Airdrops mainnet tokens from pool of 70k ALYX. Besides Top 3 winners and 500 lucky winners, the other eligible participants will share 34,000 $ALYX.
-https://www.altcointrading.net/airdrops/#alyx-testnet-airdrop
-
-Alonenite (ALGO) Airdrop
-A Gleam form in a campaign worth 120k USD. AloneNite is a survival P2E metaverse game powered by Algorand and UnityEngine.
-https://www.altcointrading.net/airdrops/#alonenite-(algo)-airdrop
-
-World of Potatoes NFT WL
-A very short form that drops whitelist spots for the game NFTs. 
-https://www.altcointrading.net/airdrops/#world-of-potatoes-nft-wl
 
 MonaLisa (BSC) Airdrop
 MONALISA is a new NFT art trading platform. This is a short Gleam form that gets you a chance to get MONA, the platform token. All tasks mandatory, pool of 50,000 $MONA to 5000 users and some referrers.
@@ -56,6 +32,14 @@ https://www.altcointrading.net/airdrops/#overline-nft-airdrop
 PatronageDAO Airdrop
 Gleam form with optional tasks. Pool is only 3000 USD worth but it's in USDC. There will be 123 winners who will get between 20-500 USDC.
 https://www.altcointrading.net/airdrops/#patronagedao-airdrop
+
+WonderSea (BSC) Airdrop
+A Gleam form os a DeFi project on BSC. Airdrop pool is 5,000,000 $WSF which is 30k USD worth, distribution probably in early November.
+https://www.altcointrading.net/airdrops/#wondersea-(bsc)-airdrop
+
+ShipFinex Airdrop
+A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.
+https://www.altcointrading.net/airdrops/#shipfinex-airdrop
 
 GPS Riding Airdrop
 A SportFi project that runs this simple Gleam form. Total of 1440 winners will be drawn. Top users by entries get up to 100 USD each, random winners get about 10 USD each. Prizes paid in GPS tokens.
@@ -80,6 +64,10 @@ https://www.altcointrading.net/airdrops/#xandar-(bsc)-airdrop
 Raceways Airdrop
 A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.
 https://www.altcointrading.net/airdrops/#raceways-airdrop
+
+OwnrWallet Airdrop
+Short Gleam form where you just need to follow accounts. The pool is 1500 USDT to 110 winners and bigger rewards for referrals. There is a second parallel airdrop on their Telegram channel.
+https://www.altcointrading.net/airdrops/#ownrwallet-airdrop
 
 UCO Network Airdrop
 UCO community airdrop on Givelab. Long form, some tasks are daily. Prize Pool is 15k $UCOIL tokens, 500 winners in total (100 top, rest random).
@@ -109,17 +97,21 @@ FIFA Football Airdrop
 Short Gleam form for FIFA Football - an e-sport Play and Earn NFT game on BSC chain. The form has 5000 winners with pool of 500k FIFA tokens. They should start trading near the end of 2022.
 https://www.altcointrading.net/airdrops/#fifa-football-airdrop
 
+Cross the Ages Airdrop
+This Gleam is run by a GameFi project and drops 10k USD worth of tokens. There are some daily tasks to rake up your entries.
+https://www.altcointrading.net/airdrops/#cross-the-ages-airdrop
+
 Dragons World NFT Airdrop
 A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.
 https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop
 
+
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/21/22
+
+
 Harken Invite Campaign
 This referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.
 https://www.altcointrading.net/airdrops/#harken-invite-campaign
-
-
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/18/22
-
 
 AthosMeta Bounty
 AthosMeta is a token of Athos Meta Capital, an investment firm. They pay for social media and blog activity, pool 6 MM $ATM. Manager: Bounty Star, Escrowed.
@@ -165,9 +157,27 @@ https://www.altcointrading.net/airdrops/#somniland-reward-activities
 [IG]
 
 
-#airdropalert - Sphynx Airdrop
+#airdropalert - PLUR Talk NFT Retroactive Airdrop
 
-Share of 3 million Sphynx airdrop to people who download the wallet app and send a screenshot of it via Gleam.
+A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - NVRO Airdrop
+
+A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - BitMart VTS Airdrop
+
+A dead simple Google form that pays 1000 random winners with 6.6666 VTS each. You need to have an account at BitMart.
 
 [link in bio > airdrops]
 
@@ -183,33 +193,24 @@ In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the te
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - ShipFinex Airdrop
+#airdropalert - MonaLisa (BSC) Airdrop
 
-A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - Enjinstarter HauntedSpace Airdrop
-
-A Hypersign form to give away 75 whitelist spots for an NFT mint, NFT is for a P2E game. About Haunted Space Haunted Space is a profound adventure that allows you to explore, play, and earn your way through star-choked skies in this immersive game.
+MONALISA is a new NFT art trading platform. This is a short Gleam form that gets you a chance to get MONA, the platform token. All tasks mandatory, pool of 50,000 $MONA to 5000 users and some referrers.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - Calo Indoor (BSC) Airdrop
 
-Calo Indoor is a SportFi app. Gleam drops 10 NFT in-app items, 50 Wl slots and 50k tokens as a pool to 500 winners.
+
+#bountyalert - Harken Invite Campaign
+
+This referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
 
 
 #bountyalert - AthosMeta Bounty
