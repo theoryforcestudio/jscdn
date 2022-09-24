@@ -1,21 +1,13 @@
-[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/21/22
+[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 09/24/22
 
 
-PLUR Talk NFT Retroactive Airdrop
-A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.
-https://www.altcointrading.net/airdrops/#plur-talk-nft-retroactive-airdrop
+Polystark (BSC) Airdrop
+A short givelab form that pays to 10k users, first come. The pool is 10 MM $PYSK tokens, but tokens will not be trading until mid next year at least.
+https://www.altcointrading.net/airdrops/#polystark-(bsc)-airdrop
 
-NVRO Airdrop
-A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.
-https://www.altcointrading.net/airdrops/#nvro-airdrop
-
-BitMart VTS Airdrop
-A dead simple Google form that pays 1000 random winners with 6.6666 VTS each. You need to have an account at BitMart.
-https://www.altcointrading.net/airdrops/#bitmart-vts-airdrop
-
-RazorNetwork Giveaway
-In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the team launched a Gleam form that pays 200,000 $RAZOR in pool to 200 winners. 
-https://www.altcointrading.net/airdrops/#razornetwork-giveaway
+Web3 Collab Competition
+6 different Web3 projects joined forces for this airdrop and will reward 300 users from a pool of 4k USD in BUSD. Easy tasks on Hypersign.
+https://www.altcointrading.net/airdrops/#web3-collab-competition
 
 MonaLisa (BSC) Airdrop
 MONALISA is a new NFT art trading platform. This is a short Gleam form that gets you a chance to get MONA, the platform token. All tasks mandatory, pool of 50,000 $MONA to 5000 users and some referrers.
@@ -29,6 +21,14 @@ Overline NFT Airdrop
 Claim NFT land in the Metaverse for your email address. Sign up and then finish the free pre-order. 
 https://www.altcointrading.net/airdrops/#overline-nft-airdrop
 
+BitMart VTS Airdrop
+A dead simple Google form that pays 1000 random winners with 6.6666 VTS each. You need to have an account at BitMart.
+https://www.altcointrading.net/airdrops/#bitmart-vts-airdrop
+
+Web3 Space Airdrop
+A short Gleam that pays 50 NFTs to random users, 50 other random users will get 48 TRX each.
+https://www.altcointrading.net/airdrops/#web3-space-airdrop
+
 PatronageDAO Airdrop
 Gleam form with optional tasks. Pool is only 3000 USD worth but it's in USDC. There will be 123 winners who will get between 20-500 USDC.
 https://www.altcointrading.net/airdrops/#patronagedao-airdrop
@@ -36,6 +36,10 @@ https://www.altcointrading.net/airdrops/#patronagedao-airdrop
 WonderSea (BSC) Airdrop
 A Gleam form os a DeFi project on BSC. Airdrop pool is 5,000,000 $WSF which is 30k USD worth, distribution probably in early November.
 https://www.altcointrading.net/airdrops/#wondersea-(bsc)-airdrop
+
+Finance Vote NFT Airdrop
+A super short Hypersign form that pays finance.vote NFTs on ETH.
+https://www.altcointrading.net/airdrops/#finance-vote-nft-airdrop
 
 ShipFinex Airdrop
 A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.
@@ -68,6 +72,10 @@ https://www.altcointrading.net/airdrops/#raceways-airdrop
 OwnrWallet Airdrop
 Short Gleam form where you just need to follow accounts. The pool is 1500 USDT to 110 winners and bigger rewards for referrals. There is a second parallel airdrop on their Telegram channel.
 https://www.altcointrading.net/airdrops/#ownrwallet-airdrop
+
+NVRO Airdrop
+A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.
+https://www.altcointrading.net/airdrops/#nvro-airdrop
 
 UCO Network Airdrop
 UCO community airdrop on Givelab. Long form, some tasks are daily. Prize Pool is 15k $UCOIL tokens, 500 winners in total (100 top, rest random).
@@ -105,8 +113,16 @@ Dragons World NFT Airdrop
 A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.
 https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop
 
+PLUR Talk NFT Retroactive Airdrop
+A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.
+https://www.altcointrading.net/airdrops/#plur-talk-nft-retroactive-airdrop
 
-[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/21/22
+ZERO Airdrop (🚨🚨 WARNING)
+WARNING - You need to have an NFT key in the wallet, which costs little but is not free, a possible scam. A short Google form that wants you to do easy social media shilling. Prize Pool is 3MM $ZER0 tokens which at pre-sale prices is 450k USD. There will be a total of 12k winners, 10k random, 1k first come, 1k top by activity. 
+https://www.altcointrading.net/airdrops/#zero-airdrop-(🚨🚨-warning)
+
+
+[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 09/24/22
 
 
 Harken Invite Campaign
@@ -157,36 +173,18 @@ https://www.altcointrading.net/airdrops/#somniland-reward-activities
 [IG]
 
 
-#airdropalert - PLUR Talk NFT Retroactive Airdrop
+#airdropalert - Polystark (BSC) Airdrop
 
-A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - NVRO Airdrop
-
-A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.
+A short givelab form that pays to 10k users, first come. The pool is 10 MM $PYSK tokens, but tokens will not be trading until mid next year at least.
 
 [link in bio > airdrops]
 
 #igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
 
 
-#airdropalert - BitMart VTS Airdrop
+#airdropalert - Web3 Collab Competition
 
-A dead simple Google form that pays 1000 random winners with 6.6666 VTS each. You need to have an account at BitMart.
-
-[link in bio > airdrops]
-
-#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
-
-
-#airdropalert - RazorNetwork Giveaway
-
-In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the team launched a Gleam form that pays 200,000 $RAZOR in pool to 200 winners. 
+6 different Web3 projects joined forces for this airdrop and will reward 300 users from a pool of 4k USD in BUSD. Easy tasks on Hypersign.
 
 [link in bio > airdrops]
 
@@ -196,6 +194,24 @@ In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the te
 #airdropalert - MonaLisa (BSC) Airdrop
 
 MONALISA is a new NFT art trading platform. This is a short Gleam form that gets you a chance to get MONA, the platform token. All tasks mandatory, pool of 50,000 $MONA to 5000 users and some referrers.
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - BikearnFi Airdrop
+
+Very short Google form, all tasks mandatory. Drops $BKF tokens, it's a Web 3 Fitness and Lifestyle app with Game-Fi elements built in. 
+
+[link in bio > airdrops]
+
+#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops
+
+
+#airdropalert - Overline NFT Airdrop
+
+Claim NFT land in the Metaverse for your email address. Sign up and then finish the free pre-order. 
 
 [link in bio > airdrops]
 
