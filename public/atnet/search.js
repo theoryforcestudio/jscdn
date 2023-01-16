@@ -11,12 +11,52 @@ var idx = lunr(function() {
   
   
     this.add({
-      title: "4 Noob-Friendly Ways to Earn Altcoins in 2023",
-      content: "Altcoins, which refer to digital currencies or cryptos other than Bitcoin (BTC), are becoming more popular since they’re more affordable than BTC. They make up most of the supply in the crypto market, and many investors and traders use them because of the opportunity to get high returns. However, investing in altcoins has risks, so it’s best to understand and check the trend before investing your hard-earned money into it.\n\nOnce you’re knowledgeable about the industry, you may want to start making money with altcoins. Here are a few tips that can launch you into the world of cryptocurrencies.\n\n\n  \n    Try Play-to-Earn Crypto Games\n\n    Play-to-earn crypto games are one of the ways to earn crypto when you have none to start with.\n\n    A perfect onramp, the so-called P2E games have introduced billions of dollars to digital assets that gamers can buy, earn, and own. As its name suggests, gamers can earn altcoins, cards, skins, and other valuable in-game assets by engaging in play-to-earn crypto games.\n\n    By choosing the best play to earn games, you can collect more altcoins or in-game assets, which can translate to high revenue. After earning the altcoins from these games, you can transfer them into your crypto exchange wallet or platform. Then, you can sell it in the market for real money or another cryptocurrency. By doing this, not only are you enjoying playing games, but you’re also earning from it.\n  \n  \n    Consider Staking\n\n    Another way to earn from altcoins is to collect fees and interest from holding a cryptocurrency in your account. This is more technically known as staking.\n\n    When blockchain validators facilitate transactions, you’ll receive payment from them through fees. For instance, when you keep an altcoin in your account, you’ll receive an annual interest rate depending on what that altcoin offers. Generally, your earnings can range from 0.15% to 6% per year.\n\n    While this may be inviting, you still need to check the contract terms for better and safer transactions. Some altcoins or mainstream crypto dealers require you to lock your account for a specific period, which means that you may be unable to withdraw or deposit whenever you want. Moreover, some may set a minimum amount before you can draw interest from the altcoins.\n  \n  \n    Buy And Sell NFTs\n\n    Here, the concept is simple in theory but risky in practice.\n\n    You only need to buy an NFT at a lower price, hold it until its price goes up, and sell it when you are sure to make profit. However, it is not guaranteed that the price will indeed go up. Also, there are stories of even very expensive NFTs vanishing from people’s OpenSea accounts - and not through a heaist.\n\n    Still, buying and selling altcoins or NFTs is a convenient way to earn because you can do it anytime and anywhere since crypto transactions don’t require third-party interventions. All you need is a registered account with a crypto exchange platform to buy and sell in its market.\n\n    Before buying any token, you need to weigh the pros and cons. Don’t settle for the cheapest option. Instead, focus on the value and how it affects its trading environment. They’re more likely to become more valuable if it has a concrete project or mission. Once you guarantee if a token is worth the investment, go ahead and buy.\n  \n  \n    Venture Into Day Trading\n\n    One of the most profitable ventures that you may also want to try is day trading. To become profitable in this arena, you must have the proper technical and analytical skills. This means you need to know how to analyze the altcoin’s performance through their charts. By understanding the price movements of the altcoins, you can better decide what trading position to make.\n\n    Trading positions include going short or long. It means you’ll place a short position if your technical analysis anticipates the altcoin price going down. On the other hand, you’ll be placing a long position if your analysis shows that the price will increase. If your bet or position is correct, you’ll earn a considerable profit. However, remember that you could also lose your money if your analysis goes south. That’s why learning to conduct technical analysis is vital to becoming a profitable altcoin trader.\n\n    The advantage of day trading is that you don’t have to have thousands of dollars as capital when starting. You can begin on an amount you’re willing to lose in the market. Especially if you also know how to conduct fundamental analysis, you can use it together with technical analysis to improve trading positions.\n\n    Moreover, you don’t have to hold your altcoin for a long time and wait for its price to go high before you can sell it to earn. Whatever the price of the altcoin is, you can earn by trading as long as your technical analysis is correct.\n  \n\n\nConclusion\n\nMaking money with altcoins is still feasible these days, as long as you know what you’re doing. Start by finding an altcoin or an NFT with an excellent value proposition, so you can buy or invest in a token that could stay valuable for years.\n\nThen, choose whether to stake, trade, or play crypto games that could give you some sizable revenue. Whatever path you end up choosing, the right mindset and exceptional analytical skills can lead you to success in crypto investment.\n",
-      category: ["crypto-trading-tools"],
-      tags: ["crypto-opsec","defi","crypto-tools","airdrops","nft","yield","ledger"],
-      author: "TDOU",
+      title: "The impact of FTX Collapse On Silver Markets",
+      content: "The last couple of years have shown the true dangers of cryptocurrencies and some other intangible investments. The NFT bubble has pretty much burst, with the first major signs of topping out appearing in the second quarter of 2022. NFT sales fell by more than 90% between September 2021 and May of the following year.\n\nBitcoin and other crypto coins have seen dramatic rises and drops in value also. From a value of over $65,000 in 2021, bitcoin investors have seen the value drop to under $20,000 at certain times recently. Elon Musk has also almost single-handedly demonstrated how volatile crypto can be.\n\nMusk joked about Dogecoin on Saturday Night Live in May 2021 causing the value to plummet. Yet, in January 2022, Musk announced Tesla would accept Dogecoin, and urged McDonald’s and other vendors to follow suit. The result? A 15% rise in the value of that particular cryptocurrency.\n\nSimilarly, after Twitter was taken over by Musk, Dogecoin’s value rose again by 35%. However, Much of the news surrounding crypto has been negative, and this isn’t new. Even back in 2016, crypto was being exposed with the Bitfinex hack of $72 million. And now FTX is in the news following its spectacular crash.\n\nHow successful was FTX?\n\nFTX Trading Ltd. was founded in May 2019 by Sam Bankman-Fried and Gary Wang. More regularly referred to as simply FTX, this company rose in prominence extremely quickly. You could expect someone with the name Bankman to be somewhat good with money or trading, and SBF had already proved himself with his first venture; Alameda Research.\n\nAlameda was known for bitcoin arbitrage. This is buying the cryptocurrency on one exchange only to sell it on another to make a profit. Alameda became successful, and SBF was spurred on to create FTX.\n\nFrom May 2019 to July 2021, FTX grew so much that it became the third-largest crypto exchange in the world. With the promise of high yields, consumers flocked to FTX. Up to 1 million investors were using FTX at its peak, and it is reported that they were valued at $32 billion, but not for long. Then the dangers of investing in crypto really hit the news.\n\nWhat happened to FTX?\n\nIn November 2022, found itself in the position of having to file for bankruptcy. After countless users started withdrawing their funds, FTX started to collapse. The simple reason? FTX didn’t have enough assets to meet customer demand, and as the news spread, more investors tried to make withdrawals.\n\nThere have been some serious knock-on effects from the FTX collapse including positives as well as negatives. For instance, FTX helped push up the value of gold, silver, and platinum. But, it harmed other crypto exchanges.\n\nHow has FTX’s collapse affected trading in general?\n\nThe clearest damage that the FTX collapse did was to scare investors away from cryptocurrencies. The FTX Token or FTT’s value dropped like a stone following the collapse of the exchange, and this affected other altcoins such as Ethereum. Binance considered bailing out FTX to a degree but backed off quickly, and in November 2022, BlockFi filed for bankruptcy.\n\nIt was a few weeks after in December that Sam Bankman-Fried was arrested in the Bahamas. It is expected that the fallout from the FTX collapse will affect investments for years to come.\n\nIt is thought that many crypto exchanges may not be quite as healthy as previously thought, and this is likely to come out as the ramifications from FTX are felt in the coming months. One positive surrounding FTX’s failure is that there is likely to be more regulation put into place. This should make crypto investing safer and the investors themselves better protected.\n\nOne area that is seeing an upturn though is tangible investments. Precious metals have become more appealing after the drop in NFT sales, and the plummeting value of bitcoin.\n\nWhat does the FTX collapse mean for silver investment?\n\nGold rose by about 10% while crypto was falling, and FTX’s collapse has seen a significant change to the silver and platinum markets also.\n\nThe 4 most traded precious metals are gold, silver, platinum, and palladium. Silver has many uses in many industries, and is found in computers, solar panels, smartphones, and surgical appliances, and proved to be a popular investment in 2022, not least in India.\n\nAfter there was a drop in the value of silver in 2022, India started importing the metal at record rates. This was fuelled by a lack of silver reserves in the country, but also through a belief that silver would rise in value. Silver is less expensive than gold, and this makes it an appealing investment also.\n\nAlthough gold, palladium, platinum, and silver trades don’t go hand in hand, it was clear that the FTX fiasco had a marked effect on their values. Along the same timeline, all 4 precious metals saw a rise in value after FTX filed for bankruptcy.\n\nHow is silver looking as an investment in 2023?\n\nThe internet has made investing and trading simpler than ever, and now millions of individuals are trying day trading, and investing in crypto. Precious metals are also simple to invest in, and there are many websites devoted to them.\n\nA visit to a precious metal retailer such as SD Bullion will give access to gold coins and bars, silver, and platinum. These retailers will often offer other services involving investment and storage for silver.\n\nAs far as silver goes as an investment, it should be remembered that it can be volatile. The reason for this is that it is traded much less than gold, and is considered to have less liquidity. Nevertheless, silver has many things to recommend about it right now.\n\nShort-term gains on silver\n\nAs the fallout from FTX continues, the value of silver along with other tangible assets may carry on rising. Investment now could see some short-term gains. And yet, if the trust doesn’t return to bitcoin and crypto in general, silver may also be a good investment in the long term.\n\nIt is a hedge against inflation\n\nRecent times have seen huge inflation rises across the world. As fiat currencies lose their spending power, assets such as silver are less affected by inflation or interest rates.\n\nSilver works well as part of a portfolio\n\nWhen placed in a larger basket of assets, silver helps to make a diversified portfolio with less risk attached.\n\nSilver can go towards a retirement fund\n\nWhen set up correctly, you can add silver to an SDIRA to help with retirement. 1980 and 2011 saw huge surges in the value of silver, and silver reached an 8-year high in 2021. But, the value dropped in 2022 before FTX collapsed. The volatility of silver should be taken into account, but with a shortage of supplies, there is talk that 2023 could be a great year for silver investors.\n\nSummary\n\nThere is no doubt that the FTX bankruptcy filing had a hugely negative impact on the crypto world in general, not least on the investors who lost their money. This included not only individuals but financial entities also.\n\nThe coming months will see just how much more FTX will affect trades in general. But, it seems that tangible assets will become more favorable, and silver and gold have already been positively affected.\n",
+      category: ["analysis"],
+      tags: ["ftx-collapse","custodial-trading","defi","crypto-bot-trading","bitfinex","tradingview"],
+      author: "altcointrading",
       id: 0
+    });
+    
+  
+    this.add({
+      title: "The Popularity of Cryptocurrencies: Lookback & Lookahead",
+      content: "How did the cryptocurrency market develop in 2022? The first six months can hardly be called good. Thus, the exchange rate of ETH and BTC for fiat money decreased by about 50% (compared to last year’s historical highs). Experts believed that the market stagnated a bit but would improve, so far that has not materialized. Nevertheless, the digital currency retains its relevance.\n\nUsers read about Bitcoin cryptocurrency more often. You can find information about it on the page. A good explanation of the decentralized digital currency is given there. There is an emphasis on legality, which depends on the specific region. In some countries BTC is banned completely or indirectly. Officially, the digital currency is used in Iran to circumvent sanctions and in El Salvador.\n\nDecline in the Use of Digital Currencies\n\nWill digital currencies rise in popularity after their severe collapse?\n\nCentralized lending schemes have appeared, but they do not work that well in practice, as we’ve seen.\n\nExperts believe that with the right approach, there are still good chances though. Some companies will always act like banks, there just needs to be the right kind of regulation implemented.\n\nBut such lending in practice leads to one disadvantage. With a high percentage of borrowed funds, companies can go bankrupt quickly if the market turns.\n\nHolders can always wait for the turbulence to subside, but once you give your keys and lend your money, there are risks.\n\n\n\nAnalysts believe the digital currency could face significant problems over the next year, given the end of cheap money. Also, holders will be seeking to pay off their real-life debts which could worsen the outlook.\n\nTo maximize the growth of cryptocurrencies, it is still very necessary that they coexist with fiat ones. That makes it easier for investors to make predictions.\n\nWhich company is an important player in the long term? Which company will be stop hunted? Time will show. That’s why it’s important to keep in touch with the market conditions or consult with a financial advisor when building a portfolio.\n\nUsing Cryptocurrency to Play at the Casino\n\nOn the flip side, cryptocurrency is being used more and more often in virtual casinos, whose visitors want to keep their privacy. There are two types. In the first, this way of making a deposit is combined with the use of other payment systems. In the second, it remains the only one. The advantages include:\n\n\n  the possibility of playing from any location;\n  fast financial transactions;\n  no restrictions for transactions.\n\n\nA high level of security is ensured. There is no need to specify personal data, as transactions are anonymous. Bank requisites should not be entered.\n\nThe information is published on the page of Australian online casino, because gambling laws are tightened every year in this country. You can find reliable and safe virtual halls with the possibility of making a deposit in a convenient way on the website.\n\nThese include Fair Go casino in Australia, suitable for registering and playing with real bets. The site is in English, as it was developed by Australians. Another advantage is the user-friendly interface. The collection includes slots from RealTime Gaming. The minimum deposit is 20 USD. The license is issued in the jurisdiction of Curaçao.\n\nThe Future of Digital Currency\n\nThere are three nuances that make cryptocurrencies increasingly relevant. They are listed here:\n\n\n  Safety for investors\n  Unprofitable for fraudsters\n  Slacking government regulation\n\n\nLegislators from Washington, D.C., have noticed this. Some believe that the market needs to be adjusted, others on the other hand think that all crypto is gambling and should be just left alone to crash and burn under the weight of its own scams.\n\nOfficials often indicate the fall of the digital currency Terra Luna. This led (effectively) to the freezing of assets on other platforms which caused other collapses. Such a situation was considered to be a catastrophic event. So, understandably, the topic of regulation has become a hot topic for investors in all digital currencies.\n\nPeople need to feel confident and so news from regulators can affect the price. Another point is energy efficiency. It is taken into account when creating digital currencies using powerful computers that use extreme amounts of energy. While this would not be that much of a problem if crypto replaced finance, having two systems in parallel is going to cause some waves in a world where energy prices grow shockingly in response to geo-politics.\n\nSome people maintain that a digital currency investment should not exceed 5-10% of a portfolio. Maybe in the future it will be possible to pay with BTC for goods and services.\n\nBut that kind of thing is as good as a fairy tale for 2023 in most parts of the world, and even in countries with collapaing currencies, stablecoins are more popular for day-to-day payments.\n\n\n\nProspects for BTC\n\nBTC is an indicator of the whole digital currency market. It takes the first place in terms of capitalization. All other currencies that use blockchain technology are following in the fairway. The record was in November 2021. At that time, 1 BTC was selling for 68,000 USD. The year 2022 began with a drop in rates. The reason was the ongoing macroeconomic uncertainty. It was caused by:\n\n\n  fears of recession;\n  rising interest rates;\n  a shaky stock market;\n  growing inflation.\n\n\nAs a result, the BTC exchange rate has fallen to $17,500. Some experts argue that the bottom has not yet been reached. Therefore, the purchase is equated to a speculative investment, the profitability of which is impossible to calculate. What can affect the continuation of rapid growth? The first place is the popularity among sellers. It is important that they accept BTC for goods.\n\nDoes Ethereum Have a Future\n\nEthereum is the second most popular cryptocurrency. It is suitable for technical analysis as it has enough liquidity on its markets but its value is quite speculative and more stronglye tied to the tech industry than the value of bitcoin.\n\nOver the past 6 years, the ETH rate has grown thousands of times. Recently, a transition to the new PoS technology was made. As a result, the issuance of digital currency has become less energy-intensive, to which at least for now the markets react positively.\n\nOnly time will show whether Ethereum will increase in popularity even more or will be replaced by a different altcoin.\n\nConclusion: How Relevant is Digital Currency\n\nAlthough cryptocurrency is characterized by ups and downs, it remains relevant due to its independence from national economic and political decisions. More practically speaking, it is used increasingly by residents of the developed world, in particular, when visiting virtual casinos to ensure anonymity. Funds from fiat wallets are also used to pay for goods and services. Sometimes information about digital currency appears in CNN news.\n",
+      category: ["analysis"],
+      tags: ["markets","ledger","independent-reserve"],
+      author: "TDOU",
+      id: 1
+    });
+    
+  
+    this.add({
+      title: "Top 5 Easiest Ways to Buy Bitcoin in 2023",
+      content: "In the world of cryptocurrency, Bitcoin is one of the most popular and highly sought after digital currencies.\n\nBitcoin’s worth started out at less than a penny and peaked at more than$68,000.\n\nWith its rapidly increasing value, more and more people are looking for the best and easiest ways to buy Bitcoin.\n\nLuckily, in 2023 , there are a variety of easy and accessible options for anyone looking to invest in Bitcoin.\n\nThis comprehensive guide will walk you through the top 5 easiest ways to buy Bitcoin in 2023.\n\nWith the help of this guide, you will be able to find the best option for you and get started on your journey in the world of cryptocurrency.\n\nWhat is Bitcoin?\n\nBefore we get into the different ways to buy Bitcoin, it’s important to have a basic understanding of what it is.\n\nBitcoin is a type of cryptocurrency, which is a digital asset that can be used to store and transfer value.\n\nIt is decentralized, meaning it is not controlled by any one person or organization. Bitcoin is also secure, so it cannot be easily stolen or hacked.\n\nStarted in 2009, Bitcoin, or cryptocurrency in general, is a relatively new technology and is still volatile in terms of value. As a result, there is a lot of speculation and uncertainty surrounding it.\n\nHowever, users’ confidence in cryptocurrency is 97% according to the2021user index.\n\nThe benefits of Bitcoin\n\nThere are many benefits to using Bitcoin. For starters, it is extremely secure, which makes it a great way to store your money.\n\nAdditionally, Bitcoin is extremely fast and efficient, allowing you to move funds around the world quickly and easily.\n\nAnother benefit of Bitcoin is that it is decentralized. This means that it is not controlled by any government or financial institution. This gives it a level of autonomy that is not found in other forms of money.\n\nAdditionally, its decentralized nature makes it immune to inflation and other market forces that can affect traditional currencies.\n\nFinally, Bitcoin is anonymous. You don’t have to provide any personal information when sending or receiving payments. This makes it a great choice for those who want to remain anonymous or keep their financial activities private.\n\n1. Fintech solutions to buy Bitcoin\n\nFintech solutions are apps and websites that enable you to purchase cryptocurrencies using your credit or debit card or other supported payment methods.\n\nThis is a quick and convenient way to buy Bitcoin, Ethereum and other cryptocurrencies.\n\nWith most fintech solutions, you will only need a couple of minutes and your payment method details to buy cryptocurrencies.\n\nThis is a great option for beginners and experienced investors alike as it is simple and quick to set up.\n\nYou can also buy cryptocurrencies at any time of the day or night and from anywhere in the world, which is great for those with busy lives who can’t always find the time to visit cryptocurrency exchanges.\n\nSome of these fintech solutions that let you buy Bitcoin are as under:\n\n2. MoonPay\n\n\n\nMoonPay is a fintech solution that lets you buy Bitcoin and other cryptocurrencies with debit and credit card, local bank transfers, Apple Pay, Google Pay, and Samsung Pay.\n\nTo buy Bitcoin on MoonPay, you simply enter the amount of Bitcoin you want to buy and the platform will charge by your preferred payment method.\n\nThe entire process is simple and straightforward, so it is a great option if you are new to the world of cryptocurrency.\n\nMoonPay is a user-friendly app with a clean, intuitive interface. It also has a straightforward verification process with quick processing times, so you can get your hands on some of the world’s most valuable digital coins in no time at all.\n\n3. XanPool\n\nXanPool also has a clean, user-friendly interface that is easy to navigate, so it is a great option for beginners interested in buying Bitcoin through a fintech solution.\n\n\n\n4. Cryptocurrency exchanges\n\nCryptocurrency exchanges are platforms that let you buy and sell different types of cryptocurrencies, like Bitcoin.\n\nCryptocurrency exchanges are popular and one of the easiest ways to buy Bitcoin. If you want to buy Bitcoin but only have money in your bank account, you can use a cryptocurrency exchange to trade your dollars for Bitcoin.\n\nYou can also use an exchange to trade one type of cryptocurrency for another. Essentially, an exchange is like a marketplace where you can buy and sell digital coins.\n\nSome of the most reliable cryptocurrency exchanges you can use are:\n\n5. Binance\n\n\n\nBinance is one of the world’s largest cryptocurrency exchanges and is growing in popularity by the day.\n\nThis exchange has low trading fees, supports a wide variety of cryptocurrencies, and is accessible from desktop and mobile devices.\n\nDue to its popularity, Binance is often overloaded with new users. As such, you may have to wait in a queue before your account is approved.\n\nOnce you have been verified on Binance, you can easily buy Bitcoin with your chosen currency by following a few simple steps.\n\n6. Coinbase\n\nThis digital currency exchange has been around for several years and is one of the easiest ways to buy Bitcoin.\n\nIt is a safe platform with low trading fees and is available to users from all over the world.\n\nCoinbase is ideal for newcomers to the world of cryptocurrency as it has a simple user interface and basic account types.\n\nThere is also a Coinbase Pro trading platform that is designed for advanced traders and offers a wide range of features.\n\nTo buy Bitcoin on Coinbase, you will have to first create an account. Once you have created your account, you can select the amount of Bitcoin you want to buy and finish the transaction.\n\n7. Peer-to-peer trading platforms\n\nPeer-to-peer (P2P) trading platforms help you to buy and sell Bitcoin directly with other people in a cost-effective way.\n\nThese are online marketplaces where people list their Bitcoin at certain prices and you choose to buy them.\n\nThe great thing about P2P trading platforms is that you can find someone who is willing to sell you Bitcoin at a low price. This way, you can use these websites as a way to buy Bitcoin at a low cost.\n\nHowever, you should be aware that there are a few risks associated with using P2P trading platforms. Since you are trading with other people, there is always a risk of theft.\n\nYou should only use P2P trading platforms if you are comfortable with the idea of interacting with other people and taking on the associated risks.\n\nP2P trading platforms are one of the easiest ways to buy Bitcoin, but they are not the most secure. Therefore, you should consider using them only if you are looking to buy Bitcoin at a low price.\n\n8. Bitcoin ATMs\n\nBitcoin ATMs let you exchange cash for Bitcoin. These machines are easy to use, secure, and available in most major cities across the world.\n\n14,915Bitcoin ATMs were operational as of January 2021 , and you can find them in major cities, airports, and shopping centers.\n\nBitcoin ATMs come in two varieties; one-way and two-way. One-way ATMs only allow you to buy Bitcoin whereas two-way ATMs let you both buy and sell cryptocurrencies.\n\nThis is a quick, easy, and convenient way to buy Bitcoin. All you have to do is walk up to the machine, insert your cash and scan your wallet address to receive your Bitcoin.\n\n9. Bitcoin mining\n\nBitcoin mining is the process of using computing power to create new Bitcoins.\n\nThis can be done online by joining a Bitcoin mining pool or using specialized computer equipment to solve complex mathematical equations.\n\nOnce you have completed the mining process, you earn a certain amount of Bitcoin based on the amount of computing power you contributed to the mining pool.\n\nIf you want to buy Bitcoin without having to invest your own money, mining Bitcoin is an excellent choice. Bitcoin miners made USD15.3 billionin 2021.\n\nWhat’s more, mining Bitcoin is a long-term investment, meaning that you can earn digital coins as your reward over time.\n\nBuy Bitcoin by easiest ways\n\nBitcoin has grown exponentially in value since its inception in 2009 and it is now one of the most valuable cryptocurrencies in the world.\n\nIt is also the most commonly accepted form of digital payment and can be used to purchase a wide range of goods and services.\n\nThere are many ways to buy Bitcoin, from fintech solutions and exchanges to peer-to-peer trading.\n\nHowever, you should be careful when buying from unfamiliar sources as there is a chance that you might end up losing your money.\n\nWith the help of this article, you will have no problem finding the easiest ways to buy Bitcoin in 2023 and becoming a holder of one of the most valuable digital coins.\n",
+      category: ["crypto-trading-101"],
+      tags: ["trading-platforms","crypto-fundamentals","crypto-trading-strategy","kyc","top","bitfinex","localcryptos","phemex","bitforex"],
+      author: "napar",
+      id: 2
+    });
+    
+  
+    this.add({
+      title: "Increasing User Acquisition For Crypto Wallets Through SEO",
+      content: "In the current economic climate, it’s more important than ever for businesses to look for creative ways to generate new customers.\n\nIn the world cryptocurrencies where everyone is about building social media audience, SEO is an often overlooked strategy that can help you reach potential customers and grow your customer base even during a recession.\n\nWith the right visibility tactics, you can make sure your business remains competitive and stands out in a crowded market.\n\nBy optimizing their website and content for search engines, a crypto wallet project can increase its visibility and drive more traffic to its site, ultimately leading to more users.\n\nOf course, SEO is a complex and constantly-evolving field, and many crypto wallets may not have the expertise or resources to fully optimize their site on their own. This is where an SEO agency can be extremely helpful in increasing user acquisition for crypto wallets.\n\nHow can SEO help crypto wallet apps?\n\nSEO is the practice of improving the quality and quantity of website traffic by increasing the visibility of a website or a web page in a search engine’s unpaid results. This generally means to increase the organic search results, not paid ads results.\n\nFor crypto wallets, SEO can involve a number of different strategies and tactics, such as keyword research, content creation, link building, and on-page optimization. By identifying the keywords and phrases that users are searching for when looking for a crypto wallet, and then creating content that targets those keywords, a wallet can increase its chances of appearing at the top of the search results. Additionally, building backlinks to a wallet’s website from other reputable sites can also help to improve its search engine ranking.\n\nHowever, it’s important to note that SEO is not a one-time thing. It’s a constantly evolving field, with algorithms and user behavior changing frequently. So, it’s important to have a long term strategy and a consistent effort in order to see results. Also, One way to ensure that your crypto wallet website remains visible is to have an SEO agency to help you. An SEO agency specializes in providing various services that can help optimize a site for search engines. These services can include keyword research, on-page optimization, link building, and more. By hiring an SEO agency, crypto wallets can access the expertise and resources they need to fully optimize their site and increase their visibility in search results.\n\nCrypto Wallets and SEO\n\nOne other important aspect of SEO to keep in mind is the importance of technical SEO. Technical SEO refers to the behind-the-scenes aspects of your website that affect its ability to rank in search results.\n\nExamples of these include website speed, mobile responsiveness, schema markup and more. A good SEO agency will audit your website and identify these technical issues, and work to improve them in order to increase your visibility in search results.\n\n\n\nAnother important aspect of SEO for crypto wallets is making sure that their website is secure.\n\nWith the sensitive nature of financial information, it’s crucial for crypto wallets to have a secure website that uses HTTPS and has appropriate security measures in place. This will not only protect users’ information but also help with trust and confidence in the brand and increase the chances of people willing to use the wallet. Also, it can help improve the website ranking as well.\n\nLast important aspect of SEO for crypto wallets is to make sure their website is mobile-friendly. More and more people are using their smartphones to access the internet, and this trend is only likely to continue.\n\nAs a result, it’s crucial for crypto wallets to have a website that is mobile-friendly and easy to navigate on a small screen. This not only will improve the user experience but also help with the website ranking as well. A good SEO agency can help you with this by testing and optimizing your site for mobile devices, so it is fully responsive, easy to navigate and can be crawl easily by search engines.\n\nConclusion\n\nSEO can be a powerful tool for increasing user acquisition for crypto wallets. By optimizing their website and content for search engines, crypto wallets can increase their visibility and drive more traffic to their site, ultimately leading to more users.\n\nHowever, SEO is a complex and constantly-evolving field, and many crypto wallets may not have the expertise or resources to fully optimize their site on their own.\n\nAn SEO agency can help crypto wallets to fully optimize their site and increase their visibility in search results. With a focus on long-term SEO strategy, technical SEO and the help of an experienced SEO agency, crypto wallets can give themselves the best chance possible to attract and retain users in this competitive space.\n",
+      category: ["reports"],
+      tags: ["seo"],
+      author: "TDOU",
+      id: 3
+    });
+    
+  
+    this.add({
+      title: "Top 10 altcoins to invest in 2023 that might see big gains",
+      content: "It might be dubious to expect another bull run any time soon now, in the depths of the bear market.\n\nBut as any market, the cryptocurrency market is volatile and extremely susceptible to a wide range of influences, such as modifications in interest rates, geopolitics, technology, and consumer demand.\n\nAnd although it might seem like it all was just an Alameda mirage, it is true that in the OG altcoin season in several alternative currencies have historically outperformed the market and may still see strong returns on investment in the future.\n\nThe alternative coins are simply cryptocurrencies that are not Bitcoin. They are digital assets that use blockchain technology and may be used as a medium of exchange or store of value, like Bitcoin. Altcoins are often created to address specific issues or challenges faced by Bitcoin or to offer unique features compared to Bitcoin.\n\nFor example, some altcoins may have faster transaction processing times or lower fees, or may offer enhanced privacy or scalability compared to Bitcoin. Stay updated with recent developments in the cryptocurrency industry by searching latest altcoin news online.\n\nLet us look at the top ten altcoins that have the potential to provide high returns.\n\nTop 10 altcoins to invest in 2023:\n\n\n  \n    IMPT.io:\n\n    IMPT.io seeks to obtain sustainability in a society that is battling climate change. Users can lessen their carbon impact whilst gaining access to interesting benefits. More than 10,000 global brands have already partnered with this project, which is still in its preliminary stages, and they have all chosen to become a part of its ecosystem. Each brand is free to choose the portion of its sales margin that will go toward IMPT projects.\n  \n  \n    Tamodoge:\n\n    The recently developed meme coin Tamadoge has great token utilisation. It uses a play-to-earn approach and has features like integrated NFTs and a metaverse. The inspiration for the concept came from the hit Japanese video game Tamagotchi from the 1990s. Users must take care of their virtual pets in the same way that they would in the original game. Pets are created as infants and require the user to feed and train them. They are represented by special NFTs that can be purchased. Users must employ TAMA tokens to carry out any transaction within the Tamaverse. Tamadoge has achieved a lot in its brief existence, particularly when we consider the $19 million raised in its presale.\n  \n  \n    FightOut(FGTH):\n\n    FightOut’s latest initiative to earn cryptocurrency, $FGTH, allows users to receive benefits for leading healthy lives. Ownership of $FGTH gives users access to a platform that tracks their movements and steps and rewards them for exercising, beating challenges, and building the community. Investors gain the in-app currency REPS for building their bodies after customising the exercises to target specific muscle groups.\n  \n  \n    Dash 2 Trade (D2T):\n\n    Our selection for the greatest cryptocurrency to buy right now is Dash 2 Trade, a promising new cryptocurrency startup. In addition to having a highly successful presale, it will make use of a variety of data and analytics to assist traders and investors in making better judgements and maximising trading profits. This project is in the last stages of its presale and has received more than $9.5 million in investment as of the time of writing, giving potential investors little time to purchase D2T tokens before they are published on exchanges.\n  \n  \n    Qtum:\n\n    With the addition of NFT support, sophisticated smart contract customisation, and two new token standards, Qtum has become a decentralised public blockchain with various novel and unique features. The project combines the security of Bitcoin with the flexibility of Ethereum’s smart contracts. The QRC20 and QRC721 standards for tokens were introduced by Qtum. Another component is Abstract Account Layer, which isolates apps from the blockchain’s fundamental workings.\n  \n  \n    Calvaria:\n\n    A new cryptocurrency card game called Calvaria offers incentives to players and ecosystem participants in the form of two tokens, namely $RIA and $eRIA. The latter token is used to award players for winning tournaments. Players may also use the eRIA token to combine cards of the same strength to purchase new cards at a higher level. Players must buy an NFT deck of cards, which is done with Calvaria cryptocurrency, to gain in-game tokens. The assets are owned by players that use eRIA tokens for in-store purchases and can be sold on.\n  \n  \n    C+ Charge:\n\n    Eco-friendly cryptocurrency C+Charge wants to make the world a safer place to live. When you charge your electric vehicle at one of the C+Charge-affiliated charging stations anywhere in the world, C+Charge will reward you for being an environmentally conscientious vehicle owner. You acquire carbon credits each time you use the CCHG token to charge your automobile at one of the associated C+Charge charging stations. This green platform tokenises your carbon as NFTs that you can trade or hold, giving you a better return on your earnings. With CCHG, you can benefit from the carbon credit sector’s incentives, which were previously exclusively available to large enterprises.\n  \n  \n    Algorand:\n\n    Algorand is referred to as a “pure” proof-of-stake blockchain platform. The project’s primary goal was to address the blockchain networks’ current ledger inefficiencies. These include problems such as high transaction costs, energy waste, and scalability restrictions. It blends the attributes of a centralised platform with the governance model of decentralised initiatives. Algorand is renowned for using innovative techniques to improve network security. This project’s Byzantine consensus-based pure proof-of-stake is its focal point (PPOS). The network cannot be controlled by a majority, and only a tiny number of individuals are able to create blocks. Every token holder can vote, make suggestions, and take part in the legislative process.\n  \n  \n    Oryen:\n\n    Oryen is the most anticipated altcoin with automated passive income. It is a recently created staking platform that provides all holders of its native currency, ORY, with the convenience of automated yield payouts. To raise money for development, the staking platform is holding a presale, and interest in its cryptocurrency is growing. Due to the novel Oryen Auto Staking Technic, ORY appears to be the most anticipated presale now, with an increasing number of investors joining the project every day (OAT). Explore more about its pros and cons by searching ‘latest altcoin newsonline.’\n  \n  \n    Battle Infinity:\n\n    Battle Infinity, as its name suggests, is focused on “battle” games, with the IBAT Premier League taking centre stage. Like a fantasy sports league, this feature also incorporates NFTs and is housed on a blockchain. As a result, users can exchange players through Battle Infinity’s integrated market whilst still enjoying the benefits of a transparent and decentralised system. It includes a dedicated NFT marketplace (named Battle Market), like other new NFT initiatives, where users may create and sell their own digital artwork and enhance their in-game characters with cool stuff. Additionally, users can buy virtual land parcels in the metaverse (known as the Battle Arena) and generate side income by running advertisements on in-game billboards.\n  \n\n\nHow do altcoins differ from bitcoin?\n\nCryptocurrencies that are not Bitcoin are known as “altcoins,” or “alternative coins. Like Bitcoin, these are digital assets that can be used as a store of value or as a means of exchange, thanks to blockchain technology.\n\nNumerous factors set altcoins apart from bitcoin, including the following:\n\nTechnology: Alternative cryptocurrencies to Bitcoin can make use of alternative underpinnings or consensus mechanisms. As an illustration, some alternative coins, like Bitcoin, may use proof-of-work (PoW), but others may use proof-of-stake (PoS) or other consensus techniques.\n\nFunctionality: Compared to Bitcoin, altcoins may offer new or improved features. For instance, compared to Bitcoin, certain altcoins may process transactions more quickly, charge cheaper fees, or provide greater privacy or scalability.\n\nUse cases: Several altcoins may have particular use cases or target markets. For instance, although some altcoins may have a more general focus, others may be tailored for certain industries, such as supply chain management or gaming.\n\nAdoption: Compared to Bitcoin, altcoins may have varying degrees of adoption and acceptability. Whilst some alternative currencies are widely used as a medium of exchange, others may have fewer users or fewer practical applications.\n\nHow did altcoins rise in popularity?\n\nAltcoins are alternative cryptocurrencies that were created after the success of bitcoin. Many of them have attempted to improve upon the original Bitcoin concept by providing more speed, privacy, or other features. They were developed following the popularity of Bitcoin. It was then followed by Litecoin, one of the first alternative currencies to receive mainstream attention. It was also one of the first altcoins to employ a different proof-of-work algorithm than Bitcoin’s, making it simpler for users to mine. It was created to be faster and lighter than Bitcoin.\n\nConclusion\n\nIf you invest in altcoins, you could see enticing returns on your cryptocurrency investments, especially if you consider that you missed the Bitcoin wave. Given that Bitcoin’s market cap has already crossed $1 trillion, returns will be constrained in comparison to smaller-cap altcoins.\n",
+      category: ["crypto-trading-101"],
+      tags: ["crypto-trading-strategy","adoption","penny-crypto","bitfinex","phemex"],
+      author: "TDOU",
+      id: 4
     });
     
   
@@ -26,7 +66,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["altcoins","doge","bitfinex","phemex"],
       author: "diana",
-      id: 1
+      id: 5
+    });
+    
+  
+    this.add({
+      title: "4 Noob-Friendly Ways to Earn Altcoins in 2023",
+      content: "Altcoins, which refer to digital currencies or cryptos other than Bitcoin (BTC), are becoming more popular since they’re more affordable than BTC. They make up most of the supply in the crypto market, and many investors and traders use them because of the opportunity to get high returns. However, investing in altcoins has risks, so it’s best to understand and check the trend before investing your hard-earned money into it.\n\nOnce you’re knowledgeable about the industry, you may want to start making money with altcoins. Here are a few tips that can launch you into the world of cryptocurrencies.\n\n\n  \n    Try Play-to-Earn Crypto Games\n\n    Play-to-earn crypto games are one of the ways to earn crypto when you have none to start with.\n\n    A perfect onramp, the so-called P2E games have introduced billions of dollars to digital assets that gamers can buy, earn, and own. As its name suggests, gamers can earn altcoins, cards, skins, and other valuable in-game assets by engaging in play-to-earn crypto games.\n\n    By choosing the best play to earn games, you can collect more altcoins or in-game assets, which can translate to high revenue. After earning the altcoins from these games, you can transfer them into your crypto exchange wallet or platform. Then, you can sell it in the market for real money or another cryptocurrency. By doing this, not only are you enjoying playing games, but you’re also earning from it.\n  \n  \n    Consider Staking\n\n    Another way to earn from altcoins is to collect fees and interest from holding a cryptocurrency in your account. This is more technically known as staking.\n\n    When blockchain validators facilitate transactions, you’ll receive payment from them through fees. For instance, when you keep an altcoin in your account, you’ll receive an annual interest rate depending on what that altcoin offers. Generally, your earnings can range from 0.15% to 6% per year.\n\n    While this may be inviting, you still need to check the contract terms for better and safer transactions. Some altcoins or mainstream crypto dealers require you to lock your account for a specific period, which means that you may be unable to withdraw or deposit whenever you want. Moreover, some may set a minimum amount before you can draw interest from the altcoins.\n  \n  \n    Buy And Sell NFTs\n\n    Here, the concept is simple in theory but risky in practice.\n\n    You only need to buy an NFT at a lower price, hold it until its price goes up, and sell it when you are sure to make profit. However, it is not guaranteed that the price will indeed go up. Also, there are stories of even very expensive NFTs vanishing from people’s OpenSea accounts - and not through a heaist.\n\n    Still, buying and selling altcoins or NFTs is a convenient way to earn because you can do it anytime and anywhere since crypto transactions don’t require third-party interventions. All you need is a registered account with a crypto exchange platform to buy and sell in its market.\n\n    Before buying any token, you need to weigh the pros and cons. Don’t settle for the cheapest option. Instead, focus on the value and how it affects its trading environment. They’re more likely to become more valuable if it has a concrete project or mission. Once you guarantee if a token is worth the investment, go ahead and buy.\n  \n  \n    Venture Into Day Trading\n\n    One of the most profitable ventures that you may also want to try is day trading. To become profitable in this arena, you must have the proper technical and analytical skills. This means you need to know how to analyze the altcoin’s performance through their charts. By understanding the price movements of the altcoins, you can better decide what trading position to make.\n\n    Trading positions include going short or long. It means you’ll place a short position if your technical analysis anticipates the altcoin price going down. On the other hand, you’ll be placing a long position if your analysis shows that the price will increase. If your bet or position is correct, you’ll earn a considerable profit. However, remember that you could also lose your money if your analysis goes south. That’s why learning to conduct technical analysis is vital to becoming a profitable altcoin trader.\n\n    The advantage of day trading is that you don’t have to have thousands of dollars as capital when starting. You can begin on an amount you’re willing to lose in the market. Especially if you also know how to conduct fundamental analysis, you can use it together with technical analysis to improve trading positions.\n\n    Moreover, you don’t have to hold your altcoin for a long time and wait for its price to go high before you can sell it to earn. Whatever the price of the altcoin is, you can earn by trading as long as your technical analysis is correct.\n  \n\n\nConclusion\n\nMaking money with altcoins is still feasible these days, as long as you know what you’re doing. Start by finding an altcoin or an NFT with an excellent value proposition, so you can buy or invest in a token that could stay valuable for years.\n\nThen, choose whether to stake, trade, or play crypto games that could give you some sizable revenue. Whatever path you end up choosing, the right mindset and exceptional analytical skills can lead you to success in crypto investment.\n",
+      category: ["crypto-trading-tools"],
+      tags: ["crypto-opsec","defi","crypto-tools","airdrops","nft","yield","ledger"],
+      author: "TDOU",
+      id: 6
     });
     
   
@@ -36,7 +86,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["custodial-trading","defi","independent-reserve"],
       author: "TDOU",
-      id: 2
+      id: 7
     });
     
   
@@ -46,7 +96,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["taxes","dca","independent-reserve"],
       author: "TDOU",
-      id: 3
+      id: 8
     });
     
   
@@ -56,7 +106,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-bot-trading","volume-trading","tradingview-script-review","vpvr","crypto-charting","coinrule","tradingview"],
       author: "TDOU",
-      id: 4
+      id: 9
     });
     
   
@@ -66,7 +116,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["taxes","dca","independent-reserve"],
       author: "TDOU",
-      id: 5
+      id: 10
     });
     
   
@@ -76,7 +126,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["lending","dca","independent-reserve"],
       author: "TDOU",
-      id: 6
+      id: 11
     });
     
   
@@ -86,7 +136,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption","blockchain-technology","phemex","bitforex"],
       author: "charlotte",
-      id: 7
+      id: 12
     });
     
   
@@ -96,7 +146,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption","blockchain-technology","phemex","ledger"],
       author: "charlotte",
-      id: 8
+      id: 13
     });
     
   
@@ -106,7 +156,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["lending"],
       author: "TDOU",
-      id: 9
+      id: 14
     });
     
   
@@ -116,7 +166,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","adoption","otc","bitfinex","bitforex"],
       author: "TDOU",
-      id: 10
+      id: 15
     });
     
   
@@ -126,7 +176,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["trading-technique","crypto-tools","bitfinex"],
       author: "diana",
-      id: 11
+      id: 16
     });
     
   
@@ -136,7 +186,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["trading-technique","crypto-tools","bitfinex"],
       author: "diana",
-      id: 12
+      id: 17
     });
     
   
@@ -146,7 +196,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","ledger"],
       author: "TDOU",
-      id: 13
+      id: 18
     });
     
   
@@ -154,9 +204,9 @@ var idx = lunr(function() {
       title: "Why do news outlets defend SBF: The community bank model and where it leads",
       content: "&nbsp;\n\nCrypto Twitter has been spinning up conspiracy theories on why the New York Times article on FTX collapse never mentioned some of the confirmed facts:\n\nThe so-called “Sam coins”, illiquid altcoins that inflated the balance sheets of FTX, the extravagant handling of customer funds, the heavy stimulant use among other things reported by insiders through the Twitter account @AutismCapital.\n\nMainstream media paint the FTX collapse as an unfortunate liquidity crunch on a business that may have been faking it till they make it, but essentially did nothing criminal.\n\nThe business model was sound, it just got caught up in a series of unfortunate events.\n\n\n\nThe history repeats itself\n\nBanks were not always available to just anybody. For a long time they were reserved for the aristocracy and after the industrial revolution, to wealthy business owners. This started changing in Germany in the second half of 19th century.\n\nThe concept was called “Volksbank” which I will translate as community bank in this article, but they were commonly known under the name they took after the author of that concept: “Raiffeisenbank”.\n\nInitially, the business model of community banks was to take customer deposits and loan or reinvest them for yield. They would charge higher interest yields on their lending because their customers were underserved; working people in those days could not easily get credit. These higher yields then made for higher interest rates on deposits which attracted new customers.\n\n\n\nThe concept was copied across the former Austria-Hungary which is how it spilled over into Eastern Europe.\n\nBut while in the West the community bank concept grew and evolved during the 20th century, in the East it eventually culminated in a 1990s series of bank runs very similar to the FTX collapse.\n\nThose bank runs have caused a large number of community banks in the East to crash. That usually happened when there were doubts about the bank’s solvency voiced somewhere publicly. Depositors typically did not want to risk anything hearing of the rumors and started withdrawing. Some got out while others never did and that was fair because the community bank was allowed to run on a fractional reserve.\n\nIn these situations the chief officers of the community bank would usually lie whenever they got the chance, knowing that further bank runs would only make things worse as there would be less liquidity to reinvest to hopefully make depositors whole.\n\nEventually, it was found that there was usually a lot of liquidity lost in an investment that was not risk-checked, in an investment into an entity that was too closely dependent on the community bank’s financial standing or in an investment into a business that flopped.\n\nI don’t know, does any of that sound familiar?\n\nSo, would regulations solve the issue?\n\nNo.\n\nDue to the string of small institute bankruptcies in the 1990s, there was a push to regulate them as it was obviously the individual depositors who ended up losing money. Regulators responded and since early 2000s, European community banks became money businesses that usually do not have a full banking license but they still have the right to get bailed out by the central bank in case of liquidity crunch, along with any regular bank.\n\nOn paper, the following will look great to a lot of those who got rugged by FTX, Bitfinex or Gox:\n\nUnder the regulation, a liquidity-strained community bank may deliver a “notice of insolvency” to its central bank. The central bank runs a dedicated insurance fund that all its money businesses contribute to. Using that fund, the central bank pays off all customer deposits within 30 days of the notice of insolvency, up to value of 100 000 EUR per depositor.\n\nWhy does this not solve anything?\n\nAs soon as deposit insurance was introduced for community institutes in Europe, a lot of people saw what the game was: As a depositor with 100% deposit insurance, you go after the highest yield available regardless of the degeneracy that makes said yield possible.\n\nUnsurprisingly, what this led to was a strong political lobby from the larger banks against the whole community bank sector. In 2014, the official in charge of the central bank insurance fund of a small European country explained:\n\n\n  “We saw that people did not learn from the collapse of [a popular community bank] and did not move their deposits to a larger institution.\nInstead they kept switching from one community bank to another. It will not be surprising that the vast majority of these deposits were up to 100 000 EUR, the deposits were thus fully insured.\nThe regulatory protection of customer funds created a moral dilemma now as the large banks - who are more conservative with their earning strategies but have larger volumes - contribute a much larger amount of money to the deposit insurance fund system, while the fund primarily helps the community banks.\nThe community banks even use the fund as a marketing tool to attract new clients, so in the end the big banks are essentially financing their competition. It is not surprising that there is a lot of pressure from their side to limit the community sector.”\n\n\nWhy did some community banks survive?\n\nWhen Europe split into East and West after the Word War II., the concept of community banks took two very different routes in each of those parts.\n\nCommunity banks were initially competitive because they offered better yields than the larger banks, but in East vs West they took two different routes to make those yields possible.\n\nIn the East, for the most part the business of community banks stayed firmly within the numbers game: Community banks would receive client deposits and either lend them out or otherwise invest them for a relatively high yield.\n\nAs the banking sector grew, community banks chose to stay competitive by seeking riskier investments or lending for a higher interest rate in exchange for a more generous or sometimes no credit scoring system.\n\nThis made them susceptible to bank runs as inevitably some part of the customer deposits was locked up in illiquid investment schemes or lost in loans to bankrupt subjects.\n\nIn the West, the economic situation started improving with the end of the World War II. That created a lot of avenues to diversify the income streams of the community institutes. The lexicon of Bavarian history writes:\n\n\n  “With the economic growth after 1948, individuals started increasingly demanding other services such as consulting, financial advice, investment services, business travel funding or housing construction financing. The German ‘banks for everyone’ developed into universal banks with a complete range of financial services.”\n\n\nSome of these services created income streams that did not derive from customer deposits for the original Raiffeisenbanks. And because the community banks were still established locally and had a long experience working with a specific underserved client base - the working professional, instead of the landed person who looked for management of inherited wealth - they had an advantage over the larger banks.\n\nThe equivalent of this route in crypto could probably be crypto custody services such as what Coinbase offers, blockchain analysis for fraud detection or credit scoring, merchant payment services and any kind of crypto-specific investment advice.\n\nI would venture a guess that the (alleged, I suppose) business model of Alameda which was to front-run certain trades was a poor attempt at this kind of diversification.\n\nAssuming no wrongdoing or conspiracies, an exchange like FTX would need these additional sources of income to afford operations with the extremely low trading fees that they charged. This is all just a speculation but I think it is unlikely that the business was set up in a very different way.\n\n\n\nIn the second half of 20th century, most of the independent community banks in Europe eventually merged and were consolidated into a centralized hierarchy of institutions. But the tools they originally developed to stay competitive did not disappear.\n\nTo this day, some of the former community institutes still offer the easiest way for a retail trader to gain trading access to the stock exchange or for a resident of the EU to open a USD-denominated bank account. In European countries with a history of community banks these issues were resolved decades prior to Robin Hood and Revolut.\n\nBottom line\n\nIt does not matter whether SBF wins back his lost 8bn and makes FTX rise from the ashes, ultimately a system based mainly on financial speculation will never not be vulnerable to what happened to FTX.\n\nMaybe it will take the collapse of Binance for the industry to move on.\n\nMaybe the industry will never move on and a long string of collapses will pave the way to central bank issued digital products, who knows.\n",
       category: ["finance-basics"],
-      tags: ["custodial-trading","bitfinex-collapse","defi","yield"],
+      tags: ["custodial-trading","ftx-collapse","defi","yield"],
       author: "karlvonbahnhof",
-      id: 14
+      id: 19
     });
     
   
@@ -166,7 +216,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption","blockchain-technology","bitfinex"],
       author: "TDOU",
-      id: 15
+      id: 20
     });
     
   
@@ -176,7 +226,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["ftx-collapse","custodial-trading","defi","crypto-bot-trading","bitfinex","tradingview"],
       author: "karlvonbahnhof",
-      id: 16
+      id: 21
     });
     
   
@@ -186,7 +236,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","custodial-trading","nft","bitfinex","phemex"],
       author: "TDOU",
-      id: 17
+      id: 22
     });
     
   
@@ -196,7 +246,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["staking","dca","independent-reserve"],
       author: "TDOU",
-      id: 18
+      id: 23
     });
     
   
@@ -206,7 +256,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","custodial-trading","nft","bitfinex","phemex"],
       author: "TDOU",
-      id: 19
+      id: 24
     });
     
   
@@ -216,7 +266,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","adoption","kyc","regtech","defi","blockchain-technology","billfodl","shrimpy"],
       author: "diana",
-      id: 20
+      id: 25
     });
     
   
@@ -226,7 +276,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-bot-trading","volume-trading","tradingview-script-review","vpvr","crypto-charting","coinrule","tradingview"],
       author: "karlvonbahnhof",
-      id: 21
+      id: 26
     });
     
   
@@ -236,7 +286,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-trading-strategy","crypto-tools","yield","independent-reserve"],
       author: "karlvonbahnhof",
-      id: 22
+      id: 27
     });
     
   
@@ -246,7 +296,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["crypto-trading-strategy","adoption","spend-your-crypto","phemex"],
       author: "tdou",
-      id: 23
+      id: 28
     });
     
   
@@ -256,7 +306,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["crypto-trading-strategy","adoption","otc"],
       author: "tdou",
-      id: 24
+      id: 29
     });
     
   
@@ -266,7 +316,7 @@ var idx = lunr(function() {
       category: ["cryptocurrency-wallets"],
       tags: ["multicoin-wallet","altcoin-wallet","crypto-tools","exodus","billfodl","coldcard","trezor"],
       author: "tdou",
-      id: 25
+      id: 30
     });
     
   
@@ -276,7 +326,7 @@ var idx = lunr(function() {
       category: ["non-directional"],
       tags: ["yield","defi","staking","multicoin-wallet","altcoin-wallet","top","binance","ledger","bitfinex","bitfinex"],
       author: "JMT",
-      id: 26
+      id: 31
     });
     
   
@@ -286,7 +336,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","crypto-tools","yield","independent-reserve"],
       author: "TDOU",
-      id: 27
+      id: 32
     });
     
   
@@ -296,7 +346,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","low-cap-crypto","phemex","ledger"],
       author: "TDOU",
-      id: 28
+      id: 33
     });
     
   
@@ -306,7 +356,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","custodial-trading","defi","nft","bitfinex","phemex"],
       author: "karlvonbahnhof",
-      id: 29
+      id: 34
     });
     
   
@@ -316,7 +366,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["multicoin-wallet","altcoin-wallet","airdrops","low-cap-crypto","web3","blockchain-technology","nft","ledger"],
       author: "altcointrading",
-      id: 30
+      id: 35
     });
     
   
@@ -326,7 +376,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","blockchain-technology","ledger"],
       author: "diana",
-      id: 31
+      id: 36
     });
     
   
@@ -336,7 +386,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["crypto-fundamentals","adoption","trading-technique","crypto-tools","defi","nft","bitfinex"],
       author: "karlvonbahnhof",
-      id: 32
+      id: 37
     });
     
   
@@ -346,7 +396,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","adoption","kyc","regtech","defi","blockchain-technology","coldcard","ledger"],
       author: "TDOU",
-      id: 33
+      id: 38
     });
     
   
@@ -356,7 +406,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["nft","defi","spend-your-crypto","bitfinex","tradingview"],
       author: "karlvonbahnhof",
-      id: 34
+      id: 39
     });
     
   
@@ -366,7 +416,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["web3","nft","defi","crypto-bot-trading","phemex"],
       author: "TDOU",
-      id: 35
+      id: 40
     });
     
   
@@ -376,7 +426,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["defi","yield"],
       author: "TDOU",
-      id: 36
+      id: 41
     });
     
   
@@ -386,7 +436,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["blockchain-technology","web3","nft","metaverse","airdrops","phemex"],
       author: "TDOU",
-      id: 37
+      id: 42
     });
     
   
@@ -396,7 +446,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","low-cap-crypto","phemex","ledger"],
       author: "TDOU",
-      id: 38
+      id: 43
     });
     
   
@@ -406,7 +456,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-bot-trading","pattern-trading","tradingview-script-review","crypto-charting","coinrule","bitfinex","tradingview"],
       author: "karlvonbahnhof",
-      id: 39
+      id: 44
     });
     
   
@@ -416,7 +466,7 @@ var idx = lunr(function() {
       category: ["analysis"],
       tags: ["web3","crypto-trading-strategy","defi","crypto-bot-trading","phemex"],
       author: "TDOU",
-      id: 40
+      id: 45
     });
     
   
@@ -426,7 +476,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["blockchain-technology","web3","nft","airdrops","phemex"],
       author: "diana",
-      id: 41
+      id: 46
     });
     
   
@@ -436,7 +486,7 @@ var idx = lunr(function() {
       category: ["tool-updates"],
       tags: ["crypto-tools","crypto-bot-trading","crypto-trading-strategy","dca","dollar-cost-averaging","coinrule","bitfinex"],
       author: "jmt",
-      id: 42
+      id: 47
     });
     
   
@@ -446,7 +496,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["airdrops","low-cap-crypto","web3","nft","defi","yield","phemex","bitfinex"],
       author: "jmt",
-      id: 43
+      id: 48
     });
     
   
@@ -456,7 +506,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["entertainment","web3","spend-your-crypto","phemex"],
       author: "TDOU",
-      id: 44
+      id: 49
     });
     
   
@@ -466,7 +516,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["penny-crypto","low-cap-crypto","crypto-tools","web3","nft","defi","yield","phemex","latoken"],
       author: "jmt",
-      id: 45
+      id: 50
     });
     
   
@@ -476,7 +526,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["web3","spend-your-crypto","defi","yield","phemex","latoken"],
       author: "TDOU",
-      id: 46
+      id: 51
     });
     
   
@@ -486,7 +536,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","defi","yield","bitfinex","ledger"],
       author: "TDOU",
-      id: 47
+      id: 52
     });
     
   
@@ -496,7 +546,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-trading-strategy","nft","adoption","ledger"],
       author: "TDOU",
-      id: 48
+      id: 53
     });
     
   
@@ -506,7 +556,7 @@ var idx = lunr(function() {
       category: ["finance-basics"],
       tags: ["staking","dca","independent-reserve"],
       author: "TDOU",
-      id: 49
+      id: 54
     });
     
   
@@ -516,7 +566,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","stablecoins","yield","defi","phemex","latoken","bitfinex"],
       author: "TDOU",
-      id: 50
+      id: 55
     });
     
   
@@ -526,7 +576,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","nft","yield","defi","phemex","localcryptos"],
       author: "jmt",
-      id: 51
+      id: 56
     });
     
   
@@ -536,7 +586,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption","blockchain-technology","phemex","bitforex"],
       author: "TDOU",
-      id: 52
+      id: 57
     });
     
   
@@ -546,7 +596,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-opsec","defi","crypto-tools","airdrops","nft","yield","ledger","bitfinex"],
       author: "Karlvonbahnhof",
-      id: 53
+      id: 58
     });
     
   
@@ -556,7 +606,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","adoption","ledger","bitfinex"],
       author: "TDOU",
-      id: 54
+      id: 59
     });
     
   
@@ -566,7 +616,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-fundamentals","crypto-charting","tradingview-script-review","crypto-trading-strategy","trading-technique","crypto-tools","top","cryptowatch","binance","bitfinex"],
       author: "Karlvonbahnhof",
-      id: 55
+      id: 60
     });
     
   
@@ -576,7 +626,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-opsec","crypto-trading-strategy","crypto-tools","yield","defi","nft","shrimpy","bitfinex"],
       author: "TDOU",
-      id: 56
+      id: 61
     });
     
   
@@ -586,7 +636,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","trading-technique","independent-reserve","shrimpy"],
       author: "TDOU",
-      id: 57
+      id: 62
     });
     
   
@@ -596,7 +646,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-bot-trading","crypto-trading-strategy","scalping","dca","crypto-tools","independent-reserve","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 58
+      id: 63
     });
     
   
@@ -606,7 +656,7 @@ var idx = lunr(function() {
       category: ["cheatsheets"],
       tags: ["crypto-charting","trading-technique","derisking","pattern-trading","wyckoff","top","bitfinex","tradingview"],
       author: "karlvonbahnhof",
-      id: 59
+      id: 64
     });
     
   
@@ -616,7 +666,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["staking","yield","defi","crypto-tools","binance","allnodes"],
       author: "diana",
-      id: 60
+      id: 65
     });
     
   
@@ -626,7 +676,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-bot-trading","crypto-trading-strategy","trading-technique","crypto-tools","bitfinex","phemex","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 61
+      id: 66
     });
     
   
@@ -636,17 +686,17 @@ var idx = lunr(function() {
       category: ["non-directional"],
       tags: ["web3","yield","defi","staking","multicoin-wallet","altcoin-wallet","binance","ledger","bitfinex","bitfinex"],
       author: "Diana",
-      id: 62
+      id: 67
     });
     
   
     this.add({
       title: "In-Depth: Why Are Young Investors Putting Their Money in Cryptocurrency?",
-      content: "These days, investing for young adults usually means building a portfolio of cryptocurrencies rather than traditional assets such as stocks and bonds.\n\nOver the last few years, especially younger millennials and members of Generation Z have funneled large fractions of their savings into these new alternative assets. They also tend to be staunch advocates of both cryptocurrency and blockchain technology, which powers it.\n\nCurious to know what it is about cryptocurrencies that have so captured the minds and portfolios of so many young investors?\n\nRead on for an in-depth look at some major reasons crypto has become a favored investing product among the youth.\n\n\n  \n    Positive Outlook on the Technology\n\n    While many young people do scalp trade crypto for the chance of turning a quick profit, a good number choose to DCA and hold their favorite coins long-term because they believe in the value of the technology itself.\n\n    These long-term holders see cryptocurrency as potentially applicable and useful for the years to come, some even going so far as to consider it \"the future of finance.\"\n\n    Some young investors are interested in the ways cryptocurrencies can be used to help the disenfranchised in countries with limited economic freedom. Privacy coins like the highly secure and specially encrypted Monero, for instance, can only be stored through a dedicated XMR wallet. The Monero technology allows for fully anonymous, secure transfers of the coin that aren't vulnerable to intervention from governments or other regulatory bodies.\n\n    Crypto exchanges (particularly no-KYC exchanges that support privacy coins like Monero) have thus allowed people born in disadvantaged regions to receive money from relatives abroad, without exposing themselves or the relatives to any risk of scrutiny.\n\n    Other young crypto enthusiasts are particularly interested in the potential applications and future value of the blockchain, the foundational technology behind cryptocurrency. Blockchain is a digital ledger that's distributed across a network of computers instead of being controlled by any single organization or individual.\n\n    Devotees of crypto believe that blockchain's decentralized construction makes it a secure, transparent repository for financial transactions and other important information.\n  \n  \n    Loss of Faith in Traditional Financial Institutions\n\n    Younger millennials and members of Gen Z will have grown up exposed to the harsh realities of global recessions, financial crises, mortgage debt crash and bailouts, quantitative easing and generally speaking economic uncertainty.\n\n    This exposure has not only made them cautious and careful about their finances, but also diminished their inclination to trust traditional financial systems. Many have come to see banks and other conventional financial institutions as inefficient and inequitable, if not outright exploitative.\n\n    To these investors, many of whom feel deprived of opportunities to acquire and build wealth through conventional means, cryptocurrency presents a promising shot at greater economic mobility.\n\n    Some may also see crypto trading as a means of pushing back against financial systems that have failed to support their generation in the ways that they need.\n  \n  \n    Ease of Access\n\n    Cryptocurrency platforms of 2022 pride themselves on their accessibility. This has historically been a major selling point with investors of all ages and in all kinds of markets.\n\n    A new investor can create an account with a crypto exchange with relative ease, sometimes even without identifying themselves since the law is still unclear on that issue in most countries. Then they can immediately receive access to the wealth of investing opportunities and trading products the platform provides.\n\n    Take Binance for instance: With just a smartphone, you can buy crypto there, trade its derivatives, stake it, farm it or put it in a locked interest-bearing account. The options that investors get on crypto platforms are simply not even in the same ballpark as what you get in a bank nowadays.\n\n    Compare this to traditional investing, where the process of even setting oneself up as an investor is fraught with so many complications. New participants are often compelled to study a multitude of complexities before they can even begin trading through a brokerage account.\n\n    Most cryptocurrencies also do not have an IPO, which means that both retail investors and venture capitalists have roughly the same opportunities to support and earn returns on crypto projects.\n\n    Given all this, it's unsurprising that young people would avoid investing in stocks in favor of more accessible alternatives.\n  \n  \n    Sense of Community\n\n    It's possible to trace at least some of the younger generation's interest in crypto to the ubiquity of the internet, social media, and other digital technology in their lives.\n\n    A recent study by Hargreaves Lansdown PLC, for instance, found that up to 60% of investors under 40 years of age preferred to get their investing advice on social media platforms like Reddit and YouTube.\n\n    Crypto proponents naturally maintain a strong presence in the online forum culture, ready to welcome novice traders into their ever-growing online communities. The power this sense of community has to attract young investors to crypto spaces can't be understated, especially during the post-pandemic times.\n\n    Besides the alluring promise of great economic returns, many young people find that participating in crypto communities removes their loneliness and sense of social isolation. They thus come to see these online spaces as trustworthy sources of advice on viable crypto projects, as well as spaces for community discussion or support in the event of failed investments.\n\n    Some young investors also relish the opportunity to be part of an active movement. Many crypto holders are eager to find more involved ways to further support the projects they invest in. They may act as marketers and community managers in online spaces, and their actions in those spaces can and often do help drive the markets.\n  \n\n\nBottom line\n\nAt the end of the day, young investors' interest in cryptocurrencies is in large part a reflection of the technological, social, and economic realities that have shaped their lives.\n\nThese new and radically divergent investing behaviors in turn have the potential to help reshape the global financial landscape in years to come.\n",
+      content: "These days, investing for young adults usually means building a portfolio of cryptocurrencies rather than traditional assets such as stocks and bonds.\n\nOver the last few years, especially younger millennials and members of Generation Z have funneled large fractions of their savings into these new alternative assets. They also tend to be staunch advocates of both cryptocurrency and blockchain technology, which powers it.\n\nCurious to know what it is about cryptocurrencies that have so captured the minds and portfolios of so many young investors?\n\nRead on for an in-depth look at some major reasons crypto has become a favored investing product among the youth.\n\n\n  \n    Positive Outlook on the Technology\n\n    While many young people do scalp trade crypto for the chance of turning a quick profit, a good number choose to DCA and hold their favorite coins long-term because they believe in the value of the technology itself.\n\n    These long-term holders see cryptocurrency as potentially applicable and useful for the years to come, some even going so far as to consider it \"the future of finance.\"\n\n    Some young investors are interested in the ways cryptocurrencies can be used to help the disenfranchised in countries with limited economic freedom. Privacy coins like the highly secure and specially encrypted Monero, for instance, can only be stored through a dedicated XMR wallet. The Monero technology allows for fully anonymous, secure transfers of the coin that aren't vulnerable to intervention from governments or other regulatory bodies.\n\n    Crypto exchanges (particularly no-KYC exchanges that support privacy coins like Monero) have thus allowed people born in disadvantaged regions to receive money from relatives abroad, without exposing themselves or the relatives to any risk of scrutiny.\n\n    Other young crypto enthusiasts are particularly interested in the potential applications and future value of the blockchain, the foundational technology behind cryptocurrency. Blockchain is a digital ledger that's distributed across a network of computers instead of being controlled by any single organization or individual.\n\n    Devotees of crypto believe that blockchain's decentralized construction makes it a secure, transparent repository for financial transactions and other important information.\n  \n  \n    Loss of Faith in Traditional Financial Institutions\n\n    Younger millennials and members of Gen Z will have grown up exposed to the harsh realities of global recessions, financial crises, mortgage debt crash and bailouts, quantitative easing and generally speaking economic uncertainty.\n\n    This exposure has not only made them cautious and careful about their finances, but also diminished their inclination to trust traditional financial systems. Many have come to see banks and other conventional financial institutions as inefficient and inequitable, if not outright exploitative.\n\n    To these investors, many of whom feel deprived of opportunities to acquire and build wealth through conventional means, cryptocurrency presents a promising shot at greater economic mobility.\n\n    Some may also see crypto trading as a means of pushing back against financial systems that have failed to support their generation in the ways that they need.\n  \n  \n    Ease of Access\n\n    Cryptocurrency platforms of 2023 pride themselves on their accessibility. This has historically been a major selling point with investors of all ages and in all kinds of markets.\n\n    A new investor can create an account with a crypto exchange with relative ease, sometimes even without identifying themselves since the law is still unclear on that issue in most countries. Then they can immediately receive access to the wealth of investing opportunities and trading products the platform provides.\n\n    Take Binance for instance: With just a smartphone, you can buy crypto there, trade its derivatives, stake it, farm it or put it in a locked interest-bearing account. The options that investors get on crypto platforms are simply not even in the same ballpark as what you get in a bank nowadays.\n\n    Compare this to traditional investing, where the process of even setting oneself up as an investor is fraught with so many complications. New participants are often compelled to study a multitude of complexities before they can even begin trading through a brokerage account.\n\n    Most cryptocurrencies also do not have an IPO, which means that both retail investors and venture capitalists have roughly the same opportunities to support and earn returns on crypto projects.\n\n    Given all this, it's unsurprising that young people would avoid investing in stocks in favor of more accessible alternatives.\n  \n  \n    Sense of Community\n\n    It's possible to trace at least some of the younger generation's interest in crypto to the ubiquity of the internet, social media, and other digital technology in their lives.\n\n    A recent study by Hargreaves Lansdown PLC, for instance, found that up to 60% of investors under 40 years of age preferred to get their investing advice on social media platforms like Reddit and YouTube.\n\n    Crypto proponents naturally maintain a strong presence in the online forum culture, ready to welcome novice traders into their ever-growing online communities. The power this sense of community has to attract young investors to crypto spaces can't be understated, especially during the post-pandemic times.\n\n    Besides the alluring promise of great economic returns, many young people find that participating in crypto communities removes their loneliness and sense of social isolation. They thus come to see these online spaces as trustworthy sources of advice on viable crypto projects, as well as spaces for community discussion or support in the event of failed investments.\n\n    Some young investors also relish the opportunity to be part of an active movement. Many crypto holders are eager to find more involved ways to further support the projects they invest in. They may act as marketers and community managers in online spaces, and their actions in those spaces can and often do help drive the markets.\n  \n\n\nBottom line\n\nAt the end of the day, young investors' interest in cryptocurrencies is in large part a reflection of the technological, social, and economic realities that have shaped their lives.\n\nThese new and radically divergent investing behaviors in turn have the potential to help reshape the global financial landscape in years to come.\n",
       category: ["reports"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","dca","yield","defi","blockchain-technology","binance","coinrule"],
       author: "TDOU",
-      id: 63
+      id: 68
     });
     
   
@@ -656,7 +706,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-bot-trading","crypto-tools","trading-technique","crypto-trading-strategy","scalping","bitfinex","coinrule","bitfinex"],
       author: "Karlvonbahnhof",
-      id: 64
+      id: 69
     });
     
   
@@ -666,7 +716,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","kyc","adoption","ledger","bitfinex"],
       author: "TDOU",
-      id: 65
+      id: 70
     });
     
   
@@ -676,7 +726,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","defi","yield","bitfinex","ledger"],
       author: "Diana",
-      id: 66
+      id: 71
     });
     
   
@@ -686,7 +736,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","crypto-fundamentals","crypto-tools","tradingview","shrimpy"],
       author: "JMT",
-      id: 67
+      id: 72
     });
     
   
@@ -696,7 +746,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-bot-trading","crypto-tools","trading-technique","crypto-trading-strategy","arbitrage","bitfinex","coinrule","pionex"],
       author: "TDOU",
-      id: 68
+      id: 73
     });
     
   
@@ -706,7 +756,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","crypto-tools","yield","independent-reserve"],
       author: "TDOU",
-      id: 69
+      id: 74
     });
     
   
@@ -716,7 +766,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","tradingview-script-review","crypto-tools","crypto-bot-trading","custodial-trading","phemex"],
       author: "TDOU",
-      id: 70
+      id: 75
     });
     
   
@@ -726,17 +776,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","defi","bitfinex","independent-reserve"],
       author: "TDOU",
-      id: 71
+      id: 76
     });
     
   
     this.add({
       title: "Buying Crypto Non-KYC: Where to do it with minimal risk?",
-      content: "No-KYC exchanges: Top of the market in 2022\n\n\n  \n    \n      Non-custodial\n      \n        LocalCryptos\n        \n        zero-knowledge dApp (big cryptos only)\n      \n    \n  \n  \n    \n      Custodial\n      \n        Bitforex\n        \n        Quick to list new coins\n      \n    \n  \n\n\n\n\n \n\nThere is always the one exchange that gets the most attention…until a better one emerges. LocalCryptos have been on the top of the market for P2P no-KYC trading for at least 3 years now, but it is probably not going to change any time soon.\n\nWe’ve added Kine DEX into the list of trading no-KYC platforms and added LocalMonero as a P2P marketplace where you can buy for fiat.\n\n\n  Jump to the full list of platforms to buy or trade crypto no-KYC.\n\n\n\n\nBuying crypto without KYC: Know your risks\n\nBack in the infancy of crypto trading, buying Bitcoin without KYC was the standard. Those days are gone, for better or worse.\n\nKYC, or know your customer is now required by all big exchanges as per the ever tightening regulatory requirements.\n\nThe positive impact of KYC is that crypto purchases and withdrawal addresses are getting more documented as each day passes, which makes it far more difficult to use cryptocurrencies for illicit activities.\n\nThe negative is that make you effectively cut off from purchasing crypto just because a big exchange decided to block out traders from country on political or other discretionary reasons, not for reasons of criminal activity.\n\nHot takes asides, in all honestly for many traders long-form KYC questionnaires are just a superfluous evil they don’t want to spend time on.\n\nFor yet others, uploading your documents into a cryptocurrency exchange looks like a surefire way to get them abused and sold on the dark web. (This last group has been around the block, I can tell you.)\n\nWhat to look for in a no-KYC exchange?\n\nBuying crypto non-KYC is by far not without risks, though.\n\nWhile you are not risking fraud by an exchange employee and you are not risking the exposure of your documents through a breach, like it infamously happened to Ledger, buying crypto non-KYC exposes you to the dangers of malicious P2P vendor or to a full-blown exit scam, where the whole no-KYC unregulated exchange vanishes with all user deposits.\n\nBelow are the three most important things to look for in a platform that claims to let you buy or trade crypto without KYC.\n\n1. Non-KYC Crypto Exchange Should Be Non-Custodial\n\nThis is not 2011. Good part of the world knows what crypto is and that crypto exchanges exist - including the law enforcement. KYC requirements exist to prevent people from cashing out their criminal profits.\n\nThat makes sense. What makes arguably less sense is the other reason for KYC, which is to prevent people trading derivatives when an arbitrary financial authority decided that plebs shouldn’t do that. Anyway.\n\nCustodial no-KYC exchanges such as formerly BitMEX are the most obvious platforms to target for hackers and for the law alike.\n\nYour geolocation can be traced on custodial or non-custodial crypto exchanges the same, because of metadata like your IP, reused email address or reused username. The important difference however is that your crypto assets can only be seized from a custodial exchange, if you have it deposited there.\n\nNon-custodial trading happens between two user wallets, ideally with an intermediary which is a smart contract that serves as an escrow. Even the Bitcoin blockchain has enough scripting capability to run a native escrow, by the way.\n\n\n  To trade custodial, you need to send your cryptocurrency to a wallet controlled by the exchange, giving up the control over your asset. (Non-custodial trading is done from a wallet only you control.)\n  To cash out custodial, you need to link your exchange to a bank account, which links your crypto to your IRL identity. (In non-custodial exchanges you need to let your counter-party know your bank account number, but good non-custodial platforms like LocalCryptos encrypt private communication, keeping your fiat-based identity secret.)\n\n\nEven if you sign up on a custodial crypto exchange that boasts to not require KYC, there is no guarantee this will not change in the future and without any warning. We all know what happened to BitMEX, and frankly BitMEX made it last for way longer that seemed likely.\n\nA small, under-the-radar custodial trading platform will be ignored by the authorities for a long time, but at some point it will get popular. Then it will inevitably have to start requiring KYC.\n\nSome custodial exchanges aren’t very nice about it. Some crypto traders report the so-called “KYC Scam”, where crypto trading platforms like Bittrex, Poloniex or Changelly freeze withdrawal function to force users to submit KYC or else lose their deposit.\n\nYou probably get by now that using non-custodial platforms saves a lot of hassle. At this stage, non-custodial trading is not new either - cold staking and yield farming is almost exclusively done on non-custodial platforms, when you leave out Binance staking.\n\n\n\nThe selection of no-KYC markets good for buying is finally getting good enough too:\n\n\n  LocalCryptos is a zero-knowledge P2P market to buy or sell crypto for fiat. Zero-knowledge means that the company running the platform doesn’t have access to any user information - including the private messages between buyers and sellers.  LocalCryptos supports all the oldest cryptos: BTC, ETH, LTC and DASH. These four coins are listed on most other crypto exchanges, where you can then trade them for low-cap cryptos or for restrictive coins like BNB\n  LocalMonero is a P2P platform where you can buy Monero without KYC. It is not a zero-knowledge dApp, it is basically just a message board, which is not ideal - but the XMR blockchain doesn’t support anything better than this. Traders report that LocalMonero vendors usually do not want to see your ID.\n  To trade and DeFi-stake altcoins on a non-custodial exchange, we have Uniswap or Kine DEX or aggregators like 1inch.\n  Futures and leveraged derivatives markets are being developed at LeverJ by community veteran crypto traders.\n  To trade crypto coins and tokens of different blockchains, without giving away custody of your assets, we have WhalesHeaven.\n\n\nNote - LocalBitcoins platform is not recommended - more here\n\nSo there’s that. For buying crypto for fiat with no-KYC, do go non-custodial. As for trading, there’s plenty of DEX platforms to choose from too.\n\nThere are situations where you must trade custodial. It could be that you are a trader who works on short timeframes and you need the liquidity and market depth. If that is so, keep reading through the two following points.\n\n2. Cheap and Easy Crypto Withdrawals\n\nOne of the warning signs of BitMEX being in trouble could have been the prohibitively high fees for crypto withdrawals (up to 10x the transaction fee for BTC). When a crypto exchange does something that discourages traders from withdrawing their money, you know the platform is in trouble.\n\nIn a good no-KYC exchange that is custodial, there should be a high upper cap on crypto withdrawals for no-KYC users. Exchanges might pull a story about mitigating abuse by criminals. This is nonsense, on public blockchains all transactions are traceable. Capping withdrawals makes no sense.\n\nHigh withdrawal maxes\n\n\n  Bitfinex (6% off fees) has no maximum withdrawal limit for no-KYC traders. - This is great\n  Bitforex has a limit of max 100 BTC per 24 hours for no-KYC traders, with 10k+ USD withdrawals delaying a few hours for additional checks. - This is pretty good\n\n\nLow withdrawal minimums and fees\n\nA no-KYC crypto exchange will never announce they got hacked or seized before touching user withdrawals. Withdrawals will go first, only after some time will the users learn what actually happened and whether they have a chance of getting their crypto back. A 2020 showcase of the issue was the Chinese futures exchange OKEx, when it halted withdrawals due to trouble with the police.\n\nYou can avoid getting caught up in this type of mess by withdrawing your money to a crypto wallet often enough, for which you need the exchange to have low withdrawal fees and low withdrawal minimums.\n\n\n  Bitfinex (6% off fees) withdrawal minimum is “0.00012 BTC” (variable - 5 USD equivalent) with fee 0.0004 BTC for Bitcoin\n  Bitforex withdrawal minimum is 0.0010 BTC with fee 0.0005 BTC\n  Phemex withdrawal minimum is 0.0.0010 BTC with fee 0.00057 BTC\n\n\nEasy withdrawals are paramount in custodial non-KYC exchanges as these are most likely to get in trouble at some point.\n\nNow to re-iterate the previous key point: With regards to fully custody-free DEX platforms like WhalesHeaven, you wouldn’t need to worry about a hack, nor about exit scam or too high withdrawal fees. The type of tech they’re using doesn’t allow them to have custody of your assets at all.\n\nThat means that having your funds stolen through a non-custodial platform wouldn’t be possible - you’re in control of your funds at all times. It also means they aren’t be able to impose withdrawal fees on you, because you are trading from your own wallet.\n\nAs for buying crypto for fiat on a non-custodial exchange, the place for that is LocalCryptos. Unlike LocalBitcoins, LocalCryptos is actually a dApp. That means the exchange knows no details about its vendors and buyers.\n\nA somewhat similar outfit in terms of p2p architecture is the Crypton Exchange, but Crypton is built for trading more so than for simple purchases like LocalCryptos.\n\nCrypton is part of the full-fledged Utopia ecosystem together with web browser, emails and chat system, and is a kind of non-KYC “digital offshore” platform of a new generation. The process of registration on the exchange is absolutely anonymous: you only need a nickname and password. Crypton claims all transaction data is protected and cannot be transferred to third parties.\n\n3. Proven Track Of Record, Exchange Reps on Reddit\n\nA custodial exchange needs to have easily accessible customer support.\n\nPrivate Telegram chats and 1-on-1 customer service is usually reserved for fully verified OTC traders, but everyone should be able to quickly reach out to an exchange representative on Reddit when they notice a problem with the platform.\n\nGood track of record is important too - and not just a record of past without hacking.\n\nBitfinex was hacked in August 2016 but they handled the situation well by being upfront about it. They promptly organized AMA sessions with the community head and eventually came up with the redemption token scheme which made up for the losses individual users had to take - even for the losses of unverified users. (Note that legacy solutions offer no help for non-KYC users.)\n\nGood handling of the incident leaves Bitfinex with a great track of records even though they were hacked, and a recommended non-KYC custodial exchange.\n\nEither way, there is clearly a lot of demand for non-KYC crypto trading, because new platforms keep emerging every so often. One example is Bitforex, that only emerged very recently but became the mecca of non-KYC dog money trading.\n\n\n\nList of best no-KYC crypto exchanges\n\n\n  (Custodial) Bitfinex: spot, margin, lending, futures, airdrops\n    \n      Bitfinex also owns a non-custodial trading platform DeversiFi with no gas fees\n      Long and decent track of record\n    \n  \n  (Custodial) Bitforex: perps, small alts, up to 200x leverage\n    \n      No US resident policy (more about Bitforex in the review here)\n      Has perpetual swap, airdrops, NFT and Metaverse coins… anything that gets hyped\n      Short but so far good track of record\n    \n  \n  (Custodial) Phemex: perps, spot, tether, bonuses and competitions\n    \n      has limits (more about Phemex in the review here)\n    \n  \n  (Custodial) WhiteBit: defi, staking, futures, airdrops\n    \n      has limits\n    \n  \n  (P2P) Crypton Exchange: anonymous signup, runs on the Utopia p2p ecosystem\n  (P2P) LocalMonero: onramp from fiat into XMR\n  (Non-Custodial) LocalCryptos: onramp (p2p, zero-knowledge dApp) This platform is recommended for buying crypto for fiat without KYC\n  (Non-Custodial) LeverJ: futures trading and tokenized legacy assets\n  (Non-Custodial) Uniswap: spot trading and liquidity staking (high gas fees)\n  (Non-Custodial) DeversiFi: ETH-based DeFi DEX (zero gas fees)\n  (Non-Custodial) WhalesHeaven: decentralized p2p swap (escrow, zero withdrawal fees, lowest trading/transaction fees possible)\n  (Non-Custodial) Swapzone: aggregates exchanges, crypto to crypto swap, compares best exchange rates\n  (Non-Custodial) Kine: DEX run by former Huobi execs, trades popular coins like SHIB or ETH in stablecoin pairs. Very low fees!\n  (Non-Custodial) Droidex: best exchange rates across most popular DEX, minimal gas fee, compares best exchange rates, crypto to crypto swap, easy-to-use interface\n\n\nWord of caution: WhalesHeaven is a new p2p platform that does not have nearly as good cred in the community as LocalCryptos do.\n",
+      content: "No-KYC exchanges: Top of the market in 2022\n\n\n  \n    \n      Non-custodial\n      \n        LocalCryptos\n        \n        zero-knowledge dApp (big cryptos only)\n      \n    \n  \n  \n    \n      Custodial\n      \n        Bitforex\n        \n        Quick to list new coins\n      \n    \n  \n\n\n\n\n \n\nThere is always the one exchange that gets the most attention…until a better one emerges. LocalCryptos have been on the top of the market for P2P no-KYC trading for at least 3 years now, but it is probably not going to change any time soon.\n\nWe’ve added Kine DEX into the list of trading no-KYC platforms and added LocalMonero as a P2P marketplace where you can buy for fiat.\n\n\n  Jump to the full list of platforms to buy or trade crypto no-KYC.\n\n\n\n\nBuying crypto without KYC: Know your risks\n\nBack in the infancy of crypto trading, buying Bitcoin without KYC was the standard. Those days are gone, for better or worse.\n\nKYC, or know your customer is now required by all big exchanges as per the ever tightening regulatory requirements.\n\nThe positive impact of KYC is that crypto purchases and withdrawal addresses are getting more documented as each day passes, which makes it far more difficult to use cryptocurrencies for illicit activities.\n\nThe negative is that make you effectively cut off from purchasing crypto just because a big exchange decided to block out traders from country on political or other discretionary reasons, not for reasons of criminal activity.\n\nHot takes asides, in all honestly for many traders long-form KYC questionnaires are just a superfluous evil they don’t want to spend time on.\n\nFor yet others, uploading your documents into a cryptocurrency exchange looks like a surefire way to get them abused and sold on the dark web. (This last group has been around the block, I can tell you.)\n\nWhat to look for in a no-KYC exchange?\n\nBuying crypto non-KYC is by far not without risks, though.\n\nWhile you are not risking fraud by an exchange employee and you are not risking the exposure of your documents through a breach, like it infamously happened to Ledger, buying crypto non-KYC exposes you to the dangers of malicious P2P vendor or to a full-blown exit scam, where the whole no-KYC unregulated exchange vanishes with all user deposits.\n\nBelow are the three most important things to look for in a platform that claims to let you buy or trade crypto without KYC.\n\n1. Non-KYC Crypto Exchange Should Be Non-Custodial\n\nThis is not 2011. Good part of the world knows what crypto is and that crypto exchanges exist - including the law enforcement. KYC requirements exist to prevent people from cashing out their criminal profits.\n\nThat makes sense. What makes arguably less sense is the other reason for KYC, which is to prevent people trading derivatives when an arbitrary financial authority decided that plebs shouldn’t do that. Anyway.\n\nCustodial no-KYC exchanges such as formerly BitMEX are the most obvious platforms to target for hackers and for the law alike.\n\nYour geolocation can be traced on custodial or non-custodial crypto exchanges the same, because of metadata like your IP, reused email address or reused username. The important difference however is that your crypto assets can only be seized from a custodial exchange, if you have it deposited there.\n\nNon-custodial trading happens between two user wallets, ideally with an intermediary which is a smart contract that serves as an escrow. Even the Bitcoin blockchain has enough scripting capability to run a native escrow, by the way.\n\n\n  To trade custodial, you need to send your cryptocurrency to a wallet controlled by the exchange, giving up the control over your asset. (Non-custodial trading is done from a wallet only you control.)\n  To cash out custodial, you need to link your exchange to a bank account, which links your crypto to your IRL identity. (In non-custodial exchanges you need to let your counter-party know your bank account number, but good non-custodial platforms like LocalCryptos encrypt private communication, keeping your fiat-based identity secret.)\n\n\nEven if you sign up on a custodial crypto exchange that boasts to not require KYC, there is no guarantee this will not change in the future and without any warning. We all know what happened to BitMEX, and frankly BitMEX made it last for way longer that seemed likely.\n\nA small, under-the-radar custodial trading platform will be ignored by the authorities for a long time, but at some point it will get popular. Then it will inevitably have to start requiring KYC.\n\nSome custodial exchanges aren’t very nice about it. Some crypto traders report the so-called “KYC Scam”, where crypto trading platforms like Bittrex, Poloniex or Changelly freeze withdrawal function to force users to submit KYC or else lose their deposit.\n\nYou probably get by now that using non-custodial platforms saves a lot of hassle. At this stage, non-custodial trading is not new either - cold staking and yield farming is almost exclusively done on non-custodial platforms, when you leave out Binance staking.\n\n\n\nThe selection of no-KYC markets good for buying is finally getting good enough too:\n\n\n  LocalCryptos is a zero-knowledge P2P market to buy or sell crypto for fiat. Zero-knowledge means that the company running the platform doesn’t have access to any user information - including the private messages between buyers and sellers.  LocalCryptos supports all the oldest cryptos: BTC, ETH, LTC and DASH. These four coins are listed on most other crypto exchanges, where you can then trade them for low-cap cryptos or for restrictive coins like BNB\n  LocalMonero is a P2P platform where you can buy Monero without KYC. It is not a zero-knowledge dApp, it is basically just a message board, which is not ideal - but the XMR blockchain doesn’t support anything better than this. Traders report that LocalMonero vendors usually do not want to see your ID.\n  To trade and DeFi-stake altcoins on a non-custodial exchange, we have Uniswap or Kine DEX or aggregators like 1inch.\n  Futures and leveraged derivatives markets are being developed at LeverJ by community veteran crypto traders.\n  To trade crypto coins and tokens of different blockchains, without giving away custody of your assets, we have WhalesHeaven.\n\n\nNote - LocalBitcoins platform is not recommended - more here\n\nSo there’s that. For buying crypto for fiat with no-KYC, do go non-custodial. As for trading, there’s plenty of DEX platforms to choose from too.\n\nThere are situations where you must trade custodial. It could be that you are a trader who works on short timeframes and you need the liquidity and market depth. If that is so, keep reading through the two following points.\n\n2. Cheap and Easy Crypto Withdrawals\n\nOne of the warning signs of BitMEX being in trouble could have been the prohibitively high fees for crypto withdrawals (up to 10x the transaction fee for BTC). When a crypto exchange does something that discourages traders from withdrawing their money, you know the platform is in trouble.\n\nIn a good no-KYC exchange that is custodial, there should be a high upper cap on crypto withdrawals for no-KYC users. Exchanges might pull a story about mitigating abuse by criminals. This is nonsense, on public blockchains all transactions are traceable. Capping withdrawals makes no sense.\n\nHigh withdrawal maxes\n\n\n  Bitfinex (6% off fees) has no maximum withdrawal limit for no-KYC traders. - This is great\n  Bitforex has a limit of max 100 BTC per 24 hours for no-KYC traders, with 10k+ USD withdrawals delaying a few hours for additional checks. - This is pretty good\n\n\nLow withdrawal minimums and fees\n\nA no-KYC crypto exchange will never announce they got hacked or seized before touching user withdrawals. Withdrawals will go first, only after some time will the users learn what actually happened and whether they have a chance of getting their crypto back. A 2020 showcase of the issue was the Chinese futures exchange OKEx, when it halted withdrawals due to trouble with the police.\n\nYou can avoid getting caught up in this type of mess by withdrawing your money to a crypto wallet often enough, for which you need the exchange to have low withdrawal fees and low withdrawal minimums.\n\n\n  Bitfinex (6% off fees) withdrawal minimum is “0.00012 BTC” (variable - 5 USD equivalent) with fee 0.0004 BTC for Bitcoin\n  Bitforex withdrawal minimum is 0.0010 BTC with fee 0.0005 BTC\n  Phemex withdrawal minimum is 0.0.0010 BTC with fee 0.00057 BTC\n\n\nEasy withdrawals are paramount in custodial non-KYC exchanges as these are most likely to get in trouble at some point.\n\nNow to re-iterate the previous key point: With regards to fully custody-free DEX platforms, you wouldn’t need to worry about a hack, nor about exit scam or too high withdrawal fees. The type of tech they’re using doesn’t allow them to have custody of your assets at all.\n\nThat means that having your funds stolen through a non-custodial platform wouldn’t be possible - you’re in control of your funds at all times. It also means they aren’t be able to impose withdrawal fees on you, because you are trading from your own wallet.\n\nAs for buying crypto for fiat on a non-custodial exchange, the place for that is LocalCryptos. Unlike LocalBitcoins, LocalCryptos is actually a dApp. That means the exchange knows no details about its vendors and buyers.\n\nThe process of registration on the exchange is absolutely anonymous: you only need a nickname and password. LocalCryptos is a dApp, so all transaction data is recorded on chain in the classic pseudonymous way: Cannot be tampered with or transferred to third parties, but once your address is tied with your real-world identity, all of your activity is easily traceable.\n\n3. Proven Track Of Record, Exchange Reps on Reddit\n\nA custodial exchange needs to have easily accessible customer support.\n\nPrivate Telegram chats and 1-on-1 customer service is usually reserved for fully verified OTC traders, but everyone should be able to quickly reach out to an exchange representative on Reddit when they notice a problem with the platform.\n\nGood track of record is important too - and not just a record of past without hacking.\n\nBitfinex was hacked in August 2016 but they handled the situation well by being upfront about it. They promptly organized AMA sessions with the community head and eventually came up with the redemption token scheme which made up for the losses individual users had to take - even for the losses of unverified users. (Note that legacy solutions offer no help for non-KYC users.)\n\nGood handling of the incident leaves Bitfinex with a great track of records even though they were hacked, and a recommended non-KYC custodial exchange.\n\nEither way, there is clearly a lot of demand for non-KYC crypto trading, because new platforms keep emerging every so often. One example is Bitforex, that only emerged very recently but became the mecca of non-KYC dog money trading.\n\n\n\nList of best no-KYC crypto exchanges\n\n\n  (Custodial) Bitfinex: spot, margin, lending, futures, airdrops\n    \n      Bitfinex also owns a non-custodial trading platform DeversiFi with no gas fees\n      Long and decent track of record\n    \n  \n  (Custodial) Bitforex: perps, small alts, up to 200x leverage\n    \n      No US resident policy (more about Bitforex in the review here)\n      Has perpetual swap, airdrops, NFT and Metaverse coins… anything that gets hyped\n      Short but so far good track of record\n    \n  \n  (Custodial) Phemex: perps, spot, tether, bonuses and competitions\n    \n      has limits (more about Phemex in the review here)\n    \n  \n  (Custodial) WhiteBit: defi, staking, futures, airdrops\n    \n      has limits\n    \n  \n  (P2P) Crypton Exchange: anonymous signup, runs on the Utopia p2p ecosystem\n  (P2P) LocalMonero: onramp from fiat into XMR\n  (P2P) LocalCryptos: onramp (p2p, zero-knowledge dApp) This platform is recommended for buying crypto for fiat without KYC\n  (Non-Custodial) Uniswap &amp; its clones: spot trading and liquidity staking (high gas fees)\n  (Non-Custodial) dYdX: Layer 2 trading with as little as 10 USD worth and no fees, more functionality on Layer 1 Ethereum.\n  (Non-Custodial) LeverJ: futures trading and tokenized legacy assets\n\n\nWord of caution: WhalesHeaven is a new p2p platform that does not have nearly as good cred in the community as LocalCryptos do.\n",
       category: ["crypto-trading-101"],
       tags: ["trading-platforms","crypto-fundamentals","crypto-trading-strategy","kyc","top","bitfinex","localcryptos","phemex","bitforex"],
       author: "altcointrading",
-      id: 72
+      id: 77
     });
     
   
@@ -746,7 +796,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-tools","trading-technique","crypto-bot-trading","crypto-trading-strategy","arbitrage","bitforex","coinrule","pionex"],
       author: "KarlVonBahnhof",
-      id: 73
+      id: 78
     });
     
   
@@ -756,7 +806,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["nft","defi","blockchain-technology","coldcard","ledger"],
       author: "Diana",
-      id: 74
+      id: 79
     });
     
   
@@ -766,7 +816,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["pattern-trading","crypto-trading-strategy","crypto-bot-trading","trading-technique","crypto-tools","tradingview","coinrule","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 75
+      id: 80
     });
     
   
@@ -776,7 +826,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["trading-platforms","yield","defi","blockchain-technology","independent-reserve","shrimpy"],
       author: "Diana",
-      id: 76
+      id: 81
     });
     
   
@@ -786,7 +836,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-trading-strategy","crypto-tools","crypto-opsec","ledger"],
       author: "Diana",
-      id: 77
+      id: 82
     });
     
   
@@ -796,7 +846,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["trading-technique","daytrading","scalping","trading-journals","tradingview","bitfinex"],
       author: "Diana",
-      id: 78
+      id: 83
     });
     
   
@@ -806,7 +856,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","crypto-charting","arbitrage","trading-technique","tradingview","coinrule"],
       author: "AltcoinTrading.NET",
-      id: 79
+      id: 84
     });
     
   
@@ -816,7 +866,7 @@ var idx = lunr(function() {
       category: ["psa"],
       tags: ["kyc","adoption","defi","staking","nft","ledger","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 80
+      id: 85
     });
     
   
@@ -826,7 +876,7 @@ var idx = lunr(function() {
       category: ["nft-trading"],
       tags: ["nft","crypto-trading-strategy","defi","ledger","billfodl"],
       author: "Diana",
-      id: 81
+      id: 86
     });
     
   
@@ -836,7 +886,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["staking","yield","crypto-tools","kraken","localcryptos","independent-reserve","bitfinex","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 82
+      id: 87
     });
     
   
@@ -846,7 +896,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["staking","yield","defi","crypto-tools","top","bitfinex","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 83
+      id: 88
     });
     
   
@@ -856,17 +906,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","defi","blockchain-technology","bitforex"],
       author: "AltcoinTrading.NET",
-      id: 84
+      id: 89
     });
     
   
     this.add({
       title: "What is grid trading? Where to run a grid bot to trade crypto?",
-      content: "Grid trading is one of the most popular crypto trading strategies among people who do not want to manually trade. It is extremely easy to automate, and in the right market conditions it can make nice profits.\n\nTools &amp; templates for grid trading listed in this article:\n\n\n  Example of successful grid trading strategy\n  Best crypto grid bot platforms\n    \n      3commas - fully black box\n      Coinrule - template included\n      FTX Quant Zone - requires setup\n      Tradingview - requires either Coinrule account or coding\n    \n  \n  Best crypto for grid bot\n\n\nWhat is grid trading?\n\n\n  Grid trading is a style of short term speculation. A grid trading strategy uses multiple orders to capture price movements within a range of prices.\n\n\nYes you got it right, grid trading is basically a “buy low, sell high” with a fancy name.\n\nIn grid trading lingo, the grid is a channel created by placing buy and sell orders on the same market. When using a done-for-you grid bot like 3commas, you will need to decide on the grid limits by yourself.\n\nThe bot will analyse the volatility on your market, split your account balance into small parts and place your buy and sell orders without your input. Your orders execute automatically, too.\n\nFlat grid vs trending grid\n\nThere are two main types of grid trading strategies - flat and trending.\n\n  With a flat grid strategy, you set up your order grid between two price levels. This is the most basic grid trading strategy, all black-box trading bots use it.\n  With a trending grid strategy, you use a technical indicator to define the limits of your grid. Trending grid requires the knowledge of technical indicators and how to backtest them.\n\n\n\n\nFlat grid trading on Binance. Source: Coinrule\n\nIs grid trading a good strategy for your goals?\n\nGrid trading is a good strategy if your goals are making profits in terms of fiat, but you do not want to hold cryptocurrency. Let’s say you don’t believe in crypto, but you want to trade it for the dollar profits. In this case, set up a grid on ETHUSD.\n\n\n  A good grid on ETHUSD will give you stable profits in USD.\n  However, if some of your orders fail to hit, you will possibly end up with lower profit than if you simply held.\n\n\nIf you do want to hold crypto, but you still want to try this strategy, you can grid trade a ratio.\n\n\n  Grid on ETHBTC will give you profits in BTC.\n  Same limitation applies - you may end up with less profit than if you held ETH.\n\n\nA lot of it comes down to tuning your grid strategy to your selected market… Or to trusting a 3commas-style black box grid.\n\n\n\nSuccessful grid strategy example\n\n\n  A successful trending grid strategy can be buying every touch of lower Bollinger band and selling every touch of the upper Bollinger band.\n  A successful flat grid strategy is, after identifying a range, scattering buy orders within a set distance from the support and scattering sell orders within a set distance from the resistance.\n\n\nHoly marketing batman, but this grid trading sounded like something brand new, right?\n\nCombined rules for grid trading\n\n30M Bbands on an ETHUSD FTX market below, to show that it works - including the limitation mentioned in previous section.\n\nLook at the pink marks. You would get one buy missed between them, when the price action didn’t reach the bottom band.\n\n\n\nYour grid bot would buy the next touch and sell that again for profit, it’s just that the next buy would be at a higher price.\n\nIf this keeps happening a lot, your grid will be less profitable than HODL.\n\nThis is why grid bots usually make use of less strict rules.\n\nLet’s build a simple flat grid without stop loss:\n\n  If price has decreased of at least 1% from (value at the middle of the range)…\n  …and if price is still higher than 2600 USD…\n  …then buy for 10% of my account balance.\n  Or, if price has increased at least 1% from (value at the middle of the range)…\n  …and if price is still higher than 3000 USD…\n  …then sell previous order.\n  Run this 15x.\n\n\nThis flat grid will buy and sell at various places near your respective support and resistance levels, which will get your orders filled more often.\n\nIn the exact same way, in a trending grid with Bollinger bands, you could avoid misses by setting your grid trigger not at touching the bands, but within a certain distance.\n\nJust as a note: It is not immediately obvious, but sometimes lower amount of filled orders generates higher total profit over time. It can happen if each position closes with a higher profit, making up for the lower number of trades. Without backtesting you will not know which way will be more profitable.\n\nEntry and exit are not enough for a successful grid trading strategy\n\nThe Bollinger band scalp grid on ETHUSD in current market conditions would be profitable without a stop loss.\n\nHowever, knowing crypto, you should always set up at least a catastrophic stop loss. Far enough not to get triggered all the time, but still preventing really bad losses.\n\nSo, a successful grid trading strategy must have three components:\n\n\n  a sound entry strategy - that’s covered\n  defined risk management - meaning stop loss\n  money management - meaning position sizing\n\n\nEntry strategies can be based on indicators or price patterns. Risk management includes setting Stop Losses and Take Profits levels to protect profits and contain losses. Money management determines the size of each trade and the number of trades placed per grid.\n\nThis is all down to your risk appetite and preferences.\n\nBest crypto grid bot platforms\n\nA flat trading grid trades within a range of two price levels.\nThis is the simpler type of grid, when it comes to automation. But in 2022 there are grid bots for all levels of complexity.\n\nHere are the options, from the black-box, done-for-you crypto grid bot to the free stuff which requires a little bit of effort.\n\n\n\n\n  \n    [paid] Done-for-you blackbox grid bot - 3commas\n\n    If you do not want to bother setting up the rules at all, just use 3commas. The only thing it wants you to choose is the range within which to trade. The bot uses machine learning to scatter your orders through the range.\n\n    \n  \n  \n    [paid] Customizable, but user-friendly grid bot - Coinrule template\n\n    If you want to have better control over the profit size, use the Coinrule platform.\n\n    Coinrule template\n\n    This is a Coinrule template for a flat grid bot that buys and sells at a percentage distance:\n\n    \n\n    \n  \n  \n    [free] Customizable grid bot without nice UI - FTX Quant Zone\n\n    Yep, you can run loads of things on the FTX quant zone, and a flat grid bot is one of them. The only drawback is that you need to type a few lines of text into a box instead of shuffling a few boxes in a cute user interface.\n\n    FTX template (Quant Zone Grid Bot)\n\n    In FTX quant zone, you can set a single-direction rule to trigger an order. That means a grid bot on FTX will need two rules - the buy side and the sell side. The quant zone has moving averages and volume if you want to refine your rules with some technical analysis, but it accepts plain price level numbers too.\n\n    FTX quant zone template example for a grid bot’s buy side could look like the following: If ETHUSD is over 2600, and currently at least 1% below the 4H exponential moving average, place a limit buy at last price with 5% of my available balance.\n\n    If you don’t like working with a moving averge, you can make a true flat grid by just naming a price level. Just replace the EWMA in the trigger rules:\n\n     (price(\"ETH/USD\") &gt; 2600) and (price(\"ETH/USD\") &lt; 0.99*(ewma_price(\"ETH/USD\", 240)))\n    \n\n    Another Quant Zone rule will be needed for your sell side. The trigger could look like this:\n\n     (price(\"ETH/USD\") &lt; 3000) and (price(\"ETH/USD\") &gt; 1.01*(ewma_price(\"ETH/USD\", 240)))\n    \n\n    For both sides you, will need to set the actual order.\n\n    To test if this works, tick the “Post only” box there. If you make a “Post only” order on FTX, the system will place it but nobody will be allowed to take it. You’ll be able to troubleshoot your strategy without risking money.\n\n    \n\n    Here is the full recipe for the buy side of an FTX grid.\n\n    \n\n    Try it on FTX quant zone!\n\n    \n  \n  \n    [no added cost?] Any level of trigger rule complexity - TradingView (&amp; Coinrule)\n\n    This requires either coding skills or Coinrule subscription. As for coding, I mean actual programming, not just copypasting a rule trigger. But if you can do that, you can run a grid bot of any complexity at no additional cost.\n\n    You need to have a paid TradingView plan for this, so the total cost is not 0. But since most crypto traders have TradingView, there is no additional expense.\n\n    \n\n    The way this grid automation works is via TradingView alerts. Every alert you set up lets you send a message to a webhook URL:\n\n    \n\n    To trade on that message, you need to have that webhook configured somewhere. This is where you need either coding skills, or Coinrule PRO.\n\n    Coinrule platform has a built-in TradingView webhook listener in a paid plan.\n\n    \n\n    Get Coinrule\n  \n\n\nFiner points that might interest you\n\nGrid trading market fit\n\nGrid trading can be used in both forex and cryptocurrency markets, although with varying rates of success.\n\nFor grid trading in crypto, you need a market that is capable of forming of ranges. That’s not a given in crypto, especially not in small-cap alt coins. Alts that trade based off social media pumps are not usually good markets for grid trading either.\n\nBest crypto for grid bot\n\nBest cryptocurrency markets for grid trading are\n\n\n  Big markets and dino alts like BTCUSD, ETHUSD\n  Popular ratios like SOLBTC, ETHBTC\n\n\nWorst coins for grid trading are meme coins and any crypto that is undergoing huge fundamental changes. Those can be listing on large exchanges, social media hype or blockchain upgrades.\n\nGrid trading vs shadow system\n\nGrid trading is very similar to shadow system strategy known from forex. (There is a Strategy post on the Shadow System grid if you’re curious.)\n\nThe difference is that grid trading strategy doesn’t force closing orders daily. Also, even a flat grid may use technical or quantitative analysis to program your entries and exits. Shadow system uses pre-set take profit levels that work out to an overall profit after a few weeks.\n\nSo, grid trading is not a plain numbers game like the shadow system. It does use some discretionary trading methods and it does in part rely on the trader’s good judgement, not on average values over a long time.\n\nDepending on your skill in terms of entries, exits and stops, a good grid has the potential to outperform the shadow system. That’s especially true in trending crypto markets.\n\nGrid bots can run on TA or AI\n\nGrid bot does not have to use technical analysis to place your bids and asks. You can use any data to program your grid bot. Quants could probably come up with a bunch and 3commas uses an AI machine learning algo.\n\nSo, if you don’t have the experience to crank out a profitable custom strategy, then it is best to stick to some ready-made grid bot system.\n\n\n  If you prefer to use technical analysis, scalping Bollinger bands is always a fair game. Easy to set up in Coinrule.\n  Otherwise, 3commas is a black box grid setup. You don’t know how the AI decides, but it does have a built in risk management which is the key point here.\n\n\nBottom line\n\nIn general, cryptocurrencies offer a number of advantages for grid trading. They are 24-hour markets, which allows for more opportunities to trade. Volatility provides opportunities to take advantage of price differences. Cryptocurrencies also have a lower spread than forex markets, which allows for better profits.\n\nThere is plenty of tools for grid trading in crypto, and if you don’t need to have everything done for you, they can be pretty low cost as well. Always do your research and set your stop loss though; honeybadger doesn’t care.\n",
+      content: "Grid trading is one of the most popular crypto trading strategies among people who do not want to manually trade. It is extremely easy to automate, and in the right market conditions it can make nice profits.\n\nTools &amp; templates for grid trading listed in this article:\n\n\n  Example of successful grid trading strategy\n  Best crypto grid bot platforms\n    \n      3commas - fully black box\n      Coinrule - template included\n      FTX Quant Zone - requires setup\n      Tradingview - requires either Coinrule account or coding\n    \n  \n  Best crypto for grid bot\n\n\nWhat is grid trading?\n\n\n  Grid trading is a style of short term speculation. A grid trading strategy uses multiple orders to capture price movements within a range of prices.\n\n\nYes you got it right, grid trading is basically a “buy low, sell high” with a fancy name.\n\nIn grid trading lingo, the grid is a channel created by placing buy and sell orders on the same market. When using a done-for-you grid bot like 3commas, you will need to decide on the grid limits by yourself.\n\nThe bot will analyse the volatility on your market, split your account balance into small parts and place your buy and sell orders without your input. Your orders execute automatically, too.\n\nFlat grid vs trending grid\n\nThere are two main types of grid trading strategies - flat and trending.\n\n  With a flat grid strategy, you set up your order grid between two price levels. This is the most basic grid trading strategy, all black-box trading bots use it.\n  With a trending grid strategy, you use a technical indicator to define the limits of your grid. Trending grid requires the knowledge of technical indicators and how to backtest them.\n\n\n\n\nFlat grid trading on Binance. Source: Coinrule\n\nIs grid trading a good strategy for your goals?\n\nGrid trading is a good strategy if your goals are making profits in terms of fiat, but you do not want to hold cryptocurrency. Let’s say you don’t believe in crypto, but you want to trade it for the dollar profits. In this case, set up a grid on ETHUSD.\n\n\n  A good grid on ETHUSD will give you stable profits in USD.\n  However, if some of your orders fail to hit, you will possibly end up with lower profit than if you simply held.\n\n\nIf you do want to hold crypto, but you still want to try this strategy, you can grid trade a ratio.\n\n\n  Grid on ETHBTC will give you profits in BTC.\n  Same limitation applies - you may end up with less profit than if you held ETH.\n\n\nA lot of it comes down to tuning your grid strategy to your selected market… Or to trusting a 3commas-style black box grid.\n\n\n\nSuccessful grid strategy example\n\n\n  A successful trending grid strategy can be buying every touch of lower Bollinger band and selling every touch of the upper Bollinger band.\n  A successful flat grid strategy is, after identifying a range, scattering buy orders within a set distance from the support and scattering sell orders within a set distance from the resistance.\n\n\nHoly marketing batman, but this grid trading sounded like something brand new, right?\n\nCombined rules for grid trading\n\n30M Bbands on an ETHUSD FTX market below, to show that it works - including the limitation mentioned in previous section.\n\nLook at the pink marks. You would get one buy missed between them, when the price action didn’t reach the bottom band.\n\n\n\nYour grid bot would buy the next touch and sell that again for profit, it’s just that the next buy would be at a higher price.\n\nIf this keeps happening a lot, your grid will be less profitable than HODL.\n\nThis is why grid bots usually make use of less strict rules.\n\nLet’s build a simple flat grid without stop loss:\n\n  If price has decreased of at least 1% from (value at the middle of the range)…\n  …and if price is still higher than 2600 USD…\n  …then buy for 10% of my account balance.\n  Or, if price has increased at least 1% from (value at the middle of the range)…\n  …and if price is still higher than 3000 USD…\n  …then sell previous order.\n  Run this 15x.\n\n\nThis flat grid will buy and sell at various places near your respective support and resistance levels, which will get your orders filled more often.\n\nIn the exact same way, in a trending grid with Bollinger bands, you could avoid misses by setting your grid trigger not at touching the bands, but within a certain distance.\n\nJust as a note: It is not immediately obvious, but sometimes lower amount of filled orders generates higher total profit over time. It can happen if each position closes with a higher profit, making up for the lower number of trades. Without backtesting you will not know which way will be more profitable.\n\nEntry and exit are not enough for a successful grid trading strategy\n\nThe Bollinger band scalp grid on ETHUSD in current market conditions would be profitable without a stop loss.\n\nHowever, knowing crypto, you should always set up at least a catastrophic stop loss. Far enough not to get triggered all the time, but still preventing really bad losses.\n\nSo, a successful grid trading strategy must have three components:\n\n\n  a sound entry strategy - that’s covered\n  defined risk management - meaning stop loss\n  money management - meaning position sizing\n\n\nEntry strategies can be based on indicators or price patterns. Risk management includes setting Stop Losses and Take Profits levels to protect profits and contain losses. Money management determines the size of each trade and the number of trades placed per grid.\n\nThis is all down to your risk appetite and preferences.\n\nBest crypto grid bot platforms\n\nA flat trading grid trades within a range of two price levels.\nThis is the simpler type of grid, when it comes to automation. But in 2023 there are grid bots for all levels of complexity.\n\nHere are the options, from the black-box, done-for-you crypto grid bot to the free stuff which requires a little bit of effort.\n\n\n\n\n  \n    [paid] Done-for-you blackbox grid bot - 3commas\n\n    If you do not want to bother setting up the rules at all, just use 3commas. The only thing it wants you to choose is the range within which to trade. The bot uses machine learning to scatter your orders through the range.\n\n    \n  \n  \n    [paid] Customizable, but user-friendly grid bot - Coinrule template\n\n    If you want to have better control over the profit size, use the Coinrule platform.\n\n    Coinrule template\n\n    This is a Coinrule template for a flat grid bot that buys and sells at a percentage distance:\n\n    \n\n    \n  \n  \n    [free] Customizable grid bot without nice UI - FTX Quant Zone\n\n    Yep, you can run loads of things on the FTX quant zone, and a flat grid bot is one of them. The only drawback is that you need to type a few lines of text into a box instead of shuffling a few boxes in a cute user interface.\n\n    FTX template (Quant Zone Grid Bot)\n\n    In FTX quant zone, you can set a single-direction rule to trigger an order. That means a grid bot on FTX will need two rules - the buy side and the sell side. The quant zone has moving averages and volume if you want to refine your rules with some technical analysis, but it accepts plain price level numbers too.\n\n    FTX quant zone template example for a grid bot’s buy side could look like the following: If ETHUSD is over 2600, and currently at least 1% below the 4H exponential moving average, place a limit buy at last price with 5% of my available balance.\n\n    If you don’t like working with a moving averge, you can make a true flat grid by just naming a price level. Just replace the EWMA in the trigger rules:\n\n     (price(\"ETH/USD\") &gt; 2600) and (price(\"ETH/USD\") &lt; 0.99*(ewma_price(\"ETH/USD\", 240)))\n    \n\n    Another Quant Zone rule will be needed for your sell side. The trigger could look like this:\n\n     (price(\"ETH/USD\") &lt; 3000) and (price(\"ETH/USD\") &gt; 1.01*(ewma_price(\"ETH/USD\", 240)))\n    \n\n    For both sides you, will need to set the actual order.\n\n    To test if this works, tick the “Post only” box there. If you make a “Post only” order on FTX, the system will place it but nobody will be allowed to take it. You’ll be able to troubleshoot your strategy without risking money.\n\n    \n\n    Here is the full recipe for the buy side of an FTX grid.\n\n    \n\n    Try it on FTX quant zone!\n\n    \n  \n  \n    [no added cost?] Any level of trigger rule complexity - TradingView (&amp; Coinrule)\n\n    This requires either coding skills or Coinrule subscription. As for coding, I mean actual programming, not just copypasting a rule trigger. But if you can do that, you can run a grid bot of any complexity at no additional cost.\n\n    You need to have a paid TradingView plan for this, so the total cost is not 0. But since most crypto traders have TradingView, there is no additional expense.\n\n    \n\n    The way this grid automation works is via TradingView alerts. Every alert you set up lets you send a message to a webhook URL:\n\n    \n\n    To trade on that message, you need to have that webhook configured somewhere. This is where you need either coding skills, or Coinrule PRO.\n\n    Coinrule platform has a built-in TradingView webhook listener in a paid plan.\n\n    \n\n    Get Coinrule\n  \n\n\nFiner points that might interest you\n\nGrid trading market fit\n\nGrid trading can be used in both forex and cryptocurrency markets, although with varying rates of success.\n\nFor grid trading in crypto, you need a market that is capable of forming of ranges. That’s not a given in crypto, especially not in small-cap alt coins. Alts that trade based off social media pumps are not usually good markets for grid trading either.\n\nBest crypto for grid bot\n\nBest cryptocurrency markets for grid trading are\n\n\n  Big markets and dino alts like BTCUSD, ETHUSD\n  Popular ratios like SOLBTC, ETHBTC\n\n\nWorst coins for grid trading are meme coins and any crypto that is undergoing huge fundamental changes. Those can be listing on large exchanges, social media hype or blockchain upgrades.\n\nGrid trading vs shadow system\n\nGrid trading is very similar to shadow system strategy known from forex. (There is a Strategy post on the Shadow System grid if you’re curious.)\n\nThe difference is that grid trading strategy doesn’t force closing orders daily. Also, even a flat grid may use technical or quantitative analysis to program your entries and exits. Shadow system uses pre-set take profit levels that work out to an overall profit after a few weeks.\n\nSo, grid trading is not a plain numbers game like the shadow system. It does use some discretionary trading methods and it does in part rely on the trader’s good judgement, not on average values over a long time.\n\nDepending on your skill in terms of entries, exits and stops, a good grid has the potential to outperform the shadow system. That’s especially true in trending crypto markets.\n\nGrid bots can run on TA or AI\n\nGrid bot does not have to use technical analysis to place your bids and asks. You can use any data to program your grid bot. Quants could probably come up with a bunch and 3commas uses an AI machine learning algo.\n\nSo, if you don’t have the experience to crank out a profitable custom strategy, then it is best to stick to some ready-made grid bot system.\n\n\n  If you prefer to use technical analysis, scalping Bollinger bands is always a fair game. Easy to set up in Coinrule.\n  Otherwise, 3commas is a black box grid setup. You don’t know how the AI decides, but it does have a built in risk management which is the key point here.\n\n\nBottom line\n\nIn general, cryptocurrencies offer a number of advantages for grid trading. They are 24-hour markets, which allows for more opportunities to trade. Volatility provides opportunities to take advantage of price differences. Cryptocurrencies also have a lower spread than forex markets, which allows for better profits.\n\nThere is plenty of tools for grid trading in crypto, and if you don’t need to have everything done for you, they can be pretty low cost as well. Always do your research and set your stop loss though; honeybadger doesn’t care.\n",
       category: ["crypto-trading-tools"],
       tags: ["pattern-trading","crypto-bot-trading","crypto-trading-strategy","trading-technique","crypto-tools","tradingview","top","3commas","coinrule","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 85
+      id: 90
     });
     
   
@@ -876,7 +926,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","defi","blockchain-technology","bitfinex","shrimpy"],
       author: "TDOU",
-      id: 86
+      id: 91
     });
     
   
@@ -886,17 +936,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","adoption","kyc","nft","defi","blockchain-technology","bitfinex","shrimpy"],
       author: "TDOU",
-      id: 87
+      id: 92
     });
     
   
     this.add({
       title: "6 Industries Being Disrupted by Blockchain and Cryptocurrencies",
-      content: "By 2022, the popularity of cryptocurrency has at last trickled down into the industries.\n\nExperts from various niches are discovering new uses and applications for blockchain technology and cryptocurrencies, and this is why they are starting to challenge established practices in various sectors.\n\nSome sectors and industries have discovered that blockchain and cryptocurrencies are a better tool for important parts of what they do. Let us look at six industries that are being impacted by blockchain and cryptocurrencies.\n\n\n  \n    Cybersecurity\n\n    We live in a digital world now which means we have to contend with security threats online and within the systems we use. We have already seen various security breaches that had led to the loss of vast amounts of data as well as billions of pounds around the world. Blockchain is being used to thwart such threats by helping businesses and individuals alike secure their data while also disallowing unauthorised access.\n\n    Blockchain is a decentralised system which makes it an excellent option for this application. All the data that needs to be stored securely is stored in a decentralised blockchain network. All this data is encrypted and verified by the network which leaves no point of entry for a malicious actor.\n\n    Additionally, it is easy to identify unauthorised access because the data cannot be altered and if it is, there is a permanent record of what was tampered with.\n\n    Blockchain also removes the need for a central storage system meaning that there is a completely secure and transparent system for recording all transactions. These transactions are private so they can only be accessed by authorised users.\n  \n  \n    Banking\n\n    Banking is perhaps the industry that will be impacted the most by blockchain and cryptocurrencies.\n\n    If you want to send money through the banking system, you will be charged transaction fees, meaning you will either spend more money or send less money. If the recipient is overseas, you also have to contend with international transfer fees, currency conversion and other charges. Add no guarantee for secure transactions and you begin to see why people have been clamouring for a better system.\n\n    Blockchain and cryptocurrencies are disrupting banking by proving a peer-to-peer money transfer alternative. Cryptocurrencies are highly secure, anonymous, typically have lower fees than bank transfers and their transfers are faster too.\n\n    Many of these benefits come from the fact that there is no central authority that you have to pay or wait for to authorise transactions.\n  \n  \n    The Casino Industry\n\n    Cryptocurrencies' properties make them a great option for payments at online casinos. They allow for pseudonymous, fast, secure, and larger deposits, qualities that most legacy payment options do not have. For example, a cryptocurrency deposit at an online casino might take 10 minutes, but the same deposit might have taken a few hours to a few days to complete using a payment option like a bank transfer.\n\n    Most people who use online casinos as an entertainment are not too keen on having their casino accounts associated with their identities. Cryptocurrencies are the obvious option for these types of people. With cryptocurrencies, you do not have to give a casino any of your personal or banking details. All they would need is a cryptocurrency wallet address and you can deposit or withdraw your funds.\n\n    Your cryptocurrency wallet can be still associated with your identity, but it is an extra step, not a requirement.\n\n    Lots of casinos have realised there is a lot of demand for the use of cryptocurrencies on their platforms and they now allow you to use this currency.\n\n    Those of you from the UK interested in using cryptocurrencies as a payment option on online casinos can check out reviews of the safest sites that accept bitcoin and other cryptocurrencies at OnlineCasinos. These casinos have been reviewed by experts to ensure they are not only safe, but that they also provide a superior experience for all players. You can read their reviews to find information on their games, licensing, bonuses and more.\n  \n  \n    Healthcare\n\n    Healthcare data is highly valuable, but the sad thing is that it is stored in central servers that can be broken into.\n\n    All of this private information can be sold or used for nefarious purposes without your authorisation. Additionally, it might take a long time to get the data you asked for once you request it and there is no way to know if a healthcare worker has taken any of your data out of their system.\n\n    Blockchain removes the need for central storage while enabling faster access to data. Data is stored in blocks and then the blocks are connected to other blocks on the network. With data distributed like this, it becomes harder to corrupt.\n\n    Blockchain is also being used to trace counterfeit medication. By using blockchain to put supply chain management protocols in place, it becomes easier to trace the source of any medication used in a healthcare facility.\n  \n  \n    Supply Chain and Logistics\n\n    Blockchain records all the steps in a supply chain.\n\n    By doing so, it enables traceability that makes it easy to deal with and resolve issues that come up with a product. When a customer makes a complaint, the retailer can go through the records, step through them, and identify where the issues arose in the supply chain.\n\n    Blockchain gives all players in a supply chain permanent transparency and allows the validation of all transactions that happen between multiple players in that system.\n  \n  \n    Governments and governance\n\n    Although governments are not an industry, voting is an important area of governance that has to be mentioned in this discussion.\n\n    Blockchain can help end voter fraud. A blockchain network allows people to vote however they want, and each vote is recorded in the network. These votes cannot be changed, and each person can only vote once because each vote is tied to only one ID. There will also not be an issue of ghost voting because each vote needs to be tied to an ID for it to be valid.\n  \n\n\nConsidering all the uses we can get out of blockchain technology, there is very little doubt that it will play a critical role in shaping our future.\n\nBlockchain and cryptocurrencies are still relatively new so there are many other areas where they can be used - uses that we are yet to discover.\n",
+      content: "By 2023, the popularity of cryptocurrency has at last trickled down into the industries.\n\nExperts from various niches are discovering new uses and applications for blockchain technology and cryptocurrencies, and this is why they are starting to challenge established practices in various sectors.\n\nSome sectors and industries have discovered that blockchain and cryptocurrencies are a better tool for important parts of what they do. Let us look at six industries that are being impacted by blockchain and cryptocurrencies.\n\n\n  \n    Cybersecurity\n\n    We live in a digital world now which means we have to contend with security threats online and within the systems we use. We have already seen various security breaches that had led to the loss of vast amounts of data as well as billions of pounds around the world. Blockchain is being used to thwart such threats by helping businesses and individuals alike secure their data while also disallowing unauthorised access.\n\n    Blockchain is a decentralised system which makes it an excellent option for this application. All the data that needs to be stored securely is stored in a decentralised blockchain network. All this data is encrypted and verified by the network which leaves no point of entry for a malicious actor.\n\n    Additionally, it is easy to identify unauthorised access because the data cannot be altered and if it is, there is a permanent record of what was tampered with.\n\n    Blockchain also removes the need for a central storage system meaning that there is a completely secure and transparent system for recording all transactions. These transactions are private so they can only be accessed by authorised users.\n  \n  \n    Banking\n\n    Banking is perhaps the industry that will be impacted the most by blockchain and cryptocurrencies.\n\n    If you want to send money through the banking system, you will be charged transaction fees, meaning you will either spend more money or send less money. If the recipient is overseas, you also have to contend with international transfer fees, currency conversion and other charges. Add no guarantee for secure transactions and you begin to see why people have been clamouring for a better system.\n\n    Blockchain and cryptocurrencies are disrupting banking by proving a peer-to-peer money transfer alternative. Cryptocurrencies are highly secure, anonymous, typically have lower fees than bank transfers and their transfers are faster too.\n\n    Many of these benefits come from the fact that there is no central authority that you have to pay or wait for to authorise transactions.\n  \n  \n    The Casino Industry\n\n    Cryptocurrencies' properties make them a great option for payments at online casinos. They allow for pseudonymous, fast, secure, and larger deposits, qualities that most legacy payment options do not have. For example, a cryptocurrency deposit at an online casino might take 10 minutes, but the same deposit might have taken a few hours to a few days to complete using a payment option like a bank transfer.\n\n    Most people who use online casinos as an entertainment are not too keen on having their casino accounts associated with their identities. Cryptocurrencies are the obvious option for these types of people. With cryptocurrencies, you do not have to give a casino any of your personal or banking details. All they would need is a cryptocurrency wallet address and you can deposit or withdraw your funds.\n\n    Your cryptocurrency wallet can be still associated with your identity, but it is an extra step, not a requirement.\n\n    Lots of casinos have realised there is a lot of demand for the use of cryptocurrencies on their platforms and they now allow you to use this currency.\n\n    Those of you from the UK interested in using cryptocurrencies as a payment option on online casinos can check out reviews of the safest sites that accept bitcoin and other cryptocurrencies at OnlineCasinos. These casinos have been reviewed by experts to ensure they are not only safe, but that they also provide a superior experience for all players. You can read their reviews to find information on their games, licensing, bonuses and more.\n  \n  \n    Healthcare\n\n    Healthcare data is highly valuable, but the sad thing is that it is stored in central servers that can be broken into.\n\n    All of this private information can be sold or used for nefarious purposes without your authorisation. Additionally, it might take a long time to get the data you asked for once you request it and there is no way to know if a healthcare worker has taken any of your data out of their system.\n\n    Blockchain removes the need for central storage while enabling faster access to data. Data is stored in blocks and then the blocks are connected to other blocks on the network. With data distributed like this, it becomes harder to corrupt.\n\n    Blockchain is also being used to trace counterfeit medication. By using blockchain to put supply chain management protocols in place, it becomes easier to trace the source of any medication used in a healthcare facility.\n  \n  \n    Supply Chain and Logistics\n\n    Blockchain records all the steps in a supply chain.\n\n    By doing so, it enables traceability that makes it easy to deal with and resolve issues that come up with a product. When a customer makes a complaint, the retailer can go through the records, step through them, and identify where the issues arose in the supply chain.\n\n    Blockchain gives all players in a supply chain permanent transparency and allows the validation of all transactions that happen between multiple players in that system.\n  \n  \n    Governments and governance\n\n    Although governments are not an industry, voting is an important area of governance that has to be mentioned in this discussion.\n\n    Blockchain can help end voter fraud. A blockchain network allows people to vote however they want, and each vote is recorded in the network. These votes cannot be changed, and each person can only vote once because each vote is tied to only one ID. There will also not be an issue of ghost voting because each vote needs to be tied to an ID for it to be valid.\n  \n\n\nConsidering all the uses we can get out of blockchain technology, there is very little doubt that it will play a critical role in shaping our future.\n\nBlockchain and cryptocurrencies are still relatively new so there are many other areas where they can be used - uses that we are yet to discover.\n",
       category: ["reports"],
       tags: ["crypto-fundamentals","adoption","kyc","regtech","defi","blockchain-technology","billfodl","shrimpy"],
       author: "TDOU",
-      id: 88
+      id: 93
     });
     
   
@@ -906,7 +956,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","crypto-tools","shrimpy","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 89
+      id: 94
     });
     
   
@@ -916,7 +966,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["nft","defi","blockchain-technology","billfodl"],
       author: "TDOU",
-      id: 90
+      id: 95
     });
     
   
@@ -926,7 +976,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-trading-strategy","trading-technique","bitfinex","coinrule"],
       author: "JMT",
-      id: 91
+      id: 96
     });
     
   
@@ -936,7 +986,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-fundamentals","tradingview-script-review","derivatives","derisking","crypto-charting","bitfinex","deribit","tradingview"],
       author: "KarlVonBahnhof",
-      id: 92
+      id: 97
     });
     
   
@@ -946,17 +996,17 @@ var idx = lunr(function() {
       category: ["nft-trading"],
       tags: ["crypto-trading-strategy","trading-technique","yield","ledger","bitfinex"],
       author: "TDOU",
-      id: 93
+      id: 98
     });
     
   
     this.add({
       title: "Intro to risk budgeting and risk diversification (NOT hedging!)",
-      content: "Are you tired of feeling like you’re always playing catch-up with the latest alt coin hype? Or are you the cautious type when it comes to investing? Do you stick to low-risk crypto assets, or do you dabble in low-cap alt coins?\n\nIf you’re looking for a way to keep your risk and improving your potential returns at the same time, it might help to consider risk diversification and risk budgeting.\n\nWhat is risk diversification (and what it isn’t)\n\nRisk diversification is a strategy that seeks to improve your risk-reward ratio by investing across a variety of different assets.\n\nRisk diversification is not strictly about lowering your risk, though: It is a technique that aims to maximize returns for a given level of risk.\n\nIt is used extensively in most forms of financial risk management. In 2022, that also includes the world of cryptocurrency.\n\nRisk diversification relies on the fact that not all risk factors are correlated with each other.\n\n\n  \n    Within your crypto portfolio, you can diversify your risk by spreading your investments between asset types that are starting to live their own lives.\n\n    That is: dinosaur cryptocurrencies, smaller volatile alt coins and any of the newer products (DeFi, NFT).\n\n    Note that for some long-term holders this part will actually increase to risk.\n  \n  \n    To further diversify the risk of your overall portfolio, add some non-crypto investment.\n\n    Spread your investments between stocks of companies of varying sizes, over different industries and over a range of geographic regions.\n\n    This element will lower the risk of your portfolio.\n  \n  \n    Neither point 1) nor point 2) aimed at creating a hedge for your portfolio.\n\n    As for risk hedging, think about a black swan type of event for which you’re offsetting the risk. Hedge is employed for a limited time only, to protect you from a catastrophic event.\n\n    The bad news is that hedge usually requires market timing. The alternative is a portfolio-wide stop loss, a common strategy on auto-trading platforms that you can set and forget. More on hedging a bit further down.\n  \n\n\nWhen to consider risk diversification\n\nYour crypto portfolio could possibly use risk diversification …\n\n\n  if you are over-exposing yourself to one particular area\n  if you are making subpar profits for your risk appetite (either through trading losses or through not risking enough)\n  … or both at once\n\n\nSince risk diversification is all about risk management, it needs to be used as a tool to help you achieve your goal of making risk-appropriate gains.\n\nYou may want to increase your total risk, too!\n\nExample: Same portfolio, different trader\n\nFor illustration, let’s taken an example portfolio of a crypto holder:\n\n  75% ETH\n  20% fiat\n  5% in ETH-based NFTs\n\n\nIs this an over-exposed portfolio? It is - there is no way around that.\n\nA basic way to find out whether your portfolio is over-exposed is to compare a chart showing your portfolio’s value with the charts of the assets you hold.\n\nIf you are over-exposed, the movement in your portfolio value will be following the value of one asset or one group of assets.\n\n\n  The example portfolio will be highly correlated with ETH. The NFT trading will make dents there, but not consistently enough. Also consider that since they are ETH NFTs, they are still somewhat correlated with ETH.\n\n\n“Over-exposed or not” is as far as objective thinking will take you.\n\nYou may be comfortable with the over-exposure, or you might not.\n\nThere’s no rule or table for that, it all depends on your risk tolerance.\n\nEnter Risk Budgeting\n\nThere is a risk management technique called “risk budgeting” which works with risk tolerance.\n\nIn risk budgeting, risk is based on volatility. You essentially rebalance your portfolio according to the size of the loss you are willing to take in a drawdown. Which, by the way, is a good habit to build, because you are evaluating your trading decisions with the risk-reward tradeoff in mind.\n\nLet’s return to the example portfolio - 75% ETH, 20% fiat and 5% ETH-based NFTs - and the possible risk budgeting scenarios different traders might consider.\n\n\n  \n    Not happy with returns: Too much money on the sidelines\n\n    AKA not enough risk in the risk budget. Some investors are aggressive and want to see the gains they feel are appropriate to being in crypto.\n\n    Here, the aggressive trader will be tempted allocate more of their portfolio into NFTs. NFTs are still super high-risk as the market is very young and not structured enough for any systematic speculation.\n\n    That’s OK for risk budgeting, but looking at it with risk diversification in mind, a better alternative may be to invest in DeFi alt coins instead or to get some high-leverage trading done.\n\n    This way the portfolio gains added risk, potential profit also increases, but at the same time the portfolio will not be too exposed to the whims of NFT shills.\n\n    \n  \n  \n    Happy with returns, not happy with risks: No limits to losses\n\n    Other investors would take comfort in knowing that in the “worst-case scenario”, their portfolio can only be down, say, 10% in its dollar value.\n\n    AKA, the risk is too high.\n\n    There is a few things you can do, and the easiest one of them is to set a portfolio-wide stop loss. Not to sell just yet - you still want those crypto-only gains - but to sell if the markets start dropping.\n\n    Shrimpy lets you do that automatically with no coding, as long as you hold your crypto in a wallet.\n\n    \n\n    Portfolio stop loss has a limitation though: If you are staking your crypto, you will need to use derivatives by way of a hedge, as the actual coin might not be available for you to sell when you need to.\n\n    The best way to do that at the moment is to set up triggers to open shorts in the FTX Quant Zone. The Quant Zone a quite a bit less user-friendly than Shrimpy.\n\n    \n  \n  \n    Happy with risks of crypto, but: Just too ETH-focused\n\n    A trader who is happy with the level of risk but not with the over-exposure to ETH obviously needs good old portfolio diversification.\n\n    The trick to diversify while keeping the level of risk roughly the same is in adding some assets that increase the overall risk as well as other assets that will lower it.\n\n    In the example portfolio, stocks or real estate would lower the risks and small alt coins would increase it. Depending on your successes there, your overall profits might increase.\n\n    If you don’t mind technical alt coin trading, you could set up a Coinrule bot for your low-cap alt coins to buy on some generic signal like RSI, and sell at 10% profit.\n\n    \n  \n  \n    Not quite happy, but also not willing to guess and speculate\n\n    Yet others may feel that hedging and rebalancing is equivalent to timing the market.\n\n    And that is out of the question as they want to focus the long term.\n\n    There are still ways to diversify risks without timing anything - more on that in the next section.\n  \n\n\nRisk diversification when you don’t want to speculate\n\nRisk diversification principles are pretty versatile.\n\nYou can still diversify risks even when there are too many unknowns and the risk factors keep changing: for example, during times of market turbulence.\n\nProfessional analysts usually find it difficult to estimate future risk in those times.\n\nBut you as an individual investor have the freedom to solve this problem in a lateral way: Investing in a business project or indeed starting your own business may do that.\n\nChoosing an unrelated industry for that will improve your risk diversification even better.\n\nEither way, this is a better way to risk diversify than by selling crypto to wait with fiat on the sidelines.\n\nThe difficulties with diversifying risk in crypto\n\nAs a final note, the difficulty with crypto risk management is not actually the correlation between alt coins.\n\nIt’s rather that there are so many risk factors involved with each crypto, and new risk factors are constantly being developed.\n\n\n  For example, the risk profile of Bitcoin changed when it became possible to trade BTC futures on unregulated exchanges with high leverage.\n  Some time after that, the risk factors changed again as institutional players entered the crypto markets.\n\n\nSome investors may decide that hedging risk is too expensive, either in terms of fees, time or opportunity costs. That is a valid decision. In this case, the reasonable thing to do is to research thoroughly and not invest more than you can survive losing.\n\nIf your problem with risk diversification is the time it consumes, try to automate your rebalancing and hedging, and use a stop loss. You won’t go broke taking profits.\n\n\n  Shrimpy (30% off from here!) specializes in portfolio management automation\n  Coinrule specializes in easy to automate technical trading\n\n\nBottom line\n\nRisk diversification is not just hedging or in other ways trying not to lose. It is about choosing which risk factors to invest in (such as small cryptocurrencies or NFTs) and which ones to pass.\n\nThis way you can capture much higher returns than by playing it safe, but by limiting your high risk investments to small part of your portfolio, making the wrong bet would not damage your net worth too much.\n",
+      content: "Are you tired of feeling like you’re always playing catch-up with the latest alt coin hype? Or are you the cautious type when it comes to investing? Do you stick to low-risk crypto assets, or do you dabble in low-cap alt coins?\n\nIf you’re looking for a way to keep your risk and improving your potential returns at the same time, it might help to consider risk diversification and risk budgeting.\n\nWhat is risk diversification (and what it isn’t)\n\nRisk diversification is a strategy that seeks to improve your risk-reward ratio by investing across a variety of different assets.\n\nRisk diversification is not strictly about lowering your risk, though: It is a technique that aims to maximize returns for a given level of risk.\n\nIt is used extensively in most forms of financial risk management. In 2023, that also includes the world of cryptocurrency.\n\nRisk diversification relies on the fact that not all risk factors are correlated with each other.\n\n\n  \n    Within your crypto portfolio, you can diversify your risk by spreading your investments between asset types that are starting to live their own lives.\n\n    That is: dinosaur cryptocurrencies, smaller volatile alt coins and any of the newer products (DeFi, NFT).\n\n    Note that for some long-term holders this part will actually increase to risk.\n  \n  \n    To further diversify the risk of your overall portfolio, add some non-crypto investment.\n\n    Spread your investments between stocks of companies of varying sizes, over different industries and over a range of geographic regions.\n\n    This element will lower the risk of your portfolio.\n  \n  \n    Neither point 1) nor point 2) aimed at creating a hedge for your portfolio.\n\n    As for risk hedging, think about a black swan type of event for which you’re offsetting the risk. Hedge is employed for a limited time only, to protect you from a catastrophic event.\n\n    The bad news is that hedge usually requires market timing. The alternative is a portfolio-wide stop loss, a common strategy on auto-trading platforms that you can set and forget. More on hedging a bit further down.\n  \n\n\nWhen to consider risk diversification\n\nYour crypto portfolio could possibly use risk diversification …\n\n\n  if you are over-exposing yourself to one particular area\n  if you are making subpar profits for your risk appetite (either through trading losses or through not risking enough)\n  … or both at once\n\n\nSince risk diversification is all about risk management, it needs to be used as a tool to help you achieve your goal of making risk-appropriate gains.\n\nYou may want to increase your total risk, too!\n\nExample: Same portfolio, different trader\n\nFor illustration, let’s taken an example portfolio of a crypto holder:\n\n  75% ETH\n  20% fiat\n  5% in ETH-based NFTs\n\n\nIs this an over-exposed portfolio? It is - there is no way around that.\n\nA basic way to find out whether your portfolio is over-exposed is to compare a chart showing your portfolio’s value with the charts of the assets you hold.\n\nIf you are over-exposed, the movement in your portfolio value will be following the value of one asset or one group of assets.\n\n\n  The example portfolio will be highly correlated with ETH. The NFT trading will make dents there, but not consistently enough. Also consider that since they are ETH NFTs, they are still somewhat correlated with ETH.\n\n\n“Over-exposed or not” is as far as objective thinking will take you.\n\nYou may be comfortable with the over-exposure, or you might not.\n\nThere’s no rule or table for that, it all depends on your risk tolerance.\n\nEnter Risk Budgeting\n\nThere is a risk management technique called “risk budgeting” which works with risk tolerance.\n\nIn risk budgeting, risk is based on volatility. You essentially rebalance your portfolio according to the size of the loss you are willing to take in a drawdown. Which, by the way, is a good habit to build, because you are evaluating your trading decisions with the risk-reward tradeoff in mind.\n\nLet’s return to the example portfolio - 75% ETH, 20% fiat and 5% ETH-based NFTs - and the possible risk budgeting scenarios different traders might consider.\n\n\n  \n    Not happy with returns: Too much money on the sidelines\n\n    AKA not enough risk in the risk budget. Some investors are aggressive and want to see the gains they feel are appropriate to being in crypto.\n\n    Here, the aggressive trader will be tempted allocate more of their portfolio into NFTs. NFTs are still super high-risk as the market is very young and not structured enough for any systematic speculation.\n\n    That’s OK for risk budgeting, but looking at it with risk diversification in mind, a better alternative may be to invest in DeFi alt coins instead or to get some high-leverage trading done.\n\n    This way the portfolio gains added risk, potential profit also increases, but at the same time the portfolio will not be too exposed to the whims of NFT shills.\n\n    \n  \n  \n    Happy with returns, not happy with risks: No limits to losses\n\n    Other investors would take comfort in knowing that in the “worst-case scenario”, their portfolio can only be down, say, 10% in its dollar value.\n\n    AKA, the risk is too high.\n\n    There is a few things you can do, and the easiest one of them is to set a portfolio-wide stop loss. Not to sell just yet - you still want those crypto-only gains - but to sell if the markets start dropping.\n\n    Shrimpy lets you do that automatically with no coding, as long as you hold your crypto in a wallet.\n\n    \n\n    Portfolio stop loss has a limitation though: If you are staking your crypto, you will need to use derivatives by way of a hedge, as the actual coin might not be available for you to sell when you need to.\n\n    The best way to do that at the moment is to set up triggers to open shorts in the FTX Quant Zone. The Quant Zone a quite a bit less user-friendly than Shrimpy.\n\n    \n  \n  \n    Happy with risks of crypto, but: Just too ETH-focused\n\n    A trader who is happy with the level of risk but not with the over-exposure to ETH obviously needs good old portfolio diversification.\n\n    The trick to diversify while keeping the level of risk roughly the same is in adding some assets that increase the overall risk as well as other assets that will lower it.\n\n    In the example portfolio, stocks or real estate would lower the risks and small alt coins would increase it. Depending on your successes there, your overall profits might increase.\n\n    If you don’t mind technical alt coin trading, you could set up a Coinrule bot for your low-cap alt coins to buy on some generic signal like RSI, and sell at 10% profit.\n\n    \n  \n  \n    Not quite happy, but also not willing to guess and speculate\n\n    Yet others may feel that hedging and rebalancing is equivalent to timing the market.\n\n    And that is out of the question as they want to focus the long term.\n\n    There are still ways to diversify risks without timing anything - more on that in the next section.\n  \n\n\nRisk diversification when you don’t want to speculate\n\nRisk diversification principles are pretty versatile.\n\nYou can still diversify risks even when there are too many unknowns and the risk factors keep changing: for example, during times of market turbulence.\n\nProfessional analysts usually find it difficult to estimate future risk in those times.\n\nBut you as an individual investor have the freedom to solve this problem in a lateral way: Investing in a business project or indeed starting your own business may do that.\n\nChoosing an unrelated industry for that will improve your risk diversification even better.\n\nEither way, this is a better way to risk diversify than by selling crypto to wait with fiat on the sidelines.\n\nThe difficulties with diversifying risk in crypto\n\nAs a final note, the difficulty with crypto risk management is not actually the correlation between alt coins.\n\nIt’s rather that there are so many risk factors involved with each crypto, and new risk factors are constantly being developed.\n\n\n  For example, the risk profile of Bitcoin changed when it became possible to trade BTC futures on unregulated exchanges with high leverage.\n  Some time after that, the risk factors changed again as institutional players entered the crypto markets.\n\n\nSome investors may decide that hedging risk is too expensive, either in terms of fees, time or opportunity costs. That is a valid decision. In this case, the reasonable thing to do is to research thoroughly and not invest more than you can survive losing.\n\nIf your problem with risk diversification is the time it consumes, try to automate your rebalancing and hedging, and use a stop loss. You won’t go broke taking profits.\n\n\n  Shrimpy (30% off from here!) specializes in portfolio management automation\n  Coinrule specializes in easy to automate technical trading\n\n\nBottom line\n\nRisk diversification is not just hedging or in other ways trying not to lose. It is about choosing which risk factors to invest in (such as small cryptocurrencies or NFTs) and which ones to pass.\n\nThis way you can capture much higher returns than by playing it safe, but by limiting your high risk investments to small part of your portfolio, making the wrong bet would not damage your net worth too much.\n",
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","crypto-tools","yield","defi","nft","shrimpy","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 94
+      id: 99
     });
     
   
@@ -966,7 +1016,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","yield","defi","staking","shrimpy","ledger"],
       author: "JMT",
-      id: 95
+      id: 100
     });
     
   
@@ -976,7 +1026,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","yield","defi","staking","shrimpy","ledger"],
       author: "JMT",
-      id: 96
+      id: 101
     });
     
   
@@ -986,7 +1036,7 @@ var idx = lunr(function() {
       category: ["nft-trading"],
       tags: ["crypto-trading-strategy","trading-technique","yield","nft","ledger","bitfinex"],
       author: "TDOU",
-      id: 97
+      id: 102
     });
     
   
@@ -996,7 +1046,7 @@ var idx = lunr(function() {
       category: ["nft-trading"],
       tags: ["crypto-trading-strategy","trading-technique","crypto-technical-analysis","shrimpy","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 98
+      id: 103
     });
     
   
@@ -1006,7 +1056,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","trading-technique","crypto-technical-analysis","shrimpy","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 99
+      id: 104
     });
     
   
@@ -1016,7 +1066,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["yield","defi","crypto-trading-strategy","trading-technique","nft","shrimpy","bitforex"],
       author: "TDOU",
-      id: 100
+      id: 105
     });
     
   
@@ -1026,7 +1076,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["volume-trading","crypto-technical-analysis","tradingview-script-review","crypto-charting","top","bitfinex","tradingview","cryptowatch"],
       author: "KarlVonBahnhof",
-      id: 101
+      id: 106
     });
     
   
@@ -1036,17 +1086,17 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["yield","defi","crypto-fundamentals","crypto-trading-strategy","crypto-tools","shrimpy","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 102
+      id: 107
     });
     
   
     this.add({
       title: "From the industry: 5 Top Anti-Money Laundering (AML) Solutions",
-      content: "Financial crimes are on the rise everywhere in the world.\n\nMoney laundering is a persistent problem in all financial sectors. Billions of dollars are lost every year to money laundering crimes.\n\nIn 2020,2,300 criminals were arrested for money laundering within the United States alone. It goes on to show how pervasive the issue is. But as financial crimes are on the rise, organizations are keeping up with effective Anti-Money Laundering solutions.\n\nA special set of software works exclusively to protect organizations and companies from money laundering. They are known as AML or Anti-Money Laundering software.\n\nAt the same time, AML regulations can be a bottleneck in user on-boarding to the point that good AML solution can give a company a real competitive advantage.\n\n\n  Onboarding at Coinbase is completely painless, because they probably use a software solution with behavioural analytics.\n  Contrary to that, when onboarding to CEX.io you are required to fill out a 22-page Typeform and wait for manual evaluation.\n\n\nWhat does AML software do?\n\nFrom the practical point of view, AML solutions serve the function of ensuring compliance with AML laws and regulations.\n\nTechnically speaking, anti-money laundering software solutions work by surveying huge datasets and identifying suspicious patterns.\n\nAML software is a complete solution for detection and evaluation of these patterns. By doing that, it protects organizations from unwillingly serving money launderers.\n\nAnti-money laundering solutions work in different ways. All the different functional components work together to provide all-around security for any organization. From protecting you against criminals to making sure you are not breaching laws, AML solutions do it all.\n\nWhile machine learning facilitates the pattern identifying features of AML solutions, other features primarily work to monitor customers and transactions. They also assess risk and ensure compliance with regulations.\n\nTop 5 Top Anti-Money Laundering (AML) Solutions\n\nAML solutions are a necessity for any firm dealing with money or sensitive information.\n\nThe cryptocurrency industry was an exception to the rule when it was in its infancy, but those days are long gone. AML/KYC is required on most trading platforms and in many cases, it may be more difficult to take your cold storage profits if those cryptocoins have a bad history and you cannot prove you only bought them afterwards.\n\nLet's explore the five top anti-money laundering solutions that ensure complete security and maintain compliance terms.\n\n\n  \n    Oracle Financial Services\n\n    \n\n    Image Source: Oracle.com\n\n    Leading banks and businesses around the world trust Oracle for their AML solutions, and the blockchain industry will probably move in the same direction. Oracle Anti-money laundering solution is a complete set of features for top-notch security.\n\n    Oracle AML solutions are active in over 140 countries. That directly translates to a huge database of users, which means better data to work out fraud patterns.\n\n    It also helps in compliance with CDD and KYC regulations. When dealing with potential money launderers, Oracle automatically scans their credentials with global watchlists.\n\n    Prebuilt regulatory analytics make sure that you are never breaching AML regulations. Once you start using Oracle AML solutions, you need not worry about the technical complications and nuances of AML regulatory statutes. It is a complete solution for comprehensive protection against money laundering.\n\n    Deutsche Bank, HDFC Bank, and CaixaBank are some prominent users of Oracle AML solutions. They manage and bill a total of $200 billion.\n  \n  \n    Refinitiv\n\n    \n\n    Image Source: G2\n\n    Refinitiv World-Check Risk Intelligence is a part of Refinitiv Financial Solutions.\n\n    Founded in 2018, the company has gained a good reputation in a short time. Its breakthrough product in the AML field is the World-Check Risk Intelligence. It takes care of all your compliance policies, protects you from criminals, and warns you of threats.\n\n    Refinitiv takes pride in its research methodology, claiming to bring only reliable intelligence to you. Their evaluation criteria are strict to minimize chances of slip-ups.\n\n    Some of the Refinitiv analysts are former employees of central and federal governments, which is a good guarantee of quality. They know and in and out of AML policies and threats, do a great job of offering protection.\n\n    Data from the World-Check Risk Intelligence report can be integrated into third-party platforms, such as cryptocurrency exchanges.\n\n    Being the smaller player, Refinitiv is winning through interoperability and productivity.\n  \n  \n    Verafin\n\n    \n\n    Image Source: Verafin\n\n    Verafin offers a cloud-based cross-platform AML solution that more than 3000 companies use to protect against money laundering. You get all standard AML solutions like high-risk customer management, fraud detection, AML compliance, and information sharing. With Verafin, you can keep things simple while ensuring robust security.\n\n    The biggest challenge to detecting financial criminals is their use of multiple platforms. No money-launderer would give away their location foolishly. However, with Verafin you can be sure of outsmarting criminals.\n\n    Verafin uses machine learning and collaborative investigation to alert you of all potential threats. You get a comprehensive solution encompassing detection, investigation, and reporting.\n\n    Verafin also comes with a very useful feature that keeps companies updated about the latest trends on financial crimes. They use information from their large datasets and combine it with customer feedback to detect threats and identify patterns.\n  \n  \n    SEON\n\n    \n\n    Image Source: SEON Resources\n\n    SEON is another complete anti-money laundering software solution that protects your enterprise from every aspect of money laundering.\n\n    SEON is popular especially in the gaming industry. Their software beats other solutions with its accurate behavioral analytics and real-time alerts - both are important aspects of the entertainment business.\n\n    SEON offers the best services with respect to the KYC processes. With extensive support for the entire process, SEON makes sure all your KYC requirements are fulfilled. It has a smart real-time identity verification system that makes its KYC solutions so effective.\n\n    Another reason why gaming (and other) startups choose SEON in particular is the transparent pricing and hassle-free set up it provides.\n  \n  \n    SAS Anti-money Laundering\n\n    \n\n    Image Source: SAS\n\n    Our last entry on the list is SAS Anti-money Laundering services.\n\n    SAS implemented artificial intelligence and machine learning to detect behavioural patterns and warns you in cases of threat.\n\n    The biggest perk of using SAS Anti-money Laundering is its out-of-the-box interface. With this intuitive interface, analysts can work faster and with more ease. On a broad scale, it leads to increased productivity and faster result generation.\n\n    With multi-jurisdictional watchlist coverage, customer behaviour monitor and a host of other features, SAS Anti-money Laundering is a complete AML solution for any enterprise.\n  \n\n\nIn conclusion\n\nEvery year, 2% to 5% of the global GDP is lost to money laundering activities. For financial firms, industry leaders, and last but not least the governments, this is a primary cause of concern.\n\nIn 2022, AML solutions are non-negotiable for almost all types of cryptocurrency businesses.\n",
+      content: "Financial crimes are on the rise everywhere in the world.\n\nMoney laundering is a persistent problem in all financial sectors. Billions of dollars are lost every year to money laundering crimes.\n\nIn 2020,2,300 criminals were arrested for money laundering within the United States alone. It goes on to show how pervasive the issue is. But as financial crimes are on the rise, organizations are keeping up with effective Anti-Money Laundering solutions.\n\nA special set of software works exclusively to protect organizations and companies from money laundering. They are known as AML or Anti-Money Laundering software.\n\nAt the same time, AML regulations can be a bottleneck in user on-boarding to the point that good AML solution can give a company a real competitive advantage.\n\n\n  Onboarding at Coinbase is completely painless, because they probably use a software solution with behavioural analytics.\n  Contrary to that, when onboarding to CEX.io you are required to fill out a 22-page Typeform and wait for manual evaluation.\n\n\nWhat does AML software do?\n\nFrom the practical point of view, AML solutions serve the function of ensuring compliance with AML laws and regulations.\n\nTechnically speaking, anti-money laundering software solutions work by surveying huge datasets and identifying suspicious patterns.\n\nAML software is a complete solution for detection and evaluation of these patterns. By doing that, it protects organizations from unwillingly serving money launderers.\n\nAnti-money laundering solutions work in different ways. All the different functional components work together to provide all-around security for any organization. From protecting you against criminals to making sure you are not breaching laws, AML solutions do it all.\n\nWhile machine learning facilitates the pattern identifying features of AML solutions, other features primarily work to monitor customers and transactions. They also assess risk and ensure compliance with regulations.\n\nTop 5 Top Anti-Money Laundering (AML) Solutions\n\nAML solutions are a necessity for any firm dealing with money or sensitive information.\n\nThe cryptocurrency industry was an exception to the rule when it was in its infancy, but those days are long gone. AML/KYC is required on most trading platforms and in many cases, it may be more difficult to take your cold storage profits if those cryptocoins have a bad history and you cannot prove you only bought them afterwards.\n\nLet's explore the five top anti-money laundering solutions that ensure complete security and maintain compliance terms.\n\n\n  \n    Oracle Financial Services\n\n    \n\n    Image Source: Oracle.com\n\n    Leading banks and businesses around the world trust Oracle for their AML solutions, and the blockchain industry will probably move in the same direction. Oracle Anti-money laundering solution is a complete set of features for top-notch security.\n\n    Oracle AML solutions are active in over 140 countries. That directly translates to a huge database of users, which means better data to work out fraud patterns.\n\n    It also helps in compliance with CDD and KYC regulations. When dealing with potential money launderers, Oracle automatically scans their credentials with global watchlists.\n\n    Prebuilt regulatory analytics make sure that you are never breaching AML regulations. Once you start using Oracle AML solutions, you need not worry about the technical complications and nuances of AML regulatory statutes. It is a complete solution for comprehensive protection against money laundering.\n\n    Deutsche Bank, HDFC Bank, and CaixaBank are some prominent users of Oracle AML solutions. They manage and bill a total of $200 billion.\n  \n  \n    Refinitiv\n\n    \n\n    Image Source: G2\n\n    Refinitiv World-Check Risk Intelligence is a part of Refinitiv Financial Solutions.\n\n    Founded in 2018, the company has gained a good reputation in a short time. Its breakthrough product in the AML field is the World-Check Risk Intelligence. It takes care of all your compliance policies, protects you from criminals, and warns you of threats.\n\n    Refinitiv takes pride in its research methodology, claiming to bring only reliable intelligence to you. Their evaluation criteria are strict to minimize chances of slip-ups.\n\n    Some of the Refinitiv analysts are former employees of central and federal governments, which is a good guarantee of quality. They know and in and out of AML policies and threats, do a great job of offering protection.\n\n    Data from the World-Check Risk Intelligence report can be integrated into third-party platforms, such as cryptocurrency exchanges.\n\n    Being the smaller player, Refinitiv is winning through interoperability and productivity.\n  \n  \n    Verafin\n\n    \n\n    Image Source: Verafin\n\n    Verafin offers a cloud-based cross-platform AML solution that more than 3000 companies use to protect against money laundering. You get all standard AML solutions like high-risk customer management, fraud detection, AML compliance, and information sharing. With Verafin, you can keep things simple while ensuring robust security.\n\n    The biggest challenge to detecting financial criminals is their use of multiple platforms. No money-launderer would give away their location foolishly. However, with Verafin you can be sure of outsmarting criminals.\n\n    Verafin uses machine learning and collaborative investigation to alert you of all potential threats. You get a comprehensive solution encompassing detection, investigation, and reporting.\n\n    Verafin also comes with a very useful feature that keeps companies updated about the latest trends on financial crimes. They use information from their large datasets and combine it with customer feedback to detect threats and identify patterns.\n  \n  \n    SEON\n\n    \n\n    Image Source: SEON Resources\n\n    SEON is another complete anti-money laundering software solution that protects your enterprise from every aspect of money laundering.\n\n    SEON is popular especially in the gaming industry. Their software beats other solutions with its accurate behavioral analytics and real-time alerts - both are important aspects of the entertainment business.\n\n    SEON offers the best services with respect to the KYC processes. With extensive support for the entire process, SEON makes sure all your KYC requirements are fulfilled. It has a smart real-time identity verification system that makes its KYC solutions so effective.\n\n    Another reason why gaming (and other) startups choose SEON in particular is the transparent pricing and hassle-free set up it provides.\n  \n  \n    SAS Anti-money Laundering\n\n    \n\n    Image Source: SAS\n\n    Our last entry on the list is SAS Anti-money Laundering services.\n\n    SAS implemented artificial intelligence and machine learning to detect behavioural patterns and warns you in cases of threat.\n\n    The biggest perk of using SAS Anti-money Laundering is its out-of-the-box interface. With this intuitive interface, analysts can work faster and with more ease. On a broad scale, it leads to increased productivity and faster result generation.\n\n    With multi-jurisdictional watchlist coverage, customer behaviour monitor and a host of other features, SAS Anti-money Laundering is a complete AML solution for any enterprise.\n  \n\n\nIn conclusion\n\nEvery year, 2% to 5% of the global GDP is lost to money laundering activities. For financial firms, industry leaders, and last but not least the governments, this is a primary cause of concern.\n\nIn 2023, AML solutions are non-negotiable for almost all types of cryptocurrency businesses.\n",
       category: ["reports"],
       tags: ["kyc","adoption","regtech","blockchain-technology","coinbase","bitfinex"],
       author: "Atreyee Chowdhury",
-      id: 103
+      id: 108
     });
     
   
@@ -1056,17 +1106,17 @@ var idx = lunr(function() {
       category: ["cryptocurrency-wallets"],
       tags: ["crypto-opsec","crypto-fundamentals","altcoin-wallet","coldcard","ledger","trezor"],
       author: "AltcoinTrading.NET",
-      id: 104
+      id: 109
     });
     
   
     this.add({
       title: "Start Here: Beginner&#39;s Primer to the Crypto Trading Industry",
-      content: "On October 5, 2009, a historic event took place. It was on that day that the first bitcoin rate against the US dollar was published on the New Liberty Standard website, $ 1 = 1,309.03 BTC.\n\nYes, yes, for one dollar you could buy more than a thousand bitcoins, and not vice versa.\n\nThe cost of bitcoin at that time was determined based on the average power consumed by the computer miner, multiplied by the cost of electricity, and divided by the number of generated bitcoins.\n\n\n  In the beginning, the price of 1 BTC was determined by the cost of mining alone.\n\n\nThis is how the fair price of bitcoin was worked out in the early days: Derived strictly from the network fundamentals, namely the energy consumption of the Proof of Work algorithm.\n\nThe price discovery done via speculative trading has shifted the price per coin a whole lot - to more than $ 57,000 as of the time of writing.\n\n\n  Speculative trading of cryptos started at scale in 2010.\n\n\nOn July 17, 2010, the MtGox exchange was founded, which quoted the main national currencies against bitcoin. MtGox was the first international bitcoin exchange where speculative trading became possible at scale.\n\nEventually, Bitcoin's growing popularity has spurred the emergence of other cryptocurrencies, with a total market capitalization $2.39T as per coinmarketcap.com at the time of writing.\n\nDozens of different cryptocurrency exchanges have emerged, and considering the active growth of the blockchain industry, many more are yet to come.\n\nThe state of the cryptocurrency market in 2022\n\nAs time passes and the crypto markets become more mature, the global cryptocurrency markets show increasingly more stability.\n\nIt is certainly worth pointing out that this trend of maturing towards stability is occurring in spite of the lack of legislative regulation.\n\nThe main characteristics of crypto markets remain their transnational nature, the chaotic emergence and sometimes disappearance of new cryptocurrencies as well as of exchanges.\n\nAs per coinmarketcap.com, the global market is dominated by Bitcoin, Ethereum, Litecoin and other currencies that happen to be trending at the moment, such as Cardano, AVA or Kusama.\n\nGo here to exchange AVA to Kusama.\n\nLegacy brokers adopting cryptocurrency derivatives\n\nThe Chicago Mercantile Exchange, or CME for short, is a major US platform for trading futures contracts for energy, currency pairs, metals, and agricultural products. In December 2017, the CME launched futures contracts for the BTC rate against the US dollar. That was the first instance of a legacy financial institution launching a cryptocurrency product.\n\nIt is only logical that legacy brokers would start with derivatives. The decentralized nature of blockchains requires for cryptocurrencies to be stored in a specific way.\n\nTo hold actual cryptocurrency, legacy brokers would need to hire a provider of crypto custody and connect that custody to the brokerage’s current trading engines. That is expensive and technically so cutting-edge a solution that it is not yet very well established.\n\nLaunching a derivative market on the other hand is much simpler. The items that are moved through the order book operations are just contracts, not the actual cryptocurrency. All the broker needs to make sure of is that they have a cold storage with enough cryptocurrency to fully back the volumes that are traded in contracts on their platform. The cold storage is separated from the trading platform, which makes everything easier and most importantly cheaper.\n\nTraders like leveraged derivatives for their volatility\n\nOne of the reasons why cryptocurrency trading gained in popularity is the volatility of cryptocurrencies.\n\nFluctuations in the Bitcoin dollar rate per day often reach 10%, and Bitcoin is the most stable cryptocurrency at that. Intraday price changes in ratio markets between bitcoin and alt cryptocurrencies can exceed 100% per trading session.\n\nSweeping fluctuations of this size mean that there are opportunities for earning more money per day trading cryptocurrency markets than you could possibly earn with comparable skill and capital on legacy markets in the same time period. For comparison, the S&amp;P 500 index usually moves by less than 1.5% per day.\n\nHowever, the high volatility is also the reason why you get risk warnings everywhere: Do your own research, do not invest more than you can afford to lose, be careful with leverage.\n\nRead about the worst margin trading mistakes that new crypto traders make.\n\nPassive Investing Enters The Crypto Space\n\nAs explained in the beginning of the article, the cryptocurrency space is not regulated and neither are the crypto trading platforms. Those of you coming from simple legacy investing like IRA, you will need to get used to a bit more due diligence before you send money anywhere on the crypto markets.\n\nGood news is that you do not actually need to trade anymore to make regular profit in crypto.\n\nFor those of you used to the idea of investing as putting money into index funds and waiting, there is now an equivalent in crypto. It is increasingly more common for alt coin wallets to let you stake your coins and earn interest just for holding crypto. This is the closest analog to the old-school passive investing of 1980s.\n\nWhat if you do actually want to take up active trading?\n\nThen you will first need to decide on the exchange. The best way to go about that is the systematic one: Make a list of criteria.\n\nWe suggest focusing on the following:\n\n\n  exchange turnover (traded volumes)\n  variety of products (spot, futures, big and small currencies)\n  trading with borrowed funds (AKA margin trading or leveraged trading)\n  deposit requirements\n  registration requirements (do you need to pass KYC/AML?)\n  supported order types and their reliability (can you set a stop loss?)\n  the stability of the exchange to hacker attacks\n  fees charged for trading, deposit, and withdrawal of funds\n\n\nYou will find most of this data on aggregator platforms such as coinmarketcap.com or its smaller equivalents that we list at our Tools page.\n\nFinal words\n\nThe crypto markets of 2022 are stabilizing and calming down in spite of the lack of top-down regulation. The crypto trading industry now has products for the risk loving derivatives traders as well as for the passive investing types who until now had to stick to legacy index funds.\n\nAs always though, do your own research before you put your money at risk. And also: Not your keys, not your coin.\n",
+      content: "On October 5, 2009, a historic event took place. It was on that day that the first bitcoin rate against the US dollar was published on the New Liberty Standard website, $ 1 = 1,309.03 BTC.\n\nYes, yes, for one dollar you could buy more than a thousand bitcoins, and not vice versa.\n\nThe cost of bitcoin at that time was determined based on the average power consumed by the computer miner, multiplied by the cost of electricity, and divided by the number of generated bitcoins.\n\n\n  In the beginning, the price of 1 BTC was determined by the cost of mining alone.\n\n\nThis is how the fair price of bitcoin was worked out in the early days: Derived strictly from the network fundamentals, namely the energy consumption of the Proof of Work algorithm.\n\nThe price discovery done via speculative trading has shifted the price per coin a whole lot - to more than $ 57,000 as of the time of writing.\n\n\n  Speculative trading of cryptos started at scale in 2010.\n\n\nOn July 17, 2010, the MtGox exchange was founded, which quoted the main national currencies against bitcoin. MtGox was the first international bitcoin exchange where speculative trading became possible at scale.\n\nEventually, Bitcoin's growing popularity has spurred the emergence of other cryptocurrencies, with a total market capitalization $2.39T as per coinmarketcap.com at the time of writing.\n\nDozens of different cryptocurrency exchanges have emerged, and considering the active growth of the blockchain industry, many more are yet to come.\n\nThe state of the cryptocurrency market in 2023\n\nAs time passes and the crypto markets become more mature, the global cryptocurrency markets show increasingly more stability.\n\nIt is certainly worth pointing out that this trend of maturing towards stability is occurring in spite of the lack of legislative regulation.\n\nThe main characteristics of crypto markets remain their transnational nature, the chaotic emergence and sometimes disappearance of new cryptocurrencies as well as of exchanges.\n\nAs per coinmarketcap.com, the global market is dominated by Bitcoin, Ethereum, Litecoin and other currencies that happen to be trending at the moment, such as Cardano, AVA or Kusama.\n\nGo here to exchange AVA to Kusama.\n\nLegacy brokers adopting cryptocurrency derivatives\n\nThe Chicago Mercantile Exchange, or CME for short, is a major US platform for trading futures contracts for energy, currency pairs, metals, and agricultural products. In December 2017, the CME launched futures contracts for the BTC rate against the US dollar. That was the first instance of a legacy financial institution launching a cryptocurrency product.\n\nIt is only logical that legacy brokers would start with derivatives. The decentralized nature of blockchains requires for cryptocurrencies to be stored in a specific way.\n\nTo hold actual cryptocurrency, legacy brokers would need to hire a provider of crypto custody and connect that custody to the brokerage’s current trading engines. That is expensive and technically so cutting-edge a solution that it is not yet very well established.\n\nLaunching a derivative market on the other hand is much simpler. The items that are moved through the order book operations are just contracts, not the actual cryptocurrency. All the broker needs to make sure of is that they have a cold storage with enough cryptocurrency to fully back the volumes that are traded in contracts on their platform. The cold storage is separated from the trading platform, which makes everything easier and most importantly cheaper.\n\nTraders like leveraged derivatives for their volatility\n\nOne of the reasons why cryptocurrency trading gained in popularity is the volatility of cryptocurrencies.\n\nFluctuations in the Bitcoin dollar rate per day often reach 10%, and Bitcoin is the most stable cryptocurrency at that. Intraday price changes in ratio markets between bitcoin and alt cryptocurrencies can exceed 100% per trading session.\n\nSweeping fluctuations of this size mean that there are opportunities for earning more money per day trading cryptocurrency markets than you could possibly earn with comparable skill and capital on legacy markets in the same time period. For comparison, the S&amp;P 500 index usually moves by less than 1.5% per day.\n\nHowever, the high volatility is also the reason why you get risk warnings everywhere: Do your own research, do not invest more than you can afford to lose, be careful with leverage.\n\nRead about the worst margin trading mistakes that new crypto traders make.\n\nPassive Investing Enters The Crypto Space\n\nAs explained in the beginning of the article, the cryptocurrency space is not regulated and neither are the crypto trading platforms. Those of you coming from simple legacy investing like IRA, you will need to get used to a bit more due diligence before you send money anywhere on the crypto markets.\n\nGood news is that you do not actually need to trade anymore to make regular profit in crypto.\n\nFor those of you used to the idea of investing as putting money into index funds and waiting, there is now an equivalent in crypto. It is increasingly more common for alt coin wallets to let you stake your coins and earn interest just for holding crypto. This is the closest analog to the old-school passive investing of 1980s.\n\nWhat if you do actually want to take up active trading?\n\nThen you will first need to decide on the exchange. The best way to go about that is the systematic one: Make a list of criteria.\n\nWe suggest focusing on the following:\n\n\n  exchange turnover (traded volumes)\n  variety of products (spot, futures, big and small currencies)\n  trading with borrowed funds (AKA margin trading or leveraged trading)\n  deposit requirements\n  registration requirements (do you need to pass KYC/AML?)\n  supported order types and their reliability (can you set a stop loss?)\n  the stability of the exchange to hacker attacks\n  fees charged for trading, deposit, and withdrawal of funds\n\n\nYou will find most of this data on aggregator platforms such as coinmarketcap.com or its smaller equivalents that we list at our Tools page.\n\nFinal words\n\nThe crypto markets of 2023 are stabilizing and calming down in spite of the lack of top-down regulation. The crypto trading industry now has products for the risk loving derivatives traders as well as for the passive investing types who until now had to stick to legacy index funds.\n\nAs always though, do your own research before you put your money at risk. And also: Not your keys, not your coin.\n",
       category: ["reports"],
       tags: ["yield","staking","crypto-fundamentals","blockchain-technology","shrimpy","trezor"],
       author: "AltcoinTrading.NET",
-      id: 105
+      id: 110
     });
     
   
@@ -1076,7 +1126,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["yield","crypto-fundamentals","blockchain-technology","bitforex","shrimpy","bitfinex"],
       author: "Diana",
-      id: 106
+      id: 111
     });
     
   
@@ -1086,7 +1136,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","blockchain-technology","defi","crypto-opsec","bitfinex"],
       author: "JMT",
-      id: 107
+      id: 112
     });
     
   
@@ -1096,27 +1146,27 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","nft","defi","blockchain-technology","bitfinex","ledger"],
       author: "Diana Trang",
-      id: 108
+      id: 113
     });
     
   
     this.add({
       title: "Adoption of Cryptocurrencies as Means of Payment and Opportunity for Wallet Recovery Services",
-      content: "Although the pandemic was an unfortunate event, it contributed to the popularity of cryptocurrencies.\n\nThe growth of the crypto industry was not only evident in investment processes but also in adaptability as a means of payment. Even major social platforms such as PayPal and Facebook are currently working on the integration of cryptocurrency payments.\n\nFacebook's colossal platform can attract a large audience and thanks to crypto can compete with the traditional financial institutions as a tool for transfers of money.\n\nThe evolution of cryptocurrencies can be seen in the current issues the cryptocurrency community deals with. Over the years, people have wondered about the sustainability of cryptocurrencies. But since big companies adopt it as a payment method, the prominent bone of contention is how to use cryptocurrencies as the mainstream.\n\nAdoption of Crypto as Means of Payment in the World Today\n\nIn the U.S., FED network has been working with MIT to build a digital currency platform already since late 2020.\n\nThis really shows that the once thought impossible is now coming true and cryptocurrencies are aiming towards being a daily means of transaction, a regular medium of exchange.\n\nIf collaborations regarding cryptocurrency adoption don’t stall, there is no doubt crypto will thrive.\n\nThe CBDC and Crypto Adoption\n\nThe Central Bank Digital Currency, known as the CBDC, is one of the early use cases. It is a stable coin, pegged to a non-crypto asset and therefore not volatile.\n\nOne of the goals of CBDC is to make crypto transactions more manageable through decreased volatility and also more accessible to broader range of people, especially those who are not as internet-savvy as crypto enthusiasts.\n\nThis novelty is expected to enhance the security and oversight over digital currencies, including cryptocurrencies. Some consumers will be able to access their digital wallets as they nowadays access legacy financial services online.\n\nThe commercial sector has also taken a significant turn in cryptocurrency. The most recent rage is the non-fungible token, the NFT, which is traded mostly in form of artworks.\n\nAll this development puts the pressure on individuals and businesses alike to learn the ins and outs of the management of storage of cryptocurrencies. However, it is a common knowledge that this does not always work out. People make mistakes - in private and on behalf of companies as well.\n\nChinese entrepreneurs are known to take a big step in this, offering wallet recovery services becoming a rapidly growing niche.\n\nThe reason for that is the Chinese government has been trying out its digital platform known as eCNY or digital yuan. Using digital currencies is aimed to provide an anti-money laundering solution, but considering it is running on blockchain technology, wallet recovery services are projected to become even more sought-after in the near future.\n\nFuture Opportunities for Virtual Cash\n\nAlthough virtual cash still cannot compare with fiat currency as for its general usability today, digital money offers some great benefits and opportunities. That has drawn the attention of many individuals and businesses all over the world.\n\nGiven the three benefits of cryptocurrencies listed below, many business strategists will recognise the possibility of needing a wallet recovery in rare cases of an accident will still be outweighed by the benefits of being in crypto.\n\n\n  \n    Individual Control of Digital Wallet\n\n    Some businesses and individuals prefer the cryptocurrency mode of payment to the legacy form because of its lack of intermediary.\n\n    Users can perform transactions without waiting until the bank clears it, with no regard to current economic blockading or other government actions, and with no need of contacting any regulatory body for validation. Crypto uses a public ledger for validation and transactions are processed automatically.\n  \n  \n    Record Details of Every Transaction\n\n    Except for a few non-traceable alt coins, which are quite niche, regulators can track down transactions because each one is recorder in the cryptocurrency’s ledger forever.\n\n    Hence, blockchain technology is not actually the best tool to process illegal transactions!\n  \n  \n    Constant Smart Contracts Innovations\n\n    Digital coins developers keep working to develop new functionalities on major cryptocurrencies like Bitcoin or Ethereum. For some specific niche purposes, there are altcoins which is an industry that is constantly developing as well.\n\n    But it’s not only about adding new capabilities, such as smart contracts.\n\n    Initially, we had the Proof of Work mechanism to validate transactions on the first cryptocurrencies such as Bitcoin and Ethereum. Many alternative cryptos now operate with the Proof of Stake mechanism, which is a faster, more eco-friendly and less expensive transaction validation system.\n\n    This movement makes it evident that virtual money will keep increasing its capacity to serve a better purpose for its users, contributing to its extended stay in the financial industry.\n  \n\n\nFinal Words\n\nThe future of cryptocurrencies as a store of value has been established by 22 but their future as means of payment is still a topic of discussion.\n\nEither way, there is no doubt that as long as cryptocurrency exists there will be the need for wallet management and recovery services on the individual as well as business level.\n",
+      content: "Although the pandemic was an unfortunate event, it contributed to the popularity of cryptocurrencies.\n\nThe growth of the crypto industry was not only evident in investment processes but also in adaptability as a means of payment. Even major social platforms such as PayPal and Facebook are currently working on the integration of cryptocurrency payments.\n\nFacebook's colossal platform can attract a large audience and thanks to crypto can compete with the traditional financial institutions as a tool for transfers of money.\n\nThe evolution of cryptocurrencies can be seen in the current issues the cryptocurrency community deals with. Over the years, people have wondered about the sustainability of cryptocurrencies. But since big companies adopt it as a payment method, the prominent bone of contention is how to use cryptocurrencies as the mainstream.\n\nAdoption of Crypto as Means of Payment in the World Today\n\nIn the U.S., FED network has been working with MIT to build a digital currency platform already since late 2020.\n\nThis really shows that the once thought impossible is now coming true and cryptocurrencies are aiming towards being a daily means of transaction, a regular medium of exchange.\n\nIf collaborations regarding cryptocurrency adoption don’t stall, there is no doubt crypto will thrive.\n\nThe CBDC and Crypto Adoption\n\nThe Central Bank Digital Currency, known as the CBDC, is one of the early use cases. It is a stable coin, pegged to a non-crypto asset and therefore not volatile.\n\nOne of the goals of CBDC is to make crypto transactions more manageable through decreased volatility and also more accessible to broader range of people, especially those who are not as internet-savvy as crypto enthusiasts.\n\nThis novelty is expected to enhance the security and oversight over digital currencies, including cryptocurrencies. Some consumers will be able to access their digital wallets as they nowadays access legacy financial services online.\n\nThe commercial sector has also taken a significant turn in cryptocurrency. The most recent rage is the non-fungible token, the NFT, which is traded mostly in form of artworks.\n\nAll this development puts the pressure on individuals and businesses alike to learn the ins and outs of the management of storage of cryptocurrencies. However, it is a common knowledge that this does not always work out. People make mistakes - in private and on behalf of companies as well.\n\nChinese entrepreneurs are known to take a big step in this, offering wallet recovery services becoming a rapidly growing niche.\n\nThe reason for that is the Chinese government has been trying out its digital platform known as eCNY or digital yuan. Using digital currencies is aimed to provide an anti-money laundering solution, but considering it is running on blockchain technology, wallet recovery services are projected to become even more sought-after in the near future.\n\nFuture Opportunities for Virtual Cash\n\nAlthough virtual cash still cannot compare with fiat currency as for its general usability today, digital money offers some great benefits and opportunities. That has drawn the attention of many individuals and businesses all over the world.\n\nGiven the three benefits of cryptocurrencies listed below, many business strategists will recognise the possibility of needing a wallet recovery in rare cases of an accident will still be outweighed by the benefits of being in crypto.\n\n\n  \n    Individual Control of Digital Wallet\n\n    Some businesses and individuals prefer the cryptocurrency mode of payment to the legacy form because of its lack of intermediary.\n\n    Users can perform transactions without waiting until the bank clears it, with no regard to current economic blockading or other government actions, and with no need of contacting any regulatory body for validation. Crypto uses a public ledger for validation and transactions are processed automatically.\n  \n  \n    Record Details of Every Transaction\n\n    Except for a few non-traceable alt coins, which are quite niche, regulators can track down transactions because each one is recorder in the cryptocurrency’s ledger forever.\n\n    Hence, blockchain technology is not actually the best tool to process illegal transactions!\n  \n  \n    Constant Smart Contracts Innovations\n\n    Digital coins developers keep working to develop new functionalities on major cryptocurrencies like Bitcoin or Ethereum. For some specific niche purposes, there are altcoins which is an industry that is constantly developing as well.\n\n    But it’s not only about adding new capabilities, such as smart contracts.\n\n    Initially, we had the Proof of Work mechanism to validate transactions on the first cryptocurrencies such as Bitcoin and Ethereum. Many alternative cryptos now operate with the Proof of Stake mechanism, which is a faster, more eco-friendly and less expensive transaction validation system.\n\n    This movement makes it evident that virtual money will keep increasing its capacity to serve a better purpose for its users, contributing to its extended stay in the financial industry.\n  \n\n\nFinal Words\n\nThe future of cryptocurrencies as a store of value has been established by 23 but their future as means of payment is still a topic of discussion.\n\nEither way, there is no doubt that as long as cryptocurrency exists there will be the need for wallet management and recovery services on the individual as well as business level.\n",
       category: ["reports"],
       tags: ["crypto-fundamentals","blockchain-technology","crypto-heists","shrimpy","trezor","independent-reserve"],
       author: "altcointrading",
-      id: 109
+      id: 114
     });
     
   
     this.add({
       title: "Top 10 Things to Know Before You Buy Bitcoin",
-      content: "Jumping into the world of cryptocurrencies can be thrilling, especially when you begin to discover and unlock the great uses of Bitcoin (BTC).\n\nBy 2022, you probably know someone who owns fractions of it—or perhaps you're already among those folks.\n\nBut if you haven't started your crypto journey yet even though you have been planning to do so, here is a list of top ten tips and things you should know before you buy Bitcoin.\n\n1 - You can buy fractions of Bitcoin\n\nFirst things first, you don't need to buy 1 BTC to get started in your crypto endeavor—unless you have the money, of course. At the time of writing (September 2021), Bitcoin is selling at over 46,000 USD and that's a huge amount to spend if you're just starting.\n\nBitcoin is a highly divisible asset, which is why you can buy fractions of BTC on a wide range of different crypto exchanges.\n\nSome even allow you to start with as little as 10 USD worth of BTC (like Paxful!), making it easy for you to get started.\n\n2 - A reliable and secure crypto wallet is a must\n\nBitcoin is a virtual currency that runs solely digitally. It has no physical representation like paper bills that could pile up in your wallet or coins that could jingle in your pockets or purse. Instead, it runs and operates with the help of technology or computers and smartphones connected to the internet.\n\nBefore you buy Bitcoin, you need a digital wallet where you'll send, receive, track, and manage your BTC funds and transactions.\n\nMake sure you get a secure and reliable crypto wallet from a trustworthy provider. Remember, we're talking about your money here, so it's better to be safe than sorry!\n\nSome crypto marketplaces like Paxful let you enjoy a free Bitcoin wallet right after signing up. Using wallet directly on an exchange or a p2p marketplace is the easiest and fastest way to set up a crypto wallet.\n\nA platform wallet is less secure than cold storage wallet with which you own your private keys, but it is convenient for small amounts of crypto or for your trading stack. Most traders opt to leave part of their trading stack on platforms where it is easily accessible.\n\n3 - You can buy BTC from trading and P2P exchanges\n\nLooking for the right place to buy Bitcoin? Your options include traditional and peer-to-peer (P2P) exchanges.\n\nTrading platforms have been around for a long time. This type of platform operates using order books that match buyers and sellers. Think of them as middlemen that help you complete a trade or transaction.\n\nYour other option is P2P exchanges, where you can transact directly with a buyer or seller instead of having an intermediary.\n\nYou get to choose your trading partner, how you want to send or receive payment, and which payment method you prefer, among so many other customizations. Simply put, you and your trade partner complete transactions yourselves.\n\n4 - Not every bank supports crypto transactions\n\nBitcoin's early years were far from being perfect. Like any innovation, BTC wasn't immediately accepted and trusted by many people when it first came to light.\n\nSome concerns about privacy and uses have circulated in the fintech space, which is why some banks and other financial institutions remain skeptical about it.\n\nIf you choose to fund a cryptocurrency purchase directly from your bank account, you will likely need to answer some questions. The exact same routine awaits your off-ramp, that is, selling crypto for fiat and withdrawing into your bank account. Be prepared to document the origin of your money.\n\nOn the flip side, you don't need a bank account to launch your crypto adventure—which brings us to our next important point.\n\n5 - There are tons of ways to quickly buy Bitcoin\n\nBelieve it or not, buying Bitcoin is not complicated at all. Different crypto platforms offer numerous ways to help you get your hands on BTC right away. Paxful, for example, allows you to buy BTC with the nearly 400 payment methods it supports.\n\nYou can buy Bitcoin with Paypal, bank transfers, online wallets, cash payments, and so many more. All that's left to do is choose the payment option that best suits your needs to get started.\n\n6 - Bitcoin is a highly volatile asset\n\nWhen Bitcoin was introduced by Satoshi Nakamoto, its value was nothing.\n\nFast forward to today (September 2021), Bitcoin's market price is at over 46,000 USD—insane, right? This dramatic price change is proof that Bitcoin is a highly volatile asset, which is why many investors and crypto enthusiasts became fascinated with it right away.\n\nIn case you didn't hear, Bitcoin reached an all-time high of about 65,000 USD in April of 2021—that's the kind of volatility we're talking about!\n\n7 - Trading and investing are two different things\n\nCrypto trading and investing are often interchanged by many.\n\nWhile both are great ways to make money, trading and investing are different. When you're investing in crypto , you're geared up for the long-term potential of the assets you choose, with the goal of selling them in the years to come. This means that short-term price movements aren't really your thing and those don't bother you.\n\nBut when you're trading crypto , you're more concerned about the hourly and daily movements of crypto prices in the market. Crypto traders make money by buying BTC at low prices then selling them at a higher price—could be in the next minute, hour, day, or week. This is why they're always closely looking at the market trends and making quick decisions about how to earn money out of the price movements.\n\n8 - Use 2FA and keep your password safe\n\nCyber hackers are always looking for their next potential target, so it's essential to always keep your crypto account passwords safe.\n\nMake sure it's a unique, strong, and complex combination that's difficult to guess. You should also never reuse passwords, especially not for accounts related to money.\n\nThis way, all of your accounts won't be easily compromised in case one of your passwords has been successfully cracked. And as always, keep your passwords to yourself.\n\nMost crypto wallets also allow you to enable two-factor authentication (2FA) to add another layer of protection to your Bitcoin funds. Remember, if your crypto is lost or stolen, it's gone forever.\n\n9 - You can buy BTC with minimal to no fees\n\nWhen you buy Bitcoin, the percentage of fees varies depending on the platform or exchange and the payment method you choose. Some marketplaces offer higher fees, while others allow you to buy fractions of Bitcoin with lower to no fees.\n\nPlatforms like Paxful enable you to buy Bitcoin with zero charges regardless of which payment option you choose. This makes it even easier and more affordable to get started with crypto.\n\n10 - Bitcoin is pseudonymous\n\nContrary to (still) popular belief, Bitcoin transactions aren't entirely anonymous.\n\nBitcoin transactions are pseudonymous. People's identities on the blockchain network aren't stored, but every transaction they make is publicly broadcasted and permanently recorded.\n\nNow it's important to mention that Bitcoin addresses, private and public keys, and transactions are all read in lengthy alphanumeric text strings. This means that you won't quickly identify who the person behind those long text strings is.\n\nHowever, if your real-world identity is directly linked to a Bitcoin address, people in the network can track or trace the other transactions you've made or took part in.\n\nReady to buy your first fraction(s) of Bitcoin?\n\nAfter more than a decade of existence, more and more individuals and businesses from different industries have started to get their hands on crypto.\n\nHow about you?\n\nWhen are you planning to join millions of Bitcoin holders worldwide?\n",
+      content: "Jumping into the world of cryptocurrencies can be thrilling, especially when you begin to discover and unlock the great uses of Bitcoin (BTC).\n\nBy 2023, you probably know someone who owns fractions of it—or perhaps you're already among those folks.\n\nBut if you haven't started your crypto journey yet even though you have been planning to do so, here is a list of top ten tips and things you should know before you buy Bitcoin.\n\n1 - You can buy fractions of Bitcoin\n\nFirst things first, you don't need to buy 1 BTC to get started in your crypto endeavor—unless you have the money, of course. At the time of writing (September 2021), Bitcoin is selling at over 46,000 USD and that's a huge amount to spend if you're just starting.\n\nBitcoin is a highly divisible asset, which is why you can buy fractions of BTC on a wide range of different crypto exchanges.\n\nSome even allow you to start with as little as 10 USD worth of BTC (like Paxful!), making it easy for you to get started.\n\n2 - A reliable and secure crypto wallet is a must\n\nBitcoin is a virtual currency that runs solely digitally. It has no physical representation like paper bills that could pile up in your wallet or coins that could jingle in your pockets or purse. Instead, it runs and operates with the help of technology or computers and smartphones connected to the internet.\n\nBefore you buy Bitcoin, you need a digital wallet where you'll send, receive, track, and manage your BTC funds and transactions.\n\nMake sure you get a secure and reliable crypto wallet from a trustworthy provider. Remember, we're talking about your money here, so it's better to be safe than sorry!\n\nSome crypto marketplaces like Paxful let you enjoy a free Bitcoin wallet right after signing up. Using wallet directly on an exchange or a p2p marketplace is the easiest and fastest way to set up a crypto wallet.\n\nA platform wallet is less secure than cold storage wallet with which you own your private keys, but it is convenient for small amounts of crypto or for your trading stack. Most traders opt to leave part of their trading stack on platforms where it is easily accessible.\n\n3 - You can buy BTC from trading and P2P exchanges\n\nLooking for the right place to buy Bitcoin? Your options include traditional and peer-to-peer (P2P) exchanges.\n\nTrading platforms have been around for a long time. This type of platform operates using order books that match buyers and sellers. Think of them as middlemen that help you complete a trade or transaction.\n\nYour other option is P2P exchanges, where you can transact directly with a buyer or seller instead of having an intermediary.\n\nYou get to choose your trading partner, how you want to send or receive payment, and which payment method you prefer, among so many other customizations. Simply put, you and your trade partner complete transactions yourselves.\n\n4 - Not every bank supports crypto transactions\n\nBitcoin's early years were far from being perfect. Like any innovation, BTC wasn't immediately accepted and trusted by many people when it first came to light.\n\nSome concerns about privacy and uses have circulated in the fintech space, which is why some banks and other financial institutions remain skeptical about it.\n\nIf you choose to fund a cryptocurrency purchase directly from your bank account, you will likely need to answer some questions. The exact same routine awaits your off-ramp, that is, selling crypto for fiat and withdrawing into your bank account. Be prepared to document the origin of your money.\n\nOn the flip side, you don't need a bank account to launch your crypto adventure—which brings us to our next important point.\n\n5 - There are tons of ways to quickly buy Bitcoin\n\nBelieve it or not, buying Bitcoin is not complicated at all. Different crypto platforms offer numerous ways to help you get your hands on BTC right away. Paxful, for example, allows you to buy BTC with the nearly 400 payment methods it supports.\n\nYou can buy Bitcoin with Paypal, bank transfers, online wallets, cash payments, and so many more. All that's left to do is choose the payment option that best suits your needs to get started.\n\n6 - Bitcoin is a highly volatile asset\n\nWhen Bitcoin was introduced by Satoshi Nakamoto, its value was nothing.\n\nFast forward to today (September 2021), Bitcoin's market price is at over 46,000 USD—insane, right? This dramatic price change is proof that Bitcoin is a highly volatile asset, which is why many investors and crypto enthusiasts became fascinated with it right away.\n\nIn case you didn't hear, Bitcoin reached an all-time high of about 65,000 USD in April of 2021—that's the kind of volatility we're talking about!\n\n7 - Trading and investing are two different things\n\nCrypto trading and investing are often interchanged by many.\n\nWhile both are great ways to make money, trading and investing are different. When you're investing in crypto , you're geared up for the long-term potential of the assets you choose, with the goal of selling them in the years to come. This means that short-term price movements aren't really your thing and those don't bother you.\n\nBut when you're trading crypto , you're more concerned about the hourly and daily movements of crypto prices in the market. Crypto traders make money by buying BTC at low prices then selling them at a higher price—could be in the next minute, hour, day, or week. This is why they're always closely looking at the market trends and making quick decisions about how to earn money out of the price movements.\n\n8 - Use 2FA and keep your password safe\n\nCyber hackers are always looking for their next potential target, so it's essential to always keep your crypto account passwords safe.\n\nMake sure it's a unique, strong, and complex combination that's difficult to guess. You should also never reuse passwords, especially not for accounts related to money.\n\nThis way, all of your accounts won't be easily compromised in case one of your passwords has been successfully cracked. And as always, keep your passwords to yourself.\n\nMost crypto wallets also allow you to enable two-factor authentication (2FA) to add another layer of protection to your Bitcoin funds. Remember, if your crypto is lost or stolen, it's gone forever.\n\n9 - You can buy BTC with minimal to no fees\n\nWhen you buy Bitcoin, the percentage of fees varies depending on the platform or exchange and the payment method you choose. Some marketplaces offer higher fees, while others allow you to buy fractions of Bitcoin with lower to no fees.\n\nPlatforms like Paxful enable you to buy Bitcoin with zero charges regardless of which payment option you choose. This makes it even easier and more affordable to get started with crypto.\n\n10 - Bitcoin is pseudonymous\n\nContrary to (still) popular belief, Bitcoin transactions aren't entirely anonymous.\n\nBitcoin transactions are pseudonymous. People's identities on the blockchain network aren't stored, but every transaction they make is publicly broadcasted and permanently recorded.\n\nNow it's important to mention that Bitcoin addresses, private and public keys, and transactions are all read in lengthy alphanumeric text strings. This means that you won't quickly identify who the person behind those long text strings is.\n\nHowever, if your real-world identity is directly linked to a Bitcoin address, people in the network can track or trace the other transactions you've made or took part in.\n\nReady to buy your first fraction(s) of Bitcoin?\n\nAfter more than a decade of existence, more and more individuals and businesses from different industries have started to get their hands on crypto.\n\nHow about you?\n\nWhen are you planning to join millions of Bitcoin holders worldwide?\n",
       category: ["onramp"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","hodl","trezor","invity","independent-reserve"],
       author: "altcointrading",
-      id: 110
+      id: 115
     });
     
   
@@ -1126,7 +1176,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-opsec","kyc","derisking","shrimpy","invity"],
       author: "altcointrading",
-      id: 111
+      id: 116
     });
     
   
@@ -1136,7 +1186,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","crypto-opsec","kyc","bitfinex","bitforex","ledger"],
       author: "altcointrading",
-      id: 112
+      id: 117
     });
     
   
@@ -1146,7 +1196,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","kyc","trezor","localcryptos","bitforex"],
       author: "altcointrading",
-      id: 113
+      id: 118
     });
     
   
@@ -1156,17 +1206,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","trading-technique","shrimpy","bitfinex"],
       author: "AltcoinTrading.NET",
-      id: 114
+      id: 119
     });
     
   
     this.add({
       title: "On-Platform Automation: Where to do basic bot trading directly on the crypto exchange",
-      content: "Automated trading can be a gold mine, if done well. There are traders who have a well set-up and backtested bot for scalping their favorite crypto market, and they run it whenever the market is ranging to save up their limited attention for more profitable situations.\n\nBut sometimes all you need is just a simple programmed buy order based on a few conditions, so that you don’t have to spend two months babysitting the charts when all you want to do is a spot buy on a decent bounce.\n\nWell, turns out that in 2022 some crypto trading platforms let you do that natively. Not only there is no need to write code, there is no need to get a third party tool either.\n\nDifferent trading platforms offer various degrees of complexity in what you can automate.\n\nWe’ll start from the most easy to use solution here.\n\nAlso read about these crypto programs if you’re interested to learn about some interesting affiliate networks.\n\nAuto Trader on Independent Reserve\n\nThe AutoTrader feature on the Aussie exchange Independent Reserve is very simple, but good rnough for most of your non-degen pursuits. Independent Reserve itself is an exchange built mainly for fast and legitimate onramp and offramp between cash and bitcoin or altcoins, not for daytrading and scalping.\n\nBut what it can do it does very well, and it will make your DCA or diversification work easier.\n\n\n\nThe AutoTrader is a free, user-friendly feature that currently has the three following strategies live:\n\n\n  Auto Buy on Deposit: Automatically buy or Dollar Cost Average (DCA) your way into bitcoin or altcoin once a fiat deposit is credited to your account.\n  Auto Basket for Diversifying: Automatically buy a weighted basket of cryptocurrencies once a fiat deposit is credited to your account.\n  Audo Schedule: Scheduled buying or selling of cryptocurrencies on a regular schedule. You can deposit once a month and then run the auto schedule to DCA parts of that deposit on regular intervals.\n\n\nYou will find the AutoTrader in your Accounts section at Independent Reserve. Supported fiat currencies are AUD, NZD, SGD and USD with fast deposits and withdrawals worldwide.\n\nSign up\n \nMore about Independent Reserve\n\nFTX Quant Zone\n\nFTX Quant Zone is where you can natively automate your crypto trading based on quite a lot of parameters.\n\nYou will need to set up your rules in pseudo-code, but you will find they are easy to work out. Nonetheless: The FTX quant zone gets confusing for portfolio management where you handle a lot of assets, and for trading on technical indicators.\n\n\n  Here are examples of third party trading bots for FTX\n\n\nVolume trading on FTX Quant Zone\n\nHere’s a simple rule that lets you buy a high volume breakout:\n\n\n\n\n  Another volume trading setup on FTX Quant Zone here in the VPVR trading strategy post\n\n\n\n\nTo add parameters, click the question mark icon next the rule field. You’ll get the manual with all of the rules that are currently implemented.\n\nMarket timing on FTX Quant Zone\n\nNot only you can program a trigger based on how much and on which volume a market moves within any time period of your choice, but you can also build your own stats if you want to.\n\nThere is a full library of basic arithmetic operators implemented. I am sure it will be painstaking if you’re not used to working with low level commands, but with a little bit of trial and error you can build triggers for basic TA metrics. You just need to google the formula on which they are built or copy and adjust it from a TradingView pine script.\n\n\n\nIt is worth pointing out that the market on which you set up your trigger does not need to be the same as the market on which you execute your order.\n\n\n  A simple example: Let’s say, you own BTC, you want to buy a BTCUSD bounce but you also want to limit your potential losses in case you’re wrong. In this case you could set up a trigger on the spot market and direct it to act on BTC perpetual swap with a stop loss, or you can direct it to buy a call option. FTX global does support options trading.\n  A market timing example: FTX provides several basket indices to work with: You can trade on the comparison of a single market vs an index. More on that in market timing article.\n  You could also work out a relationship between crypto and stocks, and direct the action to one of FTX’s tokenized stock markets…Tons of possibilities here.\n\n\nSign up (5% discount)\n \nMore about FTX (US and Global)\n\nBitfinex\n\nBitfinex currently does not offer an automation tool for trading. They do offer two related products though:\n\n\n  Lending PRO, which is an automated, rule based interface for offering of your Funding wallet balance on the lending market.\n  Bitfinex Terminal which offers market data for serious algo backtesting at https://terminal.bitfinex.com/\n\n\nIf you lend fiat or crypto to other traders on the margin lending market, the Lending PRO interface is a good way to ensure your balance is utilized to the fullest.\n\nThe Lending PRO has a posh name but it’s available for everyone regardless if they are KYC-verified or not.\n\nDig in and test it for a bit to experiment with the rules on different lending markets. It costs nothing and it does not risk any more money than manual lending since your assets are already deposited in the funding wallet anyway.\n\nAs for trading though, Bitfinex only has products for advanced algo trading.\n\nSign up (6% discount)\n \nMore about Bitfinex\n\nPlatforms that currently don’t offer automation\n\n\n  The no-KYC/low-KYC mainstays Phemex and Bitforex.\n  Binance, but they tend to implement features once they get popular on smaller exchanges.\n  Deribit, although they do make automation easier by running an interactive position builder with PnL projection and their API is well documented.\n  Bitfinex, in a simply ready-made way for trading.\n\n\nWith all these, you will need to use the Coinrule bot or some other third party bot builder for now.\n\nLet’s hope crypto trading platforms will catch up and understand that traders have better things to do than staring at charts when they don’t have to.\n",
+      content: "Automated trading can be a gold mine, if done well. There are traders who have a well set-up and backtested bot for scalping their favorite crypto market, and they run it whenever the market is ranging to save up their limited attention for more profitable situations.\n\nBut sometimes all you need is just a simple programmed buy order based on a few conditions, so that you don’t have to spend two months babysitting the charts when all you want to do is a spot buy on a decent bounce.\n\nWell, turns out that in 2023 some crypto trading platforms let you do that natively. Not only there is no need to write code, there is no need to get a third party tool either.\n\nDifferent trading platforms offer various degrees of complexity in what you can automate.\n\nWe’ll start from the most easy to use solution here.\n\nAlso read about these crypto programs if you’re interested to learn about some interesting affiliate networks.\n\nAuto Trader on Independent Reserve\n\nThe AutoTrader feature on the Aussie exchange Independent Reserve is very simple, but good rnough for most of your non-degen pursuits. Independent Reserve itself is an exchange built mainly for fast and legitimate onramp and offramp between cash and bitcoin or altcoins, not for daytrading and scalping.\n\nBut what it can do it does very well, and it will make your DCA or diversification work easier.\n\n\n\nThe AutoTrader is a free, user-friendly feature that currently has the three following strategies live:\n\n\n  Auto Buy on Deposit: Automatically buy or Dollar Cost Average (DCA) your way into bitcoin or altcoin once a fiat deposit is credited to your account.\n  Auto Basket for Diversifying: Automatically buy a weighted basket of cryptocurrencies once a fiat deposit is credited to your account.\n  Audo Schedule: Scheduled buying or selling of cryptocurrencies on a regular schedule. You can deposit once a month and then run the auto schedule to DCA parts of that deposit on regular intervals.\n\n\nYou will find the AutoTrader in your Accounts section at Independent Reserve. Supported fiat currencies are AUD, NZD, SGD and USD with fast deposits and withdrawals worldwide.\n\nSign up\n \nMore about Independent Reserve\n\nFTX Quant Zone\n\nFTX Quant Zone is where you can natively automate your crypto trading based on quite a lot of parameters.\n\nYou will need to set up your rules in pseudo-code, but you will find they are easy to work out. Nonetheless: The FTX quant zone gets confusing for portfolio management where you handle a lot of assets, and for trading on technical indicators.\n\n\n  Here are examples of third party trading bots for FTX\n\n\nVolume trading on FTX Quant Zone\n\nHere’s a simple rule that lets you buy a high volume breakout:\n\n\n\n\n  Another volume trading setup on FTX Quant Zone here in the VPVR trading strategy post\n\n\n\n\nTo add parameters, click the question mark icon next the rule field. You’ll get the manual with all of the rules that are currently implemented.\n\nMarket timing on FTX Quant Zone\n\nNot only you can program a trigger based on how much and on which volume a market moves within any time period of your choice, but you can also build your own stats if you want to.\n\nThere is a full library of basic arithmetic operators implemented. I am sure it will be painstaking if you’re not used to working with low level commands, but with a little bit of trial and error you can build triggers for basic TA metrics. You just need to google the formula on which they are built or copy and adjust it from a TradingView pine script.\n\n\n\nIt is worth pointing out that the market on which you set up your trigger does not need to be the same as the market on which you execute your order.\n\n\n  A simple example: Let’s say, you own BTC, you want to buy a BTCUSD bounce but you also want to limit your potential losses in case you’re wrong. In this case you could set up a trigger on the spot market and direct it to act on BTC perpetual swap with a stop loss, or you can direct it to buy a call option. FTX global does support options trading.\n  A market timing example: FTX provides several basket indices to work with: You can trade on the comparison of a single market vs an index. More on that in market timing article.\n  You could also work out a relationship between crypto and stocks, and direct the action to one of FTX’s tokenized stock markets…Tons of possibilities here.\n\n\nSign up (5% discount)\n \nMore about FTX (US and Global)\n\nBitfinex\n\nBitfinex currently does not offer an automation tool for trading. They do offer two related products though:\n\n\n  Lending PRO, which is an automated, rule based interface for offering of your Funding wallet balance on the lending market.\n  Bitfinex Terminal which offers market data for serious algo backtesting at https://terminal.bitfinex.com/\n\n\nIf you lend fiat or crypto to other traders on the margin lending market, the Lending PRO interface is a good way to ensure your balance is utilized to the fullest.\n\nThe Lending PRO has a posh name but it’s available for everyone regardless if they are KYC-verified or not.\n\nDig in and test it for a bit to experiment with the rules on different lending markets. It costs nothing and it does not risk any more money than manual lending since your assets are already deposited in the funding wallet anyway.\n\nAs for trading though, Bitfinex only has products for advanced algo trading.\n\nSign up (6% discount)\n \nMore about Bitfinex\n\nPlatforms that currently don’t offer automation\n\n\n  The no-KYC/low-KYC mainstays Phemex and Bitforex.\n  Binance, but they tend to implement features once they get popular on smaller exchanges.\n  Deribit, although they do make automation easier by running an interactive position builder with PnL projection and their API is well documented.\n  Bitfinex, in a simply ready-made way for trading.\n\n\nWith all these, you will need to use the Coinrule bot or some other third party bot builder for now.\n\nLet’s hope crypto trading platforms will catch up and understand that traders have better things to do than staring at charts when they don’t have to.\n",
       category: ["trading-technique"],
       tags: ["derivatives","derisking","trading-platforms","crypto-technical-analysis","coinrule","independent-reserve","bitfinex"],
       author: "Karlvonbahnhof",
-      id: 115
+      id: 120
     });
     
   
@@ -1176,7 +1226,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","crypto-fundamentals","invity"],
       author: "altcointrading",
-      id: 116
+      id: 121
     });
     
   
@@ -1186,17 +1236,17 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","defi","crypto-fundamentals","yield","p2p-trading","crypto-charting","tradingview-script-review","bitfinex","binance","tradingview"],
       author: "KarlVonBahnhof",
-      id: 117
+      id: 122
     });
     
   
     this.add({
       title: "Yield Farming Platforms in 2022 (And where to learn about every new DEX)",
-      content: "Until DeFi came around, our only way to generate income from crypto holdings was either active trading or margin lending to other traders.\n\nDeFi and PoS changed that…Kind of.\n\nNeither yield farming nor staking are super groundbreakingly new concepts.\n\n\n  \n    Yield farming\n\n    …is just a way of providing liquidity to traders.\n  \n\n\nAs a yield farmer, you depend on active trading of your token.\n\n\n  Cold Staking\n\n\n… is just a way of automated lending to the whole network.\n\nAs a staker, you get rewarded for confirming transactions, you depend on the blockchain being active.\n\nIn this blog we’ll focus on yield farming in 2022.\n\nNow that so many services around cold staking and yield farming developed, it is quite easy for everyone to earn some extra income from their crypto.\n\nThat also means that the actual yields got much lower, because the market is now more saturated. In line with that, we outline a way to stay up do date with the latest markets to snatch early opportunities.\n\nBest Yield Farming Platforms\n\nTo start off, here’s a list of some of the currently popular yield farming platforms. And a little explanation of how to navigate the space to maximize your yields.\n\nOG yield farming platforms and more successful clones\n\n\n  \n    Uniswap\n\n    Chains: Ethereum, Polygon, Optimism, Arbitrum\n\n    In v3 there have been a lot of changes to the yield farming protocol. Read how to provide liquidity using the new Advanced functions.\n  \n  \n    Curve.Finance\n\n    Chains: Ethereum, Polygon, AAVE\n\n    The Curve is a DAO that launched on ETH in August 2020. Curve allows liquidity providers to take decisions on adding new pools, changing pool parameters, adding CRV incentives and other aspects of the Curve protocol.\n\n    \n  \n  \n    1inch\n  \n\n\nChains: Ethereum, Binance Smart Chain, Polygon, Optimism, Arbitrum\n\n1inch is an aggregator of large amount of DeFi markets, either on ETH or on BSC or some of the newly added blockchains. Only launched in summer 2021, it got quite a traction and v2 is in the works.\n\n\n  \n    SushiSwap\n\n    Chains: Ethereum, Binance Smart Chain, Polygon, Optimism, Arbitrum and many others\n\n    SushiSwap supports the largest number of different blockchains to use to trade and yield from tokens.\n\n    In addition to yield farming, Sushi Swap now offers classic lending without automated-market-maker, which means no impermanent loss. Some of the rates are interesting.\n\n    \n  \n  \n    PancakeSwap\n\n    Chains: Binance Smart Chain\n\n    PancakeSwap did not add support to other chains, it’s still only BSC. It did add NFT trading though, which keeps people interested.\n  \n\n\nSmaller clones\n\n\n  CoinSwap BSC\n  PooCoin BSC, MATIC, KCC\n  BakerySwap BSC (focused on NFTs)\n\n\nWhy Yield Farming paid so much (in the beginning)\n\nYield farming is the new DeFi type of lending where alt-coiners have been generating crazy returns until midway through the year 2020 or so.\n\nLet’s explain in broad strokes how it earning yields works.\n\n\n  In yield farming, you lend your money to a trading platform with automated market-making (AMM) system.\n  DeFi trading platforms rely on their liquidity being crowd-sourced like this.\n  Because of that reliance they will pay a lot to get their liquidity in. Without it, there could be no trading.\n  The demand side: The more popular the platform gets, the more liquidity it demands, the more you can earn from providing it.\n  The supply side: The more people start providing coins to generate yields, the higher the supply of the coin, which decreased yields as the demand is met.\n\n\nYield Farming Got Crowded\n\nClearly, if you want to keep earning as much as you can from your farming, you need to keep track of two things:\n\n\n  which DeFi platforms people currently trade on.\n  which coins that have some hype around them are getting newly listed there.\n\n\nYour opportunity is on any platform where traders want to trade and where there is not enough liquidity to meet that demand.\n\nSo far, it’s still not one-and-done. The top platform is the one that (still, despite regulations) has the highest volume - Binance. Token traders are opportunistic and move between platforms quite a lot, though.\n\nWhy DeFi traders move platforms a lot\n\nWhy will an alt coin trader switch exchanges? Usually it’s one of the two following reasons:\n\n\n  The fees are too high and they want to move from ETH to the Binance Smart Chain (BSC) or some other novel chain.\n  The shitcoin of the week is not yet listed on their old exchange and they want to trade it.\n\n\nIf you are a DeFi liquidity provider, you will need to know where the traders flock and follow them.\n\nOn decentralized exchanges, you don’t even need to make an account. You simply plug in a wallet like Metamask and trade directly from it. That’s one thing that makes it so easy to switch between DEX platforms.\n\nOnce a trader stops liking their DeFi exchange, they might do a quick skim through Reddit to see where else people are trading, and go plug your wallet to the new place.\n\nYield Farming Strategy for 2022\n\nIf you want to know about new DeFi markets to provide liquidity to, go to the same places where traders go.\n\n\n  \n    Shill exchanges where coins get shill\n\n    Here’s a couple of forums where shills post about the latest DEXes, alt coins and NFTs:\n\n    \n      r/cryptomoonshot\n      r/altcointrader\n      r/cardanonfts\n    \n\n    Alternatively, you need to make sure they hear about the exchange you work on and get curious. That is why there are so many DeFi shills everywhere these days.\n  \n  \n    Look for clones of current yield farming platforms\n\n    New decentralized and DeFi swaps crop up all the time. They are almost never written from scratch. In almost all cases, they are a clone of a different DeFi swap.\n\n    So, you can get ahead if you go to GitHub and search for Uniswap clone, Sushiswap clone, Yearn finance clone…Anyone can make their own clone and try to get the traders in.\n\n    Here is a list of the more OG places traders still talk about a lot. You can use them as a starting point for your searches:\n\n    \n      \n        \n          DEX\n          Chain\n          What draws the traders in\n        \n      \n      \n        \n          Uniswap\n          ETH, MATIC…\n          Advanced functions in liquidity provision\n        \n        \n          Curve.Finance\n          Ethereum\n          Low fees and minimum slippage\n        \n        \n          SushiSwap\n          Ethereum\n          Network effect at this point\n        \n      \n    \n  \n  \n    Look for yield farming platforms with rising volume\n\n    Two words: Dune Analytics.\n\n    NFT traders will find the data valuable, too.\n\n    \n  \n\n\nBottom Line\n\nMaybe one day the DeFi market will mature and vast majority of people will have the same go-to DEX for yield farming. But for now, your yield will change wildly from platform to platform.\n",
+      content: "Until DeFi came around, our only way to generate income from crypto holdings was either active trading or margin lending to other traders.\n\nDeFi and PoS changed that…Kind of.\n\nNeither yield farming nor staking are super groundbreakingly new concepts.\n\n\n  \n    Yield farming\n\n    …is just a way of providing liquidity to traders.\n  \n\n\nAs a yield farmer, you depend on active trading of your token.\n\n\n  Cold Staking\n\n\n… is just a way of automated lending to the whole network.\n\nAs a staker, you get rewarded for confirming transactions, you depend on the blockchain being active.\n\nIn this blog we’ll focus on yield farming in 2023.\n\nNow that so many services around cold staking and yield farming developed, it is quite easy for everyone to earn some extra income from their crypto.\n\nThat also means that the actual yields got much lower, because the market is now more saturated. In line with that, we outline a way to stay up do date with the latest markets to snatch early opportunities.\n\nBest Yield Farming Platforms\n\nTo start off, here’s a list of some of the currently popular yield farming platforms. And a little explanation of how to navigate the space to maximize your yields.\n\nOG yield farming platforms and more successful clones\n\n\n  \n    Uniswap\n\n    Chains: Ethereum, Polygon, Optimism, Arbitrum\n\n    In v3 there have been a lot of changes to the yield farming protocol. Read how to provide liquidity using the new Advanced functions.\n  \n  \n    Curve.Finance\n\n    Chains: Ethereum, Polygon, AAVE\n\n    The Curve is a DAO that launched on ETH in August 2020. Curve allows liquidity providers to take decisions on adding new pools, changing pool parameters, adding CRV incentives and other aspects of the Curve protocol.\n\n    \n  \n  \n    1inch\n  \n\n\nChains: Ethereum, Binance Smart Chain, Polygon, Optimism, Arbitrum\n\n1inch is an aggregator of large amount of DeFi markets, either on ETH or on BSC or some of the newly added blockchains. Only launched in summer 2021, it got quite a traction and v2 is in the works.\n\n\n  \n    SushiSwap\n\n    Chains: Ethereum, Binance Smart Chain, Polygon, Optimism, Arbitrum and many others\n\n    SushiSwap supports the largest number of different blockchains to use to trade and yield from tokens.\n\n    In addition to yield farming, Sushi Swap now offers classic lending without automated-market-maker, which means no impermanent loss. Some of the rates are interesting.\n\n    \n  \n  \n    PancakeSwap\n\n    Chains: Binance Smart Chain\n\n    PancakeSwap did not add support to other chains, it’s still only BSC. It did add NFT trading though, which keeps people interested.\n  \n\n\nSmaller clones\n\n\n  CoinSwap BSC\n  PooCoin BSC, MATIC, KCC\n  BakerySwap BSC (focused on NFTs)\n\n\nWhy Yield Farming paid so much (in the beginning)\n\nYield farming is the new DeFi type of lending where alt-coiners have been generating crazy returns until midway through the year 2020 or so.\n\nLet’s explain in broad strokes how it earning yields works.\n\n\n  In yield farming, you lend your money to a trading platform with automated market-making (AMM) system.\n  DeFi trading platforms rely on their liquidity being crowd-sourced like this.\n  Because of that reliance they will pay a lot to get their liquidity in. Without it, there could be no trading.\n  The demand side: The more popular the platform gets, the more liquidity it demands, the more you can earn from providing it.\n  The supply side: The more people start providing coins to generate yields, the higher the supply of the coin, which decreased yields as the demand is met.\n\n\nYield Farming Got Crowded\n\nClearly, if you want to keep earning as much as you can from your farming, you need to keep track of two things:\n\n\n  which DeFi platforms people currently trade on.\n  which coins that have some hype around them are getting newly listed there.\n\n\nYour opportunity is on any platform where traders want to trade and where there is not enough liquidity to meet that demand.\n\nSo far, it’s still not one-and-done. The top platform is the one that (still, despite regulations) has the highest volume - Binance. Token traders are opportunistic and move between platforms quite a lot, though.\n\nWhy DeFi traders move platforms a lot\n\nWhy will an alt coin trader switch exchanges? Usually it’s one of the two following reasons:\n\n\n  The fees are too high and they want to move from ETH to the Binance Smart Chain (BSC) or some other novel chain.\n  The shitcoin of the week is not yet listed on their old exchange and they want to trade it.\n\n\nIf you are a DeFi liquidity provider, you will need to know where the traders flock and follow them.\n\nOn decentralized exchanges, you don’t even need to make an account. You simply plug in a wallet like Metamask and trade directly from it. That’s one thing that makes it so easy to switch between DEX platforms.\n\nOnce a trader stops liking their DeFi exchange, they might do a quick skim through Reddit to see where else people are trading, and go plug your wallet to the new place.\n\nYield Farming Strategy for 2022\n\nIf you want to know about new DeFi markets to provide liquidity to, go to the same places where traders go.\n\n\n  \n    Shill exchanges where coins get shill\n\n    Here’s a couple of forums where shills post about the latest DEXes, alt coins and NFTs:\n\n    \n      r/cryptomoonshot\n      r/altcointrader\n      r/cardanonfts\n    \n\n    Alternatively, you need to make sure they hear about the exchange you work on and get curious. That is why there are so many DeFi shills everywhere these days.\n  \n  \n    Look for clones of current yield farming platforms\n\n    New decentralized and DeFi swaps crop up all the time. They are almost never written from scratch. In almost all cases, they are a clone of a different DeFi swap.\n\n    So, you can get ahead if you go to GitHub and search for Uniswap clone, Sushiswap clone, Yearn finance clone…Anyone can make their own clone and try to get the traders in.\n\n    Here is a list of the more OG places traders still talk about a lot. You can use them as a starting point for your searches:\n\n    \n      \n        \n          DEX\n          Chain\n          What draws the traders in\n        \n      \n      \n        \n          Uniswap\n          ETH, MATIC…\n          Advanced functions in liquidity provision\n        \n        \n          Curve.Finance\n          Ethereum\n          Low fees and minimum slippage\n        \n        \n          SushiSwap\n          Ethereum\n          Network effect at this point\n        \n      \n    \n  \n  \n    Look for yield farming platforms with rising volume\n\n    Two words: Dune Analytics.\n\n    NFT traders will find the data valuable, too.\n\n    \n  \n\n\nBottom Line\n\nMaybe one day the DeFi market will mature and vast majority of people will have the same go-to DEX for yield farming. But for now, your yield will change wildly from platform to platform.\n",
       category: ["trading-platforms"],
       tags: ["trading-platforms","defi","yield","crypto-fundamentals","p2p-trading","top","bitfinex"],
       author: "altcointrading",
-      id: 118
+      id: 123
     });
     
   
@@ -1206,7 +1256,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-fundamentals","defi","independent-reserve"],
       author: "altcointrading",
-      id: 119
+      id: 124
     });
     
   
@@ -1216,7 +1266,7 @@ var idx = lunr(function() {
       category: ["cheatsheets"],
       tags: ["crypto-charting","crypto-fundamentals","crypto-trading-strategy","derivatives","crypto-technical-analysis","deribit","bitfinex"],
       author: "altcointrading",
-      id: 120
+      id: 125
     });
     
   
@@ -1226,7 +1276,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["spend-your-crypto","crypto-fundamentals"],
       author: "altcointrading",
-      id: 121
+      id: 126
     });
     
   
@@ -1236,7 +1286,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","divergence","pattern-trading","trading-technique","obv","bbands","three-pushes-pattern","shrimpy","tradingview"],
       author: "KarlVonBahnhof",
-      id: 122
+      id: 127
     });
     
   
@@ -1246,7 +1296,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["dca","kraken","localcryptos","ledger","independent-reserve"],
       author: "altcointrading",
-      id: 123
+      id: 128
     });
     
   
@@ -1256,7 +1306,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["psa","kyc","bitfinex","localcryptos","bitmex"],
       author: "AltcoinTrading.NET",
-      id: 124
+      id: 129
     });
     
   
@@ -1266,7 +1316,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101","psa"],
       tags: ["psa","trading-platforms","bitfinex","bitstamp","independent-reserve"],
       author: "KarlVonBahnhof",
-      id: 125
+      id: 130
     });
     
   
@@ -1276,17 +1326,17 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","localcryptos","independent-reserve"],
       author: "AltcoinTrading.NET",
-      id: 126
+      id: 131
     });
     
   
     this.add({
       title: "3 Most Dangerous Cryptocurrency Beginner Mistake in 2020",
-      content: "The year 2022 is the time when once again, cryptocurrencies like Bitcoin, Ethereum, Ripple and even the smaller altcoins are going through a new surge in both price and common interest.\n\nThe last time the crypto markets had a record transaction traffic as well as steep rise in valuation was in 2017-2018. That was the height of the so called market bull run.\n\nThe Crypto Bull Run Attracted Newbies For A Reason\n\nEven the most mature and conservative crypto-asset Bitcoin gained crazy percentages in dollar value and soared just past the $20k mark in January 2018.\n\nThis was an incredible rise since just a year before that in January 2017, one BTC was worth about $700. That’s 28 times your investment in just one year.\n\nThis kind of year-on-year gain makes it is easy to understand why the cryptocurrency market is now attracting people from all over the world. All are hoping for their chance to win big when investing in Bitcoin, or in an altcoin.\n\nThe rush and greed that goes through the mind of any investor is completely understandable. Many hope that a small $100 investment could be worth $2800 just one year later once again.\n\nWill the history repeat itself? I don’t know. I feel positive for Bitcoin and some other cryptocurrencies, but that’s as much as I can say.\n\nWhat I do know is that with every new investor that enters the market as a complete beginner, we keep seeing the same elementary mistakes. The news keep being reported about people losing money through their mistakes, there are Reddit and Facebook posts made by those users all the time as well.\n\nBefore the next bull run happens and with it the new surge in noob users, let us take a look at the 3 worst crypto beginner mistakes that you should avoid no matter what.\n\nThe 3 Riskiest Mistakes That You Should Know Before Investing In Crypto\n\n1 - Thinking that a low dollar value means it’s cheap\n\nA lot of beginners are looking to find the next BTC and the next ETH. That is the reason why many newbies invested in LTC instead of BTC as soon as Bitcoin started getting set in four-digit dollar values.\n\nPeople look at prices as a way to evaluate the amount of growth the crypto-asset’s price will get.\n\nIt doesn’t work like that.\n\nJust because this tokens is valued at $0.04 cent per token doesn’t mean it’s cheap. If nothing else, the price will be based on the total available supply. There might be hundred billions of tokens available, or even an uncapped amount of tokens to be generated.\n\nA low USD price doesn’t mean the cryptocurrency must be undervalued. Use the market capitalisation instead to compare value between different cryptocurrencies.\n\n\n  TIP: We have a full Trading Strategy writeup on investing in crypto for the long haul.\n\n\n2 - Keeping your cryptocurrencies on an exchange\n\nI know it’s easy to buy a cryptocurrency on an exchange like Coinbase or Binance and then just leave it there. It works at that moment, you can tell yourself that most likely nothing will happen, or that your exchange is trustworthy, and so on.\n\nBut there are considerable risks to leaving your cryptocurrencies on any exchange.\n\nYou are basically leaving your cryptocurrencies in the hands of Coinbase or Binance and hoping that they won’t get hacked and won’t shut down.\n\nAnd not it’s not the same thing as leaving your funds in a bank account.\n\nBank funds are normally insured up to a certain amount, and then there are processes in place to refund any stolen funds. It doesn’t work the same with cryptocurrencies. Crypto-assets are still seen as high risk, crypto exchanges are often dubious offshore setups and regulations on the market are inconsistent at best, which is why business credit corporations are not exactly queuing up to insure crypto trading platforms or wallets.\n\nSome exchanges are better than others. There can be reimbursement funds or partial insurance for fully verified customers from certain domiciles. But it’s not foolproof.\n\nIt is much better to get yourself a wallet that you fully own, and learn how cryptocurrency wallets work. Make a safe backup of your private keys and do your part to secure your crypto.\n\n\n  TIP: Your wallet should live on a device that is not used for your daily activities. Use either a hardware wallet or make sure your wallet lives on a device you don’t use for anything else, such an old phone.\n\n\n3 - Falling for a silly scams\n\nUnfortunately the crypto markets space is full of scams. Have you heard about OneCoin or Bitconnect?\n\nTypical scam or a ponzi scheme promises great returns. That is exactly what most new crypto investors are coming for, and so some crypto scams can be really successful. Usually you will have to start contributing to a pyramid scheme, or pay membership fees. This money is then used to finance some of the returns before the scheme collapses. You only make some money bac if you get in very early while it is still cheap.\n\nSo if you come by an offer that sounds too good to be true, then 99/100 times it will in fact be too good be true and probably some kind of trick. A trick where you would need to deposit money to earn money in the future.\n\nMaybe it will even work for a while to entice you to invest more. But eventually the scheme will fail.\n\nJust be aware that due to the lack of regulations, investment scams are still happening more often in the cryptocurrency space.\n\nConclusion\n\nThere are many positive things happening in the blockchain and cryptocurrency industries. And there is again new wide-spread interest building up around Bitcoin as well as other cryptocurrencies.\n\nAnd that’s great to see.\n\nBut what’s less positive are these mistakes, scams and crypto hacks happening.\n",
+      content: "The year 2023 is the time when once again, cryptocurrencies like Bitcoin, Ethereum, Ripple and even the smaller altcoins are going through a new surge in both price and common interest.\n\nThe last time the crypto markets had a record transaction traffic as well as steep rise in valuation was in 2017-2018. That was the height of the so called market bull run.\n\nThe Crypto Bull Run Attracted Newbies For A Reason\n\nEven the most mature and conservative crypto-asset Bitcoin gained crazy percentages in dollar value and soared just past the $20k mark in January 2018.\n\nThis was an incredible rise since just a year before that in January 2017, one BTC was worth about $700. That’s 28 times your investment in just one year.\n\nThis kind of year-on-year gain makes it is easy to understand why the cryptocurrency market is now attracting people from all over the world. All are hoping for their chance to win big when investing in Bitcoin, or in an altcoin.\n\nThe rush and greed that goes through the mind of any investor is completely understandable. Many hope that a small $100 investment could be worth $2800 just one year later once again.\n\nWill the history repeat itself? I don’t know. I feel positive for Bitcoin and some other cryptocurrencies, but that’s as much as I can say.\n\nWhat I do know is that with every new investor that enters the market as a complete beginner, we keep seeing the same elementary mistakes. The news keep being reported about people losing money through their mistakes, there are Reddit and Facebook posts made by those users all the time as well.\n\nBefore the next bull run happens and with it the new surge in noob users, let us take a look at the 3 worst crypto beginner mistakes that you should avoid no matter what.\n\nThe 3 Riskiest Mistakes That You Should Know Before Investing In Crypto\n\n1 - Thinking that a low dollar value means it’s cheap\n\nA lot of beginners are looking to find the next BTC and the next ETH. That is the reason why many newbies invested in LTC instead of BTC as soon as Bitcoin started getting set in four-digit dollar values.\n\nPeople look at prices as a way to evaluate the amount of growth the crypto-asset’s price will get.\n\nIt doesn’t work like that.\n\nJust because this tokens is valued at $0.04 cent per token doesn’t mean it’s cheap. If nothing else, the price will be based on the total available supply. There might be hundred billions of tokens available, or even an uncapped amount of tokens to be generated.\n\nA low USD price doesn’t mean the cryptocurrency must be undervalued. Use the market capitalisation instead to compare value between different cryptocurrencies.\n\n\n  TIP: We have a full Trading Strategy writeup on investing in crypto for the long haul.\n\n\n2 - Keeping your cryptocurrencies on an exchange\n\nI know it’s easy to buy a cryptocurrency on an exchange like Coinbase or Binance and then just leave it there. It works at that moment, you can tell yourself that most likely nothing will happen, or that your exchange is trustworthy, and so on.\n\nBut there are considerable risks to leaving your cryptocurrencies on any exchange.\n\nYou are basically leaving your cryptocurrencies in the hands of Coinbase or Binance and hoping that they won’t get hacked and won’t shut down.\n\nAnd not it’s not the same thing as leaving your funds in a bank account.\n\nBank funds are normally insured up to a certain amount, and then there are processes in place to refund any stolen funds. It doesn’t work the same with cryptocurrencies. Crypto-assets are still seen as high risk, crypto exchanges are often dubious offshore setups and regulations on the market are inconsistent at best, which is why business credit corporations are not exactly queuing up to insure crypto trading platforms or wallets.\n\nSome exchanges are better than others. There can be reimbursement funds or partial insurance for fully verified customers from certain domiciles. But it’s not foolproof.\n\nIt is much better to get yourself a wallet that you fully own, and learn how cryptocurrency wallets work. Make a safe backup of your private keys and do your part to secure your crypto.\n\n\n  TIP: Your wallet should live on a device that is not used for your daily activities. Use either a hardware wallet or make sure your wallet lives on a device you don’t use for anything else, such an old phone.\n\n\n3 - Falling for a silly scams\n\nUnfortunately the crypto markets space is full of scams. Have you heard about OneCoin or Bitconnect?\n\nTypical scam or a ponzi scheme promises great returns. That is exactly what most new crypto investors are coming for, and so some crypto scams can be really successful. Usually you will have to start contributing to a pyramid scheme, or pay membership fees. This money is then used to finance some of the returns before the scheme collapses. You only make some money bac if you get in very early while it is still cheap.\n\nSo if you come by an offer that sounds too good to be true, then 99/100 times it will in fact be too good be true and probably some kind of trick. A trick where you would need to deposit money to earn money in the future.\n\nMaybe it will even work for a while to entice you to invest more. But eventually the scheme will fail.\n\nJust be aware that due to the lack of regulations, investment scams are still happening more often in the cryptocurrency space.\n\nConclusion\n\nThere are many positive things happening in the blockchain and cryptocurrency industries. And there is again new wide-spread interest building up around Bitcoin as well as other cryptocurrencies.\n\nAnd that’s great to see.\n\nBut what’s less positive are these mistakes, scams and crypto hacks happening.\n",
       category: ["reports"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","trading-technique","shrimpy","bitforex"],
       author: "altcointrading",
-      id: 127
+      id: 132
     });
     
   
@@ -1296,17 +1346,17 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","invity"],
       author: "altcointrading",
-      id: 128
+      id: 133
     });
     
   
     this.add({
       title: "Altcoin Exchanges: Where to buy and trade crypto in 2020?",
-      content: "Whether you want to join the madness of altcoin trading or you just want to buy and hold, this is a 2020 overview of the reliable platforms to buy all the good crypto that is not Bitcoin.\n\nContents\n\n\n  Trading Altcoins\n    \n      Your priorities for active crypto trading\n        \n          List of best altcoin trading platforms - Both no KYC &amp; KYC.\n        \n      \n      Best platforms for trading crypto derivatives\n        \n          BitMEX (no longer reliable)\n          Deribit (recommended instead of BitMEX)\n        \n      \n    \n  \n  Buying Altcoins\n    \n      Onramping from crypto (with exchange recommendations)\n      Onramping from fiat (with exchange recommendations)\n        \n          Buying or trading altcoins guide for US traders\n        \n      \n      [!] More on buying alts and much more on the specific exchanges in this ATNET guide on How to buy altcoins. Covers both buying altcoins no KYC and with KYC.\n    \n  \n\n\nTrading Altcoins\n\nBest altcoin exchanges for trading and speculation\n\nLet’s first look at what is important.\n\nWhat should you be looking for in an exchange for altcoin speculation?\n\nYour priorities\n\n\n  Liquidity\n\n\nThis is most important for day-trading, scalping or other short term kinds of speculation. You want to submit your order and have it filled with not much issues.\n\nAs a rule, you get better liquidity on custodial exchanges (you need to send coins to an exchange wallet to trade).\n\nIt is true that the tide is starting to turn slightly in favor of noncustodial trading (you can trade directly from your own wallet). Still, if you are just starting out, custodial exchanges will be easier for you to trade on and so that’s what we are sticking with here.\n\nAnother sweeping statement: Asian crypto exchanges are great for liquid markets. They are always busy enough due to the higher popularity of speculation and also, quite honestly, due to the fake volume generating bots.\n\nHowever, many trading platforms in Asia notoriously don’t do small altcoins much. Listing fees on the most liquid places like OKex or Binance are too high for small projects.\n\nYou might be more lucky on places like YoBit.\n\n\n\nRecommended No-KYC Crypto Trading Exchanges\n\n\n  (Custodial) Bitfinex: spot, margin, lending, futures, airdrops\n  (Custodial) WhiteBit: futures, airdrops has limits\n  (Non-Custodial) LocalCryptos: onramp\n  (Non-Custodial) Uniswap: spot\n  (Non-Custodial) LeverJ: futures\n\n\nWhy the “has limits” callout? These exchanges have withdrawal limits. That increases the risks associated with trading there. More in this blog.\n\nMost liquid centralized (custodial) altcoin trading platforms:\n\n\n  OKEx: Smaller selection of alts but easy access to derivatives.\n  Bitfinex: Unique selection of alts and now also derivatives (no minimum deposit anymore). Does not welcome US traders but KYC is not required - Learn more about Bitfinex here\n  BitMEX: NOT RELIABLE – Accessible alt derivatives and high leverage. Requires KYC, does not welcome US traders.\n  Binance: Wide selection of alts, deep liquidity. Does not welcome US traders.\n  Yobit: Busy and very liquid den of wild speculation, big and small alts.\n\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\nAvoid these trading platforms - Poloniex, HitBTC and new unknown exchanges that will not have enough liquidity.\n\n\n  Stability\n\n\nThe platform’s technical stability is super important for active trading.\n\nAny trading platform will need to have downtime for maintenance, but it should be scheduled and announced beforehand. Other than that the platform availability should be as high as possible.\n\nMost of all, a crypto exchange should not crash under heavy traffic - ever. Altoin markets are prone to FOMO, everyone knows that, it is not like the exchange management could get surprised by that. Plus, trading platforms earn crazy money on fees, they can afford server maintenance just fine.\n\nMost stable crypto trading platform:\n\n\n  Binance - occasional downtime communicated via Twitter\n  OKEx - hardly any downtime\n  Bitfinex - generally stable, downtime communicated via status page\n\n\nLeast stable crypto trading platform:\n\n\n  BitMEX - servers unreachable very often, not recommended\n\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\n\n  Charting on TradingView\n\n\nIf you are at least occasionally taking technical analysis seriously, you will want to have your exchange on TradingView.\n\nAll the bigger trading platforms are there - Binance, Bitfinex, BitMEX, Kraken etc.\n\nLess important parameters\n\n\n  \n    Fiat markets. For altcoin speculation you don’t need USD or other fiat markets at all. The ratios in which alts are traded is often BTC or ETH. To track a fiat value, in 2020 we use DAI or another stablecoin.\n  \n  \n    AML/KYC for pure crypto-to-crypto trading is an overkill.\n  \n  \n    In-house charts, because TradingView does better job.\n  \n\n\n\n\nBest altcoin exchanges for trading crypto derivatives\n\nBitMEX\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\nBitMEX is a pure cryptocurrency derivative platform.\n\n\n  You cannot buy cryptocurrency on BitMEX with fiat.\n  You can only trade a derivative product for profit, or use it as a hedge, or do market making and arbitrage to rake profits.\n\n\nUS customers are not welcome and KYC is required as of August 2020.\n\nLearn more about BitMEX\n \nGet 10% fee discount on BitMEX\n\nDeribit\n\nDeribit is a crypto options and futures platform. It has been less popular than BitMEX but the liquidity there is getting better thanks to fee rebates that incentivise market making.\n\nAlso, options trading is getting more popular in crypto.\n\nUS customers are not welcome but KYC is not yet required.\n\nSign up on Deribit\n\n\n\nBuying Altcoins (Onramping)\n\nTo buy altcoins for long-term holding, with no plans to actively trading them, you have two options:\n\n\n  buying altcoins for fiat\n  buying altcoins for other crypto\n\n\nYou can find more on buying alts and also much more on the specific exchanges in this ATNET guide on How to buy altcoins.\n\nIn this post, we are still going to list the best altcoin exchanges and explain what they are good at.\n\nWe are also briefly going to look into your options if you are based in the US.\n\nGo to How to buy altcoins\n\n\n\nBuy altcoins for other cryptocurrency\n\nIf you want to invest in smaller altcoins, your last step before the purchase will always be the purchase of a bigger crypto, as there are no fiat markets for new niche cryptocurrencies.\n\nIf you already own a big crypto, you can exchange it for smaller altcoins on pretty much any exchange: custodial, p2p, non-custodial, built-in exchange inside your wallet.\n\nBig custodial exchanges where you can buy altcoins for crypto (without verification):\n\n\n  Binance - wide selection of altcoin markets denominated in BTC, ETH, exchange coin or stablecoins\n  Yobit - wide selection of altcoin markets denominated in BTC, ETH\n  Bitfinex - some selection of alts denominated in BTC, ETH, USDT\n\n\nPeer-to-peer exchanges where you can buy altcoins for crypto (without verification):\n\n\n  LocalCryptos lets you buy your initial ETH, BTC and LTC completely anonymously\n  Do NOT use LocalBitcoins in 2020, they collaborate.\n\n\n\n\nBuy altcoins for fiat (USD, EUR, AUD)\n\nYou can only buy the bigger cryptocurrencies directly for fiat - think BTC, ETH, LTC, XMR.\n\nSelection of smaller cryptos differs exchange by exchange, depending on the platform’s business partnerships.\n\nCustodial platforms where you can buy altcoins for fiat (will require AML/KYC)\n\nLarge-cap cryptocurrencies:\n\n[EU]\n\n\n  Bitstamp (Focused on EU residents)\n\n\n[US]\n\n\n  Gemini (Focused on US residents)\n  GDAX (Focused on US residents)\n\n\n[Intl]\n\n\n  Independent Reserve (Aussie, but accepts most residents) - BTC, ETH, XRP, BCH, BSV, USDT, LTC, EOS, XLM, ETC, BAT, OMG, REP, ZRX and GNT. As of September 2020, some DeFi tokens have been added. Learn more about Independent Reserve\n\n\nBoth large-cap and small-cap cryptocurrencies:\n\n\n  Kraken (Focused on US residents)\n  Bitfinex (Does not accept US residents)\n\n\nNon-custodial platforms where you can buy altcoins for fiat (no KYC)\n\n\n  LocalCryptos lets you buy your initial ETH, BTC and LTC completely anonymously\n  [!] Do NOT use LocalBitcoins in 2022, they collaborate.\n\n\n\n\nExchanges accepting traders from the US\n\nYou probably know about the witch hunt. US traders have it more difficult.\n\nGood news is that once you get some crypto, even if via p2p marketplace, your problem is mostly solved. You can and trade unverified on Bitfinex, Bittrex or on any non-custodial platform.\n\nTo onramp from the US, you have the following options:\n\n\n  Get crypto on a zero-knowledge p2p platform like LocalCryptos\n  Verify on exchanges that are regulated within the US – Gemini, GDAX – if they will take you.\n    \n      They don’t accept all banks, all states.\n      Often they just refuse for undisclosed reasons.\n      They check crypto deposits for history (e.g. if your bitcoin was on a gambling site before).\n    \n  \n  Verify on Bitstamp – EU-based but accepts US users.\n    \n      You will need to wire money to Slovenia, which might raise questions from your bank.\n    \n  \n  Kraken used to be too unreliable for trading but has since gotten their platform together and now is an option for buying only.\n    \n      If you plan to daytrade, Kraken exchange is not recommended, because the reliability of their stop-loss execution is worse than that of a weather forecast.\n    \n  \n\n\nIf you plan to daytrade, here’s the deal:\n\n\n  Bitfinex stopped servicing verified US residents in November 2017.\n    \n      Practically, this only applies to verified accounts, and KYC is not required for crypto-only trading on the platform.\n      If you access Bitfinex from a location in the United States, you will just be asked to claim that US is not your primary country of residence. Once you’ve done that, the interface will let you through.\n    \n  \n  BitMEX stopped servicing US customers and requires KYC since August 2020\n\n",
+      content: "Whether you want to join the madness of altcoin trading or you just want to buy and hold, this is a 2020 overview of the reliable platforms to buy all the good crypto that is not Bitcoin.\n\nContents\n\n\n  Trading Altcoins\n    \n      Your priorities for active crypto trading\n        \n          List of best altcoin trading platforms - Both no KYC &amp; KYC.\n        \n      \n      Best platforms for trading crypto derivatives\n        \n          BitMEX (no longer reliable)\n          Deribit (recommended instead of BitMEX)\n        \n      \n    \n  \n  Buying Altcoins\n    \n      Onramping from crypto (with exchange recommendations)\n      Onramping from fiat (with exchange recommendations)\n        \n          Buying or trading altcoins guide for US traders\n        \n      \n      [!] More on buying alts and much more on the specific exchanges in this ATNET guide on How to buy altcoins. Covers both buying altcoins no KYC and with KYC.\n    \n  \n\n\nTrading Altcoins\n\nBest altcoin exchanges for trading and speculation\n\nLet’s first look at what is important.\n\nWhat should you be looking for in an exchange for altcoin speculation?\n\nYour priorities\n\n\n  Liquidity\n\n\nThis is most important for day-trading, scalping or other short term kinds of speculation. You want to submit your order and have it filled with not much issues.\n\nAs a rule, you get better liquidity on custodial exchanges (you need to send coins to an exchange wallet to trade).\n\nIt is true that the tide is starting to turn slightly in favor of noncustodial trading (you can trade directly from your own wallet). Still, if you are just starting out, custodial exchanges will be easier for you to trade on and so that’s what we are sticking with here.\n\nAnother sweeping statement: Asian crypto exchanges are great for liquid markets. They are always busy enough due to the higher popularity of speculation and also, quite honestly, due to the fake volume generating bots.\n\nHowever, many trading platforms in Asia notoriously don’t do small altcoins much. Listing fees on the most liquid places like OKex or Binance are too high for small projects.\n\nYou might be more lucky on places like YoBit.\n\n\n\nRecommended No-KYC Crypto Trading Exchanges\n\n\n  (Custodial) Bitfinex: spot, margin, lending, futures, airdrops\n  (Custodial) WhiteBit: futures, airdrops has limits\n  (Non-Custodial) LocalCryptos: onramp\n  (Non-Custodial) Uniswap: spot\n  (Non-Custodial) LeverJ: futures\n\n\nWhy the “has limits” callout? These exchanges have withdrawal limits. That increases the risks associated with trading there. More in this blog.\n\nMost liquid centralized (custodial) altcoin trading platforms:\n\n\n  OKEx: Smaller selection of alts but easy access to derivatives.\n  Bitfinex: Unique selection of alts and now also derivatives (no minimum deposit anymore). Does not welcome US traders but KYC is not required - Learn more about Bitfinex here\n  BitMEX: NOT RELIABLE – Accessible alt derivatives and high leverage. Requires KYC, does not welcome US traders.\n  Binance: Wide selection of alts, deep liquidity. Does not welcome US traders.\n  Yobit: Busy and very liquid den of wild speculation, big and small alts.\n\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\nAvoid these trading platforms - Poloniex, HitBTC and new unknown exchanges that will not have enough liquidity.\n\n\n  Stability\n\n\nThe platform’s technical stability is super important for active trading.\n\nAny trading platform will need to have downtime for maintenance, but it should be scheduled and announced beforehand. Other than that the platform availability should be as high as possible.\n\nMost of all, a crypto exchange should not crash under heavy traffic - ever. Altoin markets are prone to FOMO, everyone knows that, it is not like the exchange management could get surprised by that. Plus, trading platforms earn crazy money on fees, they can afford server maintenance just fine.\n\nMost stable crypto trading platform:\n\n\n  Binance - occasional downtime communicated via Twitter\n  OKEx - hardly any downtime\n  Bitfinex - generally stable, downtime communicated via status page\n\n\nLeast stable crypto trading platform:\n\n\n  BitMEX - servers unreachable very often, not recommended\n\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\n\n  Charting on TradingView\n\n\nIf you are at least occasionally taking technical analysis seriously, you will want to have your exchange on TradingView.\n\nAll the bigger trading platforms are there - Binance, Bitfinex, BitMEX, Kraken etc.\n\nLess important parameters\n\n\n  \n    Fiat markets. For altcoin speculation you don’t need USD or other fiat markets at all. The ratios in which alts are traded is often BTC or ETH. To track a fiat value, in 2020 we use DAI or another stablecoin.\n  \n  \n    AML/KYC for pure crypto-to-crypto trading is an overkill.\n  \n  \n    In-house charts, because TradingView does better job.\n  \n\n\n\n\nBest altcoin exchanges for trading crypto derivatives\n\nBitMEX\n\nIMPORTANT! BitMEX platform is no longer recommended since mid-2020.\n\n  \n    For futures trading, use Bitfinex (no KYC, 6% fee discount)\n  \n  \n    For perps and crypto options, use Deribit (easy KYC, 10% fee discount)\n  \n\n\nBitMEX is a pure cryptocurrency derivative platform.\n\n\n  You cannot buy cryptocurrency on BitMEX with fiat.\n  You can only trade a derivative product for profit, or use it as a hedge, or do market making and arbitrage to rake profits.\n\n\nUS customers are not welcome and KYC is required as of August 2020.\n\nLearn more about BitMEX\n \nGet 10% fee discount on BitMEX\n\nDeribit\n\nDeribit is a crypto options and futures platform. It has been less popular than BitMEX but the liquidity there is getting better thanks to fee rebates that incentivise market making.\n\nAlso, options trading is getting more popular in crypto.\n\nUS customers are not welcome but KYC is not yet required.\n\nSign up on Deribit\n\n\n\nBuying Altcoins (Onramping)\n\nTo buy altcoins for long-term holding, with no plans to actively trading them, you have two options:\n\n\n  buying altcoins for fiat\n  buying altcoins for other crypto\n\n\nYou can find more on buying alts and also much more on the specific exchanges in this ATNET guide on How to buy altcoins.\n\nIn this post, we are still going to list the best altcoin exchanges and explain what they are good at.\n\nWe are also briefly going to look into your options if you are based in the US.\n\nGo to How to buy altcoins\n\n\n\nBuy altcoins for other cryptocurrency\n\nIf you want to invest in smaller altcoins, your last step before the purchase will always be the purchase of a bigger crypto, as there are no fiat markets for new niche cryptocurrencies.\n\nIf you already own a big crypto, you can exchange it for smaller altcoins on pretty much any exchange: custodial, p2p, non-custodial, built-in exchange inside your wallet.\n\nBig custodial exchanges where you can buy altcoins for crypto (without verification):\n\n\n  Binance - wide selection of altcoin markets denominated in BTC, ETH, exchange coin or stablecoins\n  Yobit - wide selection of altcoin markets denominated in BTC, ETH\n  Bitfinex - some selection of alts denominated in BTC, ETH, USDT\n\n\nPeer-to-peer exchanges where you can buy altcoins for crypto (without verification):\n\n\n  LocalCryptos lets you buy your initial ETH, BTC and LTC completely anonymously\n  Do NOT use LocalBitcoins in 2020, they collaborate.\n\n\n\n\nBuy altcoins for fiat (USD, EUR, AUD)\n\nYou can only buy the bigger cryptocurrencies directly for fiat - think BTC, ETH, LTC, XMR.\n\nSelection of smaller cryptos differs exchange by exchange, depending on the platform’s business partnerships.\n\nCustodial platforms where you can buy altcoins for fiat (will require AML/KYC)\n\nLarge-cap cryptocurrencies:\n\n[EU]\n\n\n  Bitstamp (Focused on EU residents)\n\n\n[US]\n\n\n  Gemini (Focused on US residents)\n  GDAX (Focused on US residents)\n\n\n[Intl]\n\n\n  Independent Reserve (Aussie, but accepts most residents) - BTC, ETH, XRP, BCH, BSV, USDT, LTC, EOS, XLM, ETC, BAT, OMG, REP, ZRX and GNT. As of September 2020, some DeFi tokens have been added. Learn more about Independent Reserve\n\n\nBoth large-cap and small-cap cryptocurrencies:\n\n\n  Kraken (Focused on US residents)\n  Bitfinex (Does not accept US residents)\n\n\nNon-custodial platforms where you can buy altcoins for fiat (no KYC)\n\n\n  LocalCryptos lets you buy your initial ETH, BTC and LTC completely anonymously\n  [!] Do NOT use LocalBitcoins in 2023, they collaborate.\n\n\n\n\nExchanges accepting traders from the US\n\nYou probably know about the witch hunt. US traders have it more difficult.\n\nGood news is that once you get some crypto, even if via p2p marketplace, your problem is mostly solved. You can and trade unverified on Bitfinex, Bittrex or on any non-custodial platform.\n\nTo onramp from the US, you have the following options:\n\n\n  Get crypto on a zero-knowledge p2p platform like LocalCryptos\n  Verify on exchanges that are regulated within the US – Gemini, GDAX – if they will take you.\n    \n      They don’t accept all banks, all states.\n      Often they just refuse for undisclosed reasons.\n      They check crypto deposits for history (e.g. if your bitcoin was on a gambling site before).\n    \n  \n  Verify on Bitstamp – EU-based but accepts US users.\n    \n      You will need to wire money to Slovenia, which might raise questions from your bank.\n    \n  \n  Kraken used to be too unreliable for trading but has since gotten their platform together and now is an option for buying only.\n    \n      If you plan to daytrade, Kraken exchange is not recommended, because the reliability of their stop-loss execution is worse than that of a weather forecast.\n    \n  \n\n\nIf you plan to daytrade, here’s the deal:\n\n\n  Bitfinex stopped servicing verified US residents in November 2017.\n    \n      Practically, this only applies to verified accounts, and KYC is not required for crypto-only trading on the platform.\n      If you access Bitfinex from a location in the United States, you will just be asked to claim that US is not your primary country of residence. Once you’ve done that, the interface will let you through.\n    \n  \n  BitMEX stopped servicing US customers and requires KYC since August 2020\n\n",
       category: ["onramp"],
       tags: ["trading-platforms","dca","bitfinex","independent-reserve","invity","localcryptos","phemex"],
       author: "JMT",
-      id: 129
+      id: 134
     });
     
   
@@ -1316,7 +1366,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-fundamentals","crypto-market-predictions"],
       author: "TC",
-      id: 130
+      id: 135
     });
     
   
@@ -1326,7 +1376,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-trading-strategy","tradingview-script-review","crypto-charting","bbands","tradingview","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 131
+      id: 136
     });
     
   
@@ -1336,7 +1386,7 @@ var idx = lunr(function() {
       category: ["reports","meta"],
       tags: ["spend-your-crypto"],
       author: "KarlVonBahnhof",
-      id: 132
+      id: 137
     });
     
   
@@ -1346,7 +1396,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec","crypto-fundamentals"],
       author: "Diana",
-      id: 133
+      id: 138
     });
     
   
@@ -1356,7 +1406,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-trading-strategy","crypto-technical-analysis","crypto-fundamentals","tradingview","shrimpy","bitfinex"],
       author: "JMT",
-      id: 134
+      id: 139
     });
     
   
@@ -1366,7 +1416,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","daytrading","scalping","trading-technique","crypto-bot-trading","bitfinex","phemex"],
       author: "AltcoinTrading.NET",
-      id: 135
+      id: 140
     });
     
   
@@ -1376,7 +1426,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-trading-strategy","trading-technique","derisking","pattern-trading","wyckoff","supply-demand","crypto-technical-analysis","bitfinex","independent-reserve"],
       author: "AltcoinTrading.NET",
-      id: 136
+      id: 141
     });
     
   
@@ -1386,7 +1436,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["trading-technique","daytrading","scalping","trading-journals","bitfinex","bitforex","phemex"],
       author: "tradingfanbois",
-      id: 137
+      id: 142
     });
     
   
@@ -1396,7 +1446,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","dca","bitfinex","independent-reserve"],
       author: "Diana",
-      id: 138
+      id: 143
     });
     
   
@@ -1406,7 +1456,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-trading-strategy","tradingview-script-review","trading-technique","bitforex"],
       author: "KarlVonBahnhof",
-      id: 139
+      id: 144
     });
     
   
@@ -1416,7 +1466,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["crypto-fundamentals","crypto-value-judgement"],
       author: "AltcoinTradingNET",
-      id: 140
+      id: 145
     });
     
   
@@ -1426,7 +1476,7 @@ var idx = lunr(function() {
       category: ["cheatsheets"],
       tags: ["crypto-trading-strategy","crypto-charting","divergence","crypto-technical-analysis","top","tradingview","bitfinex"],
       author: "JMT",
-      id: 141
+      id: 146
     });
     
   
@@ -1436,7 +1486,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["crypto-fundamentals","crypto-trading-strategy"],
       author: "cryptolounge",
-      id: 142
+      id: 147
     });
     
   
@@ -1446,7 +1496,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-charting","pattern-trading","tradingview-scripts","crypto-technical-analysis","tradingview","bitfinex","independent-reserve"],
       author: "JMT",
-      id: 143
+      id: 148
     });
     
   
@@ -1456,7 +1506,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec","blockchain-technology"],
       author: "Business Of Crypto",
-      id: 144
+      id: 149
     });
     
   
@@ -1466,7 +1516,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec"],
       author: "AltcoinTrading.NET",
-      id: 145
+      id: 150
     });
     
   
@@ -1476,7 +1526,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["crypto-fundamentals","p2p-trading","dca","localcryptos"],
       author: "Diana",
-      id: 146
+      id: 151
     });
     
   
@@ -1486,7 +1536,7 @@ var idx = lunr(function() {
       category: ["reports","meta"],
       tags: ["spend-your-crypto"],
       author: "AltcoinTrading.NET",
-      id: 147
+      id: 152
     });
     
   
@@ -1496,7 +1546,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["stablecoins","crypto-fundamentals","crypto-value-judgement"],
       author: "KarlVonBahnhof",
-      id: 148
+      id: 153
     });
     
   
@@ -1506,7 +1556,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-charting","trading-technique","bitforex"],
       author: "AltcoinTrading.NET",
-      id: 149
+      id: 154
     });
     
   
@@ -1516,7 +1566,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption","kyc","regtech"],
       author: "BusinessOfCrypto",
-      id: 150
+      id: 155
     });
     
   
@@ -1526,7 +1576,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["tradingview-scripts","crypto-charting","tradingview","bitforex"],
       author: "AltcoinTrading.NET",
-      id: 151
+      id: 156
     });
     
   
@@ -1536,7 +1586,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["p2p-trading","interview"],
       author: "tradingfanbois",
-      id: 152
+      id: 157
     });
     
   
@@ -1546,7 +1596,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec"],
       author: "KarlVonBahnhof",
-      id: 153
+      id: 158
     });
     
   
@@ -1556,7 +1606,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec"],
       author: "AltcoinTrading.NET",
-      id: 154
+      id: 159
     });
     
   
@@ -1566,7 +1616,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["stablecoins","blockchain-technology","bitforex","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 155
+      id: 160
     });
     
   
@@ -1576,7 +1626,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["regtech","psa","adoption","kyc","interview"],
       author: "JMT",
-      id: 156
+      id: 161
     });
     
   
@@ -1586,7 +1636,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec"],
       author: "KarlVonBahnhof",
-      id: 157
+      id: 162
     });
     
   
@@ -1596,7 +1646,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-opsec"],
       author: "AltcoinTrading.NET",
-      id: 158
+      id: 163
     });
     
   
@@ -1606,7 +1656,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "Diana",
-      id: 159
+      id: 164
     });
     
   
@@ -1616,7 +1666,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "AltcoinTrading.NET",
-      id: 160
+      id: 165
     });
     
   
@@ -1626,7 +1676,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["p2p-trading","altcoin-wallet","derivatives","trezor","ledger","exodus"],
       author: "tradingfanbois",
-      id: 161
+      id: 166
     });
     
   
@@ -1636,7 +1686,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-market-predictions"],
       author: "KarlVonBahnhof",
-      id: 162
+      id: 167
     });
     
   
@@ -1646,7 +1696,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-charting","pattern-trading","staking","trading-platforms","tradingview-scripts","defi","crypto-bot-trading","crypto-tools","tensorcharts","shrimpy","tradingview"],
       author: "KarlVonBahnhof",
-      id: 163
+      id: 168
     });
     
   
@@ -1656,7 +1706,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["stablecoins","defi"],
       author: "KarlVonBahnhof",
-      id: 164
+      id: 169
     });
     
   
@@ -1666,7 +1716,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-market-predictions"],
       author: "KarlVonBahnhof",
-      id: 165
+      id: 170
     });
     
   
@@ -1676,7 +1726,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-charting","pattern-trading","crypto-tools","tradingview"],
       author: "AltcoinTrading.NET",
-      id: 166
+      id: 171
     });
     
   
@@ -1686,7 +1736,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["blockchain-technology","defi"],
       author: "JMT",
-      id: 167
+      id: 172
     });
     
   
@@ -1696,7 +1746,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["noncustodial-trading"],
       author: "KarlVonBahnhof",
-      id: 168
+      id: 173
     });
     
   
@@ -1706,7 +1756,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "JMT",
-      id: 169
+      id: 174
     });
     
   
@@ -1716,7 +1766,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["custodial-trading","crypto-trading-strategy","arbitrage","coinrule"],
       author: "JMT",
-      id: 170
+      id: 175
     });
     
   
@@ -1726,7 +1776,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "KarlVonBahnhof",
-      id: 171
+      id: 176
     });
     
   
@@ -1736,7 +1786,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "KarlVonBahnhof",
-      id: 172
+      id: 177
     });
     
   
@@ -1746,7 +1796,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-heists"],
       author: "KarlVonBahnhof",
-      id: 173
+      id: 178
     });
     
   
@@ -1756,7 +1806,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-heists"],
       author: "KarlVonBahnhof",
-      id: 174
+      id: 179
     });
     
   
@@ -1766,7 +1816,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["altcoin-wallet","crypto-opsec","trezor","electrum"],
       author: "KarlVonBahnhof",
-      id: 175
+      id: 180
     });
     
   
@@ -1776,7 +1826,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "KarlVonBahnhof",
-      id: 176
+      id: 181
     });
     
   
@@ -1786,7 +1836,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-heists"],
       author: "KarlVonBahnhof",
-      id: 177
+      id: 182
     });
     
   
@@ -1796,7 +1846,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "AltcoinTrading.NET",
-      id: 178
+      id: 183
     });
     
   
@@ -1806,7 +1856,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-fundamentals"],
       author: "AltcoinTrading.NET",
-      id: 179
+      id: 184
     });
     
   
@@ -1816,7 +1866,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["adoption"],
       author: "KarlVonBahnhof",
-      id: 180
+      id: 185
     });
     
   
@@ -1826,7 +1876,7 @@ var idx = lunr(function() {
       category: ["cryptocurrency-wallets"],
       tags: ["multicoin-wallet","altcoin-wallet","crypto-tools","exodus","electrum","ledger"],
       author: "KarlVonBahnhof",
-      id: 181
+      id: 186
     });
     
   
@@ -1836,7 +1886,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-market-predictions","blockchain-technology"],
       author: "KarlVonBahnhof",
-      id: 182
+      id: 187
     });
     
   
@@ -1846,7 +1896,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["crypto-trading-strategy","dca","crypto-fundamentals","crypto-value-judgement","bitfinex"],
       author: "Diana",
-      id: 183
+      id: 188
     });
     
   
@@ -1856,7 +1906,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: [],
       author: "AltcoinTrading.NET",
-      id: 184
+      id: 189
     });
     
   
@@ -1866,7 +1916,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: [],
       author: "JMT",
-      id: 185
+      id: 190
     });
     
   
@@ -1876,7 +1926,7 @@ var idx = lunr(function() {
       category: ["crypto-value-judgement"],
       tags: ["crypto-fundamentals","blockchain-technology"],
       author: "AltcoinTrading.NET",
-      id: 186
+      id: 191
     });
     
   
@@ -1886,7 +1936,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["crypto-heists"],
       author: "Diana",
-      id: 187
+      id: 192
     });
     
   
@@ -1896,7 +1946,7 @@ var idx = lunr(function() {
       category: ["reports"],
       tags: ["blockchain-technology","crypto-heists"],
       author: "AltcoinTrading.NET",
-      id: 188
+      id: 193
     });
     
   
@@ -1907,7 +1957,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-charting","crypto-technical-analysis","tensorcharts","tradingview"],
       author: "KarlVonBahnhof",
-      id: 189
+      id: 194
     });
     
   
@@ -1917,7 +1967,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["blockchain-technology","ico-analysis","cryptocurrency-investing"],
       author: "KarlVonBahnhof",
-      id: 190
+      id: 195
     });
     
   
@@ -1927,7 +1977,7 @@ var idx = lunr(function() {
       category: ["pattern-trading"],
       tags: ["fulcrum-bottom","crypto-technical-analysis","trading-technique","peter-l-brandt","swing-trading","independent-reserve","bitfinex","tradingview"],
       author: "KarlVonBahnhof",
-      id: 191
+      id: 196
     });
     
   
@@ -1937,7 +1987,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["fulcrum-bottom","mises","reversals","swing-trading","trading-strategy","crypto-technical-analysis"],
       author: "KarlVonBahnhof",
-      id: 192
+      id: 197
     });
     
   
@@ -1947,7 +1997,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-value-judgement","crypto-investment-strategy","dca","crypto-trading-strategy","trading-technique","ledger","independent-reserve"],
       author: "AltcoinTrading.NET",
-      id: 193
+      id: 198
     });
     
   
@@ -1957,7 +2007,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["crypto-technical-analysis","technical-analysis","strategic-mindset","rational-analysis","bitmex","tradingview"],
       author: "KarlVonBahnhof",
-      id: 194
+      id: 199
     });
     
   
@@ -1967,7 +2017,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["crypto-trading-strategy","market-psychology","trading-psychology","fundamental-analysis","technical-analysis","strategic-mindset","rational-analysis","bitmex"],
       author: "KarlVonBahnhof",
-      id: 195
+      id: 200
     });
     
   
@@ -1977,7 +2027,7 @@ var idx = lunr(function() {
       category: ["non-directional"],
       tags: ["yield","crypto-lending","crypto-tools","bitfinex","ftx"],
       author: "KarlVonBahnhof",
-      id: 196
+      id: 201
     });
     
   
@@ -1987,7 +2037,7 @@ var idx = lunr(function() {
       category: ["pattern-trading"],
       tags: ["crypto-charting","crypto-technical-analysis","wyckoff-trading-crypto","crypto-trading-strategy","tradingview","bitfinex","ftx"],
       author: "KarlVonBahnhof",
-      id: 197
+      id: 202
     });
     
   
@@ -1997,7 +2047,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["derisking","crypto-value-judgement","crypto-tools","crypto-trading-strategy","market-timing","tradingview","independent-reserve","bitfinex","top"],
       author: "KarlVonBahnhof",
-      id: 198
+      id: 203
     });
     
   
@@ -2007,7 +2057,7 @@ var idx = lunr(function() {
       category: ["pattern-trading"],
       tags: ["crypto-charting","fibs","crypto-trading","technical-analysis","fibonacci-retracement","scalping","tradingview","bitfinex"],
       author: "KarlVonBahnhof",
-      id: 199
+      id: 204
     });
     
   
@@ -2017,7 +2067,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["hodl-strategy","crypto-investment-strategy","coin-control","dca","dollar-cost-averaging","crypto-investment-strategy","trading-strategy","crypto-tools","bitfinex","independent-reserve","coldcard"],
       author: "AltcoinTrading.NET",
-      id: 200
+      id: 205
     });
     
   
@@ -2027,7 +2077,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["scalping","pattern-trading","crypto-trading-strategy","trading-technique","tensorcharts","bitfinex","ftx"],
       author: null,
-      id: 201
+      id: 206
     });
     
   
@@ -2037,7 +2087,7 @@ var idx = lunr(function() {
       category: ["trading-psychology"],
       tags: ["nft-trading","market-psychology","trading-psychology","scalping","fundamental-analysis","crypto-investment-strategy","crypto-trading-strategy","bitforex","phemex"],
       author: "KarlVonBahnhof",
-      id: 202
+      id: 207
     });
     
   
@@ -2047,7 +2097,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-charting","scalping","technical-analysis","crypto-trading-strategy","ftx","tradingview"],
       author: "KarlVonBahnhof",
-      id: 203
+      id: 208
     });
     
   
@@ -2057,7 +2107,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["grid","scalping","quant","crypto-trading-strategy","ftx","3commas"],
       author: "KarlVonBahnhof",
-      id: 204
+      id: 209
     });
     
   
@@ -2067,7 +2117,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["derisking","crypto-investment-strategy","crypto-trading-strategy","dca","dollar-cost-averaging","pionex","independent-reserve","coinrule","ftx"],
       author: "AltcoinTrading",
-      id: 205
+      id: 210
     });
     
   
@@ -2077,7 +2127,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["arbitrage","non-directional","crypto-tools","trading-technique","crypto-trading-strategy","localcryptos","binance","ftx"],
       author: "AltcoinTrading",
-      id: 206
+      id: 211
     });
     
   
@@ -2088,7 +2138,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-charting","crypto-tools","tensorcharts","ftx"],
       author: "JMT",
-      id: 207
+      id: 212
     });
     
   
@@ -2098,7 +2148,7 @@ var idx = lunr(function() {
       category: ["exclude"],
       tags: ["bitmex"],
       author: "AltcoinTradingNET",
-      id: 208
+      id: 213
     });
     
   
@@ -2108,7 +2158,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","custodial-trading","usa","europe","asia","australia","bitfinex"],
       author: "AltcoinTradingNET",
-      id: 209
+      id: 214
     });
     
   
@@ -2118,7 +2168,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","custodial-trading","otc-trading","usa","europe","asia","australia","independent-reserve"],
       author: "AltcoinTradingNET",
-      id: 210
+      id: 215
     });
     
   
@@ -2128,7 +2178,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","custodial-trading","derivatives","europe","asia","australia","phemex"],
       author: null,
-      id: 211
+      id: 216
     });
     
   
@@ -2138,7 +2188,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","custodial-trading","derivatives","europe","asia","australia","deribit"],
       author: "AltcoinTradingNET",
-      id: 212
+      id: 217
     });
     
   
@@ -2148,7 +2198,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","custodial-trading","derivatives","usa","europe","asia","australia","bitforex"],
       author: "AltcoinTradingNET",
-      id: 213
+      id: 218
     });
     
   
@@ -2158,7 +2208,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["pattern-trading","crypto-charting","crypto-tools","trading-platforms","tradingview-scripts","defi","bitfinex","shrimpy","ftx"],
       author: "KarlVonBahnhof",
-      id: 214
+      id: 219
     });
     
   
@@ -2168,7 +2218,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["crypto-opsec","altcoin-wallet","crypto-tools","crypto-opsec","exodus","ledger","electrum"],
       author: "Karlvonbahnhof",
-      id: 215
+      id: 220
     });
     
   
@@ -2178,7 +2228,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-tools"],
       tags: ["multicoin-wallet","crypto-opsec","altcoin-wallet","crypto-tools","staking","exodus","ledger","electrum","coldcard"],
       author: "JMT",
-      id: 216
+      id: 221
     });
     
   
@@ -2188,7 +2238,7 @@ var idx = lunr(function() {
       category: ["staking-platforms"],
       tags: ["staking","yield","defi"],
       author: "TDOU",
-      id: 217
+      id: 222
     });
     
   
@@ -2198,7 +2248,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["recommended-exchange","kyc","australia","localcryptos"],
       author: "JMT",
-      id: 218
+      id: 223
     });
     
   
@@ -2209,7 +2259,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-charting","crypto-technical-analysis","divergence","pattern-trading","bitfinex"],
       author: null,
-      id: 219
+      id: 224
     });
     
   
@@ -2219,7 +2269,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-charting","pattern-trading","tk-cross","bbands","fulcrum-bottom","wyckoff","ftx","deribit","bitfinex"],
       author: null,
-      id: 220
+      id: 225
     });
     
   
@@ -2229,7 +2279,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-charting","crypto-charting","crypto-technical-analysis","tradingview"],
       author: null,
-      id: 221
+      id: 226
     });
     
   
@@ -2239,7 +2289,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["wyckoff","crypto-charting","crypto-technical-analysis","crypto-fundamentals","bitfinex"],
       author: null,
-      id: 222
+      id: 227
     });
     
   
@@ -2249,7 +2299,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["pattern-trading","derisking","crypto-charting","squishy","macd","crypto-technical-analysis"],
       author: null,
-      id: 223
+      id: 228
     });
     
   
@@ -2259,7 +2309,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","pattern-trading","crypto-charting","bgd","ftx","tradingview"],
       author: null,
-      id: 224
+      id: 229
     });
     
   
@@ -2269,7 +2319,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-technique","crypto-derivatives","derivatives","perps","perpetual-swap","ftx","bitforex","phemex"],
       author: null,
-      id: 225
+      id: 230
     });
     
   
@@ -2279,7 +2329,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["pattern-trading","crypto-technical-analysis","crypto-charting","bart","reverse-bart","bart-formation","scalping","top","ftx","cryptowatch","tradingview"],
       author: null,
-      id: 226
+      id: 231
     });
     
   
@@ -2289,7 +2339,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","dca","dollar-cost-averaging","dca-strategy","kyc","trading-technique","crypto-trading-technique","independent-reserve"],
       author: null,
-      id: 227
+      id: 232
     });
     
   
@@ -2299,7 +2349,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-trading-technique","pattern-trading","crypto-technical-analysis","tradingview"],
       author: null,
-      id: 228
+      id: 233
     });
     
   
@@ -2309,7 +2359,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-charting","supply-demand","pattern-trading","wyckoff","crypto-trading-technique","top","tradingview"],
       author: null,
-      id: 229
+      id: 234
     });
     
   
@@ -2319,7 +2369,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["crypto-technical-analysis","scalping","crypto-trading-technique","tensorcharts","bitforex","phemex","ftx"],
       author: null,
-      id: 230
+      id: 235
     });
     
   
@@ -2329,7 +2379,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-technique","lth","dca","trading-technique"],
       author: null,
-      id: 231
+      id: 236
     });
     
   
@@ -2339,7 +2389,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["blockchain-technology","segwit","noncustodial-trading","custodial-trading","otc-trading","top","ledger"],
       author: null,
-      id: 232
+      id: 237
     });
     
   
@@ -2349,7 +2399,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["pattern-trading","crypto-technical-analysis","crypto-tools","bbands","crypto-trading-technique","crypto-charting","bitfinex","tradingview"],
       author: null,
-      id: 233
+      id: 238
     });
     
   
@@ -2359,7 +2409,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["trading-platform","p2p","onramp","crypto-tools","localcryptos"],
       author: null,
-      id: 234
+      id: 239
     });
     
   
@@ -2369,7 +2419,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","crypto-charting","cryptowatch"],
       author: null,
-      id: 235
+      id: 240
     });
     
   
@@ -2379,7 +2429,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","crypto-charting","derisking"],
       author: null,
-      id: 236
+      id: 241
     });
     
   
@@ -2389,7 +2439,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["crypto-trading-technique","crypto-trading-strategy","crypto-fundamentals","defi","yield","top","ftx"],
       author: null,
-      id: 237
+      id: 242
     });
     
   
@@ -2399,7 +2449,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["crypto-trading-technique","crypto-trading-strategy","defi","yield","ftx"],
       author: null,
-      id: 238
+      id: 243
     });
     
   
@@ -2409,7 +2459,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["blockchain-technology","defi","yield","ftx"],
       author: null,
-      id: 239
+      id: 244
     });
     
   
@@ -2419,7 +2469,7 @@ var idx = lunr(function() {
       category: ["opsec"],
       tags: ["cryptocurrency-wallet","electrum","crypto-opsec","og","crypto-tools"],
       author: null,
-      id: 240
+      id: 245
     });
     
   
@@ -2429,7 +2479,7 @@ var idx = lunr(function() {
       category: ["opsec"],
       tags: ["crypto-opsec","dust-attack","tech","ledger","electrum","cryptocurrency-wallet","crypto-tools"],
       author: null,
-      id: 241
+      id: 246
     });
     
   
@@ -2439,7 +2489,7 @@ var idx = lunr(function() {
       category: ["opsec"],
       tags: ["crypto-opsec","dust-attack","cryptocurrency-wallet","crypto-tools","ledger","electrum"],
       author: null,
-      id: 242
+      id: 247
     });
     
   
@@ -2449,7 +2499,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["hodl","crypto-trading-strategy","cryptocurrency-wallets","yield","coldcard","independent-reserve"],
       author: null,
-      id: 243
+      id: 248
     });
     
   
@@ -2459,7 +2509,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","ath"],
       author: null,
-      id: 244
+      id: 249
     });
     
   
@@ -2469,7 +2519,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["recommended-exchange","crypto-trading-platforms","trading-platforms","custodial-trading","noncustodial-trading","bitfinex"],
       author: null,
-      id: 245
+      id: 250
     });
     
   
@@ -2479,7 +2529,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","crypto-charting","tradingview","trading-platform","custodial-trading","noncustodial-trading","tradingview"],
       author: null,
-      id: 246
+      id: 251
     });
     
   
@@ -2489,7 +2539,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","crypto-charting","ta","tradingview","trading-platform","custodial-trading","noncustodial-trading","bitfinex"],
       author: null,
-      id: 247
+      id: 252
     });
     
   
@@ -2499,7 +2549,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["tv","crypto-trading-platforms","trading-platform","custodial-trading","noncustodial-trading","crypto-tools","tradingview"],
       author: null,
-      id: 248
+      id: 253
     });
     
   
@@ -2509,7 +2559,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["p2p","trading-platform","noncustodial-trading","onramp","localcryptos"],
       author: null,
-      id: 249
+      id: 254
     });
     
   
@@ -2519,7 +2569,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["moonmath","dca","crypto-trading-technique","trading-technique","crypto-tools"],
       author: null,
-      id: 250
+      id: 255
     });
     
   
@@ -2529,7 +2579,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-technique","crypto-trading-strategy","volume-trading","crypto-tools","tensorcharts","orderbook-heatmap","scalping","top","bitfinex","ftx"],
       author: null,
-      id: 251
+      id: 256
     });
     
   
@@ -2539,7 +2589,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["pattern-trading","crypto-charting","crypto-technical-analysis","crypto-technical-analysis","top","tradingview","bitfinex"],
       author: null,
-      id: 252
+      id: 257
     });
     
   
@@ -2549,7 +2599,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-technique","quarterlies","crypto-derivatives","inverse-swap","ftx","deribit"],
       author: null,
-      id: 253
+      id: 258
     });
     
   
@@ -2559,7 +2609,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["stablecoins","regulations","adoption","reports","defi","cbdc"],
       author: null,
-      id: 254
+      id: 259
     });
     
   
@@ -2569,7 +2619,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","tradingview","trading-platform","custodial-trading","noncustodial-trading"],
       author: null,
-      id: 255
+      id: 260
     });
     
   
@@ -2579,7 +2629,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-communities","tradingview","trading-platform","custodial-trading","noncustodial-trading","bitforex","phemex"],
       author: null,
-      id: 256
+      id: 261
     });
     
   
@@ -2589,7 +2639,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-fundamentals","crypto-trading-strategy","kyc","regulations"],
       author: null,
-      id: 257
+      id: 262
     });
     
   
@@ -2599,7 +2649,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-technical-analysis","crypto-charting","crypto-trading-technique","vpvr","trading-technique","crypto-tools","cryptowatch","tradingview","ftx"],
       author: null,
-      id: 258
+      id: 263
     });
     
   
@@ -2609,7 +2659,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-charting","candle-trading","pattern-trading","engulfing","candle-trading","tradingview"],
       author: null,
-      id: 259
+      id: 264
     });
     
   
@@ -2619,7 +2669,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","derisking","ngu"],
       author: null,
-      id: 260
+      id: 265
     });
     
   
@@ -2629,7 +2679,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["volume-trading","crypto-trading-strategy","crypto-trading-technique","vpvr","trading-technique","tradingview","cryptowatch","ftx"],
       author: null,
-      id: 261
+      id: 266
     });
     
   
@@ -2639,7 +2689,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["sfyl","buttcoin","bitmex"],
       author: null,
-      id: 262
+      id: 267
     });
     
   
@@ -2649,7 +2699,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-technique","non-directional-trading","arbing","arbitrage","scalping","localcryptos","independent-reserve","shrimpy"],
       author: null,
-      id: 263
+      id: 268
     });
     
   
@@ -2659,7 +2709,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-technical-analysis","crypto-charting","pattern-trading","dcb","tradingview"],
       author: null,
-      id: 264
+      id: 269
     });
     
   
@@ -2669,7 +2719,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","crypto-trading-technique","value-averaging","dca","dollar-cost-averaging","independent-reserve"],
       author: null,
-      id: 265
+      id: 270
     });
     
   
@@ -2679,7 +2729,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-technique","crypto-charting","volume-trading","trading-technique","crypto-tools","crypto-trading-strategy","derisking","tensorcharts","bitfinex"],
       author: null,
-      id: 266
+      id: 271
     });
     
   
@@ -2689,7 +2739,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-trading-strategy","independent-reserve"],
       author: null,
-      id: 267
+      id: 272
     });
     
   
@@ -2699,7 +2749,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["pattern-trading","crypto-charting","scalping","crypto-technical-analysis","fibs","tradingview"],
       author: null,
-      id: 268
+      id: 273
     });
     
   
@@ -2709,7 +2759,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","crypto-fundamentals","independent-reserve","localcryptos"],
       author: null,
-      id: 269
+      id: 274
     });
     
   
@@ -2719,7 +2769,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","dca","bitcoin-cost-averaging","bca","crypto-exchange","coin-control","independent-reserve"],
       author: null,
-      id: 270
+      id: 275
     });
     
   
@@ -2729,7 +2779,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-charting","supply-demand","pattern-trading","wyckoff","crypto-trading-technique","tradingview"],
       author: null,
-      id: 271
+      id: 276
     });
     
   
@@ -2739,7 +2789,7 @@ var idx = lunr(function() {
       category: ["crypto-jargon"],
       tags: ["crypto-trading-strategy","dca","dollar-cost-averaging","dca-strategy","kyc","trading-technique","crypto-trading-technique","shrimpy","tradingview"],
       author: null,
-      id: 272
+      id: 277
     });
     
   
@@ -2749,7 +2799,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["volume-trading","crypto-charting","crypto-trading-technique","vpvr","trading-technique","crypto-tools","top","tradingview","cryptowatch"],
       author: null,
-      id: 273
+      id: 278
     });
     
   
@@ -2759,7 +2809,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["blockchain-technology","defi","yield","localcryptos","ftx"],
       author: null,
-      id: 274
+      id: 279
     });
     
   
@@ -2769,7 +2819,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-technical-analysis","crypto-charting","crypto-trading-technique","btcd","trading-technique","crypto-tools","cryptowatch","tradingview","bitfinex"],
       author: null,
-      id: 275
+      id: 280
     });
     
   
@@ -2779,7 +2829,7 @@ var idx = lunr(function() {
       category: ["trading-technique"],
       tags: ["crypto-technical-analysis","crypto-charting","crypto-trading-technique","roc","trading-technique","crypto-tools","cryptowatch","bitfinex","ftx"],
       author: null,
-      id: 276
+      id: 281
     });
     
   
@@ -2789,7 +2839,7 @@ var idx = lunr(function() {
       category: ["defi"],
       tags: ["blockchain-technology","defi","nft","airdrops","phemex"],
       author: null,
-      id: 277
+      id: 282
     });
     
   
@@ -2799,7 +2849,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: ["pattern-trading","crypto-technical-analysis","crypto-tools","bbands","crypto-trading-technique","crypto-charting","bitfinex","tradingview"],
       author: null,
-      id: 278
+      id: 283
     });
     
   
@@ -2810,7 +2860,7 @@ var idx = lunr(function() {
       category: ["bounty-manager"],
       tags: ["btc"],
       author: null,
-      id: 279
+      id: 284
     });
     
   
@@ -2820,7 +2870,7 @@ var idx = lunr(function() {
       category: ["bounty-manager"],
       tags: ["btc"],
       author: null,
-      id: 280
+      id: 285
     });
     
   
@@ -2830,7 +2880,7 @@ var idx = lunr(function() {
       category: ["bounty-manager"],
       tags: ["btc","bnb"],
       author: null,
-      id: 281
+      id: 286
     });
     
   
@@ -2840,7 +2890,7 @@ var idx = lunr(function() {
       category: ["bounty-manager"],
       tags: ["btc","dot"],
       author: null,
-      id: 282
+      id: 287
     });
     
   
@@ -2850,7 +2900,7 @@ var idx = lunr(function() {
       category: ["tradingview-developer"],
       tags: ["looks","stepn"],
       author: null,
-      id: 283
+      id: 288
     });
     
   
@@ -2861,17 +2911,17 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 284
+      id: 289
     });
     
   
     this.add({
       title: "Upcoming Crypto Airdrops, Bounties, Whitelists, NFT promos",
-      content: "Welcome to the list of upcoming crypto airdrops, bounties and exchange promos with the update note for October 2022.\n\nIn the past weeks, we have seen the volume of airdrops thin down. One of the blockchains that still gets a decent volume of opportunities is MATIC with new tokens launching there.\n\nOther than that, trading competitions and exchange promos are getting better in terms of how much they pay, but not in terms of how many people get actually paid.\n\nAt the moment, the three exchanges that offer regular trading competitions are Phemex, Bitforex and Bitmart. The exchanges CEX.io and LATOKEN run Gleam airdrop events almost every week.\n\nNew type of airdrop scam is getting popular\n\nWhile the system of token key or NFT key as a condition to receive future airdrops is pretty censorship resistant, it also naturally makes it the prime avenue for scammers.\n\nIn the past weeks, we have seen an increasing number of airdrops that claim to pay tokens only to addresses that hold an NFT key that however needs to be purchased. One of such listings is still up on Opensea.\n\nThis is the same scam as the good old “send 0.1 ETH to receive giveaway” that was everywhere on Twiiter at one point. There will be no airdrop, the address will just pocket the payment for the NFT key and vanish.\n\nAirdrops are a promotional tool, do not ever pay any money to participate - not even for an NFT key.\n\nAirdrops Alert\n\nThe lists below are updated daily. Come back every evening and check the updates!\n\nIf you prefer social though:\n\n\n  Get alerts on new airdrops on Twitter: Tweet sends as soon as the airdrop list below updates. No alerts on bounties or promos there.\n  Read the daily airdrop digests on Medium: The digest includes exchange promos and alerts on ending soon airdrops.\n  Daily ending soon airdrops on Telegram: Just a plain list of campaigns ending in the days to come, arrives every day.\n\n",
+      content: "Welcome to the list of upcoming crypto airdrops, bounties and exchange promos with the update note for January 2023.\n\nAt the moment, the three exchanges that offer regular trading competitions are Phemex, Bitforex and Bitmart. The exchanges CEX.io and LATOKEN run Gleam airdrop events almost every week.\n\nWe’re now listing NFT airdrops separately\n\nThere is no more bounty feed anymore - sorry bounty hunters. You are still free to follow the work of the time-tested bounty managers on crypto message boards, but there is very little interest in bounties right now.\n\nOn the other hand, as the crypto markets continue to bleed, the 2023 trend of NFT giveaways really comes to light.\n\nThis newfound craze is driven by the fact that NFTs are incredibly cheap or free to produce, and thus provide great value for those looking to increase engagement with their products, or just to collect a bunch of email addresses via Gleam.\n\nSo, this comes handy for companies looking to generate buzz and awareness around their products. By launching NFT promos, they are able to leverage the attractiveness of NFTs on the cheap.\n\nRemember the risks though, NFTs are the type of crypto that generally speaking is backed by even less than the proof-of-work cryptocurrencies, which have some form of backing in the real energy that mines them.\n\nBut as the NFT industry is now also trying to distance itself from the world of cryptocurrencies, much like the fintech blockchain tech companies did about five years ago, it might be good to keep paying attention.\n\nThe NFT industry is looking to create its own identity in the market and make sure its products are not seen as just another form of cryptocurrency.\n\nWith NFTs being relatively inexpensive to produce and offering great potential for engagement, it’s no wonder that more and more companies are turning to NFT giveaways as an effective promotional tool.\n\nYou can find the list ordered by date here, but newly added NFT airdrops will be listed in the last 24 hours list together with token airdrops.\n\nThe NFT paid OAT scam is still popular\n\nWhile the system of NFT as an achievement key to receive future airdrops is pretty good and censorship-resistant, it also naturally makes it the prime avenue for scammers.\n\nIn the past weeks, we have seen an increasing number of airdrops that claim to pay tokens only to addresses that hold an NFT key that however needs to be purchased. One of such listings is still up on Opensea.\n\nThis is the same scam as the good old “send 0.1 ETH to receive giveaway” that was everywhere on Twiiter at one point. There will be no airdrop, the address will just pocket the payment for the NFT key and vanish.\n\nAirdrops are a promotional tool, do not ever pay any money to participate - not even for an NFT key.\n\nAirdrops Alert\n\nThe lists below are updated daily. Come back every evening and check the updates!\n\nIf you prefer social though:\n\n\n  Get alerts on new airdrops on Twitter: Tweet sends as soon as the airdrop list below updates. No alerts on bounties or promos there.\n  Read the daily airdrop digests on Medium: The digest includes exchange promos and alerts on ending soon airdrops.\n  Daily ending soon airdrops on Telegram: Just a plain list of campaigns ending in the days to come, arrives every day.\n\n",
       category: ["crypto-trading-101"],
       tags: ["defi","yield","derisking","crypto-charting","crypto-trading-strategy","crypto-fundamentals"],
       author: "ATNET",
-      id: 285
+      id: 290
     });
     
   
@@ -2881,7 +2931,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 286
+      id: 291
     });
     
   
@@ -2891,7 +2941,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 287
+      id: 292
     });
     
   
@@ -2901,7 +2951,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 288
+      id: 293
     });
     
   
@@ -2911,17 +2961,17 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 289
+      id: 294
     });
     
   
     this.add({
       title: "Past and Inactive Crypto Airdrops 🔴 - Airdrops and Bounties that ended",
-      content: "\n2022\n\n\n  \n    \n      \n        2022 🔴 Inactive Past Crypto Airdrops, Bounties or Exchange Promos 2022\n      \n    \n    \n    \n      \n       RadKET Airdrop\n      \n      \n        airdrop &nbsp;3000 First-come plus 3000 random participants get paid, each person 30 $RDK. The Gleam has 180K $RDK in pool.\n          &nbsp;\n      \n      \n        until 19 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cross the Ages Airdrop\n      \n      \n        airdrop &nbsp;This Gleam is run by a GameFi project and drops 10k USD worth of tokens. There are some daily tasks to rake up your entries.\n          &nbsp;\n      \n      \n        until 19 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Transient Airdrop\n      \n      \n        airdrop &nbsp;Last of the World Cup prediction promos. The Gleam airdrops 100 $TSCT to 200 winners. There is extra bonus for live prediction during matches.\n          &nbsp;\n      \n      \n        until 17 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metafluence Airdrop\n      \n      \n        airdrop &nbsp;Gleam that rewards NFT land plots and Tether rewards. Shills get 25-100 USDT each, 4990 random winners get 10 USDT each.\n          &nbsp;\n      \n      \n        until 18 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NEOPIN Airdrop\n      \n      \n        airdrop &nbsp;Very short Gleam that drops 1000 $NPT tokens and some whitelist spots. NPT is a token used for wagering in an online race game.\n          &nbsp;\n      \n      \n        until 16 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Comearth Airdrop\n      \n      \n        airdrop &nbsp;A Gleam to promote a collab between COMEARTH and a metaverse ecosystem HyperMove. Pays 50k $HMOVE to 200 random winners, and then some NFTs (in game assets for P2E).\n          &nbsp;\n      \n      \n        until 11 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OKEYAPPS Airdrop\n      \n      \n        airdrop &nbsp;This Gleam campaign has an optional daily work for extra points. Pool is 60 MM $OKEY between 500 random users. Top shills get a bonus. Pays in a few weeks after the event end.\n          &nbsp;\n      \n      \n        until 18 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SLS (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Here is a Gleam with a good pool - 100,000 tokens which is 15K USD. They want you to do the Gleam form plus comment on Twitter and visit a few places.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Grand Xenna Airdrop\n      \n      \n        airdrop &nbsp;Only 16 lucky winners get a reward but the pool is 4000 USD worth. The top reward is 1K worth, the rest 200 USD worth, all in $SIDUS tokens. Some extra NFTs in the pool.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lady Bug Chain Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 500 MM $LADY tokens. The payout goes between 400 randos and 20 top shills.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BRAVO (BSC) Airdrop\n      \n      \n        airdrop &nbsp;This is a Gleam with a good pool - 1000 BUSD, 250k $BRV and some NFTs. Over 1000 random users get rewarded. Top shills get between 50-300 BUSD each.\n          &nbsp;\n      \n      \n        just ending!\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NYXS World Cup Airdrop\n      \n      \n        airdrop &nbsp;Gleam form that rewards 100 random users with up to 2K USD worth of tokens. The total pool is worth over 20k USD, the lowest prizes are worth 70 USD.\n          &nbsp;\n      \n      \n        until 13 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Roseon x Gami Airdrop\n      \n      \n        airdrop &nbsp;This is a long but easy Gleam that rewards game slots in an upcoming play-to-earn. You can be one of the first users this way.\n          &nbsp;\n      \n      \n        until 14 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ocean Park Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 20 MM tokens (on Aptos) that are worth 1k USD. The reward per person is only 5-10 USD worth, there will be a lot of winners.\n          &nbsp;\n      \n      \n        until 9 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MIR Airdrop\n      \n      \n        airdrop &nbsp;MIR token, which trades on Bitforex or Pancakeswap, runs an airdrop where they giveaway 1 MM tokens. Reward between 200-2000 MIR per person.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CelebVerse Airdrop\n      \n      \n        airdrop &nbsp;A small pool of 3k USD for 10 winners in this Gleam.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FIFA Worldcup NFT Giveaway\n      \n      \n        airdrop &nbsp;This is a quick event where you follow a bunch of stuff for chance to win an NFT.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TWAKE Airdrop\n      \n      \n        airdrop &nbsp;This is a partnership airdrop that rewards tokens of a norse mythology game. Pool is worth 1600 USD, reward per person 15-20 USD worth.\n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Yootshub NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that rewards some NFTs and some WL spots. Only about 20 winners.\n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SynFutures NFT Airdrop\n      \n      \n        airdrop &nbsp;Fill the short Gleam to get a chan ce at one of the 500 NFTs. \n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       XMetaverse Pro Airdrop\n      \n      \n        airdrop &nbsp;Everyone gets paid here. Quick Gleam that has a pool of 3k USDT and 300k $XMETA tokens and a participation reward. The token pool goes to 20k lucky winners, the USDT mostly to top shills. Other than that, each participant who fills the full form gets 15 USD worth of $XMETA.\n          &nbsp;\n      \n      \n        until 9 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AkiraOx x Meadow Airdrop\n      \n      \n        airdrop &nbsp;This is a Sui airdrop, Meadow is a launchpad for their tokens. The airdrop pays 50 roles and some 5 USDT rewards to random winners.\n          &nbsp;\n      \n      \n        until 7 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Medieval Empires Airdrop\n      \n      \n        airdrop &nbsp;Halloween Gleam with 1000 USD pool. Only five winners - this one pays well!\n          &nbsp;\n      \n      \n        until 2 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TOMS Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has 3k USD worth of tokens in pool and rewards only 30 winners - the reward per winner is very good, 100 USD. Tokens trade on Huobi and Gate.io.\n          &nbsp;\n      \n      \n        until 6 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TrustPad Airdrop\n      \n      \n        airdrop &nbsp;A short and easy Gleam that pays 300 random users 30 USD worth, top 5 shills get 200 USD worth. Pool is 10k USD in $VRJAm tokens.\n          &nbsp;\n      \n      \n        until 6 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FamDAO Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a first come award for 6000 users. After that the top shills and some random users get 5-20 USD worth.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DayStarter Airdrop 2\n      \n      \n        airdrop &nbsp;Random Gleam participants will split the pool of 10k $DST tokens. Reward per person up to 40 $DST, not all tasks mandatory.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZFM Airdrop\n      \n      \n        airdrop &nbsp;LATOKEN is running a bunch of new airdrops: ZFM, OMG, RFX, STEP and a couple older ones. Most are via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Mondi NFT Airdrop\n      \n      \n        airdrop &nbsp;A very short Gleam that pays 70 whitelist spots for NFT and 2-5 USD in MATIC to random users.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Macondo Airdrop\n      \n      \n        airdrop &nbsp;This is a poker NFT project that is in beta. You can share a pool of 5000 USDT for completing tasks and joining Discord.\n          &nbsp;\n      \n      \n        until 4 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zero-Fee OTC Thanksgiving Promo\n      \n      \n        airdrop &nbsp;Buying crypto on Phemex OTC via debit or credit cards, SWIFT, SEPA, FPS (for UK) and ACH (for US) has now zero fee on the fiat deposit. Regular fees are between 2-4%. Available crypto: BTC, ETH, USDT, USDC.\n          &nbsp;\n      \n      \n        until 1 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MegaGleam Airdrop Batch 9\n      \n      \n        airdrop &nbsp;This is a long Gleam with optional daily bonus tasks. Pool worth 50k USD in tons of NFTs, each NFT worth 50-500 USD.\n          &nbsp;\n      \n      \n        until 1 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WCM Airdrop\n      \n      \n        airdrop &nbsp;This Gleam is a first come one, the first 20k users will be rewarded with tokens for a Web3 platform.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CCharge Airdrop\n      \n      \n        airdrop &nbsp;This short and sweet Gleam pays 3k USD in tokens among 100 random winners. Not all tasks mandatory.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RoadQatar Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has pool of 6 Million $ROAD. The reward per person is about 5 USD worth - 2200 $ROAD each person. Distributes mid Dec.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlessGlobal NFT Airdrop\n      \n      \n        airdrop &nbsp;This is a quick Givelab form that rewards 9 people with game NFTs.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AgriVerse (BSC) Airdrop and WL\n      \n      \n        airdrop &nbsp;A long Gleam of a P2E project that has a pool of 100MM Agriverse tokens. Fill all tasks and get participation reward. Other than that, top 25 shills get a bonus and 500 random wallets get whitelisted for future events.\n          &nbsp;\n      \n      \n        until 28 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MRST (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Guess the CEX on which this Polygon token gets listed and win 100 tokens. 100 people get rewarded.\n          &nbsp;\n      \n      \n        until 29 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlastRoyale Airdrop\n      \n      \n        airdrop &nbsp;A Gleam for a MATIC project that rewards 5 NFT boxes and 150 MATIC (15 tokens to each winner).\n          &nbsp;\n      \n      \n        until 29 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pegasus Airdrop\n      \n      \n        airdrop &nbsp;This Gleam pays random users rewards of 250-500 $PEGA, plus some shill bonus and NFTs.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Fandora x Akira Airdrop\n      \n      \n        airdrop &nbsp;Another $FAN airdrop. The pool is 100k $FAN for 200 random users and 10 top shills.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Fandora x OEGDAO Airdrop\n      \n      \n        airdrop &nbsp;A new fan-based token that airdrops for a Gleam form. The pool is 100k $FAN for 200 random users and 10 top shills.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Museum of Football NFT Airdrop\n      \n      \n        airdrop &nbsp;A sweepwidget airdrop that rewards 47 NFTs rated at 10k USD.\n          &nbsp;\n      \n      \n        until 22 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DearElla Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 10,000 $XPLA for 400 lucky winners. Reward per winner goes up to 200 $XPLA for top shills, but most rewards are for random users.\n          &nbsp;\n      \n      \n        until 22 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MI and BEMD Airdrop\n      \n      \n        airdrop &nbsp;LATOKEN is running a MI and BEMD airdrops via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 20 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ca_DAO Airdrop\n      \n      \n        airdrop &nbsp;GameFi Airdrop with pool of 100 USDT and 200 SCORE tokens. 50 random winners in total, rewards between 2-10 USD worth per.\n          &nbsp;\n      \n      \n        until 21 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MUN (SOL) Airdrop\n      \n      \n        airdrop &nbsp;This airdrop runs on Givelab. There are rewards for first come users as well as top and random. Total ~450 users get rewarded from pool of 25k $MUM.\n          &nbsp;\n      \n      \n        until 16 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ForTheDog Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that rewards 10 FTD tokens to 4K random winners. You have to follow them on social, too.\n          &nbsp;\n      \n      \n        until 16 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IKO (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;The usual Gleam form, most tasks compulsory. The pool is 50k $HNTR for 1k winners. Distributes in December.\n          &nbsp;\n      \n      \n        until 11 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DBANK (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Only for Korean users. Pool is ~125k un-locked DBC tokens with top rewards (by entries) at about 55 USD worth. Total 1000 winners.\n          &nbsp;\n      \n      \n        until 8 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       K3K Airdrop\n      \n      \n        airdrop &nbsp;A classic Gleam that has a pool of 60k Tron. 4k random winners (15 $TRX/each winner).\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BattleInfinity Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam with 10k USD worth of tokens that will go to 130 participants. Reward per person up to 500 USD worth.\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoSkyLand x Bitkeep Airdrop\n      \n      \n        airdrop &nbsp;Another Bitkeep airdrop - you need to download the app to take part. Rewards to 100 people - 100x NFT free mint.\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eldarune Airdrop\n      \n      \n        airdrop &nbsp;150 users who fill out the Gleam will split 12k USD worth of $ELDA tokens. The Eldarune game lets you play to earn as well.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SG Airdrop on LATOKEN\n      \n      \n        airdrop &nbsp;LATOKEN is running a SG airdrop via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Snooze Beds NFT Whitelist\n      \n      \n        airdrop &nbsp;500 spots are being given away. Just join the list of accounts in the join link on Givelab.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SOUL (Aptos) Airdrop\n      \n      \n        airdrop &nbsp;Simple Google Doc tasks that will reward the first 10k users.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SkippingRope Airdrop\n      \n      \n        airdrop &nbsp;A Google Doc of a SportFi project. Pays 1000 ROPE tokens to 5000 winners - 4500 random and 500 top by entries. Distributes 5 Nov.\n          &nbsp;\n      \n      \n        until 1 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Apes Planet x Bitkeep\n      \n      \n        airdrop &nbsp;A real easy Gleam that requires you to download the Bitkeep wallet as one of the tasks. This airdrop pool has 10 Apes Planet NFTs.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       HongKong Token (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Fill the Gleam form to take part. There will be 2500 winners who split 100k $HK.\n          &nbsp;\n      \n      \n        until 29 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LIGHT DeFi Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that pays out of a good pool of 50k USD worth in $LIGHT tokens. Reward goes to 2000 first come and 3000 random. Distribution 1 week after TGE.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TwitterScan NFT Airdrop\n      \n      \n        airdrop &nbsp;Get a free .nft domain with a shill link. Connect with a web3 wallet in the ETH network (like Metamask), connect with Twitter and claim.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ChainPeak (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A very short Gleam with a pool of 1.5 MM $CPK. Most of the rewards go to top shills - over 3000 of them, but there are is a participation reward 300 $CPK for everyone who completes all tasks.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TeriTori Airdrop\n      \n      \n        airdrop &nbsp;TeriTori is a new staking dApp. Get 300 $TORI tokens for signing in with Keplr wallet.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Retro 2X Airddrop\n      \n      \n        airdrop &nbsp;A very short Gleam, all tasks mandatory. Pool is 1MM $R2X tokens that will be distributed to 1000 winners. Distributes right after ending!\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NYXS Airdrop\n      \n      \n        airdrop &nbsp;A Gleam for a SportFi project to connect fans with athletes. Pays 30 winners, individual rewards worth between 125 USD - 2000 USD.\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TokenHunters Airdrop II\n      \n      \n        airdrop &nbsp;This is a second round of TokenHunters airdrop and it is to promote listing on CoinGecko. It's a Gleam that pays 50 winners 400 $HUNT tokens each (~20 USD). Distributes in early November.\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitmart Random Pair Airdrop\n      \n      \n        airdrop &nbsp;In this event, users who trade specific tokens with specific trading volume will receive a random bonus of anywhere between 1-1000 USDT. Bitmart requires KYC: Click here, then see the current list here.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       W3DNA Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that pays 250 random users, pool 5000 USDT.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zambesi Gold Token Giveaway\n      \n      \n        airdrop &nbsp;Bitmart gives away 12k $ZGD in a trading competition on ZGDUSDT. Top 50 traders by volume (buy+sell) split the pool. Reward is an airdrop, ready to withdraw.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ALGO Trading Competition\n      \n      \n        airdrop &nbsp;This Gleam pays up to 1000 USD but is combined with a trading bounty. The trading part however is open even to those of you who don't want to risk money - there is an option to win by drawing the most accurate TA.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Telos Blockchain Airdrop\n      \n      \n        airdrop &nbsp;A small Gleam form that has pool of 300 USDT. Rewards go to 40 eligible random winners &amp; top 10 referrers.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Shikoku Coin Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that pays random participants. Tasks are compulsory, you won't be able to put in your wallet address unless you do all.\n          &nbsp;\n      \n      \n        until 25 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Polystark (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short givelab form that pays to 10k users, first come. The pool is 10 MM $PYSK tokens, but tokens will not be trading until mid next year at least.\n          &nbsp;\n      \n      \n        until 25 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Farm Tycoon (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam that rewards 1000 participants with 100k $FTY pool share. You just need to follow a couple of accounts. Distributes 1 Nov.\n          &nbsp;\n      \n      \n        until 21 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Answerly (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Warning - requires you proviously own tokens. A short Google form that pays 5000 $ANSR (5 USD) per participant to 10k users. \n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sinfinite (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Google form, you just has to follow. There is an extra pool for activity on social channels. Airdrop reward is 80k USD in $SFN token for 1500 random winners. Then there is the 5K BUSD reward for active participants in community \n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Mads Crypto x Hyper Mover\n      \n      \n        airdrop &nbsp;A SportFi project that airdrops 2000 $HMOVE tokens to 200 winners and 50 NFTs to 50 other winners. It's a Play2earn / Move2earn project.\n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metaverse Hub (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A huge Gleam promo that has 50+ partners joining in. You'll have to follow a lot of accounts but the pool is 50k USD, most in tokens, some NFTs.\n          &nbsp;\n      \n      \n        until 18 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Helio Protocol (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Quick flash giveaway via Gleam. 5 lucky winners who do all the few tasks will get 100 BUSD each.\n          &nbsp;\n      \n      \n        until 18 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Spheroid Universe Airdrop\n      \n      \n        airdrop &nbsp;Sign in with a Web3 wallet to gain 500 tokens. Post on Twitter for 250 more, join Telegram for 100.\n          &nbsp;\n      \n      \n        until 17 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Psych Skulls NFT Free Mint\n      \n      \n        airdrop &nbsp;Just follow and retweet and put down a Polygon address to take part.\n          &nbsp;\n      \n      \n        until 15 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lanila (BSC) Airdrop\n      \n      \n        airdrop &nbsp;This Gleam rewards 450 USDT to 55 winners. Short and sweet.\n          &nbsp;\n      \n      \n        until 15 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       C-PAD x TE DAO (ETH) Airdrop\n      \n      \n        airdrop &nbsp;A short and sweet Givelab form that splits the pool of 250k tokens, which is 10k USD. Random 3K users get 3 USD each, top referrals get 5 USD each bonus.\n          &nbsp;\n      \n      \n        until 16 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WWStep and MESH on LATOKEN\n      \n      \n        airdrop &nbsp;A Gleam run by the LATOKEN no KYC exchange. Pool worth of 9k USD, ready to sell on the exchange. Make an account here.\n          &nbsp;\n      \n      \n        until 16 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Asteria (BSC) NFT Airdrop\n      \n      \n        airdrop &nbsp;Complete three tasks on Twitter and put down your BSC address to join. Reward is 10 Panbo NFT whitelist spots.\n          &nbsp;\n      \n      \n        until 14 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lambda (ETH) Airdrop\n      \n      \n        airdrop &nbsp;20 winners of this Gleam will split 10k $LAMB tokens. The token can be staked.\n          &nbsp;\n      \n      \n        until 14 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Encounter (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A really short Gleam. Pool is 4700 USDT, out of which top 3 get 1800 USDT. The remaining 3k will be pooled into a lucky draw among 500 participants.\n          &nbsp;\n      \n      \n        until 13 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AIO DAO x Super Pad Airdrop\n      \n      \n        airdrop &nbsp;A short Google Form that pays out 800 first come users with 40 $SPAD each. Random 200 users also get 90 $SPAD each. Distribution only after token gets listed, though.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TeDAO x Funky Egg Club Airdrop\n      \n      \n        airdrop &nbsp;This is a short Givelab form that pays 14000 users. First 10K responses get participation award 20 USD worth each. 4k other random users get the same reward too.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ChainPort TGE Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that will pay PORTX tokens from pool of 2k USD worth. Winners are random but more entries increases chance. There will be 46 winners, prizes between 25 USD - 500 USD worth.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FIFA Football Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form for FIFA Football - an e-sport Play and Earn NFT game on BSC chain. The form has 5000 winners with pool of 500k FIFA tokens. They should start trading near the end of 2022.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Morpad (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Short Givelab form that pays every user who complete the tasks (more than 40 entries) with 1000 MORP, or 10 USD worth. 10 lucky winners will get 10k MORP. Distribution on 13 Oct.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hypersign Staking Network\n      \n      \n        airdrop &nbsp;The Hypersign airdrop platform has been developing its own staking blockchain platform and is set to launch in October. To promote the launch, they run an airdrop that will pay $HID tokens on mainnet once it launches. There will be 10 winners who'll get 10k tokens each, and 10 others who get 5k each. Platform's git repo linked from the form.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoSoccer Airdrop\n      \n      \n        airdrop &nbsp;Earn 10 USD for participating. Prize paid in CPS tokens, distributes right after airdrop ends. Total of 2100 winners, most get the 10 USD mark but top participants get up to 1k USD.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IdeaVerse Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam for a GameFi project duo, more entries is a better chance. Pool has 5k $IDVT,5 x IDV CLUB PASS, 200 x Whitelist of IDV Club Pass.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       HongKong Token Airdrop\n      \n      \n        airdrop &nbsp;This is a short Gleam promo to promote HKT listing on Bitmart. 1000 users get paid with 50 HKD worth of tokens each. If you will want to sell, make a Bitmart account.\n          &nbsp;\n      \n      \n        until 9 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FreeCity (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Pool of 1 Million $FCC tokens goes to 500 winners in this short Gleam form. It is to promote the launch of FreeCity, a social app. There are some grand prizes for top perticipants by entries, you can get between 666-10k tokens. All tasks required.\n          &nbsp;\n      \n      \n        until 9 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Web3 Collab Competition\n      \n      \n        airdrop &nbsp;6 different Web3 projects joined forces for this airdrop and will reward 300 users from a pool of 4k USD in BUSD. Easy tasks on Hypersign.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MetaSocHub (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam with pool of $1,000 worth of $MSH tokens. Reward only goes to top 20 users by raked entries points, which means that each winner will get paid well.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NVRO Airdrop\n      \n      \n        airdrop &nbsp;A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OTSUS swap airdrop\n      \n      \n        airdrop &nbsp;Short Google form that pays first 5000 hunters out of a 5 MM $SUS pool.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Spinel DAO Airdrop\n      \n      \n        airdrop &nbsp;Easy and quick tasks that pay BSC based tokens of a startup DAO. The pool is 10,000,000 SPINEL, it's only starting, most of it is unclaimed! This airdrop has referral bonuses.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OwnrWallet Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form where you just need to follow accounts. The pool is 1500 USDT to 110 winners and bigger rewards for referrals. There is a second parallel airdrop on their Telegram channel.\n          &nbsp;\n      \n      \n        until 3 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GamesPad NFT Airdrop\n      \n      \n        airdrop &nbsp;Complete a short Gleam to get a chance to win GoblinTown NFTs (0.93 ETH each) and 10 WL spots.\n          &nbsp;\n      \n      \n        until 3 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZMove Airdrop\n      \n      \n        airdrop &nbsp;Google form that pays first 500 users (since 26 Sep) and 100 random users. Pool is worth 3.5k USD in tokens.\n          &nbsp;\n      \n      \n        until 2 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Finance Vote NFT Airdrop\n      \n      \n        airdrop &nbsp;A super short Hypersign form that pays finance.vote NFTs on ETH.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ShipFinex Airdrop\n      \n      \n        airdrop &nbsp;A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GPS Riding Airdrop\n      \n      \n        airdrop &nbsp;A SportFi project that runs this simple Gleam form. Total of 1440 winners will be drawn. Top users by entries get up to 100 USD each, random winners get about 10 USD each. Prizes paid in GPS tokens.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Crypto Plants (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;A new game on Polygon that airdrops 10,000,000 CRP tokens and 400 NFT plants to 400 winners in a Givelab form. That's 1 game NFT and 25k tokens per winner. This airdrop has voluntary daily tasks.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FantasySwap (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that wants you to fill all tasks and do some Tweeting. Pool is 1M in FSP tokens.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ArchimedesFi NFT (Polygon) Airdrop\n      \n      \n        airdrop &nbsp;Retroactive airdrop. A Gleam form that gives the first 10k users the right to claim NFT for 'Proof of G(r)eek Citizenship'. Wallets who hold the key NFT will be eligible for airdrops in the future. You need to finish by going to Discord and complete rest of the tasks there.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Xandar (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form with simple tasks that pays tokens and NFTs for the Play2Earn game. Tokens &amp; NFTs worth $10,000 will be airdropped to 500 top participants with the most entries. \n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Raceways Airdrop\n      \n      \n        airdrop &nbsp;A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Unafro NFT (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;The new NFT Marketplace, Unoafro-The African NFT Space, is giving away 500 limited Edition NFTs for free and another 1000 limited Edition NFTs at 1 Matic from the collection African_beauty. \n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Quest3 Airdrop\n      \n      \n        airdrop &nbsp;Do the work and claim right away 100 RP tokens. Only BAB holders are whitelisted, though.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RichQuack x Earthling Airdrop\n      \n      \n        airdrop &nbsp;A quick and short Gleam form that pays 200 winners out of a pool of 1250 ETLG and 1MM QUACK tokens. Each winner gets about 2 USD worth.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ghostpad (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Gleam with 1,000,000 $GTP tokens in pool that goes to 100 top and 400 random winners.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WonderSea (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form os a DeFi project on BSC. Airdrop pool is 5,000,000 $WSF which is 30k USD worth, distribution probably in early November.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PatronageDAO Airdrop\n      \n      \n        airdrop &nbsp;Gleam form with optional tasks. Pool is only 3000 USD worth but it's in USDC. There will be 123 winners who will get between 20-500 USDC.\n          &nbsp;\n      \n      \n        until 28 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RazorNetwork Giveaway\n      \n      \n        airdrop &nbsp;In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the team launched a Gleam form that pays 200,000 $RAZOR in pool to 200 winners. \n          &nbsp;\n      \n      \n        until 23 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BibleCoin (BSC) Giveaway\n      \n      \n        airdrop &nbsp;Google form that will pay 10 BIBL for simple shilling. \n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Enjinstarter HauntedSpace Airdrop\n      \n      \n        airdrop &nbsp;A Hypersign form to give away 75 whitelist spots for an NFT mint, NFT is for a P2E game. About Haunted Space Haunted Space is a profound adventure that allows you to explore, play, and earn your way through star-choked skies in this immersive game.\n          &nbsp;\n      \n      \n        until 21 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ALYX Testnet Airdrop\n      \n      \n        airdrop &nbsp;Airdrops mainnet tokens from pool of 70k ALYX. Besides Top 3 winners and 500 lucky winners, the other eligible participants will share 34,000 $ALYX.\n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Alonenite (ALGO) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form in a campaign worth 120k USD. AloneNite is a survival P2E metaverse game powered by Algorand and UnityEngine.\n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       World of Potatoes NFT WL\n      \n      \n        airdrop &nbsp;A very short form that drops whitelist spots for the game NFTs. \n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Calo Indoor (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Calo Indoor is a SportFi app. Gleam drops 10 NFT in-app items, 50 Wl slots and 50k tokens as a pool to 500 winners.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SecondLive NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that gives mystery boxes and NFTs to 600 participants (20 top and rest random). NFTs are only in-game items.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Aptosix Airdrop\n      \n      \n        airdrop &nbsp;Very short Givelab, all tasks mandatory. It wants you shill the project on Twitter to access the reward pool of 66k $SIX tokens. 6000 winners will be drawn, if you win they will email you provide address.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metaverse Exchange DAO Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam to promote the online gaming DAO. Pays 1x 100 USDC and 50x 50 USD worth of MXDR tokens.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ONI (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam with over 15k USD worth of tokens in pool. Top 3000 referrers and 1500 random participants get the generic reward worth 3 USD. Top 3 referrers get up to 840 USD worth.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       EpicBattle Giveaway\n      \n      \n        airdrop &nbsp;Short Gleam with a pool of 280,000 $EBA tokens, which is 8400 USD, and 200 FREE NFT'S WL. Top 50 referrers get up to 300 USD worth and 1 NFT. 1000 randomly drawn winners get 5 USD worth and 150 more get 1 NFT. NFTs are usable in the P2E game.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       VanSwap Meme Airdrop\n      \n      \n        airdrop &nbsp;This is a Gleam for a Twitter meme contest: You need to post a meme on Twitter. Prizes between 50-150 in VAN.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IguVerse Airdrop\n      \n      \n        airdrop &nbsp;IguVerse is a GameFi app. The airdrop is a Gleam with very simple tasks that pays to 250 winners. The pool is 10k $BALI and 10k $IGU tokens, 48 freemint of IguVerse NFTs and 2 flight tickets to Bali.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FutureDEX Airdrop\n      \n      \n        airdrop &nbsp;Pool of 20k FDX tokens, set to be 1.5 USDT worth each. Super short airdrop Gleam, just some joining, but pays out only in December 2022. All the social profiles are brand new, the product is a just-launching derivative DEX on Klaytn.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       10k USD spot voucher pool\n      \n      \n        airdrop &nbsp;Phemex runs another trading promo. If you put down your UID through the join link and trade at least 500 USD worth on spot or contract markets, you will be whitelisted for the draw. 100 winners share 10k USDT in spot vouchers.\n          &nbsp;\n      \n      \n        until 16 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LunaCash x Akatsuki\n      \n      \n        airdrop &nbsp;Gleam worth 12k USD in LunaCash that pays up to 10k tokens to top users by entries. 2000 random winners get 200 tokens each.\n          &nbsp;\n      \n      \n        until 16 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Proton Airdrop\n      \n      \n        airdrop &nbsp;A Givelab with 4,000 random winners, reward is 5000 XPR per person. The total pool is worth 60k USD. \n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WORLDX NFT Airdrop\n      \n      \n        airdrop &nbsp;500 WL spots for a metaverse NFT passport and 50 USDT each to 10 winners with the most points accumulated will go to the winners of this short Fyre form.\n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Harken Airdrop\n      \n      \n        airdrop &nbsp;A short Givelab form that drops 60k MATIC pool between 5000 random winners (12 MATIC per).\n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pelicanos NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form that pays 10x NFTs and 5x 200 USDT. PELICANOS NFT is a collection of 7,000 pelicans enabling you to take part in degens' parties in the best places on MYKONOS!\n          &nbsp;\n      \n      \n        until 14 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlueMove x Akatsuki NFT airdrop\n      \n      \n        airdrop &nbsp;Gleam form that only drops NFTs: 400 Legendary NFT &amp; 100 OG Roles. BlueMove is the marketplace where you can sell them, expected worth of pool is 10k USD. Tasks all mandatory.\n          &nbsp;\n      \n      \n        until 14 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Millionwinner Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form with the usual tasks that has a 10k USD pool ($4,000 in MWT Token &amp; $6,000 in Genesis NFT Whitelist spots). \n          &nbsp;\n      \n      \n        until 10 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Marblex Airdrop\n      \n      \n        airdrop &nbsp;Gleam with pool of 1000 MBX tokens. The reward goes to top users by entries, reward per person is between 1 - 10 MBX.\n          &nbsp;\n      \n      \n        until 10 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Raideon Blog Launch Airdrop\n      \n      \n        airdrop &nbsp;Raideon runs a promo of their blog by giving away NFTs and ETH. Rewards are $700 worth of ETH + (111) promo cards  + (7) Herolist spots to 77 lucky winners.\n          &nbsp;\n      \n      \n        until 11 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFT Airdrop via Voice\n      \n      \n        airdrop &nbsp;Join link leads directly to claim, no action required but you will follow the artist by claiming.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DXSpot Airdrop\n      \n      \n        airdrop &nbsp;Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.\n          &nbsp;\n      \n      \n        until 8 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ready Games Airdrop\n      \n      \n        airdrop &nbsp;This Gleam form drops 400 rare NFT avatars for a game. Each NFTs contains 100 $AURA tokens. You can melt your NFT at any time to retrieve the infused value, or stake the NFT to accumulate rewards.\n          &nbsp;\n      \n      \n        until 8 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OP Launcher Airdrop\n      \n      \n        airdrop &nbsp;A short gleam form, only winners get paid but there are minimum entries to get qualified for the bigger prizes. Total pool 10k USD in $OPL tokens to 300 winners.\n          &nbsp;\n      \n      \n        until 6 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RHT Token Airdrop\n      \n      \n        airdrop &nbsp;A sweepwidget with a lot of daily tasks, such as voting. The project is a healthcare token.\n          &nbsp;\n      \n      \n        until 4 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pub Game NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar which can be sold.\n          &nbsp;\n      \n      \n        until 2 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZenFarm Airdrop\n      \n      \n        airdrop &nbsp;Google form with just a few simple tasks that has a pool of 50,000 $ZFT.\n          &nbsp;\n      \n      \n        until 2 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Dokdo Bounty\n      \n      \n        airdrop &nbsp;Pool of 200 $DKD for Twitter and bitcointalk signatures. Dokdo is a Lithuanian company that aims to enhance the solar ecosystem. Won't accept fake Twitter followers. Manager: CryptopreneurBrainboss\n          &nbsp;\n      \n      \n        until 3 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bopoverse NFT airdrop\n      \n      \n        airdrop &nbsp;If you follow this web3 project on Twitter and Discord, you get into a raffle for 2,777 whitelist spots for the first NFT series. Bopoverse™ 1st collection BPVw will be minted on 8 Sep - 7,777 Empowering NFTs.\n          &nbsp;\n      \n      \n        until 1 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Unlockd Community Airdrop\n      \n      \n        airdrop &nbsp;A longish form where you get paid more for more entries. It's just following a bunch of stuff.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pocket Official Airdrop\n      \n      \n        airdrop &nbsp;Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Peercoin Airdrop\n      \n      \n        airdrop &nbsp;Anniversary of a sh1tcoin! Fill simple social tasks and get into the lucky draw for a couple hundred PPC. Top referrals get paid too.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Router Protocol Airdrop\n      \n      \n        airdrop &nbsp;A short form for a cross chain bridging app that drops prizes and $ROUTE tokens for very simple tasks.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ReadOn Token and NFT airdrop\n      \n      \n        airdrop &nbsp;A short Givelab form that will pay 4000 READ and 100 NFTs to 500 winners. The project is on BSC.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Arkadia (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Arkadia NFT game pays 100 USDC on Solana to 10 winners in a short Gleam form.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Dracoo Master NFT Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form, the more total entries altogether the more prizes. It drops NFTs and tech prizes for gamers.\n          &nbsp;\n      \n      \n        until 30 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NOODLE Airdrop\n      \n      \n        airdrop &nbsp;You need to install the NOODLE app for this Gleam. Otherwise your usual form, pool is 5000 $NODL (soon to be listed on Gate.io) between 100 random users and 10 top referrals.\n          &nbsp;\n      \n      \n        until 29 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Anifi World Whitelist\n      \n      \n        airdrop &nbsp;This is a short Gleam form that only gives a presale whitelist.\n          &nbsp;\n      \n      \n        until 28 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BOSE (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A Metaverse token on Solana airdrops for a short Gleam form. Pool is 10000 $BOSE for 10,000 members.\n          &nbsp;\n      \n      \n        until 28 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PolkaFantasy NFT Airdrop\n      \n      \n        airdrop &nbsp;NFT airdrop on Gleam that rewards game NFTs and Amazon gift cards. Total 30k USD worth of prizes.\n          &nbsp;\n      \n      \n        until 26 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Tanukiverse NFT Airdrop\n      \n      \n        airdrop &nbsp;Total Pool is 8 Free NFT, 50WL &amp; 60,000 NFT Pebbles. Pebbles Holder will get $NUKI token airdrop proportional to amount held.\n          &nbsp;\n      \n      \n        until 25 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PoopMarketplace Airdrop\n      \n      \n        airdrop &nbsp;Google form that just wants you to go to Twitter and like, retweet and tag the pinned post. The project is an NFT marketplace for GameFi on Degechain.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Moniwar RICE Airdrop\n      \n      \n        airdrop &nbsp;An NFT airdrop that pays a pool of 100k RICE tokens to the first 500 users. Then the rest gets a chance to get one of 1000 pet NFTs. Short form.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Gnome Mines NFT Airdrop\n      \n      \n        airdrop &nbsp;Gleam form that pays NFTs and mint spots.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FND Airdrop on Bitmart\n      \n      \n        airdrop &nbsp;The no-KYC exchange Bitmart runs an airdrop promo that pays 57 $FND (~5 USD) to 1000 winners. Real quick Google form.\n          &nbsp;\n      \n      \n        until 19 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hyperboard NFT (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Hyperboards is an NFT needed to start earning Chat And Earn Tokens for (surprise) chatting. Simple Gleam tasks with some daily ones. More tasks more chances to win one of the NFTs. It's 10 NFTs for every 10k entries.\n          &nbsp;\n      \n      \n        until 18 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RichQuack WL Airdrop\n      \n      \n        airdrop &nbsp;Whitelist for new premium NFT mint on BSC and additional pool of tokens for 100 winners. NFT holders qualify for further airdrops and perks.\n          &nbsp;\n      \n      \n        until 17 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Atmos Protocol Airdrop\n      \n      \n        airdrop &nbsp;Longish Gleam form for only 50 winners, each will get 200 $ATM tokens.\n          &nbsp;\n      \n      \n        until 17 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stackspace (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Bunch of tasks, a lot of them can be repeated daily. 50.000 $STSP to 100 winners, more entries are more chances. Form via Viralsweep, wants your email and wallet address. Stackspace is a marketplace for NFTs and assets from various games.\n          &nbsp;\n      \n      \n        until 15 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LuxPad x Wingstep (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Google form where you need to RL, like and follow. Pool of 80,000 $WST for 20 winners.\n          &nbsp;\n      \n      \n        until 15 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       USDC Quiz for 100 USD\n      \n      \n        airdrop &nbsp;Phemex runs another quiz promo, this time about USDC. Answer all 5 quiz questions right and you qualify to share the 10k USD voucher prize. Each winner gets 100 USD, first come basis.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Epic Kingdom (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form with pool of 90k $EKD tokens. Top referrals earn the most, rest goes to random participats.\n          &nbsp;\n      \n      \n        until 12 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       O3 Carnival (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form with all tasks mandatory. Pool of 13,000 $O3 tokens.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Race Whitelist by OEG DAO Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that rewards race whitelist and land NFTs. Whitelist gets you the opportunity to earn tokens before the token generation event. No need to own NFT.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Galaxy Digital (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Diolaunch Airdrop\n      \n      \n        airdrop &nbsp;Gleam form with all tasks mandatory for a pool of 250.000 $DLA tokens to 1000 winners.\n          &nbsp;\n      \n      \n        until 5 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OEG_DAO GUNX (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.\n          &nbsp;\n      \n      \n        until 5 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sarosism NFT (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       UltimateRanger (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SLEEP Airdrop\n      \n      \n        airdrop &nbsp;All Gleam fields mandatory. SLEEP is launching Airdrop Campaign with prize pool of 2,000,000 $SLEEP tokens, individual rewards up to 50k tokens per person.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CheeseApe Airdrop\n      \n      \n        airdrop &nbsp;New airdrop of $CSA Token for first 15K eligible users (first come first served). You are asked to complete social media tasks for the reward of 100 $ASC tokens each.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.IO Token Metrics Discount\n      \n      \n        airdrop &nbsp;All CEX.IO users can get 40% off on Token Metrics subscription if they deposit at least 50 USD. You need to pass KYC. Offer is valid until 13 Jul.\n          &nbsp;\n      \n      \n        40% off\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Atomix (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       KUKU on Latoken\n      \n      \n        airdrop &nbsp;A Gleam form that pays 3093 lucky winners. Pool 20k KUKU, which is about 10k USD. Tasks are just simple social media engagement, there's no trading activity required.\n          &nbsp;\n      \n      \n        until 29 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex Advcash Giveaway\n      \n      \n        airdrop &nbsp;Bitforex added the web wallet AdvCash as a way to buy crypto. To promote it, 500 AdvCash buyers who filled out the form will be randomly drawn to share 10k USDT. Users who use Advcash to purchase various cryptocurrencies such as BTC, ETH, USDT, XRP, LTC, BCH, and ZEC.\n          &nbsp;\n      \n      \n        until 30 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Xenum (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Just switch metamask to BSC, connect wallet and click Claim Tokens in the join link, no shilling required. No alerts for the contract on bscscan.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFT Powerup Airdrop\n      \n      \n        airdrop &nbsp;A Gleam giveaway with a big budget - 10k in USDT and extra NFTs. 600 winners will be drawn. Tasks are mandatory.\n          &nbsp;\n      \n      \n        until 30 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Signifty (ETH) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form, only 1 task is necessary to be eligible. SIGN tokens will be distributed as a reward.\n          &nbsp;\n      \n      \n        until 29 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RoboWorld NFT Airdrop\n      \n      \n        airdrop &nbsp;Leave your email address and fill tasks to receive an NFT box.\n          &nbsp;\n      \n      \n        until 27 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Armaldia Metaverse NFT Airdrop\n      \n      \n        airdrop &nbsp;30 winners will split almost 6k USD in tokens. Long Gleam form, prizes are NFTs. Armaldia is a play-to-earn MMO metaverse game.\n          &nbsp;\n      \n      \n        until 27 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Trophy.io escrowed bounty\n      \n      \n        airdrop &nbsp;Weekly bounty work on social media and blog platforms, submitted to manager via spreadsheet. Trophy is a garden variety DEX platform. Bounty manager Julerz.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PPLX (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form. If you complete basic tasks you get a chance to be drawn. If you complete all tasks, the reward is guaranteed.\n          &nbsp;\n      \n      \n        until 25 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Palmare Airdrop\n      \n      \n        airdrop &nbsp;Givelab that pays to 250 random participants from 7000 USD pool of sPal. It's a move to earn token.\n          &nbsp;\n      \n      \n        until 25 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DamnPunks NFT Airdrop\n      \n      \n        airdrop &nbsp;First 1000 NFT mints for free. Still some left!\n          &nbsp;\n      \n      \n        21 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Monopoly Millionaire Airdrop\n      \n      \n        airdrop &nbsp;Complete Gleam tasks which are mostly like and retweet and you wil enter the whitelist. Short form, 250 winners, each winner gets 10 USDT.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LMDAO Airdrop\n      \n      \n        airdrop &nbsp;Tokens of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Gleam form pays AVAX and GUNX tokens.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MG.Land Airdrop\n      \n      \n        airdrop &nbsp;Pool of 3000 USDT. It's a Gleam form to fill, plus: In order to receive your rewards, you must bring your NFT into MG.Land at least one time.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eldarune (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop worth 1M $ELDA tokens in pool, and some NFTs. Form has some mandatory tasks and extra (easy) daily tasks to rake more entries. 250 top users by entries get the reward, plus 250 randomly drawn ones.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Black Magic Network Airdrop\n      \n      \n        airdrop &nbsp;Black Magic is a GameFi DAO that runs a short Gleam airdrop with 150k token pool. 800 random winners get pool of 75.000 BMC Tokens, 200 winners from top referrals get the second half of the pool.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Gleam Bonus to new users\n      \n      \n        airdrop &nbsp;76K USD prize pool (max 380 USD each), first come first earns. Make an account and go to the Gleam form through the join link. All new users who sign up to the no-KYC outfit Phemex can grab up to 380 USD worth of bonuses. \n          &nbsp;\n      \n      \n        until 19 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.IO Trading Competition\n      \n      \n        airdrop &nbsp;Trade on any market and win up to $3,000 in cash prizes. You need to have an account and sign up for the event through the join link.\n          &nbsp;\n      \n      \n        until 20 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Gatechain Airdrop\n      \n      \n        airdrop &nbsp;A Gleam airdrop that pays for simple social tasks and has a referral bonus. 8K USD worth of tokens in the pool.\n          &nbsp;\n      \n      \n        until 18 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BeFittr Airdrop\n      \n      \n        airdrop &nbsp;Long Gleam form. Each participant will have a chance to get 400 $FIU reward, a total of 175 winners will be selected at random by the beFITTER team.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Kokoro Airdrop Whitelist\n      \n      \n        airdrop &nbsp;Gleam form where you follow and join to enter a whitelist. Prizes are Kokoro tokens and free mints.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LUCA Airdrop\n      \n      \n        airdrop &nbsp;Everyone who completes the tasks below will receive 50 $LUCA or even more. Simple tasks via Sweepwidget.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sushi Cats Fam X MegaEvolution\n      \n      \n        airdrop &nbsp;15 NFT freemint spots for a Gleam form.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cyberpunk Soldier NFT Giveaway\n      \n      \n        airdrop &nbsp;The artist storyteller_nft is giving away artworks for follow, like and RT on Twitter.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RocketVideo Airdrop\n      \n      \n        airdrop &nbsp;RocketVideo token RVT was listed on PancakeSwap. To promove it, there is a Gleam airdrop with a pool of 3000 RVT.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Shiba Avengers NFT Airdrop\n      \n      \n        airdrop &nbsp;Dog NFTs on BSC. The airdrop is a Gleam form where you follow and join. Top referrers will get up to 60 BUSD and NFTs, then 130 winners will get 2 BUSD each.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MythArt NFT Airdrop\n      \n      \n        airdrop &nbsp;All the participants who finish the 4 tasks will receive a MythArt Genesis OAT (Classic) NFT launched by Project Galaxy. 100 lucky participants will win a MythArt Genesis OAT (Golden). Rewards need to be claimed.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LOKON Airdrop\n      \n      \n        airdrop &nbsp;Follow and join LOKON's channels on social via Gleam to enter. Prizes are NFTs of land. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MOVERSE (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Pool 5 MM of MOVE tokens for simple Gleam form. Moverse is a Fitness Metaverse where you can earn for real on every move and have your experience personalized by AI technology. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DemonHellboy (BSC) Airdrop 1\n      \n      \n        airdrop &nbsp;A Lear2Earn project runs an airdrop with 5 billion DHB tokens pool. There are twitter tasks that change every day and you gain daily entries in the gleam form if you keep returning. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DigiFinex Airdrop\n      \n      \n        airdrop &nbsp;Digifinex is a crypto exchange that gives away some QUACK tokens for a Gleam form. Pool $500 worth of $QUACK for 100 winners. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ACY Finance Airdrop\n      \n      \n        airdrop &nbsp;Just ending in a few hours. A sweepwidget form with 1000$ worth of $GGR to 30 winners.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Provers Airdrop\n      \n      \n        airdrop &nbsp;Pool of 300k tokens - 1,000 random winners will get 300 $TKLE each. Simple Gleam tasks, but must complete all of them. TKLE is PROVERS' token, minted on Klaytn.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlackBear Finance Airdrop\n      \n      \n        airdrop &nbsp;Super simple Gleam tasks to get you in the pool of 15k USD. They are going live with a presale on June 22nd 22:22 UTC and the airdrop is to promote it.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cloudname NFT Domains Airdrop\n      \n      \n        airdrop &nbsp;Cloudname is a domain marketplace that specialises in premium domain names. To promote their new partnership with the Web3 registrar Unstoppable Domains, they are giving away 20 USD in credits for NFT domains. You just need to enter your email and redeem the coupon after they deliver it on 13th July.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Getaverse Telegram AMA\n      \n      \n        airdrop &nbsp;Join the Getaverse Telegram AMA, fill in the Gleam and ask good questions! 5000 eligible members who submit the fastest will be selected.\n          &nbsp;\n      \n      \n        until Jul 12\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFTFoundation (ETH) NFT Airdrop\n      \n      \n        airdrop &nbsp;Free NFT art for follow, like and 2x RT. They ask for ETH address into the comments.\n          &nbsp;\n      \n      \n        until 12 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Myria NFT Airdrop\n      \n      \n        airdrop &nbsp;Myria is a decentralised Ethereum Layer 2, built to empower digital assets, NFT and blockchain gaming. If you sign up, the account area will give you plenty options to collect free NFTs.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chains.com NFT Airdrop\n      \n      \n        airdrop &nbsp;Join Telegram, follow, like, retweet and that enters you into the airdrop whitelist for NFT prizes and 20 USDT bonus.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Deposit Drive\n      \n      \n        airdrop &nbsp;Phemex will reward top traders by volume in any spot markets with USDT prizes. To participate, deposit at least 100 USDT and trade it at least once on any spot market. You also need to submit your UID via a Google form - full terms in the join link.\n          &nbsp;\n      \n      \n        until 12 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Celestial Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form to enter this airdrop. 20 participants will be selected at random to share the 200 CMP. The remaining participants will share 300 CMP.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zemiter TRX Airdrop\n      \n      \n        airdrop &nbsp;Follow and join bunch of places via Gleam form. 4000 random winners will be drawn, each gets 15 TRX (total pool is 60k TRX). \n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ParaState NFT Airdrop\n      \n      \n        airdrop &nbsp;Gleam form to win NFTs. Not everyone gets rewarded - there will be 50 random winners and 50 top winners by points. \n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PlaySky Giveaway\n      \n      \n        airdrop &nbsp;Only 50 winners, each gets 10k WXG tokens. Simple social tasks on Twitter and Discord, report via Google form.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LBANK Airdrop\n      \n      \n        airdrop &nbsp;Airdrop from a staking outfit, 100 random winners get 4000 POX tokens. You need to like, follow and RT. Details via Google Form.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BitForex 5k USD in BTC bonus pool\n      \n      \n        airdrop &nbsp;The no-KYC exchange Bitforex runs a giveaway weekend (7 Jul - 10 Jul) during which it airdrops random rewards to people who deposit 500 USDT and complete Gleam tasks. Sign up and click the announcement on the homepage for terms.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoPirates NFT bounty whitelist\n      \n      \n        airdrop &nbsp;Google form to get a chance to receive NFTs and tokens of a new Play2Earn game.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MEME airdrop\n      \n      \n        airdrop &nbsp;Phase II of the airdrop. The 2.75 billion $MEME airdrop is distributed to the eligible wallet addresses that delegates a minimum of 5 $ATOM and $OSMO. In the first phase, tokens were dostributed to holders, now it's a bonus for staking.\n          &nbsp;\n      \n      \n        to stakers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LGO (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Korean NFT platform airdrops NFTs in a short Gleam form.\n          &nbsp;\n      \n      \n        until 9 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MyMeows NFT Airdrop\n      \n      \n        airdrop &nbsp;20k NFTs up for grabs in a Gleam form of 9 items. Project is on Binance Chain.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ethanim NFT (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Trias eco-project Ethanim has launched the first NFT airdrop. 500 winners of Gleam form get 500 Bastet NFT Kit and 250,000 tEPU. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Legend Front Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form to share the pool of 5 MM $LGT. Everyone gets 200 tokens, 30 random winners get 20k tokens!\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Coindar Airdrop\n      \n      \n        airdrop &nbsp;Everyone gets paid. The airdrop reward is 500 CNDY for simple social tasks. Organized by Sugarverse, together with Coindar, details in join link.\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       8Finance (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form. 200 top hunters by entries will get 2000 $8F tokens each and 50 random users will get 10 $BUSD each.\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Penguin Finance Airdrop\n      \n      \n        airdrop &nbsp;A two-week #PngNood party with a total of $7,500 pool and 10 Penguin Art NFTs up for grabs. This is a social media competition where you need to make photos. The final winners will be decided by PNGART holders. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zappy NFT Giveaway\n      \n      \n        airdrop &nbsp;Gleam form for NFT prizes: 5 VIP PASS (Granting 2 x Whitelists, 1 x Free Mint, Zappy Alpha Access, Events Access),  20 Whitelist spots, and $500 USDT.\n          &nbsp;\n      \n      \n        until 8 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Royal Raffle (SOL) Giveaway\n      \n      \n        airdrop &nbsp;The first 10k responses to the G Form enter the draw, and there will be 1000 winners who get 100 $RFFL each (10 USD). The simplest social media tasks.\n          &nbsp;\n      \n      \n        since 27 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BabyDoge Airdrop\n      \n      \n        airdrop &nbsp;First come first earns airdrop of BABYDOGE token on Twitter. Retweets and stuff, fully on Twitter. The coin trades on Bitforex, you'll be able to sell.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex NEAR event\n      \n      \n        airdrop &nbsp;Phemex runs a 5-question quiz where if you get all Qs right you get whitelisted for a draw to get reward of 1000 NEAR tokens. Details in the join link. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metapool (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Google form that pays to 1000 random winners with $20K overall prize pool for super simple social tasks.\n          &nbsp;\n      \n      \n        until 6 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex AMA to win MBD\n      \n      \n        airdrop &nbsp;Bitforex runs a Telegram AMA with MBD Financials. Join https://t.me/BitForexEnglish for the event and ask questions with #UID after AMA starts. 10 best questions will get rewarded 20,000 MBD each.\n          &nbsp;\n      \n      \n        1 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex Trade To Win\n      \n      \n        airdrop &nbsp;Everyone gets paid. Top 20 net buyers in selected markets will share 6000 USDT in prizes. Every net buyer on (other) selected markets gets rewarded with a share of 5000 USDT. Extra rewards to those who will buy the lowest dip on BTC, ETH and XRP Tether spot markets. Bitforex does not require KYC.\n          &nbsp;\n      \n      \n        27 Jun - 4 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ATOKEN 2 weeks bounty\n      \n      \n        airdrop &nbsp;Token that already trades on PancakeSwap runs a promo bounty for Twitter, Telegram and Discord. Needs you to post a proof of auth to Bitcointalk.\n          &nbsp;\n      \n      \n        until 4 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ULTRATRADE Sweepstake\n      \n      \n        airdrop &nbsp;Ultratrade public testnet launched and to promote it, there is a gleam airdrop to win 2k USD worth of ALGO. 106 random winners for simple tasks. \n          &nbsp;\n      \n      \n        until 2 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Playsky (BSC) Giveaway\n      \n      \n        airdrop &nbsp;$2000 sPAL giveaway where 100 random people will get the reward for simple social media tasks in a Google form.\n          &nbsp;\n      \n      \n        until 2 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eternal World Airdrop\n      \n      \n        airdrop &nbsp;you need to complete all tasks in a Gleam form to take part. Drawn users will get Blind Box rewards.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IoTeX via Coinhub Airdrop\n      \n      \n        airdrop &nbsp;Gleam form where everyone gets to share the prize pool. The pool os $2500 IOTX. You need to download the Coinhub wallet to participate.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BChat Airdrop\n      \n      \n        airdrop &nbsp;You need to download the BChat Web3 Messenger and complete a bunch of Gleam tasks to enter. Everyone who completes all tasks gets 50 BDX. Additional fat bonuses promised for shilling.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       STEP launch (BSC) airdrop\n      \n      \n        airdrop &nbsp;Total Rewards: 50.000 $STL for 1000 users (Random). You just need to join with BEP20 address and follow a few accounts.\n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Happy Rise HARI Airdrop\n      \n      \n        airdrop &nbsp;Happy Rise is a new gambling platform on the BSC. Prize pool is 50,000 USD worth in $HARI to 10k random participants of the Gleam form. \n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metawear (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Around 10 Million $WEAR (more than $20,000) Will be released at this event to randomly drawn Gleam participants.\n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Holonus AMA Airdrop\n      \n      \n        airdrop &nbsp;Holonus is hosting an AMA on Telegram on 28 Jun 4PM UTC+8. To promote the event, they are adding an airdrop to it. 25 lucky winners will get 500 USD worth of tokens. See pinned message in the Telegram linked.\n          &nbsp;\n      \n      \n        on 28 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       POZ Airdrop on Twitter\n      \n      \n        airdrop &nbsp;Tokens of a P2E game Pozzle Planet. Like, RT, follow 2 accounts and comment your ETH address to take part in the 3000 $POZ airdrop. \n          &nbsp;\n      \n      \n        28 Jun - 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       bWorker Airdrop\n      \n      \n        airdrop &nbsp;Telegram airdrop that gives 4 BWP (4 USD) to 4000 random participants. You just need to follow a few accounts. It's a pretty generic looking farming scheme though.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Indigo protocol second airdrop round\n      \n      \n        airdrop &nbsp;Total of 175 000 INDY tokens is earmarked to be allocated to help support Indigo DAO Governance. These INDY tokens are planned to be distributed to wallets that are staked with a pool that’s part of the Cardano Single Pool Alliance (CSPA). List of all qualified pools in the join link.\n          &nbsp;\n      \n      \n        to stakers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoMeda NFT Airdrops\n      \n      \n        airdrop &nbsp;Cryptomeda distributes 20 NFT game characters as a weekly lottery to stakers on their network. The current lottery character is always published under 'lottery of the week'.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cactus exchange airdrop\n      \n      \n        airdrop &nbsp;Pays up tp to 48 CACTT (~$50) for following a bunch of things or 1,200 CACTT (~$1,250) for the top 100 referrers. cactus exchange is a new DEX and security audit is ongoing but not yet finished, so don't use your main wallet.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chains.com vCHA Giveaway\n      \n      \n        airdrop &nbsp;Sign up at the NFT launchpad / exchange at chains.com and instantly get 200k vCHA tokens. You gain more tokens for tasks once you've signed up - up to 1 million vCHA.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LocalCryptos giveaway 250 USD Amazon gift card\n      \n      \n        airdrop &nbsp;LocalCryptos are asking for user feedback via a Typeform. Responding enters you into a draw for 250 USD gift cards. You must have an account at LocalCryptos - make one here if you don't.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Slingshot Finance NFT airdrop\n      \n      \n        airdrop &nbsp;Slingshot finance is a new Web3 platform that airdrops NFTs and tokens to people for referrals.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitget Giveaway\n      \n      \n        airdrop &nbsp;Bitget listed AFK token in their innovation zone. If you now deposit over 3.2k tokens, you will receive 300 AFK bonus.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stacked Waitlist $25 Gift\n      \n      \n        airdrop &nbsp;Join the waitlist at Stacked Portfolio platform and get $25 worth of tokens to invest in crypto once the platform launches.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BitMart Welcome Bonus (up to 3k USD)\n      \n      \n        airdrop &nbsp;All subject to a lucky draw. There's a welcome bonus draw of 500 USD, up to 1500 USD for your first deposit and a trading bonus afterwards.\n          &nbsp;\n      \n      \n        3 tasks\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Wombat Exchange DEX airdrops\n      \n      \n        airdrop &nbsp;The Binance launchpad supported DEX called Wombat Exchange is incentivizing users to join via $WOM airdrops. According to their tweets, all LPs who join the beta app are eligible for airdrop.\n          &nbsp;\n      \n      \n        to farmers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Proof of Swap (BSC) DEX Airdrop\n      \n      \n        airdrop &nbsp;Complete Twitter tasks via Google form to take part in a huge $POS airdrop. Over 20k random winners, total pool 100k POS. Proof of Swap is a Brazilian DEX, all their accounts are brand new, DYOR.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Binance.us removed spot fees for BTCUSD\n      \n      \n        airdrop &nbsp;KYCd users can now trade Bitcoin with zero fees on Binance US.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex REVO Workshop\n      \n      \n        airdrop &nbsp;Take a Revo themed quiz at Phemex to get a share of 5000 REVO (~6000 USD) pool. If you answer all 5 questions right, you qualify for the reward. There is a first-come pool and then a larger pool for all participants who qualify. Join link takes you to the promo details.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Telegram Promo\n      \n      \n        airdrop &nbsp;Join Phemex on Telegram and enter via a Gleam form. If you get referrals you gain a chance to get a 200 USD prize.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LOOKI (BSC) airdrop\n      \n      \n        airdrop &nbsp;Complete tasks in Google form to get paid. Everyone eligible gets paid 1000 LOOKI (10 USD) plus there is a small referral bonus.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Coinhub and MSC Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form that enters you to the draw. The reward is 200 $MSC for each of the 1250 lucky users.\n          &nbsp;\n      \n      \n        until 28 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CoinEx (TRX) Airdrop\n      \n      \n        airdrop &nbsp;Follow a bunch of accounts via Gleam to get a chance in the draw. It's 2000 people who will get paid 15 TRX each.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       REVO Airdrop\n      \n      \n        airdrop &nbsp;Complete simple social tasks and submit via Google form. 100 winners will share $4000 REVO. You need to make an account on LBank exchange to receive the airdrop.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AvaxPad Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop with referral bonus. 2000 Random Lucky hunters will get reward 8 USD in 4 $APA.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PAXO Finance Testnet Bounty\n      \n      \n        airdrop &nbsp;PAXO is a Polygon app that is doing a testnet run of its automated market making solution. To incentivize people to join, they will pay out 200k tokens to 200 random users who join the testnet and provide feedback.\n          &nbsp;\n      \n      \n        until 27 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Green Uni Network Airdrop\n      \n      \n        airdrop &nbsp;First come first earns, this airdrop pays to 10k first users. Each will earn ~22 USD for a few tasks in Google Form.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JSC token (SOL) Airdrop\n      \n      \n        airdrop &nbsp;First 10K users who complete social tasks via Google Form will get the airdrop of the new meme token on Solana. Pool is 300K tokens.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JAPE (SPL) airdrop\n      \n      \n        airdrop &nbsp;First in first served capped airdrop. The NFT art production JAPE gives 2 USD (in USDC) to the first 5k participants. It's just following and retweeting.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sunrise Gaming Airdrop\n      \n      \n        airdrop &nbsp;Promises 66 USD per winner but it's a lucky draw to only 15 users. You just need to follow and view a bunch of things via Gleam.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hyperfinance (BSC) Airdrop\n      \n      \n        airdrop &nbsp;The project, hyperfinance.quest, is a defi charity. Google form airdrop of CHRT token to pay 70 USD worth - use referral ID @shoptawk. Token is not listed on exchanges yet but will be on Jun 20 on MEXC.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GloDAO Airdrop\n      \n      \n        airdrop &nbsp;Airdrop with a big referral bonus. There is a bunch of missions to choose from inthe join lik. In each, there are 100-1000 prizes, pools usually around 10k USD worth. Twitter-based tasks.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Galaxy Project Airdrop\n      \n      \n        airdrop &nbsp;Simple gleam form to follow 4 accounts, pays to everyone. You get small NFT-based prize, no tokens.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NEST (BSC) Airdrop\n      \n      \n        airdrop &nbsp;NEST Protocol is a decentralized price oracle network deployed on ETH, MATIC, BNB and KCC. They run a Telegram airdrop that pays for following a few things.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chee Finance Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that pays $CHEE tokens for three simple social tasks.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Twitter SOL Airdrop\n      \n      \n        airdrop &nbsp;Follow the linked account, like, retweet and tag 3 people. Within 24 hours, 2 random winners will get 1 SOL each.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       B4REAL (MATIC) Giveaway\n      \n      \n        airdrop &nbsp;3000 random participants from a Gleam form get paid. Pool worth 50k USD, smallest prize is 200 USD. You just need to visit a few things and retweet.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stumble Finance Airdrop\n      \n      \n        airdrop &nbsp;The pool for this campaign is 1 MM $STB, total worth of 50k USD. It's a Google Form that wants you to do a few tasks on Twitter. Distributes one day after the airdrop closes.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex KAVA coin flip\n      \n      \n        airdrop &nbsp;Phemex has listed KAVAUSD, and they are launching Coin Flip with KAVAUSD to promote it. It's a guess&amp;win event! Guess the price direction of a perp contract to win.\n          &nbsp;\n      \n      \n        until 16 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       StepApp Metaverse Airdrop\n      \n      \n        airdrop &nbsp;FitFi airdrop. The first project built on this protocol is a gamified step app. You and your metaverse avatar advance together. \n          &nbsp;\n      \n      \n        until 15 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AscendEx Lucky Draw\n      \n      \n        airdrop &nbsp;Sign up for the event from the join link and make trading volume of at least 500 USDT to be eligible to join the lucky draw. 200 users will be chosen and each will receive 30 USDT worth. The remaining users (except those 200) will have a chance to equally share in a 4,000 USDT prize pool.\n          &nbsp;\n      \n      \n        until 15 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LATOKEN CVSHOT Airdrop and Bonus\n      \n      \n        airdrop &nbsp;Complete tasks and get 0.014 CVSHOT tokens and spread great technology. It’s free, very easy, and powerful.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Math Wallet Giveaway\n      \n      \n        airdrop &nbsp;Math Wallet launches the support of Unstoppable Domains. They promote it by giving away $200,000 Unstoppable Domains credits. Unstoppable Domains is building Decentralized Digital Identities for the world. Use NFT domains as your: Universal username across apps and websites, Website URL, Payment address for wallets etc\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bittorent Discord Airdrop\n      \n      \n        airdrop &nbsp;Tron DAO community is running a giveaway with a prize pool of 800,000,000 BTT for all participants. To be eligible for the airdrop, join the Discord via gleam, do 2 twitter tasks and share your TRX20 address. Additional giveaway in Discord.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex offers 3 new tokens at a discount\n      \n      \n        airdrop &nbsp;Subscription prices are released for Gays Inu (LGBTQ), WealthSecrets (WSC) and Ecoinomy (ECM). Sign up at Bitforex and head over to the Announcements.\n          &nbsp;\n      \n      \n        10 Jun onwards\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Grid Bounty\n      \n      \n        airdrop &nbsp;Bounty with 10k USDT and 50k GRN token pool for social media posting and blogging. Token runs on a modified PoS algo (POS2). Needs bitcointalk proof of registration.\n          &nbsp;\n      \n      \n        until 18 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Armaldia Airdrop\n      \n      \n        airdrop &nbsp;Lucky winners get rewards from a Gleam form. The total of 25 participants will get 60 USDT each and 10 participants will get 50 USDT each. Rest of the winners will get NFTs that encode a plot of land.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Haileys NFT TRX Airdrop\n      \n      \n        airdrop &nbsp;Pool of 30k TRX to 2k random winners in a Gleam form. You just have to follow a bunch of accounts.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Yobit FUSD Airdrop (BSC)\n      \n      \n        airdrop &nbsp;YoBit gives away up to 4700 $FUSD (~$100) to each new user who signs up and completes a few simple tasks. Signup without KYC gives 300 $FUSD, more rewards come for shilling on Twitter or trading. More info in the join link.\n          &nbsp;\n      \n      \n        until 10 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AREA Metaverse airdrop (100k pool)\n      \n      \n        airdrop &nbsp;AREA tokens from a pool of 100k worth are airdropped to 2000 users in a Gleam form. The project is developing a technology for virtual land deals in NFT.\n          &nbsp;\n      \n      \n        until 10 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TagSpace USDT airdrop\n      \n      \n        airdrop &nbsp;Complete tasks in Gleam form to get a chance on 20 USDT via TRX. It's $20 for 100 randomly picked participants and shill bonus. \n          &nbsp;\n      \n      \n        until 11 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Platon Bitkeep Airdrop\n      \n      \n        airdrop &nbsp;Airdrop organized by PlatON &amp; BitKeep. They provide $2,500 token pool for this event.Your airdrop address must be a BitKeep wallet PlatON address.\n          &nbsp;\n      \n      \n        until 11 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MARSH airdrop to stakers\n      \n      \n        airdrop &nbsp;Unmarshal runs a native staking contract. To promote it, the contract is set up to airdrop extra reward to all stakers. The pool is 500k $MARSH (~$140k). The promo runs for 90 days but the staking lock is only 7 days at a time.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoCitizen bounty (CCASH)\n      \n      \n        airdrop &nbsp;CCASH runs classic marketing bounty with a pool of 15k BUSD. Signatures, Twitch, Insta, Twitter. Backed by OKEX and KuCoin.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Light DeFi &amp; BitKeep Airdrop\n      \n      \n        airdrop &nbsp;You need a Bitkeep address to participate. The pool is 3.5k $LIGHT tokens. Other than that it's just following a bunch of accounts.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RacersUtopia (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A P2E game that airdrops tokens for promo. Reward 100 USD worth for 1000 winners, and shill promo.\n          &nbsp;\n      \n      \n        until 9 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       EGO airdrop (20k ADA pool)\n      \n      \n        airdrop &nbsp;EGO platform airdrop is a simple social airdrop through Hyperfyre form (similar to Gleam). You need to follow a bunch of accounts. Top users will get 150 ADA each, the rest is randomly drawn. Not everyone gets paid - it is a draw - but the pool is 20k ADA.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Outlanders NFT airdrop (1000 USD worth)\n      \n      \n        airdrop &nbsp;A Gleam form where you have a chance to win 1000 USD worth of NFT land. It's 500 winners for simple tasks and follows.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Neopharm\n      \n      \n        airdrop &nbsp;Pool of 500,000 NPH (~10k USD) and 25 NFTs goes to 250+25 lucky giveaway participants. Simple tasks via Gleam.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Kuwallet Waitlist\n      \n      \n        airdrop &nbsp;KuCoin's Kuwallet offers early access with promos for siging up for the waitlist with your email.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Optimism (OP) listings\n      \n      \n        airdrop &nbsp;The Optimism token was listed at FTX.com (International) in spot and perp on 1 Jun. This is just a note that if you can't trade there, the no KYC exchange Bitforex listed OP too on the same day.\n          &nbsp;\n      \n      \n        1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WhisperMSG Escrowed Bounty\n      \n      \n        airdrop &nbsp;50k USD pool in $VOLR with escrow. Shilling on YouTube, Twitter, articles. Has minimum follower amount to participate.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       UnitedCrowd (BSC) Bounty\n      \n      \n        airdrop &nbsp;50k USD pool of tokens mostly for Bitcointalk (Twitter gets 20% of allocation). The token belongs to a fintech app creating an ecosystem.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       New Bitforex DeFi Pool\n      \n      \n        airdrop &nbsp;Use referral code 2630874. The non KYC exchange Bitforex announced a new round of DeFi Pool. The yield-generating pool will be launched on 27th May 2022 where 30-day and 60-day fixed-term locked savings products will be available for BTC, ETH and USDT. Annual rates are up to 13% for 60-day USDT pool.\n          &nbsp;\n      \n      \n        launch May 27\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Deposit Dazzle (up to 4500 USD, everyone gets paid)\n      \n      \n        airdrop &nbsp;The Deposit Dazzle is back and this time with double the reward. The rules are simple - there is a bonus for everyone who deposits at least 0.005 BTC and at least 200 USDT and move each into their trading account wallet. No trading required, but your bonus will be lower if you withdraw before the distribution. Bonus is proportional to the amount you deposit - more in the join link.\n          &nbsp;\n      \n      \n        until 1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Monaco Weekend at ByBit\n      \n      \n        airdrop &nbsp;Gleam form where 50 lucky users will win an equal share of Bybit's $5,000 BIT prize pool. You need to be a registered user at ByBit.\n          &nbsp;\n      \n      \n        until May 31\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       KaraStar Airdrop\n      \n      \n        airdrop &nbsp;KaraStar giveaway paus 1000 KARA tokens for three simple follows in a Gleam form.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FANTO Airdrop (1000 FTN each)\n      \n      \n        airdrop &nbsp;The new social token of South Korean platform FANTO is running a Gleam airdrop for almost nothing. You just need a wallet address of Kaikas wallet. It is a draw though, not everybody gets paid.\n          &nbsp;\n      \n      \n        until 1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.io 3k USD Giveaway\n      \n      \n        airdrop &nbsp;CEX is running a Gleam giveaway with prizes between 100-500 USD per winner (randomly drawn, no referral bonus). CEX.io is one of the very tightly regulated crypto platforms. They offer a staking program which can earn up to 23% APY on coins like KAVA.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Piratera (BSC) Airdrop\n      \n      \n        airdrop &nbsp;An easy Gleam airdrop. Reward is 50 NFT boxes for following a couple of accounts.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MonsterCity MCG Airdrop\n      \n      \n        airdrop &nbsp;The P2E game MonsterCity wants you to follow them on social. The payout is 10USD up to the total of 10k participants.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Empireland airdrop (750k USD pool)\n      \n      \n        airdrop &nbsp;Empireland is a new NFT game built on Fantom Chain. 30,000,000 EPL tokens (equivalent of $750,000) is allocated for the airdrop event. You need to conteibute to community on social or in game, or you need to hold their NFTs to be eligible.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Koi Metaverse Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that just wants you to join the Telegram group. you'll be able to claim a badge once the campaign ends, which will qualify you for a $KOI airdrop.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex (all get paid) win 1 BTC by trading 10 USD of BTC\n      \n      \n        airdrop &nbsp;As another way to celebrate the Bitcoin Pizza day, Bitforex runs a lucky draw on all registered users who will net 10 USD or more traded volume on BTCUSDt market on the non KYC spot exchange. There's no form needed to fill, just make the trade. All participants get a 10 USD bonus for the perp market, one lucky winner will get 1 BTC.\n          &nbsp;\n      \n      \n        🍕 22 May - 29 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lezme Airdrop\n      \n      \n        airdrop &nbsp;A new metaverse project that promises to airdrop tokens via a Telegram bot. Pool of 10k USD worth goes to 2k random users.\n          &nbsp;\n      \n      \n        until 30 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Playgrid Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop and referral bonus that gives rewards in collectibles.\n          &nbsp;\n      \n      \n        until 30 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Terra airdrop for the revival\n      \n      \n        airdrop &nbsp;The Terra revival plan officially passed. The old Terra chain will be discarded but holders of LUNA and UST will receive an airdrop of the new chain, which will have different tokenomics and fixed supply. More here. FTX and Bitforex fully support the airdrop to LUNA and UST holders.\n          &nbsp;\n      \n      \n        snapshot May 26th\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Independent Reserve lists SOL\n      \n      \n        airdrop &nbsp;The Aussie exchange Independent Reserve lists Solana as a spot market for AUD, NZD, SGD and USD. The coin was previously available for OTC only. As always with new listings, there is the introductory fee for SOL of 0.2% for two weeks. That makes it until 31 May.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Choise Airdrop\n      \n      \n        airdrop &nbsp;Choise gives away 3% of the CHO total supply to people who install the Crypterium app. Ongoing airdrops for CHO holders will follow. Choise is a MetaFi (CeFi/DeFi) ecosystem based on Crypterium CeFi solutions and the Charism DeFi protocol.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DecentraWorld Early Adopters Airdrop\n      \n      \n        airdrop &nbsp;DeWo is going through an IKO (initial kommunity offering) right now. Early adopters will get extra token airdrop. \n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ravendex bounty and airdrop\n      \n      \n        airdrop &nbsp;Pool of $15k worth of DEX tokens of a Cardano ecosystem. Requires reports, checked weekly. Twitter, Telegram, YT, blogs and an extra airdrop to token holders.\n          &nbsp;\n      \n      \n        until 3 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BicycleFi Airdrop\n      \n      \n        airdrop &nbsp;A Telegram bot that wants you to follow a few things. Reward is 300 BCF without referrals. BicycleFi is a Web3 lifestyle app with Social-Fi and Game-Fi elements. Users equipped with NFT Bicycles - walk, jog or run outdoors to earn tokens.\n          &nbsp;\n      \n      \n        until 28 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Technoland Airdrop\n      \n      \n        airdrop &nbsp;The pool is 5000 USD in $TCH tokens for a Gleam form. Tokens go to 200 winners and there will be an extra bonus reward.  TechnoLAND is a project where you can reach all electronic devices by shopping on the Metaverse.\n          &nbsp;\n      \n      \n        until 28 May\n      \n      \n        (link)\n      \n    \n    \n  \n\n",
+      content: "\n2022\n\n\n  \n    \n      \n        2022 🔴 Inactive Past Crypto Airdrops, Bounties or Exchange Promos 2022\n      \n    \n    \n    \n      \n       MMMM Airdrop\n      \n      \n        airdrop &nbsp;A classic Gleam for NFT free mint and random giveaway. \n          &nbsp;\n      \n      \n        until 10 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FomoIn First Come Airdrop\n      \n      \n        airdrop &nbsp;This Gleam requires you to download an app and register in it, you need to submit your UID to qualify. 50 MM $BACON tokens in pool, that is 5k tokens per user, first come first served.\n          &nbsp;\n      \n      \n        until 10 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FlashPlace Airdrop\n      \n      \n        airdrop &nbsp;Flash Marketplace runs this New Year Gleam with pool of 730k $FLM. Tokens are getting listed on CoinTiger this January. Random 3500 users get paid, and top shills too.\n          &nbsp;\n      \n      \n        until 10 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Tegro Airdrop\n      \n      \n        airdrop &nbsp;Gleam with 10k USD worth of $TGR in the pool. 450 winners in total, more entries better chaces.\n          &nbsp;\n      \n      \n        until 8 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Nirvana First Come Airdrop\n      \n      \n        airdrop &nbsp;This airdrop rewards $NU tokens that were listed on Jan 3rd. The Gleam pays first 3000 users and 1000 random winners.\n          &nbsp;\n      \n      \n        until 6 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AstraNova Airdrop\n      \n      \n        airdrop &nbsp;This Gleam rewards $RVV tokens (1MM) plus NFTs and whitelist spots, total pool worth about 10k USD. Classic Gleam otherwise. There are shill rewards, first come rewards and a lot of random rewards.\n          &nbsp;\n      \n      \n        until 6 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Web3 Camp Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam with a small pool of 500 BUSD. Only 40 winners, each takes 10-20 BUSD.\n          &nbsp;\n      \n      \n        until 6 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Salazar Airdrop\n      \n      \n        airdrop &nbsp;A Givelab event, short form but small pool - only 3K USD worth. That is 250,000 $SZR between 100 random winners.\n          &nbsp;\n      \n      \n        until 6 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Adventure League Airdrop\n      \n      \n        airdrop &nbsp;Only 20 random winners, plus top shills get paid in this Gleam. Total pool of 2500 USD worth but the low numbers of winners makes it worth it.\n          &nbsp;\n      \n      \n        until 5 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JAGO Airdrop II.\n      \n      \n        airdrop &nbsp;A quick Gleam event, open for only 5 days total. 50 random winners get 100 $JAGO each.\n          &nbsp;\n      \n      \n        until 5 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JTHC Airdrop\n      \n      \n        airdrop &nbsp;Pool of 100k $JTHC tokens which is 1% of total supply. Only one lucky winner here! \n          &nbsp;\n      \n      \n        until 5 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Retroactive Airdrop for holders\n      \n      \n        airdrop &nbsp;This is an old-school airdrop for people who hold ROSN on Jan 4th (and who complete Gleam). Pool is 16k USD in $WEEE. Read the conditions!\n          &nbsp;\n      \n      \n        on 4 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stelsi Airdrop 2\n      \n      \n        airdrop &nbsp;Total 10k $TRX goes among 200 random winners in this Gleam, on top of that everyone who participates will be whitelisted for later events. \n          &nbsp;\n      \n      \n        until 3 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex Deposit Bonus\n      \n      \n        airdrop &nbsp;The no-KYC exchange Bitforex runs a new user deposit promo. New Users Deposit to Share $5,000 in Presents and Rare New Year NFTs.\n          &nbsp;\n      \n      \n        until 2 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       INERY Airdrop\n      \n      \n        airdrop &nbsp;Super small event, and only four Gleam tasks. 100 lucky hunters get 50 $INR each.\n          &nbsp;\n      \n      \n        until 2 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Prema Airdrop\n      \n      \n        airdrop &nbsp;This is a short year-end Gleam that airdrops 100k $PRMX tokens between 500 winners. There are some extra Twitter actions you need to take.\n          &nbsp;\n      \n      \n        until 2 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Aniwar Airdrop 1\n      \n      \n        airdrop &nbsp;A long Gleam with a pool of 10 MM $ANIW tokens. Shills get up to 200k $ANIW in reward but random winners get each 7500 $ANIW.\n          &nbsp;\n      \n      \n        until 2 Jan\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WhiteBIT Trading Competition\n      \n      \n        airdrop &nbsp;The no-KYC exchange WhiteBIT has launched an ETH perp trading competition with 50k USDT in the pool. The traders rank based on their USDT trading volume on the ETH perp, washtrading gets you disqualified. Rules in the join link (below the leaderboard).\n          &nbsp;\n      \n      \n        until 27 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Frogmen (SOL) Airdrop\n      \n      \n        airdrop &nbsp;This short Gleam has a pool of 10 MM $FGM tokens to be split between first 10k participants. Project is a NFT platform with 0 royalties and NFT staking, if you think that's a good idea. \n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Digifinex NFT Airdrop\n      \n      \n        airdrop &nbsp;Digifinex airdrops NFT mystery boxes in this short Gleam.\n          &nbsp;\n      \n      \n        until 27 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CougarSwap Giveaway\n      \n      \n        airdrop &nbsp;Complete the two Gleam tasks to have a chance at 200 USD worth in $CGS tokens. Only 4 random winners but a good reward.\n          &nbsp;\n      \n      \n        until 24 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Gudetama Airdrop\n      \n      \n        airdrop &nbsp;Gleam with 1 MM tokens to split between 10 winners. Distribution the day after airdrop ends.\n          &nbsp;\n      \n      \n        until 24 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SecondLive Airdrop\n      \n      \n        airdrop &nbsp;A Christmas Gleam that has a pool of 20k $BEAN. Read the requirements - you need to fill a quiz on 21st Dec too. Extra rewards if you mint on GALXE. \n          &nbsp;\n      \n      \n        until 24 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Snowball Airdrop\n      \n      \n        airdrop &nbsp;Gleam that ends on Christmas and splits 1000 USDT between 200 winners. Read the requirements - you need to fill a quiz on 23rd Dec too. Extra rewards if you mint on GALXE.\n          &nbsp;\n      \n      \n        until 24 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SpaceX Airdrop\n      \n      \n        airdrop &nbsp;This is a Gleam that pays to 270 top winners out of a pool of 40k $SX tokens. The 1st top winners also gets an extra NFT. Token trades on Uniswap.\n          &nbsp;\n      \n      \n        until 24 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       C2WORLD Airdrop\n      \n      \n        airdrop &nbsp;A Gleam that has a small pool of 500 USD in $C2G. Pool goes to 80 random winners (5 USD worth each) and 10 top shills (10 USD each).\n          &nbsp;\n      \n      \n        until 25 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PIAS Airdrop\n      \n      \n        airdrop &nbsp;A super short Gleam that rewards 500 random winners to split 5000 $PIAS.\n          &nbsp;\n      \n      \n        until 23 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RadKET Airdrop\n      \n      \n        airdrop &nbsp;3000 First-come plus 3000 random participants get paid, each person 30 $RDK. The Gleam has 180K $RDK in pool.\n          &nbsp;\n      \n      \n        until 19 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cross the Ages Airdrop\n      \n      \n        airdrop &nbsp;This Gleam is run by a GameFi project and drops 10k USD worth of tokens. There are some daily tasks to rake up your entries.\n          &nbsp;\n      \n      \n        until 19 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Transient Airdrop\n      \n      \n        airdrop &nbsp;Last of the World Cup prediction promos. The Gleam airdrops 100 $TSCT to 200 winners. There is extra bonus for live prediction during matches.\n          &nbsp;\n      \n      \n        until 17 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metafluence Airdrop\n      \n      \n        airdrop &nbsp;Gleam that rewards NFT land plots and Tether rewards. Shills get 25-100 USDT each, 4990 random winners get 10 USDT each.\n          &nbsp;\n      \n      \n        until 18 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NEOPIN Airdrop\n      \n      \n        airdrop &nbsp;Very short Gleam that drops 1000 $NPT tokens and some whitelist spots. NPT is a token used for wagering in an online race game.\n          &nbsp;\n      \n      \n        until 16 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Comearth Airdrop\n      \n      \n        airdrop &nbsp;A Gleam to promote a collab between COMEARTH and a metaverse ecosystem HyperMove. Pays 50k $HMOVE to 200 random winners, and then some NFTs (in game assets for P2E).\n          &nbsp;\n      \n      \n        until 11 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OKEYAPPS Airdrop\n      \n      \n        airdrop &nbsp;This Gleam campaign has an optional daily work for extra points. Pool is 60 MM $OKEY between 500 random users. Top shills get a bonus. Pays in a few weeks after the event end.\n          &nbsp;\n      \n      \n        until 18 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SLS (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Here is a Gleam with a good pool - 100,000 tokens which is 15K USD. They want you to do the Gleam form plus comment on Twitter and visit a few places.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Grand Xenna Airdrop\n      \n      \n        airdrop &nbsp;Only 16 lucky winners get a reward but the pool is 4000 USD worth. The top reward is 1K worth, the rest 200 USD worth, all in $SIDUS tokens. Some extra NFTs in the pool.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lady Bug Chain Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 500 MM $LADY tokens. The payout goes between 400 randos and 20 top shills.\n          &nbsp;\n      \n      \n        until 15 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BRAVO (BSC) Airdrop\n      \n      \n        airdrop &nbsp;This is a Gleam with a good pool - 1000 BUSD, 250k $BRV and some NFTs. Over 1000 random users get rewarded. Top shills get between 50-300 BUSD each.\n          &nbsp;\n      \n      \n        just ending!\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NYXS World Cup Airdrop\n      \n      \n        airdrop &nbsp;Gleam form that rewards 100 random users with up to 2K USD worth of tokens. The total pool is worth over 20k USD, the lowest prizes are worth 70 USD.\n          &nbsp;\n      \n      \n        until 13 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Roseon x Gami Airdrop\n      \n      \n        airdrop &nbsp;This is a long but easy Gleam that rewards game slots in an upcoming play-to-earn. You can be one of the first users this way.\n          &nbsp;\n      \n      \n        until 14 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ocean Park Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 20 MM tokens (on Aptos) that are worth 1k USD. The reward per person is only 5-10 USD worth, there will be a lot of winners.\n          &nbsp;\n      \n      \n        until 9 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MIR Airdrop\n      \n      \n        airdrop &nbsp;MIR token, which trades on Bitforex or Pancakeswap, runs an airdrop where they giveaway 1 MM tokens. Reward between 200-2000 MIR per person.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CelebVerse Airdrop\n      \n      \n        airdrop &nbsp;A small pool of 3k USD for 10 winners in this Gleam.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FIFA Worldcup NFT Giveaway\n      \n      \n        airdrop &nbsp;This is a quick event where you follow a bunch of stuff for chance to win an NFT.\n          &nbsp;\n      \n      \n        until 10 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TWAKE Airdrop\n      \n      \n        airdrop &nbsp;This is a partnership airdrop that rewards tokens of a norse mythology game. Pool is worth 1600 USD, reward per person 15-20 USD worth.\n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Yootshub NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that rewards some NFTs and some WL spots. Only about 20 winners.\n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SynFutures NFT Airdrop\n      \n      \n        airdrop &nbsp;Fill the short Gleam to get a chan ce at one of the 500 NFTs. \n          &nbsp;\n      \n      \n        until 11 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       XMetaverse Pro Airdrop\n      \n      \n        airdrop &nbsp;Everyone gets paid here. Quick Gleam that has a pool of 3k USDT and 300k $XMETA tokens and a participation reward. The token pool goes to 20k lucky winners, the USDT mostly to top shills. Other than that, each participant who fills the full form gets 15 USD worth of $XMETA.\n          &nbsp;\n      \n      \n        until 9 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AkiraOx x Meadow Airdrop\n      \n      \n        airdrop &nbsp;This is a Sui airdrop, Meadow is a launchpad for their tokens. The airdrop pays 50 roles and some 5 USDT rewards to random winners.\n          &nbsp;\n      \n      \n        until 7 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Medieval Empires Airdrop\n      \n      \n        airdrop &nbsp;Halloween Gleam with 1000 USD pool. Only five winners - this one pays well!\n          &nbsp;\n      \n      \n        until 2 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TOMS Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has 3k USD worth of tokens in pool and rewards only 30 winners - the reward per winner is very good, 100 USD. Tokens trade on Huobi and Gate.io.\n          &nbsp;\n      \n      \n        until 6 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TrustPad Airdrop\n      \n      \n        airdrop &nbsp;A short and easy Gleam that pays 300 random users 30 USD worth, top 5 shills get 200 USD worth. Pool is 10k USD in $VRJAm tokens.\n          &nbsp;\n      \n      \n        until 6 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FamDAO Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a first come award for 6000 users. After that the top shills and some random users get 5-20 USD worth.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DayStarter Airdrop 2\n      \n      \n        airdrop &nbsp;Random Gleam participants will split the pool of 10k $DST tokens. Reward per person up to 40 $DST, not all tasks mandatory.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZFM Airdrop\n      \n      \n        airdrop &nbsp;LATOKEN is running a bunch of new airdrops: ZFM, OMG, RFX, STEP and a couple older ones. Most are via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Mondi NFT Airdrop\n      \n      \n        airdrop &nbsp;A very short Gleam that pays 70 whitelist spots for NFT and 2-5 USD in MATIC to random users.\n          &nbsp;\n      \n      \n        until 5 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Macondo Airdrop\n      \n      \n        airdrop &nbsp;This is a poker NFT project that is in beta. You can share a pool of 5000 USDT for completing tasks and joining Discord.\n          &nbsp;\n      \n      \n        until 4 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zero-Fee OTC Thanksgiving Promo\n      \n      \n        airdrop &nbsp;Buying crypto on Phemex OTC via debit or credit cards, SWIFT, SEPA, FPS (for UK) and ACH (for US) has now zero fee on the fiat deposit. Regular fees are between 2-4%. Available crypto: BTC, ETH, USDT, USDC.\n          &nbsp;\n      \n      \n        until 1 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MegaGleam Airdrop Batch 9\n      \n      \n        airdrop &nbsp;This is a long Gleam with optional daily bonus tasks. Pool worth 50k USD in tons of NFTs, each NFT worth 50-500 USD.\n          &nbsp;\n      \n      \n        until 1 Dec\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WCM Airdrop\n      \n      \n        airdrop &nbsp;This Gleam is a first come one, the first 20k users will be rewarded with tokens for a Web3 platform.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CCharge Airdrop\n      \n      \n        airdrop &nbsp;This short and sweet Gleam pays 3k USD in tokens among 100 random winners. Not all tasks mandatory.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RoadQatar Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has pool of 6 Million $ROAD. The reward per person is about 5 USD worth - 2200 $ROAD each person. Distributes mid Dec.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlessGlobal NFT Airdrop\n      \n      \n        airdrop &nbsp;This is a quick Givelab form that rewards 9 people with game NFTs.\n          &nbsp;\n      \n      \n        until 30 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AgriVerse (BSC) Airdrop and WL\n      \n      \n        airdrop &nbsp;A long Gleam of a P2E project that has a pool of 100MM Agriverse tokens. Fill all tasks and get participation reward. Other than that, top 25 shills get a bonus and 500 random wallets get whitelisted for future events.\n          &nbsp;\n      \n      \n        until 28 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MRST (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Guess the CEX on which this Polygon token gets listed and win 100 tokens. 100 people get rewarded.\n          &nbsp;\n      \n      \n        until 29 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlastRoyale Airdrop\n      \n      \n        airdrop &nbsp;A Gleam for a MATIC project that rewards 5 NFT boxes and 150 MATIC (15 tokens to each winner).\n          &nbsp;\n      \n      \n        until 29 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pegasus Airdrop\n      \n      \n        airdrop &nbsp;This Gleam pays random users rewards of 250-500 $PEGA, plus some shill bonus and NFTs.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Fandora x Akira Airdrop\n      \n      \n        airdrop &nbsp;Another $FAN airdrop. The pool is 100k $FAN for 200 random users and 10 top shills.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Fandora x OEGDAO Airdrop\n      \n      \n        airdrop &nbsp;A new fan-based token that airdrops for a Gleam form. The pool is 100k $FAN for 200 random users and 10 top shills.\n          &nbsp;\n      \n      \n        until 25 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Museum of Football NFT Airdrop\n      \n      \n        airdrop &nbsp;A sweepwidget airdrop that rewards 47 NFTs rated at 10k USD.\n          &nbsp;\n      \n      \n        until 22 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DearElla Airdrop\n      \n      \n        airdrop &nbsp;This Gleam has a pool of 10,000 $XPLA for 400 lucky winners. Reward per winner goes up to 200 $XPLA for top shills, but most rewards are for random users.\n          &nbsp;\n      \n      \n        until 22 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MI and BEMD Airdrop\n      \n      \n        airdrop &nbsp;LATOKEN is running a MI and BEMD airdrops via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 20 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ca_DAO Airdrop\n      \n      \n        airdrop &nbsp;GameFi Airdrop with pool of 100 USDT and 200 SCORE tokens. 50 random winners in total, rewards between 2-10 USD worth per.\n          &nbsp;\n      \n      \n        until 21 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MUN (SOL) Airdrop\n      \n      \n        airdrop &nbsp;This airdrop runs on Givelab. There are rewards for first come users as well as top and random. Total ~450 users get rewarded from pool of 25k $MUM.\n          &nbsp;\n      \n      \n        until 16 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ForTheDog Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that rewards 10 FTD tokens to 4K random winners. You have to follow them on social, too.\n          &nbsp;\n      \n      \n        until 16 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IKO (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;The usual Gleam form, most tasks compulsory. The pool is 50k $HNTR for 1k winners. Distributes in December.\n          &nbsp;\n      \n      \n        until 11 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DBANK (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Only for Korean users. Pool is ~125k un-locked DBC tokens with top rewards (by entries) at about 55 USD worth. Total 1000 winners.\n          &nbsp;\n      \n      \n        until 8 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       K3K Airdrop\n      \n      \n        airdrop &nbsp;A classic Gleam that has a pool of 60k Tron. 4k random winners (15 $TRX/each winner).\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BattleInfinity Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam with 10k USD worth of tokens that will go to 130 participants. Reward per person up to 500 USD worth.\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoSkyLand x Bitkeep Airdrop\n      \n      \n        airdrop &nbsp;Another Bitkeep airdrop - you need to download the app to take part. Rewards to 100 people - 100x NFT free mint.\n          &nbsp;\n      \n      \n        until 5 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eldarune Airdrop\n      \n      \n        airdrop &nbsp;150 users who fill out the Gleam will split 12k USD worth of $ELDA tokens. The Eldarune game lets you play to earn as well.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SG Airdrop on LATOKEN\n      \n      \n        airdrop &nbsp;LATOKEN is running a SG airdrop via Gleam. You'll need a LATOKEN account - no KYC required.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Snooze Beds NFT Whitelist\n      \n      \n        airdrop &nbsp;500 spots are being given away. Just join the list of accounts in the join link on Givelab.\n          &nbsp;\n      \n      \n        until 4 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SOUL (Aptos) Airdrop\n      \n      \n        airdrop &nbsp;Simple Google Doc tasks that will reward the first 10k users.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SkippingRope Airdrop\n      \n      \n        airdrop &nbsp;A Google Doc of a SportFi project. Pays 1000 ROPE tokens to 5000 winners - 4500 random and 500 top by entries. Distributes 5 Nov.\n          &nbsp;\n      \n      \n        until 1 Nov\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Apes Planet x Bitkeep\n      \n      \n        airdrop &nbsp;A real easy Gleam that requires you to download the Bitkeep wallet as one of the tasks. This airdrop pool has 10 Apes Planet NFTs.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       HongKong Token (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Fill the Gleam form to take part. There will be 2500 winners who split 100k $HK.\n          &nbsp;\n      \n      \n        until 29 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LIGHT DeFi Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that pays out of a good pool of 50k USD worth in $LIGHT tokens. Reward goes to 2000 first come and 3000 random. Distribution 1 week after TGE.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TwitterScan NFT Airdrop\n      \n      \n        airdrop &nbsp;Get a free .nft domain with a shill link. Connect with a web3 wallet in the ETH network (like Metamask), connect with Twitter and claim.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ChainPeak (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A very short Gleam with a pool of 1.5 MM $CPK. Most of the rewards go to top shills - over 3000 of them, but there are is a participation reward 300 $CPK for everyone who completes all tasks.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TeriTori Airdrop\n      \n      \n        airdrop &nbsp;TeriTori is a new staking dApp. Get 300 $TORI tokens for signing in with Keplr wallet.\n          &nbsp;\n      \n      \n        until 30 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Retro 2X Airddrop\n      \n      \n        airdrop &nbsp;A very short Gleam, all tasks mandatory. Pool is 1MM $R2X tokens that will be distributed to 1000 winners. Distributes right after ending!\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NYXS Airdrop\n      \n      \n        airdrop &nbsp;A Gleam for a SportFi project to connect fans with athletes. Pays 30 winners, individual rewards worth between 125 USD - 2000 USD.\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TokenHunters Airdrop II\n      \n      \n        airdrop &nbsp;This is a second round of TokenHunters airdrop and it is to promote listing on CoinGecko. It's a Gleam that pays 50 winners 400 $HUNT tokens each (~20 USD). Distributes in early November.\n          &nbsp;\n      \n      \n        until 31 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitmart Random Pair Airdrop\n      \n      \n        airdrop &nbsp;In this event, users who trade specific tokens with specific trading volume will receive a random bonus of anywhere between 1-1000 USDT. Bitmart requires KYC: Click here, then see the current list here.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       W3DNA Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that pays 250 random users, pool 5000 USDT.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zambesi Gold Token Giveaway\n      \n      \n        airdrop &nbsp;Bitmart gives away 12k $ZGD in a trading competition on ZGDUSDT. Top 50 traders by volume (buy+sell) split the pool. Reward is an airdrop, ready to withdraw.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ALGO Trading Competition\n      \n      \n        airdrop &nbsp;This Gleam pays up to 1000 USD but is combined with a trading bounty. The trading part however is open even to those of you who don't want to risk money - there is an option to win by drawing the most accurate TA.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Telos Blockchain Airdrop\n      \n      \n        airdrop &nbsp;A small Gleam form that has pool of 300 USDT. Rewards go to 40 eligible random winners &amp; top 10 referrers.\n          &nbsp;\n      \n      \n        until 27 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Shikoku Coin Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam that pays random participants. Tasks are compulsory, you won't be able to put in your wallet address unless you do all.\n          &nbsp;\n      \n      \n        until 25 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Polystark (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short givelab form that pays to 10k users, first come. The pool is 10 MM $PYSK tokens, but tokens will not be trading until mid next year at least.\n          &nbsp;\n      \n      \n        until 25 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Farm Tycoon (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam that rewards 1000 participants with 100k $FTY pool share. You just need to follow a couple of accounts. Distributes 1 Nov.\n          &nbsp;\n      \n      \n        until 21 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Answerly (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Warning - requires you proviously own tokens. A short Google form that pays 5000 $ANSR (5 USD) per participant to 10k users. \n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sinfinite (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Google form, you just has to follow. There is an extra pool for activity on social channels. Airdrop reward is 80k USD in $SFN token for 1500 random winners. Then there is the 5K BUSD reward for active participants in community \n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Mads Crypto x Hyper Mover\n      \n      \n        airdrop &nbsp;A SportFi project that airdrops 2000 $HMOVE tokens to 200 winners and 50 NFTs to 50 other winners. It's a Play2earn / Move2earn project.\n          &nbsp;\n      \n      \n        until 20 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metaverse Hub (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A huge Gleam promo that has 50+ partners joining in. You'll have to follow a lot of accounts but the pool is 50k USD, most in tokens, some NFTs.\n          &nbsp;\n      \n      \n        until 18 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Helio Protocol (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Quick flash giveaway via Gleam. 5 lucky winners who do all the few tasks will get 100 BUSD each.\n          &nbsp;\n      \n      \n        until 18 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Spheroid Universe Airdrop\n      \n      \n        airdrop &nbsp;Sign in with a Web3 wallet to gain 500 tokens. Post on Twitter for 250 more, join Telegram for 100.\n          &nbsp;\n      \n      \n        until 17 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Psych Skulls NFT Free Mint\n      \n      \n        airdrop &nbsp;Just follow and retweet and put down a Polygon address to take part.\n          &nbsp;\n      \n      \n        until 15 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lanila (BSC) Airdrop\n      \n      \n        airdrop &nbsp;This Gleam rewards 450 USDT to 55 winners. Short and sweet.\n          &nbsp;\n      \n      \n        until 15 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       C-PAD x TE DAO (ETH) Airdrop\n      \n      \n        airdrop &nbsp;A short and sweet Givelab form that splits the pool of 250k tokens, which is 10k USD. Random 3K users get 3 USD each, top referrals get 5 USD each bonus.\n          &nbsp;\n      \n      \n        until 16 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WWStep and MESH on LATOKEN\n      \n      \n        airdrop &nbsp;A Gleam run by the LATOKEN no KYC exchange. Pool worth of 9k USD, ready to sell on the exchange. Make an account here.\n          &nbsp;\n      \n      \n        until 16 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Asteria (BSC) NFT Airdrop\n      \n      \n        airdrop &nbsp;Complete three tasks on Twitter and put down your BSC address to join. Reward is 10 Panbo NFT whitelist spots.\n          &nbsp;\n      \n      \n        until 14 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lambda (ETH) Airdrop\n      \n      \n        airdrop &nbsp;20 winners of this Gleam will split 10k $LAMB tokens. The token can be staked.\n          &nbsp;\n      \n      \n        until 14 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Encounter (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A really short Gleam. Pool is 4700 USDT, out of which top 3 get 1800 USDT. The remaining 3k will be pooled into a lucky draw among 500 participants.\n          &nbsp;\n      \n      \n        until 13 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AIO DAO x Super Pad Airdrop\n      \n      \n        airdrop &nbsp;A short Google Form that pays out 800 first come users with 40 $SPAD each. Random 200 users also get 90 $SPAD each. Distribution only after token gets listed, though.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TeDAO x Funky Egg Club Airdrop\n      \n      \n        airdrop &nbsp;This is a short Givelab form that pays 14000 users. First 10K responses get participation award 20 USD worth each. 4k other random users get the same reward too.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ChainPort TGE Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that will pay PORTX tokens from pool of 2k USD worth. Winners are random but more entries increases chance. There will be 46 winners, prizes between 25 USD - 500 USD worth.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FIFA Football Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form for FIFA Football - an e-sport Play and Earn NFT game on BSC chain. The form has 5000 winners with pool of 500k FIFA tokens. They should start trading near the end of 2022.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Morpad (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Short Givelab form that pays every user who complete the tasks (more than 40 entries) with 1000 MORP, or 10 USD worth. 10 lucky winners will get 10k MORP. Distribution on 13 Oct.\n          &nbsp;\n      \n      \n        until 10 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hypersign Staking Network\n      \n      \n        airdrop &nbsp;The Hypersign airdrop platform has been developing its own staking blockchain platform and is set to launch in October. To promote the launch, they run an airdrop that will pay $HID tokens on mainnet once it launches. There will be 10 winners who'll get 10k tokens each, and 10 others who get 5k each. Platform's git repo linked from the form.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoSoccer Airdrop\n      \n      \n        airdrop &nbsp;Earn 10 USD for participating. Prize paid in CPS tokens, distributes right after airdrop ends. Total of 2100 winners, most get the 10 USD mark but top participants get up to 1k USD.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IdeaVerse Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam for a GameFi project duo, more entries is a better chance. Pool has 5k $IDVT,5 x IDV CLUB PASS, 200 x Whitelist of IDV Club Pass.\n          &nbsp;\n      \n      \n        until 8 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       HongKong Token Airdrop\n      \n      \n        airdrop &nbsp;This is a short Gleam promo to promote HKT listing on Bitmart. 1000 users get paid with 50 HKD worth of tokens each. If you will want to sell, make a Bitmart account.\n          &nbsp;\n      \n      \n        until 9 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FreeCity (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Pool of 1 Million $FCC tokens goes to 500 winners in this short Gleam form. It is to promote the launch of FreeCity, a social app. There are some grand prizes for top perticipants by entries, you can get between 666-10k tokens. All tasks required.\n          &nbsp;\n      \n      \n        until 9 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Web3 Collab Competition\n      \n      \n        airdrop &nbsp;6 different Web3 projects joined forces for this airdrop and will reward 300 users from a pool of 4k USD in BUSD. Easy tasks on Hypersign.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MetaSocHub (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam with pool of $1,000 worth of $MSH tokens. Reward only goes to top 20 users by raked entries points, which means that each winner will get paid well.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NVRO Airdrop\n      \n      \n        airdrop &nbsp;A very short Givelab form that has a pool of 250 MM $NVRO tokens. Each of the first 10k responders will get 25k tokens, or about 16 USD.\n          &nbsp;\n      \n      \n        until 4 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OTSUS swap airdrop\n      \n      \n        airdrop &nbsp;Short Google form that pays first 5000 hunters out of a 5 MM $SUS pool.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Spinel DAO Airdrop\n      \n      \n        airdrop &nbsp;Easy and quick tasks that pay BSC based tokens of a startup DAO. The pool is 10,000,000 SPINEL, it's only starting, most of it is unclaimed! This airdrop has referral bonuses.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OwnrWallet Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form where you just need to follow accounts. The pool is 1500 USDT to 110 winners and bigger rewards for referrals. There is a second parallel airdrop on their Telegram channel.\n          &nbsp;\n      \n      \n        until 3 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GamesPad NFT Airdrop\n      \n      \n        airdrop &nbsp;Complete a short Gleam to get a chance to win GoblinTown NFTs (0.93 ETH each) and 10 WL spots.\n          &nbsp;\n      \n      \n        until 3 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZMove Airdrop\n      \n      \n        airdrop &nbsp;Google form that pays first 500 users (since 26 Sep) and 100 random users. Pool is worth 3.5k USD in tokens.\n          &nbsp;\n      \n      \n        until 2 Oct\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Finance Vote NFT Airdrop\n      \n      \n        airdrop &nbsp;A super short Hypersign form that pays finance.vote NFTs on ETH.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ShipFinex Airdrop\n      \n      \n        airdrop &nbsp;A short Hypersign form. 10 lucky random winners stand a chance to share a pool of $1000 USDT.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GPS Riding Airdrop\n      \n      \n        airdrop &nbsp;A SportFi project that runs this simple Gleam form. Total of 1440 winners will be drawn. Top users by entries get up to 100 USD each, random winners get about 10 USD each. Prizes paid in GPS tokens.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Crypto Plants (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;A new game on Polygon that airdrops 10,000,000 CRP tokens and 400 NFT plants to 400 winners in a Givelab form. That's 1 game NFT and 25k tokens per winner. This airdrop has voluntary daily tasks.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FantasySwap (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that wants you to fill all tasks and do some Tweeting. Pool is 1M in FSP tokens.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ArchimedesFi NFT (Polygon) Airdrop\n      \n      \n        airdrop &nbsp;Retroactive airdrop. A Gleam form that gives the first 10k users the right to claim NFT for 'Proof of G(r)eek Citizenship'. Wallets who hold the key NFT will be eligible for airdrops in the future. You need to finish by going to Discord and complete rest of the tasks there.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Xandar (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form with simple tasks that pays tokens and NFTs for the Play2Earn game. Tokens &amp; NFTs worth $10,000 will be airdropped to 500 top participants with the most entries. \n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Raceways Airdrop\n      \n      \n        airdrop &nbsp;A long Givelab form with a lot of subscribe tasks. There will be 1000 winners who will split 133k $RWT tokens. Distribution 3 days after airdrop ends.\n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Unafro NFT (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;The new NFT Marketplace, Unoafro-The African NFT Space, is giving away 500 limited Edition NFTs for free and another 1000 limited Edition NFTs at 1 Matic from the collection African_beauty. \n          &nbsp;\n      \n      \n        until 30 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Quest3 Airdrop\n      \n      \n        airdrop &nbsp;Do the work and claim right away 100 RP tokens. Only BAB holders are whitelisted, though.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RichQuack x Earthling Airdrop\n      \n      \n        airdrop &nbsp;A quick and short Gleam form that pays 200 winners out of a pool of 1250 ETLG and 1MM QUACK tokens. Each winner gets about 2 USD worth.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ghostpad (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Gleam with 1,000,000 $GTP tokens in pool that goes to 100 top and 400 random winners.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WonderSea (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form os a DeFi project on BSC. Airdrop pool is 5,000,000 $WSF which is 30k USD worth, distribution probably in early November.\n          &nbsp;\n      \n      \n        until 29 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PatronageDAO Airdrop\n      \n      \n        airdrop &nbsp;Gleam form with optional tasks. Pool is only 3000 USD worth but it's in USDC. There will be 123 winners who will get between 20-500 USDC.\n          &nbsp;\n      \n      \n        until 28 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RazorNetwork Giveaway\n      \n      \n        airdrop &nbsp;In order to celebrate the launch of Razor Network Alpha on Skale mainnet, the team launched a Gleam form that pays 200,000 $RAZOR in pool to 200 winners. \n          &nbsp;\n      \n      \n        until 23 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BibleCoin (BSC) Giveaway\n      \n      \n        airdrop &nbsp;Google form that will pay 10 BIBL for simple shilling. \n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Enjinstarter HauntedSpace Airdrop\n      \n      \n        airdrop &nbsp;A Hypersign form to give away 75 whitelist spots for an NFT mint, NFT is for a P2E game. About Haunted Space Haunted Space is a profound adventure that allows you to explore, play, and earn your way through star-choked skies in this immersive game.\n          &nbsp;\n      \n      \n        until 21 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ALYX Testnet Airdrop\n      \n      \n        airdrop &nbsp;Airdrops mainnet tokens from pool of 70k ALYX. Besides Top 3 winners and 500 lucky winners, the other eligible participants will share 34,000 $ALYX.\n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Alonenite (ALGO) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form in a campaign worth 120k USD. AloneNite is a survival P2E metaverse game powered by Algorand and UnityEngine.\n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       World of Potatoes NFT WL\n      \n      \n        airdrop &nbsp;A very short form that drops whitelist spots for the game NFTs. \n          &nbsp;\n      \n      \n        until 20 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Calo Indoor (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Calo Indoor is a SportFi app. Gleam drops 10 NFT in-app items, 50 Wl slots and 50k tokens as a pool to 500 winners.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SecondLive NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that gives mystery boxes and NFTs to 600 participants (20 top and rest random). NFTs are only in-game items.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Aptosix Airdrop\n      \n      \n        airdrop &nbsp;Very short Givelab, all tasks mandatory. It wants you shill the project on Twitter to access the reward pool of 66k $SIX tokens. 6000 winners will be drawn, if you win they will email you provide address.\n          &nbsp;\n      \n      \n        until 19 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metaverse Exchange DAO Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam to promote the online gaming DAO. Pays 1x 100 USDC and 50x 50 USD worth of MXDR tokens.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ONI (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam with over 15k USD worth of tokens in pool. Top 3000 referrers and 1500 random participants get the generic reward worth 3 USD. Top 3 referrers get up to 840 USD worth.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       EpicBattle Giveaway\n      \n      \n        airdrop &nbsp;Short Gleam with a pool of 280,000 $EBA tokens, which is 8400 USD, and 200 FREE NFT'S WL. Top 50 referrers get up to 300 USD worth and 1 NFT. 1000 randomly drawn winners get 5 USD worth and 150 more get 1 NFT. NFTs are usable in the P2E game.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       VanSwap Meme Airdrop\n      \n      \n        airdrop &nbsp;This is a Gleam for a Twitter meme contest: You need to post a meme on Twitter. Prizes between 50-150 in VAN.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IguVerse Airdrop\n      \n      \n        airdrop &nbsp;IguVerse is a GameFi app. The airdrop is a Gleam with very simple tasks that pays to 250 winners. The pool is 10k $BALI and 10k $IGU tokens, 48 freemint of IguVerse NFTs and 2 flight tickets to Bali.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FutureDEX Airdrop\n      \n      \n        airdrop &nbsp;Pool of 20k FDX tokens, set to be 1.5 USDT worth each. Super short airdrop Gleam, just some joining, but pays out only in December 2022. All the social profiles are brand new, the product is a just-launching derivative DEX on Klaytn.\n          &nbsp;\n      \n      \n        until 18 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       10k USD spot voucher pool\n      \n      \n        airdrop &nbsp;Phemex runs another trading promo. If you put down your UID through the join link and trade at least 500 USD worth on spot or contract markets, you will be whitelisted for the draw. 100 winners share 10k USDT in spot vouchers.\n          &nbsp;\n      \n      \n        until 16 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LunaCash x Akatsuki\n      \n      \n        airdrop &nbsp;Gleam worth 12k USD in LunaCash that pays up to 10k tokens to top users by entries. 2000 random winners get 200 tokens each.\n          &nbsp;\n      \n      \n        until 16 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Proton Airdrop\n      \n      \n        airdrop &nbsp;A Givelab with 4,000 random winners, reward is 5000 XPR per person. The total pool is worth 60k USD. \n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WORLDX NFT Airdrop\n      \n      \n        airdrop &nbsp;500 WL spots for a metaverse NFT passport and 50 USDT each to 10 winners with the most points accumulated will go to the winners of this short Fyre form.\n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Harken Airdrop\n      \n      \n        airdrop &nbsp;A short Givelab form that drops 60k MATIC pool between 5000 random winners (12 MATIC per).\n          &nbsp;\n      \n      \n        until 15 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pelicanos NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form that pays 10x NFTs and 5x 200 USDT. PELICANOS NFT is a collection of 7,000 pelicans enabling you to take part in degens' parties in the best places on MYKONOS!\n          &nbsp;\n      \n      \n        until 14 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlueMove x Akatsuki NFT airdrop\n      \n      \n        airdrop &nbsp;Gleam form that only drops NFTs: 400 Legendary NFT &amp; 100 OG Roles. BlueMove is the marketplace where you can sell them, expected worth of pool is 10k USD. Tasks all mandatory.\n          &nbsp;\n      \n      \n        until 14 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Millionwinner Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form with the usual tasks that has a 10k USD pool ($4,000 in MWT Token &amp; $6,000 in Genesis NFT Whitelist spots). \n          &nbsp;\n      \n      \n        until 10 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Marblex Airdrop\n      \n      \n        airdrop &nbsp;Gleam with pool of 1000 MBX tokens. The reward goes to top users by entries, reward per person is between 1 - 10 MBX.\n          &nbsp;\n      \n      \n        until 10 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Raideon Blog Launch Airdrop\n      \n      \n        airdrop &nbsp;Raideon runs a promo of their blog by giving away NFTs and ETH. Rewards are $700 worth of ETH + (111) promo cards  + (7) Herolist spots to 77 lucky winners.\n          &nbsp;\n      \n      \n        until 11 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFT Airdrop via Voice\n      \n      \n        airdrop &nbsp;Join link leads directly to claim, no action required but you will follow the artist by claiming.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DXSpot Airdrop\n      \n      \n        airdrop &nbsp;Short form. Total rewards of 2.500.000 $DXS for 100 top participants by entries and then 400 lucky participants.\n          &nbsp;\n      \n      \n        until 8 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ready Games Airdrop\n      \n      \n        airdrop &nbsp;This Gleam form drops 400 rare NFT avatars for a game. Each NFTs contains 100 $AURA tokens. You can melt your NFT at any time to retrieve the infused value, or stake the NFT to accumulate rewards.\n          &nbsp;\n      \n      \n        until 8 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OP Launcher Airdrop\n      \n      \n        airdrop &nbsp;A short gleam form, only winners get paid but there are minimum entries to get qualified for the bigger prizes. Total pool 10k USD in $OPL tokens to 300 winners.\n          &nbsp;\n      \n      \n        until 6 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RHT Token Airdrop\n      \n      \n        airdrop &nbsp;A sweepwidget with a lot of daily tasks, such as voting. The project is a healthcare token.\n          &nbsp;\n      \n      \n        until 4 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pub Game NFT Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam that pays an NFT key. The key gives a right to own an in-game avatar which can be sold.\n          &nbsp;\n      \n      \n        until 2 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ZenFarm Airdrop\n      \n      \n        airdrop &nbsp;Google form with just a few simple tasks that has a pool of 50,000 $ZFT.\n          &nbsp;\n      \n      \n        until 2 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Dokdo Bounty\n      \n      \n        airdrop &nbsp;Pool of 200 $DKD for Twitter and bitcointalk signatures. Dokdo is a Lithuanian company that aims to enhance the solar ecosystem. Won't accept fake Twitter followers. Manager: CryptopreneurBrainboss\n          &nbsp;\n      \n      \n        until 3 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bopoverse NFT airdrop\n      \n      \n        airdrop &nbsp;If you follow this web3 project on Twitter and Discord, you get into a raffle for 2,777 whitelist spots for the first NFT series. Bopoverse™ 1st collection BPVw will be minted on 8 Sep - 7,777 Empowering NFTs.\n          &nbsp;\n      \n      \n        until 1 Sep\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Unlockd Community Airdrop\n      \n      \n        airdrop &nbsp;A longish form where you get paid more for more entries. It's just following a bunch of stuff.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Pocket Official Airdrop\n      \n      \n        airdrop &nbsp;Prize pool of 300,000 $Pocket tokens for a Gleam form. Random 5,000 participants get 50$ Pocket per person, the rest is for referrers. All tasks are mandatory, there is one task that you can complete once a day to rake more entries. Pocket is a Web3 bank.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Peercoin Airdrop\n      \n      \n        airdrop &nbsp;Anniversary of a sh1tcoin! Fill simple social tasks and get into the lucky draw for a couple hundred PPC. Top referrals get paid too.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Router Protocol Airdrop\n      \n      \n        airdrop &nbsp;A short form for a cross chain bridging app that drops prizes and $ROUTE tokens for very simple tasks.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ReadOn Token and NFT airdrop\n      \n      \n        airdrop &nbsp;A short Givelab form that will pay 4000 READ and 100 NFTs to 500 winners. The project is on BSC.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Arkadia (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Arkadia NFT game pays 100 USDC on Solana to 10 winners in a short Gleam form.\n          &nbsp;\n      \n      \n        until 31 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Dracoo Master NFT Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form, the more total entries altogether the more prizes. It drops NFTs and tech prizes for gamers.\n          &nbsp;\n      \n      \n        until 30 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NOODLE Airdrop\n      \n      \n        airdrop &nbsp;You need to install the NOODLE app for this Gleam. Otherwise your usual form, pool is 5000 $NODL (soon to be listed on Gate.io) between 100 random users and 10 top referrals.\n          &nbsp;\n      \n      \n        until 29 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Anifi World Whitelist\n      \n      \n        airdrop &nbsp;This is a short Gleam form that only gives a presale whitelist.\n          &nbsp;\n      \n      \n        until 28 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BOSE (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A Metaverse token on Solana airdrops for a short Gleam form. Pool is 10000 $BOSE for 10,000 members.\n          &nbsp;\n      \n      \n        until 28 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PolkaFantasy NFT Airdrop\n      \n      \n        airdrop &nbsp;NFT airdrop on Gleam that rewards game NFTs and Amazon gift cards. Total 30k USD worth of prizes.\n          &nbsp;\n      \n      \n        until 26 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Tanukiverse NFT Airdrop\n      \n      \n        airdrop &nbsp;Total Pool is 8 Free NFT, 50WL &amp; 60,000 NFT Pebbles. Pebbles Holder will get $NUKI token airdrop proportional to amount held.\n          &nbsp;\n      \n      \n        until 25 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PoopMarketplace Airdrop\n      \n      \n        airdrop &nbsp;Google form that just wants you to go to Twitter and like, retweet and tag the pinned post. The project is an NFT marketplace for GameFi on Degechain.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Moniwar RICE Airdrop\n      \n      \n        airdrop &nbsp;An NFT airdrop that pays a pool of 100k RICE tokens to the first 500 users. Then the rest gets a chance to get one of 1000 pet NFTs. Short form.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Gnome Mines NFT Airdrop\n      \n      \n        airdrop &nbsp;Gleam form that pays NFTs and mint spots.\n          &nbsp;\n      \n      \n        until 22 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FND Airdrop on Bitmart\n      \n      \n        airdrop &nbsp;The no-KYC exchange Bitmart runs an airdrop promo that pays 57 $FND (~5 USD) to 1000 winners. Real quick Google form.\n          &nbsp;\n      \n      \n        until 19 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hyperboard NFT (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Hyperboards is an NFT needed to start earning Chat And Earn Tokens for (surprise) chatting. Simple Gleam tasks with some daily ones. More tasks more chances to win one of the NFTs. It's 10 NFTs for every 10k entries.\n          &nbsp;\n      \n      \n        until 18 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RichQuack WL Airdrop\n      \n      \n        airdrop &nbsp;Whitelist for new premium NFT mint on BSC and additional pool of tokens for 100 winners. NFT holders qualify for further airdrops and perks.\n          &nbsp;\n      \n      \n        until 17 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Atmos Protocol Airdrop\n      \n      \n        airdrop &nbsp;Longish Gleam form for only 50 winners, each will get 200 $ATM tokens.\n          &nbsp;\n      \n      \n        until 17 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stackspace (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Bunch of tasks, a lot of them can be repeated daily. 50.000 $STSP to 100 winners, more entries are more chances. Form via Viralsweep, wants your email and wallet address. Stackspace is a marketplace for NFTs and assets from various games.\n          &nbsp;\n      \n      \n        until 15 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LuxPad x Wingstep (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Google form where you need to RL, like and follow. Pool of 80,000 $WST for 20 winners.\n          &nbsp;\n      \n      \n        until 15 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       USDC Quiz for 100 USD\n      \n      \n        airdrop &nbsp;Phemex runs another quiz promo, this time about USDC. Answer all 5 quiz questions right and you qualify to share the 10k USD voucher prize. Each winner gets 100 USD, first come basis.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Epic Kingdom (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form with pool of 90k $EKD tokens. Top referrals earn the most, rest goes to random participats.\n          &nbsp;\n      \n      \n        until 12 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       O3 Carnival (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form with all tasks mandatory. Pool of 13,000 $O3 tokens.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Race Whitelist by OEG DAO Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that rewards race whitelist and land NFTs. Whitelist gets you the opportunity to earn tokens before the token generation event. No need to own NFT.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Galaxy Digital (MATIC) Airdrop\n      \n      \n        airdrop &nbsp;Galaxy Digital is an AI Intelligent Quantitative Investment Platform on Polygon. They are giving away tokens to promote the project. It's a short Gleam form.\n          &nbsp;\n      \n      \n        until 9 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Diolaunch Airdrop\n      \n      \n        airdrop &nbsp;Gleam form with all tasks mandatory for a pool of 250.000 $DLA tokens to 1000 winners.\n          &nbsp;\n      \n      \n        until 5 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       OEG_DAO GUNX (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;GUNX is the token of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Pool of 60k tokens and 10 NFT chests. You should complete all Gleam tasks.\n          &nbsp;\n      \n      \n        until 5 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sarosism NFT (SOL) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form with all tasks mandatory. If you complete all plus do the RT, like and tag on Twitter, you will get 1 NFT on the Galaxy Platform.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       UltimateRanger (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form that pays rewards of 50-100 USD worth in tokens to 15 users and a gold mint whitelist to 15 users. This is to promote an Opensea auction, each NFT starts at 6.5 ETH.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       SLEEP Airdrop\n      \n      \n        airdrop &nbsp;All Gleam fields mandatory. SLEEP is launching Airdrop Campaign with prize pool of 2,000,000 $SLEEP tokens, individual rewards up to 50k tokens per person.\n          &nbsp;\n      \n      \n        until 3 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CheeseApe Airdrop\n      \n      \n        airdrop &nbsp;New airdrop of $CSA Token for first 15K eligible users (first come first served). You are asked to complete social media tasks for the reward of 100 $ASC tokens each.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.IO Token Metrics Discount\n      \n      \n        airdrop &nbsp;All CEX.IO users can get 40% off on Token Metrics subscription if they deposit at least 50 USD. You need to pass KYC. Offer is valid until 13 Jul.\n          &nbsp;\n      \n      \n        40% off\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Atomix (SOL) Airdrop\n      \n      \n        airdrop &nbsp;A gaming system on Solana that will give 10 ATMX tokens to random 400 Gleam users, plus NFT freemints to 20 more.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       KUKU on Latoken\n      \n      \n        airdrop &nbsp;A Gleam form that pays 3093 lucky winners. Pool 20k KUKU, which is about 10k USD. Tasks are just simple social media engagement, there's no trading activity required.\n          &nbsp;\n      \n      \n        until 29 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex Advcash Giveaway\n      \n      \n        airdrop &nbsp;Bitforex added the web wallet AdvCash as a way to buy crypto. To promote it, 500 AdvCash buyers who filled out the form will be randomly drawn to share 10k USDT. Users who use Advcash to purchase various cryptocurrencies such as BTC, ETH, USDT, XRP, LTC, BCH, and ZEC.\n          &nbsp;\n      \n      \n        until 30 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Xenum (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Just switch metamask to BSC, connect wallet and click Claim Tokens in the join link, no shilling required. No alerts for the contract on bscscan.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFT Powerup Airdrop\n      \n      \n        airdrop &nbsp;A Gleam giveaway with a big budget - 10k in USDT and extra NFTs. 600 winners will be drawn. Tasks are mandatory.\n          &nbsp;\n      \n      \n        until 30 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Signifty (ETH) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form, only 1 task is necessary to be eligible. SIGN tokens will be distributed as a reward.\n          &nbsp;\n      \n      \n        until 29 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RoboWorld NFT Airdrop\n      \n      \n        airdrop &nbsp;Leave your email address and fill tasks to receive an NFT box.\n          &nbsp;\n      \n      \n        until 27 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Armaldia Metaverse NFT Airdrop\n      \n      \n        airdrop &nbsp;30 winners will split almost 6k USD in tokens. Long Gleam form, prizes are NFTs. Armaldia is a play-to-earn MMO metaverse game.\n          &nbsp;\n      \n      \n        until 27 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Trophy.io escrowed bounty\n      \n      \n        airdrop &nbsp;Weekly bounty work on social media and blog platforms, submitted to manager via spreadsheet. Trophy is a garden variety DEX platform. Bounty manager Julerz.\n          &nbsp;\n      \n      \n        until 1 Aug\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PPLX (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A Givelab form. If you complete basic tasks you get a chance to be drawn. If you complete all tasks, the reward is guaranteed.\n          &nbsp;\n      \n      \n        until 25 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Palmare Airdrop\n      \n      \n        airdrop &nbsp;Givelab that pays to 250 random participants from 7000 USD pool of sPal. It's a move to earn token.\n          &nbsp;\n      \n      \n        until 25 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DamnPunks NFT Airdrop\n      \n      \n        airdrop &nbsp;First 1000 NFT mints for free. Still some left!\n          &nbsp;\n      \n      \n        21 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Monopoly Millionaire Airdrop\n      \n      \n        airdrop &nbsp;Complete Gleam tasks which are mostly like and retweet and you wil enter the whitelist. Short form, 250 winners, each winner gets 10 USDT.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LMDAO Airdrop\n      \n      \n        airdrop &nbsp;Tokens of Gunfire AVAX - a free Play and Earn NFT game on Avalanche. Gleam form pays AVAX and GUNX tokens.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MG.Land Airdrop\n      \n      \n        airdrop &nbsp;Pool of 3000 USDT. It's a Gleam form to fill, plus: In order to receive your rewards, you must bring your NFT into MG.Land at least one time.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eldarune (AVAX) Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop worth 1M $ELDA tokens in pool, and some NFTs. Form has some mandatory tasks and extra (easy) daily tasks to rake more entries. 250 top users by entries get the reward, plus 250 randomly drawn ones.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Black Magic Network Airdrop\n      \n      \n        airdrop &nbsp;Black Magic is a GameFi DAO that runs a short Gleam airdrop with 150k token pool. 800 random winners get pool of 75.000 BMC Tokens, 200 winners from top referrals get the second half of the pool.\n          &nbsp;\n      \n      \n        until 22 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Gleam Bonus to new users\n      \n      \n        airdrop &nbsp;76K USD prize pool (max 380 USD each), first come first earns. Make an account and go to the Gleam form through the join link. All new users who sign up to the no-KYC outfit Phemex can grab up to 380 USD worth of bonuses. \n          &nbsp;\n      \n      \n        until 19 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.IO Trading Competition\n      \n      \n        airdrop &nbsp;Trade on any market and win up to $3,000 in cash prizes. You need to have an account and sign up for the event through the join link.\n          &nbsp;\n      \n      \n        until 20 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Gatechain Airdrop\n      \n      \n        airdrop &nbsp;A Gleam airdrop that pays for simple social tasks and has a referral bonus. 8K USD worth of tokens in the pool.\n          &nbsp;\n      \n      \n        until 18 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BeFittr Airdrop\n      \n      \n        airdrop &nbsp;Long Gleam form. Each participant will have a chance to get 400 $FIU reward, a total of 175 winners will be selected at random by the beFITTER team.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Kokoro Airdrop Whitelist\n      \n      \n        airdrop &nbsp;Gleam form where you follow and join to enter a whitelist. Prizes are Kokoro tokens and free mints.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LUCA Airdrop\n      \n      \n        airdrop &nbsp;Everyone who completes the tasks below will receive 50 $LUCA or even more. Simple tasks via Sweepwidget.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sushi Cats Fam X MegaEvolution\n      \n      \n        airdrop &nbsp;15 NFT freemint spots for a Gleam form.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cyberpunk Soldier NFT Giveaway\n      \n      \n        airdrop &nbsp;The artist storyteller_nft is giving away artworks for follow, like and RT on Twitter.\n          &nbsp;\n      \n      \n        first come\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RocketVideo Airdrop\n      \n      \n        airdrop &nbsp;RocketVideo token RVT was listed on PancakeSwap. To promove it, there is a Gleam airdrop with a pool of 3000 RVT.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Shiba Avengers NFT Airdrop\n      \n      \n        airdrop &nbsp;Dog NFTs on BSC. The airdrop is a Gleam form where you follow and join. Top referrers will get up to 60 BUSD and NFTs, then 130 winners will get 2 BUSD each.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MythArt NFT Airdrop\n      \n      \n        airdrop &nbsp;All the participants who finish the 4 tasks will receive a MythArt Genesis OAT (Classic) NFT launched by Project Galaxy. 100 lucky participants will win a MythArt Genesis OAT (Golden). Rewards need to be claimed.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LOKON Airdrop\n      \n      \n        airdrop &nbsp;Follow and join LOKON's channels on social via Gleam to enter. Prizes are NFTs of land. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MOVERSE (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Pool 5 MM of MOVE tokens for simple Gleam form. Moverse is a Fitness Metaverse where you can earn for real on every move and have your experience personalized by AI technology. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DemonHellboy (BSC) Airdrop 1\n      \n      \n        airdrop &nbsp;A Lear2Earn project runs an airdrop with 5 billion DHB tokens pool. There are twitter tasks that change every day and you gain daily entries in the gleam form if you keep returning. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DigiFinex Airdrop\n      \n      \n        airdrop &nbsp;Digifinex is a crypto exchange that gives away some QUACK tokens for a Gleam form. Pool $500 worth of $QUACK for 100 winners. \n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ACY Finance Airdrop\n      \n      \n        airdrop &nbsp;Just ending in a few hours. A sweepwidget form with 1000$ worth of $GGR to 30 winners.\n          &nbsp;\n      \n      \n        until 14 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Provers Airdrop\n      \n      \n        airdrop &nbsp;Pool of 300k tokens - 1,000 random winners will get 300 $TKLE each. Simple Gleam tasks, but must complete all of them. TKLE is PROVERS' token, minted on Klaytn.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BlackBear Finance Airdrop\n      \n      \n        airdrop &nbsp;Super simple Gleam tasks to get you in the pool of 15k USD. They are going live with a presale on June 22nd 22:22 UTC and the airdrop is to promote it.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cloudname NFT Domains Airdrop\n      \n      \n        airdrop &nbsp;Cloudname is a domain marketplace that specialises in premium domain names. To promote their new partnership with the Web3 registrar Unstoppable Domains, they are giving away 20 USD in credits for NFT domains. You just need to enter your email and redeem the coupon after they deliver it on 13th July.\n          &nbsp;\n      \n      \n        until 13 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Getaverse Telegram AMA\n      \n      \n        airdrop &nbsp;Join the Getaverse Telegram AMA, fill in the Gleam and ask good questions! 5000 eligible members who submit the fastest will be selected.\n          &nbsp;\n      \n      \n        until Jul 12\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NFTFoundation (ETH) NFT Airdrop\n      \n      \n        airdrop &nbsp;Free NFT art for follow, like and 2x RT. They ask for ETH address into the comments.\n          &nbsp;\n      \n      \n        until 12 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Myria NFT Airdrop\n      \n      \n        airdrop &nbsp;Myria is a decentralised Ethereum Layer 2, built to empower digital assets, NFT and blockchain gaming. If you sign up, the account area will give you plenty options to collect free NFTs.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chains.com NFT Airdrop\n      \n      \n        airdrop &nbsp;Join Telegram, follow, like, retweet and that enters you into the airdrop whitelist for NFT prizes and 20 USDT bonus.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Deposit Drive\n      \n      \n        airdrop &nbsp;Phemex will reward top traders by volume in any spot markets with USDT prizes. To participate, deposit at least 100 USDT and trade it at least once on any spot market. You also need to submit your UID via a Google form - full terms in the join link.\n          &nbsp;\n      \n      \n        until 12 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Celestial Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form to enter this airdrop. 20 participants will be selected at random to share the 200 CMP. The remaining participants will share 300 CMP.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zemiter TRX Airdrop\n      \n      \n        airdrop &nbsp;Follow and join bunch of places via Gleam form. 4000 random winners will be drawn, each gets 15 TRX (total pool is 60k TRX). \n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ParaState NFT Airdrop\n      \n      \n        airdrop &nbsp;Gleam form to win NFTs. Not everyone gets rewarded - there will be 50 random winners and 50 top winners by points. \n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PlaySky Giveaway\n      \n      \n        airdrop &nbsp;Only 50 winners, each gets 10k WXG tokens. Simple social tasks on Twitter and Discord, report via Google form.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LBANK Airdrop\n      \n      \n        airdrop &nbsp;Airdrop from a staking outfit, 100 random winners get 4000 POX tokens. You need to like, follow and RT. Details via Google Form.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BitForex 5k USD in BTC bonus pool\n      \n      \n        airdrop &nbsp;The no-KYC exchange Bitforex runs a giveaway weekend (7 Jul - 10 Jul) during which it airdrops random rewards to people who deposit 500 USDT and complete Gleam tasks. Sign up and click the announcement on the homepage for terms.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoPirates NFT bounty whitelist\n      \n      \n        airdrop &nbsp;Google form to get a chance to receive NFTs and tokens of a new Play2Earn game.\n          &nbsp;\n      \n      \n        until 15 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MEME airdrop\n      \n      \n        airdrop &nbsp;Phase II of the airdrop. The 2.75 billion $MEME airdrop is distributed to the eligible wallet addresses that delegates a minimum of 5 $ATOM and $OSMO. In the first phase, tokens were dostributed to holders, now it's a bonus for staking.\n          &nbsp;\n      \n      \n        to stakers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LGO (ETH) Airdrop\n      \n      \n        airdrop &nbsp;Korean NFT platform airdrops NFTs in a short Gleam form.\n          &nbsp;\n      \n      \n        until 9 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MyMeows NFT Airdrop\n      \n      \n        airdrop &nbsp;20k NFTs up for grabs in a Gleam form of 9 items. Project is on Binance Chain.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ethanim NFT (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Trias eco-project Ethanim has launched the first NFT airdrop. 500 winners of Gleam form get 500 Bastet NFT Kit and 250,000 tEPU. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Legend Front Airdrop\n      \n      \n        airdrop &nbsp;Short Gleam form to share the pool of 5 MM $LGT. Everyone gets 200 tokens, 30 random winners get 20k tokens!\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Coindar Airdrop\n      \n      \n        airdrop &nbsp;Everyone gets paid. The airdrop reward is 500 CNDY for simple social tasks. Organized by Sugarverse, together with Coindar, details in join link.\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       8Finance (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form. 200 top hunters by entries will get 2000 $8F tokens each and 50 random users will get 10 $BUSD each.\n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Penguin Finance Airdrop\n      \n      \n        airdrop &nbsp;A two-week #PngNood party with a total of $7,500 pool and 10 Penguin Art NFTs up for grabs. This is a social media competition where you need to make photos. The final winners will be decided by PNGART holders. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Zappy NFT Giveaway\n      \n      \n        airdrop &nbsp;Gleam form for NFT prizes: 5 VIP PASS (Granting 2 x Whitelists, 1 x Free Mint, Zappy Alpha Access, Events Access),  20 Whitelist spots, and $500 USDT.\n          &nbsp;\n      \n      \n        until 8 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Royal Raffle (SOL) Giveaway\n      \n      \n        airdrop &nbsp;The first 10k responses to the G Form enter the draw, and there will be 1000 winners who get 100 $RFFL each (10 USD). The simplest social media tasks.\n          &nbsp;\n      \n      \n        since 27 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BabyDoge Airdrop\n      \n      \n        airdrop &nbsp;First come first earns airdrop of BABYDOGE token on Twitter. Retweets and stuff, fully on Twitter. The coin trades on Bitforex, you'll be able to sell.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex NEAR event\n      \n      \n        airdrop &nbsp;Phemex runs a 5-question quiz where if you get all Qs right you get whitelisted for a draw to get reward of 1000 NEAR tokens. Details in the join link. \n          &nbsp;\n      \n      \n        until 7 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metapool (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Google form that pays to 1000 random winners with $20K overall prize pool for super simple social tasks.\n          &nbsp;\n      \n      \n        until 6 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex AMA to win MBD\n      \n      \n        airdrop &nbsp;Bitforex runs a Telegram AMA with MBD Financials. Join https://t.me/BitForexEnglish for the event and ask questions with #UID after AMA starts. 10 best questions will get rewarded 20,000 MBD each.\n          &nbsp;\n      \n      \n        1 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex Trade To Win\n      \n      \n        airdrop &nbsp;Everyone gets paid. Top 20 net buyers in selected markets will share 6000 USDT in prizes. Every net buyer on (other) selected markets gets rewarded with a share of 5000 USDT. Extra rewards to those who will buy the lowest dip on BTC, ETH and XRP Tether spot markets. Bitforex does not require KYC.\n          &nbsp;\n      \n      \n        27 Jun - 4 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ATOKEN 2 weeks bounty\n      \n      \n        airdrop &nbsp;Token that already trades on PancakeSwap runs a promo bounty for Twitter, Telegram and Discord. Needs you to post a proof of auth to Bitcointalk.\n          &nbsp;\n      \n      \n        until 4 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       ULTRATRADE Sweepstake\n      \n      \n        airdrop &nbsp;Ultratrade public testnet launched and to promote it, there is a gleam airdrop to win 2k USD worth of ALGO. 106 random winners for simple tasks. \n          &nbsp;\n      \n      \n        until 2 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Playsky (BSC) Giveaway\n      \n      \n        airdrop &nbsp;$2000 sPAL giveaway where 100 random people will get the reward for simple social media tasks in a Google form.\n          &nbsp;\n      \n      \n        until 2 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Eternal World Airdrop\n      \n      \n        airdrop &nbsp;you need to complete all tasks in a Gleam form to take part. Drawn users will get Blind Box rewards.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       IoTeX via Coinhub Airdrop\n      \n      \n        airdrop &nbsp;Gleam form where everyone gets to share the prize pool. The pool os $2500 IOTX. You need to download the Coinhub wallet to participate.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BChat Airdrop\n      \n      \n        airdrop &nbsp;You need to download the BChat Web3 Messenger and complete a bunch of Gleam tasks to enter. Everyone who completes all tasks gets 50 BDX. Additional fat bonuses promised for shilling.\n          &nbsp;\n      \n      \n        until 3 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       STEP launch (BSC) airdrop\n      \n      \n        airdrop &nbsp;Total Rewards: 50.000 $STL for 1000 users (Random). You just need to join with BEP20 address and follow a few accounts.\n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Happy Rise HARI Airdrop\n      \n      \n        airdrop &nbsp;Happy Rise is a new gambling platform on the BSC. Prize pool is 50,000 USD worth in $HARI to 10k random participants of the Gleam form. \n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Metawear (BSC) Airdrop\n      \n      \n        airdrop &nbsp;Around 10 Million $WEAR (more than $20,000) Will be released at this event to randomly drawn Gleam participants.\n          &nbsp;\n      \n      \n        until 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Holonus AMA Airdrop\n      \n      \n        airdrop &nbsp;Holonus is hosting an AMA on Telegram on 28 Jun 4PM UTC+8. To promote the event, they are adding an airdrop to it. 25 lucky winners will get 500 USD worth of tokens. See pinned message in the Telegram linked.\n          &nbsp;\n      \n      \n        on 28 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       POZ Airdrop on Twitter\n      \n      \n        airdrop &nbsp;Tokens of a P2E game Pozzle Planet. Like, RT, follow 2 accounts and comment your ETH address to take part in the 3000 $POZ airdrop. \n          &nbsp;\n      \n      \n        28 Jun - 30 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       bWorker Airdrop\n      \n      \n        airdrop &nbsp;Telegram airdrop that gives 4 BWP (4 USD) to 4000 random participants. You just need to follow a few accounts. It's a pretty generic looking farming scheme though.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Indigo protocol second airdrop round\n      \n      \n        airdrop &nbsp;Total of 175 000 INDY tokens is earmarked to be allocated to help support Indigo DAO Governance. These INDY tokens are planned to be distributed to wallets that are staked with a pool that’s part of the Cardano Single Pool Alliance (CSPA). List of all qualified pools in the join link.\n          &nbsp;\n      \n      \n        to stakers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoMeda NFT Airdrops\n      \n      \n        airdrop &nbsp;Cryptomeda distributes 20 NFT game characters as a weekly lottery to stakers on their network. The current lottery character is always published under 'lottery of the week'.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Cactus exchange airdrop\n      \n      \n        airdrop &nbsp;Pays up tp to 48 CACTT (~$50) for following a bunch of things or 1,200 CACTT (~$1,250) for the top 100 referrers. cactus exchange is a new DEX and security audit is ongoing but not yet finished, so don't use your main wallet.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chains.com vCHA Giveaway\n      \n      \n        airdrop &nbsp;Sign up at the NFT launchpad / exchange at chains.com and instantly get 200k vCHA tokens. You gain more tokens for tasks once you've signed up - up to 1 million vCHA.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LocalCryptos giveaway 250 USD Amazon gift card\n      \n      \n        airdrop &nbsp;LocalCryptos are asking for user feedback via a Typeform. Responding enters you into a draw for 250 USD gift cards. You must have an account at LocalCryptos - make one here if you don't.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Slingshot Finance NFT airdrop\n      \n      \n        airdrop &nbsp;Slingshot finance is a new Web3 platform that airdrops NFTs and tokens to people for referrals.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitget Giveaway\n      \n      \n        airdrop &nbsp;Bitget listed AFK token in their innovation zone. If you now deposit over 3.2k tokens, you will receive 300 AFK bonus.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stacked Waitlist $25 Gift\n      \n      \n        airdrop &nbsp;Join the waitlist at Stacked Portfolio platform and get $25 worth of tokens to invest in crypto once the platform launches.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BitMart Welcome Bonus (up to 3k USD)\n      \n      \n        airdrop &nbsp;All subject to a lucky draw. There's a welcome bonus draw of 500 USD, up to 1500 USD for your first deposit and a trading bonus afterwards.\n          &nbsp;\n      \n      \n        3 tasks\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Wombat Exchange DEX airdrops\n      \n      \n        airdrop &nbsp;The Binance launchpad supported DEX called Wombat Exchange is incentivizing users to join via $WOM airdrops. According to their tweets, all LPs who join the beta app are eligible for airdrop.\n          &nbsp;\n      \n      \n        to farmers\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Proof of Swap (BSC) DEX Airdrop\n      \n      \n        airdrop &nbsp;Complete Twitter tasks via Google form to take part in a huge $POS airdrop. Over 20k random winners, total pool 100k POS. Proof of Swap is a Brazilian DEX, all their accounts are brand new, DYOR.\n          &nbsp;\n      \n      \n        until 10 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Binance.us removed spot fees for BTCUSD\n      \n      \n        airdrop &nbsp;KYCd users can now trade Bitcoin with zero fees on Binance US.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex REVO Workshop\n      \n      \n        airdrop &nbsp;Take a Revo themed quiz at Phemex to get a share of 5000 REVO (~6000 USD) pool. If you answer all 5 questions right, you qualify for the reward. There is a first-come pool and then a larger pool for all participants who qualify. Join link takes you to the promo details.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Telegram Promo\n      \n      \n        airdrop &nbsp;Join Phemex on Telegram and enter via a Gleam form. If you get referrals you gain a chance to get a 200 USD prize.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LOOKI (BSC) airdrop\n      \n      \n        airdrop &nbsp;Complete tasks in Google form to get paid. Everyone eligible gets paid 1000 LOOKI (10 USD) plus there is a small referral bonus.\n          &nbsp;\n      \n      \n        until 29 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Coinhub and MSC Airdrop\n      \n      \n        airdrop &nbsp;A short Gleam form that enters you to the draw. The reward is 200 $MSC for each of the 1250 lucky users.\n          &nbsp;\n      \n      \n        until 28 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CoinEx (TRX) Airdrop\n      \n      \n        airdrop &nbsp;Follow a bunch of accounts via Gleam to get a chance in the draw. It's 2000 people who will get paid 15 TRX each.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       REVO Airdrop\n      \n      \n        airdrop &nbsp;Complete simple social tasks and submit via Google form. 100 winners will share $4000 REVO. You need to make an account on LBank exchange to receive the airdrop.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AvaxPad Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop with referral bonus. 2000 Random Lucky hunters will get reward 8 USD in 4 $APA.\n          &nbsp;\n      \n      \n        until 25 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       PAXO Finance Testnet Bounty\n      \n      \n        airdrop &nbsp;PAXO is a Polygon app that is doing a testnet run of its automated market making solution. To incentivize people to join, they will pay out 200k tokens to 200 random users who join the testnet and provide feedback.\n          &nbsp;\n      \n      \n        until 27 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Green Uni Network Airdrop\n      \n      \n        airdrop &nbsp;First come first earns, this airdrop pays to 10k first users. Each will earn ~22 USD for a few tasks in Google Form.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JSC token (SOL) Airdrop\n      \n      \n        airdrop &nbsp;First 10K users who complete social tasks via Google Form will get the airdrop of the new meme token on Solana. Pool is 300K tokens.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       JAPE (SPL) airdrop\n      \n      \n        airdrop &nbsp;First in first served capped airdrop. The NFT art production JAPE gives 2 USD (in USDC) to the first 5k participants. It's just following and retweeting.\n          &nbsp;\n      \n      \n        limited\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Sunrise Gaming Airdrop\n      \n      \n        airdrop &nbsp;Promises 66 USD per winner but it's a lucky draw to only 15 users. You just need to follow and view a bunch of things via Gleam.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Hyperfinance (BSC) Airdrop\n      \n      \n        airdrop &nbsp;The project, hyperfinance.quest, is a defi charity. Google form airdrop of CHRT token to pay 70 USD worth - use referral ID @shoptawk. Token is not listed on exchanges yet but will be on Jun 20 on MEXC.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       GloDAO Airdrop\n      \n      \n        airdrop &nbsp;Airdrop with a big referral bonus. There is a bunch of missions to choose from inthe join lik. In each, there are 100-1000 prizes, pools usually around 10k USD worth. Twitter-based tasks.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Galaxy Project Airdrop\n      \n      \n        airdrop &nbsp;Simple gleam form to follow 4 accounts, pays to everyone. You get small NFT-based prize, no tokens.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       NEST (BSC) Airdrop\n      \n      \n        airdrop &nbsp;NEST Protocol is a decentralized price oracle network deployed on ETH, MATIC, BNB and KCC. They run a Telegram airdrop that pays for following a few things.\n          &nbsp;\n      \n      \n        until 19 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Chee Finance Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that pays $CHEE tokens for three simple social tasks.\n          &nbsp;\n      \n      \n        until 20 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Twitter SOL Airdrop\n      \n      \n        airdrop &nbsp;Follow the linked account, like, retweet and tag 3 people. Within 24 hours, 2 random winners will get 1 SOL each.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       B4REAL (MATIC) Giveaway\n      \n      \n        airdrop &nbsp;3000 random participants from a Gleam form get paid. Pool worth 50k USD, smallest prize is 200 USD. You just need to visit a few things and retweet.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Stumble Finance Airdrop\n      \n      \n        airdrop &nbsp;The pool for this campaign is 1 MM $STB, total worth of 50k USD. It's a Google Form that wants you to do a few tasks on Twitter. Distributes one day after the airdrop closes.\n          &nbsp;\n      \n      \n        until 17 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex KAVA coin flip\n      \n      \n        airdrop &nbsp;Phemex has listed KAVAUSD, and they are launching Coin Flip with KAVAUSD to promote it. It's a guess&amp;win event! Guess the price direction of a perp contract to win.\n          &nbsp;\n      \n      \n        until 16 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       StepApp Metaverse Airdrop\n      \n      \n        airdrop &nbsp;FitFi airdrop. The first project built on this protocol is a gamified step app. You and your metaverse avatar advance together. \n          &nbsp;\n      \n      \n        until 15 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AscendEx Lucky Draw\n      \n      \n        airdrop &nbsp;Sign up for the event from the join link and make trading volume of at least 500 USDT to be eligible to join the lucky draw. 200 users will be chosen and each will receive 30 USDT worth. The remaining users (except those 200) will have a chance to equally share in a 4,000 USDT prize pool.\n          &nbsp;\n      \n      \n        until 15 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       LATOKEN CVSHOT Airdrop and Bonus\n      \n      \n        airdrop &nbsp;Complete tasks and get 0.014 CVSHOT tokens and spread great technology. It’s free, very easy, and powerful.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Math Wallet Giveaway\n      \n      \n        airdrop &nbsp;Math Wallet launches the support of Unstoppable Domains. They promote it by giving away $200,000 Unstoppable Domains credits. Unstoppable Domains is building Decentralized Digital Identities for the world. Use NFT domains as your: Universal username across apps and websites, Website URL, Payment address for wallets etc\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bittorent Discord Airdrop\n      \n      \n        airdrop &nbsp;Tron DAO community is running a giveaway with a prize pool of 800,000,000 BTT for all participants. To be eligible for the airdrop, join the Discord via gleam, do 2 twitter tasks and share your TRX20 address. Additional giveaway in Discord.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex offers 3 new tokens at a discount\n      \n      \n        airdrop &nbsp;Subscription prices are released for Gays Inu (LGBTQ), WealthSecrets (WSC) and Ecoinomy (ECM). Sign up at Bitforex and head over to the Announcements.\n          &nbsp;\n      \n      \n        10 Jun onwards\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Grid Bounty\n      \n      \n        airdrop &nbsp;Bounty with 10k USDT and 50k GRN token pool for social media posting and blogging. Token runs on a modified PoS algo (POS2). Needs bitcointalk proof of registration.\n          &nbsp;\n      \n      \n        until 18 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Armaldia Airdrop\n      \n      \n        airdrop &nbsp;Lucky winners get rewards from a Gleam form. The total of 25 participants will get 60 USDT each and 10 participants will get 50 USDT each. Rest of the winners will get NFTs that encode a plot of land.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Haileys NFT TRX Airdrop\n      \n      \n        airdrop &nbsp;Pool of 30k TRX to 2k random winners in a Gleam form. You just have to follow a bunch of accounts.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Yobit FUSD Airdrop (BSC)\n      \n      \n        airdrop &nbsp;YoBit gives away up to 4700 $FUSD (~$100) to each new user who signs up and completes a few simple tasks. Signup without KYC gives 300 $FUSD, more rewards come for shilling on Twitter or trading. More info in the join link.\n          &nbsp;\n      \n      \n        until 10 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       AREA Metaverse airdrop (100k pool)\n      \n      \n        airdrop &nbsp;AREA tokens from a pool of 100k worth are airdropped to 2000 users in a Gleam form. The project is developing a technology for virtual land deals in NFT.\n          &nbsp;\n      \n      \n        until 10 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       TagSpace USDT airdrop\n      \n      \n        airdrop &nbsp;Complete tasks in Gleam form to get a chance on 20 USDT via TRX. It's $20 for 100 randomly picked participants and shill bonus. \n          &nbsp;\n      \n      \n        until 11 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Platon Bitkeep Airdrop\n      \n      \n        airdrop &nbsp;Airdrop organized by PlatON &amp; BitKeep. They provide $2,500 token pool for this event.Your airdrop address must be a BitKeep wallet PlatON address.\n          &nbsp;\n      \n      \n        until 11 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MARSH airdrop to stakers\n      \n      \n        airdrop &nbsp;Unmarshal runs a native staking contract. To promote it, the contract is set up to airdrop extra reward to all stakers. The pool is 500k $MARSH (~$140k). The promo runs for 90 days but the staking lock is only 7 days at a time.\n          &nbsp;\n      \n      \n        until 11 Jul\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CryptoCitizen bounty (CCASH)\n      \n      \n        airdrop &nbsp;CCASH runs classic marketing bounty with a pool of 15k BUSD. Signatures, Twitch, Insta, Twitter. Backed by OKEX and KuCoin.\n          &nbsp;\n      \n      \n        until 14 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Light DeFi &amp; BitKeep Airdrop\n      \n      \n        airdrop &nbsp;You need a Bitkeep address to participate. The pool is 3.5k $LIGHT tokens. Other than that it's just following a bunch of accounts.\n          &nbsp;\n      \n      \n        until 12 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       RacersUtopia (BSC) Airdrop\n      \n      \n        airdrop &nbsp;A P2E game that airdrops tokens for promo. Reward 100 USD worth for 1000 winners, and shill promo.\n          &nbsp;\n      \n      \n        until 9 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       EGO airdrop (20k ADA pool)\n      \n      \n        airdrop &nbsp;EGO platform airdrop is a simple social airdrop through Hyperfyre form (similar to Gleam). You need to follow a bunch of accounts. Top users will get 150 ADA each, the rest is randomly drawn. Not everyone gets paid - it is a draw - but the pool is 20k ADA.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Outlanders NFT airdrop (1000 USD worth)\n      \n      \n        airdrop &nbsp;A Gleam form where you have a chance to win 1000 USD worth of NFT land. It's 500 winners for simple tasks and follows.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Neopharm\n      \n      \n        airdrop &nbsp;Pool of 500,000 NPH (~10k USD) and 25 NFTs goes to 250+25 lucky giveaway participants. Simple tasks via Gleam.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Kuwallet Waitlist\n      \n      \n        airdrop &nbsp;KuCoin's Kuwallet offers early access with promos for siging up for the waitlist with your email.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Optimism (OP) listings\n      \n      \n        airdrop &nbsp;The Optimism token was listed at FTX.com (International) in spot and perp on 1 Jun. This is just a note that if you can't trade there, the no KYC exchange Bitforex listed OP too on the same day.\n          &nbsp;\n      \n      \n        1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       WhisperMSG Escrowed Bounty\n      \n      \n        airdrop &nbsp;50k USD pool in $VOLR with escrow. Shilling on YouTube, Twitter, articles. Has minimum follower amount to participate.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       UnitedCrowd (BSC) Bounty\n      \n      \n        airdrop &nbsp;50k USD pool of tokens mostly for Bitcointalk (Twitter gets 20% of allocation). The token belongs to a fintech app creating an ecosystem.\n          &nbsp;\n      \n      \n        until 5 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       New Bitforex DeFi Pool\n      \n      \n        airdrop &nbsp;Use referral code 2630874. The non KYC exchange Bitforex announced a new round of DeFi Pool. The yield-generating pool will be launched on 27th May 2022 where 30-day and 60-day fixed-term locked savings products will be available for BTC, ETH and USDT. Annual rates are up to 13% for 60-day USDT pool.\n          &nbsp;\n      \n      \n        launch May 27\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Phemex Deposit Dazzle (up to 4500 USD, everyone gets paid)\n      \n      \n        airdrop &nbsp;The Deposit Dazzle is back and this time with double the reward. The rules are simple - there is a bonus for everyone who deposits at least 0.005 BTC and at least 200 USDT and move each into their trading account wallet. No trading required, but your bonus will be lower if you withdraw before the distribution. Bonus is proportional to the amount you deposit - more in the join link.\n          &nbsp;\n      \n      \n        until 1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Monaco Weekend at ByBit\n      \n      \n        airdrop &nbsp;Gleam form where 50 lucky users will win an equal share of Bybit's $5,000 BIT prize pool. You need to be a registered user at ByBit.\n          &nbsp;\n      \n      \n        until May 31\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       KaraStar Airdrop\n      \n      \n        airdrop &nbsp;KaraStar giveaway paus 1000 KARA tokens for three simple follows in a Gleam form.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       FANTO Airdrop (1000 FTN each)\n      \n      \n        airdrop &nbsp;The new social token of South Korean platform FANTO is running a Gleam airdrop for almost nothing. You just need a wallet address of Kaikas wallet. It is a draw though, not everybody gets paid.\n          &nbsp;\n      \n      \n        until 1 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       CEX.io 3k USD Giveaway\n      \n      \n        airdrop &nbsp;CEX is running a Gleam giveaway with prizes between 100-500 USD per winner (randomly drawn, no referral bonus). CEX.io is one of the very tightly regulated crypto platforms. They offer a staking program which can earn up to 23% APY on coins like KAVA.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Piratera (BSC) Airdrop\n      \n      \n        airdrop &nbsp;An easy Gleam airdrop. Reward is 50 NFT boxes for following a couple of accounts.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       MonsterCity MCG Airdrop\n      \n      \n        airdrop &nbsp;The P2E game MonsterCity wants you to follow them on social. The payout is 10USD up to the total of 10k participants.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Empireland airdrop (750k USD pool)\n      \n      \n        airdrop &nbsp;Empireland is a new NFT game built on Fantom Chain. 30,000,000 EPL tokens (equivalent of $750,000) is allocated for the airdrop event. You need to conteibute to community on social or in game, or you need to hold their NFTs to be eligible.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Koi Metaverse Airdrop\n      \n      \n        airdrop &nbsp;A Gleam form that just wants you to join the Telegram group. you'll be able to claim a badge once the campaign ends, which will qualify you for a $KOI airdrop.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Bitforex (all get paid) win 1 BTC by trading 10 USD of BTC\n      \n      \n        airdrop &nbsp;As another way to celebrate the Bitcoin Pizza day, Bitforex runs a lucky draw on all registered users who will net 10 USD or more traded volume on BTCUSDt market on the non KYC spot exchange. There's no form needed to fill, just make the trade. All participants get a 10 USD bonus for the perp market, one lucky winner will get 1 BTC.\n          &nbsp;\n      \n      \n        🍕 22 May - 29 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Lezme Airdrop\n      \n      \n        airdrop &nbsp;A new metaverse project that promises to airdrop tokens via a Telegram bot. Pool of 10k USD worth goes to 2k random users.\n          &nbsp;\n      \n      \n        until 30 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Playgrid Airdrop\n      \n      \n        airdrop &nbsp;Gleam airdrop and referral bonus that gives rewards in collectibles.\n          &nbsp;\n      \n      \n        until 30 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Terra airdrop for the revival\n      \n      \n        airdrop &nbsp;The Terra revival plan officially passed. The old Terra chain will be discarded but holders of LUNA and UST will receive an airdrop of the new chain, which will have different tokenomics and fixed supply. More here. FTX and Bitforex fully support the airdrop to LUNA and UST holders.\n          &nbsp;\n      \n      \n        snapshot May 26th\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Independent Reserve lists SOL\n      \n      \n        airdrop &nbsp;The Aussie exchange Independent Reserve lists Solana as a spot market for AUD, NZD, SGD and USD. The coin was previously available for OTC only. As always with new listings, there is the introductory fee for SOL of 0.2% for two weeks. That makes it until 31 May.\n          &nbsp;\n      \n      \n        until 31 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Choise Airdrop\n      \n      \n        airdrop &nbsp;Choise gives away 3% of the CHO total supply to people who install the Crypterium app. Ongoing airdrops for CHO holders will follow. Choise is a MetaFi (CeFi/DeFi) ecosystem based on Crypterium CeFi solutions and the Charism DeFi protocol.\n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       DecentraWorld Early Adopters Airdrop\n      \n      \n        airdrop &nbsp;DeWo is going through an IKO (initial kommunity offering) right now. Early adopters will get extra token airdrop. \n          &nbsp;\n      \n      \n        live\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Ravendex bounty and airdrop\n      \n      \n        airdrop &nbsp;Pool of $15k worth of DEX tokens of a Cardano ecosystem. Requires reports, checked weekly. Twitter, Telegram, YT, blogs and an extra airdrop to token holders.\n          &nbsp;\n      \n      \n        until 3 Jun\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       BicycleFi Airdrop\n      \n      \n        airdrop &nbsp;A Telegram bot that wants you to follow a few things. Reward is 300 BCF without referrals. BicycleFi is a Web3 lifestyle app with Social-Fi and Game-Fi elements. Users equipped with NFT Bicycles - walk, jog or run outdoors to earn tokens.\n          &nbsp;\n      \n      \n        until 28 May\n      \n      \n        (link)\n      \n    \n    \n    \n      \n       Technoland Airdrop\n      \n      \n        airdrop &nbsp;The pool is 5000 USD in $TCH tokens for a Gleam form. Tokens go to 200 winners and there will be an extra bonus reward.  TechnoLAND is a project where you can reach all electronic devices by shopping on the Metaverse.\n          &nbsp;\n      \n      \n        until 28 May\n      \n      \n        (link)\n      \n    \n    \n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
-      id: 290
+      id: 295
     });
     
   
@@ -2931,7 +2981,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 291
+      id: 296
     });
     
   
@@ -2941,7 +2991,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 292
+      id: 297
     });
     
   
@@ -2951,7 +3001,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-strategy"],
       tags: null,
       author: "ATNET",
-      id: 293
+      id: 298
     });
     
   
@@ -2961,7 +3011,7 @@ var idx = lunr(function() {
       category: ["crypto-technical-analysis"],
       tags: null,
       author: "ATNET",
-      id: 294
+      id: 299
     });
     
   
@@ -2971,27 +3021,27 @@ var idx = lunr(function() {
       category: null,
       tags: ["hidden"],
       author: "ATNET",
-      id: 295
+      id: 300
     });
     
   
     this.add({
       title: null,
-      content: "\n\n  \n    \n    \n    https://www.altcointrading.net/\n    \n      https://www.altcointrading.net/img/logo.jpg\n      \n      https://www.altcointrading.net/\n    \n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n    Jekyll v4.2.2\n    \n    \n      \n        \n        \n        Altcoins, which refer to digital currencies or cryptos other than Bitcoin (BTC), are becoming more popular since they’re more affordable than BTC. They make up most of the supply in the crypto market, and many investors and traders use them because of the opportunity to get high returns. However, investing in altcoins has risks, so it’s best to understand and check the trend before investing your hard-earned money into it.\n\nOnce you’re knowledgeable about the industry, you may want to start making money with altcoins. Here are a few tips that can launch you into the world of cryptocurrencies.\n\n\n  \n    Try Play-to-Earn Crypto Games\n\n    Play-to-earn crypto games are one of the ways to earn crypto when you have none to start with.\n\n    A perfect onramp, the so-called P2E games have introduced billions of dollars to digital assets that gamers can buy, earn, and own. As its name suggests, gamers can earn altcoins, cards, skins, and other valuable in-game assets by engaging in play-to-earn crypto games.\n\n    By choosing the best play to earn games, you can collect more altcoins or in-game assets, which can translate to high revenue. After earning the altcoins from these games, you can transfer them into your crypto exchange wallet or platform. Then, you can sell it in the market for real money or another cryptocurrency. By doing this, not only are you enjoying playing games, but you’re also earning from it.\n  \n  \n    Consider Staking\n\n    Another way to earn from altcoins is to collect fees and interest from holding a cryptocurrency in your account. This is more technically known as staking.\n\n    When blockchain validators facilitate transactions, you’ll receive payment from them through fees. For instance, when you keep an altcoin in your account, you’ll receive an annual interest rate depending on what that altcoin offers. Generally, your earnings can range from 0.15% to 6% per year.\n\n    While this may be inviting, you still need to check the contract terms for better and safer transactions. Some altcoins or mainstream crypto dealers require you to lock your account for a specific period, which means that you may be unable to withdraw or deposit whenever you want. Moreover, some may set a minimum amount before you can draw interest from the altcoins.\n  \n  \n    Buy And Sell NFTs\n\n    Here, the concept is simple in theory but risky in practice.\n\n    You only need to buy an NFT at a lower price, hold it until its price goes up, and sell it when you are sure to make profit. However, it is not guaranteed that the price will indeed go up. Also, there are stories of even very expensive NFTs vanishing from people’s OpenSea accounts - and not through a heaist.\n\n    Still, buying and selling altcoins or NFTs is a convenient way to earn because you can do it anytime and anywhere since crypto transactions don’t require third-party interventions. All you need is a registered account with a crypto exchange platform to buy and sell in its market.\n\n    Before buying any token, you need to weigh the pros and cons. Don’t settle for the cheapest option. Instead, focus on the value and how it affects its trading environment. They’re more likely to become more valuable if it has a concrete project or mission. Once you guarantee if a token is worth the investment, go ahead and buy.\n  \n  \n    Venture Into Day Trading\n\n    One of the most profitable ventures that you may also want to try is day trading. To become profitable in this arena, you must have the proper technical and analytical skills. This means you need to know how to analyze the altcoin’s performance through their charts. By understanding the price movements of the altcoins, you can better decide what trading position to make.\n\n    Trading positions include going short or long. It means you’ll place a short position if your technical analysis anticipates the altcoin price going down. On the other hand, you’ll be placing a long position if your analysis shows that the price will increase. If your bet or position is correct, you’ll earn a considerable profit. However, remember that you could also lose your money if your analysis goes south. That’s why learning to conduct technical analysis is vital to becoming a profitable altcoin trader.\n\n    The advantage of day trading is that you don’t have to have thousands of dollars as capital when starting. You can begin on an amount you’re willing to lose in the market. Especially if you also know how to conduct fundamental analysis, you can use it together with technical analysis to improve trading positions.\n\n    Moreover, you don’t have to hold your altcoin for a long time and wait for its price to go high before you can sell it to earn. Whatever the price of the altcoin is, you can earn by trading as long as your technical analysis is correct.\n  \n\n\nConclusion\n\nMaking money with altcoins is still feasible these days, as long as you know what you’re doing. Start by finding an altcoin or an NFT with an excellent value proposition, so you can buy or invest in a token that could stay valuable for years.\n\nThen, choose whether to stake, trade, or play crypto games that could give you some sizable revenue. Whatever path you end up choosing, the right mindset and exceptional analytical skills can lead you to success in crypto investment.\n ]]>\n        \n        \n        Mon, 19 Dec 2022 19:52:00 +0000\n        https://www.altcointrading.net/beginner-ways-to-earn-altcoins-for-2023/\n        https://www.altcointrading.net/beginner-ways-to-earn-altcoins-for-2023/\n        en\n        \n      \n    \n      \n        \n        \n        It’s no secret that Elon Musk is a fan of cryptocurrencies. Dogecoin, the meme currency which was created as a joke in 2013, eventually grabbed the globe by storm in 2021. At the time, its value increased from less than a cent to an all-time high of $0.74 in May 2021, and Musk and his fame were part of what drove the price up.\n\nIf a crypto payment system is on the cards for Twitter 2.0, then the cheap and straightforward token which Musk already greenlit for payments in Tesla merchandise, is possibly a strong contender. Whether or not you choose to trade cryptos like Dogecoin, be sure to choose a broker you can trust, such as Easymarkets, to make your trading experience as simple and convenient as possible.\n\nTwitter 2.0\n\nSince Musk took over Twitter, it’s been widely reported as being anything but smooth sailing. In a tweet in early November, he commented, “Please note that Twitter will do lots of dumb things in the coming months. We will keep what works and change what doesn’t.” Indicating that much of what might happen with the platform in the near term is part of an experimental brainstorm and will eventually change.\n\nThe plans for the new version of Twitter, which Musk says will turn the platform into the “everything app,” were presented to an internal staff meeting and then shared publicly on the platform in late November. In the slides were plans to introduce functions like direct messaging, a long-form tweets option, and a payments system.\n\nThe slide regarding payments was vague, but if Musk’s past comments are anything to go by, and the fact that Tesla also accepts Doge for payments of merchandise, we can assume he’s keen to look into the meme crypto as an option.\n\nThe future of Dogecoin\n\nDogecoin’s price is now over 80% below where it traded in early May 2021, but with an $11.6 billion market valuation, it is still the ninth-largest cryptocurrency on the market at the time of writing.\n\nUnlike Bitcoin, there is no lifetime supply cap, and 5 billion additional coins are added every year. Instead of a digital asset to be kept in reserve as an investment, founders Palmer and Markus intended to develop a free-flowing currency.\n\nIn other words, Dogecoin, consistent with the joking spirit that led to its creation, was made specifically to be a bad long-term investment.\n\nA worthwhile buy?\n\nMarkets do not always strictly adhere to logic and so Dogecoin is still a popular and valuable cryptocurrency these days, despite its many drawbacks.\n\nMeme fans and investors who don’t mind taking risks love it. Remember, this is still a meme coin, and it displays crazy volatility that is often moved by posts on social media and casual comments from famous people.\n\nIt makes a bit of sense to add a few Dogecoin tokens just in case the price takes off once again if it comes on board with Twitter. It’s still difficult to consider Dogecoin a serious investment, though, so don’t purchase more than you’re willing to lose.\n ]]>\n        \n        \n        Mon, 19 Dec 2022 14:02:00 +0000\n        https://www.altcointrading.net/will-elon-accept-doge-payments-twitter/\n        https://www.altcointrading.net/will-elon-accept-doge-payments-twitter/\n        en\n        \n      \n    \n      \n        \n        \n        Cryptocurrency can either make you very rich or very poor. Over a decade, it became synonymous with six-digit monthly profits and millions of losses weeks later. It’s extremely volatile.\n\nThere’s a golden rule regarding cryptocurrency investments:\n\nNever invest more than what you are prepared to lose.\n\nWithout wasting time, let’s ask the real question: should you start investing in cryptocurrency? The short answer is: not at this time. Not just months after the crash of Terra and its stablecoin UST. And, most definitely, not after FTX came out being nothing more than a scam.\n\nHowever, it doesn’t mean the cryptocurrency is doomed. It will likely have a significant role in future economics. We could even see a revitalization of crypto in the first or second quarter of 2023. It saw a spiking interest in 2021, with NFTs and metaverses catching everybody’s attention. Only to fall flat early this year with Justin Bieber’s bored apes losing 95% value and Mark Zuckerberg struggling to produce a ten billion dollar avatar that would not look like from an early 2000’s video game.\n\nThe Dangers of Investing in Crypto\n\nThe value of cryptocurrency depends on trust. Unlike national currency or fiat money, it doesn’t have governmental protection. Moreover, the lack of government or bank involvement is one of crypto’s selling points. After all, banks profit from thin air, which is called currency exchange fees. And the failure of worldwide governments regarding the 2008 housing bubble crisis speaks for itself.\n\nThe idea of monetary independence is an exciting theory worth further development. At the same time, it’s a risky practice that has already wasted billions of consumer investments. Let’s take FTX as a beau ideal of cryptocurrency failure.\n\nFTX was a cryptocurrency exchange giant valued at 32 billion dollars at the beginning of this year. Superstars like Shaquille O’Neal and Tom Brady helped to push it to public view. Meanwhile, esports teams and Miami arena put the FTX name tag.\n\nTo put a long story short, bitfinex proved to be a scam run by, according to Fortune’s article, “a gang of kids in the Bahamas’ who all dated each other.” Right now, at least 1 billion of FTX’s user money is missing, with people unable to withdraw their investments.\n\nAs bizarre as this story sounds, it’s an illustrative example of cryptocurrency dangers. The lack of laws and regulations made FTX possible, with no one overseeing the fragile operation. Moreover, bitfinex users have little to turn to without a lawful base.\n\nCrypto scams and global financial fluctuations are not something cryptocurrency can handle in this state. However, there are several steps you can take to maximize the security of your investments.\n\nHow to Invest in Crypto the Right Way\n\nFirstly, always remember the mentioned golden rule: never invest more than what you are prepared to lose. FTX looked like a legit profit opportunity having so many celebrities contributing to their PR. Its rapid downfall came as a shock to everybody. However, only the people who put their trust blindly suffer the devastating consequences.\n\nTo avoid this, get to know what you’re dealing with very well. Getting into cryptocurrency is easy, but profiting from it is harder. A new cryptocurrency pops out each month, and all of them will promise to triple your investment. It’s up to you to keep a close eye on promising ventures and avoid scams.\n\nKeep in mind that cryptocurrency is also a juicy target for cybercriminals. According to CNBC, hackers stole nearly $2 billion in cryptocurrency in the first half of this year. You must take care of cybersecurity if you plan to trade crypto.\n\nHackers frequently target crypto exchange websites and wallets, expecting unauthorized access. To avoid this, consider using a password manager to secure your accounts with unique and complex passwords. Many crypto traders take the safety of their wallets for granted, forgetting that cryptocurrency’s inherent security benefits on a blockchain do not protect against password dumping.\n\nLastly, keep a close eye on market volatility. Bitcoin or Ethereum exchange rates will be on your radar most of the time. But do not forget the global factors. Changes in electricity prices, microchip availability, and video card prices affect cryptocurrency just as much as anything else.\n\nTo summarize, 2022 was a disastrous year for cryptocurrency investors. However, renowned cryptocurrency businesses step out of the way to bring it back on track. It will have results, and crypto trading will flourish. But it’s up to everybody to learn from the lessons discussed in this article and start investing in cryptocurrency more responsibly.\n ]]>\n        \n        \n        Tue, 13 Dec 2022 09:02:00 +0000\n        https://www.altcointrading.net/dangers-investing-crypto-how-to-protect-your-stash/\n        https://www.altcointrading.net/dangers-investing-crypto-how-to-protect-your-stash/\n        en\n        \n      \n    \n      \n        \n        \n        If you are an entrepreneur, you are probably aware that you can invest money on behalf of your company. In the space of cryptoassets, the details vary between jurisdiction: In some you need to get a license, in others such as in the well-known digital hub Estonia, companies can trade on crypto markets with their own profits without any license.\n\nEither way, investing money on behalf of your company involves taking certain calculated risks. In that regard, you are very aware that every dollar counts and is important.\n\nSo, as the owner of a business, it might pay off to look into what kinds of financial investments you might make that will satisfy both criteria. Learning how to invest on behalf of your company so that it is more productive, lucrative, and competitive is an essential skill for any entrepreneur who wants to remain relevant and successful.\n\nAnd because it’s always good to diversify, let’s look at the two basic ways to invest your business profits to.\n\nInnovative: Cryptocurrency\n\nSome businesses choose to invest in cryptocurrencies to have exposure to the bleeding-edge of tech development. Some on the other hand choose crypto as an investment because they think that TradFi markets do not provide any good opportunities to invest in anymore.\n\nLegally speaking, the term “cryptocurrency” usually refers to any blockchain-based digital token, whether it is a currency or an app-token or an NFT. The laws have not really caught up with the intricacies of blockchain technology yet.\n\nIf you’re interested in investing in cryptocurrencies, you may purchase a crypto using either fiat money or other, larger cryptocurrencies such as Bitcoin, Ethereum or a stablecoin.\n\nIf you are well-versed in the technical side of holding crypto, then the easiest way is to have the transaction take place on a crypto exchange platform that allows users to take a look at the digital currency list and buy to hold or trade cryptocurrencies at their market prices worldwide.\n\nThere are also exchange traded funds and other TradFi products available for those who do not want to hold the actual crypto, though.\n\nTraditional: Stock Market\n\nThe traditional ways to invest made by business owners is investing in the stock market. The ownership of a company is typically broken up into thousands of shares that may then be bought and held or traded for financial gain.\n\nWhen you buy a share of a company’s stock on the stock market, you are investing a fraction of the overall profits and assets of that particular business. To be able to get an inside look at how the stock market operates, you regularly need to follow the latest stock market analysis and be in line with the latest developments with the companies that you consider investing in.\n\nYou can acquire and sell shares in various companies if you are an investor. You will be in a position to sell the shares at a higher price and grasp a profit if the value of the shares increases. In some circumstances, corporations will pay dividends to their shareholders, which is another option to make a profit if you decide to hold on to the shares you’ll eventually get.\n\nFinal Thoughts\n\nIt’s important to remember that there are now multiple ways to start investing, and each approach has its own unique benefits. While some of these might seem a bit risky, they only require small investments of your time and money. So don’t let those factors scare you away. Consider giving them a try today and see where it leads you.\n ]]>\n        \n        \n        Thu, 08 Dec 2022 12:52:00 +0000\n        https://www.altcointrading.net/2-types-investment-divest-business-profits/\n        https://www.altcointrading.net/2-types-investment-divest-business-profits/\n        en\n        \n      \n    \n      \n        \n        \n        Hero image: VTrend - Volume and EMA based TradingView script\n\nTrading is all about making good-enough predictions. You buy a crypto asset, believing that the price will go up in the future. You sell it, believing that the price will go down in the future. It’s as simple as that. But making directional predictions is not easy, as we’ve seen in 2022 with 3AC and FTX.\n\nTo make money trading, you need to have an edge over the market and information and analysis that other traders don’t have. Some of these are technical indicators, which measure historical prices and volume data to help you understand what is happening in the market right now. However, there are many other types of information and analysis that you can use to make your predictions.\n\nSo, as much as the world of finance loves to scoff at technical analysis, the fact is that it works. Let’s now look at six of the most important technical indicators every trader should know about.\n\nNotice the Patterns\n\nPatterns are, simply put, shapes on a chart that represent supply and demand levels in the market. These can be anything from double tops, triple bottoms, head, and shoulders, breakouts, or pivots. Moreover, Candlesticks patterns like dojis, engulfing patterns, and harami are popular among traders because they provide insight into potential market momentum or direction. On the other hand, other patterns, such as support and resistance levels indicate areas where the market is likely to stall or reverse.\n\nSo, these patterns represent buying and selling pressure in the market and by recognizing these patterns, you can accurately predict where the price is headed.\n\nMoving Averages\n\nMoving averages are lagging indicators used to measure momentum in the market and smooth out any inconsistencies in the data. Trends are important in trading and understanding how strong or weak a trend is will help you make better decisions on when and where to enter, exit, or reverse your positions.\n\nMoving Average Convergence/Divergence (MACD) is one of the most widely used and reliable indicators that measure momentum by looking at the difference between two moving averages of security. If you want to identify a strong trend in the market, you can look for when the MACD line crosses above or below the signal line. One of the notorious long-term bearish crossovers on MACD is the squishy.\n\nRelative Strength Index (RSI)\n\nThe relative strength index, or RSI for short, is an oscillator used to measure the momentum of a security. It ranges from 0 to 100 and shows whether the asset is overbought or oversold. Generally speaking, when the RSI value is above 70, it indicates that the security may be overbought and when it is below 30 it may be oversold. However, you should use other indicators to confirm what the RSI is telling you.\n\nFor instance, if the RSI is close to 70 and the MACD is showing a strong uptrend, that could be a good time to buy. On the other hand, if the RSI is close to 30 and the MACD is indicating a downtrend, it may be time to sell.\n\nBollinger Bands\n\nBollinger bands are used to measure volatility in the market and provide insight into possible future movements of security prices. They consist of three lines that move up and down with a security price. The middle line is usually a simple moving average and the two outer lines are based on standard deviations from it.\n\nWhen the band’s contract, it indicates that there is low volatility in the market which could indicate a potential breakout in either direction. On the other hand, when the bands expand, it suggests that volatility is high and that the price could be headed for a pullback.\n\nOn Balance Volume (OBV)\n\nOBV is an indicator used to measure volume on both sides of the market, which makes the buying and selling pressure. It takes into account the volume of security traded on days when its price increased or decreased from the day before, as well as the total amount of trading volume over a given time.\n\nThe OBV can be used to confirm trend reversals, as well as identify potential buying and selling opportunities. For instance, if the OBV shows an uptrend when other indicators are indicating a downtrend, it could be a sign that the price could soon reverse direction.\n\nYou can also use it to confirm breakouts or support and resistance levels. If the buying pressure is increasing, it suggests that the current price trend could continue in the same direction.\n\nStochastic Oscillator\n\nThe stochastic oscillator is an indicator used to measure momentum in the market. It shows if a security’s closing price has been higher or lower than the price range over a given time\n\nIt is typically used to identify potential buying and selling opportunities, as well as confirm breakouts and trend reversals.\n\nFor instance, if the stochastic indicator shows that the security is overbought when other indicators are indicating a downtrend, it could be an opportunity to sell. On the other hand, if the stochastic indicator shows that the security is oversold when other indicators are indicating an uptrend, it could be a good time to buy.\n\n\n\nNo one indicator is perfect and you should not rely on any one indicator to make all your trading decisions. However, using a combination of these six can give you a better understanding of what is happening in the market and help you make more informed decisions.\n\nMake sure to practice using these indicators in a demo trading environment before implementing them in your real-time trading strategy. Doing so will help you get a better sense of how to use these indicators most effectively.\n ]]>\n        \n        \n        Sat, 03 Dec 2022 14:02:00 +0000\n        https://www.altcointrading.net/6-technical-indicators-to-know-forex-crypto/\n        https://www.altcointrading.net/6-technical-indicators-to-know-forex-crypto/\n        en\n        \n      \n    \n  \n\n",
+      content: "\n\n  \n    \n    \n    https://www.altcointrading.net/\n    \n      https://www.altcointrading.net/img/logo.jpg\n      \n      https://www.altcointrading.net/\n    \n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n    Jekyll v4.2.2\n    \n    \n      \n        \n        \n        The last couple of years have shown the true dangers of cryptocurrencies and some other intangible investments. The NFT bubble has pretty much burst, with the first major signs of topping out appearing in the second quarter of 2022. NFT sales fell by more than 90% between September 2021 and May of the following year.\n\nBitcoin and other crypto coins have seen dramatic rises and drops in value also. From a value of over $65,000 in 2021, bitcoin investors have seen the value drop to under $20,000 at certain times recently. Elon Musk has also almost single-handedly demonstrated how volatile crypto can be.\n\nMusk joked about Dogecoin on Saturday Night Live in May 2021 causing the value to plummet. Yet, in January 2022, Musk announced Tesla would accept Dogecoin, and urged McDonald’s and other vendors to follow suit. The result? A 15% rise in the value of that particular cryptocurrency.\n\nSimilarly, after Twitter was taken over by Musk, Dogecoin’s value rose again by 35%. However, Much of the news surrounding crypto has been negative, and this isn’t new. Even back in 2016, crypto was being exposed with the Bitfinex hack of $72 million. And now FTX is in the news following its spectacular crash.\n\nHow successful was FTX?\n\nFTX Trading Ltd. was founded in May 2019 by Sam Bankman-Fried and Gary Wang. More regularly referred to as simply FTX, this company rose in prominence extremely quickly. You could expect someone with the name Bankman to be somewhat good with money or trading, and SBF had already proved himself with his first venture; Alameda Research.\n\nAlameda was known for bitcoin arbitrage. This is buying the cryptocurrency on one exchange only to sell it on another to make a profit. Alameda became successful, and SBF was spurred on to create FTX.\n\nFrom May 2019 to July 2021, FTX grew so much that it became the third-largest crypto exchange in the world. With the promise of high yields, consumers flocked to FTX. Up to 1 million investors were using FTX at its peak, and it is reported that they were valued at $32 billion, but not for long. Then the dangers of investing in crypto really hit the news.\n\nWhat happened to FTX?\n\nIn November 2022, found itself in the position of having to file for bankruptcy. After countless users started withdrawing their funds, FTX started to collapse. The simple reason? FTX didn’t have enough assets to meet customer demand, and as the news spread, more investors tried to make withdrawals.\n\nThere have been some serious knock-on effects from the FTX collapse including positives as well as negatives. For instance, FTX helped push up the value of gold, silver, and platinum. But, it harmed other crypto exchanges.\n\nHow has FTX’s collapse affected trading in general?\n\nThe clearest damage that the FTX collapse did was to scare investors away from cryptocurrencies. The FTX Token or FTT’s value dropped like a stone following the collapse of the exchange, and this affected other altcoins such as Ethereum. Binance considered bailing out FTX to a degree but backed off quickly, and in November 2022, BlockFi filed for bankruptcy.\n\nIt was a few weeks after in December that Sam Bankman-Fried was arrested in the Bahamas. It is expected that the fallout from the FTX collapse will affect investments for years to come.\n\nIt is thought that many crypto exchanges may not be quite as healthy as previously thought, and this is likely to come out as the ramifications from FTX are felt in the coming months. One positive surrounding FTX’s failure is that there is likely to be more regulation put into place. This should make crypto investing safer and the investors themselves better protected.\n\nOne area that is seeing an upturn though is tangible investments. Precious metals have become more appealing after the drop in NFT sales, and the plummeting value of bitcoin.\n\nWhat does the FTX collapse mean for silver investment?\n\nGold rose by about 10% while crypto was falling, and FTX’s collapse has seen a significant change to the silver and platinum markets also.\n\nThe 4 most traded precious metals are gold, silver, platinum, and palladium. Silver has many uses in many industries, and is found in computers, solar panels, smartphones, and surgical appliances, and proved to be a popular investment in 2022, not least in India.\n\nAfter there was a drop in the value of silver in 2022, India started importing the metal at record rates. This was fuelled by a lack of silver reserves in the country, but also through a belief that silver would rise in value. Silver is less expensive than gold, and this makes it an appealing investment also.\n\nAlthough gold, palladium, platinum, and silver trades don’t go hand in hand, it was clear that the FTX fiasco had a marked effect on their values. Along the same timeline, all 4 precious metals saw a rise in value after FTX filed for bankruptcy.\n\nHow is silver looking as an investment in 2023?\n\nThe internet has made investing and trading simpler than ever, and now millions of individuals are trying day trading, and investing in crypto. Precious metals are also simple to invest in, and there are many websites devoted to them.\n\nA visit to a precious metal retailer such as SD Bullion will give access to gold coins and bars, silver, and platinum. These retailers will often offer other services involving investment and storage for silver.\n\nAs far as silver goes as an investment, it should be remembered that it can be volatile. The reason for this is that it is traded much less than gold, and is considered to have less liquidity. Nevertheless, silver has many things to recommend about it right now.\n\nShort-term gains on silver\n\nAs the fallout from FTX continues, the value of silver along with other tangible assets may carry on rising. Investment now could see some short-term gains. And yet, if the trust doesn’t return to bitcoin and crypto in general, silver may also be a good investment in the long term.\n\nIt is a hedge against inflation\n\nRecent times have seen huge inflation rises across the world. As fiat currencies lose their spending power, assets such as silver are less affected by inflation or interest rates.\n\nSilver works well as part of a portfolio\n\nWhen placed in a larger basket of assets, silver helps to make a diversified portfolio with less risk attached.\n\nSilver can go towards a retirement fund\n\nWhen set up correctly, you can add silver to an SDIRA to help with retirement. 1980 and 2011 saw huge surges in the value of silver, and silver reached an 8-year high in 2021. But, the value dropped in 2022 before FTX collapsed. The volatility of silver should be taken into account, but with a shortage of supplies, there is talk that 2023 could be a great year for silver investors.\n\nSummary\n\nThere is no doubt that the FTX bankruptcy filing had a hugely negative impact on the crypto world in general, not least on the investors who lost their money. This included not only individuals but financial entities also.\n\nThe coming months will see just how much more FTX will affect trades in general. But, it seems that tangible assets will become more favorable, and silver and gold have already been positively affected.\n ]]>\n        \n        \n        Mon, 16 Jan 2023 16:02:00 +0000\n        https://www.altcointrading.net/ftx-collapse-impact-silver-markets-2023/\n        https://www.altcointrading.net/ftx-collapse-impact-silver-markets-2023/\n        en\n        \n      \n    \n      \n        \n        \n        How did the cryptocurrency market develop in 2022? The first six months can hardly be called good. Thus, the exchange rate of ETH and BTC for fiat money decreased by about 50% (compared to last year’s historical highs). Experts believed that the market stagnated a bit but would improve, so far that has not materialized. Nevertheless, the digital currency retains its relevance.\n\nUsers read about Bitcoin cryptocurrency more often. You can find information about it on the page. A good explanation of the decentralized digital currency is given there. There is an emphasis on legality, which depends on the specific region. In some countries BTC is banned completely or indirectly. Officially, the digital currency is used in Iran to circumvent sanctions and in El Salvador.\n\nDecline in the Use of Digital Currencies\n\nWill digital currencies rise in popularity after their severe collapse?\n\nCentralized lending schemes have appeared, but they do not work that well in practice, as we’ve seen.\n\nExperts believe that with the right approach, there are still good chances though. Some companies will always act like banks, there just needs to be the right kind of regulation implemented.\n\nBut such lending in practice leads to one disadvantage. With a high percentage of borrowed funds, companies can go bankrupt quickly if the market turns.\n\nHolders can always wait for the turbulence to subside, but once you give your keys and lend your money, there are risks.\n\n\n\nAnalysts believe the digital currency could face significant problems over the next year, given the end of cheap money. Also, holders will be seeking to pay off their real-life debts which could worsen the outlook.\n\nTo maximize the growth of cryptocurrencies, it is still very necessary that they coexist with fiat ones. That makes it easier for investors to make predictions.\n\nWhich company is an important player in the long term? Which company will be stop hunted? Time will show. That’s why it’s important to keep in touch with the market conditions or consult with a financial advisor when building a portfolio.\n\nUsing Cryptocurrency to Play at the Casino\n\nOn the flip side, cryptocurrency is being used more and more often in virtual casinos, whose visitors want to keep their privacy. There are two types. In the first, this way of making a deposit is combined with the use of other payment systems. In the second, it remains the only one. The advantages include:\n\n\n  the possibility of playing from any location;\n  fast financial transactions;\n  no restrictions for transactions.\n\n\nA high level of security is ensured. There is no need to specify personal data, as transactions are anonymous. Bank requisites should not be entered.\n\nThe information is published on the page of Australian online casino, because gambling laws are tightened every year in this country. You can find reliable and safe virtual halls with the possibility of making a deposit in a convenient way on the website.\n\nThese include Fair Go casino in Australia, suitable for registering and playing with real bets. The site is in English, as it was developed by Australians. Another advantage is the user-friendly interface. The collection includes slots from RealTime Gaming. The minimum deposit is 20 USD. The license is issued in the jurisdiction of Curaçao.\n\nThe Future of Digital Currency\n\nThere are three nuances that make cryptocurrencies increasingly relevant. They are listed here:\n\n\n  Safety for investors\n  Unprofitable for fraudsters\n  Slacking government regulation\n\n\nLegislators from Washington, D.C., have noticed this. Some believe that the market needs to be adjusted, others on the other hand think that all crypto is gambling and should be just left alone to crash and burn under the weight of its own scams.\n\nOfficials often indicate the fall of the digital currency Terra Luna. This led (effectively) to the freezing of assets on other platforms which caused other collapses. Such a situation was considered to be a catastrophic event. So, understandably, the topic of regulation has become a hot topic for investors in all digital currencies.\n\nPeople need to feel confident and so news from regulators can affect the price. Another point is energy efficiency. It is taken into account when creating digital currencies using powerful computers that use extreme amounts of energy. While this would not be that much of a problem if crypto replaced finance, having two systems in parallel is going to cause some waves in a world where energy prices grow shockingly in response to geo-politics.\n\nSome people maintain that a digital currency investment should not exceed 5-10% of a portfolio. Maybe in the future it will be possible to pay with BTC for goods and services.\n\nBut that kind of thing is as good as a fairy tale for 2023 in most parts of the world, and even in countries with collapaing currencies, stablecoins are more popular for day-to-day payments.\n\n\n\nProspects for BTC\n\nBTC is an indicator of the whole digital currency market. It takes the first place in terms of capitalization. All other currencies that use blockchain technology are following in the fairway. The record was in November 2021. At that time, 1 BTC was selling for 68,000 USD. The year 2022 began with a drop in rates. The reason was the ongoing macroeconomic uncertainty. It was caused by:\n\n\n  fears of recession;\n  rising interest rates;\n  a shaky stock market;\n  growing inflation.\n\n\nAs a result, the BTC exchange rate has fallen to $17,500. Some experts argue that the bottom has not yet been reached. Therefore, the purchase is equated to a speculative investment, the profitability of which is impossible to calculate. What can affect the continuation of rapid growth? The first place is the popularity among sellers. It is important that they accept BTC for goods.\n\nDoes Ethereum Have a Future\n\nEthereum is the second most popular cryptocurrency. It is suitable for technical analysis as it has enough liquidity on its markets but its value is quite speculative and more stronglye tied to the tech industry than the value of bitcoin.\n\nOver the past 6 years, the ETH rate has grown thousands of times. Recently, a transition to the new PoS technology was made. As a result, the issuance of digital currency has become less energy-intensive, to which at least for now the markets react positively.\n\nOnly time will show whether Ethereum will increase in popularity even more or will be replaced by a different altcoin.\n\nConclusion: How Relevant is Digital Currency\n\nAlthough cryptocurrency is characterized by ups and downs, it remains relevant due to its independence from national economic and political decisions. More practically speaking, it is used increasingly by residents of the developed world, in particular, when visiting virtual casinos to ensure anonymity. Funds from fiat wallets are also used to pay for goods and services. Sometimes information about digital currency appears in CNN news.\n ]]>\n        \n        \n        Thu, 12 Jan 2023 18:02:00 +0000\n        https://www.altcointrading.net/popularity-crypto-lookback-lookahead-2022-2023/\n        https://www.altcointrading.net/popularity-crypto-lookback-lookahead-2022-2023/\n        en\n        \n      \n    \n      \n        \n        \n        In the world of cryptocurrency, Bitcoin is one of the most popular and highly sought after digital currencies.\n\nBitcoin’s worth started out at less than a penny and peaked at more than$68,000.\n\nWith its rapidly increasing value, more and more people are looking for the best and easiest ways to buy Bitcoin.\n\nLuckily, in 2023 , there are a variety of easy and accessible options for anyone looking to invest in Bitcoin.\n\nThis comprehensive guide will walk you through the top 5 easiest ways to buy Bitcoin in 2023.\n\nWith the help of this guide, you will be able to find the best option for you and get started on your journey in the world of cryptocurrency.\n\nWhat is Bitcoin?\n\nBefore we get into the different ways to buy Bitcoin, it’s important to have a basic understanding of what it is.\n\nBitcoin is a type of cryptocurrency, which is a digital asset that can be used to store and transfer value.\n\nIt is decentralized, meaning it is not controlled by any one person or organization. Bitcoin is also secure, so it cannot be easily stolen or hacked.\n\nStarted in 2009, Bitcoin, or cryptocurrency in general, is a relatively new technology and is still volatile in terms of value. As a result, there is a lot of speculation and uncertainty surrounding it.\n\nHowever, users’ confidence in cryptocurrency is 97% according to the2021user index.\n\nThe benefits of Bitcoin\n\nThere are many benefits to using Bitcoin. For starters, it is extremely secure, which makes it a great way to store your money.\n\nAdditionally, Bitcoin is extremely fast and efficient, allowing you to move funds around the world quickly and easily.\n\nAnother benefit of Bitcoin is that it is decentralized. This means that it is not controlled by any government or financial institution. This gives it a level of autonomy that is not found in other forms of money.\n\nAdditionally, its decentralized nature makes it immune to inflation and other market forces that can affect traditional currencies.\n\nFinally, Bitcoin is anonymous. You don’t have to provide any personal information when sending or receiving payments. This makes it a great choice for those who want to remain anonymous or keep their financial activities private.\n\n1. Fintech solutions to buy Bitcoin\n\nFintech solutions are apps and websites that enable you to purchase cryptocurrencies using your credit or debit card or other supported payment methods.\n\nThis is a quick and convenient way to buy Bitcoin, Ethereum and other cryptocurrencies.\n\nWith most fintech solutions, you will only need a couple of minutes and your payment method details to buy cryptocurrencies.\n\nThis is a great option for beginners and experienced investors alike as it is simple and quick to set up.\n\nYou can also buy cryptocurrencies at any time of the day or night and from anywhere in the world, which is great for those with busy lives who can’t always find the time to visit cryptocurrency exchanges.\n\nSome of these fintech solutions that let you buy Bitcoin are as under:\n\n2. MoonPay\n\n\n\nMoonPay is a fintech solution that lets you buy Bitcoin and other cryptocurrencies with debit and credit card, local bank transfers, Apple Pay, Google Pay, and Samsung Pay.\n\nTo buy Bitcoin on MoonPay, you simply enter the amount of Bitcoin you want to buy and the platform will charge by your preferred payment method.\n\nThe entire process is simple and straightforward, so it is a great option if you are new to the world of cryptocurrency.\n\nMoonPay is a user-friendly app with a clean, intuitive interface. It also has a straightforward verification process with quick processing times, so you can get your hands on some of the world’s most valuable digital coins in no time at all.\n\n3. XanPool\n\nXanPool also has a clean, user-friendly interface that is easy to navigate, so it is a great option for beginners interested in buying Bitcoin through a fintech solution.\n\n\n\n4. Cryptocurrency exchanges\n\nCryptocurrency exchanges are platforms that let you buy and sell different types of cryptocurrencies, like Bitcoin.\n\nCryptocurrency exchanges are popular and one of the easiest ways to buy Bitcoin. If you want to buy Bitcoin but only have money in your bank account, you can use a cryptocurrency exchange to trade your dollars for Bitcoin.\n\nYou can also use an exchange to trade one type of cryptocurrency for another. Essentially, an exchange is like a marketplace where you can buy and sell digital coins.\n\nSome of the most reliable cryptocurrency exchanges you can use are:\n\n5. Binance\n\n\n\nBinance is one of the world’s largest cryptocurrency exchanges and is growing in popularity by the day.\n\nThis exchange has low trading fees, supports a wide variety of cryptocurrencies, and is accessible from desktop and mobile devices.\n\nDue to its popularity, Binance is often overloaded with new users. As such, you may have to wait in a queue before your account is approved.\n\nOnce you have been verified on Binance, you can easily buy Bitcoin with your chosen currency by following a few simple steps.\n\n6. Coinbase\n\nThis digital currency exchange has been around for several years and is one of the easiest ways to buy Bitcoin.\n\nIt is a safe platform with low trading fees and is available to users from all over the world.\n\nCoinbase is ideal for newcomers to the world of cryptocurrency as it has a simple user interface and basic account types.\n\nThere is also a Coinbase Pro trading platform that is designed for advanced traders and offers a wide range of features.\n\nTo buy Bitcoin on Coinbase, you will have to first create an account. Once you have created your account, you can select the amount of Bitcoin you want to buy and finish the transaction.\n\n7. Peer-to-peer trading platforms\n\nPeer-to-peer (P2P) trading platforms help you to buy and sell Bitcoin directly with other people in a cost-effective way.\n\nThese are online marketplaces where people list their Bitcoin at certain prices and you choose to buy them.\n\nThe great thing about P2P trading platforms is that you can find someone who is willing to sell you Bitcoin at a low price. This way, you can use these websites as a way to buy Bitcoin at a low cost.\n\nHowever, you should be aware that there are a few risks associated with using P2P trading platforms. Since you are trading with other people, there is always a risk of theft.\n\nYou should only use P2P trading platforms if you are comfortable with the idea of interacting with other people and taking on the associated risks.\n\nP2P trading platforms are one of the easiest ways to buy Bitcoin, but they are not the most secure. Therefore, you should consider using them only if you are looking to buy Bitcoin at a low price.\n\n8. Bitcoin ATMs\n\nBitcoin ATMs let you exchange cash for Bitcoin. These machines are easy to use, secure, and available in most major cities across the world.\n\n14,915Bitcoin ATMs were operational as of January 2021 , and you can find them in major cities, airports, and shopping centers.\n\nBitcoin ATMs come in two varieties; one-way and two-way. One-way ATMs only allow you to buy Bitcoin whereas two-way ATMs let you both buy and sell cryptocurrencies.\n\nThis is a quick, easy, and convenient way to buy Bitcoin. All you have to do is walk up to the machine, insert your cash and scan your wallet address to receive your Bitcoin.\n\n9. Bitcoin mining\n\nBitcoin mining is the process of using computing power to create new Bitcoins.\n\nThis can be done online by joining a Bitcoin mining pool or using specialized computer equipment to solve complex mathematical equations.\n\nOnce you have completed the mining process, you earn a certain amount of Bitcoin based on the amount of computing power you contributed to the mining pool.\n\nIf you want to buy Bitcoin without having to invest your own money, mining Bitcoin is an excellent choice. Bitcoin miners made USD15.3 billionin 2021.\n\nWhat’s more, mining Bitcoin is a long-term investment, meaning that you can earn digital coins as your reward over time.\n\nBuy Bitcoin by easiest ways\n\nBitcoin has grown exponentially in value since its inception in 2009 and it is now one of the most valuable cryptocurrencies in the world.\n\nIt is also the most commonly accepted form of digital payment and can be used to purchase a wide range of goods and services.\n\nThere are many ways to buy Bitcoin, from fintech solutions and exchanges to peer-to-peer trading.\n\nHowever, you should be careful when buying from unfamiliar sources as there is a chance that you might end up losing your money.\n\nWith the help of this article, you will have no problem finding the easiest ways to buy Bitcoin in 2023 and becoming a holder of one of the most valuable digital coins.\n ]]>\n        \n        \n        Thu, 12 Jan 2023 02:02:00 +0000\n        https://www.altcointrading.net/easiest-ways-to-buy-bitcoin-2023/\n        https://www.altcointrading.net/easiest-ways-to-buy-bitcoin-2023/\n        en\n        \n      \n    \n      \n        \n        \n        In the current economic climate, it’s more important than ever for businesses to look for creative ways to generate new customers.\n\nIn the world cryptocurrencies where everyone is about building social media audience, SEO is an often overlooked strategy that can help you reach potential customers and grow your customer base even during a recession.\n\nWith the right visibility tactics, you can make sure your business remains competitive and stands out in a crowded market.\n\nBy optimizing their website and content for search engines, a crypto wallet project can increase its visibility and drive more traffic to its site, ultimately leading to more users.\n\nOf course, SEO is a complex and constantly-evolving field, and many crypto wallets may not have the expertise or resources to fully optimize their site on their own. This is where an SEO agency can be extremely helpful in increasing user acquisition for crypto wallets.\n\nHow can SEO help crypto wallet apps?\n\nSEO is the practice of improving the quality and quantity of website traffic by increasing the visibility of a website or a web page in a search engine’s unpaid results. This generally means to increase the organic search results, not paid ads results.\n\nFor crypto wallets, SEO can involve a number of different strategies and tactics, such as keyword research, content creation, link building, and on-page optimization. By identifying the keywords and phrases that users are searching for when looking for a crypto wallet, and then creating content that targets those keywords, a wallet can increase its chances of appearing at the top of the search results. Additionally, building backlinks to a wallet’s website from other reputable sites can also help to improve its search engine ranking.\n\nHowever, it’s important to note that SEO is not a one-time thing. It’s a constantly evolving field, with algorithms and user behavior changing frequently. So, it’s important to have a long term strategy and a consistent effort in order to see results. Also, One way to ensure that your crypto wallet website remains visible is to have an SEO agency to help you. An SEO agency specializes in providing various services that can help optimize a site for search engines. These services can include keyword research, on-page optimization, link building, and more. By hiring an SEO agency, crypto wallets can access the expertise and resources they need to fully optimize their site and increase their visibility in search results.\n\nCrypto Wallets and SEO\n\nOne other important aspect of SEO to keep in mind is the importance of technical SEO. Technical SEO refers to the behind-the-scenes aspects of your website that affect its ability to rank in search results.\n\nExamples of these include website speed, mobile responsiveness, schema markup and more. A good SEO agency will audit your website and identify these technical issues, and work to improve them in order to increase your visibility in search results.\n\n\n\nAnother important aspect of SEO for crypto wallets is making sure that their website is secure.\n\nWith the sensitive nature of financial information, it’s crucial for crypto wallets to have a secure website that uses HTTPS and has appropriate security measures in place. This will not only protect users’ information but also help with trust and confidence in the brand and increase the chances of people willing to use the wallet. Also, it can help improve the website ranking as well.\n\nLast important aspect of SEO for crypto wallets is to make sure their website is mobile-friendly. More and more people are using their smartphones to access the internet, and this trend is only likely to continue.\n\nAs a result, it’s crucial for crypto wallets to have a website that is mobile-friendly and easy to navigate on a small screen. This not only will improve the user experience but also help with the website ranking as well. A good SEO agency can help you with this by testing and optimizing your site for mobile devices, so it is fully responsive, easy to navigate and can be crawl easily by search engines.\n\nConclusion\n\nSEO can be a powerful tool for increasing user acquisition for crypto wallets. By optimizing their website and content for search engines, crypto wallets can increase their visibility and drive more traffic to their site, ultimately leading to more users.\n\nHowever, SEO is a complex and constantly-evolving field, and many crypto wallets may not have the expertise or resources to fully optimize their site on their own.\n\nAn SEO agency can help crypto wallets to fully optimize their site and increase their visibility in search results. With a focus on long-term SEO strategy, technical SEO and the help of an experienced SEO agency, crypto wallets can give themselves the best chance possible to attract and retain users in this competitive space.\n ]]>\n        \n        \n        Wed, 11 Jan 2023 00:42:00 +0000\n        https://www.altcointrading.net/user-acquisition-for-crypto-wallets-through-seo/\n        https://www.altcointrading.net/user-acquisition-for-crypto-wallets-through-seo/\n        en\n        \n      \n    \n      \n        \n        \n        It might be dubious to expect another bull run any time soon now, in the depths of the bear market.\n\nBut as any market, the cryptocurrency market is volatile and extremely susceptible to a wide range of influences, such as modifications in interest rates, geopolitics, technology, and consumer demand.\n\nAnd although it might seem like it all was just an Alameda mirage, it is true that in the OG altcoin season in several alternative currencies have historically outperformed the market and may still see strong returns on investment in the future.\n\nThe alternative coins are simply cryptocurrencies that are not Bitcoin. They are digital assets that use blockchain technology and may be used as a medium of exchange or store of value, like Bitcoin. Altcoins are often created to address specific issues or challenges faced by Bitcoin or to offer unique features compared to Bitcoin.\n\nFor example, some altcoins may have faster transaction processing times or lower fees, or may offer enhanced privacy or scalability compared to Bitcoin. Stay updated with recent developments in the cryptocurrency industry by searching latest altcoin news online.\n\nLet us look at the top ten altcoins that have the potential to provide high returns.\n\nTop 10 altcoins to invest in 2023:\n\n\n  \n    IMPT.io:\n\n    IMPT.io seeks to obtain sustainability in a society that is battling climate change. Users can lessen their carbon impact whilst gaining access to interesting benefits. More than 10,000 global brands have already partnered with this project, which is still in its preliminary stages, and they have all chosen to become a part of its ecosystem. Each brand is free to choose the portion of its sales margin that will go toward IMPT projects.\n  \n  \n    Tamodoge:\n\n    The recently developed meme coin Tamadoge has great token utilisation. It uses a play-to-earn approach and has features like integrated NFTs and a metaverse. The inspiration for the concept came from the hit Japanese video game Tamagotchi from the 1990s. Users must take care of their virtual pets in the same way that they would in the original game. Pets are created as infants and require the user to feed and train them. They are represented by special NFTs that can be purchased. Users must employ TAMA tokens to carry out any transaction within the Tamaverse. Tamadoge has achieved a lot in its brief existence, particularly when we consider the $19 million raised in its presale.\n  \n  \n    FightOut(FGTH):\n\n    FightOut’s latest initiative to earn cryptocurrency, $FGTH, allows users to receive benefits for leading healthy lives. Ownership of $FGTH gives users access to a platform that tracks their movements and steps and rewards them for exercising, beating challenges, and building the community. Investors gain the in-app currency REPS for building their bodies after customising the exercises to target specific muscle groups.\n  \n  \n    Dash 2 Trade (D2T):\n\n    Our selection for the greatest cryptocurrency to buy right now is Dash 2 Trade, a promising new cryptocurrency startup. In addition to having a highly successful presale, it will make use of a variety of data and analytics to assist traders and investors in making better judgements and maximising trading profits. This project is in the last stages of its presale and has received more than $9.5 million in investment as of the time of writing, giving potential investors little time to purchase D2T tokens before they are published on exchanges.\n  \n  \n    Qtum:\n\n    With the addition of NFT support, sophisticated smart contract customisation, and two new token standards, Qtum has become a decentralised public blockchain with various novel and unique features. The project combines the security of Bitcoin with the flexibility of Ethereum’s smart contracts. The QRC20 and QRC721 standards for tokens were introduced by Qtum. Another component is Abstract Account Layer, which isolates apps from the blockchain’s fundamental workings.\n  \n  \n    Calvaria:\n\n    A new cryptocurrency card game called Calvaria offers incentives to players and ecosystem participants in the form of two tokens, namely $RIA and $eRIA. The latter token is used to award players for winning tournaments. Players may also use the eRIA token to combine cards of the same strength to purchase new cards at a higher level. Players must buy an NFT deck of cards, which is done with Calvaria cryptocurrency, to gain in-game tokens. The assets are owned by players that use eRIA tokens for in-store purchases and can be sold on.\n  \n  \n    C+ Charge:\n\n    Eco-friendly cryptocurrency C+Charge wants to make the world a safer place to live. When you charge your electric vehicle at one of the C+Charge-affiliated charging stations anywhere in the world, C+Charge will reward you for being an environmentally conscientious vehicle owner. You acquire carbon credits each time you use the CCHG token to charge your automobile at one of the associated C+Charge charging stations. This green platform tokenises your carbon as NFTs that you can trade or hold, giving you a better return on your earnings. With CCHG, you can benefit from the carbon credit sector’s incentives, which were previously exclusively available to large enterprises.\n  \n  \n    Algorand:\n\n    Algorand is referred to as a “pure” proof-of-stake blockchain platform. The project’s primary goal was to address the blockchain networks’ current ledger inefficiencies. These include problems such as high transaction costs, energy waste, and scalability restrictions. It blends the attributes of a centralised platform with the governance model of decentralised initiatives. Algorand is renowned for using innovative techniques to improve network security. This project’s Byzantine consensus-based pure proof-of-stake is its focal point (PPOS). The network cannot be controlled by a majority, and only a tiny number of individuals are able to create blocks. Every token holder can vote, make suggestions, and take part in the legislative process.\n  \n  \n    Oryen:\n\n    Oryen is the most anticipated altcoin with automated passive income. It is a recently created staking platform that provides all holders of its native currency, ORY, with the convenience of automated yield payouts. To raise money for development, the staking platform is holding a presale, and interest in its cryptocurrency is growing. Due to the novel Oryen Auto Staking Technic, ORY appears to be the most anticipated presale now, with an increasing number of investors joining the project every day (OAT). Explore more about its pros and cons by searching ‘latest altcoin newsonline.’\n  \n  \n    Battle Infinity:\n\n    Battle Infinity, as its name suggests, is focused on “battle” games, with the IBAT Premier League taking centre stage. Like a fantasy sports league, this feature also incorporates NFTs and is housed on a blockchain. As a result, users can exchange players through Battle Infinity’s integrated market whilst still enjoying the benefits of a transparent and decentralised system. It includes a dedicated NFT marketplace (named Battle Market), like other new NFT initiatives, where users may create and sell their own digital artwork and enhance their in-game characters with cool stuff. Additionally, users can buy virtual land parcels in the metaverse (known as the Battle Arena) and generate side income by running advertisements on in-game billboards.\n  \n\n\nHow do altcoins differ from bitcoin?\n\nCryptocurrencies that are not Bitcoin are known as “altcoins,” or “alternative coins. Like Bitcoin, these are digital assets that can be used as a store of value or as a means of exchange, thanks to blockchain technology.\n\nNumerous factors set altcoins apart from bitcoin, including the following:\n\nTechnology: Alternative cryptocurrencies to Bitcoin can make use of alternative underpinnings or consensus mechanisms. As an illustration, some alternative coins, like Bitcoin, may use proof-of-work (PoW), but others may use proof-of-stake (PoS) or other consensus techniques.\n\nFunctionality: Compared to Bitcoin, altcoins may offer new or improved features. For instance, compared to Bitcoin, certain altcoins may process transactions more quickly, charge cheaper fees, or provide greater privacy or scalability.\n\nUse cases: Several altcoins may have particular use cases or target markets. For instance, although some altcoins may have a more general focus, others may be tailored for certain industries, such as supply chain management or gaming.\n\nAdoption: Compared to Bitcoin, altcoins may have varying degrees of adoption and acceptability. Whilst some alternative currencies are widely used as a medium of exchange, others may have fewer users or fewer practical applications.\n\nHow did altcoins rise in popularity?\n\nAltcoins are alternative cryptocurrencies that were created after the success of bitcoin. Many of them have attempted to improve upon the original Bitcoin concept by providing more speed, privacy, or other features. They were developed following the popularity of Bitcoin. It was then followed by Litecoin, one of the first alternative currencies to receive mainstream attention. It was also one of the first altcoins to employ a different proof-of-work algorithm than Bitcoin’s, making it simpler for users to mine. It was created to be faster and lighter than Bitcoin.\n\nConclusion\n\nIf you invest in altcoins, you could see enticing returns on your cryptocurrency investments, especially if you consider that you missed the Bitcoin wave. Given that Bitcoin’s market cap has already crossed $1 trillion, returns will be constrained in comparison to smaller-cap altcoins.\n ]]>\n        \n        \n        Sun, 01 Jan 2023 11:02:00 +0000\n        https://www.altcointrading.net/small-altcoin-prediction-moon-2023/\n        https://www.altcointrading.net/small-altcoin-prediction-moon-2023/\n        en\n        \n      \n    \n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
-      id: 296
+      id: 301
     });
     
   
     this.add({
       title: null,
-      content: "\n\n  \n    \n    \n    https://www.altcointrading.net/\n    \n      https://www.altcointrading.net/img/logo.jpg\n      \n      https://www.altcointrading.net/\n    \n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n    Jekyll v4.2.2\n     \n    \n      \n        \n        \n        \n        \n        \n        \n        Thu, 24 Nov 2022 19:45:00 +0000\n        https://www.altcointrading.net/crypto-markets-broad-prediction-2023/\n        https://www.altcointrading.net/crypto-markets-broad-prediction-2023/\n        en\n        \n        Best crypto newsletters for traders who care for analysisScriptSpotlight: Kalman Filters on Tradingview5 Reasons Why The Internet Buys NFTs Today\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Tue, 11 Oct 2022 21:02:00 +0000\n        https://www.altcointrading.net/vtrend-volume-trading-strategy-tradingview-premium-script-review/\n        https://www.altcointrading.net/vtrend-volume-trading-strategy-tradingview-premium-script-review/\n        en\n        \n        Wyckoff Market Cycles: Cheatsheet, Schematics and Guide (Long term, Short term)What is grid trading? Where to run a grid bot to trade crypto?\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Thu, 15 Sep 2022 00:00:00 +0000\n        https://www.altcointrading.net/earn-staking-rewards-wallets-exchanges/\n        https://www.altcointrading.net/earn-staking-rewards-wallets-exchanges/\n        en\n        \n        Best cold-staking platforms for large stakersStaking and KYC: Is KYC required to stake?5 Reasons Why The Internet Buys NFTs\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Mon, 29 Aug 2022 22:02:00 +0000\n        https://www.altcointrading.net/good-crypto-analysis-free-newsletters/\n        https://www.altcointrading.net/good-crypto-analysis-free-newsletters/\n        en\n        \n        What is grid trading? Where to run a grid bot to trade crypto?\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Thu, 25 Aug 2022 01:52:00 +0000\n        https://www.altcointrading.net/nft-royalties-reasons-controversy/\n        https://www.altcointrading.net/nft-royalties-reasons-controversy/\n        en\n        \n        What is grid trading? Where to run a grid bot to trade crypto?Tax Implications of Crypto: 5 Things You Should KnowRelief Rally: Is Altcoin Season Happening This Year?\n      \n    \n  \n\n",
+      content: "\n\n  \n    \n    \n    https://www.altcointrading.net/\n    \n      https://www.altcointrading.net/img/logo.jpg\n      \n      https://www.altcointrading.net/\n    \n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n    Jekyll v4.2.2\n     \n    \n      \n        \n        \n        \n        \n        \n        \n        Mon, 16 Jan 2023 16:02:00 +0000\n        https://www.altcointrading.net/ftx-collapse-impact-silver-markets-2023/\n        https://www.altcointrading.net/ftx-collapse-impact-silver-markets-2023/\n        en\n        \n        Buying crypto no-KYC: Where to do it safelyWyckoff Market Cycles: Cheatsheet, Schematics and Guide (Long term, Short term)Why do news outlets defend SBF: The community bank model and where it leads\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Thu, 24 Nov 2022 19:45:00 +0000\n        https://www.altcointrading.net/crypto-markets-broad-prediction-2023/\n        https://www.altcointrading.net/crypto-markets-broad-prediction-2023/\n        en\n        \n        Best crypto newsletters for traders who care for analysisScriptSpotlight: Kalman Filters on Tradingview5 Reasons Why The Internet Buys NFTs Today\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Tue, 11 Oct 2022 21:02:00 +0000\n        https://www.altcointrading.net/vtrend-volume-trading-strategy-tradingview-premium-script-review/\n        https://www.altcointrading.net/vtrend-volume-trading-strategy-tradingview-premium-script-review/\n        en\n        \n        Wyckoff Market Cycles: Cheatsheet, Schematics and Guide (Long term, Short term)What is grid trading? Where to run a grid bot to trade crypto?\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Thu, 15 Sep 2022 00:00:00 +0000\n        https://www.altcointrading.net/earn-staking-rewards-wallets-exchanges/\n        https://www.altcointrading.net/earn-staking-rewards-wallets-exchanges/\n        en\n        \n        Best cold-staking platforms for large stakersStaking and KYC: Is KYC required to stake?5 Reasons Why The Internet Buys NFTs\n      \n    \n      \n        \n        \n        \n        \n        \n        \n        Mon, 29 Aug 2022 22:02:00 +0000\n        https://www.altcointrading.net/good-crypto-analysis-free-newsletters/\n        https://www.altcointrading.net/good-crypto-analysis-free-newsletters/\n        en\n        \n        What is grid trading? Where to run a grid bot to trade crypto?\n      \n    \n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
-      id: 297
+      id: 302
     });
     
   
@@ -3001,7 +3051,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 298
+      id: 303
     });
     
   
@@ -3011,7 +3061,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 299
+      id: 304
     });
     
   
@@ -3021,7 +3071,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 300
+      id: 305
     });
     
   
@@ -3031,7 +3081,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 301
+      id: 306
     });
     
   
@@ -3041,7 +3091,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 302
+      id: 307
     });
     
   
@@ -3051,7 +3101,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 303
+      id: 308
     });
     
   
@@ -3061,7 +3111,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 304
+      id: 309
     });
     
   
@@ -3071,7 +3121,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 305
+      id: 310
     });
     
   
@@ -3081,27 +3131,27 @@ var idx = lunr(function() {
       category: ["redirect"],
       tags: null,
       author: "ATNET",
-      id: 306
+      id: 311
     });
     
   
     this.add({
       title: "Link Directory",
-      content: "Links\n\nThe latest published blog post is Earning alts for beginners and was posted 12/19/22.\n\nThe latest review is on Localcryptos and was posted 10/11/22.\n\n\n  Airdrops 🔥 or get them per email via RSS\n  Tools 🛠\n  Trading Blog or blog for killing time\n  Exchanges or just no-KYC exchanges\n  Crypto wallets or just Staking Wallets\n\n\nAltcoinTrading.NET on other platforms\n\n\n  Daily Fresh Airdrops Digest on Medium - nightly airdrop and promo digest, always fresh airdrops (keep checking the site so that you don’t miss anything)\n  Twitter Airdrops Feed - this account tweets as soon as the main list on this site updates\n  Daily Ending-Soon Airdrops on Telegram - channel that posts the list of soon ending airdrops once a day\n\n\nMost read posts on AltcoinTrading.NET this week\n\n\n\nStaking wallets  &middot; non directional\n\nCharting armageddon  &middot; crypto trading tools\n\nWyckoff market cycles  &middot; cheatsheets\n\nNokyc trading  &middot; crypto trading 101\n\nStaking platforms  &middot; crypto trading tools\n\nGrid trading  &middot; crypto trading tools\n\nSpotlight volume  &middot; crypto technical analysis\n\nYield farming  &middot; trading platforms\n\nDivergences  &middot; cheatsheets\n\n\n\nInteresting links to other sites\n\n\n  RSI scripting in pine (dev.to)\n  Risks of staking (publish0x)\n  Free onchain analysis tools (reddit)\n  Fravia’s data mining lore (fravia.net)\n\n",
+      content: "Links\n\nThe latest published blog post is Ftx impact silver markets and was posted 01/16/23.\n\nThe latest review is on Localcryptos and was posted 10/11/22.\n\n\n  Airdrops 🔥 or get them per email via RSS\n  Tools 🛠\n  Trading Blog or blog for killing time\n  Exchanges or just no-KYC exchanges\n  Crypto wallets or just Staking Wallets\n\n\nAltcoinTrading.NET on other platforms\n\n\n  Daily Fresh Airdrops Digest on Medium - nightly airdrop and promo digest, always fresh airdrops (keep checking the site so that you don’t miss anything)\n  Twitter Airdrops Feed - this account tweets as soon as the main list on this site updates\n  Daily Ending-Soon Airdrops on Telegram - channel that posts the list of soon ending airdrops once a day\n\n\nMost read posts on AltcoinTrading.NET this week\n\n\n\nWays buy btc 2023  &middot; crypto trading 101\n\nStaking wallets  &middot; non directional\n\nCharting armageddon  &middot; crypto trading tools\n\nWyckoff market cycles  &middot; cheatsheets\n\nNokyc trading  &middot; crypto trading 101\n\nStaking platforms  &middot; crypto trading tools\n\nGrid trading  &middot; crypto trading tools\n\nSpotlight volume  &middot; crypto technical analysis\n\nYield farming  &middot; trading platforms\n\nDivergences  &middot; cheatsheets\n\n\n\nInteresting links to other sites\n\n\n  RSI scripting in pine (dev.to)\n  Risks of staking (publish0x)\n  Free onchain analysis tools (reddit)\n  Fravia’s data mining lore (fravia.net)\n\n",
       category: null,
       tags: null,
       author: "ATNET",
-      id: 307
+      id: 312
     });
     
   
     this.add({
       title: "History of Cryptocurrency Trading | Key Incidents 2016-2021",
-      content: "\n\n\n\n\n  \n\n    \n      Documenting the History of Cryptocurrency Trading\n    \n  \n\n\n  \n    \n  \n    From The Industry: Reports from the Crypto Trading Industry\n  \n  \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      10/13/22 &middot; Marketing &middot; reports\n      \n        Crypto SEO: Getting Organic Traffic For Your Cryptocurrency Project\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      08/27/22 &middot; Industry &middot; reports\n      \n        How the Gaming Industry Helps Crypto Grow\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      05/20/22 &middot; Business &middot; reports\n      \n        Crypto Staking Taxes in the US - Overview & Tools\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      06/28/22 &middot; Business &middot; reports\n      \n        Hiring A Crypto Advisor: Is it worth it?\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      05/02/22 &middot; Ideas &middot; reports\n      \n        [Checklist] Incorporating Blockchain Technologies Into Your Business\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/14/22 &middot; Business &middot; reports\n      \n        Launching a Token? Here's 7 Tips To Find The Best Blockchain Marketing Agency\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/14/22 &middot; Blog &middot; reports\n      \n        6 Industries Being Disrupted by Blockchain and Cryptocurrencies\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/14/22 &middot; Blog &middot; reports\n      \n        Crypto classes are a real thing: What do future 'crypto experts' struggle with?\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/08/22 &middot; List &middot; reports\n      \n        From the industry: 5 Top Anti-Money Laundering (AML) Solutions\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/08/22 &middot; Business &middot; reports\n      \n        From the industry: Crypto SEO shows most alt coin projects are not even planning to stick around\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n  \n\n\n  \n\n    \n     \n\n       \n         \n           \n             \n               Reports\n             \n           \n           \n             \n               \n                  \n  \n    \n      Will Elon Musk Accept Dogecoin Payments on Twitter?\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #altcoins\n  \n\n\n               \n                  \n  \n    \n      Guide on How to Write a Finance or Blockchain Research Paper for Students 2023\n    \n  \n  \n    &nbsp;11/29/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      How Blockchain Will Contribute to the University of the Future\n    \n  \n  \n    &nbsp;11/29/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Why Using Metamask Casinos To Wager is Smarter\n    \n  \n  \n    &nbsp;11/18/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Why You Should Consider a Crypto Merchant Service\n    \n  \n  \n    &nbsp;11/17/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      FTX Account Balances: Your options at the moment\n    \n  \n  \n    &nbsp;11/17/22\n  \n  \n    #ftx-collapse\n  \n\n\n               \n                  \n  \n    \n      ELI5 Cryptocurrency with Investing Benefits and Drawbacks\n    \n  \n  \n    &nbsp;10/26/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      How Much Interest Can You Earn With Online Savings Accounts vs Crypto?\n    \n  \n  \n    &nbsp;10/24/22\n  \n  \n    #staking\n  \n\n\n               \n                  \n  \n    \n      The 2022 SNAFUs: What Were The Biggest Mistakes New Crypto Investors Made in 2022?\n    \n  \n  \n    &nbsp;10/19/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto SEO: Getting Organic Traffic For Your Cryptocurrency Project\n    \n  \n  \n    &nbsp;10/13/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      What should crypto bettors expect in this year's FIFA World Cup?\n    \n  \n  \n    &nbsp;09/09/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Where to trade the prediction markets for ETH Merge\n    \n  \n  \n    &nbsp;09/16/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Why are people's expensive NFTs vanishing from their accounts?\n    \n  \n  \n    &nbsp;09/06/22\n  \n  \n    #multicoin-wallet\n  \n\n\n               \n                  \n  \n    \n      Does blockchain have what it takes to eliminate real estate agents?\n    \n  \n  \n    &nbsp;09/01/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      How the Gaming Industry Helps Crypto Grow\n    \n  \n  \n    &nbsp;08/27/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      5 Reasons Why The Internet Buys NFTs Today\n    \n  \n  \n    &nbsp;08/15/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      Ice hockey sports betting: Why is Bitcoin getting popular there?\n    \n  \n  \n    &nbsp;08/12/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Opinion: Blockchain-based provenance is futile even for digital art\n    \n  \n  \n    &nbsp;08/08/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      Which CEX Platforms Are Creative Enough To Make It Out Well Through The Bear?\n    \n  \n  \n    &nbsp;08/03/22\n  \n  \n    #airdrops\n  \n\n\n               \n                  \n  \n    \n      The rise of online entertainment: Crypto dice games in 2022\n    \n  \n  \n    &nbsp;07/30/22\n  \n  \n    #entertainment\n  \n\n\n               \n                  \n  \n    \n      Exchanges Gaining from Penny Crypto and Web3 Vapourware: Here's Where Everyone Trades\n    \n  \n  \n    &nbsp;07/26/22\n  \n  \n    #penny-crypto\n  \n\n\n               \n                  \n  \n    \n      How Will Metaverse Shake Up Tech Businesses?\n    \n  \n  \n    As a crypto investor, it's best to know how best to position yourself to get the most out of the technology and its influence on the markets.&nbsp;07/22/22\n  \n  \n    #web3\n  \n\n\n               \n                  \n  \n    \n      Tax Implications of Crypto: 5 Things You Should Know\n    \n  \n  \n    &nbsp;07/13/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      NFT Trading: Driven by celebrity hype but open to everyone\n    \n  \n  \n    &nbsp;07/12/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      What is a nominee director and why do companies use them?\n    \n  \n  \n    &nbsp;06/28/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      In-Depth: Why Are Young Investors Putting Their Money in Cryptocurrency?\n    \n  \n  \n    The message-board investing culture is misunderstood, but luckily nobody seems to be stopped by that.&nbsp;05/23/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto Staking Taxes in the US - Overview & Tools\n    \n  \n  \n    Crypto tax services are getting more common nowadays, you shouldn't have a big problem finding an accountant knowledgable in crypto. Having an independent knowledge always helps, though, which is why this article exists.&nbsp;05/20/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Hiring A Crypto Advisor: Is it worth it?\n    \n  \n  \n    &nbsp;06/28/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      [Checklist] Incorporating Blockchain Technologies Into Your Business\n    \n  \n  \n    There are many ways to incorporate blockchain technology into businesses, including as a simple marketing tool.&nbsp;05/02/22\n  \n  \n    #nft\n  \n\n\n               \n                  \n  \n    \n      Crypto Trading Scams: Most common scams in 2022\n    \n  \n  \n    While the decentralized system has its advantages, the fact that it is not regulated brings about certain issues.&nbsp;05/29/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      Trading Bitcoin on Forex Platforms: Plenty of demand, plenty of options\n    \n  \n  \n    Legacy traders are are getting interested in crypto contracts for difference, much like crypto traders are speculating via tokenized stocks.&nbsp;08/06/22\n  \n  \n    #trading-technique\n  \n\n\n               \n                  \n  \n    \n      Digital Currency vs Cryptocurrency: 4 Key Differences\n    \n  \n  \n    Cryptocurrency and digital currency are often used interchangeably, but they have very different meanings.&nbsp;04/06/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Launching a Token? Here's 7 Tips To Find The Best Blockchain Marketing Agency\n    \n  \n  \n    It doesn't really take that much, just do a bit of research to make sure price is really corresponding to quality.&nbsp;04/14/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      The Progress of Crypto between 2021 and 2022\n    \n  \n  \n    Even with the uncertainty of how deep the bear market will go, there is still plenty of progress to note.&nbsp;04/14/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      6 Industries Being Disrupted by Blockchain and Cryptocurrencies\n    \n  \n  \n    After more than a decade since the first blockchain transaction, let's look at the industries that are now firmly considered disrupted by the new technology.&nbsp;04/14/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto classes are a real thing: What do future 'crypto experts' struggle with?\n    \n  \n  \n    There is a crypto niche even in academia now. Who does typically take crypto courses and what kind of help do they seek?&nbsp;04/14/22\n  \n  \n    #nft\n  \n\n\n               \n                  \n  \n    \n      4 Benefits Of Using A Crypto Trading Bot\n    \n  \n  \n    Because of the psychological effects, some traders and investors have started to embrace the use of a crypto trading bot.&nbsp;05/29/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      Why are millennials into cryptocurrencies and trading?\n    \n  \n  \n    Millennials and investing in crypto: the perfect match. Some are conservative and go for large cryptos, some are hungry and go for alts. Here is a list of reasons why millennials love crypto.&nbsp;04/14/22\n  \n  \n    #yield\n  \n\n\n               \n                  \n  \n    \n      From the industry: 5 Top Anti-Money Laundering (AML) Solutions\n    \n  \n  \n    AML is now a requirement for most crypto businesses. But it can be such a bottleneck in user on-boarding that good AML software can provide a real competitive advantage.&nbsp;04/08/22\n  \n  \n    #kyc\n  \n\n\n               \n                  \n  \n    \n      Start Here: Beginner&#39;s Primer to the Crypto Trading Industry\n    \n  \n  \n    Full explainer of crypto markets for the unintiated - From the first ever price quote for 1 BTC to the legacy platforms adopting derivatives (and why).&nbsp;04/08/22\n  \n  \n    #yield\n  \n\n\n               \n                  \n  \n    \n      From the industry: Crypto SEO shows most alt coin projects are not even planning to stick around\n    \n  \n  \n    The state of cryptocurrency SEO reflects how few projects are doing marketing for the long run, but it's changing.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Adoption of Cryptocurrencies as Means of Payment and Opportunity for Wallet Recovery Services\n    \n  \n  \n    All this development puts the pressure on individuals and businesses alike to learn the ins and outs of the management of storage of cryptocurrencies. However, it is a common knowledge that this does not always work out. People make mistakes - in private and on behalf of companies as well.&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      5 Ways To Spend Digital Cash\n    \n  \n  \n    The success of cryptocurrency as a form of currency is gradually making its way into consumer society.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      BTC to Doge Migration: The Fee Structure Policy on Dogecoin Core\n    \n  \n  \n    Not a bad way to build up fundamentals of a cryptocurrency that is profiling as the cheaper and faster vehicle for transactions.&nbsp;04/08/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      The Effects of crypto crackdown and bans on crypto betting\n    \n  \n  \n    Given the sharp decline in cryptocurrencies and the bans enforced by several nations on cryptocurrencies, how has crypto betting fared?&nbsp;04/14/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      What’s Better For Betting Sites: Ethereum or Bitcoin?\n    \n  \n  \n    Or Perhaps You Don’t Need to Choose?&nbsp;07/06/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Red Flags of a Trading Platform in Trouble\n    \n  \n  \n    Crypto trading red flags listed and explained, the poster child for troubled crypto exchange being 2017 Bittrex.&nbsp;04/08/22\n  \n  \n    #psa\n  \n\n\n               \n                  \n  \n    \n      3 Most Dangerous Cryptocurrency Beginner Mistake in 2020\n    \n  \n  \n    As the interest in crypto picked up a bit in 2020, so are the number of crypto newbies repeating the same old mistakes as the 2016 lot. Let's take a look at the three most dangerous of them.&nbsp;07/25/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      In 2020, Women Are Finally Breaking Into the Bitcoin Industry\n    \n  \n  \n    Typically thought of as a male-dominated industry, the numbers of women on the crypto markets are reportedly increasing. Why is that and what does it mean?&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Will Your Bitcoin Investment Suffer from Coronavirus?\n    \n  \n  \n    The changes cannot be ignored any longer.&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Stats of 2019: What did crypto traders most spend on?\n    \n  \n  \n    Hookers and blow? Possibly. It weren't bags of shitcoins though, that's for sure. -- Sharing some insight from tracked links on this blog, just like last year.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Security Threats for Crypto Traders in 2020\n    \n  \n  \n    What kind of threats can we as crypto traders and hodlers expect in 2020 and what are the ways to protect our holdings?&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Shocking Facts About Cryptocurrency Heists [Infographics]\n    \n  \n  \n    Cryptojacking, ICO exits, scams, malware and thefts - outrageous amounts of cryptos have changed hands through illicit activity.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Mac malware “CookieMiner” targets crypto traders, aims to bypass 2FA on exchanges and web wallets\n    \n  \n  \n    Here's what the malware does and how to protect your crypto.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Stats from 2018 - Readers like Melancholic 100x and Ledger Wallets\n    \n  \n  \n    Look at one tiny piece of the economy of crypto for payments. Plus a look at search and traffic stats for hardware wallets and what it probably means.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Follow the money: Who's banking on IOU stablecoins?\n    \n  \n  \n    Why is suddenly everyone in such a rush to create a regulated IOU stablecoin?&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      The grim side of Bakkt's potential consequences\n    \n  \n  \n    It seems all of the critics of Bakkt point to a single issue.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Andrew Gazdecki on The Future of DEX Trading\n    \n  \n  \n    According to Andrew, the best path forward for blockchain advancements is through more open collaboration and less closed competition.&nbsp;04/08/22\n  \n  \n    #p2p-trading\n  \n\n\n               \n                  \n  \n    \n      MacOS Malware Targeting Crypto Community, Spreading Through Admin Impostors\n    \n  \n  \n    The variants of the particular malware will change but phishing and impostors are not going anywhere.&nbsp;08/25/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Stealer Malware Targeting Cryptocurrency Owners Got Affordable\n    \n  \n  \n    Clever business scheme emerged late in May 2018 that will make a good social engineer a lot of money.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      The Stability of Stablecoins: NuBits all over again? \n    \n  \n  \n    Isn't it just NuBits all over again? The utility of stablecoins at the current stage of crypto might be misunderstood.&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      Traceto.io CEO: We expect the nexus between KYC and credit risk in the blockchain industry\n    \n  \n  \n    Chye Kit in an interview explains how blockchain KYC relates to credit risk and why regulatory compliance is one of the sectors that actually gets more efficient when decentralized.&nbsp;05/14/22\n  \n  \n    #regtech\n  \n\n\n               \n                  \n  \n    \n      The 2018 Dangers of Telegram Messenger - Telegrab & Beyond\n    \n  \n  \n    As Telegram exploits from May 2018 are not really juicy enough for the netsec community, malicious campaigns are passing quietly under the radar.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      2018 AKA The Year When Crypto-focused Malware Became The New Standard\n    \n  \n  \n    And a bonus: If you're an app developer, best way to get paid in crypto.&nbsp;08/25/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      How media agencies profited from the 2018 Google and Twitter anti-crypto regulations\n    \n  \n  \n    Goodbye crypto bootstrappers, it's strictly big business only now.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Twitter's 2018 Crypto Ban\n    \n  \n  \n    An intro to the seemingly anti-crypto shitstorm that hit all social media at the start of April 2018.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Thomas Lee on how millennials probably will make the cryptocurrency market\n    \n  \n  \n    Millennials are such a big segment that they should be able to move even the housing market up, not even to speak about cryptocurrencies.&nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      Dai - Stablecoin alternative to Tether\n    \n  \n  \n    While crypto circles are speculating about the fate of Tether, there are other stablecoin alternatives out there already.&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      Weiss rating of cryptocurrencies is due today at 8AM UTC\n    \n  \n  \n    Updated with some commentary on the whole event.&nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      EOS - The blockchain that means the business\n    \n  \n  \n    EOS claims to be the operating system for crypto, effectively a competitor to the Ethereum platform.&nbsp;05/14/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      [EXIT 2019] Review of Altcoin.io Non-custodial Exchange\n    \n  \n  \n    Altcoin.io was a decentralized exchange built in 2017 on atomic swaps with Josh Olzsewicz and Andrew Gazdecki on board. The platform was acquired by BnkToTheFuture in 2019.&nbsp;04/08/22\n  \n  \n    #noncustodial-trading\n  \n\n\n               \n                  \n  \n    \n      List of all new cryptocurrencies that emerged during the 2017 bull market\n    \n  \n  \n    The list is very consistent with the fleeting mentality of the cryptocurrency markets.&nbsp;05/14/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      CEX.IO Not Accepting New Users for the Time Being\n    \n  \n  \n    The cryptocurrency exchange CEX.IO just sent out an email they are temporarily not accepting new users to the platform.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Kraken's long awaited upgrade postponed\n    \n  \n  \n    It is still happening soon&trade; guys!&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      ChrisJ (Bitfinex) on the Tether hack and Bitfinex transparency\n    \n  \n  \n    A shortened transcript with the most important info from the session with timestamps to relevant parts of the footage&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      Tether Emergency Notice\n    \n  \n  \n    This is your captain speaking: There is absolutely no cause for alarm.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      Trezor devices have serious security vulnerability\n    \n  \n  \n    ...even after any possible firmware update.&nbsp;04/09/22\n  \n  \n    #altcoin-wallet\n  \n\n\n               \n                  \n  \n    \n      Anonymous coins on the Apple App Store\n    \n  \n  \n    DASH wallet was released just yesterday to the Apple App Store.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      ETH multisig hack\n    \n  \n  \n    Some ETH multisig wallets created with parity are being drained right now.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      GBYTE, 0byte (formerly Byteball): The OG airdrop that launched the whole airdrop industry (2017)\n    \n  \n  \n    Byteball is a payment network that makes it easy to set conditional payments - finalize payment only if condition is met - similar to ethereum smart contracts but more user-friendly.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Gary Vee on Ethereum\n    \n  \n  \n    Video of gary Vee endorsing Ethereum when asked about it by a fan.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Is the end of ICOs approaching?\n    \n  \n  \n    The very first ICO-ish thing was fined heavily. Will new regulations pop the ICO bubble? &nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      Litecoin: This time it's different?\n    \n  \n  \n    It's always different until it isn't and it's never different until it is.&nbsp;04/08/22\n  \n  \n    #\n  \n\n\n               \n                  \n  \n    \n      About the proposed Ethereum ETF\n    \n  \n  \n    The surveillance section of EtherIndex's rule change (which after the Winklevoss' BTC ETF seems to be the key part) proposes a strategy which might be more plausible.&nbsp;05/14/22\n  \n  \n    #\n  \n\n\n               \n                  \n  \n    \n      The Finexening - Bitfinex hack\n    \n  \n  \n    Bitfinex was hacked in August 2016. Read the basic info about the hack and the best of Reddit's response on the Bitfinex hack from back then.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      All about the DAO hack\n    \n  \n  \n    A summary of what is going on with DAO's and ETH&nbsp;04/08/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n             \n           \n         \n         &nbsp;\n       \n\n\n      \n      \n        \n          \n\n  \n    \n      Most Read Trading Blog - Week #51\n    \n  \n  \n    \n      \n      \n        \n          \n            Wyckoff Market Cycles: Cheatsheet, Schematics and Guide (Long term, Short term)\n          \n        \n      \n      \n      \n       \n        \n          TA &middot; 08/19/22 &middot; #cheatsheets\n        \n       \n      \n      \n      \n    \n  \n  \n\n\n\n          \n  \n    \n      Browse The Most Searched-For Topics\n    \n  \n  \n  \n    \n      hub\n    \n    \n      dca\n    \n  \n  \n  \n    \n      hub\n    \n    \n      trading technique\n    \n  \n  \n  \n    \n      hub\n    \n    \n      crypto tools\n    \n  \n  \n  \n    \n      hub\n    \n    \n      tradingview scripts\n    \n  \n  \n  \n    \n      hub\n    \n    \n      derisking\n    \n  \n  \n  \n    \n      hub\n    \n    \n      tradingview script review\n    \n  \n  \n\n\n          \n\n\n  \n    \n      Browse The Blog by Tools Mentioned\n    \n  \n  \n    \n    \n  \n    \n      (78)\n    \n    \n      bitfinex\n    \n  \n  \n\n    \n    \n  \n    \n      (3)\n    \n    \n      exodus\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      electrum\n    \n  \n  \n\n    \n    \n  \n    \n      (30)\n    \n    \n      ledger\n    \n  \n  \n\n    \n    \n  \n    \n      (8)\n    \n    \n      trezor\n    \n  \n  \n\n    \n    \n  \n    \n      (22)\n    \n    \n      tradingview\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      tensorcharts\n    \n  \n  \n\n    \n    \n  \n    \n      (25)\n    \n    \n      shrimpy\n    \n  \n  \n\n    \n    \n  \n    \n      (16)\n    \n    \n      bitforex\n    \n  \n  \n\n    \n    \n  \n    \n      (9)\n    \n    \n      localcryptos\n    \n  \n  \n\n    \n    \n  \n    \n      (25)\n    \n    \n      independent reserve\n    \n  \n  \n\n    \n    \n\n    \n    \n  \n    \n      (26)\n    \n    \n      phemex\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      deribit\n    \n  \n  \n\n    \n    \n  \n    \n      (6)\n    \n    \n      binance\n    \n  \n  \n\n    \n    \n  \n    \n      (4)\n    \n    \n      coldcard\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      coinbase\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      cryptowatch\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      pionex\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      allnodes\n    \n  \n  \n\n    \n    \n  \n    \n      ()\n    \n    \n      \n    \n  \n  \n\n\n\n        \n      \n\n    \n\n",
+      content: "\n\n\n\n\n  \n\n    \n      Documenting the History of Cryptocurrency Trading\n    \n  \n\n\n  \n    \n  \n    From The Industry: Reports from the Crypto Trading Industry\n  \n  \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      10/13/22 &middot; Marketing &middot; reports\n      \n        Crypto SEO: Getting Organic Traffic For Your Cryptocurrency Project\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      08/27/22 &middot; Industry &middot; reports\n      \n        How the Gaming Industry Helps Crypto Grow\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      12/19/22 &middot; Business &middot; reports\n      \n        Crypto Staking Taxes in the US - Overview & Tools\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      12/19/22 &middot; Business &middot; reports\n      \n        Hiring A Crypto Advisor: Is it worth it?\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      05/02/22 &middot; Ideas &middot; reports\n      \n        [Checklist] Incorporating Blockchain Technologies Into Your Business\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      12/19/22 &middot; Business &middot; reports\n      \n        Launching a Token? Here's 7 Tips To Find The Best Blockchain Marketing Agency\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/14/22 &middot; Blog &middot; reports\n      \n        6 Industries Being Disrupted by Blockchain and Cryptocurrencies\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/14/22 &middot; Blog &middot; reports\n      \n        Crypto classes are a real thing: What do future 'crypto experts' struggle with?\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/08/22 &middot; List &middot; reports\n      \n        From the industry: 5 Top Anti-Money Laundering (AML) Solutions\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n     \n       \n  \n  \n  \n    \n      04/08/22 &middot; Business &middot; reports\n      \n        From the industry: Crypto SEO shows most alt coin projects are not even planning to stick around\n      \n    \n  \n  \n  \n\n\n     \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n     \n    \n  \n\n\n  \n\n    \n     \n\n       \n         \n           \n             \n               Reports\n             \n           \n           \n             \n               \n                  \n  \n    \n      Increasing User Acquisition For Crypto Wallets Through SEO\n    \n  \n  \n    &nbsp;01/11/23\n  \n  \n    #seo\n  \n\n\n               \n                  \n  \n    \n      Will Elon Musk Accept Dogecoin Payments on Twitter?\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #altcoins\n  \n\n\n               \n                  \n  \n    \n      Guide on How to Write a Finance or Blockchain Research Paper for Students 2023\n    \n  \n  \n    &nbsp;11/29/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      How Blockchain Will Contribute to the University of the Future\n    \n  \n  \n    &nbsp;11/29/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Why Using Metamask Casinos To Wager is Smarter\n    \n  \n  \n    &nbsp;11/18/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Why You Should Consider a Crypto Merchant Service\n    \n  \n  \n    &nbsp;11/17/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      FTX Account Balances: Your options at the moment\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #ftx-collapse\n  \n\n\n               \n                  \n  \n    \n      ELI5 Cryptocurrency with Investing Benefits and Drawbacks\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      How Much Interest Can You Earn With Online Savings Accounts vs Crypto?\n    \n  \n  \n    &nbsp;10/24/22\n  \n  \n    #staking\n  \n\n\n               \n                  \n  \n    \n      The 2022 SNAFUs: What Were The Biggest Mistakes New Crypto Investors Made in 2022?\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto SEO: Getting Organic Traffic For Your Cryptocurrency Project\n    \n  \n  \n    &nbsp;10/13/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      What should crypto bettors expect in this year's FIFA World Cup?\n    \n  \n  \n    &nbsp;09/09/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Where to trade the prediction markets for ETH Merge\n    \n  \n  \n    &nbsp;09/16/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Why are people's expensive NFTs vanishing from their accounts?\n    \n  \n  \n    &nbsp;09/06/22\n  \n  \n    #multicoin-wallet\n  \n\n\n               \n                  \n  \n    \n      Does blockchain have what it takes to eliminate real estate agents?\n    \n  \n  \n    &nbsp;09/01/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      How the Gaming Industry Helps Crypto Grow\n    \n  \n  \n    &nbsp;08/27/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      5 Reasons Why The Internet Buys NFTs Today\n    \n  \n  \n    &nbsp;08/15/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      Ice hockey sports betting: Why is Bitcoin getting popular there?\n    \n  \n  \n    &nbsp;08/12/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Opinion: Blockchain-based provenance is futile even for digital art\n    \n  \n  \n    &nbsp;08/08/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      Which CEX Platforms Are Creative Enough To Make It Out Well Through The Bear?\n    \n  \n  \n    &nbsp;08/03/22\n  \n  \n    #airdrops\n  \n\n\n               \n                  \n  \n    \n      The rise of online entertainment: Crypto dice games in 2022\n    \n  \n  \n    &nbsp;07/30/22\n  \n  \n    #entertainment\n  \n\n\n               \n                  \n  \n    \n      Exchanges Gaining from Penny Crypto and Web3 Vapourware: Here's Where Everyone Trades\n    \n  \n  \n    &nbsp;07/26/22\n  \n  \n    #penny-crypto\n  \n\n\n               \n                  \n  \n    \n      How Will Metaverse Shake Up Tech Businesses?\n    \n  \n  \n    As a crypto investor, it's best to know how best to position yourself to get the most out of the technology and its influence on the markets.&nbsp;07/22/22\n  \n  \n    #web3\n  \n\n\n               \n                  \n  \n    \n      Tax Implications of Crypto: 5 Things You Should Know\n    \n  \n  \n    &nbsp;07/13/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      NFT Trading: Driven by celebrity hype but open to everyone\n    \n  \n  \n    &nbsp;07/12/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      What is a nominee director and why do companies use them?\n    \n  \n  \n    &nbsp;06/28/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      In-Depth: Why Are Young Investors Putting Their Money in Cryptocurrency?\n    \n  \n  \n    The message-board investing culture is misunderstood, but luckily nobody seems to be stopped by that.&nbsp;05/23/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto Staking Taxes in the US - Overview & Tools\n    \n  \n  \n    Crypto tax services are getting more common nowadays, you shouldn't have a big problem finding an accountant knowledgable in crypto. Having an independent knowledge always helps, though, which is why this article exists.&nbsp;12/19/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Hiring A Crypto Advisor: Is it worth it?\n    \n  \n  \n    &nbsp;12/19/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      [Checklist] Incorporating Blockchain Technologies Into Your Business\n    \n  \n  \n    There are many ways to incorporate blockchain technology into businesses, including as a simple marketing tool.&nbsp;05/02/22\n  \n  \n    #nft\n  \n\n\n               \n                  \n  \n    \n      Crypto Trading Scams: Most common scams in 2022\n    \n  \n  \n    While the decentralized system has its advantages, the fact that it is not regulated brings about certain issues.&nbsp;05/29/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      Trading Bitcoin on Forex Platforms: Plenty of demand, plenty of options\n    \n  \n  \n    Legacy traders are are getting interested in crypto contracts for difference, much like crypto traders are speculating via tokenized stocks.&nbsp;12/19/22\n  \n  \n    #trading-technique\n  \n\n\n               \n                  \n  \n    \n      Digital Currency vs Cryptocurrency: 4 Key Differences\n    \n  \n  \n    Cryptocurrency and digital currency are often used interchangeably, but they have very different meanings.&nbsp;04/06/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Launching a Token? Here's 7 Tips To Find The Best Blockchain Marketing Agency\n    \n  \n  \n    It doesn't really take that much, just do a bit of research to make sure price is really corresponding to quality.&nbsp;12/19/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      The Progress of Crypto between 2021 and 2022\n    \n  \n  \n    Even with the uncertainty of how deep the bear market will go, there is still plenty of progress to note.&nbsp;12/19/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      6 Industries Being Disrupted by Blockchain and Cryptocurrencies\n    \n  \n  \n    After more than a decade since the first blockchain transaction, let's look at the industries that are now firmly considered disrupted by the new technology.&nbsp;04/14/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Crypto classes are a real thing: What do future 'crypto experts' struggle with?\n    \n  \n  \n    There is a crypto niche even in academia now. Who does typically take crypto courses and what kind of help do they seek?&nbsp;04/14/22\n  \n  \n    #nft\n  \n\n\n               \n                  \n  \n    \n      4 Benefits Of Using A Crypto Trading Bot\n    \n  \n  \n    Because of the psychological effects, some traders and investors have started to embrace the use of a crypto trading bot.&nbsp;12/19/22\n  \n  \n    #crypto-trading-strategy\n  \n\n\n               \n                  \n  \n    \n      Why are millennials into cryptocurrencies and trading?\n    \n  \n  \n    Millennials and investing in crypto: the perfect match. Some are conservative and go for large cryptos, some are hungry and go for alts. Here is a list of reasons why millennials love crypto.&nbsp;04/14/22\n  \n  \n    #yield\n  \n\n\n               \n                  \n  \n    \n      From the industry: 5 Top Anti-Money Laundering (AML) Solutions\n    \n  \n  \n    AML is now a requirement for most crypto businesses. But it can be such a bottleneck in user on-boarding that good AML software can provide a real competitive advantage.&nbsp;04/08/22\n  \n  \n    #kyc\n  \n\n\n               \n                  \n  \n    \n      Start Here: Beginner&#39;s Primer to the Crypto Trading Industry\n    \n  \n  \n    Full explainer of crypto markets for the unintiated - From the first ever price quote for 1 BTC to the legacy platforms adopting derivatives (and why).&nbsp;04/08/22\n  \n  \n    #yield\n  \n\n\n               \n                  \n  \n    \n      From the industry: Crypto SEO shows most alt coin projects are not even planning to stick around\n    \n  \n  \n    The state of cryptocurrency SEO reflects how few projects are doing marketing for the long run, but it's changing.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Adoption of Cryptocurrencies as Means of Payment and Opportunity for Wallet Recovery Services\n    \n  \n  \n    All this development puts the pressure on individuals and businesses alike to learn the ins and outs of the management of storage of cryptocurrencies. However, it is a common knowledge that this does not always work out. People make mistakes - in private and on behalf of companies as well.&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      5 Ways To Spend Digital Cash\n    \n  \n  \n    The success of cryptocurrency as a form of currency is gradually making its way into consumer society.&nbsp;12/19/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      BTC to Doge Migration: The Fee Structure Policy on Dogecoin Core\n    \n  \n  \n    Not a bad way to build up fundamentals of a cryptocurrency that is profiling as the cheaper and faster vehicle for transactions.&nbsp;04/08/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      The Effects of crypto crackdown and bans on crypto betting\n    \n  \n  \n    Given the sharp decline in cryptocurrencies and the bans enforced by several nations on cryptocurrencies, how has crypto betting fared?&nbsp;04/14/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      What’s Better For Betting Sites: Ethereum or Bitcoin?\n    \n  \n  \n    Or Perhaps You Don’t Need to Choose?&nbsp;07/06/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Red Flags of a Trading Platform in Trouble\n    \n  \n  \n    Crypto trading red flags listed and explained, the poster child for troubled crypto exchange being 2017 Bittrex.&nbsp;04/08/22\n  \n  \n    #psa\n  \n\n\n               \n                  \n  \n    \n      3 Most Dangerous Cryptocurrency Beginner Mistake in 2020\n    \n  \n  \n    As the interest in crypto picked up a bit in 2020, so are the number of crypto newbies repeating the same old mistakes as the 2016 lot. Let's take a look at the three most dangerous of them.&nbsp;07/25/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      In 2020, Women Are Finally Breaking Into the Bitcoin Industry\n    \n  \n  \n    Typically thought of as a male-dominated industry, the numbers of women on the crypto markets are reportedly increasing. Why is that and what does it mean?&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Will Your Bitcoin Investment Suffer from Coronavirus?\n    \n  \n  \n    The changes cannot be ignored any longer.&nbsp;04/06/22\n  \n  \n    #crypto-fundamentals\n  \n\n\n               \n                  \n  \n    \n      Stats of 2019: What did crypto traders most spend on?\n    \n  \n  \n    Hookers and blow? Possibly. It weren't bags of shitcoins though, that's for sure. -- Sharing some insight from tracked links on this blog, just like last year.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Security Threats for Crypto Traders in 2020\n    \n  \n  \n    What kind of threats can we as crypto traders and hodlers expect in 2020 and what are the ways to protect our holdings?&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Shocking Facts About Cryptocurrency Heists [Infographics]\n    \n  \n  \n    Cryptojacking, ICO exits, scams, malware and thefts - outrageous amounts of cryptos have changed hands through illicit activity.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Mac malware “CookieMiner” targets crypto traders, aims to bypass 2FA on exchanges and web wallets\n    \n  \n  \n    Here's what the malware does and how to protect your crypto.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Stats from 2018 - Readers like Melancholic 100x and Ledger Wallets\n    \n  \n  \n    Look at one tiny piece of the economy of crypto for payments. Plus a look at search and traffic stats for hardware wallets and what it probably means.&nbsp;04/08/22\n  \n  \n    #spend-your-crypto\n  \n\n\n               \n                  \n  \n    \n      Follow the money: Who's banking on IOU stablecoins?\n    \n  \n  \n    Why is suddenly everyone in such a rush to create a regulated IOU stablecoin?&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      The grim side of Bakkt's potential consequences\n    \n  \n  \n    It seems all of the critics of Bakkt point to a single issue.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Andrew Gazdecki on The Future of DEX Trading\n    \n  \n  \n    According to Andrew, the best path forward for blockchain advancements is through more open collaboration and less closed competition.&nbsp;04/08/22\n  \n  \n    #p2p-trading\n  \n\n\n               \n                  \n  \n    \n      MacOS Malware Targeting Crypto Community, Spreading Through Admin Impostors\n    \n  \n  \n    The variants of the particular malware will change but phishing and impostors are not going anywhere.&nbsp;08/25/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      Stealer Malware Targeting Cryptocurrency Owners Got Affordable\n    \n  \n  \n    Clever business scheme emerged late in May 2018 that will make a good social engineer a lot of money.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      The Stability of Stablecoins: NuBits all over again? \n    \n  \n  \n    Isn't it just NuBits all over again? The utility of stablecoins at the current stage of crypto might be misunderstood.&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      Traceto.io CEO: We expect the nexus between KYC and credit risk in the blockchain industry\n    \n  \n  \n    Chye Kit in an interview explains how blockchain KYC relates to credit risk and why regulatory compliance is one of the sectors that actually gets more efficient when decentralized.&nbsp;05/14/22\n  \n  \n    #regtech\n  \n\n\n               \n                  \n  \n    \n      The 2018 Dangers of Telegram Messenger - Telegrab & Beyond\n    \n  \n  \n    As Telegram exploits from May 2018 are not really juicy enough for the netsec community, malicious campaigns are passing quietly under the radar.&nbsp;04/08/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      2018 AKA The Year When Crypto-focused Malware Became The New Standard\n    \n  \n  \n    And a bonus: If you're an app developer, best way to get paid in crypto.&nbsp;08/25/22\n  \n  \n    #crypto-opsec\n  \n\n\n               \n                  \n  \n    \n      How media agencies profited from the 2018 Google and Twitter anti-crypto regulations\n    \n  \n  \n    Goodbye crypto bootstrappers, it's strictly big business only now.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Twitter's 2018 Crypto Ban\n    \n  \n  \n    An intro to the seemingly anti-crypto shitstorm that hit all social media at the start of April 2018.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Thomas Lee on how millennials probably will make the cryptocurrency market\n    \n  \n  \n    Millennials are such a big segment that they should be able to move even the housing market up, not even to speak about cryptocurrencies.&nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      Dai - Stablecoin alternative to Tether\n    \n  \n  \n    While crypto circles are speculating about the fate of Tether, there are other stablecoin alternatives out there already.&nbsp;04/08/22\n  \n  \n    #stablecoins\n  \n\n\n               \n                  \n  \n    \n      Weiss rating of cryptocurrencies is due today at 8AM UTC\n    \n  \n  \n    Updated with some commentary on the whole event.&nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      EOS - The blockchain that means the business\n    \n  \n  \n    EOS claims to be the operating system for crypto, effectively a competitor to the Ethereum platform.&nbsp;05/14/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n                  \n  \n    \n      [EXIT 2019] Review of Altcoin.io Non-custodial Exchange\n    \n  \n  \n    Altcoin.io was a decentralized exchange built in 2017 on atomic swaps with Josh Olzsewicz and Andrew Gazdecki on board. The platform was acquired by BnkToTheFuture in 2019.&nbsp;04/08/22\n  \n  \n    #noncustodial-trading\n  \n\n\n               \n                  \n  \n    \n      List of all new cryptocurrencies that emerged during the 2017 bull market\n    \n  \n  \n    The list is very consistent with the fleeting mentality of the cryptocurrency markets.&nbsp;05/14/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      CEX.IO Not Accepting New Users for the Time Being\n    \n  \n  \n    The cryptocurrency exchange CEX.IO just sent out an email they are temporarily not accepting new users to the platform.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Kraken's long awaited upgrade postponed\n    \n  \n  \n    It is still happening soon&trade; guys!&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      ChrisJ (Bitfinex) on the Tether hack and Bitfinex transparency\n    \n  \n  \n    A shortened transcript with the most important info from the session with timestamps to relevant parts of the footage&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      Tether Emergency Notice\n    \n  \n  \n    This is your captain speaking: There is absolutely no cause for alarm.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      Trezor devices have serious security vulnerability\n    \n  \n  \n    ...even after any possible firmware update.&nbsp;04/09/22\n  \n  \n    #altcoin-wallet\n  \n\n\n               \n                  \n  \n    \n      Anonymous coins on the Apple App Store\n    \n  \n  \n    DASH wallet was released just yesterday to the Apple App Store.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      ETH multisig hack\n    \n  \n  \n    Some ETH multisig wallets created with parity are being drained right now.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      GBYTE, 0byte (formerly Byteball): The OG airdrop that launched the whole airdrop industry (2017)\n    \n  \n  \n    Byteball is a payment network that makes it easy to set conditional payments - finalize payment only if condition is met - similar to ethereum smart contracts but more user-friendly.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Gary Vee on Ethereum\n    \n  \n  \n    Video of gary Vee endorsing Ethereum when asked about it by a fan.&nbsp;04/08/22\n  \n  \n    #adoption\n  \n\n\n               \n                  \n  \n    \n      Is the end of ICOs approaching?\n    \n  \n  \n    The very first ICO-ish thing was fined heavily. Will new regulations pop the ICO bubble? &nbsp;04/08/22\n  \n  \n    #crypto-market-predictions\n  \n\n\n               \n                  \n  \n    \n      Litecoin: This time it's different?\n    \n  \n  \n    It's always different until it isn't and it's never different until it is.&nbsp;04/08/22\n  \n  \n    #\n  \n\n\n               \n                  \n  \n    \n      About the proposed Ethereum ETF\n    \n  \n  \n    The surveillance section of EtherIndex's rule change (which after the Winklevoss' BTC ETF seems to be the key part) proposes a strategy which might be more plausible.&nbsp;05/14/22\n  \n  \n    #\n  \n\n\n               \n                  \n  \n    \n      The Finexening - Bitfinex hack\n    \n  \n  \n    Bitfinex was hacked in August 2016. Read the basic info about the hack and the best of Reddit's response on the Bitfinex hack from back then.&nbsp;04/08/22\n  \n  \n    #crypto-heists\n  \n\n\n               \n                  \n  \n    \n      All about the DAO hack\n    \n  \n  \n    A summary of what is going on with DAO's and ETH&nbsp;04/08/22\n  \n  \n    #blockchain-technology\n  \n\n\n               \n             \n           \n         \n         &nbsp;\n       \n\n\n      \n      \n        \n          \n\n  \n    \n      Most Read Trading Blog - Week #03\n    \n  \n  \n    \n      \n      \n        \n          \n            What is grid trading? Where to run a grid bot to trade crypto?\n          \n        \n      \n      \n      \n       \n        \n          Trading &middot; 12/19/22 &middot; #crypto-trading-tools\n        \n       \n      \n      \n      \n    \n  \n  \n\n\n\n          \n  \n    \n      Browse The Most Searched-For Topics\n    \n  \n  \n  \n    \n      hub\n    \n    \n      dca\n    \n  \n  \n  \n    \n      hub\n    \n    \n      trading technique\n    \n  \n  \n  \n    \n      hub\n    \n    \n      crypto tools\n    \n  \n  \n  \n    \n      hub\n    \n    \n      tradingview scripts\n    \n  \n  \n  \n    \n      hub\n    \n    \n      derisking\n    \n  \n  \n  \n    \n      hub\n    \n    \n      tradingview script review\n    \n  \n  \n\n\n          \n\n\n  \n    \n      Browse The Blog by Tools Mentioned\n    \n  \n  \n    \n    \n  \n    \n      (81)\n    \n    \n      bitfinex\n    \n  \n  \n\n    \n    \n  \n    \n      (3)\n    \n    \n      exodus\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      electrum\n    \n  \n  \n\n    \n    \n  \n    \n      (31)\n    \n    \n      ledger\n    \n  \n  \n\n    \n    \n  \n    \n      (8)\n    \n    \n      trezor\n    \n  \n  \n\n    \n    \n  \n    \n      (23)\n    \n    \n      tradingview\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      tensorcharts\n    \n  \n  \n\n    \n    \n  \n    \n      (25)\n    \n    \n      shrimpy\n    \n  \n  \n\n    \n    \n  \n    \n      (17)\n    \n    \n      bitforex\n    \n  \n  \n\n    \n    \n  \n    \n      (10)\n    \n    \n      localcryptos\n    \n  \n  \n\n    \n    \n  \n    \n      (26)\n    \n    \n      independent reserve\n    \n  \n  \n\n    \n    \n\n    \n    \n  \n    \n      (28)\n    \n    \n      phemex\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      deribit\n    \n  \n  \n\n    \n    \n  \n    \n      (6)\n    \n    \n      binance\n    \n  \n  \n\n    \n    \n  \n    \n      (4)\n    \n    \n      coldcard\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      coinbase\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      cryptowatch\n    \n  \n  \n\n    \n    \n  \n    \n      (2)\n    \n    \n      pionex\n    \n  \n  \n\n    \n    \n  \n    \n      (1)\n    \n    \n      allnodes\n    \n  \n  \n\n    \n    \n  \n    \n      ()\n    \n    \n      \n    \n  \n  \n\n\n\n        \n      \n\n    \n\n",
       category: null,
       tags: null,
       author: "ATNET",
-      id: 308
+      id: 313
     });
     
   
@@ -3111,63 +3161,13 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 309
-    });
-    
-  
-    this.add({
-      title: null,
-      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n    \n\n\n    \n      \n        LIBERMALL NFT Airdrop\n        \n          LIBERMALL NFT Airdrop\n          This is a Gleam that pays Blogger NFTs at total worth of 8k USD. 140 NFTs in the pool, top 30 get more than 1 NFT each.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#libermall-nft-airdrop\n        https://www.altcointrading.net/airdrops/#libermall-nft-airdrop\n      \n    \n      \n        MineralHub Airdrop\n        \n          MineralHub Airdrop\n          This P2E platform runs weekly events. Gleam pays 5 USD worth of $MNR to each of 40 lucky winners. Three extra prizes pay 25-40 USD worth.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#mineralhub-airdrop\n        https://www.altcointrading.net/airdrops/#mineralhub-airdrop\n      \n    \n      \n        KOLO NFT Market Airdrop\n        \n          KOLO NFT Market Airdrop\n          Pool of this Gleam is worth 9k USD, most of it goes to random winners. KOL.Market is a classical Music NFT platform.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#kolo-nft-market-airdrop\n        https://www.altcointrading.net/airdrops/#kolo-nft-market-airdrop\n      \n    \n      \n        Snowball Airdrop\n        \n          Snowball Airdrop\n          Gleam that ends on Christmas and splits 1000 USDT between 200 winners. Read the requirements - you need to fill a quiz on 23rd Dec too. Extra rewards if you mint on GALXE.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#snowball-airdrop\n        https://www.altcointrading.net/airdrops/#snowball-airdrop\n      \n    \n      \n        SpaceX Airdrop\n        \n          SpaceX Airdrop\n          This is a Gleam that pays to 270 top winners out of a pool of 40k $SX tokens. The 1st top winners also gets an extra NFT. Token trades on Uniswap.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#spacex-airdrop\n        https://www.altcointrading.net/airdrops/#spacex-airdrop\n      \n    \n      \n        C2WORLD Airdrop\n        \n          C2WORLD Airdrop\n          A Gleam that has a small pool of 500 USD in $C2G. Pool goes to 80 random winners (5 USD worth each) and 10 top shills (10 USD each).\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#c2world-airdrop\n        https://www.altcointrading.net/airdrops/#c2world-airdrop\n      \n    \n      \n        DIDNET (BSC) Airdrop\n        \n          DIDNET (BSC) Airdrop\n          This very short Gleam pays everyone. Connect your BSC wallet to get 1,000 DXP airdrop - everyone gets this reward. The other tasks are a giveaway, 10 USDT to each of 100 top shills and 5 USDT per winner to 100 randos.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#didnet-(bsc)-airdrop\n        https://www.altcointrading.net/airdrops/#didnet-(bsc)-airdrop\n      \n    \n      \n        PocketInfinity Airdrop II\n        \n          PocketInfinity Airdrop II\n          A Gleam airdrop with all tasks mandatory. Prize pool is 20 MM $POCKET which is 2 MM USD. \n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#pocketinfinity-airdrop-ii\n        https://www.altcointrading.net/airdrops/#pocketinfinity-airdrop-ii\n      \n    \n      \n        9D NFT (BSC) Airdrop\n        \n          9D NFT (BSC) Airdrop\n          Everyone gets paid here. A Google form that drops $COGI tokens. Rewards on first come basis between 500-2000 token per person, but after that a flat participation reward of 200 $COGI per person until the submissions close. 9D NFT is an upcoming game with MMORPG game genre combined with NFT.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#9d-nft-(bsc)-airdrop\n        https://www.altcointrading.net/airdrops/#9d-nft-(bsc)-airdrop\n      \n    \n      \n        QuizCash Airdrop\n        \n          QuizCash Airdrop\n          This Gleam requires you to download an app, among other tasks. Pool 500k $GEM among 5k lucky winners and 24k $GEM to top 100 shills. The project is a learn-to-earn project.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#quizcash-airdrop\n        https://www.altcointrading.net/airdrops/#quizcash-airdrop\n      \n    \n      \n        Dragons World NFT Airdrop\n        \n          Dragons World NFT Airdrop\n          A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop\n        https://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop\n      \n    \n      \n        Salazar Airdrop\n        \n          Salazar Airdrop\n          A Givelab event, short form but small pool - only 3K USD worth. That is 250,000 $SZR between 100 random winners.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#salazar-airdrop\n        https://www.altcointrading.net/airdrops/#salazar-airdrop\n      \n    \n      \n        Tegro Airdrop\n        \n          Tegro Airdrop\n          Gleam with 10k USD worth of $TGR in the pool. 450 winners in total, more entries better chaces.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#tegro-airdrop\n        https://www.altcointrading.net/airdrops/#tegro-airdrop\n      \n    \n      \n        Wild Thunder Token\n        \n          Wild Thunder Token\n          Read the rules for this Gleam, it wants you to submit a screenshot. The pool is 35,000,000 $WTT but tokens are not yet generated.\n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#wild-thunder-token\n        https://www.altcointrading.net/airdrops/#wild-thunder-token\n      \n    \n\n\n\n  \n\n",
-      category: null,
-      tags: null,
-      author: "ATNET",
-      id: 310
-    });
-    
-  
-    this.add({
-      title: "ATNET Crypto Airdrops",
-      content: "[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 12/19/22\n\n\nLIBERMALL NFT Airdrop\nThis is a Gleam that pays Blogger NFTs at total worth of 8k USD. 140 NFTs in the pool, top 30 get more than 1 NFT each.\nhttps://www.altcointrading.net/airdrops/#libermall-nft-airdrop\n\nMineralHub Airdrop\nThis P2E platform runs weekly events. Gleam pays 5 USD worth of $MNR to each of 40 lucky winners. Three extra prizes pay 25-40 USD worth.\nhttps://www.altcointrading.net/airdrops/#mineralhub-airdrop\n\nKOLO NFT Market Airdrop\nPool of this Gleam is worth 9k USD, most of it goes to random winners. KOL.Market is a classical Music NFT platform.\nhttps://www.altcointrading.net/airdrops/#kolo-nft-market-airdrop\n\nSnowball Airdrop\nGleam that ends on Christmas and splits 1000 USDT between 200 winners. Read the requirements - you need to fill a quiz on 23rd Dec too. Extra rewards if you mint on GALXE.\nhttps://www.altcointrading.net/airdrops/#snowball-airdrop\n\nSpaceX Airdrop\nThis is a Gleam that pays to 270 top winners out of a pool of 40k $SX tokens. The 1st top winners also gets an extra NFT. Token trades on Uniswap.\nhttps://www.altcointrading.net/airdrops/#spacex-airdrop\n\nC2WORLD Airdrop\nA Gleam that has a small pool of 500 USD in $C2G. Pool goes to 80 random winners (5 USD worth each) and 10 top shills (10 USD each).\nhttps://www.altcointrading.net/airdrops/#c2world-airdrop\n\nDIDNET (BSC) Airdrop\nThis very short Gleam pays everyone. Connect your BSC wallet to get 1,000 DXP airdrop - everyone gets this reward. The other tasks are a giveaway, 10 USDT to each of 100 top shills and 5 USDT per winner to 100 randos.\nhttps://www.altcointrading.net/airdrops/#didnet-(bsc)-airdrop\n\nPocketInfinity Airdrop II\nA Gleam airdrop with all tasks mandatory. Prize pool is 20 MM $POCKET which is 2 MM USD. \nhttps://www.altcointrading.net/airdrops/#pocketinfinity-airdrop-ii\n\n9D NFT (BSC) Airdrop\nEveryone gets paid here. A Google form that drops $COGI tokens. Rewards on first come basis between 500-2000 token per person, but after that a flat participation reward of 200 $COGI per person until the submissions close. 9D NFT is an upcoming game with MMORPG game genre combined with NFT.\nhttps://www.altcointrading.net/airdrops/#9d-nft-(bsc)-airdrop\n\nQuizCash Airdrop\nThis Gleam requires you to download an app, among other tasks. Pool 500k $GEM among 5k lucky winners and 24k $GEM to top 100 shills. The project is a learn-to-earn project.\nhttps://www.altcointrading.net/airdrops/#quizcash-airdrop\n\nDragons World NFT Airdrop\nA short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.\nhttps://www.altcointrading.net/airdrops/#dragons-world-nft-airdrop\n\nSalazar Airdrop\nA Givelab event, short form but small pool - only 3K USD worth. That is 250,000 $SZR between 100 random winners.\nhttps://www.altcointrading.net/airdrops/#salazar-airdrop\n\nTegro Airdrop\nGleam with 10k USD worth of $TGR in the pool. 450 winners in total, more entries better chaces.\nhttps://www.altcointrading.net/airdrops/#tegro-airdrop\n\nWild Thunder Token\nRead the rules for this Gleam, it wants you to submit a screenshot. The pool is 35,000,000 $WTT but tokens are not yet generated.\nhttps://www.altcointrading.net/airdrops/#wild-thunder-token\n\n\n[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 12/19/22\n\n\nLithium Ventures Airdrop\nSign in with a Web3 wallet like Metamask and complete simple tasks - Like &RT, things like that. This earns you rewards in USDC.\nhttps://www.altcointrading.net/airdrops/#lithium-ventures-airdrop\n\nSlice Chrome Extension\nThe Slice app is a Chrome extension that pays you for browsing (and for referrals). It comes with a bitcoin wallet, the ad revenue is paid in bitcoin and you can withdraw without fee via Lightning network.\nhttps://www.altcointrading.net/airdrops/#slice-chrome-extension\n\nPLUR Talk NFT Retroactive Airdrop\nA community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.\nhttps://www.altcointrading.net/airdrops/#plur-talk-nft-retroactive-airdrop\n\nUnlockd Finance Airdrop\nThis project ran another airdrop in August. This time they reward you for signing up into the waitlist and optionally completing Gleam-like tasks.\nhttps://www.altcointrading.net/airdrops/#unlockd-finance-airdrop\n\nWeSendIt Airdrop\nSign up to the waitlist, verify email and you will get to the Gleam tasks. It's just follows and engagement. Top participants by points get paid most.\nhttps://www.altcointrading.net/airdrops/#wesendit-airdrop\n\nHelix Metaverse (NFT) Airdrop\nHelix is an P2E game simulation of a city life that comes with land NFTs and other utilitities. The project rewards free NFTs for signup and referrals.\nhttps://www.altcointrading.net/airdrops/#helix-metaverse-(nft)-airdrop\n\nHarken Invite Campaign\nThis referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.\nhttps://www.altcointrading.net/airdrops/#harken-invite-campaign\n\nTrustGem NFT Airdrop\nComplete three tasks in the description (just follow, RT, like on Twitter) and sign with Metamask or other BSC web3 wallet. The airdrop will give 1000 NFTs to random users.\nhttps://www.altcointrading.net/airdrops/#trustgem-nft-airdrop\n\nJungleClub NFT Weekly Giveaway\nBSC project that airdrops NFTs to random JC NFT holders every Monday. You need a Binance account and the NFT. Details on Twitter.\nhttps://www.altcointrading.net/airdrops/#jungleclub-nft-weekly-giveaway\n\nCEX Crypto Believers\nThe KYC exchange CEX.IO is starting a biweekly event in which it will give away NFTs to people for social media engagement. Only random winners get rewarded and you need to KYC.\nhttps://www.altcointrading.net/airdrops/#cex-crypto-believers\n\nPhemex Launchpad\nPhemex started running a Launchpad program where you can be an early-ish investor in upcoming Web3 coins and NFT projects. Landing page in join link.\nhttps://www.altcointrading.net/airdrops/#phemex-launchpad\n\nSomniLand Reward Activities\nSomniLand is a multichain project that aims to bridge Web2 social networks onto Web3 blockchain-based internet. Since May 20, they run NFT land giveaway, you just need to claim a piece of land. Click the join link, connect wallet and Select a Land on the map, click the “Be a Resident” button, and you will become the resident of that Land. Genesis residents of SomniLife will share 200M $SO token reward.\nhttps://www.altcointrading.net/airdrops/#somniland-reward-activities\n\n\n[IG]\n\n\n#airdropalert - LIBERMALL NFT Airdrop\n\nThis is a Gleam that pays Blogger NFTs at total worth of 8k USD. 140 NFTs in the pool, top 30 get more than 1 NFT each.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - MineralHub Airdrop\n\nThis P2E platform runs weekly events. Gleam pays 5 USD worth of $MNR to each of 40 lucky winners. Three extra prizes pay 25-40 USD worth.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - KOLO NFT Market Airdrop\n\nPool of this Gleam is worth 9k USD, most of it goes to random winners. KOL.Market is a classical Music NFT platform.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - Snowball Airdrop\n\nGleam that ends on Christmas and splits 1000 USDT between 200 winners. Read the requirements - you need to fill a quiz on 23rd Dec too. Extra rewards if you mint on GALXE.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - SpaceX Airdrop\n\nThis is a Gleam that pays to 270 top winners out of a pool of 40k $SX tokens. The 1st top winners also gets an extra NFT. Token trades on Uniswap.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n\n\n#bountyalert - Lithium Ventures Airdrop\n\nSign in with a Web3 wallet like Metamask and complete simple tasks - Like &RT, things like that. This earns you rewards in USDC.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - Slice Chrome Extension\n\nThe Slice app is a Chrome extension that pays you for browsing (and for referrals). It comes with a bitcoin wallet, the ad revenue is paid in bitcoin and you can withdraw without fee via Lightning network.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - PLUR Talk NFT Retroactive Airdrop\n\nA community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - Unlockd Finance Airdrop\n\nThis project ran another airdrop in August. This time they reward you for signing up into the waitlist and optionally completing Gleam-like tasks.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - WeSendIt Airdrop\n\nSign up to the waitlist, verify email and you will get to the Gleam tasks. It's just follows and engagement. Top participants by points get paid most.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - Helix Metaverse (NFT) Airdrop\n\nHelix is an P2E game simulation of a city life that comes with land NFTs and other utilitities. The project rewards free NFTs for signup and referrals.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - Harken Invite Campaign\n\nThis referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - TrustGem NFT Airdrop\n\nComplete three tasks in the description (just follow, RT, like on Twitter) and sign with Metamask or other BSC web3 wallet. The airdrop will give 1000 NFTs to random users.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - JungleClub NFT Weekly Giveaway\n\nBSC project that airdrops NFTs to random JC NFT holders every Monday. You need a Binance account and the NFT. Details on Twitter.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - CEX Crypto Believers\n\nThe KYC exchange CEX.IO is starting a biweekly event in which it will give away NFTs to people for social media engagement. Only random winners get rewarded and you need to KYC.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - Phemex Launchpad\n\nPhemex started running a Launchpad program where you can be an early-ish investor in upcoming Web3 coins and NFT projects. Landing page in join link.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#bountyalert - SomniLand Reward Activities\n\nSomniLand is a multichain project that aims to bridge Web2 social networks onto Web3 blockchain-based internet. Since May 20, they run NFT land giveaway, you just need to claim a piece of land. Click the join link, connect wallet and Select a Land on the map, click the “Be a Resident” button, and you will become the resident of that Land. Genesis residents of SomniLife will share 200M $SO token reward.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n\n\n---\n\n! Daily #airdropalert: https://t.me/airdropXlounge\n",
-      category: null,
-      tags: null,
-      author: "ATNET",
-      id: 311
-    });
-    
-  
-    this.add({
-      title: null,
-      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      Upcoming Airdrops AltcoinTrading.NET - 12/19/22\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n      \n        All LIVE or soon launching Airdrops and Bounties\n        \n          \n          \n          \n\n          \n            \n            \n              LIBERMALL NFT Airdrop\n              This is a Gleam that pays Blogger NFTs at total worth of 8k USD. 140 NFTs in the pool, top 30 get more than 1 NFT each.&nbsp;\n            \n              MineralHub Airdrop\n              This P2E platform runs weekly events. Gleam pays 5 USD worth of $MNR to each of 40 lucky winners. Three extra prizes pay 25-40 USD worth.&nbsp;\n            \n              KOLO NFT Market Airdrop\n              Pool of this Gleam is worth 9k USD, most of it goes to random winners. KOL.Market is a classical Music NFT platform.&nbsp;\n            \n              Snowball Airdrop\n              Gleam that ends on Christmas and splits 1000 USDT between 200 winners. Read the requirements - you need to fill a quiz on 23rd Dec too. Extra rewards if you mint on GALXE.&nbsp;\n            \n              SpaceX Airdrop\n              This is a Gleam that pays to 270 top winners out of a pool of 40k $SX tokens. The 1st top winners also gets an extra NFT. Token trades on Uniswap.&nbsp;\n            \n              C2WORLD Airdrop\n              A Gleam that has a small pool of 500 USD in $C2G. Pool goes to 80 random winners (5 USD worth each) and 10 top shills (10 USD each).&nbsp;\n            \n              DIDNET (BSC) Airdrop\n              This very short Gleam pays everyone. Connect your BSC wallet to get 1,000 DXP airdrop - everyone gets this reward. The other tasks are a giveaway, 10 USDT to each of 100 top shills and 5 USDT per winner to 100 randos.&nbsp;\n            \n              PocketInfinity Airdrop II\n              A Gleam airdrop with all tasks mandatory. Prize pool is 20 MM $POCKET which is 2 MM USD. &nbsp;\n            \n              9D NFT (BSC) Airdrop\n              Everyone gets paid here. A Google form that drops $COGI tokens. Rewards on first come basis between 500-2000 token per person, but after that a flat participation reward of 200 $COGI per person until the submissions close. 9D NFT is an upcoming game with MMORPG game genre combined with NFT.&nbsp;\n            \n              QuizCash Airdrop\n              This Gleam requires you to download an app, among other tasks. Pool 500k $GEM among 5k lucky winners and 24k $GEM to top 100 shills. The project is a learn-to-earn project.&nbsp;\n            \n              Dragons World NFT Airdrop\n              A short Givelab form that drops 475 NFTs for a P2E game. Also, pool of 49K BUSD to 95 winners.&nbsp;\n            \n              Salazar Airdrop\n              A Givelab event, short form but small pool - only 3K USD worth. That is 250,000 $SZR between 100 random winners.&nbsp;\n            \n              Tegro Airdrop\n              Gleam with 10k USD worth of $TGR in the pool. 450 winners in total, more entries better chaces.&nbsp;\n            \n              Wild Thunder Token\n              Read the rules for this Gleam, it wants you to submit a screenshot. The pool is 35,000,000 $WTT but tokens are not yet generated.&nbsp;\n            \n            \n          \n          Permanent or Long-Running Crypto Bounties, Airdrops and Bonuses\n          \n            \n            \n              Lithium Ventures Airdrop\n              live\n            \n              Slice Chrome Extension\n              live\n            \n              PLUR Talk NFT Retroactive Airdrop\n              live\n            \n              Unlockd Finance Airdrop\n              live\n            \n              WeSendIt Airdrop\n              live\n            \n              Helix Metaverse (NFT) Airdrop\n              live\n            \n              Harken Invite Campaign\n              live\n            \n              TrustGem NFT Airdrop\n              first come\n            \n              JungleClub NFT Weekly Giveaway\n              Mondays\n            \n              CEX Crypto Believers\n              biweekly\n            \n              Phemex Launchpad\n              first come\n            \n              SomniLand Reward Activities\n              live\n            \n            \n            \n            \n              Nansen Christmas Sale\n              Nansen runs a Christmas deal of up to 50% off on their plans. The standard plan comes at 75 USD per month if you pay annually. Nansen is the most reliable NFT and DeFi analytics. \n              &nbsp;\n            \n              LATOKEN New Airdrops and Giveaways\n              LATOKEN is running a bunch of new airdrops: SET, GFE, XLIST, SAF. Most are via Gleam. You'll need a LATOKEN account - no KYC required.\n              &nbsp;\n            \n              Bitforex Promo (certain countries only)\n              BitForex runs a new user promo specially intended for new users from Nigeria, Vietnam, Philippines, Turkey, and Peru. Registering from those countries and depositing 100 USDT will get you a 10 USD bonus paid in BTC within a few weeks. Bitforex does not require KYC.\n              &nbsp;\n            \n              New Bitkeep wallet promo\n              From December 5 to December 20, you will have a chance to win 50,000 GASU tokens if you download Bitkeep and complete simple tasks.\n              &nbsp;\n            \n              BITCI Meme Contest with WhiteBIT\n              Create a meme about BITCI + WhiteBIT + World Cup 2022 in Qatar and compete for the 140 000 BITCI prize pool. Make an account with the join link, follow WhiteBIT and Bitci Global on Twitter, Like & RT this, tweet your meme and then fill out the Google form to participate.\n              &nbsp;\n            \n              CEX Christmas Promo\n              Spin the wheel to get your promo. As a Christmas gift to all KYCd users on CEX.io, they are increasing Savings rewards in BTC and ETH of up to 5-10% APY instead of the default 0.5-1% APY. The savings programs require you to deposit your crypto into an exchange and keep it there.\n              &nbsp;\n            \n              Safu Binance.com 10 USD cashback\n              Deposit fiat to Binance and get 10 USD cashback voucher. Make an account and head over to the Activity center. You can also set a recurring buy, as an auto-DCA.\n              &nbsp;\n            \n              SimpleSwap Transaction Bonus\n              SimpleSwap is a no-KYC swap and exchange where among others you can buy BNB for BTC without KYC. The rates are only 1% over the market prices at FTX. Use the coupon SsITvSMQ0Cru0ERU in your first transaction to get a bonus of 300 SWP tokens for that transaction.\n              &nbsp;\n            \n              BitKan $100 Sign up Bonus\n              BitKan just listed Project Galaxy (GAL), Primate (PRIMATE), Realm (REALM), and Colizeum (ZEUM) for spot trading. To promote their markets, BitKan now gives $100 bonus to new traders.\n              &nbsp;\n            \n              Cloudbet Turbo Thursday Deposit Bonus\n              Runs thursdays 05:00-23:59 UTC. Make a deposit of 0.1 mBTC or more, Cloudbet gives you a 100% Reload Bonus of up to 50 mBTC/1 BCH. Remember you must activate the bonus in your player dashboard before making a deposit for the bonus to be credited! The bonus is only available for the Casino, not the Sportsbook.\n              &nbsp;\n            \n            \n          \n          ]]>\n        \n        Mon, 19 Dec 2022 20:44:51 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/\n        https://www.altcointrading.net/airdrops/\n      \n  \n\n",
-      category: null,
-      tags: null,
-      author: "ATNET",
-      id: 312
-    });
-    
-  
-    this.add({
-      title: null,
-      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n    \n\n\n    \n      \n        BCF Open Beta Giveaway\n        until 25 Dec\n        \n          \n        \n        https://gleam.io/dLt8h/bcf-2023-open-beta-review-giveaway-campaign\n        https://www.altcointrading.net/airdrops/#bcf-open-beta-giveaway\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        PIAS Airdrop\n        until 23 Dec\n        \n          \n        \n        https://gleam.io/gAa3x/4thpias-airdrop-campaign\n        https://www.altcointrading.net/airdrops/#pias-airdrop\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        TWAKE Airdrop\n        until 22 Dec\n        \n          \n        \n        https://wn.nr/APxv5T\n        https://www.altcointrading.net/airdrops/#twake-airdrop\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        SecondLive Airdrop\n        until 24 Dec\n        \n          \n        \n        https://wn.nr/VSZqY4\n        https://www.altcointrading.net/airdrops/#secondlive-airdrop\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        Retroactive Airdrop for holders\n        on 4 Jan\n        \n          \n        \n        https://gleam.io/ix8r4/retroactive-campaign-for-rosn-holders\n        https://www.altcointrading.net/airdrops/#retroactive-airdrop-for-holders\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        Nekoverse Airdrop\n        until 21 Dec\n        \n          \n        \n        https://gleam.io/Fl0kp/nekoverse-x-galaxy-lab-airdrop-\n        https://www.altcointrading.net/airdrops/#nekoverse-airdrop\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        DayStarter Airdrop III\n        until 1 Jan\n        \n          \n        \n        https://gleam.io/hRcsg/daystarterdst-airdrop-event-3\n        https://www.altcointrading.net/airdrops/#daystarter-airdrop-iii\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n\n\n\n  \n\n",
-      category: null,
-      tags: null,
-      author: "ATNET",
-      id: 313
-    });
-    
-  
-    this.add({
-      title: null,
-      content: "\n\n\n\n\n\n\n\n\n\n  \n    Monday Airdrops - 19 Dec\n    \n      Airdrop digest\n    \n    https://www.altcointrading.net/airdrops/\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n      \n        \n        Monday Airdrops - 19 Dec\n        \n        BCF Open Beta Giveaway, PIAS Airdrop, TWAKE Airdrop ✌️\n        \n          More new airdrops on the site and in a minute on Twitter\n           ]]>\n        \n        BCF Open Beta Giveaway\n              Shill giveaway for a F2P/P2E game, top shills get paid 5-150 USDC. Football Manager is a simulation football management game.\n              until 25 Dec\n              join ✅\n            \n              PIAS Airdrop\n              A super short Gleam that rewards 500 random winners to split 5000 $PIAS.\n              until 23 Dec\n              join ✅\n            \n              TWAKE Airdrop\n              Gleam with 2.5k USD worth of $TWAKE in pool, 1k of which gets paid on first-come basis. The rest is random. Payout per person 1 USD worth.\n              until 22 Dec\n              join ✅\n            \n            \n              Nansen Christmas Sale\n              Nansen runs a Christmas deal of up to 50% off on their plans. The standard plan comes at 75 USD per month if you pay annually. Nansen is the most reliable NFT and DeFi analytics. \n              until 31 Dec\n              join ✅\n            \n              LATOKEN New Airdrops and Giveaways\n              LATOKEN is running a bunch of new airdrops: SET, GFE, XLIST, SAF. Most are via Gleam. You'll need a LATOKEN account - no KYC required.\n              until 22 Dec\n              join ✅\n            \n              Bitforex Promo (certain countries only)\n              BitForex runs a new user promo specially intended for new users from Nigeria, Vietnam, Philippines, Turkey, and Peru. Registering from those countries and depositing 100 USDT will get you a 10 USD bonus paid in BTC within a few weeks. Bitforex does not require KYC.\n              until 26 Dec\n              join ✅\n            \n          \n        In the blog:\n        \n          \n          EU AML proposal against unhosted crypto wallets: What to do to prepare for crackdown (legally) &middot; 04/06/22\n          \n          Dai - Stablecoin alternative to Tether &middot; 04/08/22\n          \n          CEX.IO Not Accepting New Users for the Time Being &middot; 04/08/22\n          \n        \n        ]]>\n        https://www.altcointrading.net/airdrops/#2022-12-19\n      \n\n  \n\n",
-      category: null,
-      tags: null,
-      author: "ATNET",
       id: 314
     });
     
   
     this.add({
       title: null,
-      content: "\n\n  \n\n    AltcoinTrading.NET Strategy\n    \n      Guides on the tech side of crypto and the very basics of trading.\n    \n\n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net/guides/\n    \n\n    en\n\n\n    https://www.altcointrading.net/strategy/\n    \n\n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n    \n      \n\n        How to safely move Litecoin between SegWit P2SH (3) addresses and legacy (L) addresses\n        Some exchanges don&apos;t support LTC withdrawals to P2SH wallets and other don&apos;t support legacy addresses. Here&apos;s how to convert between them.\n\n        Thu, 31 Aug 2017 22:18:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/howto/move-ltc-p2sh/\n        https://www.altcointrading.net/howto/move-ltc-p2sh/\n\n        \n        p2sh-wallet\n        \n        altcoin-wallet\n        \n        crypto-tools\n        \n        top\n        \n        coldcard\n        \n        trezor\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        How to safely generate IOTA seed and migrate from Light Wallet to Trinity\n        All the IOTA storage options you have in 2019, IOTA cold storage homelab and a short guide to migrating IOTA from Light Wallet to Trinity Wallet (and Ledger, if you wish).\n\n        Wed, 20 Sep 2017 00:00:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/security/iota/\n        https://www.altcointrading.net/security/iota/\n\n        \n        crypto-opsec\n        \n        altcoin-wallets\n        \n        crypto-tools\n        \n        bitfinex\n        \n        ledger\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        Wallet OPSEC: Sweeping private keys and Sweeping Addresses\n        What is sweeping, when do which one and a tutorial for safe redeeming of bitcoin forks.\n\n        Thu, 23 Nov 2017 16:22:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/security/sweep-private-keys/\n        https://www.altcointrading.net/security/sweep-private-keys/\n\n        \n        cold-storage\n        \n        crypto-opsec\n        \n        bitcoin-wallet\n        \n        crypto-tools\n        \n        electrum\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        Virtual Machine Crypto Wallets: Should You Bother?\n        When does it make sense to put a crypto wallet on a virtual machine? Includes a full walkthrough tutorial on how to set up a cryptocurrency wallet in Virtualbox.\n\n        Fri, 15 Dec 2017 05:22:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/virtual-machine-altcoin-wallets-security-how-to/\n        https://www.altcointrading.net/virtual-machine-altcoin-wallets-security-how-to/\n\n        \n        cold-storage\n        \n        crypto-opsec\n        \n        altcoin-wallets\n        \n        crypto-tools\n        \n        airdrops\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        How to avoid re-using an email while keeping a single inbox only (Phishing Protection)\n        An easy way to setup your mailbox in such a way that you will not have to reuse your email address again.\n\n        Thu, 22 Feb 2018 14:41:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/avoid-email-reuse-easy-phishing-protection/\n        https://www.altcointrading.net/avoid-email-reuse-easy-phishing-protection/\n\n        \n        crypto-opsec\n        \n        best-practices\n        \n        crypto-tools\n        \n        spend-your-crypto\n        \n        \n        trading-methods-101\n        \n\n      \n    \n\n\n  \n\n",
+      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n    \n\n\n    \n      \n        INTL Airdrop\n        \n          INTL Airdrop\n          Everyone gets paid here. This Gleam is to promote a CEX listing of this token. Participation reward 1 $INTL, more rewards for 50 random winners.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#intl-airdrop\n        https://www.altcointrading.net/airdrops/#intl-airdrop\n      \n    \n      \n        LightCycle Airdrop\n        \n          LightCycle Airdrop\n          Just launched 9th Jan. This airdrop has a pool of 1.5k $CMP, rewards go to 50 randos.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#lightcycle-airdrop\n        https://www.altcointrading.net/airdrops/#lightcycle-airdrop\n      \n    \n      \n        DOGO Token Airdrop\n        \n          DOGO Token Airdrop\n          Gleam that has a pool of 50k tokens for the first 10k participants.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#dogo-token-airdrop\n        https://www.altcointrading.net/airdrops/#dogo-token-airdrop\n      \n    \n      \n        Meteorite Effect Airdrop\n        \n          Meteorite Effect Airdrop\n          This is really a miners bounty. Generate the mineable S-NFT (the NFT is the mining reward) to gain extra token rewards on Wormhole chain.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#meteorite-effect-airdrop\n        https://www.altcointrading.net/airdrops/#meteorite-effect-airdrop\n      \n    \n      \n        Starcoin Airdrop\n        \n          Starcoin Airdrop\n          Gleam for token that is already trading at gate.io. Airdrops 10 or 5 USD worth of token.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#starcoin-airdrop\n        https://www.altcointrading.net/airdrops/#starcoin-airdrop\n      \n    \n      \n        Zone of avoidance Airdrop\n        \n          Zone of avoidance Airdrop\n          This Gleam requires you to download an app. The pool is 300k $ZOA and 50 NFTs of a new game.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#zone-of-avoidance-airdrop\n        https://www.altcointrading.net/airdrops/#zone-of-avoidance-airdrop\n      \n    \n      \n        Leverage Frenzy\n        \n          Leverage Frenzy\n          BitMart Futures runs a 100 USDT giveaway for their traders. It's just a Gleam form. Additional rewards are for traders, volume-based.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#leverage-frenzy\n        https://www.altcointrading.net/airdrops/#leverage-frenzy\n      \n    \n      \n        Tangled Airdrop I.\n        \n          Tangled Airdrop I.\n          Gleam with 1k USD worth of stablecoins and tokens. 500 randos get rewarded (it's either USDT or $TIPO).\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#tangled-airdrop-i.\n        https://www.altcointrading.net/airdrops/#tangled-airdrop-i.\n      \n    \n      \n        EastGate Biotech Airdrop\n        \n          EastGate Biotech Airdrop\n          Everyone gets paid 15 USD in $EGP (have to complete the full form), shills get paid much more.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#eastgate-biotech-airdrop\n        https://www.altcointrading.net/airdrops/#eastgate-biotech-airdrop\n      \n    \n      \n        SmartCryptoDAO\n        \n          SmartCryptoDAO\n          A short Gleam with a Tether pool of 350 USDT. 300 folks get 3 USDT each, a couple of top shills get 10 USDT.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#smartcryptodao\n        https://www.altcointrading.net/airdrops/#smartcryptodao\n      \n    \n      \n        Kuromi (BSC) Airdrop\n        \n          Kuromi (BSC) Airdrop\n          A short Gleam that rewards out of pool of 500k $KUROMI tokens and 1 NFT.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#kuromi-(bsc)-airdrop\n        https://www.altcointrading.net/airdrops/#kuromi-(bsc)-airdrop\n      \n    \n      \n        VAGO Gold Coin Airdrop\n        \n          VAGO Gold Coin Airdrop\n          This is a Gleam and Discord event that has 300k USD in pool. The pool is made of USDT/NFT/whitelist/tobacco sticks and other valuables. Join the discord for more activities.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#vago-gold-coin-airdrop\n        https://www.altcointrading.net/airdrops/#vago-gold-coin-airdrop\n      \n    \n      \n        Chance-G Airdrop\n        \n          Chance-G Airdrop\n          A Gleam with 1000 USDT in pool. Top shills get 100-250 USDT each, then 50 random people 10 USDT each.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#chance-g-airdrop\n        https://www.altcointrading.net/airdrops/#chance-g-airdrop\n      \n    \n      \n        LumiShare Airdrop\n        \n          LumiShare Airdrop\n          Newly launched event. Long Gleam that pays 55 winners out of pool of over 15k tokens. Winners are random.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#lumishare-airdrop\n        https://www.altcointrading.net/airdrops/#lumishare-airdrop\n      \n    \n      \n        Titan Capital Airdrop\n        \n          Titan Capital Airdrop\n          This Gleam starts Jan 5 and ends on 25th. It pays 40 $JK tokens per person, 500 random winners.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#titan-capital-airdrop\n        https://www.altcointrading.net/airdrops/#titan-capital-airdrop\n      \n    \n      \n        WarKnight Airdrop\n        \n          WarKnight Airdrop\n          Everyone gets paid here. Participation reward 50 $KWS tokens (~20 USD) for form completion. Full pool 100k USD worth. Distributes 3 days after end.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#warknight-airdrop\n        https://www.altcointrading.net/airdrops/#warknight-airdrop\n      \n    \n      \n        NAKSON Airdrop\n        \n          NAKSON Airdrop\n          First come Gleam, 700 first users get $NAX tokens and after that 300 random. Pool 20k tokens.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#nakson-airdrop\n        https://www.altcointrading.net/airdrops/#nakson-airdrop\n      \n    \n      \n        P2E Points Giveaway\n        \n          P2E Points Giveaway\n          This is an event from playtoearn.net that rewards 20 winners with 100 P2E points each.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#p2e-points-giveaway\n        https://www.altcointrading.net/airdrops/#p2e-points-giveaway\n      \n    \n      \n        ASYNC (ETH) Airdrop\n        \n          ASYNC (ETH) Airdrop\n          This Gleam has a pool of 5k USD worth of tokens. Rewards are 25 USD worth per or 50 USD worth per, total of 150 lucky winners.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#async-(eth)-airdrop\n        https://www.altcointrading.net/airdrops/#async-(eth)-airdrop\n      \n    \n      \n        DEXSwap Airdrop\n        \n          DEXSwap Airdrop\n          The DEXSwap exchange runs a Gleam that pays random winners.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#dexswap-airdrop\n        https://www.altcointrading.net/airdrops/#dexswap-airdrop\n      \n    \n      \n        MileniON Airdrop\n        \n          MileniON Airdrop\n          A short Gleam for a buzzwordy project. The reward pool is only 5 NFTs that are supposed to be quite rare.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#milenion-airdrop\n        https://www.altcointrading.net/airdrops/#milenion-airdrop\n      \n    \n      \n        FMEN Airdrop\n        \n          FMEN Airdrop\n          First come! A short Gleam for an NFT platform. 10 MM tokens in pool for the first 10k users.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#fmen-airdrop\n        https://www.altcointrading.net/airdrops/#fmen-airdrop\n      \n    \n      \n        Huge DarkMeta Airdrop\n        \n          Huge DarkMeta Airdrop\n          Gleam where 1115 randos will receive each 300 $DMT tokens. Also, 100 top shills with the most entries will share a reward pool of 165,500 $DMT.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#huge-darkmeta-airdrop\n        https://www.altcointrading.net/airdrops/#huge-darkmeta-airdrop\n      \n    \n      \n        BornToDie Giveaway\n        \n          BornToDie Giveaway\n          A Gleam for a shooter game that airdrops $BORN tokens, over 25k tokens in pool. Top shills also get NFT WL and USDT rewards.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#borntodie-giveaway\n        https://www.altcointrading.net/airdrops/#borntodie-giveaway\n      \n    \n      \n        Racearth Airdrop\n        \n          Racearth Airdrop\n          A Gleam that rewards 2500 people at random, pool is 50k $RACE tokens.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#racearth-airdrop\n        https://www.altcointrading.net/airdrops/#racearth-airdrop\n      \n    \n      \n        IKO Airdrop\n        \n          IKO Airdrop\n          Token airdrop Gleam that rewards random 2000 users from a pool of 40k $EMG.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#iko-airdrop\n        https://www.altcointrading.net/airdrops/#iko-airdrop\n      \n    \n      \n        UnderCity Airdrop\n        \n          UnderCity Airdrop\n          Short Gleam that has a pool worth 3k USD to 20 winners, that's a good reward per peron. Reward in $UND tokens.\n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/#undercity-airdrop\n        https://www.altcointrading.net/airdrops/#undercity-airdrop\n      \n    \n\n\n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3176,8 +3176,8 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: null,
-      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n    \n\n\n    \n      \n        Nansen Christmas Sale\n        until 31 Dec\n        \n          \n        \n        https://www.nansen.ai/plans\n        https://www.altcointrading.net/airdrops/#nansen-christmas-sale\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        LATOKEN New Airdrops and Giveaways\n        until 22 Dec\n        \n          \n        \n        https://bit.ly/3BIZcs9\n        https://www.altcointrading.net/airdrops/#latoken-new-airdrops-and-giveaways\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        Bitforex Promo (certain countries only)\n        until 26 Dec\n        \n          \n        \n        https://bit.ly/at-bforx-2022\n        https://www.altcointrading.net/airdrops/#bitforex-promo-(certain-countries-only)\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        New Bitkeep wallet promo\n        until 20 Dec\n        \n          \n        \n        https://gleam.io/qwhsl/keep-initiative-learn2earn-campaign-phase-one\n        https://www.altcointrading.net/airdrops/#new-bitkeep-wallet-promo\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        BITCI Meme Contest with WhiteBIT\n        until 20 Dec\n        \n          \n        \n        https://bit.ly/3kwUh2k\n        https://www.altcointrading.net/airdrops/#bitci-meme-contest-with-whitebit\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        CEX Christmas Promo\n        until 31 Dec\n        \n          \n        \n        https://cex.io/savings-promo\n        https://www.altcointrading.net/airdrops/#cex-christmas-promo\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        Safu Binance.com 10 USD cashback\n        live\n        \n          \n        \n        https://bit.ly/3p7ya7Y\n        https://www.altcointrading.net/airdrops/#safu-binance.com-10-usd-cashback\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        SimpleSwap Transaction Bonus\n        code SsITvSMQ0Cru0ERU\n        \n          \n        \n        https://bit.ly/at-simpleswap\n        https://www.altcointrading.net/airdrops/#simpleswap-transaction-bonus\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        BitKan $100 Sign up Bonus\n        live\n        \n          \n        \n        https://bit.ly/BitKanSignUpGift\n        https://www.altcointrading.net/airdrops/#bitkan-$100-sign-up-bonus\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n      \n        Cloudbet Turbo Thursday Deposit Bonus\n        link ->\n        \n          \n        \n        http://bit.ly/2BhLXyK\n        https://www.altcointrading.net/airdrops/#cloudbet-turbo-thursday-deposit-bonus\n        Mon, 19 Dec 2022 20:44:51 +0000\n      \n    \n\n\n\n  \n\n",
+      title: "ATNET Crypto Airdrops",
+      content: "[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 01/16/23\n\n\nINTL Airdrop\nEveryone gets paid here. This Gleam is to promote a CEX listing of this token. Participation reward 1 $INTL, more rewards for 50 random winners.\nhttps://www.altcointrading.net/airdrops/#intl-airdrop\n\nLightCycle Airdrop\nJust launched 9th Jan. This airdrop has a pool of 1.5k $CMP, rewards go to 50 randos.\nhttps://www.altcointrading.net/airdrops/#lightcycle-airdrop\n\nDOGO Token Airdrop\nGleam that has a pool of 50k tokens for the first 10k participants.\nhttps://www.altcointrading.net/airdrops/#dogo-token-airdrop\n\nMeteorite Effect Airdrop\nThis is really a miners bounty. Generate the mineable S-NFT (the NFT is the mining reward) to gain extra token rewards on Wormhole chain.\nhttps://www.altcointrading.net/airdrops/#meteorite-effect-airdrop\n\nStarcoin Airdrop\nGleam for token that is already trading at gate.io. Airdrops 10 or 5 USD worth of token.\nhttps://www.altcointrading.net/airdrops/#starcoin-airdrop\n\nZone of avoidance Airdrop\nThis Gleam requires you to download an app. The pool is 300k $ZOA and 50 NFTs of a new game.\nhttps://www.altcointrading.net/airdrops/#zone-of-avoidance-airdrop\n\nLeverage Frenzy\nBitMart Futures runs a 100 USDT giveaway for their traders. It's just a Gleam form. Additional rewards are for traders, volume-based.\nhttps://www.altcointrading.net/airdrops/#leverage-frenzy\n\nTangled Airdrop I.\nGleam with 1k USD worth of stablecoins and tokens. 500 randos get rewarded (it's either USDT or $TIPO).\nhttps://www.altcointrading.net/airdrops/#tangled-airdrop-i.\n\nEastGate Biotech Airdrop\nEveryone gets paid 15 USD in $EGP (have to complete the full form), shills get paid much more.\nhttps://www.altcointrading.net/airdrops/#eastgate-biotech-airdrop\n\nSmartCryptoDAO\nA short Gleam with a Tether pool of 350 USDT. 300 folks get 3 USDT each, a couple of top shills get 10 USDT.\nhttps://www.altcointrading.net/airdrops/#smartcryptodao\n\nKuromi (BSC) Airdrop\nA short Gleam that rewards out of pool of 500k $KUROMI tokens and 1 NFT.\nhttps://www.altcointrading.net/airdrops/#kuromi-(bsc)-airdrop\n\nVAGO Gold Coin Airdrop\nThis is a Gleam and Discord event that has 300k USD in pool. The pool is made of USDT/NFT/whitelist/tobacco sticks and other valuables. Join the discord for more activities.\nhttps://www.altcointrading.net/airdrops/#vago-gold-coin-airdrop\n\nChance-G Airdrop\nA Gleam with 1000 USDT in pool. Top shills get 100-250 USDT each, then 50 random people 10 USDT each.\nhttps://www.altcointrading.net/airdrops/#chance-g-airdrop\n\nLumiShare Airdrop\nNewly launched event. Long Gleam that pays 55 winners out of pool of over 15k tokens. Winners are random.\nhttps://www.altcointrading.net/airdrops/#lumishare-airdrop\n\nTitan Capital Airdrop\nThis Gleam starts Jan 5 and ends on 25th. It pays 40 $JK tokens per person, 500 random winners.\nhttps://www.altcointrading.net/airdrops/#titan-capital-airdrop\n\nWarKnight Airdrop\nEveryone gets paid here. Participation reward 50 $KWS tokens (~20 USD) for form completion. Full pool 100k USD worth. Distributes 3 days after end.\nhttps://www.altcointrading.net/airdrops/#warknight-airdrop\n\nNAKSON Airdrop\nFirst come Gleam, 700 first users get $NAX tokens and after that 300 random. Pool 20k tokens.\nhttps://www.altcointrading.net/airdrops/#nakson-airdrop\n\nP2E Points Giveaway\nThis is an event from playtoearn.net that rewards 20 winners with 100 P2E points each.\nhttps://www.altcointrading.net/airdrops/#p2e-points-giveaway\n\nASYNC (ETH) Airdrop\nThis Gleam has a pool of 5k USD worth of tokens. Rewards are 25 USD worth per or 50 USD worth per, total of 150 lucky winners.\nhttps://www.altcointrading.net/airdrops/#async-(eth)-airdrop\n\nDEXSwap Airdrop\nThe DEXSwap exchange runs a Gleam that pays random winners.\nhttps://www.altcointrading.net/airdrops/#dexswap-airdrop\n\nMileniON Airdrop\nA short Gleam for a buzzwordy project. The reward pool is only 5 NFTs that are supposed to be quite rare.\nhttps://www.altcointrading.net/airdrops/#milenion-airdrop\n\nFMEN Airdrop\nFirst come! A short Gleam for an NFT platform. 10 MM tokens in pool for the first 10k users.\nhttps://www.altcointrading.net/airdrops/#fmen-airdrop\n\nHuge DarkMeta Airdrop\nGleam where 1115 randos will receive each 300 $DMT tokens. Also, 100 top shills with the most entries will share a reward pool of 165,500 $DMT.\nhttps://www.altcointrading.net/airdrops/#huge-darkmeta-airdrop\n\nBornToDie Giveaway\nA Gleam for a shooter game that airdrops $BORN tokens, over 25k tokens in pool. Top shills also get NFT WL and USDT rewards.\nhttps://www.altcointrading.net/airdrops/#borntodie-giveaway\n\nRacearth Airdrop\nA Gleam that rewards 2500 people at random, pool is 50k $RACE tokens.\nhttps://www.altcointrading.net/airdrops/#racearth-airdrop\n\nIKO Airdrop\nToken airdrop Gleam that rewards random 2000 users from a pool of 40k $EMG.\nhttps://www.altcointrading.net/airdrops/#iko-airdrop\n\nUnderCity Airdrop\nShort Gleam that has a pool worth 3k USD to 20 winners, that's a good reward per peron. Reward in $UND tokens.\nhttps://www.altcointrading.net/airdrops/#undercity-airdrop\n\n\n[2] Live #Crypto #BOUNTIES https://www.altcointrading.net/airdrops/ - 01/16/23\n\n\n\n[IG]\n\n\n#airdropalert - INTL Airdrop\n\nEveryone gets paid here. This Gleam is to promote a CEX listing of this token. Participation reward 1 $INTL, more rewards for 50 random winners.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - LightCycle Airdrop\n\nJust launched 9th Jan. This airdrop has a pool of 1.5k $CMP, rewards go to 50 randos.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - DOGO Token Airdrop\n\nGleam that has a pool of 50k tokens for the first 10k participants.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - Meteorite Effect Airdrop\n\nThis is really a miners bounty. Generate the mineable S-NFT (the NFT is the mining reward) to gain extra token rewards on Wormhole chain.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n#airdropalert - Starcoin Airdrop\n\nGleam for token that is already trading at gate.io. Airdrops 10 or 5 USD worth of token.\n\n[link in bio > airdrops]\n\n#igdrops #nftart #bountycrypto #nftairdrop #cryptobounty #cryptoairdrops #bountyalert #airdrops\n\n\n\n\n\n\n---\n\n! Daily #airdropalert: https://t.me/airdropXlounge\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3187,7 +3187,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n  \n\n    AltcoinTrading.NET Strategy\n    \n      Long reads on cryptocurrency trading strategies.\n    \n\n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net/strategy/\n    \n\n    en\n\n\n    https://www.altcointrading.net/strategy/\n    \n\n    Mon, 19 Dec 2022 20:44:51 +0000\n    Mon, 19 Dec 2022 20:44:51 +0000\n\n    \n      \n\n        Multiple time frame analysis: Trading several timeframes at the same time\n        On why it&apos;s constructive to trade multiple time frames at the same time and how to manage the stack of your positions and orders.\n\n        Sun, 29 Oct 2017 09:36:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/multiple-time-frame/\n        https://www.altcointrading.net/strategy/multiple-time-frame/\n\n        \n        crypto-charting\n        \n        crypto-technical-analysis\n        \n        tensorcharts\n        \n        tradingview\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        3 Tips: How to vet ICOs and what to watch once you&apos;re in\n        To some crypto traders ICOs are so 2017, to some they are a great concept democratizing finance. There are scams and failures but one way to work with token markets is to take the past failure data and draw valuable information from them.\n\n        Mon, 26 Feb 2018 09:31:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/how-to-vet-icos/\n        https://www.altcointrading.net/strategy/how-to-vet-icos/\n\n        \n        blockchain-technology\n        \n        ico-analysis\n        \n        cryptocurrency-investing\n        \n        \n        crypto-trading-101\n        \n\n      \n    \n      \n\n        Fulcrum Bottom\n        Fulcrum bottom has been talked about a lot lately thanks to mentions in Peter Brandt&apos;s reports. Describing it as &apos;head &amp; shoulders except at the bottom&apos; is not quite cutting it though.\n\n        Tue, 25 Sep 2018 04:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/fulcrum-bottom/\n        https://www.altcointrading.net/strategy/fulcrum-bottom/\n\n        \n        fulcrum-bottom\n        \n        crypto-technical-analysis\n        \n        trading-technique\n        \n        peter-l-brandt\n        \n        swing-trading\n        \n        independent-reserve\n        \n        bitfinex\n        \n        tradingview\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Thoughts on Reversals and Psychology\n        Bottoming process, just as any other market reversal, is strongly influenced by psychology.\n\n        Fri, 28 Dec 2018 04:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/reversals/\n        https://www.altcointrading.net/strategy/reversals/\n\n        \n        fulcrum-bottom\n        \n        mises\n        \n        reversals\n        \n        swing-trading\n        \n        trading-strategy\n        \n        crypto-technical-analysis\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Crypto Investment Strategy: Step By Step Guide to Long-Term Holding\n        Full walkthrough with all the basics you need to have down for a sensible mid to long-term cryptocurrency investment strategy. With a case in point - XRP. \n\n        Fri, 19 Jul 2019 18:11:00 +0000\n\n        AltcoinTrading.NET@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/crypto-investment/\n        https://www.altcointrading.net/strategy/crypto-investment/\n\n        \n        crypto-value-judgement\n        \n        crypto-investment-strategy\n        \n        dca\n        \n        crypto-trading-strategy\n        \n        trading-technique\n        \n        ledger\n        \n        independent-reserve\n        \n        \n        crypto-trading-101\n        \n\n      \n    \n      \n\n        Technical Analysis in Crypto: How to use TA strategically\n        With links to the selection of best tools and scripts\n\n        Thu, 14 May 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/technical/\n        https://www.altcointrading.net/strategy/technical/\n\n        \n        crypto-technical-analysis\n        \n        technical-analysis\n        \n        strategic-mindset\n        \n        rational-analysis\n        \n        bitmex\n        \n        tradingview\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Crypto Market Psychology vs *Your* Trading Psychology\n        The crypto market psychology is what it is for a reason. If that makes you uncomfortable, try working on your trading psychology.\n\n        Wed, 09 Sep 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/crypto-market-psychology/\n        https://www.altcointrading.net/strategy/crypto-market-psychology/\n\n        \n        crypto-trading-strategy\n        \n        market-psychology\n        \n        trading-psychology\n        \n        fundamental-analysis\n        \n        technical-analysis\n        \n        strategic-mindset\n        \n        rational-analysis\n        \n        bitmex\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Margin Lending Strategy Template (Best for Bitfinex lending)\n        Bitcoin funding rate strategy: How to decide whether the swap rate is enough to cover your risk and why it is a stupid idea to lend your coins for peanuts.\n\n        Tue, 06 Oct 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/lending/\n        https://www.altcointrading.net/strategy/lending/\n\n        \n        yield\n        \n        crypto-lending\n        \n        crypto-tools\n        \n        bitfinex\n        \n        ftx\n        \n        \n        non-directional\n        \n\n      \n    \n      \n\n        Wyckoff trading method for ranging markets\n        Fully reworked primer on ranging crypto markets. Includes Wyckoff method for market phases and recommended TradingView scripts.\n\n        Wed, 04 Nov 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/wyckoff-ranging-markets/\n        https://www.altcointrading.net/strategy/wyckoff-ranging-markets/\n\n        \n        crypto-charting\n        \n        crypto-technical-analysis\n        \n        wyckoff-trading-crypto\n        \n        crypto-trading-strategy\n        \n        tradingview\n        \n        bitfinex\n        \n        ftx\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Market Timing in Crypto\n        Timing the market has a bad rap. But there are strategic approaches to it, even on crypto markets.\n\n        Mon, 23 Nov 2020 10:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/timing/\n        https://www.altcointrading.net/strategy/timing/\n\n        \n        derisking\n        \n        crypto-value-judgement\n        \n        crypto-tools\n        \n        crypto-trading-strategy\n        \n        market-timing\n        \n        tradingview\n        \n        independent-reserve\n        \n        bitfinex\n        \n        top\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Strategy: Technical Analysis past ATH with Fibs\n        Now that we are past ATH levels again, let&apos;s reiterate how things *really* work around here.\n\n        Tue, 24 Nov 2020 09:36:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/fibs/\n        https://www.altcointrading.net/strategy/fibs/\n\n        \n        crypto-charting\n        \n        fibs\n        \n        crypto-trading\n        \n        technical-analysis\n        \n        fibonacci-retracement\n        \n        scalping\n        \n        tradingview\n        \n        bitfinex\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Best Practices for Profit-Taking: Fungibility of BTC, Coin Control and more\n        Did you HODL for years? Coin control will make it easier to sell\n\n        Tue, 19 Jan 2021 00:00:00 +0000\n\n        AltcoinTrading.NET@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/coin-control-selling-crypto/\n        https://www.altcointrading.net/strategy/coin-control-selling-crypto/\n\n        \n        hodl-strategy\n        \n        crypto-investment-strategy\n        \n        coin-control\n        \n        dca\n        \n        dollar-cost-averaging\n        \n        crypto-investment-strategy\n        \n        trading-strategy\n        \n        crypto-tools\n        \n        bitfinex\n        \n        independent-reserve\n        \n        coldcard\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        Scalping Crypto (Updated for 2022 Crypto Markets)\n        All about crypto scalping - the tools you need, the cryptocurrencies to prefer, the exchanges that will not crash on you.\n\n        Mon, 15 Mar 2021 02:31:00 +0000\n\n        info@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/scalping/\n        https://www.altcointrading.net/strategy/scalping/\n\n        \n        scalping\n        \n        pattern-trading\n        \n        crypto-trading-strategy\n        \n        trading-technique\n        \n        tensorcharts\n        \n        bitfinex\n        \n        ftx\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        NFT Trading Strategy for those who DGAF about NFTs\n        Strategies and a long roundabout on the NFT art industry from the point of view of a marketer, a consultant and an artist.\n\n        Sat, 04 Sep 2021 06:01:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/nft-trading/\n        https://www.altcointrading.net/strategy/nft-trading/\n\n        \n        nft-trading\n        \n        market-psychology\n        \n        trading-psychology\n        \n        scalping\n        \n        fundamental-analysis\n        \n        crypto-investment-strategy\n        \n        crypto-trading-strategy\n        \n        bitforex\n        \n        phemex\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        VPVR Trading and Volume Profile Strategies\n        Volume Trading Strategies and how to automate them (the simpler ones). Your toolbox - TradingView, Cryptowatch and FTX Quant Zone.\n\n        Thu, 23 Dec 2021 02:01:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/vpvr-trading-volume-profile-visible-fixed/\n        https://www.altcointrading.net/strategy/vpvr-trading-volume-profile-visible-fixed/\n\n        \n        crypto-charting\n        \n        scalping\n        \n        technical-analysis\n        \n        crypto-trading-strategy\n        \n        ftx\n        \n        tradingview\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Shadow System Scalping - Simplified Grid Trading: Does it work in crypto?\n        The Shadow system takes advantage of the small shadow that exists between the open price and the high or low of the day, and scalps a fixed amount of that movement every day.\n\n        Wed, 16 Mar 2022 13:11:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/shadow-system-grid/\n        https://www.altcointrading.net/strategy/shadow-system-grid/\n\n        \n        grid\n        \n        scalping\n        \n        quant\n        \n        crypto-trading-strategy\n        \n        ftx\n        \n        3commas\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Crypto DCA: Complete Crypto DCA Strategy &amp; Tools Guide (Updated)\n        Why you want to DCA instead of HODL and where to do it best (incl. auto-DCA)\n\n        Mon, 16 May 2022 00:00:00 +0000\n\n        AltcoinTrading@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/dollar-cost-averaging/\n        https://www.altcointrading.net/strategy/dollar-cost-averaging/\n\n        \n        derisking\n        \n        crypto-investment-strategy\n        \n        crypto-trading-strategy\n        \n        dca\n        \n        dollar-cost-averaging\n        \n        pionex\n        \n        independent-reserve\n        \n        coinrule\n        \n        ftx\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        LocalCryptos or Binance P2P: Detailed Arbitrage Trading Strategy Guide\n        In P2P arbitrage, you earn money on a small markup that you circle around as fast as you can. The way to earn in this trading strategy is not necessarily by having a ton of capital (although that helps) but moving it around quickly.\n\n        Sat, 02 Jul 2022 01:54:00 +0000\n\n        AltcoinTrading@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/p2p-arbitrage-binance-localcryptos/\n        https://www.altcointrading.net/strategy/p2p-arbitrage-binance-localcryptos/\n\n        \n        arbitrage\n        \n        non-directional\n        \n        crypto-tools\n        \n        trading-technique\n        \n        crypto-trading-strategy\n        \n        localcryptos\n        \n        binance\n        \n        ftx\n        \n        \n        trading-technique\n        \n\n      \n    \n\n\n  \n\n",
+      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      Token and NFT Airdrops AltcoinTrading.NET - 01/16/23\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n      \n        Live token airdrops and NFT giveaways\n        \n          \n          \n          \n\n          \n            \n            \n              INTL Airdrop\n              Everyone gets paid here. This Gleam is to promote a CEX listing of this token. Participation reward 1 $INTL, more rewards for 50 random winners.&nbsp;\n            \n              LightCycle Airdrop\n              Just launched 9th Jan. This airdrop has a pool of 1.5k $CMP, rewards go to 50 randos.&nbsp;\n            \n              DOGO Token Airdrop\n              Gleam that has a pool of 50k tokens for the first 10k participants.&nbsp;\n            \n              Meteorite Effect Airdrop\n              This is really a miners bounty. Generate the mineable S-NFT (the NFT is the mining reward) to gain extra token rewards on Wormhole chain.&nbsp;\n            \n              Starcoin Airdrop\n              Gleam for token that is already trading at gate.io. Airdrops 10 or 5 USD worth of token.&nbsp;\n            \n              Zone of avoidance Airdrop\n              This Gleam requires you to download an app. The pool is 300k $ZOA and 50 NFTs of a new game.&nbsp;\n            \n              Leverage Frenzy\n              BitMart Futures runs a 100 USDT giveaway for their traders. It's just a Gleam form. Additional rewards are for traders, volume-based.&nbsp;\n            \n              Tangled Airdrop I.\n              Gleam with 1k USD worth of stablecoins and tokens. 500 randos get rewarded (it's either USDT or $TIPO).&nbsp;\n            \n              EastGate Biotech Airdrop\n              Everyone gets paid 15 USD in $EGP (have to complete the full form), shills get paid much more.&nbsp;\n            \n              SmartCryptoDAO\n              A short Gleam with a Tether pool of 350 USDT. 300 folks get 3 USDT each, a couple of top shills get 10 USDT.&nbsp;\n            \n              Kuromi (BSC) Airdrop\n              A short Gleam that rewards out of pool of 500k $KUROMI tokens and 1 NFT.&nbsp;\n            \n              VAGO Gold Coin Airdrop\n              This is a Gleam and Discord event that has 300k USD in pool. The pool is made of USDT/NFT/whitelist/tobacco sticks and other valuables. Join the discord for more activities.&nbsp;\n            \n              Chance-G Airdrop\n              A Gleam with 1000 USDT in pool. Top shills get 100-250 USDT each, then 50 random people 10 USDT each.&nbsp;\n            \n              LumiShare Airdrop\n              Newly launched event. Long Gleam that pays 55 winners out of pool of over 15k tokens. Winners are random.&nbsp;\n            \n              Titan Capital Airdrop\n              This Gleam starts Jan 5 and ends on 25th. It pays 40 $JK tokens per person, 500 random winners.&nbsp;\n            \n              WarKnight Airdrop\n              Everyone gets paid here. Participation reward 50 $KWS tokens (~20 USD) for form completion. Full pool 100k USD worth. Distributes 3 days after end.&nbsp;\n            \n              NAKSON Airdrop\n              First come Gleam, 700 first users get $NAX tokens and after that 300 random. Pool 20k tokens.&nbsp;\n            \n              P2E Points Giveaway\n              This is an event from playtoearn.net that rewards 20 winners with 100 P2E points each.&nbsp;\n            \n              ASYNC (ETH) Airdrop\n              This Gleam has a pool of 5k USD worth of tokens. Rewards are 25 USD worth per or 50 USD worth per, total of 150 lucky winners.&nbsp;\n            \n              DEXSwap Airdrop\n              The DEXSwap exchange runs a Gleam that pays random winners.&nbsp;\n            \n              MileniON Airdrop\n              A short Gleam for a buzzwordy project. The reward pool is only 5 NFTs that are supposed to be quite rare.&nbsp;\n            \n              FMEN Airdrop\n              First come! A short Gleam for an NFT platform. 10 MM tokens in pool for the first 10k users.&nbsp;\n            \n              Huge DarkMeta Airdrop\n              Gleam where 1115 randos will receive each 300 $DMT tokens. Also, 100 top shills with the most entries will share a reward pool of 165,500 $DMT.&nbsp;\n            \n              BornToDie Giveaway\n              A Gleam for a shooter game that airdrops $BORN tokens, over 25k tokens in pool. Top shills also get NFT WL and USDT rewards.&nbsp;\n            \n              Racearth Airdrop\n              A Gleam that rewards 2500 people at random, pool is 50k $RACE tokens.&nbsp;\n            \n              IKO Airdrop\n              Token airdrop Gleam that rewards random 2000 users from a pool of 40k $EMG.&nbsp;\n            \n              UnderCity Airdrop\n              Short Gleam that has a pool worth 3k USD to 20 winners, that's a good reward per peron. Reward in $UND tokens.&nbsp;\n            \n            \n            \n            \n              BACON Airdrop\n              until 17 Jan\n            \n              MHUNT Airdrop\n              until 17 Jan\n            \n              GGSlayer NFT Airdrop\n              until 18 Jan\n            \n              HongKong NFT Airdrop\n              until 19 Jan\n            \n              KOYE NFT Airdrop\n              until 20 Jan\n            \n              W3DNA and P2Pbet NFT Airdrop\n              until 21 Jan\n            \n              Cryptopia NFT Giveaway\n              until 22 Jan\n            \n              BloomThis NFT Airdrop\n              until 25 Jan\n            \n              Sweatemple NFT Airdrop\n              until 26 Jan\n            \n              Unity Network NFT Competition\n              until 31 Jan\n            \n              STON.fi NFT Airdrop\n              until 5 Feb\n            \n              Adoptable Babies NFT Presale WL\n              until 12 Feb\n            \n              TypeIT NFT Freemint\n              until 15 Feb\n            \n            \n          \n          Long-Running Crypto Giveaways, Promos and Competitions\n          \n            \n            \n              GameFi Token Promo\n              The no-KYC exchange Bitforex runs a deposit and trading promo. There are two events, no event signup required. First event is a bonus for anyone who deposits over 500 USD worth of MANA, AXS, SAND, GALA, GMT, or MAGIC. Second event is a reward of up to 1600 USDT for top traders by volume in the same tokens.\n              &nbsp;\n            \n              LATOKEN New Airdrops and Giveaways\n              LATOKEN is running two new campaigns - TomTomCoin, GFE and Learning Cash. There are also some trading competitions (volume based). You'll need a LATOKEN account - no KYC required.\n              &nbsp;\n            \n              Zero Fee on P2P Promo\n              This is a quick promo for Phemex's P2P market. You can trade Tether, BTC or ETH on there via the classic P2P ad system.\n              &nbsp;\n            \n              Safu Binance.com 10 USD cashback\n              Deposit fiat to Binance and get 10 USD cashback voucher. Make an account and head over to the Activity center. You can also set a recurring buy, as an auto-DCA.\n              &nbsp;\n            \n              SimpleSwap Transaction Bonus\n              SimpleSwap is a no-KYC swap and exchange where among others you can buy BNB for BTC without KYC. The rates are only 1% over the market prices at FTX. Use the coupon SsITvSMQ0Cru0ERU in your first transaction to get a bonus of 300 SWP tokens for that transaction.\n              &nbsp;\n            \n              Cloudbet Turbo Thursday Deposit Bonus\n              Runs thursdays 05:00-23:59 UTC. Make a deposit of 0.1 mBTC or more, Cloudbet gives you a 100% Reload Bonus of up to 50 mBTC/1 BCH. Remember you must activate the bonus in your player dashboard before making a deposit for the bonus to be credited! The bonus is only available for the Casino, not the Sportsbook.\n              &nbsp;\n            \n              BitKan $100 Sign up Bonus\n              BitKan just listed Project Galaxy (GAL), Primate (PRIMATE), Realm (REALM), and Colizeum (ZEUM) for spot trading. To promote their markets, BitKan now gives $100 bonus to new traders.\n              &nbsp;\n            \n              WeSendIt Airdrop\n              Sign up to the waitlist, verify email and you will get to the Gleam tasks. It's just follows and engagement. Top participants by points get paid most.\n              &nbsp;\n            \n              Slice Chrome Extension\n              The Slice app is a Chrome extension that pays you for browsing (and for referrals). It comes with a bitcoin wallet, the ad revenue is paid in bitcoin and you can withdraw without fee via Lightning network.\n              &nbsp;\n            \n              PLUR Talk NFT Retroactive Airdrop\n              A community platform for NFT holders built on MATIC. Follow PLUR on Twitter and Discord to get the NFT key of plur.chat - the NFT will be the credential for future airdrops. Right now, the only active airdrop is their own $TALK token airdrop.\n              &nbsp;\n            \n              Unlockd Finance Airdrop\n              This project ran another airdrop in August. This time they reward you for signing up into the waitlist and optionally completing Gleam-like tasks.\n              &nbsp;\n            \n              Harken Invite Campaign\n              This referral campaign pays 1 Spacecard & 1000 DGL coin for each invite and 10 NFTs to random winners.\n              &nbsp;\n            \n              CEX Crypto Believers\n              The KYC exchange CEX.IO is starting a biweekly event in which it will give away NFTs to people for social media engagement. Only random winners get rewarded and you need to KYC.\n              &nbsp;\n            \n              Phemex Launchpad\n              Phemex started running a Launchpad program where you can be an early-ish investor in upcoming Web3 coins and NFT projects. Landing page in join link.\n              &nbsp;\n            \n              SomniLand Reward Activities\n              SomniLand is a multichain project that aims to bridge Web2 social networks onto Web3 blockchain-based internet. Since May 20, they run NFT land giveaway, you just need to claim a piece of land. Click the join link, connect wallet and Select a Land on the map, click the “Be a Resident” button, and you will become the resident of that Land. Genesis residents of SomniLife will share 200M $SO token reward.\n              &nbsp;\n            \n            \n          \n          ]]>\n        \n        Mon, 16 Jan 2023 17:01:41 +0000\n        airdrops@altcointrading.net\n        airdrops@altcointrading.net\n        https://www.altcointrading.net/airdrops/\n        https://www.altcointrading.net/airdrops/\n      \n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3197,7 +3197,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "$(document).ready(function() {\n\nvar idx = lunr(function() {\n  this.ref('id');\n  this.field('title', { boost: 6 });\n  this.field('content', { boost: 8 });\n  this.field('author');\n  this.field('category');\n  this.field('tags', { boost: 5 });\n\n  {% assign count = 0 %}\n  {% for post in site.posts %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.strategy %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.reviews %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.glossary %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.interviews %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.pages %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.howto %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n\n});\n\nvar store = [{% for post in site.posts %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.categories[0] | prepend:'#'| jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.strategy %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.reviews %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.glossary %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.interviews %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'com-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.pages %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ site.title | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.howto %}{\n    'title': {{post.title | capitalize_all | jsonify}},\n    'url': {{ post.url | jsonify }},\n    'author': {{ post.author_name | jsonify }},\n    'image': {{ post.image[0] | jsonify }},\n    'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n    'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n    'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n    }{% unless forloop.last %},{% endunless %}{% endfor %}\n];\n\n// define render results\nfunction rendersearch( store, result, resultdiv ) {\n  resultdiv.empty();\n  if (!result) { resultdiv.append('No results.'); }\n  for (var item in result) {\n    var ref = result[item]['ref'];\n    var score = result[item]['score'];\n    if (  !store[ref].title ) { continue; }\n    if ( store[ref].author == null ) { store[ref].author = \"AltcoinTrading\"; }\n    if ( store[ref].date == null ) { store[ref].date = \"recently\"; }\n\n    if ( score > 23 ) {\n      var searchitem =\n        '' +\n        '' +\n        '' +\n        store[ref].title +\n        \"\" + store[ref].excerpt + \"In \" +\n        store[ref].category + \" &middot; by \" + store[ref].author + \" &middot; Last updated \" +\n        store[ref].date + \"\";\n    } else {\n      var searchitem =\n        '' +\n        store[ref].title +\n        \"\" + store[ref].excerpt + \"In \"+\n        store[ref].category + \" &middot; by \" + store[ref].author + \" &middot; Last updated \" +\n        store[ref].date + \"\";\n    }\n\n    resultdiv.append(searchitem);\n  }\n}\n\n// read url query\n  let urlsearch = new URLSearchParams(window.location.search);\n  urlsearch.has('query');\n  let urlquery = urlsearch.get('query');\n\n  if (urlquery) {\n    var query = urlquery;\n    var resultdiv = $(\"#search-results\");\n    resultdiv.empty();\n    resultdiv.append('');\n    var result = idx.search(query);\n    rendersearch( store, result, resultdiv );\n  }\n\n// read keyup\n  $(\"input#site-search\").on(\"keyup\", function () {\n    var query = $(this).val();\n    var resultdiv = $(\"#search-results\");\n    if (!query) { resultdiv.empty(); }\n    var result = idx.search(query);\n    rendersearch( store, result, resultdiv );\n  });\n\n});\n",
+      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n    \n\n\n    \n      \n        VET Airdrop\n        until 22 Jan\n        \n          \n        \n        https://gleam.io/V0gB2/vet-giveaway\n        https://www.altcointrading.net/airdrops/#vet-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        CoinW Giveaway\n        until 28 Jan\n        \n          \n        \n        https://gleam.io/noeHx/new-year-brings-new-fortunes\n        https://www.altcointrading.net/airdrops/#coinw-giveaway\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        REI Network NFT Airdrop\n        until 31 Jan\n        \n          \n        \n        https://gleam.io/FoHne/connect-2023rei-network-airdrop-event\n        https://www.altcointrading.net/airdrops/#rei-network-nft-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Astel of Atra NFT Airdrop\n        until 15 Feb\n        \n          \n        \n        https://gleam.io/jAWdI/astel-of-atra-nft-airdrop-3nd-event\n        https://www.altcointrading.net/airdrops/#astel-of-atra-nft-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        PathDAO NFT Airdrop\n        until 20 Jan\n        \n          \n        \n        https://gleam.io/GdpFD/pathdao-x-league-of-kingdoms-drago-mystery-box\n        https://www.altcointrading.net/airdrops/#pathdao-nft-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n\n\n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3206,8 +3206,8 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "Search",
-      content: "",
+      title: null,
+      content: "\n\n\n\n\n\n\n\n\n\n  \n    Monday Airdrops - 16 Jan\n    \n      Airdrop digest\n    \n    https://www.altcointrading.net/airdrops/\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n      \n        \n        Monday Airdrops - 16 Jan\n        \n        VET Airdrop, CoinW Giveaway, REI Network NFT Airdrop ✌️\n        \n          More new airdrops on the site and in a minute on Twitter\n           ]]>\n        \n        VET Airdrop\n              First come and random users get paid $VET tokens from a pool of 20k tokens. Token already trades.\n              until 22 Jan\n              join ✅\n            \n              CoinW Giveaway\n              This is already a Spring Festival event, launched 16 Jan. There is a bunch of bonuses and mystery token giveaways, full pool about 20k USD worth.\n              until 28 Jan\n              join ✅\n            \n              REI Network NFT Airdrop\n              100 lucky Gleam winners get NFT Grand Raffle Tickets and $REI tokens from pool of 10k $REI.\n              until 31 Jan\n              join ✅\n            \n            \n              GameFi Token Promo\n              The no-KYC exchange Bitforex runs a deposit and trading promo. There are two events, no event signup required. First event is a bonus for anyone who deposits over 500 USD worth of MANA, AXS, SAND, GALA, GMT, or MAGIC. Second event is a reward of up to 1600 USDT for top traders by volume in the same tokens.\n              until 19 Jan\n              join ✅\n            \n              LATOKEN New Airdrops and Giveaways\n              LATOKEN is running two new campaigns - TomTomCoin, GFE and Learning Cash. There are also some trading competitions (volume based). You'll need a LATOKEN account - no KYC required.\n              until 25 Jan\n              join ✅\n            \n              Zero Fee on P2P Promo\n              This is a quick promo for Phemex's P2P market. You can trade Tether, BTC or ETH on there via the classic P2P ad system.\n              live\n              join ✅\n            \n          \n        In the blog:\n        \n          \n          GBYTE, 0byte (formerly Byteball): The OG airdrop that launched the whole airdrop industry (2017) &middot; 04/08/22\n          \n          CEX.IO Not Accepting New Users for the Time Being &middot; 04/08/22\n          \n          What Kind Of Features Should You Look For In A Good Crypto Wallet? &middot; 09/18/22\n          \n        \n        ]]>\n        https://www.altcointrading.net/airdrops/#2023-01-16\n      \n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3217,7 +3217,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n    {% for page in site.glossary %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
+      content: "\n\n  \n\n    AltcoinTrading.NET Strategy\n    \n      Guides on the tech side of crypto and the very basics of trading.\n    \n\n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net/guides/\n    \n\n    en\n\n\n    https://www.altcointrading.net/strategy/\n    \n\n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n    \n      \n\n        How to safely move Litecoin between SegWit P2SH (3) addresses and legacy (L) addresses\n        Some exchanges don&apos;t support LTC withdrawals to P2SH wallets and other don&apos;t support legacy addresses. Here&apos;s how to convert between them.\n\n        Thu, 31 Aug 2017 22:18:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/howto/move-ltc-p2sh/\n        https://www.altcointrading.net/howto/move-ltc-p2sh/\n\n        \n        p2sh-wallet\n        \n        altcoin-wallet\n        \n        crypto-tools\n        \n        top\n        \n        coldcard\n        \n        trezor\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        How to safely generate IOTA seed and migrate from Light Wallet to Trinity\n        All the IOTA storage options you have in 2019, IOTA cold storage homelab and a short guide to migrating IOTA from Light Wallet to Trinity Wallet (and Ledger, if you wish).\n\n        Wed, 20 Sep 2017 00:00:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/security/iota/\n        https://www.altcointrading.net/security/iota/\n\n        \n        crypto-opsec\n        \n        altcoin-wallets\n        \n        crypto-tools\n        \n        bitfinex\n        \n        ledger\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        Wallet OPSEC: Sweeping private keys and Sweeping Addresses\n        What is sweeping, when do which one and a tutorial for safe redeeming of bitcoin forks.\n\n        Thu, 23 Nov 2017 16:22:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/security/sweep-private-keys/\n        https://www.altcointrading.net/security/sweep-private-keys/\n\n        \n        cold-storage\n        \n        crypto-opsec\n        \n        bitcoin-wallet\n        \n        crypto-tools\n        \n        electrum\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        Virtual Machine Crypto Wallets: Should You Bother?\n        When does it make sense to put a crypto wallet on a virtual machine? Includes a full walkthrough tutorial on how to set up a cryptocurrency wallet in Virtualbox.\n\n        Fri, 15 Dec 2017 05:22:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/virtual-machine-altcoin-wallets-security-how-to/\n        https://www.altcointrading.net/virtual-machine-altcoin-wallets-security-how-to/\n\n        \n        cold-storage\n        \n        crypto-opsec\n        \n        altcoin-wallets\n        \n        crypto-tools\n        \n        airdrops\n        \n        \n        technical\n        \n\n      \n    \n      \n\n        How to avoid re-using an email while keeping a single inbox only (Phishing Protection)\n        An easy way to setup your mailbox in such a way that you will not have to reuse your email address again.\n\n        Thu, 22 Feb 2018 14:41:00 +0000\n\n        info@altcointrading.net\n        guides@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/avoid-email-reuse-easy-phishing-protection/\n        https://www.altcointrading.net/avoid-email-reuse-easy-phishing-protection/\n\n        \n        crypto-opsec\n        \n        best-practices\n        \n        crypto-tools\n        \n        spend-your-crypto\n        \n        \n        trading-methods-101\n        \n\n      \n    \n\n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3227,7 +3227,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n    {% for page in site.howto %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
+      content: "\n\n  \n    AltcoinTrading.NET Airdrops\n    \n      [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23.\n    \n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net\n    \n    en\n    https://www.altcointrading.net/airdrops/\n    \n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n    \n\n\n    \n      \n        GameFi Token Promo\n        until 19 Jan\n        \n          \n        \n        https://bit.ly/at-bforx-2022\n        https://www.altcointrading.net/airdrops/#gamefi-token-promo\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        LATOKEN New Airdrops and Giveaways\n        until 25 Jan\n        \n          \n        \n        https://bit.ly/3lHnYAf\n        https://www.altcointrading.net/airdrops/#latoken-new-airdrops-and-giveaways\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Zero Fee on P2P Promo\n        live\n        \n          \n        \n        https://bit.ly/3IlzrCq\n        https://www.altcointrading.net/airdrops/#zero-fee-on-p2p-promo\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Safu Binance.com 10 USD cashback\n        live\n        \n          \n        \n        https://bit.ly/3p7ya7Y\n        https://www.altcointrading.net/airdrops/#safu-binance.com-10-usd-cashback\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        SimpleSwap Transaction Bonus\n        code SsITvSMQ0Cru0ERU\n        \n          \n        \n        https://bit.ly/at-simpleswap\n        https://www.altcointrading.net/airdrops/#simpleswap-transaction-bonus\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Cloudbet Turbo Thursday Deposit Bonus\n        link ->\n        \n          \n        \n        http://bit.ly/2BhLXyK\n        https://www.altcointrading.net/airdrops/#cloudbet-turbo-thursday-deposit-bonus\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        BitKan $100 Sign up Bonus\n        live\n        \n          \n        \n        https://bit.ly/BitKanSignUpGift\n        https://www.altcointrading.net/airdrops/#bitkan-$100-sign-up-bonus\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        WeSendIt Airdrop\n        live\n        \n          \n        \n        https://wesendit.io/waitlist?kid=2D2T5N\n        https://www.altcointrading.net/airdrops/#wesendit-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Slice Chrome Extension\n        live\n        \n          \n        \n        https://addslice.com/?crew=yWQgh\n        https://www.altcointrading.net/airdrops/#slice-chrome-extension\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        PLUR Talk NFT Retroactive Airdrop\n        live\n        \n          \n        \n        https://plur.chat/airdrop?c=fPreOGg\n        https://www.altcointrading.net/airdrops/#plur-talk-nft-retroactive-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Unlockd Finance Airdrop\n        live\n        \n          \n        \n        https://airdrop.unlockd.finance?kid=2GTCEF\n        https://www.altcointrading.net/airdrops/#unlockd-finance-airdrop\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Harken Invite Campaign\n        live\n        \n          \n        \n        https://bit.ly/3KJVr96\n        https://www.altcointrading.net/airdrops/#harken-invite-campaign\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        CEX Crypto Believers\n        biweekly\n        \n          \n        \n        https://blog.cex.io/news/cex-io-crypto-party-series-with-nfts-rewards-31140\n        https://www.altcointrading.net/airdrops/#cex-crypto-believers\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        Phemex Launchpad\n        first come\n        \n          \n        \n        https://bit.ly/3vCnEbI\n        https://www.altcointrading.net/airdrops/#phemex-launchpad\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n      \n        SomniLand Reward Activities\n        live\n        \n          \n        \n        https://www.somnilife.com/map/?inviter=0x465220aE092187C3248cd21eDE50C99F62D48846\n        https://www.altcointrading.net/airdrops/#somniland-reward-activities\n        Mon, 16 Jan 2023 17:01:41 +0000\n      \n    \n\n\n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3237,7 +3237,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n    \n      {{ site.url }}{{ site.baseurl }}\n      \n    \n\n    {% for page in site.pages %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ page.url }}\n        {% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% endif %}\n    \n    {% endunless %}{% endfor %}\n\n    {% for tag in site.tags %}\n      {% assign t = tag | first %}\n      {% assign posts = tag | last %}\n      \n          {{ site.url }}/tag/{{ t | downcase }}/\n          {{ site.time | date_to_xmlschema }}\n      \n    {% endfor %}\n    {% for tag in site.categories %}\n      {% assign t = tag | first %}\n      {% assign posts = tag | last %}\n      \n          {{ site.url }}/blog/{{ t | downcase }}/\n          {{ site.time | date_to_xmlschema }}\n      \n    {% endfor %}\n\n\n",
+      content: "\n\n  \n\n    AltcoinTrading.NET Strategy\n    \n      Long reads on cryptocurrency trading strategies.\n    \n\n    \n      https://www.altcointrading.net/favicon.png\n      AltcoinTrading.NET\n      https://www.altcointrading.net/strategy/\n    \n\n    en\n\n\n    https://www.altcointrading.net/strategy/\n    \n\n    Mon, 16 Jan 2023 17:01:41 +0000\n    Mon, 16 Jan 2023 17:01:41 +0000\n\n    \n      \n\n        Multiple time frame analysis: Trading several timeframes at the same time\n        On why it&apos;s constructive to trade multiple time frames at the same time and how to manage the stack of your positions and orders.\n\n        Sun, 29 Oct 2017 09:36:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/multiple-time-frame/\n        https://www.altcointrading.net/strategy/multiple-time-frame/\n\n        \n        crypto-charting\n        \n        crypto-technical-analysis\n        \n        tensorcharts\n        \n        tradingview\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        3 Tips: How to vet ICOs and what to watch once you&apos;re in\n        To some crypto traders ICOs are so 2017, to some they are a great concept democratizing finance. There are scams and failures but one way to work with token markets is to take the past failure data and draw valuable information from them.\n\n        Mon, 26 Feb 2018 09:31:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/how-to-vet-icos/\n        https://www.altcointrading.net/strategy/how-to-vet-icos/\n\n        \n        blockchain-technology\n        \n        ico-analysis\n        \n        cryptocurrency-investing\n        \n        \n        crypto-trading-101\n        \n\n      \n    \n      \n\n        Fulcrum Bottom\n        Fulcrum bottom has been talked about a lot lately thanks to mentions in Peter Brandt&apos;s reports. Describing it as &apos;head &amp; shoulders except at the bottom&apos; is not quite cutting it though.\n\n        Tue, 25 Sep 2018 04:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/fulcrum-bottom/\n        https://www.altcointrading.net/strategy/fulcrum-bottom/\n\n        \n        fulcrum-bottom\n        \n        crypto-technical-analysis\n        \n        trading-technique\n        \n        peter-l-brandt\n        \n        swing-trading\n        \n        independent-reserve\n        \n        bitfinex\n        \n        tradingview\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Thoughts on Reversals and Psychology\n        Bottoming process, just as any other market reversal, is strongly influenced by psychology.\n\n        Fri, 28 Dec 2018 04:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/reversals/\n        https://www.altcointrading.net/strategy/reversals/\n\n        \n        fulcrum-bottom\n        \n        mises\n        \n        reversals\n        \n        swing-trading\n        \n        trading-strategy\n        \n        crypto-technical-analysis\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Crypto Investment Strategy: Step By Step Guide to Long-Term Holding\n        Full walkthrough with all the basics you need to have down for a sensible mid to long-term cryptocurrency investment strategy. With a case in point - XRP. \n\n        Fri, 19 Jul 2019 18:11:00 +0000\n\n        AltcoinTrading.NET@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/crypto-investment/\n        https://www.altcointrading.net/strategy/crypto-investment/\n\n        \n        crypto-value-judgement\n        \n        crypto-investment-strategy\n        \n        dca\n        \n        crypto-trading-strategy\n        \n        trading-technique\n        \n        ledger\n        \n        independent-reserve\n        \n        \n        crypto-trading-101\n        \n\n      \n    \n      \n\n        Technical Analysis in Crypto: How to use TA strategically\n        With links to the selection of best tools and scripts\n\n        Thu, 14 May 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/technical/\n        https://www.altcointrading.net/strategy/technical/\n\n        \n        crypto-technical-analysis\n        \n        technical-analysis\n        \n        strategic-mindset\n        \n        rational-analysis\n        \n        bitmex\n        \n        tradingview\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Crypto Market Psychology vs *Your* Trading Psychology\n        The crypto market psychology is what it is for a reason. If that makes you uncomfortable, try working on your trading psychology.\n\n        Wed, 09 Sep 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/crypto-market-psychology/\n        https://www.altcointrading.net/strategy/crypto-market-psychology/\n\n        \n        crypto-trading-strategy\n        \n        market-psychology\n        \n        trading-psychology\n        \n        fundamental-analysis\n        \n        technical-analysis\n        \n        strategic-mindset\n        \n        rational-analysis\n        \n        bitmex\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        Margin Lending Strategy Template (Best for Bitfinex lending)\n        Bitcoin funding rate strategy: How to decide whether the swap rate is enough to cover your risk and why it is a stupid idea to lend your coins for peanuts.\n\n        Tue, 06 Oct 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/lending/\n        https://www.altcointrading.net/strategy/lending/\n\n        \n        yield\n        \n        crypto-lending\n        \n        crypto-tools\n        \n        bitfinex\n        \n        ftx\n        \n        \n        non-directional\n        \n\n      \n    \n      \n\n        Wyckoff trading method for ranging markets\n        Fully reworked primer on ranging crypto markets. Includes Wyckoff method for market phases and recommended TradingView scripts.\n\n        Wed, 04 Nov 2020 00:00:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/wyckoff-ranging-markets/\n        https://www.altcointrading.net/strategy/wyckoff-ranging-markets/\n\n        \n        crypto-charting\n        \n        crypto-technical-analysis\n        \n        wyckoff-trading-crypto\n        \n        crypto-trading-strategy\n        \n        tradingview\n        \n        bitfinex\n        \n        ftx\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Market Timing in Crypto\n        Timing the market has a bad rap. But there are strategic approaches to it, even on crypto markets.\n\n        Mon, 23 Nov 2020 10:51:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/timing/\n        https://www.altcointrading.net/strategy/timing/\n\n        \n        derisking\n        \n        crypto-value-judgement\n        \n        crypto-tools\n        \n        crypto-trading-strategy\n        \n        market-timing\n        \n        tradingview\n        \n        independent-reserve\n        \n        bitfinex\n        \n        top\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Strategy: Technical Analysis past ATH with Fibs\n        Now that we are past ATH levels again, let&apos;s reiterate how things *really* work around here.\n\n        Tue, 24 Nov 2020 09:36:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/fibs/\n        https://www.altcointrading.net/strategy/fibs/\n\n        \n        crypto-charting\n        \n        fibs\n        \n        crypto-trading\n        \n        technical-analysis\n        \n        fibonacci-retracement\n        \n        scalping\n        \n        tradingview\n        \n        bitfinex\n        \n        \n        pattern-trading\n        \n\n      \n    \n      \n\n        Best Practices for Profit-Taking: Fungibility of BTC, Coin Control and more\n        Did you HODL for years? Coin control will make it easier to sell\n\n        Tue, 19 Jan 2021 00:00:00 +0000\n\n        AltcoinTrading.NET@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/coin-control-selling-crypto/\n        https://www.altcointrading.net/strategy/coin-control-selling-crypto/\n\n        \n        hodl-strategy\n        \n        crypto-investment-strategy\n        \n        coin-control\n        \n        dca\n        \n        dollar-cost-averaging\n        \n        crypto-investment-strategy\n        \n        trading-strategy\n        \n        crypto-tools\n        \n        bitfinex\n        \n        independent-reserve\n        \n        coldcard\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        Scalping Crypto (Updated for 2022 Crypto Markets)\n        All about crypto scalping - the tools you need, the cryptocurrencies to prefer, the exchanges that will not crash on you.\n\n        Mon, 15 Mar 2021 02:31:00 +0000\n\n        info@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/scalping/\n        https://www.altcointrading.net/strategy/scalping/\n\n        \n        scalping\n        \n        pattern-trading\n        \n        crypto-trading-strategy\n        \n        trading-technique\n        \n        tensorcharts\n        \n        bitfinex\n        \n        ftx\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        NFT Trading Strategy for those who DGAF about NFTs\n        Strategies and a long roundabout on the NFT art industry from the point of view of a marketer, a consultant and an artist.\n\n        Sat, 04 Sep 2021 06:01:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/nft-trading/\n        https://www.altcointrading.net/strategy/nft-trading/\n\n        \n        nft-trading\n        \n        market-psychology\n        \n        trading-psychology\n        \n        scalping\n        \n        fundamental-analysis\n        \n        crypto-investment-strategy\n        \n        crypto-trading-strategy\n        \n        bitforex\n        \n        phemex\n        \n        \n        trading-psychology\n        \n\n      \n    \n      \n\n        VPVR Trading and Volume Profile Strategies\n        Volume Trading Strategies and how to automate them (the simpler ones). Your toolbox - TradingView, Cryptowatch and FTX Quant Zone.\n\n        Thu, 23 Dec 2021 02:01:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/vpvr-trading-volume-profile-visible-fixed/\n        https://www.altcointrading.net/strategy/vpvr-trading-volume-profile-visible-fixed/\n\n        \n        crypto-charting\n        \n        scalping\n        \n        technical-analysis\n        \n        crypto-trading-strategy\n        \n        ftx\n        \n        tradingview\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Shadow System Scalping - Simplified Grid Trading: Does it work in crypto?\n        The Shadow system takes advantage of the small shadow that exists between the open price and the high or low of the day, and scalps a fixed amount of that movement every day.\n\n        Wed, 16 Mar 2022 13:11:00 +0000\n\n        KarlVonBahnhof@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/shadow-system-grid/\n        https://www.altcointrading.net/strategy/shadow-system-grid/\n\n        \n        grid\n        \n        scalping\n        \n        quant\n        \n        crypto-trading-strategy\n        \n        ftx\n        \n        3commas\n        \n        \n        crypto-trading-tools\n        \n\n      \n    \n      \n\n        Crypto DCA: Complete Crypto DCA Strategy &amp; Tools Guide (Updated)\n        Why you want to DCA instead of HODL and where to do it best (incl. auto-DCA)\n\n        Mon, 16 May 2022 00:00:00 +0000\n\n        AltcoinTrading@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/dollar-cost-averaging/\n        https://www.altcointrading.net/strategy/dollar-cost-averaging/\n\n        \n        derisking\n        \n        crypto-investment-strategy\n        \n        crypto-trading-strategy\n        \n        dca\n        \n        dollar-cost-averaging\n        \n        pionex\n        \n        independent-reserve\n        \n        coinrule\n        \n        ftx\n        \n        \n        trading-technique\n        \n\n      \n    \n      \n\n        LocalCryptos or Binance P2P: Detailed Arbitrage Trading Strategy Guide\n        In P2P arbitrage, you earn money on a small markup that you circle around as fast as you can. The way to earn in this trading strategy is not necessarily by having a ton of capital (although that helps) but moving it around quickly.\n\n        Sat, 02 Jul 2022 01:54:00 +0000\n\n        AltcoinTrading@altcointrading.net\n        strategy@altcointrading.net\n\n        \n\n        https://www.altcointrading.net/strategy/p2p-arbitrage-binance-localcryptos/\n        https://www.altcointrading.net/strategy/p2p-arbitrage-binance-localcryptos/\n\n        \n        arbitrage\n        \n        non-directional\n        \n        crypto-tools\n        \n        trading-technique\n        \n        crypto-trading-strategy\n        \n        localcryptos\n        \n        binance\n        \n        ftx\n        \n        \n        trading-technique\n        \n\n      \n    \n\n\n  \n\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3247,7 +3247,7 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n    {% for post in site.posts %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ post.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endfor %}\n\n",
+      content: "$(document).ready(function() {\n\nvar idx = lunr(function() {\n  this.ref('id');\n  this.field('title', { boost: 6 });\n  this.field('content', { boost: 8 });\n  this.field('author');\n  this.field('category');\n  this.field('tags', { boost: 5 });\n\n  {% assign count = 0 %}\n  {% for post in site.posts %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.strategy %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.reviews %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.glossary %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.interviews %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.pages %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n  {% for post in site.howto %}\n    this.add({\n      title: {{post.title | jsonify}},\n      content: {{post.content | strip_html | jsonify}},\n      category: {{post.categories | jsonify}},\n      tags: {{post.tags | jsonify}},\n      author: {{post.author_name | jsonify}},\n      id: {{count}}\n    });\n    {% assign count = count | plus: 1 %}\n  {% endfor %}\n\n});\n\nvar store = [{% for post in site.posts %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.categories[0] | prepend:'#'| jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.strategy %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.reviews %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.glossary %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.interviews %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ post.layout | replace:'com-','' | replace:'col-','' | capitalize | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.pages %}{\n  'title': {{post.title | capitalize_all | jsonify}},\n  'url': {{ post.url | jsonify }},\n  'author': {{ post.author_name | jsonify }},\n  'image': {{ post.image[0] | jsonify }},\n  'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n  'category': {{ site.title | jsonify }},\n  'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n},{% endfor %}{% for post in site.howto %}{\n    'title': {{post.title | capitalize_all | jsonify}},\n    'url': {{ post.url | jsonify }},\n    'author': {{ post.author_name | jsonify }},\n    'image': {{ post.image[0] | jsonify }},\n    'date': {{ post.last_modified_at | date: '%B %-d, %Y' | jsonify }},\n    'category': {{ post.layout | replace:'at-','' | replace:'col-','' | capitalize | jsonify }},\n    'excerpt': {{ post.content | strip_html | truncatewords: 20 | jsonify }}\n    }{% unless forloop.last %},{% endunless %}{% endfor %}\n];\n\n// define render results\nfunction rendersearch( store, result, resultdiv ) {\n  resultdiv.empty();\n  if (!result) { resultdiv.append('No results.'); }\n  for (var item in result) {\n    var ref = result[item]['ref'];\n    var score = result[item]['score'];\n    if (  !store[ref].title ) { continue; }\n    if ( store[ref].author == null ) { store[ref].author = \"AltcoinTrading\"; }\n    if ( store[ref].date == null ) { store[ref].date = \"recently\"; }\n\n    if ( score > 23 ) {\n      var searchitem =\n        '' +\n        '' +\n        '' +\n        store[ref].title +\n        \"\" + store[ref].excerpt + \"In \" +\n        store[ref].category + \" &middot; by \" + store[ref].author + \" &middot; Last updated \" +\n        store[ref].date + \"\";\n    } else {\n      var searchitem =\n        '' +\n        store[ref].title +\n        \"\" + store[ref].excerpt + \"In \"+\n        store[ref].category + \" &middot; by \" + store[ref].author + \" &middot; Last updated \" +\n        store[ref].date + \"\";\n    }\n\n    resultdiv.append(searchitem);\n  }\n}\n\n// read url query\n  let urlsearch = new URLSearchParams(window.location.search);\n  urlsearch.has('query');\n  let urlquery = urlsearch.get('query');\n\n  if (urlquery) {\n    var query = urlquery;\n    var resultdiv = $(\"#search-results\");\n    resultdiv.empty();\n    resultdiv.append('');\n    var result = idx.search(query);\n    rendersearch( store, result, resultdiv );\n  }\n\n// read keyup\n  $(\"input#site-search\").on(\"keyup\", function () {\n    var query = $(this).val();\n    var resultdiv = $(\"#search-results\");\n    if (!query) { resultdiv.empty(); }\n    var result = idx.search(query);\n    rendersearch( store, result, resultdiv );\n  });\n\n});\n",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3256,8 +3256,8 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: null,
-      content: "\n\n    {% for page in site.strategy %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
+      title: "Search",
+      content: "",
       category: null,
       tags: null,
       author: "ATNET",
@@ -3267,11 +3267,61 @@ var idx = lunr(function() {
   
     this.add({
       title: null,
-      content: "\n\n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-pages.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-posts.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-howto.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-glossary.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-strategy.xml\n  \n\n",
+      content: "\n\n    {% for page in site.glossary %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
       category: null,
       tags: null,
       author: "ATNET",
       id: 325
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "\n\n    {% for page in site.howto %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 326
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "\n\n    \n      {{ site.url }}{{ site.baseurl }}\n      \n    \n\n    {% for page in site.pages %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ page.url }}\n        {% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% endif %}\n    \n    {% endunless %}{% endfor %}\n\n    {% for tag in site.tags %}\n      {% assign t = tag | first %}\n      {% assign posts = tag | last %}\n      \n          {{ site.url }}/tag/{{ t | downcase }}/\n          {{ site.time | date_to_xmlschema }}\n      \n    {% endfor %}\n    {% for tag in site.categories %}\n      {% assign t = tag | first %}\n      {% assign posts = tag | last %}\n      \n          {{ site.url }}/blog/{{ t | downcase }}/\n          {{ site.time | date_to_xmlschema }}\n      \n    {% endfor %}\n\n\n",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 327
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "\n\n    {% for post in site.posts %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ post.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endfor %}\n\n",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 328
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "\n\n    {% for page in site.strategy %}{% unless page.navi.exclude == true %}\n    \n        {{ site.url }}{{ site.baseurl }}{{ page.url }}\n        {{ page.last_modified_at | date_to_xmlschema }}\n    \n    {% endunless %}{% endfor %}\n\n",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 329
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "\n\n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-pages.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-posts.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-howto.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-glossary.xml\n  \n  \n    {{ site.url }}{{ site.baseurl }}/sitemap-strategy.xml\n  \n\n",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 330
     });
     
   
@@ -3281,7 +3331,7 @@ var idx = lunr(function() {
       category: null,
       tags: ["crypto-trading-strategy","crypto-charting","recommended-exchange","crypto-market-predictions"],
       author: "ATNET",
-      id: 326
+      id: 331
     });
     
   
@@ -3291,7 +3341,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 327
+      id: 332
     });
     
   
@@ -3301,7 +3351,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 328
+      id: 333
     });
     
   
@@ -3311,7 +3361,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 329
+      id: 334
     });
     
   
@@ -3321,7 +3371,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: "ATNET",
-      id: 330
+      id: 335
     });
     
   
@@ -3331,7 +3381,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: null,
-      id: 331
+      id: 336
     });
     
   
@@ -3341,7 +3391,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: null,
-      id: 332
+      id: 337
     });
     
   
@@ -3351,7 +3401,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: null,
-      id: 333
+      id: 338
     });
     
   
@@ -3361,7 +3411,7 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: null,
-      id: 334
+      id: 339
     });
     
   
@@ -3371,62 +3421,12 @@ var idx = lunr(function() {
       category: null,
       tags: null,
       author: null,
-      id: 335
-    });
-    
-  
-    this.add({
-      title: "crypto-value-judgement",
-      content: "",
-      category: null,
-      tags: null,
-      author: null,
-      id: 336
-    });
-    
-  
-    this.add({
-      title: "bitfinex",
-      content: "",
-      category: null,
-      tags: null,
-      author: null,
-      id: 337
-    });
-    
-  
-    this.add({
-      title: "crypto-market-predictions",
-      content: "",
-      category: null,
-      tags: null,
-      author: null,
-      id: 338
-    });
-    
-  
-    this.add({
-      title: "multicoin-wallet",
-      content: "",
-      category: null,
-      tags: null,
-      author: null,
-      id: 339
-    });
-    
-  
-    this.add({
-      title: "altcoin-wallet",
-      content: "",
-      category: null,
-      tags: null,
-      author: null,
       id: 340
     });
     
   
     this.add({
-      title: "crypto-tools",
+      title: "crypto-value-judgement",
       content: "",
       category: null,
       tags: null,
@@ -3436,7 +3436,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "exodus",
+      title: "bitfinex",
       content: "",
       category: null,
       tags: null,
@@ -3446,7 +3446,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "electrum",
+      title: "crypto-market-predictions",
       content: "",
       category: null,
       tags: null,
@@ -3456,7 +3456,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "ledger",
+      title: "multicoin-wallet",
       content: "",
       category: null,
       tags: null,
@@ -3466,7 +3466,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "adoption",
+      title: "altcoin-wallet",
       content: "",
       category: null,
       tags: null,
@@ -3476,7 +3476,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-opsec",
+      title: "crypto-tools",
       content: "",
       category: null,
       tags: null,
@@ -3486,7 +3486,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trezor",
+      title: "exodus",
       content: "",
       category: null,
       tags: null,
@@ -3496,7 +3496,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "custodial-trading",
+      title: "electrum",
       content: "",
       category: null,
       tags: null,
@@ -3506,7 +3506,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "arbitrage",
+      title: "ledger",
       content: "",
       category: null,
       tags: null,
@@ -3516,7 +3516,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "coinrule",
+      title: "adoption",
       content: "",
       category: null,
       tags: null,
@@ -3526,7 +3526,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "noncustodial-trading",
+      title: "crypto-opsec",
       content: "",
       category: null,
       tags: null,
@@ -3536,7 +3536,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "defi",
+      title: "trezor",
       content: "",
       category: null,
       tags: null,
@@ -3546,7 +3546,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-charting",
+      title: "custodial-trading",
       content: "",
       category: null,
       tags: null,
@@ -3556,7 +3556,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "pattern-trading",
+      title: "arbitrage",
       content: "",
       category: null,
       tags: null,
@@ -3566,7 +3566,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "tradingview",
+      title: "coinrule",
       content: "",
       category: null,
       tags: null,
@@ -3576,7 +3576,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "stablecoins",
+      title: "noncustodial-trading",
       content: "",
       category: null,
       tags: null,
@@ -3586,7 +3586,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "staking",
+      title: "defi",
       content: "",
       category: null,
       tags: null,
@@ -3596,7 +3596,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-platforms",
+      title: "crypto-charting",
       content: "",
       category: null,
       tags: null,
@@ -3606,7 +3606,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "tradingview-scripts",
+      title: "pattern-trading",
       content: "",
       category: null,
       tags: null,
@@ -3616,7 +3616,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-bot-trading",
+      title: "tradingview",
       content: "",
       category: null,
       tags: null,
@@ -3626,7 +3626,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "tensorcharts",
+      title: "stablecoins",
       content: "",
       category: null,
       tags: null,
@@ -3636,7 +3636,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "shrimpy",
+      title: "staking",
       content: "",
       category: null,
       tags: null,
@@ -3646,7 +3646,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "p2p-trading",
+      title: "trading-platforms",
       content: "",
       category: null,
       tags: null,
@@ -3656,7 +3656,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "derivatives",
+      title: "tradingview-scripts",
       content: "",
       category: null,
       tags: null,
@@ -3666,7 +3666,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "regtech",
+      title: "crypto-bot-trading",
       content: "",
       category: null,
       tags: null,
@@ -3676,7 +3676,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "psa",
+      title: "tensorcharts",
       content: "",
       category: null,
       tags: null,
@@ -3686,7 +3686,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "kyc",
+      title: "shrimpy",
       content: "",
       category: null,
       tags: null,
@@ -3696,7 +3696,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "interview",
+      title: "p2p-trading",
       content: "",
       category: null,
       tags: null,
@@ -3706,7 +3706,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "bitforex",
+      title: "derivatives",
       content: "",
       category: null,
       tags: null,
@@ -3716,7 +3716,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-technique",
+      title: "regtech",
       content: "",
       category: null,
       tags: null,
@@ -3726,7 +3726,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "spend-your-crypto",
+      title: "psa",
       content: "",
       category: null,
       tags: null,
@@ -3736,7 +3736,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "localcryptos",
+      title: "kyc",
       content: "",
       category: null,
       tags: null,
@@ -3746,7 +3746,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-technical-analysis",
+      title: "interview",
       content: "",
       category: null,
       tags: null,
@@ -3756,7 +3756,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "independent-reserve",
+      title: "bitforex",
       content: "",
       category: null,
       tags: null,
@@ -3766,7 +3766,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "divergence",
+      title: "trading-technique",
       content: "",
       category: null,
       tags: null,
@@ -3776,7 +3776,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "top",
+      title: "spend-your-crypto",
       content: "",
       category: null,
       tags: null,
@@ -3786,7 +3786,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "tradingview-script-review",
+      title: "localcryptos",
       content: "",
       category: null,
       tags: null,
@@ -3796,7 +3796,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "daytrading",
+      title: "crypto-technical-analysis",
       content: "",
       category: null,
       tags: null,
@@ -3806,7 +3806,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "scalping",
+      title: "independent-reserve",
       content: "",
       category: null,
       tags: null,
@@ -3816,7 +3816,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-journals",
+      title: "divergence",
       content: "",
       category: null,
       tags: null,
@@ -3826,7 +3826,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "phemex",
+      title: "top",
       content: "",
       category: null,
       tags: null,
@@ -3836,7 +3836,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "derisking",
+      title: "tradingview-script-review",
       content: "",
       category: null,
       tags: null,
@@ -3846,7 +3846,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "wyckoff",
+      title: "daytrading",
       content: "",
       category: null,
       tags: null,
@@ -3856,7 +3856,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "supply-demand",
+      title: "scalping",
       content: "",
       category: null,
       tags: null,
@@ -3866,7 +3866,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "bbands",
+      title: "trading-journals",
       content: "",
       category: null,
       tags: null,
@@ -3876,7 +3876,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "invity",
+      title: "phemex",
       content: "",
       category: null,
       tags: null,
@@ -3886,7 +3886,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "bitstamp",
+      title: "derisking",
       content: "",
       category: null,
       tags: null,
@@ -3896,7 +3896,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "bitmex",
+      title: "wyckoff",
       content: "",
       category: null,
       tags: null,
@@ -3906,7 +3906,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "kraken",
+      title: "supply-demand",
       content: "",
       category: null,
       tags: null,
@@ -3916,7 +3916,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "obv",
+      title: "bbands",
       content: "",
       category: null,
       tags: null,
@@ -3926,7 +3926,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "three-pushes-pattern",
+      title: "invity",
       content: "",
       category: null,
       tags: null,
@@ -3936,7 +3936,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "deribit",
+      title: "bitstamp",
       content: "",
       category: null,
       tags: null,
@@ -3946,7 +3946,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "yield",
+      title: "bitmex",
       content: "",
       category: null,
       tags: null,
@@ -3956,7 +3956,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "binance",
+      title: "kraken",
       content: "",
       category: null,
       tags: null,
@@ -3966,7 +3966,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "hodl",
+      title: "obv",
       content: "",
       category: null,
       tags: null,
@@ -3976,7 +3976,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "nft",
+      title: "three-pushes-pattern",
       content: "",
       category: null,
       tags: null,
@@ -3986,7 +3986,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "coldcard",
+      title: "deribit",
       content: "",
       category: null,
       tags: null,
@@ -3996,7 +3996,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "coinbase",
+      title: "yield",
       content: "",
       category: null,
       tags: null,
@@ -4006,7 +4006,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "volume-trading",
+      title: "binance",
       content: "",
       category: null,
       tags: null,
@@ -4016,7 +4016,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "cryptowatch",
+      title: "hodl",
       content: "",
       category: null,
       tags: null,
@@ -4026,7 +4026,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "billfodl",
+      title: "nft",
       content: "",
       category: null,
       tags: null,
@@ -4036,7 +4036,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "3commas",
+      title: "coldcard",
       content: "",
       category: null,
       tags: null,
@@ -4046,7 +4046,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "pionex",
+      title: "coinbase",
       content: "",
       category: null,
       tags: null,
@@ -4056,7 +4056,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "web3",
+      title: "volume-trading",
       content: "",
       category: null,
       tags: null,
@@ -4066,7 +4066,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "allnodes",
+      title: "cryptowatch",
       content: "",
       category: null,
       tags: null,
@@ -4076,7 +4076,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "airdrops",
+      title: "billfodl",
       content: "",
       category: null,
       tags: null,
@@ -4086,7 +4086,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "latoken",
+      title: "3commas",
       content: "",
       category: null,
       tags: null,
@@ -4096,7 +4096,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "penny-crypto",
+      title: "pionex",
       content: "",
       category: null,
       tags: null,
@@ -4106,7 +4106,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "low-cap-crypto",
+      title: "web3",
       content: "",
       category: null,
       tags: null,
@@ -4116,7 +4116,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "entertainment",
+      title: "allnodes",
       content: "",
       category: null,
       tags: null,
@@ -4126,7 +4126,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "dollar-cost-averaging",
+      title: "airdrops",
       content: "",
       category: null,
       tags: null,
@@ -4136,7 +4136,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "metaverse",
+      title: "latoken",
       content: "",
       category: null,
       tags: null,
@@ -4146,7 +4146,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "otc",
+      title: "penny-crypto",
       content: "",
       category: null,
       tags: null,
@@ -4156,7 +4156,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "vpvr",
+      title: "low-cap-crypto",
       content: "",
       category: null,
       tags: null,
@@ -4166,7 +4166,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "ftx-collapse",
+      title: "entertainment",
       content: "",
       category: null,
       tags: null,
@@ -4176,7 +4176,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "bitfinex-collapse",
+      title: "dollar-cost-averaging",
       content: "",
       category: null,
       tags: null,
@@ -4186,7 +4186,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "lending",
+      title: "metaverse",
       content: "",
       category: null,
       tags: null,
@@ -4196,7 +4196,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "taxes",
+      title: "otc",
       content: "",
       category: null,
       tags: null,
@@ -4206,7 +4206,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "altcoins",
+      title: "vpvr",
       content: "",
       category: null,
       tags: null,
@@ -4216,7 +4216,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "doge",
+      title: "ftx-collapse",
       content: "",
       category: null,
       tags: null,
@@ -4226,7 +4226,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "reports",
+      title: "lending",
       content: "",
       category: null,
       tags: null,
@@ -4236,7 +4236,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-value-judgement",
+      title: "taxes",
       content: "",
       category: null,
       tags: null,
@@ -4246,7 +4246,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-psychology",
+      title: "altcoins",
       content: "",
       category: null,
       tags: null,
@@ -4256,7 +4256,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "cryptocurrency-wallets",
+      title: "doge",
       content: "",
       category: null,
       tags: null,
@@ -4266,7 +4266,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-technique",
+      title: "seo",
       content: "",
       category: null,
       tags: null,
@@ -4276,7 +4276,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-technical-analysis",
+      title: "markets",
       content: "",
       category: null,
       tags: null,
@@ -4286,7 +4286,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-trading-tools",
+      title: "reports",
       content: "",
       category: null,
       tags: null,
@@ -4296,7 +4296,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "trading-platforms",
+      title: "crypto-value-judgement",
       content: "",
       category: null,
       tags: null,
@@ -4306,7 +4306,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "meta",
+      title: "trading-psychology",
       content: "",
       category: null,
       tags: null,
@@ -4316,7 +4316,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "cheatsheets",
+      title: "cryptocurrency-wallets",
       content: "",
       category: null,
       tags: null,
@@ -4326,7 +4326,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "crypto-trading-101",
+      title: "trading-technique",
       content: "",
       category: null,
       tags: null,
@@ -4336,7 +4336,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "onramp",
+      title: "crypto-technical-analysis",
       content: "",
       category: null,
       tags: null,
@@ -4346,7 +4346,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "psa",
+      title: "crypto-trading-tools",
       content: "",
       category: null,
       tags: null,
@@ -4356,7 +4356,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "nft-trading",
+      title: "trading-platforms",
       content: "",
       category: null,
       tags: null,
@@ -4366,7 +4366,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "non-directional",
+      title: "meta",
       content: "",
       category: null,
       tags: null,
@@ -4376,7 +4376,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "finance-basics",
+      title: "cheatsheets",
       content: "",
       category: null,
       tags: null,
@@ -4386,7 +4386,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "tool-updates",
+      title: "crypto-trading-101",
       content: "",
       category: null,
       tags: null,
@@ -4396,7 +4396,7 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: "analysis",
+      title: "onramp",
       content: "",
       category: null,
       tags: null,
@@ -4406,61 +4406,61 @@ var idx = lunr(function() {
     
   
     this.add({
-      title: null,
+      title: "psa",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 439
     });
     
   
     this.add({
-      title: null,
+      title: "nft-trading",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 440
     });
     
   
     this.add({
-      title: null,
+      title: "non-directional",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 441
     });
     
   
     this.add({
-      title: null,
+      title: "finance-basics",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 442
     });
     
   
     this.add({
-      title: null,
+      title: "tool-updates",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 443
     });
     
   
     this.add({
-      title: null,
+      title: "analysis",
       content: "",
       category: null,
       tags: null,
-      author: "ATNET",
+      author: null,
       id: 444
     });
     
@@ -4585,6 +4585,76 @@ var idx = lunr(function() {
     });
     
   
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 457
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 458
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 459
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 460
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 461
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 462
+    });
+    
+  
+    this.add({
+      title: null,
+      content: "",
+      category: null,
+      tags: null,
+      author: "ATNET",
+      id: 463
+    });
+    
+  
   
     this.add({
       title: "How to safely move Litecoin between SegWit P2SH (3) addresses and legacy (L) addresses",
@@ -4592,7 +4662,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["p2sh-wallet","altcoin-wallet","crypto-tools","top","coldcard","trezor"],
       author: "KarlVonBahnhof",
-      id: 457
+      id: 464
     });
     
   
@@ -4602,7 +4672,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-opsec","altcoin-wallets","crypto-tools","bitfinex","ledger"],
       author: null,
-      id: 458
+      id: 465
     });
     
   
@@ -4612,7 +4682,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["cold-storage","crypto-opsec","bitcoin-wallet","crypto-tools","electrum"],
       author: null,
-      id: 459
+      id: 466
     });
     
   
@@ -4622,17 +4692,17 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["cold-storage","crypto-opsec","altcoin-wallets","crypto-tools","airdrops"],
       author: null,
-      id: 460
+      id: 467
     });
     
   
     this.add({
       title: "How to avoid re-using an email while keeping a single inbox only (Phishing Protection)",
-      content: "One thing we are probably not going to stop seeing anytime soon in the crypto space is phishing.\n\nOnce it becomes public knowledge an email address belongs to someone who owns cryptocurrencies, hackers will naturally try to get into the crypto trading platform accounts and web wallet associated with that email.\n\nThen there is the fun stuff on top of everything, such as Ledger wallet’s customer database getting breached.\n\nYou are making this fact a public knowledge every time you sign up for an airdrop, bounty or even a crypto-related mailing list.\n\nWhile MFA on exchanges is always a must, there is a fairly easy way to avoid reusing email addresses so that you always know where your address leaked from even before it appears on haveibeenpwned.com.\n\nTo do that you will need to get your own domain name.\n\nThe Idea\n\nYour goal is to be able to invent any random email address as you go and have it deliver emails into your usual mailbox.\n\nObviously you cannot set up a new mailbox each time you want to sign up somewhere, nobody is going to do that.\n\nIf you own a domain name though, you can use a so-called catch-all function to receive emails to any email address under that domain and have them delivered into the same mailbox.\n\nIf you also need to send an email out of the receiving addresses, you will need email aliases - mostly that will not be necessary though.\n\nThe email provider for catchall addresses\n\nRemember, the mailbox itself should be properly secured with MFA as well.\n\nTutanota\n\nAs the secure email client of choice I will recommend Tutanota. You will not be able to create this setup with their free account, but the premium version costs only 12 EUR per year.\n\nWith the default paid plan you get 5 different email addresses to use but they also have special extension packages to allow for more of them, currently up to 100. Tutanota has a web interface and smartphone apps, offers 2FA with Google Auth or Authy and stores all emails encrypted.\n\nProtonmail\n\nProtonmail is all in all a similar service to Tutanota and also offers custom domain support as a premium option, but the catch-all function is far more expensive than with Tutanota.\n\nWith Protonmail you can pay in Bitcoin, Tutanota still does not support cryptocurrency payments in 2022.\n\nAlternatively, you will be able to achieve this kind of solution for free with Yandex mailbox. It’s a paid feature with Google (GSuite).\n\nHow To Setup The Catch-All Mailbox\n\n\n\n\n  Pick a domain name for your email - winningbig.com or wenmoonsir.com, sadly lambomail.com is already taken. The domain should ideally be brand new as in never used before. If it was used for spam in the past, emails from there will get blocked and sent to spam too often. You can find out about previous owners of a domain in its Whois History.\n  The registrars that are easiest to use will be either Dynadot or Namecheap - Dynadot lets you pay in Paypal, Namecheap supports Bitcoin payments.\n  Get your premium email account with Tutanota or Protonmail, or dive into the documentation for Yandex.\n  Head to your domain’s DNS section add the DNS entries to direct emails for handles at this domain to your mailbox - for Tutanota it will be MX mail.tutanota.de and TXT v=spf1 include:spf.tutanota.de -all as seen here in their knowledge base. Protonmail’s how to is here for the basics and here for the anti-spoofing settings.\n  Check your domain’s DNS settings for emails at http://mxtoolbox.com couple of times until you see your entries there. The change is not instant.\n  Once the DNS change is confirmed, link the domain name to your email account. In Tutanota you will find it at Settings &gt; Extensions &gt; Custom domain in the old clients or at Settings &gt; Global settings &gt; Custom email domains in the new interface. The first field is for the domain name you are linking - say, lambomail.com - the second field is for your catch-all address. For that, use the default email address that you signed up with - say, porquenolosdos@tutanota.com.\n  If you did your DNS right you should be able to confirm it and be all set to receive any emails for your custom domain name. It won’t let you finish the linking until the DNS changes are done and confirmed.\n  If you want to set up the address for sending out, in Tutanota you can now head over to Settings &gt; User Management &gt; Email aliases. Add any specific address you need such as b1tf1n3xuser@lambomail.com and activate it. Tutanota will start giving you the option to send out emails from there. You can always discard the address or replace it with another, and then bring it back only for when you need to send an email out of there. As long as you have the catch-all address you will receive emails to any address under your domain name, no matter if has an alias or not.\n\n\nHow To Use Catch-All Mailbox The Secure Way\n\nWhen you are signing up at ANY third party place, use a single-use address from your domain.\n\n\n  Let’s say you are about to do a bounty at superdupercoin.com.\n  Go sign up to the bounty and use a catch-all address superdupercoin@lambomail.com\n  Your email confirmation will still come to your usual mailbox but your exchange accounts are safe because you are not using this address there.\n  ??\n  Some 6 months later, your airdrop shitcoin probably doesn’t exist anymore and you start receiving spam or phishing emails to address superdupercoin@lambomail.com. (Yeah, that’s what usually happens.)\n\n",
+      content: "One thing we are probably not going to stop seeing anytime soon in the crypto space is phishing.\n\nOnce it becomes public knowledge an email address belongs to someone who owns cryptocurrencies, hackers will naturally try to get into the crypto trading platform accounts and web wallet associated with that email.\n\nThen there is the fun stuff on top of everything, such as Ledger wallet’s customer database getting breached.\n\nYou are making this fact a public knowledge every time you sign up for an airdrop, bounty or even a crypto-related mailing list.\n\nWhile MFA on exchanges is always a must, there is a fairly easy way to avoid reusing email addresses so that you always know where your address leaked from even before it appears on haveibeenpwned.com.\n\nTo do that you will need to get your own domain name.\n\nThe Idea\n\nYour goal is to be able to invent any random email address as you go and have it deliver emails into your usual mailbox.\n\nObviously you cannot set up a new mailbox each time you want to sign up somewhere, nobody is going to do that.\n\nIf you own a domain name though, you can use a so-called catch-all function to receive emails to any email address under that domain and have them delivered into the same mailbox.\n\nIf you also need to send an email out of the receiving addresses, you will need email aliases - mostly that will not be necessary though.\n\nThe email provider for catchall addresses\n\nRemember, the mailbox itself should be properly secured with MFA as well.\n\nTutanota\n\nAs the secure email client of choice I will recommend Tutanota. You will not be able to create this setup with their free account, but the premium version costs only 12 EUR per year.\n\nWith the default paid plan you get 5 different email addresses to use but they also have special extension packages to allow for more of them, currently up to 100. Tutanota has a web interface and smartphone apps, offers 2FA with Google Auth or Authy and stores all emails encrypted.\n\nProtonmail\n\nProtonmail is all in all a similar service to Tutanota and also offers custom domain support as a premium option, but the catch-all function is far more expensive than with Tutanota.\n\nWith Protonmail you can pay in Bitcoin, Tutanota still does not support cryptocurrency payments in 2023.\n\nAlternatively, you will be able to achieve this kind of solution for free with Yandex mailbox. It’s a paid feature with Google (GSuite).\n\nHow To Setup The Catch-All Mailbox\n\n\n\n\n  Pick a domain name for your email - winningbig.com or wenmoonsir.com, sadly lambomail.com is already taken. The domain should ideally be brand new as in never used before. If it was used for spam in the past, emails from there will get blocked and sent to spam too often. You can find out about previous owners of a domain in its Whois History.\n  The registrars that are easiest to use will be either Dynadot or Namecheap - Dynadot lets you pay in Paypal, Namecheap supports Bitcoin payments.\n  Get your premium email account with Tutanota or Protonmail, or dive into the documentation for Yandex.\n  Head to your domain’s DNS section add the DNS entries to direct emails for handles at this domain to your mailbox - for Tutanota it will be MX mail.tutanota.de and TXT v=spf1 include:spf.tutanota.de -all as seen here in their knowledge base. Protonmail’s how to is here for the basics and here for the anti-spoofing settings.\n  Check your domain’s DNS settings for emails at http://mxtoolbox.com couple of times until you see your entries there. The change is not instant.\n  Once the DNS change is confirmed, link the domain name to your email account. In Tutanota you will find it at Settings &gt; Extensions &gt; Custom domain in the old clients or at Settings &gt; Global settings &gt; Custom email domains in the new interface. The first field is for the domain name you are linking - say, lambomail.com - the second field is for your catch-all address. For that, use the default email address that you signed up with - say, porquenolosdos@tutanota.com.\n  If you did your DNS right you should be able to confirm it and be all set to receive any emails for your custom domain name. It won’t let you finish the linking until the DNS changes are done and confirmed.\n  If you want to set up the address for sending out, in Tutanota you can now head over to Settings &gt; User Management &gt; Email aliases. Add any specific address you need such as b1tf1n3xuser@lambomail.com and activate it. Tutanota will start giving you the option to send out emails from there. You can always discard the address or replace it with another, and then bring it back only for when you need to send an email out of there. As long as you have the catch-all address you will receive emails to any address under your domain name, no matter if has an alias or not.\n\n\nHow To Use Catch-All Mailbox The Secure Way\n\nWhen you are signing up at ANY third party place, use a single-use address from your domain.\n\n\n  Let’s say you are about to do a bounty at superdupercoin.com.\n  Go sign up to the bounty and use a catch-all address superdupercoin@lambomail.com\n  Your email confirmation will still come to your usual mailbox but your exchange accounts are safe because you are not using this address there.\n  ??\n  Some 6 months later, your airdrop shitcoin probably doesn’t exist anymore and you start receiving spam or phishing emails to address superdupercoin@lambomail.com. (Yeah, that’s what usually happens.)\n\n",
       category: ["trading-methods-101"],
       tags: ["crypto-opsec","best-practices","crypto-tools","spend-your-crypto"],
       author: null,
-      id: 461
+      id: 468
     });
     
   
@@ -4642,7 +4712,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["how-to-buy","crypto-opsec"],
       author: "CoinMe + AltcoinTrading.NET",
-      id: 462
+      id: 469
     });
     
   
@@ -4652,7 +4722,7 @@ var idx = lunr(function() {
       category: ["payments"],
       tags: ["spend-your-crypto","crypto-opsec","bitcoin-wallet","invity"],
       author: "AltcoinTradingNET",
-      id: 463
+      id: 470
     });
     
   
@@ -4662,7 +4732,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-charting","crypto-trading-strategy","crypto-tools","tensorcharts"],
       author: "AltcoinTradingNET",
-      id: 464
+      id: 471
     });
     
   
@@ -4672,7 +4742,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["how-to-buy","crypto-opsec","altcoin-wallet","trezor"],
       author: "AltcoinTradingNET",
-      id: 465
+      id: 472
     });
     
   
@@ -4682,7 +4752,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["p2sh-wallet","bitcoin-wallet","crypto-tools","electrum","ledger"],
       author: "AltcoinTradingNET",
-      id: 466
+      id: 473
     });
     
   
@@ -4692,7 +4762,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","crypto-fundamentals","coldcard"],
       author: null,
-      id: 467
+      id: 474
     });
     
   
@@ -4702,7 +4772,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["how-to-buy","dca","independent-reserve","crypto-tools","invity"],
       author: null,
-      id: 468
+      id: 475
     });
     
   
@@ -4712,7 +4782,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["p2sh-wallet","bitcoin-wallet","crypto-opsec","altcoin-wallet","cryptocurrency-wallet","crypto-tools","electrum","exodus","jaxx","ledger","bitfinex","kraken"],
       author: null,
-      id: 469
+      id: 476
     });
     
   
@@ -4722,7 +4792,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-opsec","altcoin-wallets","private-keys","cold-storage","electrum","jaxx","exodus","ledger","trezor"],
       author: null,
-      id: 470
+      id: 477
     });
     
   
@@ -4732,7 +4802,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["p2sh-wallet","bitcoin-wallet","crypto-opsec","altcoin-wallet","cryptocurrency-wallet","crypto-tools","top","electrum","trezor","coldcard"],
       author: null,
-      id: 471
+      id: 478
     });
     
   
@@ -4742,7 +4812,7 @@ var idx = lunr(function() {
       category: ["exclude"],
       tags: ["crypto-trading-strategy","trading-technique"],
       author: "altcointrading",
-      id: 472
+      id: 479
     });
     
   
@@ -4752,7 +4822,7 @@ var idx = lunr(function() {
       category: ["exclude"],
       tags: ["crypto-trading-strategy","trading-technique","phemex"],
       author: "altcointrading",
-      id: 473
+      id: 480
     });
     
   
@@ -4762,7 +4832,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-tools","trading-technique","trading-journals","crypto-bot-trading","crypto-trading-strategy","scalping","bitfinex","top","independent-reserve"],
       author: null,
-      id: 474
+      id: 481
     });
     
   
@@ -4772,7 +4842,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["how-to-buy","custodial-trading","otc-trading","mobile-trading","invity"],
       author: null,
-      id: 475
+      id: 482
     });
     
   
@@ -4782,7 +4852,7 @@ var idx = lunr(function() {
       category: ["exclude"],
       tags: ["crypto-fundamentals","crypto-tools","hodl","crypto-opsec","altcoin-wallet","localcryptos","ledger"],
       author: null,
-      id: 476
+      id: 483
     });
     
   
@@ -4792,7 +4862,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-taxes","management","dca","scalping","independent-reserve","trezor"],
       author: null,
-      id: 477
+      id: 484
     });
     
   
@@ -4802,7 +4872,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["crypto-opsec","trading-platforms","crypto-fundamentals","independent-reserve","coinbase"],
       author: null,
-      id: 478
+      id: 485
     });
     
   
@@ -4812,7 +4882,7 @@ var idx = lunr(function() {
       category: ["trading-platforms"],
       tags: ["honorable-mentions","crypto-derivatives","perps","crypto-trading","europe","cryptowatch","kraken"],
       author: null,
-      id: 479
+      id: 486
     });
     
   
@@ -4822,7 +4892,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["yield","defi","crypto-opsec","ftx"],
       author: null,
-      id: 480
+      id: 487
     });
     
   
@@ -4832,7 +4902,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["trading-technique","trading-platforms","bitforex","ftx","bitfinex"],
       author: null,
-      id: 481
+      id: 488
     });
     
   
@@ -4842,7 +4912,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["portfolio-diversification","defi","crypto-fundamentals","crypto-bot-trading","airdrops","independent-reserve","invity","bitforex"],
       author: null,
-      id: 482
+      id: 489
     });
     
   
@@ -4852,7 +4922,7 @@ var idx = lunr(function() {
       category: ["exclude"],
       tags: ["portfolio-diversification","trading-platforms","crypto-tools","shrimpy","coinbase"],
       author: null,
-      id: 483
+      id: 490
     });
     
   
@@ -4862,37 +4932,37 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-trading-strategy","yield","crypto-tools","shrimpy","coinbase"],
       author: null,
-      id: 484
+      id: 491
     });
     
   
     this.add({
       title: "USD to BTC Instant Buying: The Best Platforms for Instant Bitcoin",
-      content: "People buy Bitcoin (BTC) for many reasons, but especially in the past three or four years it’s almost always for investment purposes.\n\nSome BTC buyers like active trading, but many just hodl or leave their bitcoin on a platform to earn interest. Those are all valid investment strategies.\n\nWhether you are new or experienced in cryptocurrency, it’s always good to know the current platforms for USD to BTC instant buying.\n\nFortunately, there are a few reliable platforms even in the over-regulated world of 2022 which makes Bitcoin to USD instant exchange possible.\n\nThat said, let's dive into the list of best platforms for you to use when you want instant BTC. Notably, these are all fast, secure, and with affordable fees.\n\nUSD to BTC Instant Transactions on Exchange Brokerage Platforms\n\nAn exchange broker is a middleman who helps crypto buyers carry out USD to BTC instant buying or selling.\n\nExchange brokerages are the most used crypto service since they are convenient and fast.\n\nHowever, being brokerages, they charge an extra fee for the services. That means you will always pay a little above the market price, but then the transaction really is instant. You do not have to wait for a seller to take your order.\n\nBelow some of the popular exchange brokerage brands:\n\n\n  \n    NakitCoins\n\n    Whether you want an online or a physical exchange, the NakitCoins website will be there for you.\n\n    Investors prefer to use this platform because it is not mandatory to register and KYC to buy BTC for cash. Additionally, the services are very affordable and secure.\n  \n  \n    Binance\n\n    Binance is a giant crypto management platform that has numerous functions and offers the full stack of services for all your crypto investing needs.\n\n    USD to BTC instant exchange is one of them.\n\n    Security, speed of transaction, and affordable prices have made the exchange very reputable.\n  \n  \n    Coinmama\n\n    Coinmama is a long-running crypto exchanger that lives on USD to BTC instant services.\n\n    You will need to register and pass KYC to use your debit or credit card to get instant BTC. The disadvantage are the hefty fees that this platform charges.\n  \n\n\nP2P Exchange Platforms for USD to BTC Instant Transactions\n\nAs an alternative option, P2P platforms are a time-tested and private way to connect Bitcoin buyers with sellers.\n\nIf you enter in contact directly with a vendor rather than posting your own advert, P2P markets can effectively facilitate your exchange for instant BTC.\n\nInvestors choose P2P platforms mainly because of their privacy concerns and the the speed of the transaction.\n\nAdditionally, they offer community interaction for crypto enthusiasts to learn from each other. Typically, there will be a forum or a Telegram group (or both!) where you can ask for advice, chat or talk about what’s happening on the crypto scene. These communities can be the best place to learn about breaking news.\n\nA good P2P platfrom is LocalCryptos\n\nBitcoin ATMs\n\nDo you want to carry out USD to BTC instant exchange physically? A BTC ATM is the ideal option to use.\n\nThese are automated crypto machines that buy and sell crypto for cash. Today, they are located all over big cities, and online maps can show you where the nearest one is.\n\nYou won’t need any help to use a Bitcoin ATM. All you have to do is to walk into one and follow the provided steps.\n\nUnlike online exchange platforms, you do not need to create an account to use a Bitcoin ATM for instant BTC. The most important details are your credit or Visa card details and a Bitcoin wallet address.\n\nConclusion\n\nWe have listed the most common options for you to make USD to BTC instant exchange without a hitch.\n\nIf you did not have a clue about them, well, now you know how to obtain instant BTC.\n\nThey are reliable and easy to use for everyone. Remember to always do your own research - ATMs can be rogue, brokerages change ownership etc.\n\nDo take time to review the pros and cons of your preferred platform before you put your money in it.\n",
+      content: "People buy Bitcoin (BTC) for many reasons, but especially in the past three or four years it’s almost always for investment purposes.\n\nSome BTC buyers like active trading, but many just hodl or leave their bitcoin on a platform to earn interest. Those are all valid investment strategies.\n\nWhether you are new or experienced in cryptocurrency, it’s always good to know the current platforms for USD to BTC instant buying.\n\nFortunately, there are a few reliable platforms even in the over-regulated world of 2023 which makes Bitcoin to USD instant exchange possible.\n\nThat said, let's dive into the list of best platforms for you to use when you want instant BTC. Notably, these are all fast, secure, and with affordable fees.\n\nUSD to BTC Instant Transactions on Exchange Brokerage Platforms\n\nAn exchange broker is a middleman who helps crypto buyers carry out USD to BTC instant buying or selling.\n\nExchange brokerages are the most used crypto service since they are convenient and fast.\n\nHowever, being brokerages, they charge an extra fee for the services. That means you will always pay a little above the market price, but then the transaction really is instant. You do not have to wait for a seller to take your order.\n\nBelow some of the popular exchange brokerage brands:\n\n\n  \n    NakitCoins\n\n    Whether you want an online or a physical exchange, the NakitCoins website will be there for you.\n\n    Investors prefer to use this platform because it is not mandatory to register and KYC to buy BTC for cash. Additionally, the services are very affordable and secure.\n  \n  \n    Binance\n\n    Binance is a giant crypto management platform that has numerous functions and offers the full stack of services for all your crypto investing needs.\n\n    USD to BTC instant exchange is one of them.\n\n    Security, speed of transaction, and affordable prices have made the exchange very reputable.\n  \n  \n    Coinmama\n\n    Coinmama is a long-running crypto exchanger that lives on USD to BTC instant services.\n\n    You will need to register and pass KYC to use your debit or credit card to get instant BTC. The disadvantage are the hefty fees that this platform charges.\n  \n\n\nP2P Exchange Platforms for USD to BTC Instant Transactions\n\nAs an alternative option, P2P platforms are a time-tested and private way to connect Bitcoin buyers with sellers.\n\nIf you enter in contact directly with a vendor rather than posting your own advert, P2P markets can effectively facilitate your exchange for instant BTC.\n\nInvestors choose P2P platforms mainly because of their privacy concerns and the the speed of the transaction.\n\nAdditionally, they offer community interaction for crypto enthusiasts to learn from each other. Typically, there will be a forum or a Telegram group (or both!) where you can ask for advice, chat or talk about what’s happening on the crypto scene. These communities can be the best place to learn about breaking news.\n\nA good P2P platfrom is LocalCryptos\n\nBitcoin ATMs\n\nDo you want to carry out USD to BTC instant exchange physically? A BTC ATM is the ideal option to use.\n\nThese are automated crypto machines that buy and sell crypto for cash. Today, they are located all over big cities, and online maps can show you where the nearest one is.\n\nYou won’t need any help to use a Bitcoin ATM. All you have to do is to walk into one and follow the provided steps.\n\nUnlike online exchange platforms, you do not need to create an account to use a Bitcoin ATM for instant BTC. The most important details are your credit or Visa card details and a Bitcoin wallet address.\n\nConclusion\n\nWe have listed the most common options for you to make USD to BTC instant exchange without a hitch.\n\nIf you did not have a clue about them, well, now you know how to obtain instant BTC.\n\nThey are reliable and easy to use for everyone. Remember to always do your own research - ATMs can be rogue, brokerages change ownership etc.\n\nDo take time to review the pros and cons of your preferred platform before you put your money in it.\n",
       category: ["onramp"],
       tags: ["crypto-trading-strategy","crypto-tools","shrimpy","coinbase"],
       author: null,
-      id: 485
+      id: 492
     });
     
   
     this.add({
       title: "10 Easy Tips To Earn Rewards With Cryptocurrency",
-      content: "Do you want to earn rewards and bonuses without the hassle of a credit card? If so, then spending cryptocurrency might be the way for you.\n\nCryptocurrency as a digital means of payment is finally gaining popularity in the last few years. It's not so uncommon to use it for online transactions anymore, it can be traded in exchange for other currencies or products.\n\nIn this post, we will focus on one particular aspect of cryptocurrency - its incentives when you use them to make purchases.\n\nThere are numerous cryptocurrencies to choose from, including Bitcoin, Ethereum, and Litecoin. Each has unique features that make it attractive to users.\n\n10 Tips for earning crypto rewards\n\nHere are 10 easy tips to help you start earning rewards with cryptocurrency:\n\n\n  \n    Use A Cryptocurrency Credit Card For Online Transaction\n\n    Cryptocurrency credit cards allow you to spend your coins like regular currency.\n\n    This is a great way to use your coins for everyday transactions and earn rewards and bonuses. Several different cryptocurrency credit cards are available, like the Binance Visa Card, BitPay Visa Card or the Wirex Visa Card. These cards work like regular credit cards and can be used in all retailers that accept prepaid Visa cards.\n\n    The best way to earn rewards using crypto credit card is to purchase online or in person, because crypto cards come with cashback and discount coupons when you use them for payments. There are plenty of online retailers that accept cryptocurrency, which you can use to get discounts or rewards.\n  \n  \n    Stake Some Of Your Cryptos\n\n    Staking your cryptocurrency means that you're holding onto it instead of spending it. When you stake a certain amount, the network will reward you with coins.\n\n    Another benefit of staking is that you support the security of the blockchain, without practically risking much. Learn how to stake on Solana to get started if you want to know more.\n  \n  \n    Get A Cryptocurrency Wallet\n\n    A cryptocurrency wallet is a digital storage device that allows you to store your coins. There are several kinds of wallets, such as hardware wallets, software wallets, and web-based wallets.\n\n    In 2022, most wallets support PoS alt coins and offer bonuses and rewards. Those are either in a form of “savings account” or as staking directly from your wallet. Staking is the safer and less risky option.\n\n    Because lesser-known cryptocurrencies can’t usually be acquired by direct bank transfers yet, the best option to transfer your crypto is by using conversions. Many banks support common cryptocurrencies today (like Bitcoin). This can be converted from your existing cryptocurrency. For instance, if you have a KuCoin, you’ll have to exchange it with a different token to transfer the bank to the crypto wallet in your bank account. If you’re interested, you may visit https://cryptochronicle.io/how-to-withdraw-funds-from-kucoin/.\n  \n  \n    Use A Cryptocurrency ATM\n\n    A cryptocurrency ATM is a machine that allows you to buy and sell cryptocurrencies using cash. These machines are becoming more popular, so be sure to look for them in your area.\n\n    Cryptocurrency ATMs have slightly different pricing than exchanges like Coinbase, so you might easily profit by buying on an exchange and selling in an ATM. However, be sure to check the ATM’s fees.\n\n    Some cryptocurrency ATMs also offer rewards and bonuses for using their services. Unlike a regular ATM, cryptocurrency ATMs aren’t linked to a bank account. They link to a cryptocurrency exchange connected via the Internet. Crypto ATMs can be used to buy and sell various cryptocurrencies because they have the same components as a regular ATM, including a monitor, bill acceptor, bill dispenser, and QR scanner.\n  \n  \n    Join A Cryptocurrency Pool\n\n    A cryptocurrency pool is a group of small crypto holders who mine or stake cryptocurrencies. Cryptocurrency pools such as Genesis Mining or AllNodes might offer rewards and bonuses for joining their pool. They are always a good way to earn rewards even if you are a small holder. In staking this principle works less so than in mining, but in both these activities there are better rewards if you participate with a lot of money or a lot of resources at once.\n\n    So, for smaller investors the rewards gained through a pool will be typically somewhat better than what they could earn on their own.\n  \n  \n    Mine A New Cryptocurrency\n\n    If you want to earn rewards with cryptocurrency, you might consider mining it yourself. Mining cryptocurrencies can be a great way to earn rewards. However, it does require resources and time.\n\n    Mining newly launched cryptocurrencies is always much easier as there is less competition. You may want to check if any of the new coins that you gained via airdrops doesn’t have a good mining opportunity.\n\n    However, before considering this path, keep in mind that mining a new cryptocurrency is costly and painstaking, but the rewards are worthwhile if you succeed. You can even earn more cryptocurrency without putting down your money through mining. You can set up a mining rig using an application-specific integrated circuit (ASIC) and graphics processing unit (GPU).\n  \n  \n    Trade-In Cryptocurrency For Goods Or Services\n\n    Some p2p marketplaces allow you to trade cryptocurrency for other currencies, products, and gift cards.\n\n    These sites offer great rewards when using them to make trades with your coins which you can use on future transactions.\n\n    More and more businesses are now accepting cryptocurrency as a method of payment, so the next time you go shopping, you won’t need to bring cash or charge your credit card but use your crypto earnings instead.\n  \n  \n    Participate In A Cryptocurrency Bounty Program\n\n    A bounty program is an online program offered by cryptocurrency developers to encourage users and companies in the community to promote their coins. When participating in a bounty program, you earn rewards when completing marketing tasks for that project or company, if your work is approved by the bounty manager.\n  \n  \n    Turn Your Dollars Into Stablecoins\n\n    Stablecoins are a type of cryptocurrency pegged to the value of another currency.\n\n    They offer stability and can be used for online transactions. Furthermore, they are easy to use and can be converted back into your original currency at any time.\n\n    Stablecoins have the advantage that you can stake them or lend them for a far higher interest rate than what you can get in your bank for the equivalent fiat.\n  \n  \n    Lend Some Of Your Crypto To Earn Interest\n\n    You can use smart contracts to lend out some of your cryptocurrency and earn a small amount of interest on it. You can choose how much you want to charge for lending so that you can receive more rewards on future transactions.\n\n    This method is reasonably safe if you're careful about whom you decide to loan with.\n  \n\n\nConclusion\n\nThere are a few different ways to earn rewards with cryptocurrency.\n\nUsing it for everyday transactions lets you get discounts and bonuses from various sources. You can also invest in it, join a pool, or participate in bounty programs to increase your earnings.\n",
+      content: "Do you want to earn rewards and bonuses without the hassle of a credit card? If so, then spending cryptocurrency might be the way for you.\n\nCryptocurrency as a digital means of payment is finally gaining popularity in the last few years. It's not so uncommon to use it for online transactions anymore, it can be traded in exchange for other currencies or products.\n\nIn this post, we will focus on one particular aspect of cryptocurrency - its incentives when you use them to make purchases.\n\nThere are numerous cryptocurrencies to choose from, including Bitcoin, Ethereum, and Litecoin. Each has unique features that make it attractive to users.\n\n10 Tips for earning crypto rewards\n\nHere are 10 easy tips to help you start earning rewards with cryptocurrency:\n\n\n  \n    Use A Cryptocurrency Credit Card For Online Transaction\n\n    Cryptocurrency credit cards allow you to spend your coins like regular currency.\n\n    This is a great way to use your coins for everyday transactions and earn rewards and bonuses. Several different cryptocurrency credit cards are available, like the Binance Visa Card, BitPay Visa Card or the Wirex Visa Card. These cards work like regular credit cards and can be used in all retailers that accept prepaid Visa cards.\n\n    The best way to earn rewards using crypto credit card is to purchase online or in person, because crypto cards come with cashback and discount coupons when you use them for payments. There are plenty of online retailers that accept cryptocurrency, which you can use to get discounts or rewards.\n  \n  \n    Stake Some Of Your Cryptos\n\n    Staking your cryptocurrency means that you're holding onto it instead of spending it. When you stake a certain amount, the network will reward you with coins.\n\n    Another benefit of staking is that you support the security of the blockchain, without practically risking much. Learn how to stake on Solana to get started if you want to know more.\n  \n  \n    Get A Cryptocurrency Wallet\n\n    A cryptocurrency wallet is a digital storage device that allows you to store your coins. There are several kinds of wallets, such as hardware wallets, software wallets, and web-based wallets.\n\n    In 2023, most wallets support PoS alt coins and offer bonuses and rewards. Those are either in a form of “savings account” or as staking directly from your wallet. Staking is the safer and less risky option.\n\n    Because lesser-known cryptocurrencies can’t usually be acquired by direct bank transfers yet, the best option to transfer your crypto is by using conversions. Many banks support common cryptocurrencies today (like Bitcoin). This can be converted from your existing cryptocurrency. For instance, if you have a KuCoin, you’ll have to exchange it with a different token to transfer the bank to the crypto wallet in your bank account. If you’re interested, you may visit https://cryptochronicle.io/how-to-withdraw-funds-from-kucoin/.\n  \n  \n    Use A Cryptocurrency ATM\n\n    A cryptocurrency ATM is a machine that allows you to buy and sell cryptocurrencies using cash. These machines are becoming more popular, so be sure to look for them in your area.\n\n    Cryptocurrency ATMs have slightly different pricing than exchanges like Coinbase, so you might easily profit by buying on an exchange and selling in an ATM. However, be sure to check the ATM’s fees.\n\n    Some cryptocurrency ATMs also offer rewards and bonuses for using their services. Unlike a regular ATM, cryptocurrency ATMs aren’t linked to a bank account. They link to a cryptocurrency exchange connected via the Internet. Crypto ATMs can be used to buy and sell various cryptocurrencies because they have the same components as a regular ATM, including a monitor, bill acceptor, bill dispenser, and QR scanner.\n  \n  \n    Join A Cryptocurrency Pool\n\n    A cryptocurrency pool is a group of small crypto holders who mine or stake cryptocurrencies. Cryptocurrency pools such as Genesis Mining or AllNodes might offer rewards and bonuses for joining their pool. They are always a good way to earn rewards even if you are a small holder. In staking this principle works less so than in mining, but in both these activities there are better rewards if you participate with a lot of money or a lot of resources at once.\n\n    So, for smaller investors the rewards gained through a pool will be typically somewhat better than what they could earn on their own.\n  \n  \n    Mine A New Cryptocurrency\n\n    If you want to earn rewards with cryptocurrency, you might consider mining it yourself. Mining cryptocurrencies can be a great way to earn rewards. However, it does require resources and time.\n\n    Mining newly launched cryptocurrencies is always much easier as there is less competition. You may want to check if any of the new coins that you gained via airdrops doesn’t have a good mining opportunity.\n\n    However, before considering this path, keep in mind that mining a new cryptocurrency is costly and painstaking, but the rewards are worthwhile if you succeed. You can even earn more cryptocurrency without putting down your money through mining. You can set up a mining rig using an application-specific integrated circuit (ASIC) and graphics processing unit (GPU).\n  \n  \n    Trade-In Cryptocurrency For Goods Or Services\n\n    Some p2p marketplaces allow you to trade cryptocurrency for other currencies, products, and gift cards.\n\n    These sites offer great rewards when using them to make trades with your coins which you can use on future transactions.\n\n    More and more businesses are now accepting cryptocurrency as a method of payment, so the next time you go shopping, you won’t need to bring cash or charge your credit card but use your crypto earnings instead.\n  \n  \n    Participate In A Cryptocurrency Bounty Program\n\n    A bounty program is an online program offered by cryptocurrency developers to encourage users and companies in the community to promote their coins. When participating in a bounty program, you earn rewards when completing marketing tasks for that project or company, if your work is approved by the bounty manager.\n  \n  \n    Turn Your Dollars Into Stablecoins\n\n    Stablecoins are a type of cryptocurrency pegged to the value of another currency.\n\n    They offer stability and can be used for online transactions. Furthermore, they are easy to use and can be converted back into your original currency at any time.\n\n    Stablecoins have the advantage that you can stake them or lend them for a far higher interest rate than what you can get in your bank for the equivalent fiat.\n  \n  \n    Lend Some Of Your Crypto To Earn Interest\n\n    You can use smart contracts to lend out some of your cryptocurrency and earn a small amount of interest on it. You can choose how much you want to charge for lending so that you can receive more rewards on future transactions.\n\n    This method is reasonably safe if you're careful about whom you decide to loan with.\n  \n\n\nConclusion\n\nThere are a few different ways to earn rewards with cryptocurrency.\n\nUsing it for everyday transactions lets you get discounts and bonuses from various sources. You can also invest in it, join a pool, or participate in bounty programs to increase your earnings.\n",
       category: ["crypto-trading-101"],
       tags: ["yield","crypto-tools","airdrops","shrimpy","coinbase"],
       author: null,
-      id: 486
+      id: 493
     });
     
   
     this.add({
       title: "8 Smart Ways to Use Your Cryptocurrency (Spend or Earn)",
-      content: "Crypto has many potential applications beyond just being a digital currency, which is why some people refer to it as \"the new internet\".\n\nSome might argue that Bitcoin is unsuitable for spending online at merchants due to its fees.\n\nThat said, there are many alt coins that have been designed specifically for the purpose of small-time spending. Litecoin or Dogecoin, for example, have very low fees and fast transaction times, making them ideal for small payments.\n\nBut even if your preferred cryptocurrency isn't ideal for spending, chances are it is the better choice for another purpose.\n\nHere are some smart ways in which you can use cryptocurrency in 2022:\n\n\n  \n    Investing\n\n    Passive investing like with legacy index funds is possible in crypto, too.\n\n    There are now cryptocurrency index funds like HOLD 10 and others which offer diversification across baskets of different cryptos.\n\n    It is now easy to get exposure to the strongest alt coins without having to know anything about cryptocurrencies.\n  \n  \n    Spending\n\n    Even though the early projects like Parallel Polis were for the most part political, there are now a growing number of brick-and-mortar stores that accept Bitcoin payments.\n\n    Even more easily, you can spend crypto to pay for items you purchase online. On sites like Amazon, paying in crypto can be a great way to save money with tools like Purse.io as crypto payments often come with cashback deals.\n  \n  \n    Traveling\n\n    You can use crypto for travel by trading it for a local currency where you're going or by using a local Bitcoin ATM. This eliminates the need to carry around large amounts of cash.\n  \n  \n    Alternative Savings Account\n\n    You can store your crypto in a digital wallet app like Exodus or in a hardware wallet like Ledger or Trezor.\n\n    Depending on the type of cryptocurrency, this may allow you to not only build a personal savings account but possibly also to earn additional passive income via staking directly from your wallet.\n  \n  \n    Speculation\n\n    Cryptocurrency prices can be extremely volatile and some people enjoy speculating on those price movements. When done systematically, this can be very profitable, but many trade with tiny amounts of money just for fun.\n  \n  \n    Betting\n\n    You can spend crypto to bet on sports or other events. Many long established online sportsbooks have started accepting Bitcoin and other cryptocurrencies over the past few years. Sport crypto betting can be a fun way to use your knowledge of the sport to make some extra money.\n  \n  \n    Content Monetization\n\n    An alternative to display advertising, blog platforms like Steemit and Publish0x pay writers crypto rewards to incentivize them both to publish content and to interact with other publishers.\n  \n  \n    File Storage\n\n    You can pay for remote storage services like Sia (for cloud storage) and Storj (for file hosting), using either fiat or cryptocurrency.\n\n    These decentralized networks provide better security than traditional cloud storage services and tend to be cheaper as well.\n  \n\n\nIn Conclusion\n\nThere are many ways you can use cryptocurrency beyond just holding and waiting until you get dollar-rich.\n\nEspecially in online-based services like digital marketing, e-commerce, gaming and betting, cryptocurrencies are now firmly among the default payment options.\n",
+      content: "Crypto has many potential applications beyond just being a digital currency, which is why some people refer to it as \"the new internet\".\n\nSome might argue that Bitcoin is unsuitable for spending online at merchants due to its fees.\n\nThat said, there are many alt coins that have been designed specifically for the purpose of small-time spending. Litecoin or Dogecoin, for example, have very low fees and fast transaction times, making them ideal for small payments.\n\nBut even if your preferred cryptocurrency isn't ideal for spending, chances are it is the better choice for another purpose.\n\nHere are some smart ways in which you can use cryptocurrency in 2023:\n\n\n  \n    Investing\n\n    Passive investing like with legacy index funds is possible in crypto, too.\n\n    There are now cryptocurrency index funds like HOLD 10 and others which offer diversification across baskets of different cryptos.\n\n    It is now easy to get exposure to the strongest alt coins without having to know anything about cryptocurrencies.\n  \n  \n    Spending\n\n    Even though the early projects like Parallel Polis were for the most part political, there are now a growing number of brick-and-mortar stores that accept Bitcoin payments.\n\n    Even more easily, you can spend crypto to pay for items you purchase online. On sites like Amazon, paying in crypto can be a great way to save money with tools like Purse.io as crypto payments often come with cashback deals.\n  \n  \n    Traveling\n\n    You can use crypto for travel by trading it for a local currency where you're going or by using a local Bitcoin ATM. This eliminates the need to carry around large amounts of cash.\n  \n  \n    Alternative Savings Account\n\n    You can store your crypto in a digital wallet app like Exodus or in a hardware wallet like Ledger or Trezor.\n\n    Depending on the type of cryptocurrency, this may allow you to not only build a personal savings account but possibly also to earn additional passive income via staking directly from your wallet.\n  \n  \n    Speculation\n\n    Cryptocurrency prices can be extremely volatile and some people enjoy speculating on those price movements. When done systematically, this can be very profitable, but many trade with tiny amounts of money just for fun.\n  \n  \n    Betting\n\n    You can spend crypto to bet on sports or other events. Many long established online sportsbooks have started accepting Bitcoin and other cryptocurrencies over the past few years. Sport crypto betting can be a fun way to use your knowledge of the sport to make some extra money.\n  \n  \n    Content Monetization\n\n    An alternative to display advertising, blog platforms like Steemit and Publish0x pay writers crypto rewards to incentivize them both to publish content and to interact with other publishers.\n  \n  \n    File Storage\n\n    You can pay for remote storage services like Sia (for cloud storage) and Storj (for file hosting), using either fiat or cryptocurrency.\n\n    These decentralized networks provide better security than traditional cloud storage services and tend to be cheaper as well.\n  \n\n\nIn Conclusion\n\nThere are many ways you can use cryptocurrency beyond just holding and waiting until you get dollar-rich.\n\nEspecially in online-based services like digital marketing, e-commerce, gaming and betting, cryptocurrencies are now firmly among the default payment options.\n",
       category: ["exclude"],
       tags: ["staking","yield","crypto-tools","ledger","coinbase"],
       author: null,
-      id: 487
+      id: 494
     });
     
   
@@ -4902,7 +4972,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["trading-technique","technical-analysis","automated-trading","crypto-trading-strategy","crypto-bot-trading","crypto-tools","dca","scalping","top","bitfinex","independent-reserve"],
       author: null,
-      id: 488
+      id: 495
     });
     
   
@@ -4912,7 +4982,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","trading-platforms","custodial-trading","canada","localcryptos","ftx","ledger"],
       author: null,
-      id: 489
+      id: 496
     });
     
   
@@ -4922,7 +4992,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["market-timing","crypto-value-judgement","tradingview-scripts","crypto-tools","wyckoff","top","ftx","tradingview"],
       author: null,
-      id: 490
+      id: 497
     });
     
   
@@ -4932,7 +5002,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["crypto-fundamentals","crypto-value-judgement","tradingview","bitfinex"],
       author: null,
-      id: 491
+      id: 498
     });
     
   
@@ -4942,17 +5012,17 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["custodial-trading","crypto-fundamentals","trading-platforms","australia","ftx","ledger"],
       author: null,
-      id: 492
+      id: 499
     });
     
   
     this.add({
       title: "Tiered Crypto Storage: How to do it right (Reworked for 2022)",
-      content: "The idea of “tiered crypto storage” was first popularised by Andreas Antonopoulos.\n\nTiered storage in short refers to a crypto cold storage setup where you use several computers or mobile phones to store your cryptocurrency on.\n\nThe security is then enhanced by your behavior:\n\n\n  You will never use a device with a lot of crypto on it for daily browsing and downloading.\n  You will use a device with tiny amount of crypto for that.\n\n\nThis split is what makes your storage tiered.\n\nIt does mean taking extra steps. But there is no benefit in user-friendly processes if they involve large amounts of money. Why would you want to make that kind of thing easy?\n\nWhy a tiered system when we have hardware wallets?\n\nIn principle, separating your activities per device is what hardware wallets do. A hardware wallet like Ledger is a single-purpose device that can only store crypto and nothing else.\n\nThe problem with hardware wallets is that they are a black box type of commercial products. Every hardware wallet stores your private key on it, and it has been demonstrated that the seed can be retrieved under certain conditions.\n\nWhile the sourcing of hardware is as questionable in case of laptops and phones as it is in hardware wallets, using a custom solution at least gives you an extra layer of security.\n\n\n  Everyone knows what a hardware wallet looks like, everyone knows whats on it.\n  Every hardware wallet accessed physically and flashed with a malicious firmware version will give away the private keys.\n  Scripts to hack popular setups are a commodity that is sold in bulk and doesn’t require technical skills.\n  Hacking a custom solution requires far more knowledge and experience.\n\n\nDo you absolutely have to do a tiered storage?\n\nThe answer is no.\n\nFor some it’s not much of an inconvenience to have separate devices for different activities, but the truth is it is pretty technical way to go about things.\n\nThe next best thing is is to split your holdings over several crypto wallets. In 2022 we can already choose from a pretty good range:\n\n\n  Coldcard is a Bitcoin-only hardware wallet that is specifically focused on security as well as privacy. If you are diversifying your wallets, you should not leave Coldcard out.\n  Trezor One is not a good choice, but the new Trezor T models have been overhauled in some pretty major ways. They store your private key split in parts, not as a single piece of text, which is a good security enhancement.\n  Ledger is obviously the most popular crypto wallet, and also one that has better score in terms of security than Trezor. Since 2022 they have a device called Nano Plus, which is affordable like the old Nano but has enough memory to hold 100+ altcoin and NFT apps.\n\n\nStoring your crypto in parts on all three of these will lower your losses in case of the (unlikely) incidents like having a malicious firmware update distributed through the official channels.\n\nStoring your crypto on multiple devices of the same type can be helpful in times of robberies of burglaries - the criminal is likely to leave with the first wallet they find, as long as you don’t store all your wallets together.\n\nTiered devices for for cryptocurrencies\n\nThere are four tiers - the cold, warm, hot and beater devices.\n\n\n  \n    The cold device\n\n    A cold wallet is where cryptocurrency holders store coins they are planning to hold for multiple years.\n\n    A cold device, the device that carries cold wallet, is not to be used for your normal day to day work. It is an offline, so called “air-gapped” device.\n\n    It had its disk scrubbed and OS reinstalled before the cold wallet came on to it.\n\n    It does not connect to the internet, not even to make a transaction.\n\n    The technically simplest type of cold device is a “paper wallet”: Your private key written down is an item that will always stay offline. (Paper doesn’t last, use steel to do this.)\n\n    The classic crypto geek way of setting up a cold device is by air-gapping a laptop - more on that further down.\n  \n  \n    The warm device\n\n    Warm device is a dedicated device that you use for handling cryptocurrencies, but it gets online sometimes. While you don’t go to any dangerous parts of the internet, you still cannot be sure if the device is safe or not, because it connects to the internet.\n\n    Once connected to the internet, you wouldn’t know if it didn’t download any malicious file perhaps through a background process you were not aware of.\n\n    Commercial hardware wallets are warm devices: Their user interfaces are full of frills that communicate with remote destinations that can potentially be poisoned.\n  \n  \n    The hot device\n\n    Hot wallet is a cryptocurrency wallet that lives on a device that is connected to the internet most of the times.\n\n    Crypto traders have their trading stash in hot wallets like Exodus or Metamask. It’s convenient, easy to use, connects to DEX apps through your browser.\n\n    These wallets should not store major part of your crypto.\n\n    If you are crypto trader, use 2FA and have at least a trading computer and a beater computer. Multi factor auth can be breached too, so use your trading computer just for trading and don’t expose it to any extra dangers.\n  \n  \n    The beater device\n\n    A beater device is a laptop, smartphone or tablet that you use for all of your risky activities.\n\n    These include visiting untrusted websites, watching p0rn or sports streams on dodgy websites and browsing sites with loads of ads that often carry viruses. Downloading movies or pirated software belongs here too.\n\n    Your beater device should not store any cryptocurrency wallets. You shouldn’t use it to log into crypto exchanges, in case there’s a keylogger. You shouldn’t use a beater device to log into mailboxes that you signed up with at crypto exchanges.\n  \n\n\n\n\nMaking a custom Bitcoin cold storage\n\nFirst off, cold storage is pretty much a Bitcoin-only thing. Alt coin projects do not focus on privacy and security nearly as much as on user-friendliness. Sadly, software needed to set up a cold storage typically does not exist for alt coins.\n\nBut if you are a crypto holder, especially a large one, willing to long-term hold Bitcoin, here is why a real cold storage matters:\n\n\n  A cold wallet is a Bitcoin wallet on a computer that never gets connected to the internet.\n  In Bitcoin wallets like Electrum, you can create and sign a transaction out of your wallet even if the wallet is offline.\n  To broadcast the transaction, you need to plug it into a different wallet on a “warm” computer that is online. A dedicated USB stick is used for this.\n  Since the transaction is already signed when it reaches the online device, your private key is not involved in any action on the online computer.\n  Because the private key never reaches an online device, it cannot be stolen: Neither through software nor through hardware holes.\n\n\nWhat is the security score?\n\nWell, the only way your private key would ever get stolen could be if somebody stole your air-gapped laptop.\n\nThey’d first need to have the information that the laptop is worth stealing and hacking into. Then they’d need to find a way to log into your user account, find the crypto wallet, obtain your decrypt password and then expose the private keys.\n\nThis is the same risk that exists with hardware wallets, except the custom solution is not standard and would require lots of professional experience on part of the hacker.\n\nContrary to that, scripts targeting common devices are a commodity. They can be bought as stock, set up in such a way that no technical skills are needed. This is how majority of cyber attacks is launched these days - they run on commodity scripts.\n\nSoftware wallet on an offline computer\n\nBack in the day, bitcoiners used to use Bitcoin Armory as their cold storage solution, but these days you should use Electrum for your cold storage. Armory is outdated.\n\nElectrum is a super simple non-commercial wallet that doesn’t have any of the shiny UX features you’ll get with wallets like Exodus, Ledger or Trezor.\n\nBut for the purpose of a cold wallet, no frill is exactly what you want.\n\n\n  Electrum bitcoin wallet provides a step-by-step guide on how to set up a cold storage with it here are the official docs.\n  CryptoCompare has a guide on how to do an offline transaction in Bitcoin Electrum.\n\n\nHere is also an old tutorial on how to use a Raspberry Pi for cold storage that is still valid, perhaps with minor adjustments since the hardware got better.\n\nBottom line\n\nIf you have it in you to split your online activities at least between a “work device” and a “beater device”, I recommend going through with it. The benefits over the long run are beyond doubt.\n\nIf you don’t want to deal with geeky Linuxy things at all, at least split your holdings between several wallets.\n\nOut of the commercial hardware wallets, the Bitcoin Coldcard is the best choice in terms of privacy and security.\n",
+      content: "The idea of “tiered crypto storage” was first popularised by Andreas Antonopoulos.\n\nTiered storage in short refers to a crypto cold storage setup where you use several computers or mobile phones to store your cryptocurrency on.\n\nThe security is then enhanced by your behavior:\n\n\n  You will never use a device with a lot of crypto on it for daily browsing and downloading.\n  You will use a device with tiny amount of crypto for that.\n\n\nThis split is what makes your storage tiered.\n\nIt does mean taking extra steps. But there is no benefit in user-friendly processes if they involve large amounts of money. Why would you want to make that kind of thing easy?\n\nWhy a tiered system when we have hardware wallets?\n\nIn principle, separating your activities per device is what hardware wallets do. A hardware wallet like Ledger is a single-purpose device that can only store crypto and nothing else.\n\nThe problem with hardware wallets is that they are a black box type of commercial products. Every hardware wallet stores your private key on it, and it has been demonstrated that the seed can be retrieved under certain conditions.\n\nWhile the sourcing of hardware is as questionable in case of laptops and phones as it is in hardware wallets, using a custom solution at least gives you an extra layer of security.\n\n\n  Everyone knows what a hardware wallet looks like, everyone knows whats on it.\n  Every hardware wallet accessed physically and flashed with a malicious firmware version will give away the private keys.\n  Scripts to hack popular setups are a commodity that is sold in bulk and doesn’t require technical skills.\n  Hacking a custom solution requires far more knowledge and experience.\n\n\nDo you absolutely have to do a tiered storage?\n\nThe answer is no.\n\nFor some it’s not much of an inconvenience to have separate devices for different activities, but the truth is it is pretty technical way to go about things.\n\nThe next best thing is is to split your holdings over several crypto wallets. In 2023 we can already choose from a pretty good range:\n\n\n  Coldcard is a Bitcoin-only hardware wallet that is specifically focused on security as well as privacy. If you are diversifying your wallets, you should not leave Coldcard out.\n  Trezor One is not a good choice, but the new Trezor T models have been overhauled in some pretty major ways. They store your private key split in parts, not as a single piece of text, which is a good security enhancement.\n  Ledger is obviously the most popular crypto wallet, and also one that has better score in terms of security than Trezor. Since 2022 they have a device called Nano Plus, which is affordable like the old Nano but has enough memory to hold 100+ altcoin and NFT apps.\n\n\nStoring your crypto in parts on all three of these will lower your losses in case of the (unlikely) incidents like having a malicious firmware update distributed through the official channels.\n\nStoring your crypto on multiple devices of the same type can be helpful in times of robberies of burglaries - the criminal is likely to leave with the first wallet they find, as long as you don’t store all your wallets together.\n\nTiered devices for for cryptocurrencies\n\nThere are four tiers - the cold, warm, hot and beater devices.\n\n\n  \n    The cold device\n\n    A cold wallet is where cryptocurrency holders store coins they are planning to hold for multiple years.\n\n    A cold device, the device that carries cold wallet, is not to be used for your normal day to day work. It is an offline, so called “air-gapped” device.\n\n    It had its disk scrubbed and OS reinstalled before the cold wallet came on to it.\n\n    It does not connect to the internet, not even to make a transaction.\n\n    The technically simplest type of cold device is a “paper wallet”: Your private key written down is an item that will always stay offline. (Paper doesn’t last, use steel to do this.)\n\n    The classic crypto geek way of setting up a cold device is by air-gapping a laptop - more on that further down.\n  \n  \n    The warm device\n\n    Warm device is a dedicated device that you use for handling cryptocurrencies, but it gets online sometimes. While you don’t go to any dangerous parts of the internet, you still cannot be sure if the device is safe or not, because it connects to the internet.\n\n    Once connected to the internet, you wouldn’t know if it didn’t download any malicious file perhaps through a background process you were not aware of.\n\n    Commercial hardware wallets are warm devices: Their user interfaces are full of frills that communicate with remote destinations that can potentially be poisoned.\n  \n  \n    The hot device\n\n    Hot wallet is a cryptocurrency wallet that lives on a device that is connected to the internet most of the times.\n\n    Crypto traders have their trading stash in hot wallets like Exodus or Metamask. It’s convenient, easy to use, connects to DEX apps through your browser.\n\n    These wallets should not store major part of your crypto.\n\n    If you are crypto trader, use 2FA and have at least a trading computer and a beater computer. Multi factor auth can be breached too, so use your trading computer just for trading and don’t expose it to any extra dangers.\n  \n  \n    The beater device\n\n    A beater device is a laptop, smartphone or tablet that you use for all of your risky activities.\n\n    These include visiting untrusted websites, watching p0rn or sports streams on dodgy websites and browsing sites with loads of ads that often carry viruses. Downloading movies or pirated software belongs here too.\n\n    Your beater device should not store any cryptocurrency wallets. You shouldn’t use it to log into crypto exchanges, in case there’s a keylogger. You shouldn’t use a beater device to log into mailboxes that you signed up with at crypto exchanges.\n  \n\n\n\n\nMaking a custom Bitcoin cold storage\n\nFirst off, cold storage is pretty much a Bitcoin-only thing. Alt coin projects do not focus on privacy and security nearly as much as on user-friendliness. Sadly, software needed to set up a cold storage typically does not exist for alt coins.\n\nBut if you are a crypto holder, especially a large one, willing to long-term hold Bitcoin, here is why a real cold storage matters:\n\n\n  A cold wallet is a Bitcoin wallet on a computer that never gets connected to the internet.\n  In Bitcoin wallets like Electrum, you can create and sign a transaction out of your wallet even if the wallet is offline.\n  To broadcast the transaction, you need to plug it into a different wallet on a “warm” computer that is online. A dedicated USB stick is used for this.\n  Since the transaction is already signed when it reaches the online device, your private key is not involved in any action on the online computer.\n  Because the private key never reaches an online device, it cannot be stolen: Neither through software nor through hardware holes.\n\n\nWhat is the security score?\n\nWell, the only way your private key would ever get stolen could be if somebody stole your air-gapped laptop.\n\nThey’d first need to have the information that the laptop is worth stealing and hacking into. Then they’d need to find a way to log into your user account, find the crypto wallet, obtain your decrypt password and then expose the private keys.\n\nThis is the same risk that exists with hardware wallets, except the custom solution is not standard and would require lots of professional experience on part of the hacker.\n\nContrary to that, scripts targeting common devices are a commodity. They can be bought as stock, set up in such a way that no technical skills are needed. This is how majority of cyber attacks is launched these days - they run on commodity scripts.\n\nSoftware wallet on an offline computer\n\nBack in the day, bitcoiners used to use Bitcoin Armory as their cold storage solution, but these days you should use Electrum for your cold storage. Armory is outdated.\n\nElectrum is a super simple non-commercial wallet that doesn’t have any of the shiny UX features you’ll get with wallets like Exodus, Ledger or Trezor.\n\nBut for the purpose of a cold wallet, no frill is exactly what you want.\n\n\n  Electrum bitcoin wallet provides a step-by-step guide on how to set up a cold storage with it here are the official docs.\n  CryptoCompare has a guide on how to do an offline transaction in Bitcoin Electrum.\n\n\nHere is also an old tutorial on how to use a Raspberry Pi for cold storage that is still valid, perhaps with minor adjustments since the hardware got better.\n\nBottom line\n\nIf you have it in you to split your online activities at least between a “work device” and a “beater device”, I recommend going through with it. The benefits over the long run are beyond doubt.\n\nIf you don’t want to deal with geeky Linuxy things at all, at least split your holdings between several wallets.\n\nOut of the commercial hardware wallets, the Bitcoin Coldcard is the best choice in terms of privacy and security.\n",
       category: ["technical"],
       tags: ["crypto-tools","cold-storage","crypto-opsec","altcoin-wallet","coldcard","ledger"],
       author: "KarlVonBahnhof",
-      id: 493
+      id: 500
     });
     
   
@@ -4962,7 +5032,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","yield","defi","nft","staking-coins","bitforex","tradingview"],
       author: "KarlVonBahnhof",
-      id: 494
+      id: 501
     });
     
   
@@ -4972,7 +5042,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-tools","nft","staking","defi","top","exodus","ftx"],
       author: null,
-      id: 495
+      id: 502
     });
     
   
@@ -4982,7 +5052,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","crypto-tools","independent-reserve","localcryptos"],
       author: "JMT",
-      id: 496
+      id: 503
     });
     
   
@@ -4992,7 +5062,7 @@ var idx = lunr(function() {
       category: ["low-cap-crypto"],
       tags: ["where-to-buy","crypto-fundamentals","staking-coins","defi","bitforex","binance","pionex"],
       author: "KarlVonBahnhof",
-      id: 497
+      id: 504
     });
     
   
@@ -5002,7 +5072,7 @@ var idx = lunr(function() {
       category: ["low-cap-crypto"],
       tags: ["where-to-buy","crypto-fundamentals","defi","ftx","binance","pionex"],
       author: "KarlVonBahnhof",
-      id: 498
+      id: 505
     });
     
   
@@ -5012,7 +5082,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["where-to-buy","crypto-fundamentals","crypto-fundamentals","ftx","localcryptos","bitfinex"],
       author: "tradingfanbois",
-      id: 499
+      id: 506
     });
     
   
@@ -5022,7 +5092,7 @@ var idx = lunr(function() {
       category: ["penny-crypto"],
       tags: ["where-to-buy","crypto-fundamentals","memecoins","defi","staking-coins","phemex","binance"],
       author: "nina",
-      id: 500
+      id: 507
     });
     
   
@@ -5032,7 +5102,7 @@ var idx = lunr(function() {
       category: ["trading-methods-101"],
       tags: ["crypto-trading-strategy","portfolio-diversification","dca","top","coinrule","ftx"],
       author: null,
-      id: 501
+      id: 508
     });
     
   
@@ -5042,7 +5112,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","masternodes","mining-coins","bitfinex","ftx"],
       author: "TDOU",
-      id: 502
+      id: 509
     });
     
   
@@ -5052,7 +5122,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","masternodes","ledger","ftx"],
       author: "TDOU",
-      id: 503
+      id: 510
     });
     
   
@@ -5062,7 +5132,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","staking-coins","phemex","ftx"],
       author: "TDOU",
-      id: 504
+      id: 511
     });
     
   
@@ -5072,7 +5142,7 @@ var idx = lunr(function() {
       category: ["low-cap-crypto"],
       tags: ["crypto-fundamentals","staking","defi","penny-crypto","bitforex","ledger"],
       author: "TDOU",
-      id: 505
+      id: 512
     });
     
   
@@ -5082,7 +5152,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","defi","farming-coins","phemex","ftx"],
       author: "TDOU",
-      id: 506
+      id: 513
     });
     
   
@@ -5092,7 +5162,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","farming-coins","crypto-opsec","phemex","ftx"],
       author: "TDOU",
-      id: 507
+      id: 514
     });
     
   
@@ -5102,7 +5172,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","solana-tokens","media","phemex","ftx"],
       author: "TDOU",
-      id: 508
+      id: 515
     });
     
   
@@ -5112,7 +5182,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","mining","mining-coins","pionex","ftx"],
       author: "KarlVonBahnhof",
-      id: 509
+      id: 516
     });
     
   
@@ -5122,7 +5192,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","custodial-trading","crypto-opsec","phemex","ftx"],
       author: "TDOU",
-      id: 510
+      id: 517
     });
     
   
@@ -5132,7 +5202,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","yield","staking","defi","staking-coins","airdrops","top","bitforex","ftx","phemex"],
       author: "tradingfanbois",
-      id: 511
+      id: 518
     });
     
   
@@ -5142,7 +5212,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","dog-money","meme-tokens","defi","latoken","kraken","ftx"],
       author: "karlvonbahnhof",
-      id: 512
+      id: 519
     });
     
   
@@ -5152,7 +5222,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","staking-coins","defi","ftx"],
       author: "TDOU",
-      id: 513
+      id: 520
     });
     
   
@@ -5162,7 +5232,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","blockchain-tech","crypto-opsec","phemex","ftx"],
       author: "TDOU",
-      id: 514
+      id: 521
     });
     
   
@@ -5172,7 +5242,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","defi","staking-coins","phemex","ftx"],
       author: "TDOU",
-      id: 515
+      id: 522
     });
     
   
@@ -5182,7 +5252,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","staking-coins","yield","ftx"],
       author: "TDOU",
-      id: 516
+      id: 523
     });
     
   
@@ -5192,7 +5262,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","staking-coins","phemex","ftx"],
       author: "TDOU",
-      id: 517
+      id: 524
     });
     
   
@@ -5202,7 +5272,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","crypto-opsec","phemex","ftx"],
       author: "TDOU",
-      id: 518
+      id: 525
     });
     
   
@@ -5212,7 +5282,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","perps","staking","defi","dex","staking-coins","ftx"],
       author: "TDOU",
-      id: 519
+      id: 526
     });
     
   
@@ -5222,7 +5292,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking-coins","crypto-opsec","phemex","ftx"],
       author: "TDOU",
-      id: 520
+      id: 527
     });
     
   
@@ -5232,7 +5302,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","staking","defi","staking-coins","phemex","ftx"],
       author: "TDOU",
-      id: 521
+      id: 528
     });
     
   
@@ -5242,7 +5312,7 @@ var idx = lunr(function() {
       category: ["onramp"],
       tags: ["crypto-fundamentals","yield","defi","nft","airdrops","staking-coins","bitforex","tradingview"],
       author: null,
-      id: 522
+      id: 529
     });
     
   
@@ -5252,7 +5322,7 @@ var idx = lunr(function() {
       category: ["crypto-trading-101"],
       tags: ["trading-platforms","custodial-trading","crypto-fundamentals","tradingview"],
       author: "TDOU",
-      id: 523
+      id: 530
     });
     
   
@@ -5262,7 +5332,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-tools","defi","stablecoins","ftx","phemex"],
       author: null,
-      id: 524
+      id: 531
     });
     
   
@@ -5272,7 +5342,7 @@ var idx = lunr(function() {
       category: ["technical"],
       tags: ["crypto-tools","eth","forks","ftx"],
       author: null,
-      id: 525
+      id: 532
     });
     
   
@@ -5280,13 +5350,45 @@ var idx = lunr(function() {
 });
 
 var store = [{
-  'title': "4 Noob-friendly Ways To Earn Altcoins In 2023",
-  'url': "/beginner-ways-to-earn-altcoins-for-2023/",
+  'title': "The Impact Of Ftx Collapse On Silver Markets",
+  'url': "/ftx-collapse-impact-silver-markets-2023/",
+  'author': "altcointrading",
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2023/01/pexels-photo-136720.jpeg",
+  'date': "January 16, 2023",
+  'category': "#analysis",
+  'excerpt': "The last couple of years have shown the true dangers of cryptocurrencies and some other intangible investments. The NFT bubble..."
+},{
+  'title': "The Popularity Of Cryptocurrencies: Lookback & Lookahead",
+  'url': "/popularity-crypto-lookback-lookahead-2022-2023/",
   'author': "TDOU",
-  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/12/adobestock_266513692-1.jpeg",
-  'date': "December 19, 2022",
-  'category': "#crypto-trading-tools",
-  'excerpt': "Altcoins, which refer to digital currencies or cryptos other than Bitcoin (BTC), are becoming more popular since they’re more affordable..."
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/08/bastian-riccardi-4wxwlgjif3i-unsplash-1.jpg",
+  'date': "January 12, 2023",
+  'category': "#analysis",
+  'excerpt': "How did the cryptocurrency market develop in 2022? The first six months can hardly be called good. Thus, the exchange..."
+},{
+  'title': "Top 5 Easiest Ways To Buy Bitcoin In 2023",
+  'url': "/easiest-ways-to-buy-bitcoin-2023/",
+  'author': "napar",
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/michael-fortsch-ywmzg5iiwgc-unsplash-1.jpg",
+  'date': "January 12, 2023",
+  'category': "#crypto-trading-101",
+  'excerpt': "In the world of cryptocurrency, Bitcoin is one of the most popular and highly sought after digital currencies. Bitcoin’s worth..."
+},{
+  'title': "Increasing User Acquisition For Crypto Wallets Through Seo",
+  'url': "/user-acquisition-for-crypto-wallets-through-seo/",
+  'author': "TDOU",
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2023/01/google-920532_1280.png",
+  'date': "January 11, 2023",
+  'category': "#reports",
+  'excerpt': "In the current economic climate, it’s more important than ever for businesses to look for creative ways to generate new..."
+},{
+  'title': "Top 10 Altcoins To Invest In 2023 That Might See Big Gains",
+  'url': "/small-altcoin-prediction-moon-2023/",
+  'author': "TDOU",
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/10/screenshot-2022-10-26-at-4.31.02-pm.png",
+  'date': "January 1, 2023",
+  'category': "#crypto-trading-101",
+  'excerpt': "It might be dubious to expect another bull run any time soon now, in the depths of the bear market...."
 },{
   'title': "Will Elon Musk Accept Dogecoin Payments On Twitter?",
   'url': "/will-elon-accept-doge-payments-twitter/",
@@ -5296,11 +5398,19 @@ var store = [{
   'category': "#reports",
   'excerpt': "It’s no secret that Elon Musk is a fan of cryptocurrencies. Dogecoin, the meme currency which was created as a..."
 },{
+  'title': "4 Noob-friendly Ways To Earn Altcoins In 2023",
+  'url': "/beginner-ways-to-earn-altcoins-for-2023/",
+  'author': "TDOU",
+  'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/12/adobestock_266513692-1.jpeg",
+  'date': "December 19, 2022",
+  'category': "#crypto-trading-tools",
+  'excerpt': "Altcoins, which refer to digital currencies or cryptos other than Bitcoin (BTC), are becoming more popular since they’re more affordable..."
+},{
   'title': "Dangers Of Investing In Crypto And How To Do It The Right Way",
   'url': "/dangers-investing-crypto-how-to-protect-your-stash/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/12/adi-goldstein-eusvweosble-unsplash.jpg",
-  'date': "December 12, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "Cryptocurrency can either make you very rich or very poor. Over a decade, it became synonymous with six-digit monthly profits..."
 },{
@@ -5372,7 +5482,7 @@ var store = [{
   'url': "/crypto-markets-broad-prediction-2023/",
   'author': "diana",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/11/mpumelelo-macu-6cldcn31cio-unsplash.jpg",
-  'date': "November 24, 2022",
+  'date': "December 19, 2022",
   'category': "#analysis",
   'excerpt': "Cryptocurrency has been notorious for its volatile nature, and both surprisingly high highs as well as unexpectedly low lows are..."
 },{
@@ -5396,7 +5506,7 @@ var store = [{
   'url': "/ftx-puff-pieces-volksbank-model-future-of-cex-trading/",
   'author': "karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/11/jp-valery-blolco2k4m0-unsplash-1-3362321839-e1668700350328.jpg",
-  'date': "November 29, 2022",
+  'date': "December 19, 2022",
   'category': "#finance-basics",
   'excerpt': "&nbsp; Crypto Twitter has been spinning up conspiracy theories on why the New York Times article on FTX collapse never..."
 },{
@@ -5412,7 +5522,7 @@ var store = [{
   'url': "/ftx-debacle-account-balance-options/",
   'author': "karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/11/screenshot-2022-11-09-at-9.53.48-pm.png",
-  'date': "November 17, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Note: Updates to this post on Medium. So, bitfinex is a thing of the past. As of Nov 9, 2022..."
 },{
@@ -5420,7 +5530,7 @@ var store = [{
   'url': "/eli5-crypto-investing-benefits-drawbacks/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/10/screenshot-2022-10-26-at-4.31.02-pm.png",
-  'date': "October 26, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Investing in cryptocurrencies has made some people obscenely wealthy, but it’s important to know how extremely realistic it is that..."
 },{
@@ -5436,7 +5546,7 @@ var store = [{
   'url': "/2022-snafus-biggest-mistakes-crypto-holders-made/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/10/aaron-blanco-tejedor-vbe9zj-jhbs-unsplash-1.jpg",
-  'date': "October 19, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Crypto trading and investing can sure be exciting and indeed a money machine if you do it right, but it’s..."
 },{
@@ -5492,7 +5602,7 @@ var store = [{
   'url': "/earn-staking-rewards-wallets-exchanges/",
   'author': "JMT",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/07/micheile-dot-com-zvprbbmt8qa-unsplash-1.jpg",
-  'date': "September 16, 2022",
+  'date': "December 19, 2022",
   'category': "#non-directional",
   'excerpt': "Cold Staking Crypto - Updates for September 2022 Welcome to the September 2022 update of the staking wallets guide. This..."
 },{
@@ -5556,7 +5666,7 @@ var store = [{
   'url': "/nft-royalties-reasons-controversy/",
   'author': "karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/08/modesta-zemgulyte-wmkqe4jcaaw-unsplash-1.jpg",
-  'date': "September 5, 2022",
+  'date': "December 19, 2022",
   'category': "#analysis",
   'excerpt': "NFT royalties are a fee that the NFT artists receive for their work whenever it gets resold. They’re paid in..."
 },{
@@ -5620,7 +5730,7 @@ var store = [{
   'url': "/coinrule-bot-adding-ftx-kucoin/",
   'author': "jmt",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/08/pawel-czerwinski-ywiowhvrbvu-unsplash.jpg",
-  'date': "September 6, 2022",
+  'date': "December 19, 2022",
   'category': "#tool-updates",
   'excerpt': "I know, I know - everyone is tired of seeing His Majesty’s face everywhere, just like everyone was tired of..."
 },{
@@ -5708,7 +5818,7 @@ var store = [{
   'url': "/earn-free-crypto-games-bounties-campaigns/",
   'author': "Karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/screenshot-2022-06-24-at-5.16.40-pm-min.png",
-  'date': "June 30, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "If you want to get into the world of crypto but don’t have any money to invest, there are still..."
 },{
@@ -5716,7 +5826,7 @@ var store = [{
   'url': "/basic-finance-tools-list/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/screenshot-2022-06-21-at-6.16.26-pm.png",
-  'date': "September 21, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "Money is essential in all peoples' lives and every day, most folks are involved in some form of financial activity...."
 },{
@@ -5724,7 +5834,7 @@ var store = [{
   'url': "/crypto-trading-tools-bear-market-technical-analysis-sentiment/",
   'author': "Karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/kraken-btcusd-jun-20-2022-21-34-28-1-1.png",
-  'date': "July 22, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "The crypto markets are going through a wave of relentless sell-offs that were propelled by the FED rate hike as..."
 },{
@@ -5732,7 +5842,7 @@ var store = [{
   'url': "/blockchain-security-risks-defi-crypto-prevention-checklist/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/pietro-jeng-n6b49ltx7nm-unsplash-1.jpg",
-  'date': "June 16, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "When crypto first became somewhat known in 2012, it was touted as being hack-proof, making it the safest form of..."
 },{
@@ -5748,7 +5858,7 @@ var store = [{
   'url': "/choose-online-broker-for-your-trading-strategy/",
   'author': "AltcoinTrading.NET",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/screenshot-2022-06-07-at-7.34.38-am-min.png",
-  'date': "June 7, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "When you’ve decided to take up online trading and the time comes to choose an online broker, it can be..."
 },{
@@ -5756,7 +5866,7 @@ var store = [{
   'url': "/wyckoff-market-cycles-phase-cheatsheet-schematics/",
   'author': "karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/06/marcin-jozwiak-oh0ditwohi4-unsplash-1.jpg",
-  'date': "August 19, 2022",
+  'date': "December 19, 2022",
   'category': "#cheatsheets",
   'excerpt': "The Wyckoff Method is a time-tested approach to trading the markets, especially on longer time frames. In the crypto community,..."
 },{
@@ -5772,7 +5882,7 @@ var store = [{
   'url': "/6-steps-to-choose-trading-platform/",
   'author': "AltcoinTrading.NET",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/msp_2001_3032.jpeg",
-  'date': "August 6, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "It is important to have a crypto platform that makes your trading easier, whether you day trade or DCA. With..."
 },{
@@ -5780,7 +5890,7 @@ var store = [{
   'url': "/invest-in-web3-list-coins-opportunities/",
   'author': "Diana",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/piggybank-v_utko_us3g-unsplash-1.jpg",
-  'date': "July 22, 2022",
+  'date': "December 19, 2022",
   'category': "#non-directional",
   'excerpt': "How to invest in Web 3.0, that’s a question that’s been on the top of the mind of a lot..."
 },{
@@ -5796,7 +5906,7 @@ var store = [{
   'url': "/best-trading-platform-for-scalping/",
   'author': "Karlvonbahnhof",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/adobestock_385142759.jpeg",
-  'date': "August 19, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "Looking for the best crypto scalping exchange? Yeah, that’s paramount in scalping trading strategies. Everyone who ever dealt with an..."
 },{
@@ -5804,7 +5914,7 @@ var store = [{
   'url': "/become-a-better-trader-6-tips-checklist/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/patrick-perkins-etrpjvb0km0-unsplash-1.jpg",
-  'date': "May 23, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "Are you looking to get better at online trading? You are definitely not alone in this pursuit. In today's world,..."
 },{
@@ -5812,7 +5922,7 @@ var store = [{
   'url': "/crypto-staking-taxes-overview-tools-wallets/",
   'author': "Diana",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/msp_2102_7241.jpeg",
-  'date': "May 20, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Are you confused about how to report your crypto staking earnings on your taxes? You’re not alone. In the United..."
 },{
@@ -5828,7 +5938,7 @@ var store = [{
   'url': "/pros-cons-automated-arbitrage-trading/",
   'author': "TDOU",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2022/05/forest-simon-a-otrfhwgd4-unsplash.jpg",
-  'date': "May 29, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "Are emotions getting in your way of making profitable trades, even in arbitrage trading? Or are you new to crypto..."
 },{
@@ -5852,7 +5962,7 @@ var store = [{
   'url': "/cryptocurrency-consultant-worth-it/",
   'author': "TDOU",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_scale,w_1050,f_auto/atnet/pexels-the-coach-space-2977547_1_kjnnzk.jpg",
-  'date': "June 28, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Managing your crypto investments is something you might be already doing on your own. Some people even assume that hiring..."
 },{
@@ -5860,7 +5970,7 @@ var store = [{
   'url': "/buy-crypto-no-kyc/",
   'author': "altcointrading",
   'image': "https://res.cloudinary.com/dttheory/image/upload/f_auto,c_scale,w_700/at-2/buy-crypto-nokyc_iavk3o.jpg",
-  'date': "October 21, 2022",
+  'date': "January 1, 2023",
   'category': "#crypto-trading-101",
   'excerpt': "No-KYC exchanges: Top of the market in 2022 Non-custodial LocalCryptos zero-knowledge dApp (big cryptos only) Custodial Bitforex Quick to list..."
 },{
@@ -5884,7 +5994,7 @@ var store = [{
   'url': "/moving-averages-ema-wma-hull-triangular-alma-guide-pine-scripts/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_scale,w_1000,f_auto/atnet/Screenshot_2022-04-17_at_10.24.55_AM_od1deb.jpg",
-  'date': "May 29, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-technical-analysis",
   'excerpt': "Moving average is one of the technical indicators that is almost a household name. Everybody who has ever seen a..."
 },{
@@ -5908,7 +6018,7 @@ var store = [{
   'url': "/trading-bitcoin-on-forex-platforms-cfds-guide/",
   'author': "Diana",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_lfill,h_700,w_1000,f_auto/atnet/AdobeStock_210762676_cyj3tc.jpg",
-  'date': "August 6, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Few things are being discussed as much as the potential of cryptocurrency at the moment. If you are a legacy..."
 },{
@@ -5924,7 +6034,7 @@ var store = [{
   'url': "/what-to-do-econ-libe-eu-regulation-unhosted-wallets/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_lfill,h_700,w_1000,f_auto/atnet/pexels-son-tung-tran-6531914_redon8.jpg",
-  'date': "April 6, 2022",
+  'date': "December 19, 2022",
   'category': "#psa",
   'excerpt': "You may have heard about the new crypto regulation that was (just about) approved for advanced policy development stages by..."
 },{
@@ -5940,7 +6050,7 @@ var store = [{
   'url': "/crypto-otc-trading-fees-desks-exchanges-experiences/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/pexels-mikhail-nilov-7988082_hpaux0.jpg",
-  'date': "April 20, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "Crypto OTC trading is a process of trading cryptocurrencies directly between two parties, “over the counter”. First off, the minimum..."
 },{
@@ -5948,7 +6058,7 @@ var store = [{
   'url': "/best-staking-platforms-pools-validators-review-strategy/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/Screenshot_2022-03-10_at_10.50.05_AM_jmcllc.jpg",
-  'date': "June 13, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "The thing is, when you google lists of staking platforms, you’ll get mile long lists. But on sifting through all..."
 },{
@@ -5964,7 +6074,7 @@ var store = [{
   'url': "/crypto-grid-trading-intro-strategies-tools/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/grid-trading-atnet.jpg",
-  'date': "May 29, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "Grid trading is one of the most popular crypto trading strategies among people who do not want to manually trade...."
 },{
@@ -5972,7 +6082,7 @@ var store = [{
   'url': "/tips-finding-best-blockchain-marketing-agency/",
   'author': "TDOU",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_lfill,h_700,w_1000,f_auto/atnet/choosing-blockchain-marketing-agency.jpg",
-  'date': "April 14, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Every industry, including the blockchain industry, requires exemplary marketing to help good projects thrive and stand out in the said..."
 },{
@@ -5980,7 +6090,7 @@ var store = [{
   'url': "/crypto-fundamentals-progress-nft-marketcap-regulations/",
   'author': "TDOU",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_scale,w_1050/atnet/pexels-florenz-mendoza-5489396_htmujx.jpg",
-  'date': "April 14, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "So the year 2021 was a hectic year in the crypto market. Numerous things happened, from the break-out of Bitcoin..."
 },{
@@ -5990,13 +6100,13 @@ var store = [{
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_scale,w_1050/atnet/blockchain-disruption-industries.jpg",
   'date': "April 14, 2022",
   'category': "#reports",
-  'excerpt': "By 2022, the popularity of cryptocurrency has at last trickled down into the industries. Experts from various niches are discovering..."
+  'excerpt': "By 2023, the popularity of cryptocurrency has at last trickled down into the industries. Experts from various niches are discovering..."
 },{
   'title': "Shiba Inu Coin By 2025 - Fundamentals And Predictions",
   'url': "/shiba-inu-price-prediction-fundamentals/",
   'author': "AltcoinTrading.NET",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/shiba-inu-price-prediction2022_1_ju2zvk.jpg",
-  'date': "April 8, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-value-judgement",
   'excerpt': "In the spring of 2021, the crypto-currency market was blown up by meme-coins. Before the advent of the Shiba Inu..."
 },{
@@ -6012,7 +6122,7 @@ var store = [{
   'url': "/benefits-of-automated-trading-crypto-time-psychology/",
   'author': "JMT",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_scale,w_700/atnet/AdobeStock_210961114_1_1_qbjrkr.jpg",
-  'date': "May 29, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "Through the years, cryptocurrency trading has become a profitable venture, popular not only in the financial industry. With proper trading..."
 },{
@@ -6020,7 +6130,7 @@ var store = [{
   'url': "/scriptspotlight-market-psychology-trading-tools/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_lfill,h_360,w_700/v1620762674/atnet/kraken-ethbtc-Jan-30-2022-14-49-52_1_dghnab.jpg",
-  'date': "June 21, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-technical-analysis",
   'excerpt': "Market psychology is the term used to describe the feelings, emotions and attitudes of traders on your market. The activity..."
 },{
@@ -6028,7 +6138,7 @@ var store = [{
   'url': "/best-nft-games-play2earn-list/",
   'author': "TDOU",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/nft-games_psucyh.jpg",
-  'date': "April 14, 2022",
+  'date': "December 19, 2022",
   'category': "#nft-trading",
   'excerpt': "Crypto markets are taking a dive, but NFT fans are still ready to believe. NFT games are just a sub-niche,..."
 },{
@@ -6036,7 +6146,7 @@ var store = [{
   'url': "/risk-diversification-crypto-hedging-risk-budgeting/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/__women/pexels-rulo-davila-10574817_1_k1kcrv.jpg",
-  'date': "June 16, 2022",
+  'date': "December 19, 2022",
   'category': "#trading-technique",
   'excerpt': "Are you tired of feeling like you’re always playing catch-up with the latest alt coin hype? Or are you the..."
 },{
@@ -6060,7 +6170,7 @@ var store = [{
   'url': "/nft-marketplaces-open-closed-invite-code-fees/",
   'author': "TDOU",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/nft-marketplaces-altcointradingnet.jpg",
-  'date': "April 14, 2022",
+  'date': "December 19, 2022",
   'category': "#nft-trading",
   'excerpt': "Non-fungible tokens might seem like a passing fad, but with over $15 billion traded in 2021, it's clear that this..."
 },{
@@ -6068,7 +6178,7 @@ var store = [{
   'url': "/beginners-investing-in-nfts-10-basic-things-to-know/",
   'author': "AltcoinTrading.NET",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/nft-trading_pomgv5.jpg",
-  'date': "April 4, 2022",
+  'date': "December 19, 2022",
   'category': "#nft-trading",
   'excerpt': "Collins Dictionary recently declared the term 'non-fungible token' (NFT) as 2021's word of the year after recording a staggering 11,000%..."
 },{
@@ -6076,7 +6186,7 @@ var store = [{
   'url': "/mental-health-crypto-trading/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/v1638809312/atnet/bitcoin-dead-memes_aifx9v.jpg",
-  'date': "April 6, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-101",
   'excerpt': "A timely post for once, isn’t it? We all know that trading has a negative effect on mental health for..."
 },{
@@ -6092,7 +6202,7 @@ var store = [{
   'url': "/scriptspotlight-volume-profile-trading-fixed-visible-range/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto/atnet/tradingview/cw-settings_wuotue.jpg",
-  'date': "June 21, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-technical-analysis",
   'excerpt': "This article uses free pine scripts from TradingView - sign up now and maybe go PRO on Black Friday? Volume..."
 },{
@@ -6100,7 +6210,7 @@ var store = [{
   'url': "/binance-coin-definition-fundamentals-investment-analysis-bnb/",
   'author': "AltcoinTrading.NET",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/v1636071617/atnet/Screenshot_2021-11-04_at_9.19.14_PM_tm9ayx.jpg",
-  'date': "April 8, 2022",
+  'date': "December 19, 2022",
   'category': "#trading-platforms",
   'excerpt': "With a 3.34% of market dominance and #3 market rank at the time of writing, Binance Coin has become quite..."
 },{
@@ -6180,7 +6290,7 @@ var store = [{
   'url': "/where-to-spend-crypto-5-tips/",
   'author': "altcointrading",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_scale,w_700/atnet/shopping-with-crypto-tips.jpg",
-  'date': "April 8, 2022",
+  'date': "December 19, 2022",
   'category': "#reports",
   'excerpt': "With all the excitement surrounding Bitcoin and other digital currencies making waves as an investment choice, some investors are wondering..."
 },{
@@ -6204,7 +6314,7 @@ var store = [{
   'url': "/exchanges-native-automated-trading/",
   'author': "Karlvonbahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/c_scale,w_700/atnet/native-automation-ftx-independent-reserve-bitfinex.jpg",
-  'date': "April 14, 2022",
+  'date': "December 19, 2022",
   'category': "#trading-technique",
   'excerpt': "Automated trading can be a gold mine, if done well. There are traders who have a well set-up and backtested..."
 },{
@@ -6220,7 +6330,7 @@ var store = [{
   'url': "/scriptspotlight-defi-trading-tools/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_lfill,h_360,w_700/v1620762674/atnet/scriptspotlite-defi_t7vhsw.jpg",
-  'date': "June 21, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-technical-analysis",
   'excerpt': "So, DeFi trading. It sounds almost absurd, the noisiest thing about DeFi are the various kinds of yield farming products...."
 },{
@@ -6228,7 +6338,7 @@ var store = [{
   'url': "/farming-platforms-yield-income-comparison-2021/",
   'author': "altcointrading",
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/f_auto,c_lfill,h_360,w_700/v1596693896/atnet/__women/pexels-christina-morillo-1181352_bkiqxb.jpg",
-  'date': "April 8, 2022",
+  'date': "December 19, 2022",
   'category': "#trading-platforms",
   'excerpt': "Until DeFi came around, our only way to generate income from crypto holdings was either active trading or margin lending..."
 },{
@@ -6302,7 +6412,7 @@ var store = [{
   'image': "https://res.cloudinary.com/atnetcloud/image/upload/v1594627484/atnet/pyramids_aalfab.jpg",
   'date': "July 25, 2022",
   'category': "#reports",
-  'excerpt': "The year 2022 is the time when once again, cryptocurrencies like Bitcoin, Ethereum, Ripple and even the smaller altcoins are..."
+  'excerpt': "The year 2023 is the time when once again, cryptocurrencies like Bitcoin, Ethereum, Ripple and even the smaller altcoins are..."
 },{
   'title': "In 2020, Women Are Finally Breaking Into The Bitcoin Industry",
   'url': "/women-in-bitcoin/",
@@ -6356,7 +6466,7 @@ var store = [{
   'url': "/technical-analysis/",
   'author': "JMT",
   'image': "https://res.cloudinary.com/dttheory/image/upload/c_scale,w_700,f_auto/v1624385710/at-top/technical-analysis_vkdhrr.png",
-  'date': "August 25, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-technical-analysis",
   'excerpt': "This post on cryptocurrency technical analysis specifics was originally published in 2016. Back then, it was a common debate in..."
 },{
@@ -6380,7 +6490,7 @@ var store = [{
   'url': "/crypto-trading-vs-forex-trading-review/",
   'author': "tradingfanbois",
   'image': "https://res.cloudinary.com/dttheory/image/upload/f_auto/at-top/crypto-forex-comparing-differences_xmaq0d.jpg",
-  'date': "April 8, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-value-judgement",
   'excerpt': "“Should I move from forex market to crypto?” This has been one of the most common questions asked by forex..."
 },{
@@ -6412,7 +6522,7 @@ var store = [{
   'url': "/divergences/",
   'author': "JMT",
   'image': "https://res.cloudinary.com/dttheory/image/upload/f_auto,c_scale,w_700/at-top/divs/bitfinex-divergences_m4tjzj.jpg",
-  'date': "May 14, 2022",
+  'date': "December 19, 2022",
   'category': "#cheatsheets",
   'excerpt': "What are divergences in trading? When traders talk about divergences, or divs, they are pointing out a disagreement between the..."
 },{
@@ -6588,7 +6698,7 @@ var store = [{
   'url': "/tools/",
   'author': "KarlVonBahnhof",
   'image': "https://res.cloudinary.com/dttheory/image/upload/f_auto,c_scale,w_700/at-top/tools/tools_jyuwbg.jpg",
-  'date': "September 16, 2022",
+  'date': "December 19, 2022",
   'category': "#crypto-trading-tools",
   'excerpt': "This is a list of free or freemium tools and apps that are useful for cryptocurrency traders or hodlers. None..."
 },{
@@ -7564,9 +7674,9 @@ var store = [{
   'url': "/airdrops/",
   'author': "ATNET",
   'image': "https://theoryforceb4ef41a12c623318794.files.wordpress.com/2021/02/trading-crypto-legacy.jpeg",
-  'date': "December 19, 2022",
+  'date': "January 9, 2023",
   'category': "AltcoinTrading.NET",
-  'excerpt': "Welcome to the list of upcoming crypto airdrops, bounties and exchange promos with the update note for October 2022. In..."
+  'excerpt': "Welcome to the list of upcoming crypto airdrops, bounties and exchange promos with the update note for January 2023. At..."
 },{
   'title': "Eternal Black Friday - Deals On Crypto Tools",
   'url': "/blackfriday/",
@@ -7606,7 +7716,7 @@ var store = [{
   'image': null,
   'date': "May 27, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "2022 2022 🔴 Inactive Past Crypto Airdrops, Bounties or Exchange Promos 2022 RadKET Airdrop airdrop &nbsp;3000 First-come plus 3000 random..."
+  'excerpt': "2022 2022 🔴 Inactive Past Crypto Airdrops, Bounties or Exchange Promos 2022 MMMM Airdrop airdrop &nbsp;A classic Gleam for NFT..."
 },{
   'title': "Authors And Contributors",
   'url': "/authors/",
@@ -7654,15 +7764,15 @@ var store = [{
   'image': null,
   'date': "August 3, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "https://www.altcointrading.net/ https://www.altcointrading.net/img/logo.jpg https://www.altcointrading.net/ Mon, 19 Dec 2022 20:44:51 +0000 Mon, 19 Dec 2022 20:44:51 +0000 Jekyll v4.2.2 Altcoins, which refer..."
+  'excerpt': "https://www.altcointrading.net/ https://www.altcointrading.net/img/logo.jpg https://www.altcointrading.net/ Mon, 16 Jan 2023 17:01:41 +0000 Mon, 16 Jan 2023 17:01:41 +0000 Jekyll v4.2.2 The last couple..."
 },{
   'title': null,
   'url': "/feed.xml",
   'author': "ATNET",
   'image': null,
-  'date': "July 14, 2022",
+  'date': "December 19, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "https://www.altcointrading.net/ https://www.altcointrading.net/img/logo.jpg https://www.altcointrading.net/ Mon, 19 Dec 2022 20:44:51 +0000 Mon, 19 Dec 2022 20:44:51 +0000 Jekyll v4.2.2 Thu, 24 Nov..."
+  'excerpt': "https://www.altcointrading.net/ https://www.altcointrading.net/img/logo.jpg https://www.altcointrading.net/ Mon, 16 Jan 2023 17:01:41 +0000 Mon, 16 Jan 2023 17:01:41 +0000 Jekyll v4.2.2 Mon, 16 Jan..."
 },{
   'title': "Atnet Crypto Trading Glossary",
   'url': "/glossary/",
@@ -7742,7 +7852,7 @@ var store = [{
   'image': null,
   'date': "August 23, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "Links The latest published blog post is Earning alts for beginners and was posted 12/19/22. The latest review is on..."
+  'excerpt': "Links The latest published blog post is Ftx impact silver markets and was posted 01/16/23. The latest review is on..."
 },{
   'title': "History Of Cryptocurrency Trading | Key Incidents 2016-2021",
   'url': "/reports/",
@@ -7766,7 +7876,7 @@ var store = [{
   'image': null,
   'date': "April 18, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "AltcoinTrading.NET Airdrops [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
+  'excerpt': "AltcoinTrading.NET Airdrops [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
 },{
   'title': "Atnet Crypto Airdrops",
   'url': "/local.txt",
@@ -7774,15 +7884,15 @@ var store = [{
   'image': null,
   'date': "August 3, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 12/19/22 LIBERMALL NFT Airdrop This is a Gleam that pays Blogger NFTs at total..."
+  'excerpt': "[1] Live #Crypto #Airdrops https://www.altcointrading.net/airdrops/ - 01/16/23 INTL Airdrop Everyone gets paid here. This Gleam is to promote a CEX..."
 },{
   'title': null,
   'url': "/rss-airdrop-table.xml",
   'author': "ATNET",
   'image': null,
-  'date': "April 11, 2022",
+  'date': "January 9, 2023",
   'category': "AltcoinTrading.NET",
-  'excerpt': "AltcoinTrading.NET Airdrops Upcoming Airdrops AltcoinTrading.NET - 12/19/22 https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/ Mon, 19 Dec 2022 20:44:51 +0000 Mon, 19..."
+  'excerpt': "AltcoinTrading.NET Airdrops Token and NFT Airdrops AltcoinTrading.NET - 01/16/23 https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/ Mon, 16 Jan 2023 17:01:41 +0000..."
 },{
   'title': null,
   'url': "/rss-airdrop-zap.xml",
@@ -7790,7 +7900,7 @@ var store = [{
   'image': null,
   'date': "December 19, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "AltcoinTrading.NET Airdrops [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
+  'excerpt': "AltcoinTrading.NET Airdrops [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
 },{
   'title': null,
   'url': "/rss-digest-zap.xml",
@@ -7798,7 +7908,7 @@ var store = [{
   'image': null,
   'date': "December 19, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "Monday Airdrops - 19 Dec Airdrop digest https://www.altcointrading.net/airdrops/ Mon, 19 Dec 2022 20:44:51 +0000 Monday Airdrops - 19 Dec BCF..."
+  'excerpt': "Monday Airdrops - 16 Jan Airdrop digest https://www.altcointrading.net/airdrops/ Mon, 16 Jan 2023 17:01:41 +0000 Monday Airdrops - 16 Jan VET..."
 },{
   'title': null,
   'url': "/rss-guides.xml",
@@ -7814,7 +7924,7 @@ var store = [{
   'image': null,
   'date': "October 13, 2022",
   'category': "AltcoinTrading.NET",
-  'excerpt': "AltcoinTrading.NET Airdrops [12/19/22] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 12/19/22. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
+  'excerpt': "AltcoinTrading.NET Airdrops [01/16/23] New added to upcoming airdrops, bounties and whitelists at AltcoinTrading.NET - 01/16/23. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net en https://www.altcointrading.net/airdrops/..."
 },{
   'title': null,
   'url': "/rss-strategy.xml",
@@ -7822,7 +7932,7 @@ var store = [{
   'image': null,
   'date': "June 3, 2021",
   'category': "AltcoinTrading.NET",
-  'excerpt': "AltcoinTrading.NET Strategy Long reads on cryptocurrency trading strategies. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net/strategy/ en https://www.altcointrading.net/strategy/ Mon, 19 Dec 2022 20:44:51 +0000 Mon,..."
+  'excerpt': "AltcoinTrading.NET Strategy Long reads on cryptocurrency trading strategies. https://www.altcointrading.net/favicon.png AltcoinTrading.NET https://www.altcointrading.net/strategy/ en https://www.altcointrading.net/strategy/ Mon, 16 Jan 2023 17:01:41 +0000 Mon,..."
 },{
   'title': null,
   'url': "/assets/js/search.js",
@@ -8608,14 +8718,6 @@ var store = [{
   'category': "AltcoinTrading.NET",
   'excerpt': ""
 },{
-  'title': "Bitfinex-collapse",
-  'url': "/tag/bitfinex-collapse/",
-  'author': null,
-  'image': null,
-  'date': null,
-  'category': "AltcoinTrading.NET",
-  'excerpt': ""
-},{
   'title': "Lending",
   'url': "/tag/lending/",
   'author': null,
@@ -8642,6 +8744,22 @@ var store = [{
 },{
   'title': "Doge",
   'url': "/tag/doge/",
+  'author': null,
+  'image': null,
+  'date': null,
+  'category': "AltcoinTrading.NET",
+  'excerpt': ""
+},{
+  'title': "Seo",
+  'url': "/tag/seo/",
+  'author': null,
+  'image': null,
+  'date': null,
+  'category': "AltcoinTrading.NET",
+  'excerpt': ""
+},{
+  'title': "Markets",
+  'url': "/tag/markets/",
   'author': null,
   'image': null,
   'date': null,
@@ -8930,6 +9048,14 @@ var store = [{
 },{
   'title': null,
   'url': "/page19/",
+  'author': "ATNET",
+  'image': null,
+  'date': "February 12, 2021",
+  'category': "AltcoinTrading.NET",
+  'excerpt': ""
+},{
+  'title': null,
+  'url': "/page20/",
   'author': "ATNET",
   'image': null,
   'date': "February 12, 2021",
